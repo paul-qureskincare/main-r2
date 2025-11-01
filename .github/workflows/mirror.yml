@@ -30,4 +30,4 @@ jobs:
           git remote add mirror https://x-access-token:${{ secrets.PAT_PR_MIRROR }}@github.com/paul-qureskincare/main-r2.git
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git push mirror main --force --set-upstream -o skip-push-protection
+          git push mirror main:staging --force --set-upstream -o skip-push-protection
