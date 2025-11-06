@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/spacings.css">
     <link href="assets/css/theme-fonts.css" rel="stylesheet" />
-    <link href="assets/css/black-friday.css" rel="stylesheet" />
     <link href="assets/css/base.css" rel="stylesheet" />
     <!-- Loading HTML Files -->
    <script src="assets/js/fileloader.js"></script>
@@ -39,8 +38,9 @@
     <!-- SECTION LIST -->
     <!-- Section Featured Product Bundle -->
     <link rel="stylesheet" href="sections/global/purchase-form-landing/purchase-form-landing.css" />
-    <div id="buy_box" class="qure__featured-product-bundle qure__section">
-        <div class="container custom_gap">
+    <div id="buy_box" class="qure__featured-product-bundle qure__section"
+        style="--section-padding-top: 40px; --section-padding-bottom: 80px;">
+        <div class="container" style="--column-gap:100px; --column-gap-mobile:30px;">
             <div class="row justify-content-between custom__grid">
                 <div class="col-md-6 custom__block">
                     <slide-with-thumbs class="featured-product-gallery qure__swiper-wrapper d-md-none">
@@ -103,23 +103,14 @@
                     </slide-with-thumbs>
                     <div class="qure-product-details">
                         <div
-                            class="qure__product-rating">
+                            class="qure__product-rating d-inline-flex align-items-center gap-3 fs-16 mb-20 mt-md-0 mt-30">
                             <img src="assets/images/cyan_blue_rating.svg" alt="">
                             <span><strong>4.8</strong>/5 Rated by Customers</span>
                         </div>
-                        <div class="hypo_acid_derm_mist">PURE SILK PILLOWCASE</div>
-                        <h1 class="qure__product-title purify_skin">Minimize the formation of wrinkles while you sleep</h1>
-                        <div class="fs-22 mb-15 d-none">{$dyn}</div>
-                            <div class="bundle_price black_friday_wrapper">
-                                <div class="black_friday_pricing">Black friday:</div>
-                                <div class="dis_red_line">
-                                    <div class="bef_price text-decoration-line-through">$238</div>
-                                    <div class="aft_price">$149</div>
-                                </div>
-                                <div class="black_friday_price">$133,51</div>
-                                <a href="#" class="save_perc">SAVE 26%</a>
-                            </div>
+                        <div class="fs-16 mb-10 mt-5">PURE SILK PILLOWCASE</div>
+                        <h1 class="product_shower-title mb-30">Minimize the formation of wrinkles while you sleep</h1>
                         <div class="shower__single-shortdes">
+                            <div class="fs-22 mb-15">{$dyn}</div>
                             <ul>
                                 <li>Causes less friction against the skin, helping minimize the formation of sleep lines
                                     and wrinkles.</li>
@@ -134,14 +125,15 @@
                                 <button type="submit" class="btn btn--primary w-100" id="qr__submit">Buy Now</button>
                             </div>
                         </div>
-                        <div class="product_klarna-dtls">
+                        <div class="product_klarna-dtls d-flex flex-wrap gap-2 align-items-center fs-14 justify-content-center max-w-ctm"
+                            style="--max-w-ctm:500px">
                             OR pay 4 monthly payments of {$dyn} with
                             <img src="assets/images/klarna.svg">
                             <img src="assets/images/sezzle.svg">
                             <img src="assets/images/afterpay.svg">
                         </div>
 
-                        <div class="d-md-none">
+                        <div class=" max-w-ctm d-md-none" style="--max-w-ctm:500px">
                             <div class="patch__product-certified my-15">
                                 <ul class="patch-dr-list">
                                     <li><img src="sections/isolated/targeted-patches/images/crt-1.webp"></li>
@@ -164,10 +156,10 @@
                                 <span class="fs-14">Free Shipping over {$dyn}</span>
                             </div>
                         </div>
-                        <div class="patch__product-batch">
+                        <div class="patch__product-batch mt-30 max-w-ctm" style="--max-w-ctm:500px">
                             <div class="patch-d-header">
-                                <h4 class="next_batch_ships">Next batch ships {date}:</h4>
-                                <p class="due_to_demand">Due to high demand, our {product name} is sold out. Order now and
+                                <h4 class="fm-body fs-16 fw-600 mb-0">Next batch ships {date}:</h4>
+                                <p class="fs-14">Due to high demand, our {product name} is sold out. Order now and
                                     secure
                                     yours from the next shipment.</p>
                             </div>
@@ -176,7 +168,8 @@
                                     <span class="patch__date">{Previous date}</span><span class="patch__status">SOLD
                                         OUT</span>
                                 </div>
-                                <div class="patch-bar progress_bar_blue" role="progressbar">
+                                <div class="patch-bar" role="progressbar"
+                                    style="--progress-bg:#91BAEC;--text-color:#212428;--progress-width:48%">
                                     <span class="patch__date">{date}</span><span class="patch__status">48%
                                         Reserved</span>
                                 </div>
@@ -243,7 +236,7 @@
                         </div>
                         <!-- Thumbnails End-->
                     </slide-with-thumbs>
-                    <div class="product__label get_best_results">Get The Best Results With</div>
+                    <div class="product__label mt-0 mt-lg-40 mb-15">Get The Best Results With</div>
                     <div class="swiper qure__swiper" id="qure__swiper-best-results" data-section-id="best-results"
                         data-autoplay="false" data-loop="false" data-mobile="1.4" data-tablet="2" data-desktop="2"
                         data-spacing="12" data-pagination-fraction="true">
@@ -254,7 +247,8 @@
                                         src="sections/isolated/targeted-patches/images/result-1.webp" alt="">
                                     <div class="patch__result-content">
                                         All-In One Face Serum
-                                        <button class="btn btn--primary btn_sm_ext">Add - {$dyn}</button>
+                                        <button class="btn btn--primary btn-sm mt-10 w-100"
+                                            style="--btn-sm-padding: 7px 20px;">Add - {$dyn}</button>
                                     </div>
                                 </div>
                             </div>
@@ -265,30 +259,31 @@
                                         alt="dermal mist">
                                     <div class="patch__result-content">
                                         Dermal Mist (Duo - 100ml + 15ml)
-                                        <button class="btn btn--primary btn_sm_ext">Add -
+                                        <button class="btn btn--primary btn-sm mt-10 w-100"
+                                            style="--btn-sm-padding: 7px 20px;">Add -
                                             {$dyn}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product_trust_highlights">
+                    <div class="d-flex d-lg-none flex-nowrap align-items-start justify-content-center col-gap mt-30">
                         <div
-                            class="product_trust_highlights_cols">
+                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
                             <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist"
-                                class="product_trust_icon">
-                            <span>Dermatologist Reviewed</span>
+                                class="mr-0 mr-md-10 mb-10 mb-md-0">
+                            <span>30-Day Money-Back Guarantee</span>
                         </div>
                         <div
-                            class="product_trust_highlights_cols">
+                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
                             <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping"
-                                class="product_trust_icon">
+                                class="mr-0 mr-md-10 mb-10 mb-md-0">
                             <span>Free World-Wide Shipping over {$dyn}</span>
                         </div>
                         <div
-                            class="product_trust_highlights_cols">
+                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
                             <img src="sections/isolated/protect-your-skin/images/backed_science.svg" alt="dermatologist"
-                                class="product_trust_icon">
+                                class="mr-0 mr-md-10 mb-10 mb-md-0">
                             <span>Backed by Science </span>
                         </div>
                     </div>
@@ -307,7 +302,11 @@
     
     <!---------------------- Section Marquee Logos ----------------------->
     <link href="sections/isolated/marquee-logos/marquee-logos.css" rel="stylesheet">
-    <div class="qure__section qure__logos color-background">
+    <div class="qure__section qure__logos color-background" style="--section-padding-top: 40px; 
+         --section-padding-bottom: 40px; 
+         --section-background:#F6F6F7;
+         --section-padding-top-mob:30px;
+         --section-padding-bottom-mob:30px">
         <div class="container">
             <div class="row align-items-center text-center">
                 <div class="marquee-row">
@@ -342,9 +341,9 @@
 
     <!-- Banner with text -->
     <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-    <div class="qure__section banner-with-text">
-        <div class="container custom_gap">
-            <div class="row custom__grid align-items-center">
+    <div class="qure__section banner-with-text" style="--section-padding-top:80px; --section-padding-bottom:80px;">
+        <div class="container">
+            <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:32px;">
                 <div class="col-md-6 custom__block">
                     <div class="banner-text--media">
                         <img src="sections/global/banner-with-text/images/pillowcase_img.webp" class="img-fluid" alt="">
@@ -353,7 +352,7 @@
                 <div class="col-md-6 custom__block">
                     <div class="banner-with-text-content">
                         <h2 class="banner-text--heading">Meet the easiest skincare swap you'll ever make</h2>
-                        <div class="banner-text--des">
+                        <div class="banner-text--des" style="--text-mt: 32px; --text-mb: 32px;">
                             <p>You spend over 2,500 hours a year with your pillow, so what it’s made of matters. </p>
                             <p>Our silk pillowcase <span>reduces friction on your skin and hair</span> while you sleep,
                                 helping
@@ -369,9 +368,10 @@
     </div>
     <!-- Banner with text end-->
     <!-- Section icon image box -->
-    <div class="qure__shipping qure__section color-background overflow-hidden">
-        <div class="container custom_gap" 
-        >
+    <div class="qure__shipping  qure__section color-background overflow-hidden"
+        style="--section-padding-top:32px;--section-padding-bottom:32px; --section-padding-top-mob:24px;--section-padding-bottom-mob:24px;">
+        <div class="container"
+            style="--column-gap:100px; --column-gap-mobile:30px;--ctm-width:50px; --ctm-width-mob:30px;">
             <div class="row custom__grid d-none d-lg-flex">
                 <div class="col-md-3 col-lg-3 custom__block">
                     <div class="qure_shipping-inner d-flex align-items-center gap-4">
@@ -465,8 +465,9 @@
     <!-- Section icon image box -->
          <!-- Section eye patches -->
     <link rel="stylesheet" href="sections/isolated/eye-patches/eye-patch.css" />
-    <div class="eye-patch-care qure__section">
-        <div class="container">
+    <div class="eye-patch-care qure__section"
+        style="--section-padding-top:75px;--section-padding-bottom:75px; --section-padding-top-mob:30px;--section-padding-bottom-mob:30px;">
+        <div class="container container-small" style="--container-width:980px">
             <div class="qure__section-header text-center mb-30 mb-md-60">
                 <h2 class="qure__section-heading pb-10">The case against cotton</h2>
                 <p class="d-none d-md-block">Your cotton pillowcase has a lot to answer for as they are holding back your advanced skincare
@@ -474,7 +475,7 @@
                     makeup and put on your most powerful and effective skincare, cotton can suck it in, leading to
                     clogged pores, breakouts, and puffy eyes from the product migration</p>
             </div>
-            <div class="d-flex custom__grid">
+            <div class="d-flex custom__grid" style="--column-gap:40px; --column-gap-mobile:0px;">
                 <div class="col custom__block">
                     <div class="patch-card-block">
                         <div class="patch-card-img mb-md-24 overflow-hidden position-relative">
@@ -506,7 +507,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                >
+                style="--column-gap:40px; --column-gap-mobile:20px;">
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Soft on skin, reducing pulling and tugging</div>
                 </div>
@@ -515,7 +516,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                >
+                style="--column-gap:40px; --column-gap-mobile:20px;">
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Helps retain skin’s moisture</div>
                 </div>
@@ -524,7 +525,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                >
+                style="--column-gap:40px; --column-gap-mobile:20px;">
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Naturally hypoallergenic with non-toxic dyes</div>
                 </div>
@@ -533,7 +534,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                >
+                style="--column-gap:40px; --column-gap-mobile:20px;">
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Helps prevent oil buildup</div>
                 </div>
@@ -542,7 +543,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                >
+                style="--column-gap:40px; --column-gap-mobile:20px;">
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Allows your hair to glide, reducing breakage</div>
                 </div>
@@ -555,7 +556,9 @@
     <!-- Section eye patches -->
 
     <!-- Faq section Start -->
-    <div class="faq_section qure__section color-background" id="faq">
+    <div class="faq_section qure__section color-background"
+        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-background: #F6F6F7; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;"
+        id="faq">
         <div class="container">
             <div class="qure__section-header text-center">
                 <h2 class="qure__section-heading">Have questions?</h2>
