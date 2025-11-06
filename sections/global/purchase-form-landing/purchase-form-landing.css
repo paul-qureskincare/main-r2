@@ -297,7 +297,7 @@
 .qure__subscription-item.subscription-active {
     border: 2px solid var(--charcoal, #212428);
     background-color: #F6F6F7;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .qure__subscription-btn {
