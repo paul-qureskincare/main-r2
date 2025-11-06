@@ -37,9 +37,8 @@
     <!-- SECTION LIST -->
     <!-- Section Featured Product Bundle -->
     <link rel="stylesheet" href="sections/global/purchase-form-landing/purchase-form-landing.css" />
-    <div id="buy_box" class="qure__featured-product-bundle qure__section"
-        style="--section-padding-top: 40px; --section-padding-bottom: 80px;">
-        <div class="container" style="--column-gap:100px; --column-gap-mobile:30px;">
+    <div id="buy_box" class="qure__featured-product-bundle qure__section">
+        <div class="container custom_gap">
             <div class="row justify-content-between custom__grid">
                 <div class="col-md-6 custom__block">
                     <slide-with-thumbs class="featured-product-gallery qure__swiper-wrapper d-md-none">
@@ -174,7 +173,7 @@
                         <!-- Thumbnails End-->
                     </slide-with-thumbs>
                     <div class="qure-product-details">
-                        <div class="qure__product-rating d-inline-flex align-items-center gap-3 fs-16 mb-20 mt-md-0 mt-30"><img
+                        <div class="qure__product-rating"><img
                                 src="assets/images/cyan_blue_rating.svg" alt="">
                             <span><strong>4.8</strong>/5 Rated by Customers</span>
                         </div>
@@ -199,7 +198,7 @@
                         <div class="border-top my-25"></div>
                         <div class="product_shower-variants">
                             <div class="qure__variant-label">Select Your Color:</div>
-                            <div class="d-flex col-gap" style="--col-gap:12px">
+                            <div class="variants_wrapper">
                                 <div class="col qure__variant-item">
                                     <input type="radio" id="white" name="color" class="variant__input" checked="">
                                     <label for="white" class="qure__variant-box">
@@ -252,7 +251,7 @@
                                             class="product_shower-label d-none">SAVE {dyn}%</span>
                                         
                                           <div id="subscribe_and_save" class="qure__subscription-collapse collapse show"
-                                        data-bs-parent="#qure__subscription" style="">
+                                        data-bs-parent="#qure__subscription">
                                         <div class="qure__subscription-body">
                                             <div
                                                 class="subscription-item-row">
@@ -317,8 +316,7 @@
                                     Save 50%</button>
                             </div>
                         </div>
-                        <div class="product_klarna-dtls d-flex flex-wrap gap-2 align-items-center fs-14 justify-content-center max-w-ctm"
-                            style="--max-w-ctm:500px">
+                        <div class="product_klarna-dtls">
                             OR pay 4 monthly payments of {$dyn} with
                             <img src="assets/images/klarna.svg">
                             <img src="assets/images/sezzle.svg">
@@ -334,19 +332,18 @@
                                 <span class="fs-14">Free Shipping over {$dyn}</span>
                             </div>
                         </div>
-                        <div class="patch__product-batch mt-30 max-w-ctm" style="--max-w-ctm:500px">
+                        <div class="patch__product-batch">
                             <div class="patch-d-header">
-                                <h4 class="fm-body fs-16 fw-600 mb-0">Next batch ships {date}:</h4>
-                                <p class="fs-14">Due to high demand, our {product name} is sold out. Order now and secure
+                                <h4 class="next_batch_ships">Next batch ships {date}:</h4>
+                                <p class="due_to_demand">Due to high demand, our {product name} is sold out. Order now and secure
                                     yours from the next shipment.</p>
                             </div>
-                            <div class="progress__bar-container w-100">
-                                <div class="patch-bar mb-10" role="progressbar">
+                            <div class="progress__bar-container">
+                                <div class="patch-bar" role="progressbar">
                                     <span class="patch__date">{Previous date}</span><span class="patch__status">SOLD
                                         OUT</span>
                                 </div>
-                                <div class="patch-bar" role="progressbar"
-                                    style="--progress-bg:#91BAEC;--text-color:#212428;--progress-width:48%">
+                                <div class="patch-bar progress_bar_blue" role="progressbar">
                                     <span class="patch__date">{date}</span><span class="patch__status">48% Reserved</span>
                                 </div>
                             </div>
@@ -471,7 +468,7 @@
                         </div>
                         <!-- Thumbnails End-->
                     </slide-with-thumbs>
-                    <div class="product__label mt-0 mt-lg-40 mb-15">Get The Best Results With</div>
+                    <div class="product__label get_best_results">Get The Best Results With</div>
                     <div class="swiper qure__swiper" id="qure__swiper-best-results" data-section-id="best-results" data-autoplay="false"
                         data-loop="false" data-mobile="1.4" data-tablet="2" data-desktop="2" data-spacing="12"
                         data-pagination-fraction="true">
@@ -481,7 +478,7 @@
                                     <img class="patch__result-img img-fluid" src="sections/isolated/product-shower-filter/images/result-2.webp" alt="dermal mist">
                                     <div class="patch__result-content">
                                         Dermal Mist (Duo - 100ml + 15ml)
-                                        <button class="btn btn--primary btn-sm mt-10 w-100" style="--btn-sm-padding: 7px 20px;">Add -
+                                        <button class="btn btn--primary btn_sm_ext">Add -
                                             {$dyn}</button>
                                     </div>
                                 </div>
@@ -491,35 +488,35 @@
                                     <img class="patch__result-img img-fluid" src="sections/isolated/product-shower-filter/images/faucer_prod.webp" alt="">
                                     <div class="patch__result-content">
                                         Faucet Filter
-                                        <button class="btn btn--primary btn-sm mt-10 w-100" style="--btn-sm-padding: 7px 20px;">Add -
+                                        <button class="btn btn--primary btn_sm_ext">Add -
                                             {$dyn}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex d-lg-none flex-nowrap align-items-start justify-content-center col-gap mt-30">
+                    <div class="product_trust_highlights">
                         <div
-                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                            class="product_trust_highlights_cols">
                             <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist"
-                                class="mr-0 mr-md-10 mb-10 mb-md-0">
+                                class="product_trust_icon">
                             <span>Dermatologist Reviewed</span>
                         </div>
                         <div
-                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                            class="product_trust_highlights_cols">
                             <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping"
-                                class="mr-0 mr-md-10 mb-10 mb-md-0">
+                                class="product_trust_icon">
                             <span>Free World-Wide Shipping over {$dyn}</span>
                         </div>
                         <div
-                            class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                            class="product_trust_highlights_cols">
                             <img src="sections/isolated/protect-your-skin/images/backed_science.svg" alt="dermatologist"
-                                class="mr-0 mr-md-10 mb-10 mb-md-0">
+                                class="product_trust_icon">
                             <span>Backed by Science </span>
                         </div>
                     </div>
                     
-                    <div class="accordion accordion-flush mt-15 tp-product-accordion" id="tp-product-qure">
+                    <div class="accordion accordion-flush tp-product-accordion" id="tp-product-qure">
                         <div class="accordion-item qure__accordion-item">
                             <button class="accordion-button collapsed qure__accordion-header" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#key-benefits" aria-expanded="false" aria-controls="key-benefits">
@@ -573,8 +570,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product__label mt-40 mb-15"> Jump To </div>
-                    <div class="patch-badge-group d-flex flex-wrap gap-3">
+                    <div class="product__label jump_to_title"> Jump To </div>
+                    <div class="patch-badge-group">
                         <a href="#improve_skin" class="patch-badge">The Results <i class="fa-regular fa-arrow-down fs-14"></i></a>
                         <a href="#crystal_clear" class="patch-badge">Reviews <i class="fa-regular fa-arrow-down fs-14"></i></a>
                         <a href="#easy_steps" class="patch-badge">How To Use <i class="fa-regular fa-arrow-down fs-14"></i></a>
@@ -614,9 +611,8 @@
     </script>
     <!-- Section Featured Product Bundle End-->
     <!-- Do you know section Start -->
-    <div class="do_you-know qure__section color-background"
-        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-background: #F6F6F7; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;">
-        <div class="container" style="--column-gap:100px; --column-gap-mobile:30px;">
+    <div class="do_you-know qure__section color-background">
+        <div class="container custom_gap">
             <div class="row align-items-center custom__grid">
                 <div class="col-md-7 custom__block">
                     <div>
@@ -673,9 +669,9 @@
     <!-- Do you know section end -->
     <!-- Banner with text -->
     <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-    <div class="qure__section banner-with-text" style="--section-padding-top:80px; --section-padding-bottom:80px;">
-        <div class="container">
-            <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:32px;">
+    <div class="qure__section banner-with-text">
+        <div class="container custom_gap">
+            <div class="row custom__grid align-items-center">
                 <div class="col-md-6 custom__block">
                     <div class="banner-text--media">
                         <img src="sections/global/banner-with-text/images/shower_img.webp" class="img-fluid" alt="">
@@ -684,10 +680,10 @@
                 <div class="col-md-6 custom__block">
                     <div class="banner-with-text-content">
                         <h2 class="banner-text--heading">Meet the Qure Shower Filter</h2>
-                        <div class="banner-text--des" style="--text-mt: 32px; --text-mb: 32px;">
+                        <div class="banner-text--des">
                             <p>At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower
                                 Filter
-                                helps <span>remove sneaky chemicals and minerals</span> that live in your water and linger on your skin. </p>
+                                helps <span>remove sneaky chemicals and minerals</span> that live in your water and linger on your skin.</p>
                         </div>
                         <a href="#buy_box" class="banner-text--button btn btn--primary w-mob-100">Shop Now</a>
                     </div>
@@ -697,9 +693,8 @@
     </div>
     <!-- Banner with text end-->
     <!-- Section improve skin start -->
-    <div class="qure__section qure__col-with-filter"
-        style="--section-padding-top:80px;--section-padding-bottom:80px; --section-padding-top-mob:50px;--section-padding-bottom-mob:50px;">
-        <div class="container" style="--column-gap:60px; --column-gap-mobile:18px;" id="improve_skin">
+    <div class="qure__section qure__col-with-filter improve_skin">
+        <div class="container custom_gap" id="improve_skin">
             <div class="row custom__grid">
                 <div class="col-md-6 custom__block">
                     <div class="qure-text-content text-md-start">
@@ -713,10 +708,10 @@
                                     <button class="btn qure-filter-link active" id="before-tab-m" data-bs-toggle="tab"
                                         data-bs-target="#before-tab-m-pane" type="button" role="tab" aria-controls="before-tab-m-pane"
                                         aria-selected="true"
-                                        style="--btn-primary-bg-hover: #DFE0E0;--btn-primary-color-hover: #212428;">Before</button>
+                                        >Before</button>
                                     <button class="btn qure-filter-link" id="after-tab-m" data-bs-toggle="tab" data-bs-target="#after-tab-m-pane"
                                         type="button" role="tab" aria-controls="after-tab-m-pane" aria-selected="false"
-                                        style="--btn-primary-bg-hover:#C7E5DB;--btn-primary-color-hover:#212428">After</button>
+                                        >After</button>
                                 </div>
                             </div>
                             <div class="tab-content mt-30" id="myTabContent">
@@ -734,7 +729,7 @@
                                 </div>
                             </div>
                         </div> 
-                        <div class="row custom__grid" style="--column-gap:20px; --column-gap-mobile:18px;">
+                        <div class="row custom__grid inner_gap">
                             <div class="col-12 custom__block">
                                 <div class="align-items-center d-flex gap-2 text-center text-with-progress">
                                     <div class="text-progress-circle position-relative d-inline-flex fw-600 fs-20">
@@ -811,11 +806,11 @@
                                 <button class="btn qure-filter-link active" id="before-tab" data-bs-toggle="tab"
                                     data-bs-target="#before-tab-pane" type="button" role="tab"
                                     aria-controls="before-tab-pane" aria-selected="true"
-                                    style="--btn-primary-bg-hover: #DFE0E0;--btn-primary-color-hover: #212428;">Before</button>
+                                    >Before</button>
                                 <button class="btn qure-filter-link" id="after-tab" data-bs-toggle="tab"
                                     data-bs-target="#after-tab-pane" type="button" role="tab" aria-controls="after-tab-pane"
                                     aria-selected="false"
-                                    style="--btn-primary-bg-hover:#C7E5DB;--btn-primary-color-hover:#212428">After</button>
+                                   >After</button>
                             </div>
                         </div>
                         <div class="tab-content mt-30" id="myTabContent">
@@ -856,13 +851,13 @@
                             <img src="sections/isolated/review-slider/images/shower-result1.webp" class="card-img-top" alt="">
                             <div class="card-body skin-card-body">
                                 <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                    style="--bg-light: rgb(199 229 219 / 30%);">
+                                    >
                                     <div class="card-user">
                                         <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                         <span class="username">Briony R.</span>
                                     </div>
                                     <div
-                                        class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                        class="icon-with-text bg-light-aqua">
                                         <img src="assets/images/reviewCheck.svg" alt="review" />
                                         <span>Verified customer</span>
                                     </div>
@@ -881,13 +876,13 @@
                             <img src="sections/isolated/review-slider/images/shower-result2.webp" class="card-img-top" alt="">
                             <div class="card-body skin-card-body">
                                 <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                    style="--bg-light: rgb(199 229 219 / 30%);">
+                                    >
                                     <div class="card-user">
                                         <img src="sections/isolated/review-slider/images/england_f.webp" alt="user" />
                                         <span class="username">Hanna L.</span>
                                     </div>
                                     <div
-                                        class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                        class="icon-with-text bg-light-aqua">
                                         <img src="assets/images/reviewCheck.svg" alt="review" />
                                         <span>Verified customer</span>
                                     </div>
@@ -909,13 +904,13 @@
                             <img src="sections/isolated/review-slider/images/shower-result3.webp" class="card-img-top" alt="">
                             <div class="card-body skin-card-body">
                                 <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                    style="--bg-light: rgb(199 229 219 / 30%);">
+                                    >
                                     <div class="card-user">
                                         <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                         <span class="username">Josie K.</span>
                                     </div>
                                     <div
-                                        class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                        class="icon-with-text bg-light-aqua">
                                         <img src="assets/images/reviewCheck.svg" alt="review" />
                                         <span>Verified customer</span>
                                     </div>
@@ -936,12 +931,12 @@
                             <img src="sections/isolated/review-slider/images/shower-result4.webp" class="card-img-top" alt="">
                             <div class="card-body skin-card-body">
                                 <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                    style="--bg-light: rgb(199 229 219 / 30%);">
+                                    >
                                     <div class="card-user">
                                         <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                         <span class="username">Adele M.</span>
                                     </div>
-                                    <div class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                    <div class="icon-with-text bg-light-aqua">
                                         <img src="assets/images/reviewCheck.svg" alt="review" />
                                         <span>Verified customer</span>
                                     </div>
@@ -959,12 +954,12 @@
                             <img src="sections/isolated/review-slider/images/shower-result5.webp" class="card-img-top" alt="">
                             <div class="card-body skin-card-body">
                                 <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                    style="--bg-light: rgb(199 229 219 / 30%);">
+                                    >
                                     <div class="card-user">
                                         <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                         <span class="username">Kim L.</span>
                                     </div>
-                                    <div class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                    <div class="icon-with-text bg-light-aqua">
                                         <img src="assets/images/reviewCheck.svg" alt="review" />
                                         <span>Verified customer</span>
                                     </div>
@@ -992,9 +987,8 @@
     </script>
     <!-- Trusted reviews end-->
     <!-- Trusted Recommended section Start -->
-    <div class="trusted_recom qure__section"
-        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;">
-        <div class="container" style="--column-gap:35px; --column-gap-mobile:18px;">
+    <div class="trusted_recom qure__section">
+        <div class="container custom_gap">
             <h2 class="qure__section-heading d-md-none mb-3 text-center">Trusted and Recommended by Experts</h2>
             <div class="row align-items-center custom__grid">
                 <div class="col-lg-8 custom__block order-1 order-md-0">
@@ -1035,12 +1029,8 @@
     </div>
     <!-- Trusted Recommended section End -->
     <!---------------------- Section Logo ----------------------->
-    <div class="qure__section qure__logos color-background" style="--section-padding-top: 40px; 
-         --section-padding-bottom: 40px; 
-         --section-background:#F6F6F7;
-         --section-padding-top-mob:30px;
-         --section-padding-bottom-mob:30px">
-        <div class="container container-small" style="--container-width:1080px">
+    <div class="qure__section qure__logos color-background">
+        <div class="container">
             <div class="swiper qure__swiper mt-4" id="qure__swiper-qrLogo" data-section-id="qrLogo" data-autoplay="false"
                 data-loop="true" data-mobile="2.1" data-tablet="4" data-desktop="6" data-spacing="80"
                 data-pagination-progressbar="false">
@@ -1071,15 +1061,15 @@
     <!-- why it works  -->
     <link rel="stylesheet" href="sections/isolated/why-it-works/section-why-it-works.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <div class="why_it_works qure__section" style="--section-padding-top: 80px; --section-padding-bottom: 40px;">
-        <div class="container" style="--column-gap:50px; --column-gap-mobile:18px;" id="why_it_works">
+    <div class="why_it_works qure__section">
+        <div class="container custom_gap" id="why_it_works">
             <div class="section_header text-center pb-md-0 pb-30">
                 <h2 class="title-lg mb-md-30">Why It Works</h2>
                 <p>Our triple filtration technology filters the water to remove heavy metals and purify. </p>
             </div>
             <div class="row custom__grid align-items-center">
                 <div class="col-md-6 custom__block">
-                    <div style="--heading-font: 'TT Commons';" class="pr-md-30">
+                    <div class="pr-md-30">
                         <div class="accordion accordion-flush" id="qure_benefit-main">
                             <div class="accordion-item qure__accordion-item" data-img-url="sections/isolated/why-it-works/images/shower_point1.webp">
                                 <button class="accordion-button collapsed qure__accordion-header hit-header" type="button" data-bs-toggle="collapse"
@@ -1160,8 +1150,7 @@
     </script>
     <!-- why it works end -->
     <!-- Review Videos section Start -->
-    <div class="review_videos qure__section"
-        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;">
+    <div class="review_videos qure__section">
         <div class="container">
             <div class="qure__section-header text-center">
                 <h2 class="qure__section-heading">Confident skin starts here</h2>
@@ -1259,9 +1248,8 @@
 	  
     <!-- Review Videos section Start -->
     <!-- Section icon image box -->
-    <div class="qure__shipping  qure__section color-background overflow-hidden"
-        style="--section-padding-top:32px;--section-padding-bottom:32px; --section-padding-top-mob:24px;--section-padding-bottom-mob:24px;">
-        <div class="container" style="--column-gap:100px; --column-gap-mobile:30px;--ctm-width:50px; --ctm-width-mob:30px;">
+    <div class="qure__shipping  qure__section color-background overflow-hidden">
+        <div class="container">
             <div class="row custom__grid d-none d-lg-flex">
                 <div class="col-md-3 col-lg-3 custom__block">
                     <div class="qure_shipping-inner d-flex align-items-center gap-4">
@@ -1355,10 +1343,10 @@
     <!-- Section icon image box -->
     <!-- Section quick and easy -->
     <link rel="stylesheet" href="sections/isolated/target-specific/tg-icons.css" />
-    <div class="quick-and-easy qure__section" style="--section-padding-top:80px;--section-padding-bottom:80px;" id="easy_steps">
-        <div class="container">
+    <div class="quick-and-easy qure__section" id="easy_steps">
+        <div class="container custom_gap">
             <h2 class="qure__section-heading mb-30 d-block d-md-none">Set up in 3 easy steps</h2>
-            <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:30px;">
+            <div class="row custom__grid align-items-center">
                 <div class="col-md-4 col-lg-4 custom__block">
                     <div class="videosQure_exernal">
                             <div class="wistia_responsive_padding" style="position:relative;">
@@ -1378,9 +1366,9 @@
                 </div>
                 <div class="col-md-8 col-lg-8 custom__block">
                     <h2 class="qure__section-heading mb-50 d-none d-md-block">Set up in 3 easy steps</h2>
-                    <div class="row custom__grid" style="--column-gap:40px; --column-gap-mobile:24px;">
+                    <div class="row custom__grid">
                         <div class="col-md-6 col-lg-4 custom__block">
-                            <div class="qe__card-block d-flex flex-nowrap flex-md-wrap align-items-center" style="--bs-border-radius:10px">
+                            <div class="qe__card-block d-flex flex-nowrap flex-md-wrap align-items-center rounded-10">
                                 <div class="img_with-number mb-md-24 overflow-hidden position-relative" data-number="1">
                                     <img src="sections/isolated/quick-and-easy/images/detatch.webp" alt="detatch"
                                         class="img-fluid d-none d-lg-block" />
@@ -1433,9 +1421,8 @@
     </script>  
     <!-- Section quick and easy end -->
     <!-- Section column with filter -->
-    <div class="qure__section qure__col-with-filter color-background"
-        style="--section-padding-top:80px;--section-padding-bottom:80px; --section-padding-top-mob:50px;--section-padding-bottom-mob:50px; --section-background: #F6F6F7;">
-        <div class="container" style="--column-gap:27px; --column-gap-mobile:30px;">
+    <div class="qure__section qure__col-with-filter color-background">
+        <div class="container custom_gap">
             <div class="row align-items-center custom__grid">
                 <div class="col-md-12 col-lg-7 custom__block">
                     <div class="qure-text-content">
@@ -1503,15 +1490,14 @@
     <!-- Section improve skin -->
     <!-- Section eye patches -->
     <link rel="stylesheet" href="sections/isolated/eye-patches/eye-patch.css" />
-    <div class="eye-patch-care qure__section"
-        style="--section-padding-top:80px;--section-padding-bottom:80px; --section-padding-top-mob:30px;--section-padding-bottom-mob:30px;">
-        <div class="container container-small" style="--container-width:980px">
+    <div class="eye-patch-care qure__section">
+        <div class="container ">
             <div class="qure__section-header text-center mb-60">
                 <h2 class="qure__section-heading pb-10">Why choose Qure?</h2>
                 <p>Qure Shower Filter removes more contaminants than standard showerheads, and provides better water quality than
                 alternative filters.</p>
             </div>
-            <div class="d-flex custom__grid" style="--column-gap:40px; --column-gap-mobile:0px;">
+            <div class="d-flex custom__grid">
                 <div class="col custom__block">
                     <div class="patch-card-block">
                         <div class="patch-card-img overflow-hidden position-relative">
@@ -1533,7 +1519,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-card-content">
                         <div class="text-center my-20">
@@ -1550,7 +1536,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Reduces chlorine and heavy metals</div>
                 </div>
@@ -1559,7 +1545,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Three-step filtration system</div>
                 </div>
@@ -1568,7 +1554,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-list patch-check">NSF-standard tested</div>
                 </div>
@@ -1577,7 +1563,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Customizable water flow</div>
                 </div>
@@ -1586,7 +1572,7 @@
                 </div>
             </div>
             <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-                style="--column-gap:40px; --column-gap-mobile:20px;">
+                >
                 <div class="col custom__block">
                     <div class="patch-list patch-check">Backed by a lifetime warranty</div>
                 </div>
@@ -1598,9 +1584,7 @@
     </div>
     <!-- Section eye patches -->
     <!-- Faq section Start -->
-    <div class="faq_section qure__section color-background"
-        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-background: #F6F6F7; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;"
-        id="faq">
+    <div class="faq_section qure__section color-background" id="faq">
         <div class="container">
             <div class="qure__section-header text-center">
                 <h2 class="qure__section-heading">Have questions?</h2>

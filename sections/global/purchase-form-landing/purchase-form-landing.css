@@ -435,6 +435,12 @@
     padding: 8px 20px;
     background: #F6F6F7;
     border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 .qure__featured-product-bundle  .accordion-body {
     padding: 0 10px 8px;
@@ -520,6 +526,10 @@
     background: var(--color-orange);
     color: var(--white-color);
 }
+.qure__variant-item .qv-frame img {
+    max-width: 60px;
+    height: 50px;
+}
 /* ================ Best Value Flag ================ */ 
 .best__value .qure__variant-box{
     padding: 12px 0 24px;
@@ -558,6 +568,12 @@
 }
 
 @media(max-width: 767px) {
+    .qure__variant-item .qv-frame img{
+        max-width: 50px;
+    }
+    .qure__product-rating {
+        margin-top: 30px;
+    }
     .product_shower-title {
         font-size: 32px;
     }
@@ -622,6 +638,9 @@
 .all-in-one-bf{
     display: unset !important;
 }
+.patch__product-variants .patch__variant-label {
+    margin: 25px 0 0;
+}
 /* all in one bf section css ends */
 
 /* black friday limited edition kit start */
@@ -640,6 +659,10 @@
 }
 .qure__variant-label{
     margin: 25px 0;
+}
+.product_shower-action-inner {
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 .dis_red_line{
     position: relative;
@@ -697,9 +720,88 @@
     flex-direction: column;
     text-align: right;
 }
+.patch__product-batch{
+    margin-top: 20px;
+}
+.variants_wrapper{
+    display: flex;
+    gap: 12px;
+}
+.next_batch_ships{
+    font-family: "TT Commons";
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.due_to_demand{
+    font-size: 14px;
+}
+.progress__bar-container{
+    width: 100%;
+}
+.patch-bar{
+    margin-bottom: 10px;
+}
+.get_best_results{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.product_trust_highlights{
+    display: none;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 30px;
+}
+.product_trust_highlights_cols{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 16px;
+    text-align: start;
+}
+.product_trust_icon{
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.tp-product-accordion{
+    margin-top: 10px;
+}
+.jump_to_title{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.patch-badge-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.progress_bar_blue{
+    --progress-bg:#91BAEC;
+    --text-color:#212428;
+    --progress-width:48%;
+}
+.inner_gap{
+    --column-gap:20px; --column-gap-mobile:18px;
+}
 @media(max-width:767px){
+    .product_trust_highlights_cols{
+        text-align: center;
+        flex-direction: column;
+    }
   .product_shower-action-inner{
     font-size: 18px;
   }
+  .get_best_results{
+    margin-top: 0;
+  }
+  .product_trust_highlights{
+    display: flex;
+}
+.product_trust_icon{
+    margin-right: 0;
+    margin-bottom: 10px;
+}
 }
 /* black friday limited edition kit end */

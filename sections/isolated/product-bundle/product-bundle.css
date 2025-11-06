@@ -73,6 +73,9 @@
 .bundle_price .black_friday_pricing {
     text-transform: uppercase;
 }
+.qure-product-details{
+    max-width: 500px;
+}
 
 @media (max-width: 767px) {
     .bundle_price {

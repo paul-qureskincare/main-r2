@@ -70,6 +70,14 @@
 .trusted_video_content .drs_rev p {
     font-size: 16px;
 }
+.icon-with-text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
 @media(max-width:767px){
     .centered_scale .swiper-slide .skin-card {
     transform: scale(0.94);

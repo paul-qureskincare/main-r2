@@ -210,7 +210,7 @@ body {
     max-width: 1200px;
   }
 }
-.container-small{
+.{
     max-width: var(--container-width, 1080px);
 }
 @media(max-width:767px){
@@ -579,6 +579,10 @@ ul.list-dots {
     width: 100%;
     max-width: var(--ctm-width);
 }
+.ctm_width_new {
+    width: 100%;
+    max-width: 50px;
+}
 .ctm-height {
     height: 100%;
     min-height: var(--ctm-height);
@@ -593,6 +597,9 @@ ul.list-dots {
     line-height: var(--line-height, normal);
 }
 @media(max-width:767px){
+    .ctm_width_new {
+        max-width: 30px;
+    }
     .line-height{
         line-height: var(--line-height-mob, normal);
     }
@@ -1747,11 +1754,49 @@ body.page\.hairgrowth-helmet-guide .tab-content a{
     font-size: 18px;
 }
 .custom_gap{--column-gap:60px;}
+.btn_sm_ext{
+    margin-top: 10px;
+    width: 100%;
+    padding: 7px 20px;
+    font-size: 18px;
+}
 @media(max-width:767px) {
     .limited_edition{
         font-size: 16px;
     }
     .custom_gap{--column-gap-mobile:30px !important;} 
+    .btn_sm_ext{
+        font-size: 16px;
+    }
 }
+
 .bg_marquee_section{background: #212428;}
 .bg_marquee_section .qure_shipping-content {color: #fff;}
+.product_klarna-dtls{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+    padding: 0 10px;
+}
+.faq_content a{
+    color: #212428;
+    text-decoration: underline;
+}
+.improve_skin .qure-filter-link{
+    --btn-primary-bg-hover: #DFE0E0 !important;
+}
+.improve_skin .qure-filter-link:hover{
+    --btn-primary-color-hover: #212428 !important;
+}
+.qure_shipping-img.ctm-width{
+    --column-gap:100px; 
+    --column-gap-mobile:30px;
+    --ctm-width:50px; 
+    --ctm-width-mob:30px;
+}
+.bg-light-aqua{
+    background: rgb(199 229 219 / 30%);
+}

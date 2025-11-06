@@ -92,9 +92,22 @@
     font-weight: 600;
     color: #8b8c8e;
 }
+.eye-patch-care .container{
+    max-width: 980px;
+}
+.eye-patch-care .custom__grid{
+    column-gap: 40px;
+}
+.patch-row{
+    --column-gap:40px; 
+    --column-gap-mobile:20px;
+}
 
 
 @media(max-width:767px){
+    .eye-patch-care .custom__grid{
+        column-gap: 0;
+    }
     .patch-versus-col {
         height: var(--child-height);
         align-items: center;

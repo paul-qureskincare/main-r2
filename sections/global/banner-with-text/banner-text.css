@@ -14,6 +14,10 @@
     margin-top: var(--text-mt);
     margin-bottom: var(--text-mb);
 }
+.banner-text--des {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
 .banner-text--des span{
     background-color: var(--base-color);
 }

@@ -10,9 +10,10 @@
    <link rel="stylesheet" href="assets/css/vendor.css">
    <link rel="stylesheet" href="assets/css/spacings.css">
    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+   <link href="assets/css/black-friday.css" rel="stylesheet" />
    <link href="assets/css/base.css" rel="stylesheet" />
    <!-- Loading HTML Files -->
-   <script src="assets/js/fileloader.js"></script>
+   <script src="assets/js/fileloader.js"></script> 
 
 </head>
 
@@ -40,13 +41,12 @@
 
    <!-- section-targeted-patches -->
    <link rel="stylesheet" href="sections/global/purchase-form-landing/purchase-form-landing.css">
-   <div id="buy_box" class="qure__trageted-patches qure__section"
-      style="--section-padding-top: 40px; --section-padding-bottom: 80px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;">
-      <div class="container" style="--column-gap:80px; --column-gap-mobile:30px;">
+   <div id="buy_box" class="qure__featured-product-bundle qure__section">
+      <div class="container custom_gap">
          <div class="row custom__grid">
             <div class="col-lg-6 custom__block">
                <div class="qure-product-details">
-                  <slide-with-thumbs class="tp-product-gallery qure__swiper-wrapper d-block d-lg-none mb-30">
+                  <slide-with-thumbs class="tp-product-gallery qure__swiper-wrapper d-block d-lg-none">
                      <!-- Galler start-->
                      <div class="swiper qure__product-gallery qure__swiper-gallery" data-section-id="tp-gallery-desktop"
                         data-mobile="3" data-tablet="3" data-desktop="4" data-autoplay="false" data-loop="false"
@@ -176,14 +176,18 @@
                      <!-- Thumbnails End-->
                   </slide-with-thumbs>
 
-                  <div class="patch__product-rating d-inline-flex align-items-center gap-3 fs-16 mb-20">
+                  <div class="qure__product-rating">
                      <img src="sections/isolated/clean-water/images/cyan_blue_rating.svg" alt="">
                      <span><strong>4.8</strong>/5 Rated by Customers</span>
                   </div>
-                  <p class="mb-10 fs-16 fw-400">MICRO INFUSION FACIAL SYSTEM - AN ALTERNATIVE TO DERMA ROLLERS</p>
-                  <h2 class="qure__product-title mb-10">Transform dull looking skin with Micro-Infusion Facial System
+                  <p class="hypo_acid_derm_mist">MICRO INFUSION FACIAL SYSTEM - AN ALTERNATIVE TO DERMA ROLLERS</p>
+                  <h2 class="qure__product-title purify_skin">Transform dull looking skin with Micro-Infusion Facial System
                   </h2>
-                  <div class="patch__single-shortdes mt-20">
+                  <div class="black_friday_wrapper">
+                            <p class="black_friday_pricing">BLACK FRIDAY</p>
+                            <a href="" class="save_perc">SAVE 26%</a>
+                        </div>
+                  <div class="shower__single-shortdes">
                      <ul>
                         <li>Helps reduce appearance of fine lines, smooth texture while helping to infuse active
                            ingredients into your skin.</li>
@@ -191,10 +195,10 @@
                         <li>Minimal to no downtime with visible results.</li>
                      </ul>
                   </div>
-                  <div class="border-top  max-w-ctm my-25" style="--max-w-ctm:500px"></div>
+                  <div class="border-top my-25"></div>
                   <div class="product_shower-variants">
-                     <div class="qure__variant-label mb-15">Select Your Serum:</div>
-                     <div class="d-flex col-gap" style="--col-gap:12px">
+                     <div class="qure__variant-label">Select Your Serum:</div>
+                     <div class="variants_wrapper">
                         <div class="col qure__variant-item">
                            <input type="radio" id="white" name="serum_main" class="variant__input">
                            <label for="white" class="qure__variant-box">
@@ -228,9 +232,9 @@
                         </div>
                      </div>
                   </div>
-                  <div class="patch__product-variants max-w-ctm" style="--max-w-ctm:500px">
-                     <div class="qure__variant-label mb-15 mt-20">Select Your supply:</div>
-                     <div class="d-flex col-gap best__value" style="--col-gap:12px; --col-gap-mb: 6px;">
+                  <div class="patch__product-variants d-none">
+                     <div class="qure__variant-label">Select Your supply:</div>
+                     <div class="d-flex col-gap best__value" >
                         <div class="col qure__variant-item">
                            <input type="radio" class="variant__input" name="supply-pack" id="three-month" checked />
                            <label for="three-month" class="qure__variant-box">
@@ -284,20 +288,89 @@
                      </div>
 
                   </div>
-                  <div class="qure__product-action-inner mt-30 mt-md-40 mb-10 max-w-ctm" style="--max-w-ctm:500px">
+                  <div class="patch__product-variants">
+                     <div class="patch__variant-label">Select Your supply:</div>
+                     <div class="d-flex col-gap best__value all-in-one-bf" >
+
+                        <div class="col qure__variant-item">
+                               <div class="vp-best-value">Best Value <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                              </div>
+                           <input type="radio" class="variant__input" name="supply-pack-bf" id="three-month-bf" checked="">
+                           <label for="three-month-bf" class="qure__variant-box">
+                              <div class="bf-buy-Wrapper">
+                              <div class="qv-frame">
+                                 <div class="qv-frame-inner">
+                                    <img src="sections/isolated/micro-infusion-pdp/images/3_month_mixed.webp" class="qv-img">
+                                 </div>
+                              </div>
+                              <div class="div">3 Month Supply<br><span class="fs-14">6 Micro-Infusion treatments</span></div>
+                              </div>
+                              <div>
+                                 <div class="vp-price dis_red_line">
+                                    <span class="vp-price-sale">$238</span>
+                                    <span class="">$149</span>
+                                 </div>
+                                 <div class="text-end fw-600">$133.51</div>
+                              </div>
+                           </label>
+                        </div>
+
+                        <div class="col qure__variant-item">
+                           <input type="radio" class="variant__input" name="supply-pack-bf" id="two-month-bf">
+                           <label for="two-month-bf" class="qure__variant-box">
+                              <div class="bf-buy-Wrapper">
+                                 <div class="qv-frame">
+                                    <div class="qv-frame-inner">
+                                       <img src="sections/isolated/micro-infusion-pdp/images/2_month_mixed.webp" class="qv-img">
+                                    </div>
+                                 </div>
+                                 <div class="div">2 Month Supply<br><span class="fs-14">4 Micro-Infusion treatments</span></div>
+                              </div>
+                              <div>
+                                 <div class="vp-price dis_red_line">
+                                    <span class="vp-price-sale">$238</span>
+                                    <span class="">$149</span>
+                                 </div>
+                                  <div class="text-end">$133.51</div>
+                              </div>
+                           </label>
+                        </div>
+
+                        <div class="col qure__variant-item">
+                           <input type="radio" class="variant__input" name="supply-pack-bf" id="one-month-bf">
+                           <label for="one-month-bf" class="qure__variant-box">
+                           <div class="bf-buy-Wrapper">
+                              <div class="qv-frame">
+                                 <div class="qv-frame-inner">
+                                    <img src="sections/isolated/micro-infusion-pdp/images/1_month_mixed.webp" class="qv-img">
+                                 </div>
+                              </div>
+                              <div class="div">1 Month Supply<br><span class="fs-14">2 Micro-Infusion treatments</span></div>
+                              </div>
+                              <div>
+                                 <div class="vp-price dis_red_line">
+                                    <span class="">$119</span>
+                                 </div>
+                                  <div class="text-end">$133.51</div>
+                              </div>
+                           </label>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="product_shower-action-inner">
                      <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy
                         Now & Save {dyn}%</button>
                   </div>
                   <div
-                     class="product_klarna-dtls d-flex flex-wrap gap-2 align-items-center fs-14 justify-content-center max-w-ctm"
-                     style="--max-w-ctm:500px">
+                     class="product_klarna-dtls">
                      OR pay 4 monthly payments of {$dyn} with
                      <img src="sections/isolated/targeted-patches/images/klarna.svg" />
                      <img src="sections/isolated/targeted-patches/images/sezzle.svg" />
                      <img src="sections/isolated/targeted-patches/images/afterpay.svg" />
 
                   </div>
-                  <div class=" max-w-ctm" style="--max-w-ctm:500px">
+                  <div class="">
                      <div class="patch__product-certified my-15">
                         <ul class="patch-dr-list">
                            <li><img src="sections/isolated/targeted-patches/images/crt-1.webp" /></li>
@@ -312,20 +385,20 @@
                      <div
                         class="icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
                         <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist"
-                           class="mr-0 mr-md-10 mb-10 mb-md-0">
+                           class="product_trust_icon">
                         <span>30-Day Money-Back Guarantee </span>
                      </div>
                      <div
                         class="icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
                         <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping"
-                           class="mr-0 mr-md-10 mb-10 mb-md-0">
+                           class="product_trust_icon">
                         <span>Free Shipping over {$dyn}</span>
                      </div>
                   </div>
-                  <div class="patch__product-batch mt-30 max-w-ctm" style="--max-w-ctm:500px">
+                  <div class="patch__product-batch">
                      <div class="patch-d-header">
-                        <h4 class="fm-body fs-16 fw-600 mb-0">Next batch ships {date}:</h4>
-                        <p class="fs-14">Due to high demand, our {product name} is sold out. Order now and secure
+                        <h4 class="next_batch_ships">Next batch ships {date}:</h4>
+                        <p class="due_to_demand">Due to high demand, our {product name} is sold out. Order now and secure
                            yours from the next shipment.</p>
                      </div>
                      <div class="progress__bar-container w-100">
@@ -333,8 +406,7 @@
                            <span class="patch__date">{Previous date}</span><span class="patch__status">SOLD
                               OUT</span>
                         </div>
-                        <div class="patch-bar" role="progressbar"
-                           style="--progress-bg:#91BAEC;--text-color:#212428;--progress-width:48%">
+                        <div class="patch-bar progress_bar_blue" role="progressbar">
                            <span class="patch__date fs-14">{date}</span><span class="patch__status">48% Reserved</span>
                         </div>
                      </div>
@@ -489,7 +561,7 @@
 
 
 
-               <div class="product__label mt-0 mt-lg-40 mb-15">Get The Best Results With</div>
+               <div class="product__label get_best_results">Get The Best Results With</div>
                <div class="swiper qure__swiper" id="qure__swiper-best-results" data-section-id="best-results"
                   data-autoplay="false" data-loop="false" data-mobile="1.4" data-tablet="2" data-desktop="2"
                   data-spacing="12" data-pagination-fraction="true">
@@ -500,8 +572,7 @@
                               src="sections/isolated/n&d-slider/images/q_rejuv_n&d.webp" alt="">
                            <div class="patch__result-content">
                               Neck & Décolletage LED Device
-                              <button class="btn btn--primary btn-sm mt-10 w-100"
-                                 style="--btn-sm-padding: 7px 20px; --btn-font-mob:18px;">Add - {$dyn}</button>
+                              <button class="btn btn--primary btn_sm_ext">Add - {$dyn}</button>
                            </div>
                         </div>
                      </div>
@@ -511,36 +582,35 @@
                               src="sections/isolated/targeted-patches/images/result-1.webp" alt="">
                            <div class="patch__result-content">
                               All-In One Face Serum
-                              <button class="btn btn--primary btn-sm mt-10 w-100"
-                                 style="--btn-sm-padding: 7px 20px; --btn-font-mob:18px;">Add - {$dyn}</button>
+                              <button class="btn btn--primary btn_sm_ext">Add - {$dyn}</button>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="d-flex d-lg-none flex-nowrap align-items-start justify-content-center col-gap mt-30">
+               <div class="product_trust_highlights">
                   <div
-                     class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                     class="product_trust_highlights_cols">
                      <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist"
-                        class="mr-0 mr-md-10 mb-10 mb-md-0">
+                        class="product_trust_icon">
                      <span>30-Day Money-Back Guarantee</span>
                   </div>
                   <div
-                     class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                     class="product_trust_highlights_cols">
                      <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping"
-                        class="mr-0 mr-md-10 mb-10 mb-md-0">
+                        class="product_trust_icon">
                      <span>Free World-Wide Shipping over {$dyn}</span>
                   </div>
                   <div
-                     class="col icon-with-text d-flex flex-wrap flex-lg-nowrap flex-column flex-lg-row align-items-center fs-16 text-center text-lg-start">
+                     class="product_trust_highlights_cols">
                      <img src="sections/isolated/protect-your-skin/images/backed_science.svg" alt="backed by science"
-                        class="mr-0 mr-md-10 mb-10 mb-md-0">
+                        class="product_trust_icon">
                      <span>Backed by Science </span>
                   </div>
                </div>
 
-               <div class="accordion accordion-flush mt-15 tp-product-accordion" id="tp-product-qure">
+               <div class="accordion accordion-flush tp-product-accordion" id="tp-product-qure">
                   <div class="accordion-item qure__accordion-item">
                      <button class="accordion-button collapsed qure__accordion-header" type="button"
                         data-bs-toggle="collapse" data-bs-target="#key-benefits" aria-expanded="false"
@@ -550,17 +620,15 @@
                      <div id="key-benefits" class="accordion-collapse collapse qure__accordion-content"
                         data-bs-parent="#tp-product-qure">
                         <div class="accordion-body">
-                           <p>The Qure Micro-Infusion System is designed to visibly smooth fine lines and wrinkles,
-                              improve skin texture and tone, and deliver deep hydration where it’s needed most. </p>
-                           <p>By creating tiny micro-channels in the skin, it enhances the absorption of active
-                              ingredients for faster, more effective results.</p>
-                           <span class="mt-4 d-block">Visible benefits include:</span>
+                           <p>The Micro-Infusion System creates micro-channels on the skin’s surface to enhance serum absorption for visible improvements.</p>
+                           <span class="mt-4 d-block">Visible benefits include*:</span>
                            <ul class="mb-0">
-                              <li>Smoother fine lines and wrinkles</li>
-                              <li>Brighter, more even skin tone</li>
-                              <li>Deep hydration and improved skin texture</li>
-                              <li>A fresh, dewy glow within minutes</li>
+                              <li>Helps smooth the appearance of fine lines and wrinkles</li>
+                              <li>Supports a brighter, more even-looking skin tone</li>
+                              <li>Visibly plumps and supports smoother-looking skin texture</li>
+                              <li>Leaves skin with a fresh, dewy-looking glow</li>
                            </ul>
+                           <p>*As reported by customers in self-perception surveys and before-and-after images. Individual results may vary</p>
                         </div>
                      </div>
                   </div>
@@ -605,17 +673,16 @@
                            <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide,
                               Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum,
                               Allantoin, Sh-Oligopeptide-1</p>
-                           <ul class="mb-0">
-                              <li>Clinically tested and hypoallergenic</li>
-                              <li>Dermatologically approved</li>
-                              <li>Suitable for sensitive skin</li>
+                           <ul class="mb-0 check_list">
+                              <li>Vegan and cruelty-free</li>
+                              <li>Suitable for sensitive skin </li>
                            </ul>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="product__label mt-40 mb-15"> Jump To </div>
-               <div class="patch-badge-group d-flex flex-wrap gap-3">
+               <div class="product__label jump_to_title"> Jump To </div>
+               <div class="patch-badge-group">
                   <a href="#results" class="patch-badge">The Results<i class="fa-regular fa-arrow-down fs-14"></i></a>
                   <a href="#image_text" class="patch-badge">How It Works <i
                         class="fa-regular fa-arrow-down fs-14"></i></a>
@@ -727,10 +794,9 @@
 
    <!-- red light therapy  -->
    <link rel="stylesheet" href="sections/isolated/red-light-therapy/red-light-therapy.css">
-   <div class="qure__section red_light_therapy"
-      style="--section-padding-top: 75px; --section-padding-bottom: 40px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;">
+   <div class="qure__section red_light_therapy">
       <div class="container">
-         <h2 class="banner-text--heading text-center mb-30 mb-md-50 mw mx-auto" style="--mw:600px;">5 reasons why
+         <h2 class="banner-text--heading text-center mb-30 mb-md-50 mw mx-auto">5 reasons why
             everyone is using the Qure Micro-Infusion System
          </h2>
          <div class="d-grid grid_dynamic_cols gap-4" style="--grid_dynamic_cols:5; --grid_dynamic_cols_mob:1">
@@ -761,10 +827,9 @@
 
    <!-- Banner with text -->
    <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-   <div class="qure__section banner-with-text"
-      style="--section-padding-top: 40px; --section-padding-bottom: 40px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;" id="image_text">
-      <div class="container">
-         <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:32px;">
+   <div class="qure__section banner-with-text" id="image_text">
+      <div class="container custom_gap">
+         <div class="row custom__grid align-items-center">
             <div class="col-md-6 custom__block">
                <div class="treat_breakouts">
                   <div class="wistia_responsive_padding" style="position:relative;">
@@ -779,7 +844,7 @@
             <div class="col-md-6 custom__block">
                <div class="banner-with-text-content">
                   <h2 class="banner-text--heading">Qure’s Micro-Infusion goes where your skin cream can’t…</h2>
-                  <div class="banner-text--des" style="--text-mt: 32px; --text-mb: 32px;">
+                  <div class="banner-text--des">
                      <p>Its tiny, almost painless, 24K gold plated 0.5mm microneedles penetrate beyond the skin’s
                         surface to gently create controlled trauma in your skin which help <span>boost the feel of
                            firmness, smooth texture and reduce the look of fine lines and wrinkles.</span></p>
@@ -804,21 +869,20 @@
    <!-- after before evidence -->
    <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
    <div id="results" class="qure__section after no_hype_evidence"
-      style="--section-padding-top: 40px; --section-padding-bottom: 80px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;"
       id="evidence_section">
       <div class="container">
          <div class="heading_wrapper d-md-none">
             <h2 class="banner-text--heading">No hype, just evidence</h2>
-            <div class="banner-text--des" style="--text-mt: 20px; --text-mb: 20px;">
+            <div class="banner-text--des" >
                <p>The results speak for themselves. In an independent user study, participants' skin was measured and
                   showed proven visible improvement after just 6 treatments.</p>
             </div>
          </div>
-         <div class="row custom__grid" style="--column-gap:60px; --column-gap-mobile:32px;">
+         <div class="row custom__grid custom_gap">
             <div class="col-md-7 custom__block order-mob-2">
                <div class="heading_wrapper d-none d-md-block">
                   <h2 class="banner-text--heading">No hype, just evidence</h2>
-                  <div class="banner-text--des" style="--text-mt: 32px; --text-mb: 20px;">
+                  <div class="banner-text--des" >
                      <p>The results speak for themselves. In an independent user study, participants' skin was measured
                         and showed proven visible improvement after just 6 treatments.</p>
                   </div>
@@ -963,8 +1027,7 @@
 
    <!-- Trusted reviews -->
    <link rel="stylesheet" href="sections/isolated/review-slider/card-slide.css" />
-   <div id="reviews" class="qure__trusted-reviews qure__section color-background"
-      style="--section-background-mob:#F6F6F7;--section-padding-top: 80px;--section-padding-bottom: 40px;--section-padding-top-mob: 50px;--section-padding-bottom-mob: 30px;">
+   <div id="reviews" class="qure__trusted-reviews qure__section color-background">
       <div class="container offset-container-mobile">
          <div class="qure__section-header text-center mb-30 mb-md-60">
             <h2 class="qure__section-heading px-15">Results you’ll see with your own eyes</h2>
@@ -981,13 +1044,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Ellie V.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1009,13 +1072,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Mona P.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1035,13 +1098,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Andrea G.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1064,13 +1127,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Jessica K.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1093,13 +1156,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Ela O.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1123,13 +1186,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Shelly S.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1150,13 +1213,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Chelsea J.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1179,13 +1242,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Akina M.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1206,13 +1269,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Jess.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1234,13 +1297,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/england_f.webp" alt="user" />
                                  <span class="username">Priya P.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1262,13 +1325,13 @@
                      <div class="card-body skin-card-body d-flex flex-column justify-content-between">
                         <div class="tr__reviews">
                            <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                              style="--bg-light: rgb(199 229 219 / 30%);">
+                              >
                               <div class="card-user">
                                  <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
                                  <span class="username">Jennifer N.</span>
                               </div>
                               <div
-                                 class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
+                                 class="icon-with-text bg-light-aqua">
                                  <img src="assets/images/reviewCheck.svg" alt="review" />
                                  <span>Verified customer</span>
                               </div>
@@ -1304,9 +1367,8 @@
    <!-- Trusted reviews end-->
 
    <!-- Trusted Recommended section Start -->
-   <div class="trusted_recom qure__section"
-      style="--section-padding-top: 80px; --section-padding-bottom: 40px; --section-padding-top-mob: 40px; --section-padding-bottom-mob: 20px;">
-      <div class="container" style="--column-gap:35px; --column-gap-mobile:18px;">
+   <div class="trusted_recom qure__section">
+      <div class="container custom_gap">
          <h2 class="qure__section-heading d-md-none mb-20 text-center">Trusted and Recommended by Experts</h2>
          <div class="row align-items-center custom__grid">
             <div class="col-lg-7 custom__block order-1 order-md-0">
@@ -1357,8 +1419,7 @@
 
       <!-- Trusted video slider -->
    <link rel="stylesheet" href="sections/isolated/trusted-video/trusted-video-slider.css">
-   <div class="trusted_video_slider qure__section"
-      style="--section-padding-top: 40px; --section-padding-bottom: 80px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
+   <div class="trusted_video_slider qure__section">
       <div class="container">
          <div class="swiper qure__swiper" id="qure__swiper-trusted-slider-video" data-section-id="trusted-slider-video"
             data-autoplay="false" data-loop="false" data-mobile="1.1" data-tablet="2" data-desktop="3" data-spacing="30"
@@ -1544,10 +1605,9 @@
 
 
    <!-- Section icon image box -->
-   <div class="qure__shipping  qure__section color-background overflow-hidden"
-      style="--section-background-mob:#F6F6F7;--section-padding-top: 40px; --section-padding-bottom: 40px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;">
+   <div class="qure__shipping  qure__section color-background overflow-hidden">
       <div class="container"
-         style="--column-gap:100px; --column-gap-mobile:30px;--ctm-width:50px; --ctm-width-mob:30px;">
+        >
          <div class="row custom__grid d-none d-lg-flex">
             <div class="col-md-3 col-lg-3 custom__block">
                <div class="qure_shipping-inner d-flex align-items-center gap-4">
@@ -1646,7 +1706,7 @@
    <link rel="stylesheet" href="sections/isolated/serum/section-serum.css" />
    <div id="science_backed" class="qure__section compare_section"
       style="--section-padding-top: 60px; --section-padding-bottom: 40px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 30px;">
-      <div class="container container-small" style="--container-width:850px">
+      <div class="container " style="--container-width:850px">
          <div class="qure__section-header text-center mb-60">
             <h2 class="qure__section-heading">Science-Backed Micro-Infusion Serums </h2>
             <div class="qure__section-desc mt-30 px-lg-40">Choose the exact serum to use in your Micro-Infusion
@@ -2008,9 +2068,9 @@
    <div id="how_to_use" class="quick-and-easy qure__section"
       style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 40px; --section-padding-bottom-mob: 40px;"
       id="steps">
-      <div class="container">
+      <div class="container custom_gap">
          <h2 class="qure__section-heading mb-30 d-block d-md-none">See how quick and easy it is to use</h2>
-         <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:30px;">
+         <div class="row custom__grid align-items-center">
             <div class="col-md-4 col-lg-4 custom__block">
                <div class="wistia__player">
                   <div class="wistia_responsive_padding" style="position:relative;">
@@ -2201,7 +2261,7 @@
    <link rel="stylesheet" href="sections/isolated/eye-patches/eye-patch.css" />
    <div class="eye-patch-care qure__section"
       style="--section-padding-top:80px;--section-padding-bottom:80px; --section-padding-top-mob:30px;--section-padding-bottom-mob:30px;">
-      <div class="container container-small" style="--container-width:850px">
+      <div class="container " style="--container-width:850px">
          <div class="qure__section-header text-center mb-60">
             <h2 class="qure__section-heading">Typically more effective and safer than other at-home needling
                devices
@@ -2211,8 +2271,8 @@
                little to no downtime, is virtually painless, and minimizes risk of infection and irritation.</div>
          </div>
       </div>
-      <div class="container container-small" style="--container-width:980px">
-         <div class="d-flex custom__grid" style="--column-gap:40px; --column-gap-mobile:0px;">
+      <div class="container ">
+         <div class="d-flex custom__grid">
             <div class="col custom__block">
                <div class="patch-card-block">
                   <div class="patch-card-img overflow-hidden position-relative">
@@ -2234,7 +2294,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-card-content">
                   <div class="text-center mt-20">
@@ -2251,7 +2311,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-list patch-check">Stamping doesn’t over-damage skin</div>
             </div>
@@ -2260,7 +2320,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-list patch-check">Little to no downtime & quick recovery</div>
             </div>
@@ -2269,7 +2329,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-list patch-check">New needle heads provide sharp, straight needles for every
                   treatment
@@ -2282,7 +2342,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-list patch-check">Minimized risk of infection due to disposable heads</div>
             </div>
@@ -2291,7 +2351,7 @@
             </div>
          </div>
          <div class="d-flex custom__grid patch-list-row justify-content-between patch-row"
-            style="--column-gap:40px; --column-gap-mobile:20px;">
+            >
             <div class="col custom__block">
                <div class="patch-list patch-check">Delivers serum directly to skin to help increase absorption &
                   results
@@ -2315,7 +2375,7 @@
    <link rel="stylesheet" href="sections/global/purchase-form/purchase-form.css" />
    <div class="qure__section user_guideline  color-background"
       style="--section-padding-top: 50px; --section-padding-bottom: 80px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 50px;">
-      <div class="container" style="--column-gap:60px; --column-gap-mobile:30px;">
+      <div class="container custom_gap">
          <div class="row custom__grid">
             <div class="col-md-6 custom__block">
                <div class="qure__section-header text-center mb-60 d-none d-md-block">
@@ -2327,7 +2387,7 @@
                   <img src="sections/isolated/archive/images/tami.webp" class="card-img-top" alt="">
                   <div class="card-body af-card-body">
                      <div class="reviews-header d-flex align-items-center justify-content-between"
-                        style="--bg-light: rgb(199 229 219 / 30%);">
+                        >
                         <div class="card-user">
                            <img src="sections/isolated/after-before-accordion/images/america_f.webp" alt="user">
                            <span class="username">Tami T.</span>
@@ -2418,7 +2478,7 @@
                      </div>
                      <div class="qure__bundle-steps">
                         <div class="qure-bundle-stps-title mb-16">Select Your Supply:</div>
-                        <div class="qure-bundle-container" style="--col-gap: 10px;--col-gap-mb:10px">
+                        <div class="qure-bundle-container d-none" style="--col-gap: 10px;--col-gap-mb:10px">
                            <div class="bundle-supply d-flex col-gap align-items-end" id="myTab" role="tablist">
                               <div class="qure-supply-item col" role="presentation">
                                  <input type="radio" name="supply" id="three-months" checked="">
@@ -2550,7 +2610,72 @@
                               </div>
                            </div>
                         </div>
+
+                        <div class="d-flex col-gap best__value all-in-one-bf" >
+                           <div class="col qure__variant-item">
+                               <div class="vp-best-value">Best Value <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                              </div>
+                              <input type="radio" class="variant__input" name="supply-pack-bfn" id="three-month-bfn" checked="">
+                              <label for="three-month-bfn" class="qure__variant-box">
+                                 <div class="bf-buy-Wrapper">
+                                 <div class="qv-frame">
+                                    <div class="qv-frame-inner">
+                                       <img src="sections/isolated/micro-infusion-pdp/images/3_month_mixed.webp" class="qv-img">
+                                    </div>
+                                 </div>
+                                 <div class="div">3 Month Supply<br><span class="fs-14">6 Micro-Infusion treatments</span></div>
+                                 </div>
+                                 <div>
+                                    <div class="vp-price dis_red_line">
+                                       <span class="vp-price-sale">$238</span>
+                                       <span class="">$149</span>
+                                    </div>
+                                    <div class="text-end fw-600">$133.51</div>
+                                 </div>
+                              </label>
+                           </div>
+                           <div class="col qure__variant-item">
+                              <input type="radio" class="variant__input" name="supply-pack-bfn" id="two-month-bfn">
+                              <label for="two-month-bfn" class="qure__variant-box">
+                                 <div class="bf-buy-Wrapper">
+                                    <div class="qv-frame">
+                                       <div class="qv-frame-inner">
+                                          <img src="sections/isolated/micro-infusion-pdp/images/2_month_mixed.webp" class="qv-img">
+                                       </div>
+                                    </div>
+                                    <div class="div">2 Month Supply<br><span class="fs-14">4 Micro-Infusion treatments</span></div>
+                                 </div>
+                                 <div>
+                                    <div class="vp-price dis_red_line">
+                                       <span class="vp-price-sale">$238</span>
+                                       <span class="">$149</span>
+                                    </div>
+                                    <div class="text-end">$133.51</div>
+                                 </div>
+                              </label>
+                           </div>
+                           <div class="col qure__variant-item">
+                              <input type="radio" class="variant__input" name="supply-pack-bfn" id="one-month-bfn">
+                              <label for="one-month-bfn" class="qure__variant-box">
+                              <div class="bf-buy-Wrapper">
+                                 <div class="qv-frame">
+                                    <div class="qv-frame-inner">
+                                       <img src="sections/isolated/micro-infusion-pdp/images/1_month_mixed.webp" class="qv-img">
+                                    </div>
+                                 </div>
+                                 <div class="div">1 Month Supply<br><span class="fs-14">2 Micro-Infusion treatments</span></div>
+                                 </div>
+                                 <div>
+                                    <div class="vp-price dis_red_line">
+                                       <span class="">$119</span>
+                                    </div>
+                                    <div class="text-end">$133.51</div>
+                                 </div>
+                              </label>
+                           </div>
+                        </div>
                      </div>
+
                      <div class="qure__bundle-steps">
                         <div class="qure-bundle-stps-title mb-16">Select A Payment Option</div>
                         <div class="qure-bundle-container">
@@ -2596,10 +2721,10 @@
                            src="sections/isolated/treatment/images/afterpay.svg" alt=""></div> 
                   </div>
 
-                  <div class="patch__product-batch mt-30 max-w-ctm" style="--max-w-ctm:500px">
+                  <div class="patch__product-batch">
                      <div class="patch-d-header">
-                        <h4 class="fm-body fs-16 fw-600 mb-0">Next batch ships {date}:</h4>
-                        <p class="fs-14">Due to high demand, our {product name} is sold out. Order now and secure
+                        <h4 class="next_batch_ships">Next batch ships {date}:</h4>
+                        <p class="due_to_demand">Due to high demand, our {product name} is sold out. Order now and secure
                            yours from the next shipment.</p>
                      </div>
                      <div class="progress__bar-container w-100">
@@ -2607,8 +2732,7 @@
                            <span class="patch__date">{Previous date}</span><span class="patch__status">SOLD
                               OUT</span>
                         </div>
-                        <div class="patch-bar" role="progressbar"
-                           style="--progress-bg:#91BAEC;--text-color:#212428;--progress-width:48%">
+                        <div class="patch-bar progress_bar_blue" role="progressbar">
                            <span class="patch__date fs-14">{date}</span><span class="patch__status">48%
                               Reserved</span>
                         </div>
@@ -2656,26 +2780,20 @@
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-1" aria-expanded="false"
                      aria-controls="qure_faq-1">
-                     What color wavelengths does Q-Rejuvalight Pro have?
+                     What are the benefits of Micro-Infusion?
                   </button>
                   <div id="qure_faq-1" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>The needles of the Micro-Infusion device and the stamping action triggers the body’s
-                           natural healing process and in turn boosts the production of collage, making your skin
-                           look firmer and fine lines look softer.</p>
-                        <p>The serum that you choose to infuse during your Micro-Infusion will determine the major
-                           benefits of your treatment. Very fine needles infuse micro-droplets of concentrated
-                           serum at a specific depth into the dermis (top layer) of your skin precisely where they
-                           are needed to accelerate absorption of active ingredients that target specific skin
-                           concerns.</p>
-                        <p>You can switch up your treatments and even mix the two serums together!</p>
-                        <p>Visible benefits of Micro-Infusion include: </p>
+                        <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                        <p>The serum you choose during your Micro-Infusion treatment will deliver visible results over time. Very fine needles help apply concentrated ingredients exactly where they’re needed to target specific skin concerns with precision.</p>
+                        <p>You can switch up your treatments or even mix the two serums together!</p>
+                        <p>Visible benefits of Micro-Infusion may include: </p>
                         <ul>
-                           <li>More even skin tone and texture</li>
-                           <li>Glowing, fresh complexion</li>
-                           <li>Softer fine lines</li>
-                           <li>Firmer, rejuvenated skin</li>
+                           <li>More even-looking skin tone and texture</li>
+                           <li>Glowing, refreshed-looking complexion</li>
+                           <li>Softer-looking fine lines</li>
+                           <li>Skin that feels renewed and rejuvenated</li>
                         </ul>
                      </div>
                   </div>
@@ -2689,14 +2807,9 @@
                   <div id="qure_faq-2" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>Micro-Infusion treatment is an effective skin booster treatment, and you’ll notice a
-                           radiance boost, smaller pores, more hydrated and overall a healthy fresh complexion in
-                           the next day or two.</p>
-                        <p>The more treatments you perform the greater skin benefits over time you’ll receive!
-                           This quick and easy home facial is perfect to perform a day or two before a big event,
-                           when you need to look to boost your skin’s complexion, fast.</p>
-                        <p>Don’t forget to keep up with your everyday skincare routine to boost the effectiveness
-                           of your Micro-Infusion results and keep skin glowing long-term.</p>
+                        <p>Micro-Infusion treatment is an effective skin-boosting step, and many users report a visible radiance boost, glowy-looking complexion, and skin that feels more hydrated within a day or two after their first treatment.</p>
+                        <p>The more consistently you use the treatment, the more visible improvements you’ll likely notice over time. This easy-at-home facial is perfect to use a day or two before a big event, when you want your complexion to look and feel refreshed.</p>
+                        <p>Don’t forget to keep up with your everyday skincare routine to help maintain the results of your Micro-Infusion treatment and keep your skin looking its best long-term</p>
                      </div>
                   </div>
                </div>
@@ -2704,19 +2817,30 @@
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-3" aria-expanded="false"
                      aria-controls="qure_faq-3">
-                     Is it painful to use?
+                     Timeline of Visible Results
                   </button>
                   <div id="qure_faq-3" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>You get to experience minimal discomfort and maximum results with Qure's Micro-Infusion
-                           System. </p>
-                        <p>Although the needles themselves are actually longer than most at-home needling systems
-                           (making it more effective), the ultra-fine needles are thinner than a human hair, so
-                           that means you’ll feel minimal to no pain during treatment. </p>
-                        <p>During the initial stages of treatment, you may experience a slight sensation or
-                           prickling feeling as the needles make contact with the skin but you’ll quickly get used
-                           to the feeling quickly.</p>
+                        <p>After 1–2 Treatments (Weeks 1–4):</p>
+                        <ul>
+                           <li>Typically users experience mild redness post-treatment – this is a normal response!</li>
+                           <li>Skin looks more hydrated, plumped, and refreshed.</li>
+                           <li>Complexion appears smoother and more radiant.</li>
+                        </ul>
+                        <p>After 4 Treatments (Around 8 Weeks):</p>
+                        <ul>
+                           <li>Fine lines begin to appear softened.</li>
+                           <li>Skin tone looks more even and bright.</li>
+                           <li>Hydration feels longer-lasting.</li>
+                        </ul>
+                        <p>After 6+ Treatments (12 Weeks and Beyond):</p>
+                        <ul>
+                           <li>Complexion looks clearer and more balanced.</li>
+                           <li>Skin feels firmer with improved elasticity.</li>
+                           <li>Texture appears smoother and more refined.</li>
+                           <li>Overall skin looks more resilient and youthful.</li>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -2724,103 +2848,154 @@
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-4" aria-expanded="false"
                      aria-controls="qure_faq-4">
-                     How often can I use the treatment?
+                     Is it painful to use?
                   </button>
                   <div id="qure_faq-4" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>We recommend a Micro-Infusion treatment once every 2 weeks for the best results.</p>
+                        <p>You can expect minimal discomfort and maximum results with Qure’s Micro-Infusion System.</p>
+                        <p>Although the needles themselves are finer than most at-home needling systems (making it more comfortable), the ultra-fine tips are thinner than a human hair, so you’ll feel only a mild sensation during treatment.</p>
+                        <p>During the initial stages of use, you may experience a slight sensation or pricking feeling as the needles make contact with the skin, but you’ll quickly get used to the feeling.</p>
                      </div>
                   </div>
                </div>
                <div class="accordion-item qure__accordion-item">
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-5" aria-expanded="false"
-                     aria-controls="qure_faq-5">When is the best time to do Micro-Infusion?</button>
+                     aria-controls="qure_faq-5">How often can I use the treatment?</button>
                   <div id="qure_faq-5" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>We recommend doing the treatment at night before bed. Avoid being in the sun and using
-                           makeup for 24 hours after the treatment. For more information on post treatment care,<a
-                              href="#">visit our safety guide</a></p>
+                        <p>We recommend performing a Micro-Infusion treatment every 2 weeks for best results.</p>
                      </div>
                   </div>
                </div>
                <div class="accordion-item qure__accordion-item">
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-6" aria-expanded="false"
-                     aria-controls="qure_faq-6">Can I use it around the eyes and on the neck?</button>
+                     aria-controls="qure_faq-6">When is the best time to do Micro-Infusion?</button>
                   <div id="qure_faq-6" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>Yes, you can use Micro-Infusion around the eye area to help smooth crow’s feet. Just
-                           ensure to apply a very gentle pressure and only do one pass. Monitor your skin
-                           accordingly as everyone’s skin is different!</p>
-                        <p>Performing Micro-Infusion on the neck can help improve the appearance of fine lines,
-                           and rejuvenate skin. It can target issues such as neck creases, horizontal lines, and
-                           age-related skin concerns to help enhance the overall texture, tone, and youthfulness
-                           of the skin.</p>
+                        <p>We recommend doing the treatment at night before bed. Avoid being in the sun and using makeup for 24 hours after treatment. For more information on post-treatment care, visit our safety guide.</p>
                      </div>
                   </div>
                </div>
                <div class="accordion-item qure__accordion-item">
                   <button class="accordion-button collapsed qure__accordion-header" type="button"
                      data-bs-toggle="collapse" data-bs-target="#qure_faq-7" aria-expanded="false"
-                     aria-controls="qure_faq-7">Can I use a different serum with the Micro-Infusion
-                     device?</button>
+                     aria-controls="qure_faq-7">Can I use it around the eyes and on the neck?</button>
                   <div id="qure_faq-7" class="accordion-collapse collapse qure__accordion-content"
                      data-bs-parent="#qure_faq-main">
                      <div class="accordion-body">
-                        <p>No - only use the provided Qure serum with your Micro-Infusion Device. </p>
-                        <p>Please keep in mind that not all serums are suitable for Micro-Infusion. Some may cause
-                           irritation and should be avoided! Our potent serum ampoules are specifically developed
-                           for our Micro-Infusion System, with gentle, fragrance-free formulas designed for deep
-                           delivery and low risk of sensitivity.</p>
+                        <p>Yes, you can use Micro-Infusion around the eye area to help smooth crow’s feet. Just ensure to apply a very gentle pressure and only do one pass. Monitor your skin accordingly as everyone’s skin is different.</p>
+                        <p>Performing Micro-Infusion on the neck can help improve the look of fine lines and rejuvenate the skin’s appearance. It can target issues such as neck creases, horizontal lines, and age-related skin concerns to help enhance the overall texture, tone, and look of this area.</p>
                      </div>
                   </div>
                </div>
                <div class="accordion-item qure__accordion-item">
-                  <button class="accordion-button collapsed qure__accordion-header" type="button"
-                     data-bs-toggle="collapse" data-bs-target="#qure_faq-8" aria-expanded="false"
-                     aria-controls="qure_faq-8">How is this different to micro-rolling?</button>
-                  <div id="qure_faq-8" class="accordion-collapse collapse qure__accordion-content"
-                     data-bs-parent="#qure_faq-main">
-                     <div class="accordion-body">
-                        <p>Micro-needling focuses on stimulating your body's own collagen by creating
-                           micro-injuries. But it doesn’t deliver any ingredients directly into your skin.</p>
-                        <p>With Micro-Infusion, you not only reap the benefits of micro-needling, but also deliver
-                           active ingredient solutions to target your specific skin concerns - This makes it work
-                           quicker and more effectively.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item qure__accordion-item">
-                  <button class="accordion-button collapsed qure__accordion-header" type="button"
-                     data-bs-toggle="collapse" data-bs-target="#qure_faq-9" aria-expanded="false"
-                     aria-controls="qure_faq-9">Tranexamic Acid Notice</button>
-                  <div id="qure_faq-9" class="accordion-collapse collapse qure__accordion-content"
-                     data-bs-parent="#qure_faq-main">
-                     <div class="accordion-body">
-                        <p>If you live in Australia, you may receive a notice from Border Force regarding
-                           tranexamic acid (TXA) in your order. Here’s what you need to know:</p>
-                        <p>In Australia, TXA is classified as a Schedule 4 (prescription-only) drug only when used
-                           orally or by injection for treating melasma or other medical conditions. However,
-                           <strong> topical TXA in cosmetic formulations is permitted</strong>.</p>
-                        <p>Our serums are purely for cosmetic use and do not claim to treat medical conditions.
-                           They are applied topically (not injected) and are classified as a cosmetic product
-                           rather than a prescription medicine.</p>
-                        <p>Our products are compliant with Australian regulartions. Facial serums containing up to
-                           3% TXA for cosmetic purposes are not classified as prescription-only medicines and do
-                           not require inclusion in the Australian Register of Therapeutic Goods (ARTG).</p>
-                        <p>If Border Force requires clarification, you can provide the information above to
-                           confirm that the product complies with Australian regulations. If further details are
-                           needed, they can refer to the Therapeutic Goods Administration (TGA) guidelines on
-                           cosmetic formulations.</p>
-                        <p>If you need further assistance, feel free to <a href="#">contact our support
-                              team</a>—we’re happy to help!</p>
-                     </div>
-                  </div>
-               </div>
+  <button
+    class="accordion-button collapsed qure__accordion-header"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#qure_faq-8"
+    aria-expanded="false"
+    aria-controls="qure_faq-8"
+  >
+    Can I use a different serum with the Micro-Infusion device?
+  </button>
+  <div
+    id="qure_faq-8"
+    class="accordion-collapse collapse qure__accordion-content"
+    data-bs-parent="#qure_faq-main"
+  >
+    <div class="accordion-body">
+      <p>No — only use the provided Qure serum with your Micro-Infusion Device.</p>
+      <p>
+        Please keep in mind that not all serums are suitable for Micro-Infusion. Some may cause irritation and should be
+        avoided. Our serums and ampoules are specifically developed for Qure’s Micro-Infusion System, with gentle,
+        fragrance-free formulas designed with care for all skin types.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item qure__accordion-item">
+  <button
+    class="accordion-button collapsed qure__accordion-header"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#qure_faq-9"
+    aria-expanded="false"
+    aria-controls="qure_faq-9"
+  >
+    How is this different to micro-rolling?
+  </button>
+  <div
+    id="qure_faq-9"
+    class="accordion-collapse collapse qure__accordion-content"
+    data-bs-parent="#qure_faq-main"
+  >
+    <div class="accordion-body">
+      <p>
+        Micro-Infusion focuses on improving the skin’s appearance by creating micro-channels on the skin’s surface. It
+        does not alter or affect skin structure or function.
+      </p>
+      <p>
+        With Micro-Infusion, you not only enjoy the visible benefits of micro-needling, but also deliver science-backed
+        ingredients to targeted areas with precision — helping the skin appear smoother and more radiant.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item qure__accordion-item">
+  <button
+    class="accordion-button collapsed qure__accordion-header"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#qure_faq-10"
+    aria-expanded="false"
+    aria-controls="qure_faq-10"
+  >
+    Tranexamic Acid Notice
+  </button>
+  <div
+    id="qure_faq-10"
+    class="accordion-collapse collapse qure__accordion-content"
+    data-bs-parent="#qure_faq-main"
+  >
+    <div class="accordion-body">
+      <p>
+        If you live in Australia, you may receive a notice from Border Force regarding tranexamic acid (TXA) in your
+        order. Here’s what you need to know:
+      </p>
+      <p>
+        In Australia, TXA is classified as a Schedule 4 (prescription-only) drug only when used orally or by injection
+        for treating melasma or other medical conditions. However,
+        <strong>topical TXA in cosmetic formulations is permitted.</strong>
+      </p>
+      <p>
+        Our serums are purely for cosmetic use and do not claim to treat medical conditions. They are applied topically
+        (not injected) and are classified as a cosmetic product rather than a prescription medicine.
+      </p>
+      <p>
+        Our products are compliant with Australian regulations. Facial serums containing up to 3% TXA for cosmetic
+        purposes are not classified as prescription-only medicines and do not require inclusion in the Australian
+        Register of Therapeutic Goods (ARTG).
+      </p>
+      <p>
+        If Border Force requires clarification, you can provide the information above to confirm that the product
+        complies with Australian regulations. If further details are needed, they can refer to the Therapeutic Goods
+        Administration (TGA) guidelines on cosmetic formulations.
+      </p>
+      <p>
+        If you need further assistance, feel free to <a href="#">contact our support team</a> — we’re happy to help!
+      </p>
+    </div>
+  </div>
+</div>
+
             </div>
             <div class="pt-md-50 pt-40 d-flex align-items-center justify-content-center gap-3">
                <h6 class="fm-body fw-500 mb-0">Don’t see your question?</h6>
