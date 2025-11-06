@@ -1,5 +1,3 @@
-@use "../../../../../mixins/index" as *;
-
 /* stylelint-disable-next-line selector-class-pattern */
 .page\.black-friday-early-access {
     padding-top: 0;
@@ -37,8 +35,8 @@
 
     .banner-text--media {
         img {
-            height: calc(100vh - 76px);
             object-fit: cover;
+            height: calc(100vh - 76px);
         }
     }
     
@@ -111,9 +109,9 @@
                 padding-right: 30px;
                 color: #212428;
                 font-size: 20px;
-                background: #fff;
                 border: none;
                 border-radius: 0 50px 50px 0;
+                background: #fff;
             }
         }
     }
@@ -123,8 +121,8 @@
             display: flex;
             gap: 8px;
             margin-bottom: 24px;
-            font-weight: 600;
             font-size: 20px;
+            font-weight: 600;
 
             @include md {
                 margin-bottom: 10px;
@@ -154,8 +152,8 @@
 
                 span {
                     color: #FF5429;
-                    font-weight: 600;
                     font-size: 30px;
+                    font-weight: 600;
                 }
 
                 small {

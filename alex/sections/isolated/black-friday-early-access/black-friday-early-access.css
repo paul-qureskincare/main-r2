@@ -1,46 +1,37 @@
 .page\.black-friday-early-access{
-  background:#212428;
-  color:#fff;
   padding-top:0;
+  color:#fff;
+  background:#212428;
 }
 
 .black-friday-early-access{
-  padding-bottom:0;
   padding-top:0;
+  padding-bottom:0;
 }
 .black-friday-early-access img{
   display:block;
-  height:auto;
-  max-width:100%;
   width:100%;
+  max-width:100%;
+  height:auto;
 }
 .black-friday-early-access .custom__grid{
   --column-gap:100px;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  margin-bottom:0;
+  align-items:center;
   margin-top:0;
+  margin-bottom:0;
 }
 .black-friday-early-access .banner-text--media img{
-  height:calc(100vh - 76px);
   -o-object-fit:cover;
      object-fit:cover;
+  height:calc(100vh - 76px);
 }
 .black-friday-early-access__content{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  flex-direction:column;
   gap:40px;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  margin-left:-15px;
+  align-items:center;
   margin-right:-15px;
+  margin-left:-15px;
   text-align:center;
 }
 .black-friday-early-access__content h2{
@@ -49,77 +40,64 @@
   line-height:1.15;
 }
 .black-friday-early-access__content img:first-child{
-  height:auto;
   max-width:127px;
+  height:auto;
 }
 .black-friday-early-access__content img:not(:first-child){
   display:none;
 }
 .black-friday-early-access .early-access-form{
-  margin-bottom:16px;
-  padding-left:15px;
-  padding-right:15px;
   width:100%;
+  margin-bottom:16px;
+  padding-right:15px;
+  padding-left:15px;
 }
 .black-friday-early-access .early-access-form__label{
   margin-bottom:10px;
   text-align:center;
 }
 .black-friday-early-access .early-access-form__content{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
   position:relative;
+  display:flex;
 }
 .black-friday-early-access .early-access-form__content .form-control{
+  padding-left:30px;
   border:none;
   border-radius:50px 0 0 50px;
-  padding-left:30px;
 }
 .black-friday-early-access .early-access-form__content .btn{
-  background:#fff;
-  border:none;
-  border-radius:0 50px 50px 0;
+  padding-right:30px;
   color:#212428;
   font-size:20px;
-  padding-right:30px;
+  border:none;
+  border-radius:0 50px 50px 0;
+  background:#fff;
 }
 .black-friday-early-access .early-access-countdown__title{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
-  font-size:20px;
-  font-weight:600;
   gap:8px;
   margin-bottom:24px;
+  font-size:20px;
+  font-weight:600;
 }
 .black-friday-early-access .early-access-countdown__title svg{
+  width:20px;
   height:auto;
   stroke:#fff;
-  width:20px;
 }
 .black-friday-early-access .early-access-countdown__timer{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
   gap:20px;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
+  justify-content:center;
 }
 .black-friday-early-access .early-access-countdown__timer .countdown-segment{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  flex-direction:column;
   line-height:1;
 }
 .black-friday-early-access .early-access-countdown__timer .countdown-segment:not(:first-child){
-  border-left:1px solid #fff;
   padding-left:16px;
+  border-left:1px solid #fff;
 }
 .black-friday-early-access .early-access-countdown__timer .countdown-segment span{
   color:#ff5429;
@@ -131,30 +109,19 @@
   text-transform:uppercase;
 }
 .black-friday-early-access-footer{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-  font-size:16px;
-          justify-content:center;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   min-height:76px;
-  padding-bottom:10px;
   padding-top:10px;
+  padding-bottom:10px;
+  font-size:16px;
 }
 .black-friday-early-access-footer p{
   margin:0;
 }
 .black-friday-early-access-footer ul{
-  display:-webkit-box;
-  display:-ms-flexbox;
   display:flex;
   gap:16px;
 }
@@ -174,9 +141,9 @@
     gap:16px;
   }
   .black-friday-early-access__content h2{
-    font-size:32px;
-    padding-left:15px;
     padding-right:15px;
+    padding-left:15px;
+    font-size:32px;
   }
   .black-friday-early-access__content img:first-child{
     max-width:84px;

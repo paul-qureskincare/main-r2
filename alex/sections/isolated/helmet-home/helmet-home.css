@@ -1,0 +1,383 @@
+.helmet-home{
+  --section-padding-top:30px;
+  --section-padding-top-mob:10px;
+  --section-padding-bottom:30px;
+  --section-padding-bottom-mob:10px;
+}
+.helmet-home__grid{
+  display:grid;
+  grid-template:auto/43% 51%;
+  gap:6%;
+}
+.helmet-home__content{
+  position:sticky;
+  top:140px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.helmet-home__gallery .swiper-slide img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.helmet-home__gallery-main .swiper-wrapper .swiper-slide img{
+  border-radius:10px;
+}
+.helmet-home__gallery-thumbs{
+  margin-top:12px;
+}
+.helmet-home__gallery-thumbs .swiper-slide{
+  opacity:.5;
+}
+.helmet-home__gallery-thumbs .swiper-slide.swiper-slide-thumb-active{
+  opacity:1;
+}
+.helmet-home__gallery-thumbs .swiper-slide.swiper-slide-thumb-active img{
+  border:1px solid #212428;
+}
+.helmet-home__gallery-thumbs .swiper-slide img{
+  border-radius:5px;
+}
+.helmet-home__header-rating{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom:15px;
+  font-size:16px;
+}
+.helmet-home__header-rating img{
+  max-width:105px;
+  height:auto;
+  vertical-align:top;
+}
+.helmet-home__header-title{
+  margin-bottom:10px;
+}
+.helmet-home__header-price{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:22px;
+}
+.helmet-home__header-price .save-value{
+  padding:3px 12px;
+  color:#ff5429;
+  font-size:.815em;
+  font-weight:600;
+  text-transform:uppercase;
+  border-radius:5px;
+  background:#fff5f2;
+}
+.helmet-home__benefits{
+  display:flex;
+  gap:6px;
+}
+.helmet-home__benefits li{
+  width:100%;
+  max-width:110px;
+  padding:1px 6px;
+  font-size:16px;
+  text-align:center;
+  border:1px solid #dfe0e0;
+  border-radius:5px;
+}
+.helmet-home__button{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  align-items:center;
+}
+.helmet-home__button .btn{
+  width:100%;
+}
+.helmet-home__button .info{
+  display:flex;
+  gap:4px;
+  align-items:center;
+  color:#ff5429;
+  font-size:14px;
+  cursor:pointer;
+}
+.helmet-home__users-experienced{
+  display:grid;
+  grid-template:repeat(2, auto)/80px auto;
+  gap:0 12px;
+  align-items:center;
+  padding:24px;
+  border-radius:10px;
+  background:#fff5f2;
+  cursor:pointer;
+}
+.helmet-home__users-experienced:hover strong{
+  text-decoration:none;
+}
+.helmet-home__users-experienced img{
+  grid-row:1 /  -1;
+  max-width:100%;
+  height:auto;
+  border-radius:5px;
+}
+.helmet-home__users-experienced strong{
+  text-decoration:underline;
+}
+.helmet-home__according{
+  font-size:16px;
+}
+.helmet-home__according .qure__accordion-item{
+  border:0;
+  border-bottom:1px solid #8b8c8e;
+}
+.helmet-home__according .qure__accordion-header{
+  padding:14px 6px;
+  font-size:inherit;
+}
+.helmet-home__according .qure__accordion-content .accordion-body{
+  padding:0 6px 20px;
+}
+.helmet-home__according .qure__accordion-content p:not(:last-child){
+  margin-bottom:20px;
+}
+.helmet-home__according .qure__accordion-content ul:last-child{
+  margin-bottom:0;
+}
+.helmet-home__according .qure__accordion-content ul:last-child li{
+  margin-top:0;
+}
+.helmet-home__according .qure__accordion-content ol{
+  padding-left:18px;
+}
+.helmet-home__according .qure__accordion-content ol:not(:last-child){
+  margin-bottom:20px;
+}
+.helmet-home__according .qure__accordion-content ol li{
+  list-style:decimal;
+}
+.helmet-home__moneyback{
+  display:grid;
+  grid-template:repeat(2, auto)/80px auto;
+  gap:0 24px;
+  align-items:center;
+  padding:28px 24px;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.helmet-home__moneyback img{
+  grid-row:1 /  -1;
+  max-width:100%;
+  height:auto;
+}
+.helmet-home__moneyback p{
+  font-size:16px;
+  line-height:1.25;
+}
+.helmet-home__jump-to h6{
+  margin-bottom:8px;
+  font-family:inherit;
+  font-weight:inherit;
+}
+.helmet-home__jump-to .jump-to{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.helmet-home__jump-to .jump-to a{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  padding:4px 24px;
+  color:inherit;
+  font-size:16px;
+  border:1px solid #8b8c8e;
+  border-radius:50px;
+}
+
+.helmet-home-modal{
+  background:rgba(0,0,0,.5);
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
+}
+.helmet-home-modal .modal-dialog{
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  width:450px;
+  max-width:none;
+  height:100vh;
+  margin:0;
+}
+.helmet-home-modal .btn-close{
+  position:absolute;
+  top:24px;
+  left:-66px;
+  z-index:100;
+  width:50px;
+  height:50px;
+  padding:0;
+  border-radius:100px;
+  background:hsla(0,0%,100%,.8);
+}
+.helmet-home-modal .btn-close img{
+  vertical-align:top;
+}
+.helmet-home-modal__content{
+  display:flex;
+  flex-grow:1;
+  min-height:1px;
+  border:0;
+  border-radius:0;
+  background:#fff;
+}
+.helmet-home-modal__text{
+  overflow:auto;
+  padding:32px 24px;
+}
+.helmet-home-modal__text hr{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+.helmet-home-modal__text h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
+.helmet-home-modal__text>strong{
+  display:block;
+}
+.product\.hairgrowth-helmet{
+  overflow:unset;
+}
+.product\.hairgrowth-helmet .modal-backdrop{
+  display:none;
+}
+
+.shipment-popup{
+  font-size:16px;
+}
+.shipment-popup span:first-child{
+  margin-bottom:16px;
+  padding:3px 12px;
+  font-size:.815em;
+  font-weight:600;
+  border-radius:5px;
+  background:#fff5f2;
+  font-size:1em;
+}
+.shipment-popup hr+span,.shipment-popup span:first-child{
+  display:inline-block;
+  color:#ff5429;
+  text-transform:uppercase;
+}
+.shipment-popup hr+span{
+  margin-bottom:12px;
+}
+.shipment-popup .btn{
+  width:100%;
+}
+
+.info-popup .tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+.info-popup .tabs button{
+  padding:3px 16px;
+  color:#212428;
+  font-size:16px;
+  border:1px solid;
+  border-radius:100px;
+  background:transparent;
+  transition:.3s;
+}
+.info-popup .tabs button.active,.info-popup .tabs button:hover{
+  color:#fff;
+  border-color:#212428;
+  background:#212428;
+}
+.info-popup .tab-content{
+  font-size:16px;
+}
+@media screen and (min-width:768px){
+  .helmet-home__gallery-main .swiper-wrapper{
+    display:grid;
+    grid-template:auto/repeat(2, 1fr);
+    gap:15px;
+  }
+  .helmet-home__gallery-main .swiper-wrapper .swiper-slide:first-child{
+    grid-column:1 /  -1;
+  }
+}
+@media screen and (max-width:991px){
+  .helmet-home__grid{
+    grid-template:auto/47% 51%;
+    gap:2%;
+  }
+  .helmet-home__header-title{
+    margin-bottom:4px;
+  }
+  .helmet-home-modal .btn-close{
+    top:-25px;
+    right:16px;
+    left:auto;
+  }
+  .helmet-home-modal__text{
+    padding-right:16px;
+    padding-left:16px;
+  }
+}
+@media screen and (max-width:767px){
+  .helmet-home__grid{
+    display:flex;
+    flex-direction:column-reverse;
+    gap:20px;
+  }
+  .helmet-home__content{
+    top:auto;
+    gap:8px;
+  }
+  .helmet-home__gallery{
+    margin-right:-15px;
+    margin-left:-15px;
+  }
+  .helmet-home__gallery .swiper-slide{
+    padding:0 15px;
+  }
+  .helmet-home__header{
+    margin-bottom:20px;
+  }
+  .helmet-home__header-rating{
+    margin-bottom:10px;
+    font-size:14px;
+  }
+  .helmet-home__header-rating img{
+    max-width:95px;
+  }
+  .helmet-home__header-price{
+    gap:8px;
+    font-size:20px;
+  }
+  .helmet-home__users-experienced{
+    grid-template-columns:60px auto;
+    padding:16px;
+    font-size:16px;
+  }
+  .helmet-home__moneyback{
+    gap:0 16px;
+    margin-top:8px;
+    padding:22px 16px;
+    font-size:16px;
+  }
+  .helmet-home__moneyback p{
+    font-size:14px;
+  }
+  .helmet-home-modal .modal-dialog{
+    width:100vw;
+    padding-top:100px;
+  }
+}
