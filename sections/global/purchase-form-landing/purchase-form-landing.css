@@ -418,6 +418,7 @@
     background: #F6F6F7;
     border-radius: 10px;
     gap: 0 10px;
+    height: 100%;
 }
 
 .patch-badge {
