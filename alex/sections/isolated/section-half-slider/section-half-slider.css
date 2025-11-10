@@ -109,10 +109,7 @@
   height:68px;
   padding:6px;
   border-radius:100px;
-  background:#c7e5db;
-}
-.backed-by-real-results .section-half-slider__content .circle-percent-90{
-  background:conic-gradient(#c7e5db 0deg 324deg, transparent 324deg 1turn);
+  background:conic-gradient(#c7e5db 0deg calc(var(--percent-value)*3.6deg), transparent calc(var(--percent-value)*3.6deg) 1turn);
 }
 .backed-by-real-results .section-half-slider__content .circle-percent:before{
   position:absolute;

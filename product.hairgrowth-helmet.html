@@ -33,7 +33,7 @@
     </div>
     <!-- Announcement Bar End -->
 
-    <!-- HEMLET HOME  -->
+    <!-- HELMET HOME  -->
     <link rel="stylesheet" href="alex/sections/isolated/helmet-home/helmet-home.css" />
     <div class="qure__section helmet-home" id="helmet-home">
         <div class="container">
@@ -47,8 +47,13 @@
                             </div>
                             <h1 class="helmet-home__header-title">Q-Renew LLLT Helmet</h1>
                             <div class="helmet-home__header-price">
-                                <div class="price-value">{$dyn}</div>
-                                <div class="save-value">SAVE $200</div>
+                                <div class="price-offer">
+                                    <div class="price-offer__main">
+                                        <div class="price-offer__current">$999</div>
+                                        <div class="price-offer__discount">Save $200</div>
+                                        <div class="price-offer__value">(Total value $1,199)</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <ul class="helmet-home__benefits">
@@ -59,11 +64,14 @@
                         <div class="helmet-home__description">
                             <p>Targeted LED light therapy and medical-grade lasers to support scalp health. Encourages the appearance of thicker-looking hair with <strong>just 12 minutes per session</strong>.</p>
                         </div>
-                        <div class="helmet-home__button">
-                            <button type="button" class="btn btn--primary">Pre-Order Now</button>
-                            <div class="info" data-bs-toggle="modal" data-bs-target="#shipment-modal">
-                                Reserve now for guaranteed first shipment (Jan. 2026)
-                                <img src="assets/images/info_icon.svg" alt="" />
+                        <div class="helmet-home__ordering">
+                            <button type="button" class="btn btn--light" data-bs-toggle="modal" data-bs-target="#email-modal">
+                                Join the Waitlist
+                                <img src="alex/sections/isolated/helmet-home/images/email-icon.svg" alt="" />
+                            </button>
+                            <div class="pre-order-info">
+                                <div class="pre-order-info__status">Unavailable</div>
+                                <div class="pre-order-info__expected">Expected Jan. 2026</div>
                             </div>
                         </div>
                         <div class="helmet-home__users-experienced" data-bs-toggle="modal" data-bs-target="#info-modal">
@@ -198,8 +206,13 @@
                         </div>
                         <h1 class="helmet-home__header-title">Q-Renew LLLT Helmet</h1>
                         <div class="helmet-home__header-price">
-                            <div class="price-value">{$dyn}</div>
-                            <div class="save-value">SAVE $200</div>
+                            <div class="price-offer">
+                                <div class="price-offer__main">
+                                    <div class="price-offer__current">$999</div>
+                                    <div class="price-offer__discount">Save $200</div>
+                                    <div class="price-offer__value">(Total value $1,199)</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="helmet-home__gallery">
@@ -208,6 +221,7 @@
                                 <div class="swiper-slide">
                                     <div class="slide-image">
                                         <img src="alex/sections/isolated/helmet-home/images/helmet-home-1.webp" alt="" />
+                                        <div class="coming-soon">Coming soon</div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -380,12 +394,25 @@
             </div>
         </div>
     </div>
+    <div class="modal email-modal fade" id="email-modal" >
+        <div class="modal-dialog">
+            <div class="modal-content email-modal__content">
+                <div class="email-modal-form">
+                    <div class="klaviyo-form-QQP9fe"></div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    <img src="assets/images/cross_black.svg" alt="" />
+                </button>
+            </div>
+        </div>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('helmet-home-swiper', 'alex/sections/isolated/helmet-home/helmet-home.js');
+            loadScriptOnce('klaviyo-early-access', 'https://static.klaviyo.com/onsite/js/VtM5fu/klaviyo.js');
         });
     </script>
-    <!-- HEMLET HOME END -->
+    <!-- HELMET HOME END -->
 
     <!-- SEE THE CHANGE -->
     <link rel="stylesheet" href="alex/sections/isolated/section-half-slider/section-half-slider.css">
@@ -696,15 +723,15 @@
             <div class="section-half-slider__other">
                 <ul class="stats-list">
                     <li>
-                        <div class="circle-percent"><span>100%</span></div>
+                        <div class="circle-percent" style="--percent-value: 100;"><span>100%</span></div>
                         <span>experienced visibly thicker hair strands after 16 weeks</span>
                     </li>
                     <li>
-                        <div class="circle-percent circle-percent-90"><span>90%</span></div>
+                        <div class="circle-percent" style="--percent-value: 90;"><span>90%</span></div>
                         <span>showed improvements in hair density and thickness</span>
                     </li>
                     <li>
-                        <div class="circle-percent circle-percent-90"><span>90%</span></div>
+                        <div class="circle-percent" style="--percent-value: 90;"><span>90%</span></div>
                         <span>saw a visible increase in active growth-phase hairs</span>
                     </li>
                 </ul>

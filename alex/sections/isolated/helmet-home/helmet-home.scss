@@ -28,7 +28,7 @@
         @include sm {
             display: flex;
             flex-direction: column-reverse;
-            gap: 20px;
+            gap: 14px;
         }
     }
 
@@ -54,6 +54,8 @@
         }
 
         .swiper-slide {
+            position: relative;
+
             @include sm {
                 padding: 0 15px;
             }
@@ -62,6 +64,30 @@
                 display: block;
                 max-width: 100%;
                 height: auto;
+            }
+
+            .coming-soon {
+                position: absolute;
+                top: 24px;
+                left: 24px;
+                padding: 14px 26px;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: capitalize;
+                border-radius: 100px;
+                background: #212428;
+
+                @include md {
+                    top: 14px;
+                    left: 14px;
+                    padding: 4px 14px;
+                    font-size: 14px;
+                }
+
+                @include sm {
+                    left: 29px;
+                }
             }
         }
     }
@@ -113,7 +139,7 @@
     // .helmet-home__header
     &__header {
         @include sm {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
     }
 
@@ -152,18 +178,78 @@
 
     // .helmet-home__header-price
     &__header-price {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        font-size: 22px;
+        .price-offer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
 
-        @include sm {
-            gap: 8px;
-            font-size: 20px;
-        }
+            // .price-offer__main
+            &__main {
+                display: grid;
+                grid-template: auto / auto auto;
+                gap: 2px 8px;
+                align-items: center;
+            }
 
-        .save-value {
-            @include badge;
+            // .price-offer__current
+            &__current {
+                font-size: 22px;
+
+                @include sm {
+                    font-size: 20px;
+                }                
+            }
+
+            // .price-offer__discount
+            &__discount {
+                @include badge;
+                font-size: 18px;
+
+                @include sm {
+                    font-size: 16px;
+                }
+            }
+
+            // .price-offer__value
+            &__value {
+                grid-column: 1 / -1;
+                color: #ff5429;
+                font-size: 14px;
+            }
+
+            // .price-offer__bf
+            &__bf {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                align-items: flex-end;
+                text-transform: uppercase;
+            }
+
+            // .price-offer__bf-label
+            &__bf-label {
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                line-height: 20px;
+                background: linear-gradient(90deg, #ff4e22 0%, #ff8f72 50%, #ff4e22 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            // .price-offer__bf-discont
+            &__bf-discont {
+                width: 100%;
+                padding: 1px 12px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                text-align: center;
+                border-radius: 40px;
+                background: linear-gradient(90deg, #FF4E22 0%, #FF8566 50%, #FF4E22 100%);
+                
+            }
         }
     }
 
@@ -183,24 +269,64 @@
         }
     }
 
-    // .helmet-home__button
-    &__button {
+    // .helmet-home__ordering
+    &__ordering {
         display: flex;
         flex-direction: column;
         gap: 4px;
-        align-items: center;
         
         .btn {
             width: 100%;
         }
-        
-        .info {
+
+        .btn--light {
             display: flex;
-            gap: 4px;
-            align-items: center;
-            color: #ff5429;
+            justify-content: space-between;
+            padding: 16px 30px;
+            border-radius: 50px;
+        }
+        
+        .pre-order-info {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 24px;
+            padding-left: 24px;
             font-size: 14px;
-            cursor: pointer;
+
+            // .pre-order-info__status
+            &__status {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+
+                &::before {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #ff5429;
+                    @include pulse;
+                    content: ' ';
+                }
+            }
+
+            // .pre-order-info__expected
+            &__expected {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                color: #8b8c8e;
+                
+                &[data-bs-toggle] {
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+            }
         }
     }
 
@@ -377,6 +503,11 @@
         padding: 0;
         border-radius: 100px;
         background: rgb(255 255 255 / 80%);
+        transition: all 300ms;
+
+        &:hover {
+            background: #c8e6dc;
+        }
 
         @include md {
             top: -25px;
@@ -490,5 +621,57 @@
 
     .tab-content {
         font-size: 16px;
+    }
+}
+
+.email-modal {
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(10px);
+
+    .modal-dialog {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: -66px;
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 100px;
+        background: rgb(255 255 255 / 80%);
+        transition: all 300ms;
+
+        &:hover {
+            background: #c8e6dc;
+        }
+
+        @include md {
+            top: -25px;
+            right: 16px;
+            left: auto;
+        }
+
+        img {
+            vertical-align: top;
+        }
+    }
+    
+    &__content {
+        width: 100%;
+        max-width: 758px;
+        border-radius: 0;
+    }
+
+    .email-modal-form {
+        
     }
 }

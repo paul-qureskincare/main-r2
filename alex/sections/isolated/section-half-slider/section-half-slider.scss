@@ -174,12 +174,7 @@
             height: 68px;
             padding: 6px;
             border-radius: 100px;
-            background: #c7e5db;
-
-            // .circle-percent-90
-            &-90 {
-                background: conic-gradient( #c7e5db 0deg 324deg, transparent 324deg 360deg);
-            }
+            background: conic-gradient(#c7e5db 0deg calc(var(--percent-value) * 3.6deg), transparent calc(var(--percent-value) * 3.6deg) 360deg);
             
             &::before {
                 position: absolute;
