@@ -44,6 +44,15 @@
             top: auto;
             gap: 8px;
         }
+
+        // TODO: hardcode, need to delete in future
+        .qure__price,
+        .patch__single-shortdes,
+        .qure__product-action-inner,
+        .moneyback_guarantee {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
     }
 
     // .helmet-home__gallery
