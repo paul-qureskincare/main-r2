@@ -552,7 +552,7 @@
 .page\.sunil-micro-infusion-pdp .qure__variant-box .qv-img {
     max-height: 60px;
 }
-.qure__sbs-label, .price__regular, .qure__sticky-atc button{
+.qure__sbs-label, .price__regular {
     color: #212428;
 }
 @media(max-width: 991px) {
