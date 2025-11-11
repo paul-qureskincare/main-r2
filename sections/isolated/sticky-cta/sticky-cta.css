@@ -7,8 +7,26 @@
     border-top: 1px solid var(--Charcoal-10, #DFE0E0);
 }
 .qure__sticky-atc .btn {
-    max-width: 400px;
-    width: 100%;
+  max-width: 400px;
+  width: 100%;
+}
+.qure__sticky-atc-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.qure__user-online {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 16px;
+  text-align: center;
 }
 /* product-mi-patches cta  */
 .patch__value-pack > input {
@@ -104,9 +122,18 @@
 
 
 @media(max-width:991px){
-    .qure__sticky-atc .btn {
-        font-size: 18px;
-        padding: 10px 40px;
-    }
+  .qure__sticky-atc .btn {
+      font-size: 18px;
+      padding: 10px 40px;
+  }
+  .qure__sticky-atc-content {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .qure__user-online {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 14px;
+  }
 }
 
