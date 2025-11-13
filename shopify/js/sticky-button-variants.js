@@ -20,6 +20,7 @@ const sticky_button = () => {
           if (target) {
               if (typeof __section_landing !== 'undefined' && __section_landing) {
                 target.closest('.planBlock').click();
+                target.checked = true;
                 purchase_form_landing_event(__section_landing, target.closest('.planBlock'), target.closest('.planBlock')?.dataset.product_variant_id);
               }
               else {
@@ -39,6 +40,7 @@ const sticky_button = () => {
           if (target) {
               if (typeof __section_landing !== 'undefined' && __section_landing) {
                 target.closest('.planBlock').click();
+                target.checked = true;
                 purchase_form_landing_event(__section_landing, target.closest('.planBlock'), target.closest('.planBlock')?.dataset.product_variant_id);
               }
               else {
