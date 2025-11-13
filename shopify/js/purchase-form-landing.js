@@ -152,6 +152,13 @@ function __landing_updateButtonLabel(element) {
     const btnStickyValueContainer = document.querySelector(".add-cart-sticky-button");
     if (btnStickyValueContainer) {
         btnStickyValueContainer.textContent = element.getAttribute("data-per") || "";
+        btnStickyValueContainer.style.pointerEvents = 'auto';
+        btnStickyValueContainer.style.cursor = 'pointer';
+    
+        if (btnStickyValueContainer.textContent.trim().toLowerCase() === 'sold out') {
+            btnStickyValueContainer.style.pointerEvents = 'none';
+            btnStickyValueContainer.style.cursor = 'not-allowed';
+        }
     }
 }
 
