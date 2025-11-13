@@ -16,9 +16,11 @@ window.addEventListener('scroll', function() {
         if (gamificationHeader && gamificationHeaderInitiallyVisible) gamificationHeader.style.display = 'block';
         if (announcementHeader && announcementHeaderInitiallyVisible) announcementHeader.style.display = 'block';
     } else {
-        if (header) header.style.display = 'none';
-        if (gamificationHeader) gamificationHeader.style.display = 'none';
-        if (announcementHeader) announcementHeader.style.display = 'none';
+        if(currentScrollPos > 10) {
+            if (header) header.style.display = 'none';
+            if (gamificationHeader) gamificationHeader.style.display = 'none';
+            if (announcementHeader) announcementHeader.style.display = 'none';
+        }
     }
 
     prevScrollPos = currentScrollPos;
