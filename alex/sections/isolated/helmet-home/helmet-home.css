@@ -151,11 +151,14 @@
 .helmet-home__ordering .btn{
   width:100%;
 }
-.helmet-home__ordering .btn--light{
+.helmet-home__ordering .btn:has(img){
   display:flex;
   justify-content:space-between;
   padding:16px 30px;
   border-radius:50px;
+}
+.helmet-home__ordering .btn:has(img):not(:hover) img{
+  filter:brightness(0) invert(100%);
 }
 .helmet-home__ordering .pre-order-info{
   display:flex;
