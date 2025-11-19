@@ -571,6 +571,9 @@ ul.list-dots {
 .qure__info-block{
     background-color: var(--bg-color, #F6F6F7);
 }
+.qure__info-block .qure-filter-cards{
+    margin-top: 40px;
+}
 .banner-text--des a {
     text-decoration: underline;
     color: #212428;
