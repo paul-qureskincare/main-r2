@@ -17,6 +17,9 @@
   border-color:#fff;
   background:#fff;
 }
+.banner-with-text:has(img[src$=".gif"]){
+  background:#f6f6f7;
+}
 .banner-with-text .custom__grid{
   --column-gap:100px;
   --column-gap-mobile:100px;
