@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-discount-badge" as *;
 @use "@components/c-certified-box" as *;
 
 .across-image-banner {
@@ -38,8 +39,8 @@
         flex-direction: column;
         gap: 16px;
         max-width: 550px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 60px;
+        padding-bottom: 60px;
 
         @include sm {
             max-width: none;
@@ -52,11 +53,6 @@
         }
 
         .btn {
-            display: flex;
-            gap: 12px;
-            align-self: flex-start;
-            justify-content: center;
-            min-width: 300px;
             margin-top: 5px;
 
             @include sm {
@@ -65,37 +61,80 @@
         }
     }
 
-    // MODIFICATORS
-
+    // .across-image-banner--hero
     &--hero {
         .c-certified-box {
             background: #fff;
         }
     }
 
-    // .across-image-banner--light-technology
-    &--light-technology {
-        color: #fff;
-
-        // .across-image-banner--light-technology .across-image-banner__image img
-        #{$root}__image img {
-            object-fit: cover;
-            min-height: 500px;
-            filter: brightness(0.5);
-        }
-        
-        // .across-image-banner--light-technology .across-image-banner__overlay
+    // .across-image-banner--holidays
+    &--holidays {
         #{$root}__overlay {
-            justify-content: center;
-        }
-        
-        // .across-image-banner--light-technology .across-image-banner__content
-        #{$root}__content {
-            text-align: left;
-
-            button {
-                @include button;
+            @include sm {
+                justify-content: flex-end;
             }
-        }    
+        }
+
+        img {
+            object-fit: cover;
+            max-height: 550px;
+
+            @include sm {
+                max-height: none;
+            }
+        }
+
+        article {
+            display: flex;
+            align-items: center;
+            max-width: 500px;
+            text-align: center;
+
+            @include md {
+                max-width: 410px;
+            }
+
+            @include sm {
+                padding-top: 0;
+                padding-bottom: 32px;
+            }
+        }
+
+        h1 {
+            @include sm {
+                display: none;
+            }
+        }
+
+        p {
+            max-width: 330px;
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .e-discount-badge {
+            position: absolute;
+            top: 65px;
+            right: 38px;
+            font-size: 140px;
+
+            @include lg {
+                top: 40px;
+                right: 16px;
+                font-size: 90px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
     }
 }

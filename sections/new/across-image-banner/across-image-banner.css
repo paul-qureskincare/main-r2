@@ -1,3 +1,32 @@
+.e-discount-badge{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+  justify-content:center;
+  width:1em;
+  height:1em;
+  color:#fff;
+  font-weight:500;
+  line-height:1;
+  border-radius:100px;
+  background:var(--discount-color, #212428);
+}
+.e-discount-badge span{
+  font-size:.41em;
+  line-height:.8;
+}
+.e-discount-badge:after,.e-discount-badge:before{
+  font-size:.145em;
+  text-transform:uppercase;
+}
+.e-discount-badge:before{
+  content:attr(data-text-top);
+}
+.e-discount-badge:after{
+  content:attr(data-text-bottom);
+}
+
 .c-certified-box{
   display:grid;
   grid-template-columns:-webkit-max-content 1fr;
@@ -65,42 +94,59 @@
   flex-direction:column;
   gap:16px;
   max-width:550px;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top:60px;
+  padding-bottom:60px;
 }
 .across-image-banner article h1,.across-image-banner article h2{
   margin-bottom:0;
   color:inherit;
 }
 .across-image-banner article .btn{
-  display:flex;
-  gap:12px;
-  align-self:flex-start;
-  justify-content:center;
-  min-width:300px;
   margin-top:5px;
 }
 .across-image-banner--hero .c-certified-box{
   background:#fff;
 }
-.across-image-banner--light-technology{
-  color:#fff;
-}
-.across-image-banner--light-technology .across-image-banner__image img{
+.across-image-banner--holidays img{
   -o-object-fit:cover;
      object-fit:cover;
-  min-height:500px;
-  filter:brightness(.5);
+  max-height:550px;
 }
-.across-image-banner--light-technology .across-image-banner__overlay{
-  justify-content:center;
+.across-image-banner--holidays article{
+  display:flex;
+  align-items:center;
+  max-width:500px;
+  text-align:center;
 }
-.across-image-banner--light-technology .across-image-banner__content{
-  text-align:left;
+.across-image-banner--holidays p{
+  max-width:330px;
+}
+.across-image-banner--holidays .btn{
+  width:100%;
+  max-width:400px;
+}
+.across-image-banner--holidays .e-discount-badge{
+  position:absolute;
+  top:65px;
+  right:38px;
+  font-size:140px;
+}
+@media screen and (max-width:1120px){
+  .across-image-banner--holidays .e-discount-badge{
+    top:40px;
+    right:16px;
+    font-size:90px;
+  }
 }
 @media screen and (max-width:991px){
+  .e-discount-badge:after,.e-discount-badge:before{
+    font-size:14px;
+  }
   .across-image-banner__overlay{
     justify-content:flex-start;
+  }
+  .across-image-banner--holidays article{
+    max-width:410px;
   }
 }
 @media screen and (max-width:767px){
@@ -110,5 +156,18 @@
   }
   .across-image-banner article .btn{
     width:100%;
+  }
+  .across-image-banner--holidays .across-image-banner__overlay{
+    justify-content:flex-end;
+  }
+  .across-image-banner--holidays img{
+    max-height:none;
+  }
+  .across-image-banner--holidays article{
+    padding-top:0;
+    padding-bottom:32px;
+  }
+  .across-image-banner--holidays .e-discount-badge,.across-image-banner--holidays h1,.across-image-banner--holidays p{
+    display:none;
   }
 }
