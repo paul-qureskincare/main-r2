@@ -12,89 +12,6 @@
 
 }
 
-[data-icon]:before {
-  font-family: "qure" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="qure-"]:before,
-[class*=" qure-"]:before {
-  font-family: "qure" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.qure-arrow-right:before {
-  content: "\61";
-}
-.qure-facebook:before {
-  content: "\62";
-}
-.qure-instagram:before {
-  content: "\63";
-}
-.qure-tik-tok:before {
-  content: "\64";
-}
-.qure-youtube:before {
-  content: "\65";
-}
-.qure-shield-check:before {
-  content: "\66";
-}
-.qure-qure-player:before {
-  content: "\67";
-}
-.qure-user:before {
-  content: "\68";
-}
-.qure-email:before {
-  content: "\69";
-}
-.qure-faqs:before {
-  content: "\6a";
-}
-.qure-shipping:before {
-  content: "\6b";
-}
-.qure-watch:before {
-  content: "\6c";
-}
-.qure-calendar:before {
-  content: "\6d";
-}
-.qure-badge:before {
-  content: "\6e";
-}
-.qure-cursor:before {
-  content: "\6f";
-}
-.qure-battery:before {
-  content: "\70";
-}
-.qure-waves:before {
-  content: "\71";
-}
-.qure-modes:before {
-  content: "\72";
-}
-.qure-bows:before {
-  content: "\73";
-}
-
 @font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins-Medium.eot');
@@ -213,8 +130,39 @@
 }
 
 
+/* Canela */
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela/Canela-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela/Canela-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela/Canela-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela/Canela-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* @font-face {
     font-family: 'Canela';
     src: url('../fonts/Canela-Medium.eot');
     src: url('../fonts/Canela-Medium.eot?#iefix') format('embedded-opentype'),
@@ -260,10 +208,91 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+} */
+
+
+/* TT Commons */
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-DemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../fonts/TTCommons/TTCommons-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
 @font-face {
     font-family: 'TT Commons';
     src: url('../fonts/TTCommons-Regular.eot');
@@ -334,5 +363,14 @@
     font-weight: 100;
     font-style: normal;
     font-display: swap;
-}
+} */
 
+
+/* NEW ICONS FONT */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icons/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

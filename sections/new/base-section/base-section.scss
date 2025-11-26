@@ -1,0 +1,211 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@elements/e-checkmark" as *;
+@use "@elements/e-icon" as *;
+
+.base-section {
+    $root: &;
+
+    article {
+        display: grid;
+        grid-template-rows: 1fr min-content 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 60px;
+        align-items: center;
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include sm {
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+            justify-items: center;
+            text-align: center;
+        }
+
+        & > h1, 
+        & > h2 {
+            align-self: end;
+            margin-bottom: 0;
+            color: inherit;
+
+            & + picture[data-url] {
+                @include sm {
+                    order: 0;
+                }
+            }
+        }
+
+        & > div {
+            align-self: start;
+        }
+
+        p {
+            em {
+                font-style: normal;
+                background: #c7e5db;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .e-pill-badge {
+            grid-row: 1 / 1;
+            align-self: end;
+
+            @include sm {
+                order: 20;
+                grid-row: auto;
+            }
+        }
+
+        .btn {
+            align-self: start;
+            width: max-content;
+            margin-top: 8px;
+
+            @include sm {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+
+    picture {
+        grid-row: 1 / -1;
+        grid-column: 2;
+
+        @include sm {
+            order: -1;
+            grid-area: auto;
+            grid-column: 1;
+            width: 100%;
+        }
+
+        &[data-url] {
+            cursor: pointer;
+        }
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    &--small-media {
+        article {
+            grid-template-columns: 1fr 400px;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+        }
+    }
+
+    &--half-media {
+        .container {
+            margin-right: 0;
+            padding-right: 0;
+            
+            @media screen and (min-width: 1200px) {
+                @include max-width(1150px);
+            }
+            
+            @media screen and (min-width: 1400px) {
+                @include max-width(1200px);
+            }
+
+            @include sm {
+                padding-right: 15px;
+            }
+        }
+
+        article {
+            grid-template-columns: 1fr 50vw;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+
+            picture {
+                @include sm {
+                    width: 100vw;
+                    margin-right: -15px;
+                    margin-left: -15px;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                max-height: 600px;
+                border-radius: 0;
+
+                @include sm {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &--half-media#{$root}--reverse {
+        .container {
+            margin-right: auto;
+            margin-left: 0;
+            padding-right: 15px;
+            padding-left: 0;
+    
+    
+            @include sm {
+                padding-left: 15px;
+            }
+        }
+
+        article {
+            grid-template-columns: 50vw 1fr;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+
+            picture {
+                @include sm {
+                    width: 100vw;
+                    margin-right: -15px;
+                    margin-left: -15px;
+                }
+            }
+        }
+    }
+
+    &--reverse {
+        picture {
+            grid-column: 1;
+        }
+    }
+
+    &--grey {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include md {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &--dark {
+        color: #fff;
+        background: #212428;
+    }
+}

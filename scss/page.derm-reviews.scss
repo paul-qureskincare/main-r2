@@ -1,0 +1,20 @@
+// Elements
+@use "@elements/e-pill-badge" as *;
+@use "@elements/e-checkmark" as *;
+@use "@elements/e-icon" as *;
+
+// Components
+@use "@components/c-certified-box" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-trusted-video-card" as *;
+@use "@components/c-visual-compare-card" as *;
+@use "@components/c-advisory-collapse-card" as *;
+@use "@components/c-modal" as *;
+@use "@components/c-pills-nav" as *;
+
+// Sections
+@use "@sections/sections-stack/sections-stack" as *;
+@use "@sections/base-section/base-section" as *;
+@use "@sections/base-slider/base-slider" as *;
+@use "@sections/pills-nav/pills-nav" as *;
+@use "@sections/across-image-banner/across-image-banner" as *;

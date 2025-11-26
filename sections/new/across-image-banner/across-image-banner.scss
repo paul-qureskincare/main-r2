@@ -1,0 +1,101 @@
+@use "@root/mixins" as *;
+@use "@components/c-certified-box" as *;
+
+.across-image-banner {
+    $root: &;
+
+    position: relative;
+    z-index: 1;
+
+    // .across-image-banner__image
+    picture {
+        width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .across-image-banner__overlay
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include md {
+            justify-content: flex-start;
+        }
+    }
+
+    // .across-image-banner__content
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 550px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include sm {
+            max-width: none;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-bottom: 0;
+            color: inherit;
+        }
+
+        .btn {
+            display: flex;
+            gap: 12px;
+            align-self: flex-start;
+            justify-content: center;
+            min-width: 300px;
+            margin-top: 5px;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+
+    // MODIFICATORS
+
+    &--hero {
+        .c-certified-box {
+            background: #fff;
+        }
+    }
+
+    // .across-image-banner--light-technology
+    &--light-technology {
+        color: #fff;
+
+        // .across-image-banner--light-technology .across-image-banner__image img
+        #{$root}__image img {
+            object-fit: cover;
+            min-height: 500px;
+            filter: brightness(0.5);
+        }
+        
+        // .across-image-banner--light-technology .across-image-banner__overlay
+        #{$root}__overlay {
+            justify-content: center;
+        }
+        
+        // .across-image-banner--light-technology .across-image-banner__content
+        #{$root}__content {
+            text-align: left;
+
+            button {
+                @include button;
+            }
+        }    
+    }
+}

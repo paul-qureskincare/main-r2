@@ -1,0 +1,114 @@
+.c-certified-box{
+  display:grid;
+  grid-template-columns:-webkit-max-content 1fr;
+  grid-template-columns:max-content 1fr;
+  gap:10px;
+  align-items:center;
+  max-width:415px;
+  padding:10px 20px;
+  font-size:14px;
+  line-height:18px;
+  text-align:left;
+  border-radius:5px;
+  background:#f6f6f7;
+}
+.c-certified-box ul{
+  display:flex;
+  align-items:center;
+}
+.c-certified-box ul li{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  width:32px;
+  height:32px;
+  font-size:12px;
+  font-weight:600;
+  border:1px solid #f6f6f7;
+  border-radius:50%;
+  background:#c8e6dc;
+}
+.c-certified-box ul li+li{
+  margin-left:-8px;
+}
+.c-certified-box ul li img{
+  width:inherit;
+  max-height:inherit;
+}
+.c-certified-box--light{
+  background:#fff;
+}
+
+.across-image-banner{
+  position:relative;
+  z-index:1;
+}
+.across-image-banner picture{
+  width:100%;
+}
+.across-image-banner picture img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.across-image-banner__overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.across-image-banner article{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:550px;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.across-image-banner article h1,.across-image-banner article h2{
+  margin-bottom:0;
+  color:inherit;
+}
+.across-image-banner article .btn{
+  display:flex;
+  gap:12px;
+  align-self:flex-start;
+  justify-content:center;
+  min-width:300px;
+  margin-top:5px;
+}
+.across-image-banner--hero .c-certified-box{
+  background:#fff;
+}
+.across-image-banner--light-technology{
+  color:#fff;
+}
+.across-image-banner--light-technology .across-image-banner__image img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  min-height:500px;
+  filter:brightness(.5);
+}
+.across-image-banner--light-technology .across-image-banner__overlay{
+  justify-content:center;
+}
+.across-image-banner--light-technology .across-image-banner__content{
+  text-align:left;
+}
+@media screen and (max-width:991px){
+  .across-image-banner__overlay{
+    justify-content:flex-start;
+  }
+}
+@media screen and (max-width:767px){
+  .across-image-banner article{
+    max-width:none;
+    text-align:center;
+  }
+  .across-image-banner article .btn{
+    width:100%;
+  }
+}

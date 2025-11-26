@@ -1,0 +1,20 @@
+@use "@root/mixins" as *;
+
+.e-pill-badge {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    padding: 10px 20px;
+    color: #8b8c8e;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    background: #f6f6f7;
+
+    .e-checkmark {
+        font-size: 20px;
+    }
+}

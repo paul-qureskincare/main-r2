@@ -1,0 +1,51 @@
+@use "@root/mixins" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-trusted-video-card" as *;
+@use "@components/c-visual-compare-card" as *;
+@use "@components/c-advisory-collapse-card" as *;
+@use "@components/c-modal" as *;
+
+.base-slider {
+    $root: &;
+
+    text-align: center;
+
+    h2 {
+        margin-bottom: 0;
+
+        & + p {
+            max-width: 800px;
+            margin: 24px auto 0;
+
+            @include md {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .c-swiper {
+        text-align: initial;
+        
+        &:not(:first-child) {
+            margin-top: 40px;
+
+            @include md {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    // .base-slider--two-cards
+    &--two-cards {
+        .container {
+            max-width: 1022px;
+        }
+    }
+
+    // .base-slider--tree-cards
+    &--tree-cards {
+        .container {
+            max-width: 1082px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use "@root/mixins" as *;
+@use "@components/c-pills-nav" as *;
+
+.pills-nav {
+    &__header {
+        display: none;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 16px;
+
+        @include md {
+            display: flex;
+        }
+
+        div {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .e-icon {
+            font-size: 12px;
+        }
+    }
+}

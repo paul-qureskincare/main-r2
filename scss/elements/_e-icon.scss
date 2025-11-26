@@ -1,0 +1,58 @@
+@use "@root/mixins" as *;
+
+.e-icon {
+    display: inline-block;
+    line-height: 1;
+    
+    &::before {
+        @include icon;
+    }
+}
+
+.e-icon-chevron::before {
+    content: "\e900";
+}
+
+.e-icon-checkmark::before {
+    content: "\e901";
+}
+
+.e-icon-plus::before {
+    content: "\e903";
+}
+
+.e-icon-minus::before {
+    content: "\e902";
+}
+
+.e-icon-cross::before {
+    content: "\e904";
+}
+
+.e-icon-arrow::before {
+    content: "\e905";
+}
+
+.e-icon-qure::before {
+    content: "\e906";
+}
+
+.e-icon-q::before {
+    content: "\e907";
+}
+
+.e-icon-youtube::before {
+    content: "\e90b";
+}
+
+.e-icon-instagram::before {
+    content: "\e90a";
+}
+
+.e-icon-facebook::before {
+    content: "\e909";
+}
+
+.e-icon-tiktok::before {
+    content: "\e908";
+}

@@ -1,0 +1,16 @@
+.sections-stack{
+  padding-bottom:60px;
+}
+.sections-stack,.sections-stack__sub-stack{
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+}
+@media screen and (max-width:991px){
+  .sections-stack{
+    padding-bottom:40px;
+  }
+  .sections-stack,.sections-stack__sub-stack{
+    gap:40px;
+  }
+}

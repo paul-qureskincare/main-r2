@@ -1,0 +1,24 @@
+@use "@root/mixins" as *;
+
+.footer-promo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    background: #212428;
+
+    &__content {
+        display: flex;
+        gap: 32px;
+        max-width: 900px;
+        margin-left: auto;
+
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .c-follow-us {
+        align-content: center;
+    }
+}

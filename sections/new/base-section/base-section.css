@@ -1,0 +1,271 @@
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:#8b8c8e;
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:#f6f6f7;
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+
+.e-checkmark{
+  width:1em;
+  height:1em;
+  color:#212428;
+  line-height:1em;
+  text-align:center;
+  border-radius:50%;
+  background:#c7e5db;
+}
+.e-checkmark:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:.35em;
+  line-height:inherit;
+  vertical-align:top;
+  content:"\e901";
+}
+
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.base-section article{
+  display:grid;
+  grid-template-rows:1fr -webkit-min-content 1fr;
+  grid-template-rows:1fr min-content 1fr;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px 60px;
+  align-items:center;
+}
+.base-section article>h1,.base-section article>h2{
+  align-self:end;
+  margin-bottom:0;
+  color:inherit;
+}
+.base-section article>div{
+  align-self:start;
+}
+.base-section article p em{
+  font-style:normal;
+  background:#c7e5db;
+}
+.base-section article p a{
+  color:inherit;
+  text-decoration:underline;
+}
+.base-section article p a:hover{
+  text-decoration:none;
+}
+.base-section article .e-pill-badge{
+  grid-row:1 /  1;
+  align-self:end;
+}
+.base-section article .btn{
+  align-self:start;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  margin-top:8px;
+}
+.base-section picture{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.base-section picture[data-url]{
+  cursor:pointer;
+}
+.base-section picture img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+}
+.base-section--small-media article{
+  grid-template-columns:1fr 400px;
+}
+.base-section--half-media .container{
+  margin-right:0;
+  padding-right:0;
+}
+.base-section--half-media article{
+  grid-template-columns:1fr 50vw;
+}
+.base-section--half-media article img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  max-height:600px;
+  border-radius:0;
+}
+.base-section--half-media.base-section--reverse .container{
+  margin-right:auto;
+  margin-left:0;
+  padding-right:15px;
+  padding-left:0;
+}
+.base-section--half-media.base-section--reverse article{
+  grid-template-columns:50vw 1fr;
+}
+.base-section--reverse picture{
+  grid-column:1;
+}
+.base-section--grey{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.base-section--dark{
+  color:#fff;
+  background:#212428;
+}
+@media screen and (min-width:1200px){
+  .base-section--half-media .container{
+    max-width:calc(100% - 50vw + 582.5px);
+  }
+}
+@media screen and (min-width:1400px){
+  .base-section--half-media .container{
+    max-width:calc(100% - 50vw + 607.5px);
+  }
+}
+@media screen and (max-width:991px){
+  .base-section article{
+    -moz-column-gap:40px;
+         column-gap:40px;
+  }
+  .base-section--grey{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+}
+@media screen and (max-width:767px){
+  .base-section article{
+    grid-template-rows:auto;
+    grid-template-columns:auto;
+    justify-items:center;
+    text-align:center;
+  }
+  .base-section article>h1+picture[data-url],.base-section article>h2+picture[data-url]{
+    order:0;
+  }
+  .base-section article .e-pill-badge{
+    order:20;
+    grid-row:auto;
+  }
+  .base-section article .btn{
+    width:100%;
+    margin-top:0;
+  }
+  .base-section picture{
+    order:-1;
+    grid-area:auto;
+    grid-column:1;
+    width:100%;
+  }
+  .base-section--small-media article{
+    grid-template-columns:auto;
+  }
+  .base-section--half-media .container{
+    padding-right:15px;
+  }
+  .base-section--half-media article{
+    grid-template-columns:auto;
+  }
+  .base-section--half-media article picture{
+    width:100vw;
+    margin-right:-15px;
+    margin-left:-15px;
+  }
+  .base-section--half-media article img{
+    width:100%;
+  }
+  .base-section--half-media.base-section--reverse .container{
+    padding-left:15px;
+  }
+  .base-section--half-media.base-section--reverse article{
+    grid-template-columns:auto;
+  }
+  .base-section--half-media.base-section--reverse article picture{
+    width:100vw;
+    margin-right:-15px;
+    margin-left:-15px;
+  }
+}

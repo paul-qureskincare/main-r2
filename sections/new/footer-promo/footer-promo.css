@@ -1,0 +1,21 @@
+.footer-promo{
+  padding-top:50px;
+  padding-bottom:50px;
+  color:#fff;
+  background:#212428;
+}
+.footer-promo__content{
+  display:flex;
+  gap:32px;
+  max-width:900px;
+  margin-left:auto;
+}
+.footer-promo .c-follow-us{
+  align-content:center;
+}
+@media screen and (max-width:767px){
+  .footer-promo__content{
+    flex-direction:column;
+    align-items:center;
+  }
+}
