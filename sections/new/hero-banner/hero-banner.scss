@@ -1,0 +1,71 @@
+@use "@root/mixins" as *;
+
+.hero-banner {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    // .hero-banner--holidays
+    &--holidays {
+        position: relative;
+
+        img {
+            object-fit: cover;
+            min-height: 220px;
+        }
+
+        article {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 545px;
+            padding: 42px 32px 28px;
+            text-align: center;
+            border-radius: 20px;
+            background: rgb(255 255 255 / 50%);
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(5px);
+
+            @include sm {
+                gap: 0;
+                max-width: 327px;
+                padding: 32px 16px 20px;
+                font-size: 16px;
+            }
+
+            h2 {
+                @include sm {
+                    font-size: 24px;
+                }
+            }
+
+            &[data-badge]::before {
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-bottom: -14px;
+                padding: 4px 16px 3px;
+                color: #fff;
+                font-weight: 500;
+                line-height: 20px;
+                white-space: nowrap;
+                text-transform: uppercase;
+                border-radius: 20px;
+                background: var(--discount-color);
+                transform: translateX(-50%);
+                content: attr(data-badge);
+
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
