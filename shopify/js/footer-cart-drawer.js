@@ -17,8 +17,6 @@ document.addEventListener('cart.requestComplete', (event) => {
     }
 });
 
-
-
 /*  render  */
 
 const reloadDrawer = (array) => {
@@ -128,8 +126,16 @@ const addToCart = (input) => {
     .then(response => response.json())
     .then(() => {
         toogleGift().then(() => {
-            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCart' } });
-            document.dispatchEvent(event);
+            if (typeof footer_cart_drawer_discount !== 'undefined' && footer_cart_drawer_discount) {
+                fetch('/discount/' + footer_cart_drawer_discount).then(async () => {
+                    const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCart' } });
+                    document.dispatchEvent(event);
+                });
+            }
+            else {
+                const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCart' } });
+                document.dispatchEvent(event);
+            }
         });
     })
     .catch((error) => {
@@ -146,8 +152,16 @@ const addToCartJson = (input) => {
     .then(response => response.json())
     .then(() => {
         toogleGift().then(() => {
-            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCartJson' } });
-            document.dispatchEvent(event);
+            if (typeof footer_cart_drawer_discount !== 'undefined' && footer_cart_drawer_discount) {
+                fetch('/discount/' + footer_cart_drawer_discount).then(async () => {
+                    const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCartJson' } });
+                    document.dispatchEvent(event);
+                });
+            }
+            else {
+                const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCartJson' } });
+                document.dispatchEvent(event);
+            }
         })
     })
     .catch((error) => {
