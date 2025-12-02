@@ -292,3 +292,58 @@
     padding: 10px;
 }
 }
+
+/* all in one bf section css starts */
+.all-in-one-bf .qure__variant-box{
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+.all-in-one-bf .vp-best-value {
+    max-width: 100px;
+    margin: 0 30px 0 auto;
+}
+.all-in-one-bf  .qure__variant-item {
+    margin-bottom: 12px;
+}
+.all-in-one-bf .bf-buy-Wrapper {
+    display: flex;
+    gap: 10px;
+    text-align: start;
+}
+.all-in-one-bf  .qure__variant-item:nth-child(1) .qure__variant-box{
+    padding-top: 12px;
+}
+.all-in-one-bf .qure__variant-box {
+    padding: 12px;
+}
+.all-in-one-bf .dis_red_line{
+    position: relative;
+}
+.all-in-one-bf .dis_red_line:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #FF5429;
+    transform: rotate(5deg);
+    top: 10px;
+}
+.all-in-one-bf{
+    display: unset !important;
+}
+.all-in-one-bf .vp-best-value {
+    background: var(--qure-charcoal);
+    color: var(--white-color);
+    font-size: 14px;
+    border-radius: 7px 7px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    padding-bottom: 2px;
+    width: calc(100% + 1px);
+}
+.all-in-one-bf .vp-best-value i {
+    font-size: 9px;
+    margin-top: 1px;
+}
