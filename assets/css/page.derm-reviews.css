@@ -441,10 +441,10 @@
 .c-pills-nav a{
   white-space:nowrap;
 }
-.page\.derm-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+.page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
   padding-bottom:60px;
 }
-.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
   display:flex;
   flex-direction:column;
   gap:60px;
@@ -708,10 +708,10 @@
   .c-pills-nav{
     gap:8px;
   }
-  .page\.derm-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+  .page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
     padding-bottom:40px;
   }
-  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
     gap:40px;
   }
   .base-section article{
