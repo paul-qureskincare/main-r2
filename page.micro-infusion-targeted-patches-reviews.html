@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="assets/css/spacings.css">
     <link href="assets/css/theme-fonts.css" rel="stylesheet" />
     <link href="assets/css/base.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #212428;
+            --discount-color: #91baec;
+        }
+    </style>
     <!-- Loading HTML Files -->
     <script src="assets/js/fileloader.js"></script>
 </head>
@@ -24,6 +30,7 @@
         });
     </script>
     <!-- PAGE HEADER end-->
+
     <!-- Announcement Bar -->
     <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
     <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
@@ -33,225 +40,289 @@
             </div>
         </div>
     </div>
-    <!-- Page banner -->
-    <link rel="stylesheet" href="sections/isolated/page-banner/page-banner.css" />
-    <div class="page__banner position-relative">
-        <picture>
-            <source media="(min-width:1920px)" srcset="sections/isolated/page-banner/images/derma-hero.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:1600px)" srcset="sections/isolated/page-banner/images/derma-hero.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:1100px)" srcset="sections/isolated/page-banner/images/derma-hero.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:767px)" srcset="sections/isolated/page-banner/images/derma-hero.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:540px)" srcset="sections/isolated/page-banner/images/derma-hero-mob.webp"
-                class="img-fluid" width="1440" height="557">
-            <img src="sections/isolated/page-banner/images/derma-hero-mob.webp" width="225" height="281" alt=""
-                class="img-fluid w-100">
-        </picture>
-        <div class="page__banner-wrapper position-absolute d-flex align-items-start align-items-md-center justify-content-end top-0 bottom-0 start-0 end-0 pb-20 qure__section"
-            style="--section-padding-top-mob:50px;">
+
+    <!-- SECTIONS STACK -->
+    <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+    <main class="sections-stack">
+        <!-- ACROSS IMAGE BANNER -->
+        <link rel="stylesheet" href="sections/new/across-image-banner/across-image-banner.css" />
+        <section class="across-image-banner across-image-banner--hero">
+            <picture>
+                <source media="(min-width:768px)" srcset="../sections/isolated/page-banner/images/derma-hero.webp" />
+                <img src="../sections/isolated/page-banner/images/derma-hero-mob.webp" alt="Trusted by doctors for healthier, radiant skin" />
+            </picture>
             <div class="container">
-                <div class="d-flex">
-                    <div class="ctm-width ctm-color text-center text-md-start mx-auto mx-md-0"
-                        style="--ctm-width:550px;--txt-color-mob: #212428;--pg-title-mob: #212428;">
-                        <h1 class="page-banner-title">Trusted by doctors for healthier, radiant skin</h1>
-                        <div class="qure__certified-box my-16 text-start" style="--crt-bg:#fff;">
-                            <ul class="qure__certified-list">
-                                <li><img src="sections/isolated/targeted-patches/images/crt-1.webp"></li>
-                                <li><img src="sections/isolated/targeted-patches/images/crt-2.webp"></li>
-                                <li>+50</li>
-                            </ul>
-                            <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients. <a
-                                    href="https://qureskincare.com/pages/derm-reviews"
-                                    class="btn--link d-md-inline d-none">See
-                                    More.</a></p>
+                <article>
+                    <h1>Trusted by doctors for healthier, radiant skin</h1>
+                    <div class="c-certified-box">
+                        <ul>
+                            <li><img src="../sections/isolated/targeted-patches/images/crt-1.webp" alt="Certified Dermatologists" /></li>
+                            <li><img src="../sections/isolated/targeted-patches/images/crt-2.webp" alt="Certified Dermatologists" /></li>
+                            <li>+50</li>
+                        </ul>
+                        <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- ACROSS IMAGE BANNER END -->
+
+        <!-- PILLS NAVIGATION -->
+        <link rel="stylesheet" href="sections/new/pills-nav/pills-nav.css" />
+        <section class="pills-nav">
+            <div class="container">
+                <div class="pills-nav__header">
+                    <span>Filter by product</span>
+                    <div>Swipe for more <i class="e-icon e-icon-arrow"></i></div>
+                </div>
+                <ul class="c-pills-nav">
+                    <li><a href="#">Micro-Infusion System</a></li>
+                    <li><a href="#">Q-Rejuvalight Pro</a></li>
+                    <li><a href="#">Neck & Décolletage LED System</a></li>
+                    <li><a href="#">All-In-One Serum</a></li>
+                    <li><a href="#" class="active">Micro-Infusion Targeted Patches</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- PILLS NAVIGATION END -->
+
+        <!-- SECTIONS SUB-STACK -->
+        <div class="sections-stack__sub-stack">
+            <!-- BASE SECTION -->
+            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+            <section class="base-section base-section--small-media">
+                <div class="container">
+                    <article>
+                        <h2>Trusted and Recommended by Experts</h2>
+                        <picture data-url="https://www.youtube.com/watch?v=mVdncsTAXiA">
+                            <img src="sections/isolated/experts/images/micro-infusion.webp" alt="Trusted and Recommended by Experts" />
+                        </picture>
+                        <div>
+                             <p>“To have Argireline in a very targeted patch is GENIUS; it's <em>a botox-like peptide</em> that really helps with fine lines”</p>
+                        </div>
+                        <div class="e-pill-badge">
+                            <span class="e-checkmark"></span>
+                            Dermatologist Reviewed
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
+                });
+            </script>
+            <!-- BASE SECTION END -->
+            
+            <!-- BASE SLIDER -->
+            <link rel="stylesheet" href="sections/new/base-slider/base-slider.css" />
+            <section class="base-slider base-slider--two-cards">
+                <div class="container">
+                    <h2>Clinically proven results you can see</h2>
+                    <div 
+                        class="c-swiper"
+                        data-swiper='{
+                            "slidesPerView": 1.1,
+                            "spaceBetween": 15,
+                            "loop": false,
+                            "pagination": { 
+                                "el": ".c-swiper-pagination", 
+                                "type": "custom" 
+                            },
+                            "navigation": {
+                                "prevEl": ".c-swiper-button-prev",
+                                "nextEl": ".c-swiper-button-next"
+                            },
+                            "breakpoints": {
+                                "768": { 
+                                    "slidesPerView": 2
+                                },
+                                "1200": { 
+                                    "slidesPerView": 2,
+                                    "spaceBetween": 30
+                                }
+                            }
+                        }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="c-visual-compare-card">
+                                    <picture>
+                                        <img src="sections/isolated/after-before/images/ab-2.webp" alt="Proven to visually improve" />
+                                    </picture>
+                                    <article>
+                                        <p>Proven to visually improve</p>
+                                        <span>Crow's Feet</span>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-visual-compare-card">
+                                    <picture>
+                                        <img src="sections/isolated/after-before/images/ab-1.webp" alt="Proven to visually improve" />
+                                    </picture>
+                                    <article>
+                                        <p>Proven to visually improve</p>
+                                        <span>Dark Under Eyes</span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-swiper-nav">
+                            <button class="c-swiper-button-prev"></button>
+                            <div class="c-swiper-pagination"></div>
+                            <button class="c-swiper-button-next"></button>
                         </div>
                     </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce('base-slider', 'sections/new/base-slider/base-slider.js');
+                });
+            </script>    
+            <!-- BASE SLIDER END -->
+    
+            <!-- BASE SECTION -->
+            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+            <section class="base-section base-section--reverse base-section--grey">
+                <div class="container">
+                    <article>
+                        <h2>80 Serum-Enriches Micro-Darts for precise improvement</h2>
+                        <picture>
+                            <img src="sections/global/banner-with-text/images/serum-enriches.webp" alt="Micro-Infusion Targeted Patches" />
+                        </picture>
+                        <div>
+                            <p>Fast-acting patches feature 80 self-dissolving micro-darts designed to target and treat wrinkles, under-eye puffiness and dark circles.</p>
+                            <p>While traditional patches lay flat on the surface of the skin, these ultra thin micro-darts gently penetrate the skin, <em>infusing serum for deeper delivery.</em></p>
+                            <p>Precise and powerful, they infuse serum where you need it most and fully absorb into the skin for <em>deeper, better, faster results</em> - yet gentle enough for sensitive skin.</p>
+                        </div>
+                        <a href="#" class="btn btn--primary">Shop Micro-Infusion Targeted Patches</a>
+                    </article>
+                </div>
+            </section>
+            <!-- BASE SECTION END -->
+        </div>
+        <!-- SECTIONS SUB-STACK END -->
+
+        <!-- BASE SLIDER -->
+        <link rel="stylesheet" href="sections/new/base-slider/base-slider.css" /> 
+        <section class="base-slider">
+            <div class="container">
+                <h2>Meet our board of advisors</h2>
+                <p>At Qure Skincare, we are proud to have a team of esteemed Dermatologists guiding our mission to deliver high-quality skincare solutions.</p>
+                <div 
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1.1,
+                        "spaceBetween": 15,
+                        "loop": false,
+                        "pagination": { 
+                            "el": ".c-swiper-pagination", 
+                            "type": "custom" 
+                        },
+                        "navigation": {
+                            "prevEl": ".c-swiper-button-prev",
+                            "nextEl": ".c-swiper-button-next"
+                        },
+                        "breakpoints": {
+                            "580": { 
+                                "slidesPerView": 2
+                            },
+                            "992": { 
+                                "slidesPerView": 3
+                            },
+                            "1200": { 
+                                "slidesPerView": 4,
+                                "spaceBetween": 20
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="c-advisory-collapse-card">
+                                <article data-bs-toggle="collapse" data-bs-target="#advisory-1">
+                                    <picture>
+                                        <img src="sections/isolated/board-advisory/images/shah.webp" alt="Dr. Shah" />
+                                    </picture>
+                                    <p>Dr. Shah <br /> Board Certified Dermatologist</p>
+                                </article>
+                                <div class="collapse" id="advisory-1">
+                                    “I like that they put a lot of R&D into their products - Ultimately, I think that they care a lot about the products they are putting out”
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="c-advisory-collapse-card">
+                                <article data-bs-toggle="collapse" data-bs-target="#advisory-2">
+                                    <picture>
+                                        <img src="sections/isolated/board-advisory/images/maxfield.webp" alt="Dr. Maxfield" />
+                                    </picture>
+                                    <p>Dr. Maxfield <br /> Board Certified Dermatologist</p>
+                                </article>
+                                <div class="collapse" id="advisory-2">
+                                    “Qure do studies on this, taking a look at how effective it is, so you can have confidence it's going to help what you're doing for your skincare routine”
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="c-advisory-collapse-card">
+                                <article data-bs-toggle="collapse" data-bs-target="#advisory-3">
+                                    <picture>
+                                        <img src="sections/isolated/board-advisory/images/tripathi.webp" alt="Dr. Tripathi" />
+                                    </picture>
+                                    <p>Dr. Tripathi <br /> Double Board Certified Facial Plastic Surgeon</p>
+                                </article>
+                                <div class="collapse" id="advisory-3">
+                                    “I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures.”
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="c-advisory-collapse-card">
+                                <article data-bs-toggle="collapse" data-bs-target="#advisory-4">
+                                    <picture>
+                                        <img src="sections/isolated/board-advisory/images/stephens.webp" alt="Dr. Stephens" />
+                                    </picture>
+                                    <p>Dr. Stephens <br /> Board Certified Dermatologist</p>
+                                </article>
+                                <div class="collapse" id="advisory-4">
+                                    "What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-swiper-nav">
+                        <button class="c-swiper-button-prev"></button>
+                        <div class="c-swiper-pagination"></div>
+                        <button class="c-swiper-button-next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce('base-slider', 'sections/new/base-slider/base-slider.js');
+            });
+        </script>    
+        <!-- BASE SLIDER END --> 
+    </main>
+    <!-- SECTIONS STACK END -->
+           
+    <!-- Reusable modal for all the wistia videos for all the tab contents -->
+    <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="wistiaVideoContainer" class="c-modal__video"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Page banner end -->
-
-
-            <div>
-            <!-- Trusted Recommended section Start -->
-            <div class="trusted_recom qure__section"
-                style="--section-padding-top: 40px; --section-padding-bottom: 40px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
-                <div class="container" style="--column-gap:100px; --column-gap-mobile:30px;">
-                    <h2 class="qure__section-heading d-md-none mb-3 text-center">Trusted and Recommended by Experts</h2>
-                    <div class="row align-items-center custom__grid">
-                        <div class="col custom__block order-1 order-md-0">
-                            <div class="trusted_left mw-680">
-                                <div class="section_header py-0 mw-100">
-                                    <div class="trusted_verified d-none d-md-flex">
-                                        <img src="sections/isolated/experts/images/tick_new.svg" alt="">
-                                        <p class="p-0">Dermatologist Reviewed
-                                        </p>
-                                    </div>
-                                    <div class="qure__section-header text-md-start text-center mb-30">
-                                        <h2 class="qure__section-heading text-md-start pb-20 d-none d-md-block">Trusted
-                                            and Recommended
-                                            by Experts</h2>
-                                        <p>“To have Argireline in a very targeted patch is GENIUS; it’s <span
-                                                style="background:#C7E5DB">a botox-like peptide</span> that really helps
-                                            with fine lines ”</p>
-                                    </div>
-                                    <div class="trusted_verified d-md-none d-flex mt-3">
-                                        <img src="assets/images/tick_new.svg" alt="">
-                                        <p class="p-0">Dermatologist Reviewed
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ctm-width custom__block" style="--ctm-width: 500px;">
-                            <div class="play_btn">
-                                <a class="popup-youtube lvideo trusted-experts rounded-10 overflow-hidden d-block"
-                                    data-url="https://www.youtube.com/watch?v=mVdncsTAXiA">
-                                    <span class="justify-content-center">
-                                        <img src="sections/isolated/experts/images/micro-infusion.webp" alt=""
-                                            class="img-fluid">
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce('youtube-popup', 'assets/js/yt-popup.js');
-                });
-            </script>
-            <!-- Trusted Recommended section End -->
-
-            <!-- after before evidence -->
-            <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-            <div id="results" class="qure__section after no_hype_evidence"
-                style="--section-padding-top: 40px; --section-padding-bottom: 80px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 20px;">
-                <div class="container">
-                    <div class="heading_wrapper mb-40">
-                        <h2 class="banner-text--heading text-start text-md-center">Clinically proven results you can see
-                        </h2>
-                    </div>
-                    <div class="row custom__grid" style="--column-gap:60px; --column-gap-mobile:32px;">
-                        <div class="col-12 custom__block">
-                            <div class="swiper qure__swiper" id="qure__swiper-evidence-slider"
-                                data-section-id="evidence-slider" data-autoplay="false" data-loop="false"
-                                data-mobile="1" data-tablet="2" data-desktop="2" data-spacing="32"
-                                data-pagination-fraction="true">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="clinic_prvn p-16 p-md-24 m-1 border rounded-2"
-                                            style="--bs-border-radius: 10px;">
-                                            <img src="sections/isolated/after-before/images/ab-2.webp"
-                                                class="card-img-top rounded-2" alt="">
-                                            <div
-                                                class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-18">
-                                                <span>Proven to visually improve</span>
-                                                <button class="btn btn--primary btn-sm"
-                                                    style="--btn-primary-bg: #c8e6dc;--btn-primary-color: #212428;">Crow’s
-                                                    Feet</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="clinic_prvn p-16 p-md-24 m-1 border rounded-2"
-                                            style="--bs-border-radius: 10px;">
-                                            <img src="sections/isolated/after-before/images/ab-1.webp"
-                                                class="card-img-top rounded-2" alt="">
-                                            <div
-                                                class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-18">
-                                                <span>Proven to visually improve</span>
-                                                <button class="btn btn--primary btn-sm"
-                                                    style="--btn-primary-bg: #c8e6dc;--btn-primary-color: #212428;">Dark
-                                                    Under Eyes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                                    <div class="qure-swiper-button-prev qure-swiper-arrow"><i
-                                            class="fa-regular fa-angle-left"></i>
-                                    </div>
-                                    <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                                    <div class="qure-swiper-button-next qure-swiper-arrow"><i
-                                            class="fa-regular fa-angle-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce('main-slider', 'assets/js/main-slider.js');
-                });
-            </script>
-
-            <!-- Banner with text -->
-            <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-            <div class="qure__section banner-with-text color-background"
-                style="--section-padding-top:80px; --section-padding-bottom:80px;" id="image_text">
-                <div class="container">
-                    <div class="row custom__grid" style="--column-gap:60px; --column-gap-mobile:32px;">
-                        <div class="col-md-6 custom__block">
-                            <div class="treat_breakouts">
-                                <img src="sections/global/banner-with-text/images/serum-enriches.webp" alt=""
-                                    class="img-fluid rounded-10" />
-                            </div>
-                        </div>
-                        <div class="col-md-6 custom__block">
-                            <div class="banner-with-text-content">
-                                <h2 class="banner-text--heading">80 Serum-Enriches Micro-Darts for precise improvement
-                                </h2>
-                                <div class="banner-text--des" style="--text-mt: 32px; --text-mb: 32px;">
-                                    <p>Fast-acting patches feature 80 self-dissolving micro-darts designed to target and
-                                        treat
-                                        wrinkles, under-eye puffiness and dark circles.</p>
-                                    <p>While traditional patches lay flat on the surface of the skin, these ultra thin
-                                        micro-darts
-                                        gently penetrate the skin, <span>infusing serum for deeper delivery.</span></p>
-                                    <p>Precise and powerful, they infuse serum where you need it most and fully absorb
-                                        into the skin
-                                        for <span>deeper, better, faster results</span> – yet gentle enough for
-                                        sensitive skin.</p>
-                                </div>
-                                <a href="" class="banner-text--button btn btn--primary w-mob-100">Shop Micro-Infusion
-                                    Targeted Patches</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-                });
-            </script>
-            <!-- Banner with text end-->
-            </div>
-                    <!-- Reusable modal for all the wistia videos for all the tab contents -->
-            <div class="modal fade filter-modal" id="reusableWistiaModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-md filter-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="wistiaVideoContainer" class="filter-modal-video"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
     <!-- CART AND FOOTER -->
     <div id="site-footer"></div>
