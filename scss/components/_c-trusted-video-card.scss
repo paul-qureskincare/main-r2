@@ -3,13 +3,13 @@
 .c-trusted-video-card {
     overflow: hidden;
     border: 1px solid #dfe0e0;
-    // height: 100%;
     border-radius: 10px;
 
     picture {
         display: block;
 
-        &[data-video-id] {
+        &[data-video-id],
+        &[data-url], {
             cursor: pointer;
         }
     }

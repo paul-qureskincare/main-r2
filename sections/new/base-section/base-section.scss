@@ -8,10 +8,11 @@
 
     article {
         display: grid;
-        grid-template-rows: 1fr min-content 1fr;
+        grid-template-rows: auto minmax(min-content, 0) auto;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 60px;
         align-items: center;
+        min-height: 0;
 
         @include md {
             column-gap: 40px;
@@ -20,8 +21,6 @@
         @include sm {
             grid-template-rows: auto;
             grid-template-columns: auto;
-            justify-items: center;
-            text-align: center;
         }
 
         & > h1, 
@@ -35,10 +34,6 @@
                     order: 0;
                 }
             }
-        }
-
-        & > div {
-            align-self: start;
         }
 
         p {
@@ -57,13 +52,30 @@
             }
         }
 
-        .e-pill-badge {
-            grid-row: 1 / 1;
-            align-self: end;
+        @at-root #{$root}:has(.e-pill-badge) {
+            article {
+                @include sm {
+                    justify-items: center;
+                    text-align: center;
+                }
+                
+                h2 {
+                    align-self: center;
+                }
 
-            @include sm {
-                order: 20;
-                grid-row: auto;
+                & > div:not(.e-pill-badge) {
+                    align-self: start;
+                }
+            }
+
+            .e-pill-badge {
+                grid-row: 1 / 1;
+                align-self: end;
+
+                @include sm {
+                    order: 20;
+                    grid-row: auto;
+                }
             }
         }
 

@@ -152,10 +152,10 @@
 
 .c-swiper{
   overflow:hidden;
-  margin-right:-15px;
-  margin-left:-15px;
-  padding-right:15px;
-  padding-left:15px;
+  margin-right:-16px;
+  margin-left:-16px;
+  padding-right:16px;
+  padding-left:16px;
 }
 .c-swiper-nav{
   display:flex;
@@ -220,7 +220,7 @@
 .c-trusted-video-card picture{
   display:block;
 }
-.c-trusted-video-card picture[data-video-id]{
+.c-trusted-video-card picture[data-url],.c-trusted-video-card picture[data-video-id]{
   cursor:pointer;
 }
 .c-trusted-video-card img{
@@ -441,11 +441,10 @@
 .c-pills-nav a{
   white-space:nowrap;
 }
-
-.sections-stack{
+.page\.derm-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
   padding-bottom:60px;
 }
-.sections-stack,.sections-stack__sub-stack{
+.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
   display:flex;
   flex-direction:column;
   gap:60px;
@@ -453,19 +452,17 @@
 
 .base-section article{
   display:grid;
-  grid-template-rows:1fr -webkit-min-content 1fr;
-  grid-template-rows:1fr min-content 1fr;
+  grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
+  grid-template-rows:auto minmax(min-content, 0) auto;
   grid-template-columns:repeat(2, 1fr);
   gap:20px 60px;
   align-items:center;
+  min-height:0;
 }
 .base-section article>h1,.base-section article>h2{
   align-self:end;
   margin-bottom:0;
   color:inherit;
-}
-.base-section article>div{
-  align-self:start;
 }
 .base-section article p em{
   font-style:normal;
@@ -478,10 +475,17 @@
 .base-section article p a:hover{
   text-decoration:none;
 }
-.base-section article .e-pill-badge{
+.base-section:has(.e-pill-badge) article h2{
+  align-self:center;
+}
+.base-section:has(.e-pill-badge) article>div:not(.e-pill-badge){
+  align-self:start;
+}
+.base-section:has(.e-pill-badge) .e-pill-badge{
   grid-row:1 /  1;
   align-self:end;
 }
+
 .base-section article .btn{
   align-self:start;
   width:-webkit-max-content;
@@ -704,10 +708,10 @@
   .c-pills-nav{
     gap:8px;
   }
-  .sections-stack{
+  .page\.derm-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
     padding-bottom:40px;
   }
-  .sections-stack,.sections-stack__sub-stack{
+  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
     gap:40px;
   }
   .base-section article{
@@ -738,13 +742,15 @@
   .base-section article{
     grid-template-rows:auto;
     grid-template-columns:auto;
-    justify-items:center;
-    text-align:center;
   }
   .base-section article>h1+picture[data-url],.base-section article>h2+picture[data-url]{
     order:0;
   }
-  .base-section article .e-pill-badge{
+  .base-section:has(.e-pill-badge) article{
+    justify-items:center;
+    text-align:center;
+  }
+  .base-section:has(.e-pill-badge) .e-pill-badge{
     order:20;
     grid-row:auto;
   }

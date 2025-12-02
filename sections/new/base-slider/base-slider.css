@@ -1,9 +1,9 @@
 .c-swiper{
   overflow:hidden;
-  margin-right:-15px;
-  margin-left:-15px;
-  padding-right:15px;
-  padding-left:15px;
+  margin-right:-16px;
+  margin-left:-16px;
+  padding-right:16px;
+  padding-left:16px;
 }
 .c-swiper-nav{
   display:flex;
@@ -68,7 +68,7 @@
 .c-trusted-video-card picture{
   display:block;
 }
-.c-trusted-video-card picture[data-video-id]{
+.c-trusted-video-card picture[data-url],.c-trusted-video-card picture[data-video-id]{
   cursor:pointer;
 }
 .c-trusted-video-card img{

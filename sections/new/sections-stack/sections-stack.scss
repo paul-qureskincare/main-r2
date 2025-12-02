@@ -1,21 +1,29 @@
 @use "@root/mixins" as *;
 
-.sections-stack {
-    padding-bottom: 60px;
-
-    @include md {
-        padding-bottom: 40px;
-    }
-    
-    &,
-    // .sections-stack__sub-stack
-    &__sub-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-    
+@mixin sections-stack {
+    .sections-stack {
+        padding-bottom: 60px;
+        
         @include md {
-            gap: 40px;
+            padding-bottom: 40px;
+        }
+        
+        &,
+        // .sections-stack__sub-stack
+        &__sub-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            
+            @include md {
+                gap: 40px;
+            }
         }
     }
+}
+
+/* stylelint-disable selector-class-pattern */
+.page\.derm-reviews,
+.page\.q-rejuvalight-pro-reviews {
+    @include sections-stack;
 }
