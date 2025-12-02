@@ -137,13 +137,13 @@
 }
 
 .footer-promo{
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top:30px;
+  padding-bottom:35px;
 }
 .footer-promo__content{
   display:flex;
   gap:32px;
-  max-width:900px;
+  max-width:980px;
   margin-left:auto;
 }
 .footer-promo .c-follow-us{
@@ -166,10 +166,11 @@
   align-items:flex-start;
 }
 .footer__logo{
-  font-size:81px;
+  font-size:99px;
 }
 .footer__nav-column{
   width:100%;
+  max-width:180px;
 }
 .footer__nav-column h6{
   margin-bottom:12px;
@@ -246,6 +247,7 @@
   }
   .footer__nav-column{
     width:calc(33.33333% - 16px);
+    max-width:none;
   }
   .footer__app{
     grid-template:repeat(2, auto)/1fr calc(33.33333% - 16px);

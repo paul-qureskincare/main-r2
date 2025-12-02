@@ -14,10 +14,11 @@
   align-items:flex-start;
 }
 .footer__logo{
-  font-size:81px;
+  font-size:99px;
 }
 .footer__nav-column{
   width:100%;
+  max-width:180px;
 }
 .footer__nav-column h6{
   margin-bottom:12px;
@@ -94,6 +95,7 @@
   }
   .footer__nav-column{
     width:calc(33.33333% - 16px);
+    max-width:none;
   }
   .footer__app{
     grid-template:repeat(2, auto)/1fr calc(33.33333% - 16px);

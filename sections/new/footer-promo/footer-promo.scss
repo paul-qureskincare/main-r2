@@ -1,15 +1,18 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@components/c-subscribe-form" as *;
+@use "@components/c-follow-us" as *;
 
 .footer-promo {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 35px;
     color: #fff;
     background: #212428;
 
     &__content {
         display: flex;
         gap: 32px;
-        max-width: 900px;
+        max-width: 980px;
         margin-left: auto;
 
         @include sm {
