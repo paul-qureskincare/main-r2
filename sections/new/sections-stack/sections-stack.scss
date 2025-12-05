@@ -27,6 +27,23 @@
 .page\.q-rejuvalight-pro-reviews,
 .page\.neck-decolletage-led-reviews,
 .page\.face-serum-reviews,
-.page\.micro-infusion-targeted-patches-reviews {
+.page\.micro-infusion-targeted-patches-reviews,
+.page\.neck-decolletage-led-pro-content-guide {
     @include sections-stack;
+}
+
+.page\.neck-decolletage-led-pro-content-guide {
+    .sections-stack {
+        flex-flow: row wrap;
+        padding-bottom: 0;
+
+        @include md {
+            padding-bottom: 0;
+        }
+
+        .across-image-banner,
+        .base-section {
+            width: 100%;
+        }
+    }
 }

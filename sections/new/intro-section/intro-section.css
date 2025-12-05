@@ -1,0 +1,15 @@
+.intro-section{
+  width:100%;
+}
+.intro-section article{
+  padding:28px 32px;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+@media screen and (max-width:991px){
+  .intro-section article{
+    padding:0;
+    border-radius:0;
+    background:none;
+  }
+}

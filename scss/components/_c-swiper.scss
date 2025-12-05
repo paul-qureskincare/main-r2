@@ -9,6 +9,21 @@
     padding-right: 16px;
     padding-left: 16px;
 
+    .swiper-slide {
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                cursor: pointer;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
     // .c-swiper-nav
     &-nav {
         display: flex;

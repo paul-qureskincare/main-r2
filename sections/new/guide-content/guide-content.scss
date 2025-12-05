@@ -1,0 +1,213 @@
+@use "@root/mixins" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-modal" as *;
+@use "@components/c-note" as *;
+
+@mixin must-read {
+    
+}
+
+.guide-content {
+    $root: &;
+
+    display: none;
+    width: calc(67% - 60px);
+
+    @include md {
+        display: block;
+        width: 100%;
+        margin-top: -40px;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    .container {
+        padding-left: 0;
+
+        @include md {
+            padding-left: 16px;
+        }
+    }
+
+    .accordion {
+        @include md {
+            border-bottom: 1px solid #dfe0e0;
+        }
+    }
+
+    .accordion-button {
+        display: none;
+        gap: 8px;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        padding: 6px;
+        color: inherit;
+        font-size: 20px;
+        text-align: left;
+        border: 0;
+        box-shadow: none;
+        background: none;
+
+        @include md {
+            display: flex;
+        }
+
+        &::after {
+            width: auto;
+            height: auto;
+            margin-left: auto;
+            @include icon;
+            font-size: 18px;
+            background: none;
+            transform: none;
+            transition: all 200ms;
+            content: "\e900";
+        }
+
+        &.active {
+            font-weight: 500;
+
+            &::after {
+                font-size: 20px;
+            }
+        }
+
+        &[aria-expanded="true"] {
+            font-weight: 500;
+
+            &::after {
+                transform: rotate(-90deg);
+            }
+        }
+
+        em {
+            padding: 0 12px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #c7e5db;
+        }
+    }
+
+    .accordion-collapse {
+        display: none;
+        padding: 0 6px 28px;
+        
+        @media screen and (min-width: 992px) {
+            display: block;
+            padding: 0;
+        }
+
+        &:not(#content-examples-collapse) {
+            max-width: 700px;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        // Content elements:
+        // Title
+        h2 {
+            margin-bottom: 24px;
+
+            @include md {
+                display: none;
+            }
+
+            
+            & + .c-swiper {
+                @include md {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        // Dotted list
+        ul {
+            padding-left: 24px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
+            }
+        }
+
+        // Numeric list
+        ol {
+            margin-top: 15px;
+            counter-reset: item;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            li {
+                display: flex;
+                gap: 12px;
+                align-items: flex-start;
+                counter-increment: item;
+
+                &::before {
+                    flex: none;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    border: 1px solid;
+                    border-radius: 24px;
+                    content: counters(item, "");
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        // Link
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        // Slider
+        .c-swiper {
+            margin: 25px -22px;
+            padding-right: 22px;
+            padding-left: 22px;
+
+            picture {
+                &[data-video-id],
+                &[data-url] {
+                    @include play;
+
+                    img {
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        @at-root #{$root} #creative-direction-collapse .c-swiper {
+            max-width: 616px;
+        }
+
+        // Next element
+    }
+}

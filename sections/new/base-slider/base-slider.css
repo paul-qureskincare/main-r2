@@ -5,6 +5,14 @@
   padding-right:16px;
   padding-left:16px;
 }
+.c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
+  cursor:pointer;
+}
+.c-swiper .swiper-slide img{
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+}
 .c-swiper-nav{
   display:flex;
   gap:20px;

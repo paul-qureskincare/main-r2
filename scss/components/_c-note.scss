@@ -1,0 +1,43 @@
+@use "@root/mixins" as *;
+
+.c-note {
+    display: block;
+    max-width: 500px;
+    padding: 10px 12px;
+    font-size: 16px;
+    line-height: 1.25;
+    border-radius: 10px;
+    background: #eef7f4;
+
+    p {
+        margin: 0;
+
+        & + p {
+            margin-top: 15px;
+        }
+    }
+    
+    // .c-note--info
+    &--info {
+        position: relative;
+        padding-left: 36px;
+        background: #f4f8fd;
+
+        &::before {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            color: #fff;
+            font-size: 8px;
+            @include icon;
+            line-height: 16px;
+            text-align: center;
+            border-radius: 16px;
+            background: #91baec;
+            content: "\e90c";
+        }
+    }
+
+}

@@ -111,6 +111,14 @@
 .across-image-banner--hero .c-certified-box{
   background:#fff;
 }
+.across-image-banner--reverse .container{
+  align-items:flex-end;
+  height:27.7777777778vw;
+  max-height:400px;
+}
+.across-image-banner--reverse .container article{
+  max-width:600px;
+}
 .across-image-banner--holidays .container{
   height:38.1944444444vw;
   max-height:550px;
@@ -172,6 +180,15 @@
   .across-image-banner--hero .c-certified-box{
     margin-right:auto;
     margin-left:auto;
+  }
+  .across-image-banner--reverse .container{
+    justify-content:flex-end;
+    height:106.6666666667vw;
+    max-height:400px;
+  }
+  .across-image-banner--reverse .container article{
+    color:#fff;
+    text-align:left;
   }
   .across-image-banner--holidays .container{
     justify-content:flex-end;

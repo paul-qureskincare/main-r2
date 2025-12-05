@@ -108,6 +108,14 @@
   content:"\e908";
 }
 
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
 .base-section article{
   display:grid;
   grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
@@ -196,6 +204,9 @@
   padding-top:60px;
   padding-bottom:60px;
   background:#f6f6f7;
+}
+.base-section--grey .e-pill-badge{
+  background:#fff;
 }
 .base-section--dark{
   color:#fff;

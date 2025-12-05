@@ -87,6 +87,28 @@
         }
     }
 
+    // .across-image-banner--reverse
+    &--reverse {
+        .container {
+            align-items: flex-end;
+            @include banner-height(400, 1440);
+
+            @include sm {
+                justify-content: flex-end;
+                @include banner-height(400, 375);
+            }
+            
+            article {
+                max-width: 600px;
+
+                @include sm {
+                    color: #fff;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
     // .across-image-banner--holidays
     &--holidays {   
         .container {
