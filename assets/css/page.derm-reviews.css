@@ -343,7 +343,7 @@
 .c-advisory-collapse-card article[aria-expanded=true]:after{
   content:"\e902";
 }
-.c-advisory-collapse-card p{
+.c-advisory-collapse-card article p{
   position:absolute;
   right:65px;
   bottom:20px;
@@ -351,17 +351,17 @@
   color:#fff;
   font-size:16px;
 }
-.c-advisory-collapse-card p:first-line{
+.c-advisory-collapse-card article p:first-line{
   font-size:20px;
   font-weight:500;
 }
-.c-advisory-collapse-card .collapse{
-  margin-top:10px;
-  padding:10px;
-}
-
-.c-advisory-collapse-card .collapse:not(.show),.c-modal{
+.c-advisory-collapse-card .collapse:not(.show){
   display:none;
+}
+.c-advisory-collapse-card .collapse p{
+  width:100%;
+  margin:0;
+  padding:20px 10px 10px;
 }
 
 .c-modal{
@@ -369,6 +369,7 @@
   top:0;
   left:0;
   z-index:1055;
+  display:none;
   overflow:hidden auto;
   width:100%;
   height:100%;
@@ -399,6 +400,36 @@
   speak:never;
   vertical-align:top;
   content:"\e904";
+}
+.c-modal--light .modal-dialog{
+  display:flex;
+  align-items:center;
+  height:calc(100% - var(--bs-modal-margin)*2);
+}
+.c-modal--light .modal-header{
+  height:30px;
+  padding:0;
+}
+.c-modal--light .modal-header .btn-close{
+  position:absolute;
+  top:8px;
+  right:8px;
+  z-index:1;
+  margin:0;
+  color:#212428;
+  font-size:20px;
+  border:0;
+  outline:none;
+  background:none;
+}
+.c-modal--light .modal-header .btn-close:hover{
+  background:#c8e6dc;
+}
+.c-modal--light .modal-content{
+  border-radius:0;
+}
+.c-modal--light .modal-body{
+  padding:0 16px 32px;
 }
 .c-modal--wistia .modal-dialog{
   max-width:500px;
@@ -457,20 +488,20 @@
 .c-pills-nav a{
   white-space:nowrap;
 }
-.page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+.page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
   padding-bottom:60px;
 }
-.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
   display:flex;
   flex-direction:column;
   gap:60px;
 }
 
-.page\.neck-decolletage-led-pro-content-guide .sections-stack{
+.page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack{
   flex-flow:row wrap;
   padding-bottom:0;
 }
-.page\.neck-decolletage-led-pro-content-guide .sections-stack .across-image-banner,.page\.neck-decolletage-led-pro-content-guide .sections-stack .base-section{
+.page\.micro-infusion-brief .sections-stack .across-image-banner,.page\.micro-infusion-brief .sections-stack .base-section,.page\.neck-decolletage-led-pro-content-guide .sections-stack .across-image-banner,.page\.neck-decolletage-led-pro-content-guide .sections-stack .base-section{
   width:100%;
 }
 
@@ -688,6 +719,10 @@
 .across-image-banner--reverse .container article{
   max-width:600px;
 }
+.page\.micro-infusion-brief .across-image-banner--reverse article{
+  max-width:440px;
+}
+
 .across-image-banner--holidays .container{
   height:38.1944444444vw;
   max-height:550px;
@@ -743,13 +778,13 @@
   .c-pills-nav{
     gap:8px;
   }
-  .page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+  .page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
     padding-bottom:40px;
   }
-  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
     gap:40px;
   }
-  .page\.neck-decolletage-led-pro-content-guide .sections-stack{
+  .page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack{
     padding-bottom:0;
   }
   .base-section article{
@@ -858,6 +893,9 @@
   .across-image-banner--reverse .container article{
     color:#fff;
     text-align:left;
+  }
+  .page\.micro-infusion-brief .across-image-banner--reverse article{
+    max-width:none;
   }
   .across-image-banner--holidays .container{
     justify-content:flex-end;

@@ -1,8 +1,8 @@
 @use "@root/mixins" as *;
 
 .guide-menu {
-    width: 33%;
-    padding-left: max(0px, calc((100vw - 1172px) / 2));
+    width: 366px;
+    margin-left: max(0px, calc((100% - 1172px) / 2));
     font-size: 20px;
 
     @include md {
@@ -77,15 +77,16 @@
                 margin-left: auto;
                 @include icon;
                 font-size: 18px;
+                transform: rotate(90deg);
                 transition: all 200ms;
                 content: "\e900";
             }
     
-            &:hover,
             &.active {
                 font-weight: 500;
     
                 &::after {
+                    transform: rotate(0);
                     -webkit-text-stroke: 1px;
                 }
             }

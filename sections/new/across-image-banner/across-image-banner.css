@@ -119,6 +119,10 @@
 .across-image-banner--reverse .container article{
   max-width:600px;
 }
+.page\.micro-infusion-brief .across-image-banner--reverse article{
+  max-width:440px;
+}
+
 .across-image-banner--holidays .container{
   height:38.1944444444vw;
   max-height:550px;
@@ -189,6 +193,9 @@
   .across-image-banner--reverse .container article{
     color:#fff;
     text-align:left;
+  }
+  .page\.micro-infusion-brief .across-image-banner--reverse article{
+    max-width:none;
   }
   .across-image-banner--holidays .container{
     justify-content:flex-end;

@@ -45,28 +45,32 @@
                 content: "\e902";
             }
         }
-    }
 
-    p {
-        position: absolute;
-        right: 65px;
-        bottom: 20px;
-        left: 20px;
-        color: #fff;
-        font-size: 16px;
-
-        &::first-line {
-            font-size: 20px;
-            font-weight: 500;
+        p {
+            position: absolute;
+            right: 65px;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 16px;
+    
+            &::first-line {
+                font-size: 20px;
+                font-weight: 500;
+            }
         }
     }
 
+
     .collapse {
-        margin-top: 10px;
-        padding: 10px;
-        
         &:not(.show) {
             display: none;
+        }
+        
+        p {
+            width: 100%;
+            margin: 0;
+            padding: 20px 10px 10px;
         }
     }
 }

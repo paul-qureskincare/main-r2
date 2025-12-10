@@ -1,6 +1,20 @@
 document.querySelectorAll('[data-swiper]').forEach((el) => {
     const config = JSON.parse(el.getAttribute('data-swiper'));
 
+    // Responsive enablement: allow enabling only on mobile/desktop
+    // Usage in data-swiper JSON:
+    // { "enableOn": "mobile", "breakpoint": 768 }
+    // - enableOn: "mobile" | "desktop" | "all" (default: "all")
+    // - breakpoint: width in px that separates mobile/desktop (default: 767)
+    const enableOn = (config.enableOn || "all").toLowerCase();
+    const breakpoint = Number.isFinite(config.breakpoint) ? config.breakpoint : 767;
+
+    const shouldEnableForWidth = (width) => {
+        if (enableOn === "mobile") return width < breakpoint;
+        if (enableOn === "desktop") return width >= breakpoint;
+        return true; // "all"
+    };
+
     // Default custom pagination render
     if (config.pagination && config.pagination.type === "custom") {
         config.pagination.renderCustom = function (_, current, total) {
@@ -43,5 +57,33 @@ document.querySelectorAll('[data-swiper]').forEach((el) => {
         slidesLengthChange: updateNavClass,
     };
 
-    const mainSwiper = new Swiper(el, config);
+    // Manage init/destroy based on viewport width
+    let mainSwiper = null;
+
+    const initSwiper = () => {
+        if (!mainSwiper) {
+            // When thumbs are configured, ensure config.thumbs is set before init
+            mainSwiper = new Swiper(el, config);
+        }
+    };
+
+    const destroySwiper = () => {
+        if (mainSwiper) {
+            mainSwiper.destroy(true, true);
+            mainSwiper = null;
+        }
+    };
+
+    const handleResponsive = () => {
+        const width = window.innerWidth;
+        if (shouldEnableForWidth(width)) {
+            initSwiper();
+        } else {
+            destroySwiper();
+        }
+    };
+
+    // Initialize appropriately and listen for resizes
+    handleResponsive();
+    window.addEventListener("resize", handleResponsive);
 });

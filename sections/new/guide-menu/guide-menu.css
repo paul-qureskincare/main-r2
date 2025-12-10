@@ -1,6 +1,6 @@
 .guide-menu{
-  width:33%;
-  padding-left:max(0px, (100vw - 1172px) / 2);
+  width:366px;
+  margin-left:max(0px, (100% - 1172px) / 2);
   font-size:20px;
 }
 .guide-menu .container{
@@ -60,13 +60,15 @@
   -webkit-font-smoothing:antialiased;
   speak:never;
   font-size:18px;
+  transform:rotate(90deg);
   transition:all .2s;
   content:"\e900";
 }
-.guide-menu__list button.active,.guide-menu__list button:hover{
+.guide-menu__list button.active{
   font-weight:500;
 }
-.guide-menu__list button.active:after,.guide-menu__list button:hover:after{
+.guide-menu__list button.active:after{
+  transform:rotate(0);
   -webkit-text-stroke:1px;
 }
 .guide-menu__list button em{
