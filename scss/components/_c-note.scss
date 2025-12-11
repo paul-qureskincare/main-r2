@@ -20,12 +20,13 @@
     strong {
         font-weight: 600;
     }
-    
+
+    // .c-note--warning
     // .c-note--info
-    &--info {
+    &--info,
+    &--warning {
         position: relative;
         padding-left: 36px;
-        background: #f4f8fd;
 
         &::before {
             position: absolute;
@@ -39,9 +40,25 @@
             line-height: 16px;
             text-align: center;
             border-radius: 16px;
-            background: #91baec;
             content: "\e90c";
         }
     }
+    
+    // .c-note--info
+    &--info {
+        background: #f4f8fd;
+        
+        &::before {
+            background: #91baec;
+        }
+    }
 
+    // .c-note--warning
+    &--warning {
+        background: #ffeeea;
+        
+        &::before {
+            background: #ff5429;
+        }
+    }
 }

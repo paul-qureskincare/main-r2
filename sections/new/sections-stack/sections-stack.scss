@@ -29,12 +29,14 @@
 .page\.face-serum-reviews,
 .page\.micro-infusion-targeted-patches-reviews,
 .page\.neck-decolletage-led-pro-content-guide,
-.page\.micro-infusion-brief {
+.page\.micro-infusion-brief,
+.page\.q-rejuvalight-pro-led-mask-guide {
     @include sections-stack;
 }
 
 .page\.neck-decolletage-led-pro-content-guide,
-.page\.micro-infusion-brief {
+.page\.micro-infusion-brief,
+.page\.q-rejuvalight-pro-led-mask-guide {
     .sections-stack {
         flex-flow: row wrap;
         padding-bottom: 0;
@@ -44,7 +46,8 @@
         }
 
         .across-image-banner,
-        .base-section {
+        .base-section,
+        .shopify-section {
             width: 100%;
         }
     }

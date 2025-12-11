@@ -1,6 +1,9 @@
-.guide-menu{
-  width:366px;
+.shopify-section--guide-menu{
+  max-width:350px;
   margin-left:max(0px, (100% - 1172px) / 2);
+}
+
+.guide-menu{
   font-size:20px;
 }
 .guide-menu .container{

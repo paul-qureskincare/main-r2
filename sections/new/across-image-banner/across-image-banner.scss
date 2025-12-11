@@ -116,6 +116,20 @@
                     }
                 }
             }
+
+            @at-root .page\.q-rejuvalight-pro-led-mask-guide #{$root}--reverse {
+                article {
+                    max-width: 480px;
+
+                    @include md {
+                        max-width: 340px;
+                    }
+
+                    @include sm {
+                        max-width: none;
+                    }
+                }
+            }
         }
     }
 

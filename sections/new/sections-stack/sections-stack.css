@@ -1,27 +1,27 @@
-.page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+.page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
   padding-bottom:60px;
 }
-.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+.page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
   display:flex;
   flex-direction:column;
   gap:60px;
 }
 
-.page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack{
+.page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack{
   flex-flow:row wrap;
   padding-bottom:0;
 }
-.page\.micro-infusion-brief .sections-stack .across-image-banner,.page\.micro-infusion-brief .sections-stack .base-section,.page\.neck-decolletage-led-pro-content-guide .sections-stack .across-image-banner,.page\.neck-decolletage-led-pro-content-guide .sections-stack .base-section{
+.page\.micro-infusion-brief .sections-stack .across-image-banner,.page\.micro-infusion-brief .sections-stack .base-section,.page\.micro-infusion-brief .sections-stack .shopify-section,.page\.neck-decolletage-led-pro-content-guide .sections-stack .across-image-banner,.page\.neck-decolletage-led-pro-content-guide .sections-stack .base-section,.page\.neck-decolletage-led-pro-content-guide .sections-stack .shopify-section,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack .across-image-banner,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack .base-section,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack .shopify-section{
   width:100%;
 }
 @media screen and (max-width:991px){
-  .page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
+  .page\.derm-reviews .sections-stack,.page\.face-serum-reviews .sections-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack{
     padding-bottom:40px;
   }
-  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
+  .page\.derm-reviews .sections-stack,.page\.derm-reviews .sections-stack__sub-stack,.page\.face-serum-reviews .sections-stack,.page\.face-serum-reviews .sections-stack__sub-stack,.page\.micro-infusion-brief .sections-stack,.page\.micro-infusion-brief .sections-stack__sub-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack,.page\.micro-infusion-targeted-patches-reviews .sections-stack__sub-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack__sub-stack,.page\.neck-decolletage-led-reviews .sections-stack,.page\.neck-decolletage-led-reviews .sections-stack__sub-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack__sub-stack,.page\.q-rejuvalight-pro-reviews .sections-stack,.page\.q-rejuvalight-pro-reviews .sections-stack__sub-stack{
     gap:40px;
   }
-  .page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack{
+  .page\.micro-infusion-brief .sections-stack,.page\.neck-decolletage-led-pro-content-guide .sections-stack,.page\.q-rejuvalight-pro-led-mask-guide .sections-stack{
     padding-bottom:0;
   }
 }

@@ -123,6 +123,10 @@
   max-width:440px;
 }
 
+.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
+  max-width:480px;
+}
+
 .across-image-banner--holidays .container{
   height:38.1944444444vw;
   max-height:550px;
@@ -160,6 +164,9 @@
   .e-discount-badge:after,.e-discount-badge:before{
     font-size:14px;
   }
+  .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
+    max-width:340px;
+  }
   .across-image-banner--holidays article{
     max-width:410px;
   }
@@ -194,7 +201,7 @@
     color:#fff;
     text-align:left;
   }
-  .page\.micro-infusion-brief .across-image-banner--reverse article{
+  .page\.micro-infusion-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
     max-width:none;
   }
   .across-image-banner--holidays .container{

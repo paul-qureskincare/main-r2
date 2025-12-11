@@ -174,12 +174,11 @@
 .c-note strong{
   font-weight:600;
 }
-.c-note--info{
+.c-note--info,.c-note--warning{
   position:relative;
   padding-left:36px;
-  background:#f4f8fd;
 }
-.c-note--info:before{
+.c-note--info:before,.c-note--warning:before{
   position:absolute;
   top:12px;
   left:12px;
@@ -200,8 +199,19 @@
   line-height:16px;
   text-align:center;
   border-radius:16px;
-  background:#91baec;
   content:"\e90c";
+}
+.c-note--info{
+  background:#f4f8fd;
+}
+.c-note--info:before{
+  background:#91baec;
+}
+.c-note--warning{
+  background:#ffeeea;
+}
+.c-note--warning:before{
+  background:#ff5429;
 }
 
 .c-step-by-step__title{
@@ -272,13 +282,16 @@
   width:100%;
   height:100%;
 }
-
-.c-step-by-step .c-swiper-nav,.guide-content{
+.c-step-by-step .c-swiper-nav{
   display:none;
 }
 
+.shopify-section--guide-content{
+  max-width:calc(50% + 176px);
+}
+
 .guide-content{
-  width:calc(50% + 160px);
+  display:none;
 }
 .guide-content.active{
   display:block;
@@ -580,6 +593,25 @@
   margin-bottom:4px;
   font-weight:600;
 }
+.guide-content .treatment-modes-list{
+  display:flex;
+  gap:60px;
+  max-width:730px;
+}
+.guide-content .treatment-modes-list li{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.guide-content .treatment-modes-list picture{
+  margin-top:auto;
+}
+.guide-content .treatment-modes-list img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+  border-radius:10px;
+}
 .guide-content .c-swiper{
   margin:0 -22px;
   padding-right:22px;
@@ -623,8 +655,11 @@
   max-width:730px;
   margin-bottom:25px;
 }
-.guide-content .c-note--info:not(:last-child){
+.guide-content .c-note--info:not(:last-child),.guide-content .c-note--warning:not(:last-child){
   margin-bottom:25px;
+}
+.guide-content .c-note--warning{
+  max-width:730px;
 }
 .guide-content .wistia-embed-video .wistia_responsive_padding{
   position:relative;
@@ -658,21 +693,29 @@
   height:100%;
 }
 @media screen and (min-width:992px){
+  .shopify-section--guide-content{
+    display:none;
+  }
+  .shopify-section--guide-content:has(.guide-content.active){
+    display:block;
+  }
   .guide-content .accordion-collapse{
     display:block;
     padding:0;
   }
 }
 @media screen and (max-width:1187px){
-  .guide-content{
-    width:calc(100% - 426px);
+  .shopify-section--guide-content{
+    max-width:calc(100% - 410px);
   }
 }
 @media screen and (max-width:991px){
+  .shopify-section--guide-content{
+    margin-top:-40px;
+    max-width:none;
+  }
   .guide-content{
     display:block;
-    width:100%;
-    margin-top:-40px;
   }
   .guide-content .container{
     padding-left:16px;
@@ -734,6 +777,10 @@
   }
   .guide-content .serum-ingredients-list ul{
     flex-direction:column;
+  }
+  .guide-content .treatment-modes-list{
+    flex-direction:column;
+    gap:28px;
   }
   .guide-content .c-step-by-step{
     padding-top:25px;
