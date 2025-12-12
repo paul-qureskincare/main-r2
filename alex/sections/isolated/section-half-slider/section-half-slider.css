@@ -168,12 +168,12 @@
 }
 @media screen and (min-width:1200px){
   .see-the-change{
-    max-width:calc(100% - 50vw + 582.5px);
+    max-width:calc(100% - 50vw + 593.5px);
   }
 }
 @media screen and (min-width:1400px){
   .see-the-change{
-    max-width:calc(100% - 50vw + 607.5px);
+    max-width:calc(100% - 50vw + 623.5px);
   }
 }
 @media screen and (max-width:991px){

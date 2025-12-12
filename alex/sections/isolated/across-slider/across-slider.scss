@@ -67,11 +67,11 @@
         margin-left: auto;
 
         @media screen and (min-width: 1200px) {
-            @include max-width(1150px);
+            @include max-width(1172px);
         }
         
         @media screen and (min-width: 1400px) {
-            @include max-width(1200px);
+            @include max-width(1232px);
         }
 
         .swiper-arrows-with-pagination {
@@ -80,11 +80,11 @@
             padding-left: 15px;
 
             @media screen and (min-width: 1200px) {
-                max-width: 1150px;
+                max-width: 1172px;
             }
 
             @media screen and (min-width: 1400px) {
-                max-width: 1200px;
+                max-width: 1232px;
             }
 
             @include sm {

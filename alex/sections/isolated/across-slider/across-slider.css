@@ -104,18 +104,18 @@
 }
 @media screen and (min-width:1200px){
   .steps-to-use .across-slider__carousel{
-    max-width:calc(100% - 50vw + 582.5px);
+    max-width:calc(100% - 50vw + 593.5px);
   }
   .steps-to-use .across-slider__carousel .swiper-arrows-with-pagination{
-    max-width:1150px;
+    max-width:1172px;
   }
 }
 @media screen and (min-width:1400px){
   .steps-to-use .across-slider__carousel{
-    max-width:calc(100% - 50vw + 607.5px);
+    max-width:calc(100% - 50vw + 623.5px);
   }
   .steps-to-use .across-slider__carousel .swiper-arrows-with-pagination{
-    max-width:1200px;
+    max-width:1232px;
   }
 }
 @media screen and (max-width:1120px){

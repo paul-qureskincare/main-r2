@@ -205,11 +205,11 @@ body {
     max-width: 1172px;
   }
 }
-/* @media (min-width: 1400px) {
+@media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1200px;
+    max-width: 1232px;
   }
-} */
+}
 .{
     max-width: var(--container-width, 1080px);
 }

@@ -130,11 +130,11 @@
             padding-right: 0;
             
             @media screen and (min-width: 1200px) {
-                @include max-width(1150px);
+                @include max-width(1172px);
             }
             
             @media screen and (min-width: 1400px) {
-                @include max-width(1200px);
+                @include max-width(1232px);
             }
 
             @include sm {

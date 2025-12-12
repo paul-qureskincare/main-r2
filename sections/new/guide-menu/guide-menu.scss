@@ -2,7 +2,14 @@
 
 .shopify-section--guide-menu {
     max-width: 350px;
-    margin-left: max(0px, calc((100% - 1172px) / 2));
+
+    @media screen and (min-width: 1200px) {
+        margin-left: max(0px, calc((100% - 1172px) / 2));
+    }
+
+    @media screen and (min-width: 1400px) {
+        margin-left: max(0px, calc((100% - 1232px) / 2));
+    }
 }
 
 .guide-menu {

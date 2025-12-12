@@ -282,15 +282,8 @@
   width:100%;
   height:100%;
 }
-.c-step-by-step .c-swiper-nav{
-  display:none;
-}
 
-.shopify-section--guide-content{
-  max-width:calc(50% + 176px);
-}
-
-.guide-content{
+.c-step-by-step .c-swiper-nav,.guide-content{
   display:none;
 }
 .guide-content.active{
@@ -695,6 +688,7 @@
 @media screen and (min-width:992px){
   .shopify-section--guide-content{
     display:none;
+    max-width:calc(100% - 410px);
   }
   .shopify-section--guide-content:has(.guide-content.active){
     display:block;
@@ -704,15 +698,20 @@
     padding:0;
   }
 }
-@media screen and (max-width:1187px){
+@media screen and (min-width:1200px){
   .shopify-section--guide-content{
-    max-width:calc(100% - 410px);
+    max-width:calc(50% + 176px);
+  }
+}
+@media screen and (min-width:1400px){
+  .shopify-section--guide-content{
+    max-width:calc(50% + 206px);
   }
 }
 @media screen and (max-width:991px){
   .shopify-section--guide-content{
-    margin-top:-40px;
     max-width:none;
+    margin-top:-40px;
   }
   .guide-content{
     display:block;

@@ -1,6 +1,5 @@
 .shopify-section--guide-menu{
   max-width:350px;
-  margin-left:max(0px, (100% - 1172px) / 2);
 }
 
 .guide-menu{
@@ -80,6 +79,16 @@
   font-weight:600;
   text-transform:uppercase;
   background:#c7e5db;
+}
+@media screen and (min-width:1200px){
+  .shopify-section--guide-menu{
+    margin-left:max(0px, (100% - 1172px) / 2);
+  }
+}
+@media screen and (min-width:1400px){
+  .shopify-section--guide-menu{
+    margin-left:max(0px, (100% - 1232px) / 2);
+  }
 }
 @media screen and (max-width:991px){
   .guide-menu{

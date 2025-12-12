@@ -5,26 +5,26 @@
 @use "@components/c-step-by-step" as *;
 
 .shopify-section--guide-content {
-    max-width: calc(100% - (calc((100% - 1172px) / 2) + 350px + 60px));
-    
-    @include md {
-        margin-top: -40px;
-    }
-    
-    @media screen and (max-width: 1187px) {
-        max-width: calc(100% - (350px + 60px));
-    }
-    
-    @include md {
-        max-width: none;
-    }
-
     @media screen and (min-width: 992px) {
         display: none;
+        max-width: calc(100% - (350px + 60px));
 
         &:has(.guide-content.active) {
             display: block;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: calc(100% - (calc((100% - 1172px) / 2) + 350px + 60px));
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: calc(100% - (calc((100% - 1232px) / 2) + 350px + 60px));
+    }
+    
+    @include md {
+        max-width: none;
+        margin-top: -40px;
     }
 }
 
