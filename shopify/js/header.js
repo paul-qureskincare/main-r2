@@ -9,6 +9,7 @@ const gamificationHeaderInitiallyVisible = gamificationHeader && window.getCompu
 const announcementHeaderInitiallyVisible = announcementHeader && window.getComputedStyle(announcementHeader).display !== 'none';
 
 window.addEventListener('scroll', function() {
+    if (location.href.includes('guide')) return;
     const currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos > currentScrollPos) {
