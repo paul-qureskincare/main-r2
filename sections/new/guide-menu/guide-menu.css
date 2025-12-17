@@ -35,8 +35,8 @@
 .guide-menu__list p{
   font-weight:500;
 }
-.guide-menu__list li:not(:first-child){
-  border-top:1px solid #dfe0e0;
+.guide-menu__list li{
+  border-bottom:1px solid #dfe0e0;
 }
 .guide-menu__list button{
   display:flex;

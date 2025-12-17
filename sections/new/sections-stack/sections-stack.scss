@@ -19,6 +19,26 @@
                 gap: 40px;
             }
         }
+
+        &:has(.base-section--grey:last-child) {
+            padding-bottom: 0;
+        }
+
+        &:has(.guide-menu) {
+            flex-flow: row wrap;
+
+            .across-image-banner,
+            .base-section,
+            .shopify-section {
+                width: 100%;
+            }
+
+            .intro-section {
+                @include md {
+                    margin-bottom: -40px;
+                }
+            }
+        }
     }
 }
 
@@ -30,25 +50,7 @@
 .page\.micro-infusion-targeted-patches-reviews,
 .page\.neck-decolletage-led-pro-content-guide,
 .page\.micro-infusion-brief,
-.page\.q-rejuvalight-pro-led-mask-guide {
+.page\.q-rejuvalight-pro-led-mask-guide,
+.page\.microinfusion-safety-guide {
     @include sections-stack;
-}
-
-.page\.neck-decolletage-led-pro-content-guide,
-.page\.micro-infusion-brief,
-.page\.q-rejuvalight-pro-led-mask-guide {
-    .sections-stack {
-        flex-flow: row wrap;
-        padding-bottom: 0;
-
-        @include md {
-            padding-bottom: 0;
-        }
-
-        .across-image-banner,
-        .base-section,
-        .shopify-section {
-            width: 100%;
-        }
-    }
 }

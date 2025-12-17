@@ -117,6 +117,66 @@
                 }
             }
 
+            @at-root .page\.microinfusion-safety-guide #{$root}--reverse {
+                .container {
+                    position: relative;
+                }
+                
+                article {
+                    max-width: 480px;
+
+                    @include xl {
+                        max-width: 540px;
+                    }
+
+                    @include sm {
+                        max-width: none;
+                    }
+
+                    strong {
+                        display: block;
+                    }
+
+                    h1, p {
+                        max-width: 340px;
+
+                        @include sm {
+                            max-width: 210px;
+                        }
+                    }
+
+                    p {
+                        @include sm {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                figure {
+                    position: absolute;
+                    right: -40px;
+                    bottom: -60px;
+                    width: 210px;
+
+                    @include xl {
+                        right: 16px;
+                    }
+
+                    @include lg {
+                        bottom: -40px;
+                    }
+
+                    @include md {
+                        width: 120px;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
             @at-root .page\.q-rejuvalight-pro-led-mask-guide #{$root}--reverse {
                 article {
                     max-width: 480px;

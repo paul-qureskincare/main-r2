@@ -1,8 +1,10 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 @use "@components/c-swiper" as *;
 @use "@components/c-modal" as *;
 @use "@components/c-note" as *;
 @use "@components/c-step-by-step" as *;
+@use "@components/c-faq-accordion" as *;
 
 .shopify-section--guide-content {
     @media screen and (min-width: 992px) {
@@ -54,80 +56,81 @@
         @include md {
             border-bottom: 1px solid #dfe0e0;
         }
-    }
 
-    .accordion-button {
-        display: none;
-        gap: 8px;
-        align-items: center;
-        width: 100%;
-        height: 80px;
-        padding: 6px;
-        color: inherit;
-        font-size: 20px;
-        text-align: left;
-        border: 0;
-        box-shadow: none;
-        background: none;
-
-        @include md {
-            display: flex;
-        }
-
-        &::after {
-            width: auto;
-            height: auto;
-            margin-left: auto;
-            @include icon;
-            font-size: 18px;
+        & > .accordion-button {
+            display: none;
+            gap: 8px;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            padding: 6px;
+            color: inherit;
+            font-size: 20px;
+            text-align: left;
+            border: 0;
+            box-shadow: none;
             background: none;
-            transform: none;
-            transition: all 200ms;
-            content: "\e900";
-        }
-
-        &.active {
-            font-weight: 500;
-
+    
+            @include md {
+                display: flex;
+            }
+    
             &::after {
-                font-size: 20px;
+                width: auto;
+                height: auto;
+                margin-left: auto;
+                @include icon;
+                font-size: 18px;
+                background: none;
+                transform: none;
+                transition: all 200ms;
+                content: "\e900";
+            }
+    
+            &.active {
+                font-weight: 500;
+    
+                &::after {
+                    font-size: 20px;
+                }
+            }
+    
+            &[aria-expanded="true"] {
+                font-weight: 500;
+    
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+    
+            em {
+                padding: 0 12px;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                background: #c7e5db;
             }
         }
-
-        &[aria-expanded="true"] {
-            font-weight: 500;
-
-            &::after {
-                transform: rotate(-90deg);
+    
+        & > .accordion-collapse {
+            display: none;
+            padding: 0 6px 28px;
+    
+            @include md {
+                max-width: none;
             }
-        }
-
-        em {
-            padding: 0 12px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            background: #c7e5db;
+            
+            @media screen and (min-width: 992px) {
+                display: block;
+                padding: 0;
+            }
+    
+            &.show {
+                display: block;
+            }
         }
     }
 
-    .accordion-collapse {
-        display: none;
-        padding: 0 6px 28px;
-
-        @include md {
-            max-width: none;
-        }
-        
-        @media screen and (min-width: 992px) {
-            display: block;
-            padding: 0;
-        }
-
-        &.show {
-            display: block;
-        }
-    }
 
     article {
         overflow: hidden;
@@ -146,6 +149,20 @@
 
             @include md {
                 display: none;
+            }
+        }
+
+        h6 {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 600;
+
+            em {
+                color: #ff5429;
+            }
+
+            & + p {
+                margin-top: 15px;
             }
         }
 
@@ -178,33 +195,7 @@
         // Numeric list
         ol {
             margin-top: 15px;
-            counter-reset: item;
-
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
-
-            li {
-                display: flex;
-                gap: 12px;
-                align-items: flex-start;
-                counter-increment: item;
-
-                &::before {
-                    flex: none;
-                    width: 24px;
-                    height: 24px;
-                    line-height: 24px;
-                    text-align: center;
-                    border: 1px solid;
-                    border-radius: 24px;
-                    content: counters(item, "");
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 12px;
-                }
-            }
+            @include numeric-list;
         }
 
         // Link
@@ -249,6 +240,7 @@
                 @include sm {
                     width: 100%;
                 }
+
             }
 
             &[data-label-text] {
@@ -275,19 +267,15 @@
             }
         }
 
-        &:has(> picture[data-video-id]) {
-            @include sm {
-                display: flex;
-                flex-direction: column;
-            }
+        hr {
+            max-width: 730px;
+            margin: 15px 0;
+            border-color: #dfe0e0;
+            opacity: 1;
+        }
 
-            picture[data-video-id] {
-                @include sm {
-                    order: 10;
-                    margin-top: 15px;
-                    margin-bottom: 0;
-                }
-            }
+        .c-note {
+            overflow: hidden;
         }
     }
 
@@ -378,6 +366,7 @@
 
             button {
                 padding: 0 22px 8px;
+                color: #212428;
                 border: 0;
                 border-bottom: 1px solid #b5b6b7;
                 background: none;
@@ -497,15 +486,10 @@
     }
 
     // .c-note
-    .c-note--info,
-    .c-note--warning {
+    .c-note {
         &:not(:last-child) {
             margin-bottom: 25px;
         }
-    }
-
-    .c-note--warning {
-        max-width: 730px;
     }
 
     // Wistia embed video code

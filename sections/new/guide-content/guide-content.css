@@ -1,3 +1,76 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
 .c-swiper{
   overflow:hidden;
   margin-right:-16px;
@@ -171,8 +244,18 @@
 .c-note p+p{
   margin-top:15px;
 }
+.c-note p+ul{
+  margin-top:5px;
+}
 .c-note strong{
   font-weight:600;
+}
+.c-note ul{
+  padding-left:24px;
+}
+.c-note ul li{
+  padding-left:4px;
+  list-style:disc;
 }
 .c-note--info,.c-note--warning{
   position:relative;
@@ -224,11 +307,14 @@
   display:flex;
   align-items:center;
   overflow:hidden;
-  min-height:224px;
+  min-height:165px;
   border:1px solid #dfe0e0;
   border-radius:10px;
 }
-.c-step-by-step__item:before{
+.c-step-by-step__item:has(picture){
+  min-height:224px;
+}
+.c-step-by-step__item[data-index]:before{
   top:12px;
   left:12px;
   font-size:20px;
@@ -282,8 +368,112 @@
   width:100%;
   height:100%;
 }
+.c-step-by-step .c-swiper-nav{
+  display:none;
+}
 
-.c-step-by-step .c-swiper-nav,.guide-content{
+.c-faq-accordion__list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.c-faq-accordion__item{
+  overflow:hidden;
+  font-size:16px;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.c-faq-accordion__header button{
+  display:flex;
+  align-items:center;
+  width:100%;
+  height:63px;
+  padding:12px 24px;
+  color:#212428;
+  text-align:left;
+  border:0;
+  background:none;
+}
+.c-faq-accordion__header button:after{
+  margin-left:auto;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:14px;
+  content:"\e903";
+}
+.c-faq-accordion__header button[aria-expanded=true]{
+  font-weight:600;
+}
+.c-faq-accordion__header button[aria-expanded=true]:after{
+  content:"\e902";
+}
+.c-faq-accordion__content{
+  padding:0 24px 24px;
+}
+.c-faq-accordion__content picture{
+  float:right;
+  width:min(300px, 40%);
+  margin-bottom:25px;
+  margin-left:40px;
+}
+.c-faq-accordion__content picture img{
+  max-width:100%;
+  height:auto;
+}
+.c-faq-accordion__content ol{
+  counter-reset:item;
+}
+.c-faq-accordion__content ol:not(:last-child){
+  margin-bottom:15px;
+}
+.c-faq-accordion__content ol li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  counter-increment:item;
+}
+.c-faq-accordion__content ol li:before{
+  flex:none;
+  width:24px;
+  height:24px;
+  line-height:24px;
+  text-align:center;
+  border:1px solid;
+  border-radius:24px;
+  content:counters(item, "");
+}
+.c-faq-accordion__content ol li:not(:last-child){
+  margin-bottom:12px;
+}
+.c-faq-accordion__ask-us{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  margin-top:40px;
+  font-weight:500;
+}
+.c-faq-accordion__ask-us a{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  font-weight:inherit;
+}
+.c-faq-accordion__ask-us a .e-icon{
+  font-size:14px;
+  vertical-align:top;
+  -webkit-text-stroke:.4px;
+}
+
+.guide-content{
   display:none;
 }
 .guide-content.active{
@@ -293,7 +483,7 @@
   margin:0;
   padding-left:0;
 }
-.guide-content .accordion-button{
+.guide-content .accordion>.accordion-button{
   display:none;
   gap:8px;
   align-items:center;
@@ -307,7 +497,7 @@
   box-shadow:none;
   background:none;
 }
-.guide-content .accordion-button:after{
+.guide-content .accordion>.accordion-button:after{
   width:auto;
   height:auto;
   margin-left:auto;
@@ -327,30 +517,30 @@
   transition:all .2s;
   content:"\e900";
 }
-.guide-content .accordion-button.active{
+.guide-content .accordion>.accordion-button.active{
   font-weight:500;
 }
-.guide-content .accordion-button.active:after{
+.guide-content .accordion>.accordion-button.active:after{
   font-size:20px;
 }
-.guide-content .accordion-button[aria-expanded=true]{
+.guide-content .accordion>.accordion-button[aria-expanded=true]{
   font-weight:500;
 }
-.guide-content .accordion-button[aria-expanded=true]:after{
+.guide-content .accordion>.accordion-button[aria-expanded=true]:after{
   transform:rotate(-90deg);
 }
-.guide-content .accordion-button em{
+.guide-content .accordion>.accordion-button em{
   padding:0 12px;
   font-size:14px;
   font-weight:600;
   text-transform:uppercase;
   background:#c7e5db;
 }
-.guide-content .accordion-collapse{
+.guide-content .accordion>.accordion-collapse{
   display:none;
   padding:0 6px 28px;
 }
-.guide-content .accordion-collapse.show{
+.guide-content .accordion>.accordion-collapse.show{
   display:block;
 }
 .guide-content article{
@@ -362,6 +552,17 @@
 }
 .guide-content article h2:not(:last-child){
   margin-bottom:24px;
+}
+.guide-content article h6{
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:600;
+}
+.guide-content article h6 em{
+  color:#ff5429;
+}
+.guide-content article h6+p{
+  margin-top:15px;
 }
 .guide-content article ul{
   padding-left:24px;
@@ -475,6 +676,15 @@
   height:auto;
   vertical-align:top;
 }
+.guide-content article hr{
+  max-width:730px;
+  margin:15px 0;
+  border-color:#dfe0e0;
+  opacity:1;
+}
+.guide-content article .c-note{
+  overflow:hidden;
+}
 .guide-content .guide-link a{
   color:inherit;
   text-decoration:underline;
@@ -537,6 +747,7 @@
 }
 .guide-content .serum-ingredients-details .tabs button{
   padding:0 22px 8px;
+  color:#212428;
   border:0;
   border-bottom:1px solid #b5b6b7;
   background:none;
@@ -648,11 +859,8 @@
   max-width:730px;
   margin-bottom:25px;
 }
-.guide-content .c-note--info:not(:last-child),.guide-content .c-note--warning:not(:last-child){
+.guide-content .c-note:not(:last-child){
   margin-bottom:25px;
-}
-.guide-content .c-note--warning{
-  max-width:730px;
 }
 .guide-content .wistia-embed-video .wistia_responsive_padding{
   position:relative;
@@ -693,7 +901,7 @@
   .shopify-section--guide-content:has(.guide-content.active){
     display:block;
   }
-  .guide-content .accordion-collapse{
+  .guide-content .accordion>.accordion-collapse{
     display:block;
     padding:0;
   }
@@ -722,10 +930,10 @@
   .guide-content .accordion{
     border-bottom:1px solid #dfe0e0;
   }
-  .guide-content .accordion-button{
+  .guide-content .accordion>.accordion-button{
     display:flex;
   }
-  .guide-content .accordion-collapse{
+  .guide-content .accordion>.accordion-collapse{
     max-width:none;
   }
   .guide-content article h2{
@@ -755,6 +963,20 @@
   .c-step-by-step .c-swiper-nav{
     display:flex;
   }
+  .c-faq-accordion__content,.c-faq-accordion__header button{
+    padding-right:16px;
+    padding-left:16px;
+  }
+  .c-faq-accordion__content picture{
+    float:none;
+    display:block;
+    width:100%;
+    margin-left:0;
+  }
+  .c-faq-accordion__ask-us{
+    margin-top:32px;
+    margin-bottom:4px;
+  }
   .guide-content article picture{
     float:none;
     display:block;
@@ -764,15 +986,6 @@
   }
   .guide-content article picture[data-url],.guide-content article picture[data-video-id]{
     width:100%;
-  }
-  .guide-content article:has(>picture[data-video-id]){
-    display:flex;
-    flex-direction:column;
-  }
-  .guide-content article:has(>picture[data-video-id]) picture[data-video-id]{
-    order:10;
-    margin-top:15px;
-    margin-bottom:0;
   }
   .guide-content .serum-ingredients-list ul{
     flex-direction:column;

@@ -67,9 +67,7 @@
         }
     
         li {
-            &:not(:first-child) {
-                border-top: 1px solid #dfe0e0;
-            }
+            border-bottom: 1px solid #dfe0e0;
         }
     
         button {

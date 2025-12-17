@@ -13,5 +13,40 @@
             border-radius: 0;
             background: none;
         }
+
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                @include play;
+                width: 60%;
+
+                @include sm {
+                    width: 100%;
+                }
+                
+                img {
+                    width: 100%;
+                    vertical-align: top;
+                    border-radius: 10px;
+                }
+            }
+
+            &[data-label-text] {
+                &::before {
+                    position: absolute;
+                    bottom: 22px;
+                    left: 20px;
+                    color: #fff;
+                    font-weight: 500;
+                    content: attr(data-label-text);
+                }
+
+                &::after {
+                    inset: auto 20px 10px auto;
+                    font-size: 35px;
+                    transform: none;
+                }
+            }
+        }
     }
 }

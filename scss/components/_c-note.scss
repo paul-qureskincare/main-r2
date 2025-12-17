@@ -15,10 +15,23 @@
         & + p {
             margin-top: 15px;
         }
+
+        & + ul {
+            margin-top: 5px;
+        }
     }
 
     strong {
         font-weight: 600;
+    }
+
+    ul {
+        padding-left: 24px;
+
+        li {
+            padding-left: 4px;
+            list-style: disc;
+        }
     }
 
     // .c-note--warning

@@ -1,7 +1,23 @@
 (function () {
-    var collapses = document.querySelectorAll('.guide-content .accordion-collapse');
-    collapses.forEach(function(collapse) {
-        collapse.addEventListener('shown.bs.collapse', function () {
+    var collapses    = document.querySelectorAll('.guide-content .accordion-collapse');
+    var collapseBtns = document.querySelectorAll('.guide-content .accordion-button');
+
+    if (window.innerWidth < 991) {
+        collapses.forEach(function (collapse) {
+            collapse.classList.remove('show');
+        });
+        collapseBtns.forEach(function (btn) {
+            if (btn.getAttribute('aria-expanded') === 'true') {
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    collapses.forEach(function (collapse) {
+        collapse.addEventListener('show.bs.collapse', function (e) {
+            // Ignore nested collapses and already opened ones
+            if (e.target !== this || this.classList.contains('show')) return;
+
             const section = this.closest('.guide-content');
             if (!section) return;
 
