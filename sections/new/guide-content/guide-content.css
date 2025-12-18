@@ -546,7 +546,6 @@
 }
 .guide-content article{
   overflow:hidden;
-  max-width:730px;
 }
 .guide-content article:not(:last-child){
   margin-bottom:25px;
@@ -623,12 +622,11 @@
 }
 .guide-content article picture{
   float:right;
-  width:clamp(250px, 40%, 350px);
+  width:clamp(250px, 50%, 335px);
   margin-bottom:25px;
   margin-left:40px;
 }
 .guide-content article picture[data-url],.guide-content article picture[data-video-id]{
-  width:clamp(250px, 50%, 335px);
   position:relative;
   display:block;
 }
@@ -677,9 +675,9 @@
   width:100%;
   height:auto;
   vertical-align:top;
+  border-radius:10px;
 }
 .guide-content article hr{
-  max-width:730px;
   margin:15px 0;
   border-color:#dfe0e0;
   opacity:1;
@@ -699,7 +697,6 @@
   flex-direction:column;
   gap:25px;
   align-items:center;
-  max-width:730px;
 }
 .guide-content .serum-ingredients-list ul{
   display:flex;
@@ -802,7 +799,6 @@
 .guide-content .treatment-modes-list{
   display:flex;
   gap:60px;
-  max-width:730px;
 }
 .guide-content .treatment-modes-list li{
   display:flex;
@@ -856,13 +852,8 @@
 .guide-content #creative-direction-collapse .c-swiper{
   max-width:616px;
 }
-
 .guide-content .c-step-by-step{
-  max-width:730px;
   margin-bottom:25px;
-}
-.guide-content .c-step-by-step+.c-note--warning{
-  max-width:730px;
 }
 .guide-content .c-note:not(:last-child){
   margin-bottom:25px;
@@ -912,10 +903,16 @@
   .shopify-section--guide-content{
     max-width:calc(50% + 176px);
   }
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note--warning,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+    max-width:746px;
+  }
 }
 @media screen and (min-width:1400px){
   .shopify-section--guide-content{
     max-width:calc(50% + 206px);
+  }
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note--warning,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+    max-width:806px;
   }
 }
 @media screen and (max-width:991px){

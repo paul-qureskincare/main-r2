@@ -6,6 +6,19 @@
 @use "@components/c-step-by-step" as *;
 @use "@components/c-faq-accordion" as *;
 
+@mixin content-width {
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
+    & {
+        @media screen and (min-width: 1200px) {
+            max-width: 746px;
+        }
+
+        @media screen and (min-width: 1400px) {
+            max-width: 806px;
+        }
+    }
+}
+
 .shopify-section--guide-content {
     @media screen and (min-width: 992px) {
         display: none;
@@ -134,7 +147,7 @@
 
     article {
         overflow: hidden;
-        max-width: 730px;
+        @include content-width;
 
         &:not(:last-child) {
             margin-bottom: 25px;
@@ -225,7 +238,7 @@
         // Image
         picture {
             float: right;
-            width: clamp(250px, 40%, 350px);
+            width: clamp(250px, 50%, 335px);
             margin-bottom: 25px;
             margin-left: 40px;
 
@@ -239,7 +252,6 @@
 
             &[data-video-id],
             &[data-url] {
-                width: clamp(250px, 50%, 335px);
                 @include play;
                 cursor: pointer;
 
@@ -274,11 +286,12 @@
                 width: 100%;
                 height: auto;
                 vertical-align: top;
+                border-radius: 10px;
             }
         }
 
         hr {
-            max-width: 730px;
+            @include content-width;
             margin: 15px 0;
             border-color: #dfe0e0;
             opacity: 1;
@@ -307,7 +320,7 @@
         flex-direction: column;
         gap: 25px;
         align-items: center;
-        max-width: 730px;
+        @include content-width;
 
         ul {
             display: flex;
@@ -433,7 +446,7 @@
     .treatment-modes-list {
         display: flex;
         gap: 60px;
-        max-width: 730px;
+        @include content-width;
 
         @include sm {
             flex-direction: column;
@@ -486,7 +499,7 @@
 
     // Step by step list(swiper)
     .c-step-by-step {
-        max-width: 730px;
+        @include content-width;
         margin-bottom: 25px;
 
         @include sm {
@@ -495,7 +508,7 @@
         }
 
         & + .c-note--warning {
-            max-width: 730px;
+            @include content-width;
         }
     }
 
@@ -504,6 +517,11 @@
         &:not(:last-child) {
             margin-bottom: 25px;
         }
+    }
+
+    // .c-faq-accordion
+    .c-faq-accordion {
+        @include content-width;
     }
 
     // Wistia embed video code
