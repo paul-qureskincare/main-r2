@@ -97,13 +97,26 @@
                 justify-content: flex-end;
                 @include banner-height(400, 375);
             }
-            
+
             article {
                 max-width: 600px;
+                font-size: 16px;
 
                 @include sm {
                     color: #fff;
                     text-align: left;
+                }
+
+                h6 {
+                    margin-bottom: 0;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight: 600;
+
+                    & + p {
+                        margin-top: -16px;
+                    }
                 }
             }
 
@@ -121,7 +134,7 @@
                 .container {
                     position: relative;
                 }
-                
+
                 article {
                     max-width: 480px;
 
@@ -133,21 +146,11 @@
                         max-width: none;
                     }
 
-                    strong {
-                        display: block;
-                    }
-
                     h1, p {
                         max-width: 340px;
 
                         @include sm {
                             max-width: 210px;
-                        }
-                    }
-
-                    p {
-                        @include sm {
-                            font-size: 16px;
                         }
                     }
                 }
@@ -190,11 +193,19 @@
                     }
                 }
             }
+
+            @at-root .page\.sunil-micro-mask-guide #{$root}--reverse {
+                article {
+                    @include md {
+                        max-width: 440px;
+                    }
+                }
+            }
         }
     }
 
     // .across-image-banner--holidays
-    &--holidays {   
+    &--holidays {
         .container {
             @include banner-height(550, 1440);
 

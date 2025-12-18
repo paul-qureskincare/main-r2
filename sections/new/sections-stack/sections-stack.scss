@@ -2,26 +2,24 @@
 
 @mixin sections-stack {
     .sections-stack {
+        padding-top: 60px;
         padding-bottom: 60px;
-        
-        @include md {
+
+        @include sm {
+            padding-top: 40px;
             padding-bottom: 40px;
         }
-        
+
         &,
         // .sections-stack__sub-stack
         &__sub-stack {
             display: flex;
             flex-direction: column;
             gap: 60px;
-            
+
             @include md {
                 gap: 40px;
             }
-        }
-
-        &:has(.base-section--grey:last-child) {
-            padding-bottom: 0;
         }
 
         &:has(.guide-menu) {
@@ -46,11 +44,46 @@
 .page\.derm-reviews,
 .page\.q-rejuvalight-pro-reviews,
 .page\.neck-decolletage-led-reviews,
+.page\.neck-decolletage-led-pro-content-guide,
 .page\.face-serum-reviews,
 .page\.micro-infusion-targeted-patches-reviews,
+.page\.micro-infusion-brief,
+.page\.microinfusion-safety-guide,
+.page\.q-rejuvalight-pro-led-mask-guide,
+.page\.q-rejuvalight-pro-welcome,
+.page\.sunil-micro-mask-guide {
+    @include sections-stack;
+}
+
+.page\.derm-reviews,
+.page\.q-rejuvalight-pro-reviews,
+.page\.neck-decolletage-led-reviews,
+.page\.neck-decolletage-led-pro-content-guide,
+.page\.face-serum-reviews,
+.page\.micro-infusion-targeted-patches-reviews,
+.page\.sunil-micro-mask-guide,
+.page\.microinfusion-safety-guide,
+.page\.micro-infusion-brief,
+.page\.q-rejuvalight-pro-led-mask-guide {
+    .sections-stack {
+        padding-top: 0;
+
+        @include sm {
+            padding-top: 0;
+        }
+    }
+}
+
+
 .page\.neck-decolletage-led-pro-content-guide,
 .page\.micro-infusion-brief,
 .page\.q-rejuvalight-pro-led-mask-guide,
-.page\.microinfusion-safety-guide {
-    @include sections-stack;
+.page\.q-rejuvalight-pro-welcome {
+    .sections-stack {
+        padding-bottom: 0;
+
+        @include sm {
+            padding-bottom: 0;
+        }
+    }
 }

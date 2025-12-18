@@ -62,12 +62,21 @@
         <!-- ACROSS IMAGE BANNER END -->
 
         <!-- INTRO SECTION -->
-        <link rel="stylesheet" href="sections/new/intro-section/intro-section.css" /> 
+        <link rel="stylesheet" href="sections/new/intro-section/intro-section.css" />
         <section class="intro-section">
             <div class="container">
                 <article>
                     <p><strong>Discover how to make the most of the Qure Q-Rejuvalight Pro LED Mask with our creative content guide.</strong></p>
                     <p>This brief will help you understand the key benefits of the Q-Rejuvalight Pro Mask and create content that is engaging and educational. </p>
+                    <picture
+                        class="d-lg-none"
+                        data-label-text="Watch: How To Use"
+                        data-bs-toggle="modal"
+                        data-bs-target="#reusableWistiaModal"
+                        data-video-id="j7op01weqs"
+                    >
+                        <img src="sections/isolated/meet-the-qure-filter/images/quick-start-guide.webp" alt="Usage Instruction video" />
+                    </picture>
                 </article>
             </div>
         </section>
@@ -94,53 +103,53 @@
                         <p>Contents</p>
                         <ul class="tabs" role="tablist">
                             <li>
-                                <button 
-                                    class="active" 
+                                <button
+                                    class="active"
                                     data-bs-toggle="tab"
-                                    data-bs-target="#product-information-tab" 
-                                    type="button" 
+                                    data-bs-target="#product-information-tab"
+                                    type="button"
                                 >Product Information</button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#usage-instructions-tab"
-                                    type="button" 
+                                    type="button"
                                 >Usage Instructions</button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#treatment-modes-tab"
-                                    type="button" 
+                                    type="button"
                                 >Treatment Modes</button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#product-claims-tab"
-                                    type="button" 
+                                    type="button"
                                 >Product Claims & User Study</button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#content-requirements-tab"
-                                    type="button" 
+                                    type="button"
                                 >Content Requirements <em>Must read</em></button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#creative-direction-tab"
-                                    type="button" 
+                                    type="button"
                                 >Creative Direction</button>
                             </li>
                             <li>
-                                <button 
+                                <button
                                     data-bs-toggle="tab"
                                     data-bs-target="#content-examples-tab"
-                                    type="button" 
+                                    type="button"
                                 >Content Examples</button>
                             </li>
                         </ul>
@@ -152,7 +161,7 @@
                     loadScriptOnce('guide-menu', 'sections/new/guide-menu/guide-menu.js');
                 });
             </script>
-        </div> 
+        </div>
         <!-- GUIDE MENU END -->
 
         <!-- GUIDE CONTENT SECTIONS -->
@@ -161,17 +170,17 @@
             <section class="guide-content active" id="product-information-tab">
                 <div class="container">
                     <div class="accordion">
-                        <button 
-                            class="accordion-button" 
+                        <button
+                            class="accordion-button"
                             type="button"
-                            data-bs-toggle="collapse" 
+                            data-bs-toggle="collapse"
                             data-bs-target="#product-information-collapse"
                             aria-expanded="true"
                         >
                             Product Information
                         </button>
-                        <div 
-                            id="product-information-collapse" 
+                        <div
+                            id="product-information-collapse"
                             class="accordion-collapse show"
                         >
                             <article>
@@ -190,7 +199,7 @@
                     </div>
                 </div>
             </section>
-        </div> 
+        </div>
 
         <div class="shopify-section shopify-section--guide-content">
             <section class="guide-content" id="usage-instructions-tab">
@@ -211,6 +220,7 @@
                             <article>
                                 <h2>Usage Instructions</h2>
                                 <picture
+                                    class="d-none d-lg-block"
                                     data-label-text="Watch: How To Use"
                                     data-bs-toggle="modal"
                                     data-bs-target="#reusableWistiaModal"
@@ -501,7 +511,7 @@
                                 class="c-swiper"
                                 data-swiper='{
                                     "slidesPerView": 1.1,
-                                    "spaceBetween": 16,
+                                    "spaceBetween": 22,
                                     "loop": false,
                                     "pagination": {
                                         "el": ".c-swiper-pagination",
@@ -569,7 +579,7 @@
                                 class="c-swiper"
                                 data-swiper='{
                                     "slidesPerView": 1.1,
-                                    "spaceBetween": 16,
+                                    "spaceBetween": 22,
                                     "loop": false,
                                     "pagination": {
                                         "el": ".c-swiper-pagination",
@@ -801,7 +811,7 @@
         </section>
         <!-- BASE SECTION END -->
     </main>
-    <!-- SECTIONS STACK END -->   
+    <!-- SECTIONS STACK END -->
 
     <!-- Reusable modal for all the wistia videos for all the tab contents -->
     <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">

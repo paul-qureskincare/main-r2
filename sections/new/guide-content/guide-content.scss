@@ -23,7 +23,7 @@
     @media screen and (min-width: 1400px) {
         max-width: calc(100% - (calc((100% - 1232px) / 2) + 350px + 60px));
     }
-    
+
     @include md {
         max-width: none;
         margin-top: -40px;
@@ -70,11 +70,11 @@
             border: 0;
             box-shadow: none;
             background: none;
-    
+
             @include md {
                 display: flex;
             }
-    
+
             &::after {
                 width: auto;
                 height: auto;
@@ -86,23 +86,23 @@
                 transition: all 200ms;
                 content: "\e900";
             }
-    
+
             &.active {
                 font-weight: 500;
-    
+
                 &::after {
                     font-size: 20px;
                 }
             }
-    
+
             &[aria-expanded="true"] {
                 font-weight: 500;
-    
+
                 &::after {
                     transform: rotate(-90deg);
                 }
             }
-    
+
             em {
                 padding: 0 12px;
                 font-size: 14px;
@@ -111,20 +111,20 @@
                 background: #c7e5db;
             }
         }
-    
+
         & > .accordion-collapse {
             display: none;
             padding: 0 6px 28px;
-    
+
             @include md {
                 max-width: none;
             }
-            
+
             @media screen and (min-width: 992px) {
                 display: block;
                 padding: 0;
             }
-    
+
             &.show {
                 display: block;
             }
@@ -138,6 +138,16 @@
 
         &:not(:last-child) {
             margin-bottom: 25px;
+        }
+
+        @at-root
+        #{$root}#faq-tab,
+        #{$root}#content-examples-tab {
+            article {
+                @include sm {
+                    display: none;
+                }
+            }
         }
 
         // CONTENT ELEMENTS:
@@ -284,7 +294,7 @@
         a {
             color: inherit;
             text-decoration: underline;
-    
+
             &:hover {
                 text-decoration: none;
             }
@@ -462,7 +472,7 @@
             &[data-video-id],
             &[data-url] {
                 @include play;
-                
+
                 &::after {
                     font-size: 46px;
                 }
@@ -483,6 +493,10 @@
             padding-top: 25px;
             border-top: 1px solid #dfe0e0;
         }
+
+        & + .c-note--warning {
+            max-width: 730px;
+        }
     }
 
     // .c-note
@@ -494,23 +508,7 @@
 
     // Wistia embed video code
     .wistia-embed-video {
-        .wistia_responsive_padding {
-            position: relative;
-        }
-
-        .wistia_responsive_wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .wistia_embed {
-            position:relative;
-            width:100%;
-            height:100%;
-        }
+         @include wistia-inline;
 
         .wistia_swatch {
             position: absolute;

@@ -385,6 +385,7 @@
 }
 .c-faq-accordion__header button{
   display:flex;
+  gap:10px;
   align-items:center;
   width:100%;
   height:63px;
@@ -550,6 +551,7 @@
 .guide-content article:not(:last-child){
   margin-bottom:25px;
 }
+
 .guide-content article h2:not(:last-child){
   margin-bottom:24px;
 }
@@ -859,6 +861,9 @@
   max-width:730px;
   margin-bottom:25px;
 }
+.guide-content .c-step-by-step+.c-note--warning{
+  max-width:730px;
+}
 .guide-content .c-note:not(:last-child){
   margin-bottom:25px;
 }
@@ -867,10 +872,7 @@
 }
 .guide-content .wistia-embed-video .wistia_responsive_wrapper{
   position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
 }
 .guide-content .wistia-embed-video .wistia_embed{
   position:relative;
@@ -976,6 +978,9 @@
   .c-faq-accordion__ask-us{
     margin-top:32px;
     margin-bottom:4px;
+  }
+  .guide-content#content-examples-tab article,.guide-content#faq-tab article{
+    display:none;
   }
   .guide-content article picture{
     float:none;

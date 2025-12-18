@@ -118,6 +118,17 @@
 }
 .across-image-banner--reverse .container article{
   max-width:600px;
+  font-size:16px;
+}
+.across-image-banner--reverse .container article h6{
+  margin-bottom:0;
+  color:inherit;
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:600;
+}
+.across-image-banner--reverse .container article h6+p{
+  margin-top:-16px;
 }
 .page\.micro-infusion-brief .across-image-banner--reverse article{
   max-width:440px;
@@ -128,9 +139,6 @@
 }
 .page\.microinfusion-safety-guide .across-image-banner--reverse article{
   max-width:480px;
-}
-.page\.microinfusion-safety-guide .across-image-banner--reverse article strong{
-  display:block;
 }
 .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p{
   max-width:340px;
@@ -204,6 +212,9 @@
   .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
     max-width:340px;
   }
+  .page\.sunil-micro-mask-guide .across-image-banner--reverse article{
+    max-width:440px;
+  }
   .across-image-banner--holidays article{
     max-width:410px;
   }
@@ -243,9 +254,6 @@
   }
   .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p{
     max-width:210px;
-  }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article p{
-    font-size:16px;
   }
   .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
     max-width:none;
