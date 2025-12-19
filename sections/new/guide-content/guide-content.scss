@@ -507,7 +507,7 @@
             border-top: 1px solid #dfe0e0;
         }
 
-        & + .c-note--warning {
+        & + .c-note {
             @include content-width;
         }
     }

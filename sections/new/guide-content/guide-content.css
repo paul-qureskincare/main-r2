@@ -903,7 +903,7 @@
   .shopify-section--guide-content{
     max-width:calc(50% + 176px);
   }
-  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note--warning,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
     max-width:746px;
   }
 }
@@ -911,7 +911,7 @@
   .shopify-section--guide-content{
     max-width:calc(50% + 206px);
   }
-  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note--warning,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
     max-width:806px;
   }
 }

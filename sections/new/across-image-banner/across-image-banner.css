@@ -134,22 +134,22 @@
   max-width:440px;
 }
 
-.page\.microinfusion-safety-guide .across-image-banner--reverse .container{
+.page\.microinfusion-safety-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse .container{
   position:relative;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article{
+.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
   max-width:480px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p{
+.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p{
   max-width:340px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure{
+.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
   position:absolute;
   right:-40px;
   bottom:-60px;
   width:210px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure img{
+.page\.microinfusion-safety-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure img{
   max-width:100%;
   height:auto;
 }
@@ -185,15 +185,15 @@
   font-size:140px;
 }
 @media screen and (max-width:1199px){
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article{
+  .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
     max-width:540px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure{
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
     right:16px;
   }
 }
 @media screen and (max-width:1120px){
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure{
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
     bottom:-40px;
   }
   .across-image-banner--holidays .e-discount-badge{
@@ -206,7 +206,7 @@
   .e-discount-badge:after,.e-discount-badge:before{
     font-size:14px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure{
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
     width:120px;
   }
   .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
@@ -249,10 +249,10 @@
     color:#fff;
     text-align:left;
   }
-  .page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article{
+  .page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
     max-width:none;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p{
+  .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p{
     max-width:210px;
   }
   .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
