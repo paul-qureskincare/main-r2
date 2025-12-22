@@ -550,7 +550,6 @@
 .guide-content article:not(:last-child){
   margin-bottom:25px;
 }
-
 .guide-content article h2:not(:last-child){
   margin-bottom:24px;
 }
@@ -976,7 +975,7 @@
     margin-top:32px;
     margin-bottom:4px;
   }
-  .guide-content#content-examples-tab article,.guide-content#faq-tab article{
+  .guide-content article:not(:has(p),:has(ul)){
     display:none;
   }
   .guide-content article picture{

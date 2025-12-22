@@ -153,13 +153,9 @@
             margin-bottom: 25px;
         }
 
-        @at-root
-        #{$root}#faq-tab,
-        #{$root}#content-examples-tab {
-            article {
-                @include sm {
-                    display: none;
-                }
+        &:not(:has(p), :has(ul)) {
+            @include sm {
+                display: none;
             }
         }
 

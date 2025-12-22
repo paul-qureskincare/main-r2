@@ -130,7 +130,7 @@
 .across-image-banner--reverse .container article h6+p{
   margin-top:-16px;
 }
-.page\.micro-infusion-brief .across-image-banner--reverse article{
+.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article{
   max-width:440px;
 }
 
@@ -249,7 +249,7 @@
     color:#fff;
     text-align:left;
   }
-  .page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
+  .page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article{
     max-width:none;
   }
   .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p{
