@@ -122,7 +122,8 @@
 
             @at-root
             .page\.micro-infusion-brief #{$root}--reverse,
-            .page\.shower-creative-brief #{$root}--reverse {
+            .page\.shower-creative-brief #{$root}--reverse,
+            .page\.faucet-creative-brief #{$root}--reverse {
                 article {
                     max-width: 440px;
 
