@@ -88,6 +88,9 @@
   content:"\e901";
 }
 
+.hero-section{
+  margin-bottom:60px;
+}
 .hero-section .container{
   display:flex;
   flex-direction:row-reverse;
@@ -218,6 +221,9 @@
   }
   .c-marked-list li{
     font-size:16px;
+  }
+  .hero-section{
+    margin-bottom:40px;
   }
   .hero-section .container{
     flex-direction:column;

@@ -5,14 +5,21 @@
 
 .hero-section {
     $root: &;
-    
+
+    // TODO: Temporary styles, need to remove after add section stack
+    margin-bottom: 60px;
+
+    @include sm {
+        margin-bottom: 40px;
+    }
+
     .container {
         display: flex;
         flex-direction: row-reverse;
         gap: 60px;
         margin-right: 0;
         padding-right: 0;
-        
+
         @media screen and (min-width: 1200px) {
             @include max-width(1172px);
         }

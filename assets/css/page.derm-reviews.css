@@ -571,6 +571,9 @@
 .base-section--small-media article{
   grid-template-columns:1fr 400px;
 }
+.base-section--small-media.base-section--reverse article{
+  grid-template-columns:400px 1fr;
+}
 .base-section--half-media .container{
   margin-right:0;
   padding-right:0;
@@ -906,7 +909,7 @@
     grid-column:1;
     width:100%;
   }
-  .base-section--small-media article{
+  .base-section--small-media article,.base-section--small-media.base-section--reverse article{
     grid-template-columns:auto;
   }
   .base-section--half-media .container{

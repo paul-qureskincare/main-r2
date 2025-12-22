@@ -43,6 +43,44 @@
 .qure__bundle-steps:last-child .qure-bundle-stps-title:after {
     display: none;
 }
+
+.qure-bundle-accordion {
+    display: none;
+    margin-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #dfe0e0;
+}
+
+.qure-bundle-accordion .qure__accordion-item:last-child {
+    border-bottom: 0 !important;
+}
+
+.qure-bundle-accordion .qure__accordion-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+}
+
+.qure__bundle-steps:has(input[type="radio"]#dark_spots:checked) .qure-bundle-accordion--dark_spots {
+    display: block;
+}
+
+.qure__bundle-steps:has(input[type="radio"]#wrinkles:checked) .qure-bundle-accordion--wrinkles {
+    display: block;
+}
+
+.qure__bundle-steps:has(input[type="radio"]#mixed:checked) .qure-bundle-accordion--mixed {
+    display: block;
+}
+/* .qure__bundle-steps:has(input[type="radio"]#dark_spots:checked) .test222,
+.qure__bundle-steps:has(input[type="radio"]#dark_spots:checked) .test333 {
+    display: none;
+} */
+
+
 .qure-bundle-item input {
     display: none;
 }

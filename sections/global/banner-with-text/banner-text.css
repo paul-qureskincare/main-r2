@@ -52,7 +52,7 @@
     color: var(--Charcoal, #212428);
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px; 
+    line-height: 20px;
 }
 .no_hype_evidence a.filter-card-item {
     display: flex;
@@ -133,12 +133,25 @@
     max-width: 80px;
 }
 .prod_img_with_title p{
-    color: #212428; 
+    color: #212428;
 }
 .prod_wrapper {
     padding: 12px 16px;
     border-radius: 10px;
     background: var(--Mist, #F6F6F7);
+}
+
+.info-banner {
+  margin-top: 40px;
+  padding: 16px;
+  border-radius: 5px;
+  background: #e8f2ff;
+}
+
+.info-banner h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 @media(max-width:767px){
