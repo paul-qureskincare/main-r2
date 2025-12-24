@@ -436,15 +436,13 @@
   margin-bottom:15px;
 }
 .c-faq-accordion__content ol li{
-  position:relative;
-  min-height:24px;
-  padding-left:36px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
   counter-increment:item;
 }
 .c-faq-accordion__content ol li:before{
-  position:absolute;
-  top:0;
-  left:0;
+  flex:none;
   width:24px;
   height:24px;
   line-height:24px;
@@ -593,15 +591,13 @@
   margin-bottom:15px;
 }
 .guide-content article ol li{
-  position:relative;
-  min-height:24px;
-  padding-left:36px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
   counter-increment:item;
 }
 .guide-content article ol li:before{
-  position:absolute;
-  top:0;
-  left:0;
+  flex:none;
   width:24px;
   height:24px;
   line-height:24px;

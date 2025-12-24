@@ -6,15 +6,13 @@
     }
 
     li {
-        position: relative;
-        min-height: 24px;
-        padding-left: 36px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
         counter-increment: item;
 
         &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
+            flex: none;
             width: 24px;
             height: 24px;
             line-height: 24px;
