@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="assets/css/spacings.css">
     <link href="assets/css/theme-fonts.css" rel="stylesheet" />
     <link href="assets/css/base.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #212428;
+            --discount-color: #91baec;
+        }
+    </style>
     <!-- Loading HTML Files -->
     <script src="assets/js/fileloader.js"></script>
 </head>
@@ -35,515 +41,462 @@
         </div>
     </div>
 
-
-
-    <link rel="stylesheet" href="sections/isolated/page-banner/page-banner.css" />
-    <div class="page__banner position-relative">
-        <picture>
-            <source media="(min-width:1920px)" srcset="sections/isolated/page-banner/images/all_in_one-banner.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:1600px)" srcset="sections/isolated/page-banner/images/all_in_one-banner.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:1100px)" srcset="sections/isolated/page-banner/images/all_in_one-banner.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:720px)" srcset="sections/isolated/page-banner/images/all_in_one-banner.webp"
-                class="img-fluid" width="1440" height="557">
-            <source media="(min-width:540px)" srcset="sections/isolated/page-banner/images/all_in_one-bannerM.webp"
-                class="img-fluid" width="1440" height="557">
-            <img src="sections/isolated/page-banner/images/all_in_one-bannerM.webp" width="225" height="281" alt=""
-                class="img-fluid w-100">
-        </picture>
-        <div
-            class="page__banner-wrapper position-absolute d-flex align-items-end align-items-lg-center justify-content-end top-0 bottom-0 start-0 end-0 pb-20">
+    <!-- SECTIONS STACK -->
+    <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+    <main class="sections-stack">
+        <!-- ACROSS IMAGE BANNER -->
+        <link rel="stylesheet" href="sections/new/across-image-banner/across-image-banner.css" />
+        <section class="across-image-banner across-image-banner--hero across-image-banner--reverse">
+            <picture>
+                <source media="(min-width:768px)" srcset="sections/isolated/page-banner/images/all_in_one-banner.webp" />
+                <img src="sections/isolated/page-banner/images/all_in_one-bannerM.webp" alt="All-In-One Face Serum Creative Content Guide" />
+            </picture>
             <div class="container">
-                <div class="d-flex justify-content-lg-end ctm_cls_content_wrapper">
-                    <div class="ctm_cls_title_wrapper">
-                        <h1 class="page-banner-title">All-In-One Face Serum Creative Content Guide</h1>
+                <article>
+                    <h1>All-In-One Face Serum Creative Content Guide</h1>
+                </article>
+            </div>
+        </section>
+        <!-- ACROSS IMAGE BANNER END -->
+
+        <!-- INTRO SECTION -->
+        <link rel="stylesheet" href="sections/new/intro-section/intro-section.css" />
+        <section class="intro-section">
+            <div class="container">
+                <article>
+                    <p><strong>Discover how to make the most of the Qure All-In-One Face Serum  with our creative content guide.</strong></p>
+                    <p>This brief will help you craft engaging content that showcases how the science-backed ingredients transform skincare routines for radiant, glowing skin.</p>
+                </article>
+            </div>
+        </section>
+        <!-- INTRO SECTION END -->
+
+        <!-- GUIDE MENU -->
+        <div class="shopify-section shopify-section--guide-menu">
+            <link rel="stylesheet" href="sections/new/guide-menu/guide-menu.css" />
+            <section class="guide-menu">
+                <div class="container">
+                    <div class="guide-menu__select">
+                        <select name="guide-select" id="guide-select">
+                            <option value="" selected disabled>Product Information</option>
+                            <option value="product-information">Product Information</option>
+                            <option value="usage-instructions">Usage Instructions</option>
+                            <option value="product-claims">Product Claims</option>
+                            <option value="content-requirements">Content Requirements</option>
+                            <option value="creative-direction">Creative Direction</option>
+                            <option value="content-examples">Content Examples</option>
+                        </select>
+                    </div>
+                    <div class="guide-menu__list">
+                        <p>Contents</p>
+                        <ul class="tabs" role="tablist">
+                            <li>
+                                <button
+                                    class="active"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#product-information-tab"
+                                    type="button"
+                                >Product Information</button>
+                            </li>
+                            <li>
+                                <button
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#usage-instructions-tab"
+                                    type="button"
+                                >Usage Instructions</button>
+                            </li>
+                            <li>
+                                <button
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#product-claims-tab"
+                                    type="button"
+                                >Product Claims</button>
+                            </li>
+                            <li>
+                                <button
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#content-requirements-tab"
+                                    type="button"
+                                >Content Requirements <em>Must read</em></button>
+                            </li>
+                            <li>
+                                <button
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#creative-direction-tab"
+                                    type="button"
+                                >Creative Direction</button>
+                            </li>
+                            <li>
+                                <button
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#content-examples-tab"
+                                    type="button"
+                                >Content Examples</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce('guide-menu', 'sections/new/guide-menu/guide-menu.js');
+                });
+            </script>
         </div>
-    </div>
-    <!-- -- craetive guide banner -- -->
+        <!-- GUIDE MENU END -->
 
-    <div class="qure__section"
-        style="--section-padding-top: 60px; --section-padding-bottom: 30px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 15px;">
-        <div class="container">
-            <div class="p-lg-30 rounded-10 qure__info-block">
-                <p class="fw-600">Discover how to make the most of the Qure All-In-One Face Serum with our creative
-                    content guide.</p>
-                <p>This brief will help you craft engaging content that showcases how the science-backed ingredients
-                    transform skincare routines for radiant, glowing skin.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Section faucet creative brief -->
-    <link rel="stylesheet" href="sections/isolated/faucet-creative-brief/faucet-creative-brief.css" />
-    <div class="qure__section section-faucet-creative"
-        style="--section-padding-top: 30px; --section-padding-top-mob: 15px;">
-        <div class="container" style="--column-gap:60px; --column-gap-mobile:30px;">
-            <!-- Custom Dropdown -->
-            <div class="custom_dropdown-main d-md-none">
-                <div class="custom-dropdown" id="accordionDropdown">
-                    <div class="dropdown-selected">Product Information <span><img src="assets/images/arrow_down.svg"
-                                alt=""></span></div>
-                    <div class="dropdown-options">
-                        <div data-target="product-information">Product Information</div>
-                        <div data-target="usage_instructions">Usage Instructions</div>
-                        <div data-target="product__claim">Product Claims</div>
-                        <div data-target="creative__direction">Content Requirements <span class="qure__faucet-tag">MUST
-                                READ</span></div>
-                        <div data-target="content__angel">Creative Direction</div>
-                        <div data-target="content__examples">Content Examples</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row custom__grid">
-                <div class="col-lg-4 d-none d-lg-block custom__block">
-                    <h4 class="title_content">Contents</h4>
-                    <ul class="nav qure__faucet-tabs" id="myTab" role="tablist">
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button active" id="product-information-tab" data-bs-toggle="tab"
-                                data-bs-target="#product-information-tab-pane" type="button" role="tab"
-                                aria-controls="product-information-tab-pane" aria-selected="true">Product
-                                Information</button>
-                        </li>
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button" id="usage_instructions-tab" data-bs-toggle="tab"
-                                data-bs-target="#usage_instructions-tab-pane" type="button" role="tab"
-                                aria-controls="usage_instructions-tab-pane" aria-selected="false">Usage
-                                Instructions</button>
-                        </li>
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button" id="product__claim-tab" data-bs-toggle="tab"
-                                data-bs-target="#product__claim-tab-pane" type="button" role="tab"
-                                aria-controls="product__claim-tab-pane" aria-selected="false">Product Claims</button>
-                        </li>
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button" id="creative__direction-tab" data-bs-toggle="tab"
-                                data-bs-target="#creative__direction-tab-pane" type="button" role="tab"
-                                aria-controls="creative__direction-tab-pane" aria-selected="false">Content Requirements
-                                <span class="qure__faucet-tag">MUST READ</span></button>
-                        </li>
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button" id="content__angel-tab" data-bs-toggle="tab"
-                                data-bs-target="#content__angel-tab-pane" type="button" role="tab"
-                                aria-controls="content__angel-tab-pane" aria-selected="false">Creative
-                                Direction</button>
-                        </li>
-                        <li class="qure__faucet-item" role="presentation">
-                            <button class="qure__faucet-button" id="content__examples-tab" data-bs-toggle="tab"
-                                data-bs-target="#content__examples-tab-pane" type="button" role="tab"
-                                aria-controls="content__examples-tab-pane" aria-selected="false">Content
-                                Examples</button>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-8 custom__block">
-                    <div class="tab-content faucet-tab-content accordion" id="myTabContent">
-                        <div class="tab-pane fade show active qure__faucet-item" id="product-information-tab-pane"
-                            role="tabpanel" aria-labelledby="product-information-tab" tabindex="0">
-                            <button class="qure__faucet-button d-lg-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#product-information" aria-expanded="true"
-                                aria-controls="product-information">Product Information</button>
-
-                            <div id="product-information" class="accordion-collapse collapse show  d-lg-block"
-                                aria-labelledby="product-information" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">
-                                        Product Information</h2>
-                                        <p>The All-In-One Serum brightens, plumps & smooths the look of skin using a unique blend of active ingredients:</p>
-                                    <ul class="list-dots py-20">
-                                        <li><span class="fw-600">Niacinamide</span> clarifies and evens tone, refines
-                                            pores, calms redness</li>
-                                        <li><span class="fw-600">Retinol and Bakuchiol </span>boost cell turnover and
-                                            collagen production, reducing fine lines, wrinkles, and pigmentation</li>
-                                        <li><span class="fw-600">Lactic and Mandelic Acids</span> gently exfoliate to
-                                            smooth texture and enhance radiance</li>
-                                        <li><span class="fw-600">Argireline® Peptides</span> reduce wrinkle depth by up
-                                            to 48 % in clinical use</li>
-                                        <li><span class="fw-600">Ethyl Ascorbic Acid (Vitamin C) and Ferulic Acid</span>
-                                            brightens and protect against oxidative damage</li>
-                                        <li><span class="fw-600">Hyaluronic Acid</span> delivers lasting hydration,
-                                            plumping fine lines and smoothing skin</li>
-                                    </ul>
-                                    <a href="https://qureskincare.com/products/face-serum"
-                                        class="text-decoration-underline" style="--base-color: #212428;">Learn more
-                                        about Qure All-In-One Face Serum</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade qure__faucet-item" id="usage_instructions-tab-pane" role="tabpanel"
-                            aria-labelledby="usage_instructions" tabindex="0">
-                            <button class="qure__faucet-button collapsed d-lg-none" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#usage_instructions" aria-expanded="false"
-                                aria-controls="usage_instructions">
-                                Usage Instructions
-                            </button>
-                            <div id="usage_instructions" class="accordion-collapse collapse d-lg-block"
-                                aria-labelledby="usage_instructions" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">
-                                        Usage Instructions</h2>
-                                    <div class="pb-20">
-                                        <div>How to Use:</div>
-                                        <div class="d-flex pt-10">
-                                            <div><img src="sections/isolated/faucet-creative-brief/images/Number1.svg"
-                                                    alt=""></div>
-                                            <p class="pl-10">After cleansing, apply 1-2 pumps to cleansed skin (face and
-                                                neck).</p>
-                                        </div>
-                                        <div class="d-flex pt-15">
-                                            <div><img src="sections/isolated/faucet-creative-brief/images/Number2.svg"
-                                                    alt=""></div>
-                                            <p class="pl-10">Use every second night during the first two weeks of use
-                                                whilst your skin builds tolerance.</p>
-                                        </div>
-                                        <div class="d-flex pt-15">
-                                            <div><img src="sections/isolated/faucet-creative-brief/images/Number_3.svg"
-                                                    alt=""></div>
-                                            <p class="pl-10">Use daily for best results.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade qure__faucet-item" id="product__claim-tab-pane" role="tabpanel"
-                            aria-labelledby="product__claim-tab" tabindex="0">
-                            <button class="qure__faucet-button collapsed d-lg-none" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#product__claim" aria-expanded="false"
-                                aria-controls="product__claim">
-                                Product Claims
-                            </button>
-
-                            <div id="product__claim" class="accordion-collapse collapse d-lg-block"
-                                aria-labelledby="product__claim" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">Product Claims & User Study</h2>
-                                    <div>
-                                        <div>Key claims:</div>
-                                    </div>
-                                    <ul class="list-dots ml-10 mb-30 d-flex flex-column gap-1">
-                                        <li>Targets uneven texture, fine lines, and discoloration with clinically-backed
-                                            ingredients that work together to smooth, firm, and visibly brighten your
-                                            skin over time.</li>
-                                        <li>Contains active ingredients such as retinol and niacinamide to help reduce
-                                            the visibility of wrinkles and age spots, and smooth skin texture. </li>
-                                        <li>Deeply hydrates skin to make fine lines less visible for more plumper,
-                                            younger looking skin.</li>
-                                        <li>Even skin tone for a more radiant complexion, and reduces the appearance of
-                                            dark spots and help to prevent discoloration with continued use. </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade qure__faucet-item" id="creative__direction-tab-pane" role="tabpanel"
-                            aria-labelledby="creative__direction-tab" tabindex="0">
-                            <button class="qure__faucet-button collapsed d-lg-none" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#creative__direction" aria-expanded="false"
-                                aria-controls="creative__direction">
-                                Content Requirements <span class="qure__faucet-tag">MUST READ</span>
-                            </button>
-                            <div id="creative__direction" class="accordion-collapse collapse d-lg-block"
-                                aria-labelledby="creative__direction" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">Content Requirements</h2>
-                                    <div>
-                                        <div>Messaging must include:</div>
-                                    </div>
-                                    <ul class="list-dots ml-10 mb-30 d-flex flex-column gap-1">
-                                        <li>Formulated to target three key skin concerns: uneven texture, fine lines and
-                                            wrinkles, and dark spots or discoloration.</li>
-                                        <li>Powered by clinically backed actives like peptides, niacinamide, and
-                                            hyaluronic acid.</li>
-                                        <li>Supports skin renewal and barrier health with daily use</li>
-                                        <li>Lightweight, fast-absorbing, and non-irritating.</li>
-                                        <li>Simplifies your routine with one serum that does it all.</li>
-                                        <li>Visible results with consistent use.</li>
-                                    </ul>
-                                    <div class="d-flex align-items-start bg-light ctm-width gap-3 p-12 rounded-10"
-                                        style="--ctm-width:500px;--bg-light: #F4F8FD;">
-                                        <div class="mt-5 color-ice"><i class="fa-solid fa-circle-exclamation"></i></div>
-                                        <div class="fs-16">
-                                            <p>Remember to <span class="fw-600">add a personal touch</span> to the
-                                                messaging, talk about how the serum makes your skin feel. </p>
-                                            <p class="mb-0">Examples: </p>
-                                            <ul class="list-dots">
-                                                <li>“This serum gave me my glow back.”</li>
-                                                <li>“Nothing else has faded my dark spots like this.”</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade qure__faucet-item" id="content__angel-tab-pane" role="tabpanel"
-                            aria-labelledby="content__angel-tab" tabindex="0">
-                            <button class="qure__faucet-button collapsed d-lg-none" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#content__angel" aria-expanded="false"
-                                aria-controls="content__angel">
-                                Creative Direction
-                            </button>
-                            <div id="content__angel" class="accordion-collapse collapse d-lg-block"
-                                aria-labelledby="content__angel" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">Creative Direction</h2>
-                                    <div class="">Recording Guidelines</div>
-                                    <ul class="list-dots ml-10 mb-30 d-flex flex-column gap-1">
-                                        <li>Use bright, natural lighting. No filters.</li>
-                                        <li>Please do not wear makeup (unless to show makeup removal).</li>
-                                        <li>Ensure the Qure All-In-One Face Serum is the main focus of the content.</li>
-                                        <li>Keep backgrounds clean and uncluttered.</li>
-                                        <li>In cover photos, always show the filter in use (unless agreed otherwise).
-                                        </li>
-                                    </ul>
-                                    <div class="ctm-width" style="--ctm-width: 616px;">
-                                        <div class="swiper qure__swiper my-40" id="qure__swiper-faucet-slider"
-                                            data-section-id="faucet-slider" data-autoplay="false" data-loop="false"
-                                            data-mobile="1.3" data-tablet="2" data-desktop="2" data-spacing="16"
-                                            data-pagination-fraction="true">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="fauce-slide-img">
-                                                        <img src="sections/isolated/faucet-creative-brief/images/aio_brief1.webp"
-                                                            alt="" class="img-fluid w-100" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="fauce-slide-img">
-                                                        <img src="sections/isolated/faucet-creative-brief/images/aio_brief2.webp"
-                                                            alt="" class="img-fluid w-100" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4">
-                                                <div class="qure-swiper-button-prev qure-swiper-arrow mt-30"><i
-                                                        class="fa-regular fa-angle-left"></i></div>
-                                                <div class="swiper-pagination position-relative bottom-0 w-auto mt-30">
-                                                </div>
-                                                <div class="qure-swiper-button-next qure-swiper-arrow mt-30"><i
-                                                        class="fa-regular fa-angle-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-start bg-light ctm-width gap-3 p-12 rounded-10"
-                                        style="--ctm-width:500px;--bg-light: #F4F8FD;">
-                                        <div class="mt-5 color-ice"><i class="fa-solid fa-circle-exclamation"></i></div>
-                                        <div class="fs-16">
-                                            <p><span class="fw-600">Tag and mention</span> @qureskincare #QureSkincare
-                                                #AllInOneSerum</p>
-                                            <p>Include your affiliate or other links provided by Qure in Instagram
-                                                Stories and content captions. If the link can’t be placed in bio,
-                                                include it in linktr.ee or similar.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade qure__faucet-item" id="content__examples-tab-pane" role="tabpanel"
-                            aria-labelledby="content__examples-tab" tabindex="0">
-                            <button class="qure__faucet-button collapsed d-lg-none" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#content__examples" aria-expanded="false"
-                                aria-controls="content__examples">
-                                Content Examples
-                            </button>
-                            <div id="content__examples" class="accordion-collapse collapse d-lg-block"
-                                aria-labelledby="content__examples" data-bs-parent="#myTabContent">
-                                <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
-                                    <h2 class="d-md-block d-none">Content Examples</h2>
-                                    <div class="col-offset">
-                                        <div class="swiper qure__swiper mt-40" id="qure__swiper-content-example"
-                                            data-section-id="content-example" data-autoplay="false" data-loop="false"
-                                            data-mobile="1.2" data-tablet="1.8" data-desktop="3.4" data-spacing="12"
-                                            data-pagination-fraction="true">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="play_btn">
-                                                        <a class="popup-youtube lvideo trusted-experts rounded-10 overflow-hidden d-block position-relative"
-                                                            data-url="https://www.youtube.com/watch?v=Jb99E6ztDIM">
-                                                            <span class="justify-content-center">
-                                                                <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-1.webp"
-                                                                    alt="" class="img-fluid">
-                                                            </span>
-                                                            <div
-                                                                class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="play_btn">
-                                                        <a class="popup-youtube lvideo trusted-experts rounded-10 overflow-hidden d-block position-relative"
-                                                            data-url="https://www.youtube.com/watch?v=wuIjXhlFUTU">
-                                                            <span class="justify-content-center">
-                                                                <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-2.webp"
-                                                                    alt="" class="img-fluid">
-                                                            </span>
-                                                            <div
-                                                                class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#reusableWistiaModal" data-video-id="7ghlcv9xqg"
-                                                        class="filter-card-item filter-card-video">
-                                                        <div
-                                                            class="filter-card-video-icon align-items-end px-20 py-10 d-none">
-                                                            <div
-                                                                class="align-items-center d-flex justify-content-between w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-3.webp"
-                                                            alt="doctor review" class="img-fluid" />
-                                                        <div
-                                                            class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                            <img src="assets/images/play_button.svg" alt="">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#reusableWistiaModal" data-video-id="cdyj6o3q28"
-                                                        class="filter-card-item filter-card-video">
-                                                        <div
-                                                            class="filter-card-video-icon align-items-end px-20 py-10 d-none">
-                                                            <div
-                                                                class="align-items-center d-flex justify-content-between w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-4.webp"
-                                                            alt="doctor review" class="img-fluid" />
-                                                        <div
-                                                            class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                            <img src="assets/images/play_button.svg" alt="">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="play_btn">
-                                                        <a class="popup-youtube lvideo trusted-experts rounded-10 overflow-hidden d-block position-relative"
-                                                            data-url="https://www.youtube.com/watch?v=j0L38mO7XaY&t=208s">
-                                                            <span class="justify-content-center">
-                                                                <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-5.webp"
-                                                                    alt="" class="img-fluid">
-                                                            </span>
-                                                            <div
-                                                                class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="play_btn">
-                                                        <a class="popup-youtube lvideo trusted-experts rounded-10 overflow-hidden d-block position-relative"
-                                                            data-url="https://www.youtube.com/watch?v=Jb99E6ztDIM">
-                                                            <span class="justify-content-center">
-                                                                <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-6.webp"
-                                                                    alt="" class="img-fluid">
-                                                            </span>
-                                                            <div
-                                                                class="align-items-center d-flex h-100 justify-content-center position-absolute top-0 w-100">
-                                                                <img src="assets/images/play_button.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4">
-                                                <div class="qure-swiper-button-prev qure-swiper-arrow mt-30"><i
-                                                        class="fa-regular fa-angle-left"></i></div>
-                                                <div class="swiper-pagination position-relative bottom-0 w-auto mt-30">
-                                                </div>
-                                                <div class="qure-swiper-button-next qure-swiper-arrow mt-30"><i
-                                                        class="fa-regular fa-angle-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Reusable Wistia Modal (outside slider) -->
-        <div class="modal fade filter-modal" id="reusableWistiaModal" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md filter-dialog">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="fa-solid fa-xmark"></i>
+        <!-- GUIDE CONTENT SECTIONS -->
+        <div class="shopify-section shopify-section--guide-content">
+            <link rel="stylesheet" href="sections/new/guide-content/guide-content.css" />
+            <section class="guide-content active" id="product-information-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#product-information-collapse"
+                            aria-expanded="true"
+                        >
+                            Product Information
                         </button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="wistiaVideoContainer" class="filter-modal-video"></div>
+                        <div
+                            id="product-information-collapse"
+                            class="accordion-collapse show"
+                        >
+                            <article>
+                                <h2>Product Information</h2>
+                                <p>The All-In-One Serum brightens, plumps & smooths the look of skin using a unique blend of active ingredients:</p>
+                                <ul>
+                                    <li><strong>Niacinamide</strong> clarifies and evens tone, refines pores, calms redness</li>
+                                    <li><strong>Retinol and Bakuchiol</strong> boost cell turnover and collagen production, reducing fine lines, wrinkles, and pigmentation</li>
+                                    <li><strong>Lactic and Mandelic Acids</strong> gently exfoliate to smooth texture and enhance radiance</li>
+                                    <li><strong>Argireline® Peptides</strong> reduce wrinkle depth by up to 48% in clinical use</li>
+                                    <li><strong>Ethyl Ascorbic Acid (Vitamin C) and Ferulic Acid</strong> brightens and protect against oxidative damage</li>
+                                    <li><strong>Hyaluronic Acid</strong> delivers lasting hydration, plumping fine lines and smoothing skin</li>
+                                </ul>
+                            </article>
+                            <div class="guide-link"><a href="#">Learn more about Qure All-In-One Face Serum</a></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('main-slider', 'assets/js/main-slider.js');
-            loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-            loadScriptOnce('youtube-popup', 'assets/js/yt-popup.js');
-            loadScriptOnce('faq-dropdowns', 'sections/isolated/faucet-creative-brief/faucet-creative-brief.js');
-        });
 
-    </script>
-    <!-- Section faucet creative brief end -->
-    <!-- Trusted Recommended section Start -->
-    <div class="trusted_recom qure__section color-background">
-        <div class="container" style="--column-gap:35px; --column-gap-mobile:18px;">
-            <h2 class="qure__section-heading d-md-none mb-30 text-center">Trusted and Recommended by Experts</h2>
-            <div class="row align-items-center custom__grid">
-                <div class="col-lg-8 custom__block order-1 order-md-0">
-                    <div class="trusted_left">
-                        <div class="section_header py-0 ctm-width" style="--ctm-width:670px;">
-                            <div class="trusted_verified d-none d-md-flex" style="--bg-light: #fff;">
-                                <img src="sections/isolated/experts/images/tick_new.svg" alt="">
-                                <p class="p-0">Dermatologist Reviewed</p>
+        <div class="shopify-section shopify-section--guide-content">
+            <section class="guide-content" id="usage-instructions-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#usage-instructions-collapse"
+                        >
+                            Usage Instructions
+                        </button>
+                        <div
+                            id="usage-instructions-collapse"
+                            class="accordion-collapse"
+                        >
+                            <article>
+                                <h2>Usage Instructions</h2>
+                                <p><strong>How To Use:</strong></p>
+                                <ol>
+                                    <li>After cleansing, apply 1-2 pumps to cleansed skin (face and neck).</li>
+                                    <li>Use every second night during the first two weeks of use whilst your skin builds tolerance.</li>
+                                    <li>Use daily for best results.</li>
+                                </ol>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="shopify-section shopify-section--guide-content">
+            <section class="guide-content" id="product-claims-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#product-claims-collapse"
+                        >
+                            Product Claims & User Study
+                        </button>
+                        <div
+                            id="product-claims-collapse"
+                            class="accordion-collapse"
+                        >
+                            <article>
+                                <h2>Product Claims & User Study</h2>
+                                <p>Key claims:</p>
+                                <ul>
+                                    <li>Targets uneven texture, fine lines, and discoloration with clinically-backed ingredients that work together to smooth, firm, and visibly brighten your skin over time.</li>
+                                    <li>Contains active ingredients such as retinol and niacinamide to help reduce the visibility of wrinkles and age spots, and smooth skin texture. </li>
+                                    <li>Deeply hydrates skin to make fine lines less visible for more plumper, younger looking skin.</li>
+                                    <li>Even skin tone for a more radiant complexion, and reduces the appearance of dark spots and help to prevent discoloration with continued use.  </li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="shopify-section shopify-section--guide-content">
+            <section class="guide-content" id="content-requirements-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#content-requirements-collapse"
+                        >
+                            Content Requirements <em>Must read</em>
+                        </button>
+                        <div
+                            id="content-requirements-collapse"
+                            class="accordion-collapse"
+                        >
+                            <article>
+                                <h2>Content Requirements</h2>
+                                <p>Messaging must include:</p>
+                                <ul>
+                                    <li>Formulated to target three key skin concerns: uneven texture, fine lines and wrinkles, and dark spots or discoloration.</li>
+                                    <li>Powered by clinically backed actives like peptides, niacinamide, and hyaluronic acid.</li>
+                                    <li>Supports skin renewal and barrier health with daily use</li>
+                                    <li>Lightweight, fast-absorbing, and non-irritating.</li>
+                                    <li>Simplifies your routine with one serum that does it all.</li>
+                                    <li>Visible results with consistent use.</li>
+                                </ul>
+                                <div class="c-note c-note--info">
+                                    <p>Remember to <strong>add a personal touch</strong> to the messaging, talk about how the filter makes your skin feel.</p>
+                                    <p>Examples:</p>
+                                    <ul>
+                                        <li>“This serum gave me my glow back.”</li>
+                                        <li>“Nothing else has faded my dark spots like this.”</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="shopify-section shopify-section--guide-content">
+            <section class="guide-content" id="creative-direction-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#creative-direction-collapse"
+                        >
+                            Creative Direction
+                        </button>
+                        <div
+                            id="creative-direction-collapse"
+                            class="accordion-collapse"
+                        >
+                            <article>
+                                <h2>Creative Direction</h2>
+                                <p>Recording Guidelines</p>
+                                <ul>
+                                    <li>Use bright, natural lighting. No filters.</li>
+                                    <li>Please do not wear makeup (unless to show makeup removal).</li>
+                                    <li>Ensure the Qure All-In-One Face Serum is the main focus of the content.</li>
+                                    <li>Keep backgrounds clean and uncluttered.</li>
+                                    <li>In cover photos, always show the filter in use (unless agreed otherwise).</li>
+                                </ul>
+                            </article>
+                            <div
+                                class="c-swiper"
+                                data-swiper='{
+                                    "slidesPerView": 1.1,
+                                    "spaceBetween": 22,
+                                    "loop": false,
+                                    "pagination": {
+                                        "el": ".c-swiper-pagination",
+                                        "type": "custom"
+                                    },
+                                    "navigation": {
+                                        "prevEl": ".c-swiper-button-prev",
+                                        "nextEl": ".c-swiper-button-next"
+                                    },
+                                    "breakpoints": {
+                                        "768": {
+                                            "slidesPerView": 2
+                                        }
+                                    }
+                                }'
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_brief1.webp" alt="All-In-One Face Serum" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_brief2.webp" alt="All-In-One Face Serum" />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="c-swiper-nav">
+                                    <button class="c-swiper-button-prev"></button>
+                                    <div class="c-swiper-pagination"></div>
+                                    <button class="c-swiper-button-next"></button>
+                                </div>
                             </div>
-                            <div class="qure__section-header text-md-start text-center mb-30">
-                                <h2 class="qure__section-heading text-md-start pb-20 d-none d-md-block">Trusted and
-                                    Recommended by Experts</h2>
-                                <p>“Qure has an amazing serum… it has retinol and Bakuchiol, which is an awesome dynamic
-                                    complimenting ingredient, amazing antioxidants, Argireline, vitamin C. <span
-                                        style="background:#C7E5DB">It can really
-                                        help simplify and consolidate steps!”</span></p>
-                            </div>
-                            <div class="trusted_verified d-md-none d-flex mt-3" style="--bg-light: #fff;">
-                                <img src="assets/images/tick_new.svg" alt="">
-                                <p class="p-0">Dermatologist Approved</p>
+                            <div class="c-note c-note--info">
+                                <p><strong>Tag and mention</strong> @qureskincare #QureSkincare #QureLEDMask #LEDlighttherapy #Neck&DécolletageLEDSystem</p>
+                                <p>Include your affiliate or other links provided by Qure in Instagram Stories and content captions. If the link can't be placed in bio, include it in linktr.ee or similar.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 custom__block">
-                    <div class="dr_img my-3 trusted-experts rounded-10 overflow-hidden d-block">
-                        <img src="sections/isolated/experts/images/doctor-maxfield.webp"
-                            class="img-fluid d-md-block d-none" alt="">
-                        <img src="sections/isolated/experts/images/doctor-maxfieldM.webp" class="img-fluid d-md-none"
-                            alt="">
+            </section>
+        </div>
+
+        <div class="shopify-section shopify-section--guide-content">
+            <section class="guide-content" id="content-examples-tab">
+                <div class="container">
+                    <div class="accordion">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#content-examples-collapse"
+                        >
+                            Content Examples
+                        </button>
+                        <div
+                            id="content-examples-collapse"
+                            class="accordion-collapse"
+                        >
+                            <article>
+                                <h2>Content Examples</h2>
+                            </article>
+                            <div
+                                class="c-swiper"
+                                data-swiper='{
+                                    "slidesPerView": 1.1,
+                                    "spaceBetween": 22,
+                                    "loop": false,
+                                    "pagination": {
+                                        "el": ".c-swiper-pagination",
+                                        "type": "custom"
+                                    },
+                                    "navigation": {
+                                        "prevEl": ".c-swiper-button-prev",
+                                        "nextEl": ".c-swiper-button-next"
+                                    },
+                                    "breakpoints": {
+                                        "768": {
+                                            "slidesPerView": 3.1
+                                        }
+                                    }
+                                }'
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture data-url="https://www.youtube.com/watch?v=Jb99E6ztDIM">
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-6.webp" alt="Content examples video" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture data-url="https://www.youtube.com/watch?v=wuIjXhlFUTU">
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-2.webp" alt="Content examples video" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reusableWistiaModal"
+                                            data-video-id="7ghlcv9xqg"
+                                        >
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-3.webp" alt="Content examples video" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reusableWistiaModal"
+                                            data-video-id="cdyj6o3q28"
+                                        >
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-4.webp" alt="Content examples video" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture data-url="https://www.youtube.com/watch?v=j0L38mO7XaY">
+                                            <img src="sections/isolated/faucet-creative-brief/images/aio_thumb-5.webp" alt="Content examples video" />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="c-swiper-nav">
+                                    <button class="c-swiper-button-prev"></button>
+                                    <div class="c-swiper-pagination"></div>
+                                    <button class="c-swiper-button-next"></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce('guide-content', 'sections/new/guide-content/guide-content.js');
+                    loadScriptOnce('base-slider', 'sections/new/base-slider/base-slider.js');
+                    loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
+                    loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
+                    loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+                });
+            </script>
+        </div>
+        <!-- GUIDE CONTENT SECTIONS END -->
+
+        <!-- BASE SECTION -->
+        <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+        <section class="base-section base-section--small-media base-section--grey">
+            <div class="container">
+                <article>
+                    <h2>Trusted and Recommended by Experts</h2>
+                    <picture>
+                        <img src="sections/isolated/experts/images/doctor-maxfield.webp" alt="Trusted and Recommended by Experts" />
+                    </picture>
+                    <div>
+                        <p>“Qure has an amazing serum… it has retinol and Bakuchiol, which is an awesome dynamic complimenting ingredient, amazing antioxidants, Argireline, vitamin C. <em>It can really help simplify and consolidate steps!</em>”</p>
+                    </div>
+                    <div class="e-pill-badge">
+                        <span class="e-checkmark"></span>
+                        Dermatologist Reviewed
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- BASE SECTION END -->
+    </main>
+    <!-- SECTIONS STACK END -->
+
+    <!-- Reusable modal for all the wistia videos for all the tab contents -->
+    <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="wistiaVideoContainer" class="c-modal__video"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Trusted Recommended section End -->
 
     <!-- CART AND FOOTER -->
     <div id="site-footer"></div>
