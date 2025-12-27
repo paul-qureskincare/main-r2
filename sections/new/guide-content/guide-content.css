@@ -548,6 +548,7 @@
 }
 .guide-content article{
   overflow:hidden;
+  max-width:100%;
 }
 .guide-content article:not(:last-child){
   margin-bottom:25px;
@@ -681,6 +682,7 @@
   border-radius:10px;
 }
 .guide-content article hr{
+  max-width:100%;
   margin:15px 0;
   border-color:#dfe0e0;
   opacity:1;
@@ -700,6 +702,7 @@
   flex-direction:column;
   gap:25px;
   align-items:center;
+  max-width:100%;
 }
 .guide-content .serum-ingredients-list ul{
   display:flex;
@@ -799,23 +802,52 @@
   margin-bottom:4px;
   font-weight:600;
 }
-.guide-content .treatment-modes-list{
+.guide-content .treatment-modes-list,.guide-content .water-modes-list{
   display:flex;
   gap:60px;
+  max-width:100%;
 }
-.guide-content .treatment-modes-list li{
+.guide-content .treatment-modes-list li,.guide-content .water-modes-list li{
   display:flex;
   flex-direction:column;
   width:100%;
 }
-.guide-content .treatment-modes-list picture{
+.guide-content .treatment-modes-list picture,.guide-content .water-modes-list picture{
   margin-top:auto;
 }
-.guide-content .treatment-modes-list img{
+.guide-content .treatment-modes-list img,.guide-content .water-modes-list img{
   width:100%;
   height:auto;
   vertical-align:top;
   border-radius:10px;
+}
+.guide-content .included-box-list{
+  max-width:100%;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px 32px;
+}
+.guide-content .included-box-list li{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  padding-top:24px;
+  border-top:1px solid #dfe0e0;
+}
+.guide-content .included-box-list li:first-child,.guide-content .included-box-list li:first-child+li{
+  padding-top:0;
+  border-top:0;
+}
+.guide-content .included-box-list img{
+  flex:none;
+  width:40px;
+  height:auto;
+}
+.guide-content .included-box-list img+p{
+  flex-grow:1;
+}
+.guide-content .included-box-list p{
+  margin-bottom:0;
 }
 .guide-content .c-swiper{
   margin:0 -22px;
@@ -855,11 +887,19 @@
 .guide-content #creative-direction-collapse .c-swiper{
   max-width:616px;
 }
+
 .guide-content .c-step-by-step{
+  max-width:100%;
   margin-bottom:25px;
+}
+.guide-content .c-step-by-step+.c-note{
+  max-width:100%;
 }
 .guide-content .c-note:not(:last-child){
   margin-bottom:25px;
+}
+.guide-content .c-faq-accordion{
+  max-width:100%;
 }
 .guide-content .wistia-embed-video .wistia_responsive_padding{
   position:relative;
@@ -906,7 +946,7 @@
   .shopify-section--guide-content{
     max-width:calc(50% + 176px);
   }
-  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .included-box-list,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content .water-modes-list,.guide-content article,.guide-content article hr{
     max-width:746px;
   }
 }
@@ -914,7 +954,7 @@
   .shopify-section--guide-content{
     max-width:calc(50% + 206px);
   }
-  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content article,.guide-content article hr{
+  .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .included-box-list,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content .water-modes-list,.guide-content article,.guide-content article hr{
     max-width:806px;
   }
 }
@@ -992,12 +1032,32 @@
   .guide-content article picture[data-url],.guide-content article picture[data-video-id]{
     width:100%;
   }
+  .guide-content article:has(picture:not(.d-none.d-lg-block)){
+    display:flex;
+    flex-direction:column;
+  }
+  .guide-content article:has(picture:not(.d-none.d-lg-block)) picture{
+    order:10;
+    margin-top:25px;
+    margin-bottom:0;
+  }
   .guide-content .serum-ingredients-list ul{
     flex-direction:column;
   }
-  .guide-content .treatment-modes-list{
+  .guide-content .treatment-modes-list,.guide-content .water-modes-list{
     flex-direction:column;
     gap:28px;
+  }
+  .guide-content .included-box-list{
+    grid-template-columns:auto;
+    gap:12px;
+  }
+  .guide-content .included-box-list li{
+    padding-top:16px;
+  }
+  .guide-content .included-box-list li:first-child+li{
+    padding-top:16px;
+    border-top:1px solid #dfe0e0;
   }
   .guide-content .c-step-by-step{
     padding-top:25px;

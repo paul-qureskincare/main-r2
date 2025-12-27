@@ -7,6 +7,8 @@
 @use "@components/c-faq-accordion" as *;
 
 @mixin content-width {
+    max-width: 100%;
+
     /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
     & {
         @media screen and (min-width: 1200px) {
@@ -296,6 +298,22 @@
         .c-note {
             overflow: hidden;
         }
+
+        // Order video picture to bottom
+        &:has(picture:not(.d-none.d-lg-block)) {
+            @include sm {
+                display: flex;
+                flex-direction: column;
+            }
+
+            picture {
+                @include sm {
+                    order: 10;
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
     // Details guide link
@@ -439,7 +457,9 @@
     }
 
     // Q-Rejuvalight Pro treatment modes
-    .treatment-modes-list {
+    // Water Mode Selection
+    .treatment-modes-list,
+    .water-modes-list {
         display: flex;
         gap: 60px;
         @include content-width;
@@ -464,6 +484,60 @@
             height: auto;
             vertical-align: top;
             border-radius: 10px;
+        }
+    }
+
+    // What’s Included In The Box
+    .included-box-list {
+        @include content-width;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 32px;
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 12px;
+        }
+
+        li {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid #dfe0e0;
+
+            @include sm {
+                padding-top: 16px;
+            }
+
+            &:first-child {
+                &,
+                & + li {
+                    padding-top: 0;
+                    border-top: 0;
+                }
+
+                & + li {
+                    @include sm {
+                        padding-top: 16px;
+                        border-top: 1px solid #dfe0e0;
+                    }
+                }
+            }
+        }
+
+        img {
+            flex: none;
+            width: 40px;
+            height: auto;
+
+            & + p {
+                flex-grow: 1;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
         }
     }
 
