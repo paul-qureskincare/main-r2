@@ -487,6 +487,32 @@
         }
     }
 
+    // MOD for Water Mode Selection on Shower Filter Guide page
+    /* stylelint-disable-next-line selector-class-pattern */
+    @at-root .page\.shower-filter-online-guide .water-modes-list {
+        flex-wrap: wrap;
+
+        @include sm {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        li {
+            gap: 16px;
+            align-items: center;
+            width: auto;
+            text-align: center;
+
+            @include sm {
+                width: calc(50% - 24px);
+            }
+        }
+
+        picture {
+            max-width: 95px;
+        }
+    }
+
     // What’s Included In The Box
     .included-box-list {
         @include content-width;

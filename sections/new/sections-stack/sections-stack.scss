@@ -58,8 +58,9 @@
 .page\.shower-creative-brief,
 .page\.faucet-creative-brief,
 .page\.dermal-mist-brief,
+.page\.all-in-one-face-serum-creative-content-guide,
 .page\.faucet-online-guide,
-.page\.all-in-one-face-serum-creative-content-guide {
+.page\.shower-filter-online-guide {
     @include sections-stack;
 }
 
@@ -79,8 +80,9 @@
 .page\.shower-creative-brief,
 .page\.faucet-creative-brief,
 .page\.dermal-mist-brief,
+.page\.all-in-one-face-serum-creative-content-guide,
 .page\.faucet-online-guide,
-.page\.all-in-one-face-serum-creative-content-guide {
+.page\.shower-filter-online-guide {
     .sections-stack {
         padding-top: 0;
 
@@ -89,7 +91,6 @@
         }
     }
 }
-
 
 .page\.neck-decolletage-led-pro-content-guide,
 .page\.micro-infusion-brief,

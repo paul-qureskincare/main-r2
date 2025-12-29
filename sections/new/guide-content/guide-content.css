@@ -821,6 +821,19 @@
   vertical-align:top;
   border-radius:10px;
 }
+.page\.shower-filter-online-guide .water-modes-list{
+  flex-wrap:wrap;
+}
+.page\.shower-filter-online-guide .water-modes-list li{
+  gap:16px;
+  align-items:center;
+  width:auto;
+  text-align:center;
+}
+.page\.shower-filter-online-guide .water-modes-list picture{
+  max-width:95px;
+}
+
 .guide-content .included-box-list{
   max-width:100%;
   display:grid;
@@ -1047,6 +1060,13 @@
   .guide-content .treatment-modes-list,.guide-content .water-modes-list{
     flex-direction:column;
     gap:28px;
+  }
+  .page\.shower-filter-online-guide .water-modes-list{
+    flex-direction:row;
+    gap:24px;
+  }
+  .page\.shower-filter-online-guide .water-modes-list li{
+    width:calc(50% - 24px);
   }
   .guide-content .included-box-list{
     grid-template-columns:auto;

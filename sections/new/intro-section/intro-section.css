@@ -6,6 +6,12 @@
   border-radius:10px;
   background:#f6f6f7;
 }
+.intro-section article p{
+  margin-bottom:0;
+}
+.intro-section article p+p,.intro-section article picture{
+  margin-top:15px;
+}
 .intro-section article picture[data-url],.intro-section article picture[data-video-id]{
   position:relative;
   display:block;

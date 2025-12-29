@@ -14,7 +14,17 @@
             background: none;
         }
 
+        p {
+            margin-bottom: 0;
+
+            & + p {
+                margin-top: 15px;
+            }
+        }
+
         picture {
+            margin-top: 15px;
+
             &[data-video-id],
             &[data-url] {
                 @include play;
@@ -23,7 +33,7 @@
                 @include sm {
                     width: 100%;
                 }
-                
+
                 img {
                     width: 100%;
                     vertical-align: top;
