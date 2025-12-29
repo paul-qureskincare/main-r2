@@ -58,8 +58,7 @@
 .page\.shower-creative-brief,
 .page\.faucet-creative-brief,
 .page\.dermal-mist-brief,
-.page\.faucet-online-guide {
-.page\.micro-infusion-patches-content-guide,
+.page\.faucet-online-guide,
 .page\.all-in-one-face-serum-creative-content-guide {
     @include sections-stack;
 }
@@ -80,9 +79,8 @@
 .page\.shower-creative-brief,
 .page\.faucet-creative-brief,
 .page\.dermal-mist-brief,
-.page\.faucet-online-guide {
-.page\.all-in-one-face-serum-creative-content-guide,
-.page\.micro-infusion-patches-content-guide {
+.page\.faucet-online-guide,
+.page\.all-in-one-face-serum-creative-content-guide {
     .sections-stack {
         padding-top: 0;
 
