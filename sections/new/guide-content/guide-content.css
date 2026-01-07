@@ -71,6 +71,78 @@
   content:"\e90d";
 }
 
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
 .c-swiper{
   overflow:hidden;
   margin-right:-16px;
@@ -388,7 +460,7 @@
   gap:10px;
   align-items:center;
   width:100%;
-  height:63px;
+  min-height:63px;
   padding:12px 24px;
   color:#212428;
   text-align:left;
@@ -428,6 +500,35 @@
 .c-faq-accordion__content picture img{
   max-width:100%;
   height:auto;
+}
+.c-faq-accordion__content p{
+  margin:0;
+}
+.c-faq-accordion__content p:not(:last-child){
+  margin-bottom:15px;
+}
+.c-faq-accordion__content a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-faq-accordion__content a:hover{
+  text-decoration:none;
+}
+.c-faq-accordion__content a[href^="mailto:"]{
+  color:#91baec;
+}
+.c-faq-accordion__content strong{
+  font-weight:500;
+}
+.c-faq-accordion__content ul{
+  padding-left:24px;
+}
+.c-faq-accordion__content ul:not(:last-child){
+  margin-bottom:15px;
+}
+.c-faq-accordion__content ul li{
+  padding-left:4px;
+  list-style:disc;
 }
 .c-faq-accordion__content ol{
   counter-reset:item;

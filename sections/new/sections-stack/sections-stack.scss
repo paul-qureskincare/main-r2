@@ -22,7 +22,7 @@
             }
         }
 
-        &:has(.guide-menu) {
+        &:has(.guide-menu, .faqs-menu) {
             flex-flow: row wrap;
 
             .across-image-banner,
@@ -30,7 +30,9 @@
             .shopify-section {
                 width: 100%;
             }
+        }
 
+        &:has(.guide-menu) {
             .intro-section {
                 @include md {
                     margin-bottom: -40px;
@@ -61,7 +63,8 @@
 .page\.all-in-one-face-serum-creative-content-guide,
 .page\.faucet-online-guide,
 .page\.shower-filter-online-guide,
-.page\.hairgrowth-helmet-brief {
+.page\.hairgrowth-helmet-brief,
+.page\.faqs {
     @include sections-stack;
 }
 

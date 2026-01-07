@@ -3,7 +3,7 @@
 .e-icon {
     display: inline-block;
     line-height: 1;
-    
+
     &::before {
         @include icon;
     }
@@ -63,4 +63,77 @@
 
 .e-icon-play::before {
     content: "\e90d";
+}
+
+// FAQs icons
+.e-icon-shipping-order::before {
+    content: "\e90e";
+}
+
+.e-icon-shipping-order-hvr::before {
+    content: "\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear::before {
+    content: "\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr::before {
+    content: "\e910";
+}
+
+.e-icon-micro-infusion-system::before {
+    content: "\e913";
+}
+
+.e-icon-micro-infusion-system-hvr::before {
+    content: "\e912";
+}
+
+.e-icon-renew-lllt-helmet::before {
+    content: "\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr::before {
+    content: "\e914";
+}
+
+.e-icon-returns-exchanges::before {
+    content: "\e917";
+}
+
+.e-icon-returns-exchanges-hvr::before {
+    content: "\e916";
+}
+
+.e-icon-billing-payment::before {
+    content: "\e919";
+}
+
+.e-icon-billing-payment-hvr::before {
+    content: "\e918";
+}
+
+.e-icon-warranty::before {
+    content: "\e91b";
+}
+
+.e-icon-warranty-hvr::before {
+    content: "\e91a";
+}
+
+.e-icon-qure-app::before {
+    content: "\e91d";
+}
+
+.e-icon-qure-app-hvr::before {
+    content: "\e91c";
+}
+
+.e-icon-troubleshooting::before {
+    content: "\e91f";
+}
+
+.e-icon-troubleshooting-hvr::before {
+    content: "\e91e";
 }

@@ -6,7 +6,7 @@
   border-radius:10px;
   background:#f6f6f7;
 }
-.intro-section article p{
+.intro-section article h1:last-child,.intro-section article p{
   margin-bottom:0;
 }
 .intro-section article p+p,.intro-section article picture{
@@ -58,6 +58,10 @@
   inset:auto 20px 10px auto;
   font-size:35px;
   transform:none;
+}
+.intro-section--simple article{
+  padding:0;
+  background:none;
 }
 @media screen and (max-width:991px){
   .intro-section article{
