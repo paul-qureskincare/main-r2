@@ -1,3 +1,156 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
 .c-approved-by{
   gap:8px;
   align-items:center;
@@ -86,6 +239,81 @@
   border:1.5px solid;
   border-radius:50%;
   content:"\e901";
+}
+
+.c-note{
+  display:block;
+  max-width:500px;
+  padding:10px 12px;
+  font-size:16px;
+  line-height:1.25;
+  border-radius:10px;
+  background:#eef7f4;
+}
+.c-note p{
+  margin:0;
+}
+.c-note p+p{
+  margin-top:15px;
+}
+.c-note p+ul{
+  margin-top:5px;
+}
+.c-note strong{
+  font-weight:600;
+}
+.c-note ul{
+  padding-left:24px;
+}
+.c-note ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.c-note--info,.c-note--warning{
+  position:relative;
+  padding-left:36px;
+}
+.c-note--info:before,.c-note--warning:before{
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:16px;
+  height:16px;
+  color:#fff;
+  font-size:8px;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  line-height:16px;
+  text-align:center;
+  border-radius:16px;
+  content:"\e90c";
+}
+.c-note--info{
+  background:#f4f8fd;
+}
+.c-note--info:before{
+  background:#91baec;
+}
+.c-note--warning{
+  background:#ffeeea;
+}
+.c-note--warning:before{
+  background:#ff5429;
+}
+.page\.qure-microinfusion-offer-listicle .c-note{
+  max-width:none;
+  padding:12px 16px;
+  color:#008763;
+  font-size:18px;
+  background:#e5fff7;
 }
 
 .hero-section{
@@ -192,6 +420,16 @@
   vertical-align:top;
   border-radius:10px;
 }
+.page\.qure-microinfusion-offer-listicle .hero-section{
+  margin-bottom:0;
+}
+.page\.qure-microinfusion-offer-listicle .hero-section__content{
+  padding-top:20px;
+  padding-bottom:0;
+}
+.page\.qure-microinfusion-offer-listicle .hero-section__content-footer .c-note{
+  align-self:flex-start;
+}
 @media screen and (min-width:1200px){
   .hero-section .container{
     max-width:calc(100% - 50vw + 593.5px);
@@ -219,7 +457,7 @@
     height:26px;
     border-width:2px;
   }
-  .c-marked-list li{
+  .c-marked-list li,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
   }
   .hero-section{
@@ -262,5 +500,11 @@
   }
   .hero-section__content-footer{
     gap:20px;
+  }
+  .page\.qure-microinfusion-offer-listicle .hero-section .container{
+    flex-direction:column-reverse;
+  }
+  .page\.qure-microinfusion-offer-listicle .hero-section__content-footer .c-note{
+    align-self:center;
   }
 }

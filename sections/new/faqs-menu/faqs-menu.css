@@ -71,6 +71,14 @@
   content:"\e90d";
 }
 
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

@@ -1,0 +1,9 @@
+@use "@root/mixins" as *;
+
+.e-rating-stars {
+    position: relative;
+    display: inline-flex;
+    gap: 0.125em;
+    align-items: center;
+    color: #91baec;
+}

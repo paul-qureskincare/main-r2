@@ -1,0 +1,11 @@
+.text-section{
+  width:100%;
+}
+.text-section article{
+  text-align:center;
+}
+@media screen and (max-width:767px){
+  .text-section article{
+    text-align:left;
+  }
+}

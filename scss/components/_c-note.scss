@@ -56,11 +56,11 @@
             content: "\e90c";
         }
     }
-    
+
     // .c-note--info
     &--info {
         background: #f4f8fd;
-        
+
         &::before {
             background: #91baec;
         }
@@ -69,9 +69,24 @@
     // .c-note--warning
     &--warning {
         background: #ffeeea;
-        
+
         &::before {
             background: #ff5429;
+        }
+    }
+
+
+    // Styles on qure-microinfusion-offer-listicle page
+    /* stylelint-disable-next-line selector-class-pattern */
+    .page\.qure-microinfusion-offer-listicle & {
+        max-width: none;
+        padding: 12px 16px;
+        color: #008763;
+        font-size: 18px;
+        background: #e5fff7;
+
+        @include sm {
+            font-size: 16px;
         }
     }
 }

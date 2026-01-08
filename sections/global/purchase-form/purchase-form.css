@@ -385,3 +385,9 @@
     font-size: 9px;
     margin-top: 1px;
 }
+
+/* Styles on qure-microinfusion-offer-listicle page */
+.page\.qure-microinfusion-offer-listicle .user_guideline {
+   padding-top: 0;
+   padding-bottom: 0;
+}

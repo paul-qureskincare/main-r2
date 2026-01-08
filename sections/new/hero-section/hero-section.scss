@@ -1,12 +1,14 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 @use "@components/c-approved-by" as *;
 @use "@components/c-info-bar" as *;
 @use "@components/c-marked-list" as *;
+@use "@components/c-note" as *;
 
 .hero-section {
     $root: &;
 
-    // TODO: Temporary styles, need to remove after add section stack
+    // TODO: Temporary margin styles, need to remove after add section stack
     margin-bottom: 60px;
 
     @include sm {
@@ -169,6 +171,39 @@
                 height: auto;
                 vertical-align: top;
                 border-radius: 10px;
+            }
+        }
+    }
+
+    // Styles on qure-microinfusion-offer-listicle page
+    /* stylelint-disable-next-line selector-class-pattern */
+    @at-root .page\.qure-microinfusion-offer-listicle  {
+        #{$root} {
+            margin-bottom: 0;
+
+            /* @include sm {
+                padding-top: 20px;
+            } */
+
+            .container {
+                @include sm {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            &__content {
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
+
+            &__content-footer {
+                .c-note {
+                    align-self: flex-start;
+
+                    @include sm {
+                        align-self: center;
+                    }
+                }
             }
         }
     }
