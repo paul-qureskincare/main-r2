@@ -9,8 +9,10 @@
         font-weight: 500;
     }
 
-    &__slider {
-
+    &__list {
+        ol {
+            @include numeric-list;
+        }
     }
 
     &__item {
@@ -21,7 +23,7 @@
         min-height: 165px;
         border: 1px solid #dfe0e0;
         border-radius: 10px;
-        
+
         &:has(picture) {
             min-height: 224px;
         }
@@ -84,7 +86,7 @@
 
         .c-note {
             margin-top: 15px;
-            
+
             @include sm {
                 margin-top: auto;
             }

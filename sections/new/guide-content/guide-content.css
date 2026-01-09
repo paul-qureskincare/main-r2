@@ -389,6 +389,33 @@
   font-size:20px;
   font-weight:500;
 }
+.c-step-by-step__list ol{
+  counter-reset:item;
+}
+.c-step-by-step__list ol:not(:last-child){
+  margin-bottom:15px;
+}
+.c-step-by-step__list ol li{
+  position:relative;
+  min-height:24px;
+  padding-left:36px;
+  counter-increment:item;
+}
+.c-step-by-step__list ol li:before{
+  position:absolute;
+  top:0;
+  left:0;
+  width:24px;
+  height:24px;
+  line-height:24px;
+  text-align:center;
+  border:1px solid;
+  border-radius:24px;
+  content:counters(item, "");
+}
+.c-step-by-step__list ol li:not(:last-child){
+  margin-bottom:12px;
+}
 .c-step-by-step__item{
   position:relative;
   display:flex;
