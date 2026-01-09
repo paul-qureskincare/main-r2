@@ -66,7 +66,12 @@
 .page\.hairgrowth-helmet-brief,
 .page\.hairgrowth-helmet-guide,
 .page\.faqs,
-.page\.qure-microinfusion-offer-listicle {
+.page\.qure-microinfusion-offer-listicle,
+.page\.customer-reviews,
+.page\.q-rejuvalight-pro-customer-reviews,
+.page\.neck-decolletage-led-customer-reviews,
+.page\.all-in-one-serum-customer-reviews,
+.page\.micro-infusion-targeted-patches-customer-reviews {
     @include sections-stack;
 }
 
@@ -91,7 +96,12 @@
 .page\.shower-filter-online-guide,
 .page\.hairgrowth-helmet-brief,
 .page\.hairgrowth-helmet-guide,
-.page\.qure-microinfusion-offer-listicle {
+.page\.qure-microinfusion-offer-listicle,
+.page\.customer-reviews,
+.page\.q-rejuvalight-pro-customer-reviews,
+.page\.neck-decolletage-led-customer-reviews,
+.page\.all-in-one-serum-customer-reviews,
+.page\.micro-infusion-targeted-patches-customer-reviews {
     .sections-stack {
         padding-top: 0;
 

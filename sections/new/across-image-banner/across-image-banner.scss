@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 @use "@elements/e-discount-badge" as *;
 @use "@components/c-certified-box" as *;
 
@@ -83,6 +84,60 @@
             @include sm {
                 margin-right: auto;
                 margin-left: auto;
+            }
+        }
+
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.q-rejuvalight-pro-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.neck-decolletage-led-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.all-in-one-serum-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.micro-infusion-targeted-patches-customer-reviews & {
+            .container {
+                @include banner-height(550, 1440);
+
+                @include sm {
+                    @include banner-height(400, 375);
+                }
+
+                align-items: center;
+                justify-content: start;
+            }
+
+            article {
+                flex-direction: column-reverse;
+                gap: 32px;
+                align-items: center;
+
+                @include sm {
+                    gap: 24px;
+                    padding-top: 50px;
+                }
+            }
+
+            .trustpilot-rating {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                ul {
+                    display: flex;
+                    gap: 2px;
+                    font-size: 24px;
+
+                    li {
+                        color: #dcdce6;
+                        background: #fff;
+
+                        &:not(:last-child) {
+                            color: #73cf11;
+                        }
+                    }
+                }
             }
         }
     }

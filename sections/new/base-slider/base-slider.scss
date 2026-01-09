@@ -25,12 +25,23 @@
 
     .c-swiper {
         text-align: initial;
-        
+
         &:not(:first-child) {
             margin-top: 40px;
 
             @include md {
                 margin-top: 20px;
+            }
+        }
+
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                @include play;
+
+                &::after {
+                    font-size: 46px;
+                }
             }
         }
     }
@@ -46,6 +57,28 @@
     &--tree-cards {
         .container {
             max-width: 1082px;
+        }
+    }
+
+    // Wistia embed video code
+    .wistia-embed-video {
+         @include wistia-inline;
+
+        .wistia_swatch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            transition: opacity 200ms;
+            opacity: 0;
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
         }
     }
 }

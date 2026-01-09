@@ -1,3 +1,160 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-trustpilot:before{
+  content:"\e922";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
 .e-discount-badge{
   display:flex;
   flex-direction:column;
@@ -110,6 +267,34 @@
 }
 .across-image-banner--hero .c-certified-box{
   background:#fff;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container{
+  height:38.1944444444vw;
+  max-height:550px;
+  align-items:center;
+  justify-content:start;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article{
+  flex-direction:column-reverse;
+  gap:32px;
+  align-items:center;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul{
+  display:flex;
+  gap:2px;
+  font-size:24px;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li{
+  color:#dcdce6;
+  background:#fff;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child){
+  color:#73cf11;
 }
 .across-image-banner--reverse .container{
   align-items:flex-end;
@@ -239,6 +424,14 @@
   .across-image-banner--hero .c-certified-box{
     margin-right:auto;
     margin-left:auto;
+  }
+  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container{
+    height:106.6666666667vw;
+    max-height:400px;
+  }
+  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article{
+    gap:24px;
+    padding-top:50px;
   }
   .across-image-banner--reverse .container{
     justify-content:flex-end;

@@ -622,7 +622,7 @@
 
     // Wistia embed video code
     .wistia-embed-video {
-         @include wistia-inline;
+        @include wistia-inline;
 
         .wistia_swatch {
             position: absolute;
