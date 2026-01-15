@@ -65,16 +65,23 @@
     .c-faq-accordion {
         @include content-width;
 
-        &::before {
-            display: block;
-            margin-bottom: 20px;
-            font-size: 20px;
-            content: attr(data-title);
-        }
 
-        & + .c-faq-accordion {
+        // .c-faq-accordion__item[data-title]
+        &__item[data-title] {
+            position: relative;
+            overflow: visible;
+            margin-top: 70px;
+
             &::before {
-                margin-top: 28px;
+                position: absolute;
+                top: -45px;
+                left: 0;
+                font-size: 20px;
+                content: attr(data-title);
+            }
+
+            &:first-child {
+                margin-top: 45px;
             }
         }
     }

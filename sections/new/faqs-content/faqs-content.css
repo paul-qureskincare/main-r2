@@ -154,14 +154,20 @@
 .faqs-content .c-faq-accordion{
   max-width:100%;
 }
-.faqs-content .c-faq-accordion:before{
-  display:block;
-  margin-bottom:20px;
+.faqs-content .c-faq-accordion__item[data-title]{
+  position:relative;
+  overflow:visible;
+  margin-top:70px;
+}
+.faqs-content .c-faq-accordion__item[data-title]:before{
+  position:absolute;
+  top:-45px;
+  left:0;
   font-size:20px;
   content:attr(data-title);
 }
-.faqs-content .c-faq-accordion+.c-faq-accordion:before{
-  margin-top:28px;
+.faqs-content .c-faq-accordion__item[data-title]:first-child{
+  margin-top:45px;
 }
 .faqs-content .secure-strap{
   display:flex;
