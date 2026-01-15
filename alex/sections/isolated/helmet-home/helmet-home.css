@@ -1,3 +1,172 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-trustpilot:before{
+  content:"\e922";
+}
+
+.e-icon-pm:before{
+  content:"\e923";
+}
+
+.e-icon-am:before{
+  content:"\e924";
+}
+
+.e-icon-watch:before{
+  content:"\e925";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
 .helmet-home{
   --section-padding-top:30px;
   --section-padding-top-mob:10px;
@@ -39,6 +208,29 @@
   text-transform:capitalize;
   border-radius:100px;
   background:#212428;
+}
+.helmet-home__gallery .swiper-slide .watch-how-it-works{
+  position:absolute;
+  bottom:18px;
+  left:18px;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  padding:9px 20px;
+  font-size:20px;
+  font-weight:500;
+  border-radius:40px;
+  background:hsla(0,0%,100%,.6);
+  cursor:pointer;
+  transition:all .2s linear;
+  -webkit-backdrop-filter:blur(6px);
+          backdrop-filter:blur(6px);
+}
+.helmet-home__gallery .swiper-slide .watch-how-it-works:hover{
+  background:#fff;
+}
+.helmet-home__gallery .swiper-slide .watch-how-it-works .e-icon{
+  -webkit-text-stroke:1px;
 }
 .helmet-home__gallery-main .swiper-wrapper .swiper-slide img{
   border-radius:10px;
@@ -344,8 +536,9 @@
   background:#fff;
 }
 .helmet-home-modal__text{
+  flex-grow:1;
   overflow:auto;
-  padding:32px 24px;
+  padding:32px 24px 0;
 }
 .helmet-home-modal__text hr{
   margin-top:24px;
@@ -358,6 +551,22 @@
 }
 .helmet-home-modal__text>strong{
   display:block;
+}
+.helmet-home-modal__disclaimer{
+  max-width:395px;
+  padding:0 24px 32px;
+  color:#8b8c8e;
+  font-size:14px;
+  line-height:1.25;
+}
+.helmet-home-modal__disclaimer:before{
+  display:block;
+  width:45px;
+  height:1px;
+  margin-top:20px;
+  margin-bottom:20px;
+  background:currentcolor;
+  content:"";
 }
 .product\.hair-growth-helmet{
   overflow:unset;
@@ -481,7 +690,7 @@
     right:16px;
     left:auto;
   }
-  .helmet-home-modal__text{
+  .helmet-home-modal__disclaimer,.helmet-home-modal__text{
     padding-right:16px;
     padding-left:16px;
   }
@@ -510,6 +719,12 @@
   }
   .helmet-home__gallery .swiper-slide .coming-soon{
     left:29px;
+  }
+  .helmet-home__gallery .swiper-slide .watch-how-it-works{
+    bottom:12px;
+    left:28px;
+    padding:5px 16px;
+    font-size:16px;
   }
   .helmet-home__header{
     margin-bottom:14px;

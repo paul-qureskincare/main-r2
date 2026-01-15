@@ -1,5 +1,5 @@
   function initWistiaModal() {
-    const videoLinks = document.querySelectorAll('picture[data-video-id]');
+    const videoLinks = document.querySelectorAll('picture[data-video-id], .watch-wistia-video');
     const modal = document.getElementById('reusableWistiaModal');
     const videoContainer = document.getElementById('wistiaVideoContainer');
 
@@ -20,7 +20,7 @@
   }
 
   initWistiaModal();
-  
+
 new bootstrap.Modal(document.getElementById('reusableWistiaModal'), {
   backdrop: true,
   keyboard: true

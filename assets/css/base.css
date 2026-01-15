@@ -853,6 +853,10 @@ ul.list-dots {
     opacity: 1;
     width: 24px;
     height: 24px;
+    line-height: 1;
+}
+.btn-close .fa-solid {
+    vertical-align: top;
 }
 .btn--link {
     padding: 0 0 4px;

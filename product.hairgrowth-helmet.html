@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="assets/css/spacings.css">
     <link href="assets/css/theme-fonts.css" rel="stylesheet" />
     <link href="assets/css/base.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #212428;
+            --discount-color: #ff5429;
+        }
+    </style>
     <!-- Loading HTML Files -->
     <script src="assets/js/fileloader.js"></script>
 </head>
 <body class="product.hair-growth-helmet">
-    <!-- PAGE HEADER --> 
+    <!-- PAGE HEADER -->
     <div id="site-header"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -96,16 +102,16 @@
                         <div class="helmet-home__according">
                             <div class="accordion" id="helmet-according">
                                 <div class="accordion-item qure__accordion-item">
-                                    <button 
-                                        class="accordion-button collapsed qure__accordion-header" 
+                                    <button
+                                        class="accordion-button collapsed qure__accordion-header"
                                         type="button"
-                                        data-bs-toggle="collapse" 
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#key-benefits"
                                     >
                                         Key Benefits
                                     </button>
-                                    <div 
-                                        id="key-benefits" 
+                                    <div
+                                        id="key-benefits"
                                         class="accordion-collapse collapse qure__accordion-content"
                                         data-bs-parent="#helmet-according"
                                     >
@@ -123,16 +129,16 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item qure__accordion-item">
-                                    <button 
-                                        class="accordion-button collapsed qure__accordion-header" 
+                                    <button
+                                        class="accordion-button collapsed qure__accordion-header"
                                         type="button"
-                                        data-bs-toggle="collapse" 
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#how-to-use"
                                     >
                                         How To Use
                                     </button>
-                                    <div 
-                                        id="how-to-use" 
+                                    <div
+                                        id="how-to-use"
                                         class="accordion-collapse collapse qure__accordion-content"
                                         data-bs-parent="#helmet-according"
                                     >
@@ -150,16 +156,16 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item qure__accordion-item">
-                                    <button 
-                                        class="accordion-button collapsed qure__accordion-header" 
+                                    <button
+                                        class="accordion-button collapsed qure__accordion-header"
                                         type="button"
-                                        data-bs-toggle="collapse" 
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#what-to-expect"
                                     >
                                         What To Expect
                                     </button>
-                                    <div 
-                                        id="what-to-expect" 
+                                    <div
+                                        id="what-to-expect"
                                         class="accordion-collapse collapse qure__accordion-content"
                                         data-bs-parent="#helmet-according"
                                     >
@@ -169,16 +175,16 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item qure__accordion-item">
-                                    <button 
-                                        class="accordion-button collapsed qure__accordion-header" 
+                                    <button
+                                        class="accordion-button collapsed qure__accordion-header"
                                         type="button"
-                                        data-bs-toggle="collapse" 
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#whats-included"
                                     >
                                         What's Included
                                     </button>
-                                    <div 
-                                        id="whats-included" 
+                                    <div
+                                        id="whats-included"
                                         class="accordion-collapse collapse qure__accordion-content"
                                         data-bs-parent="#helmet-according"
                                     >
@@ -240,6 +246,15 @@
                                     <div class="slide-image">
                                         <img src="alex/sections/isolated/helmet-home/images/helmet-home-1.webp" alt="" />
                                         <div class="coming-soon">Coming soon</div>
+                                        <div
+                                            class="watch-how-it-works watch-wistia-video"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reusableWistiaModal"
+                                            data-video-id="05w38biy23"
+                                        >
+                                            <i class="e-icon e-icon-watch"></i>
+                                            <div><strong>Watch:</strong> How It Works</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -406,6 +421,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="helmet-home-modal__disclaimer">
+                    *Results based on a 16-week study. Participants used the helmet 7 times per week. Individual results may vary.
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal">
                     <img src="assets/images/cross_black.svg" alt="" />
                 </button>
@@ -428,6 +446,8 @@
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('helmet-home-swiper', 'alex/sections/isolated/helmet-home/helmet-home.js');
             loadScriptOnce('klaviyo-early-access', 'https://static.klaviyo.com/onsite/js/VtM5fu/klaviyo.js');
+            loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
+            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
         });
     </script>
     <!-- HELMET HOME END -->
@@ -729,7 +749,7 @@
                                 <p>Proven to visually improve <span>Temporal Thinning</span></p>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="swiper-arrows-with-pagination">
                         <div class="qure-swiper-button-prev qure-swiper-arrow backed-by-real-results-arrow-left"><i class="fa-regular fa-angle-left"></i></div>
@@ -868,9 +888,9 @@
             <div class="across-slider__header container">
                 <h2>Restore your hair health in just 12 minutes a day</h2>
                 <!-- <a class="popup-youtube lvideo" data-url="https://www.youtube.com/watch?v=mVdncsTAXiA"> -->
-                <a 
+                <a
                     class="filter-card-video"
-                    data-bs-toggle="modal" 
+                    data-bs-toggle="modal"
                     data-bs-target="#reusableWistiaModal"
                     data-video-id="wvoucso35j"
                 >
@@ -1387,6 +1407,20 @@
         </div>
     </div>
     <!-- FAQ SECTION END -->
+
+    <!-- Reusable modal for all the wistia videos for all the tab contents -->
+    <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CART AND FOOTER -->
     <div id="site-footer"></div>

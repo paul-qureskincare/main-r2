@@ -1,3 +1,5 @@
+@use "@elements/e-icon" as *;
+
 @mixin badge {
     padding: 3px 12px;
     color: #ff5429;
@@ -98,9 +100,41 @@
                     left: 29px;
                 }
             }
+
+            .watch-how-it-works {
+                position: absolute;
+                bottom: 18px;
+                left: 18px;
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                padding: 9px 20px;
+                font-size: 20px;
+                font-weight: 500;
+                border-radius: 40px;
+                background: rgb(255 255 255 / 60%);
+                cursor: pointer;
+                transition: all 200ms linear;
+                backdrop-filter: blur(6px);
+
+                @include sm {
+                    bottom: 12px;
+                    left: 28px;
+                    padding: 5px 16px;
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background: #fff;
+                }
+
+                .e-icon {
+                    -webkit-text-stroke: 1px
+                }
+            }
         }
     }
-    
+
     // .helmet-home__gallery-main
     &__gallery-main {
         .swiper-wrapper {
@@ -133,7 +167,7 @@
 
             &.swiper-slide-thumb-active {
                 opacity: 1;
-                
+
                 img {
                     border: 1px solid #212428;
                 }
@@ -142,7 +176,7 @@
             img {
                 border-radius: 5px;
             }
-        }     
+        }
     }
 
     // .helmet-home__header
@@ -206,7 +240,7 @@
 
                 @include sm {
                     font-size: 20px;
-                }                
+                }
             }
 
             // .price-offer__discount
@@ -257,7 +291,7 @@
                 text-align: center;
                 border-radius: 40px;
                 background: linear-gradient(90deg, #FF4E22 0%, #FF8566 50%, #FF4E22 100%);
-                
+
             }
         }
     }
@@ -283,7 +317,7 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
-        
+
         .btn {
             width: 100%;
 
@@ -301,7 +335,7 @@
             }
         }
 
-        
+
         .pre-order-info {
             display: flex;
             justify-content: space-between;
@@ -332,7 +366,7 @@
                 gap: 4px;
                 align-items: center;
                 color: #8b8c8e;
-                
+
                 &[data-bs-toggle] {
                     text-decoration: underline;
                     cursor: pointer;
@@ -471,7 +505,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-    
+
             a {
                 display: flex;
                 gap: 8px;
@@ -545,11 +579,12 @@
         border-radius: 0;
         background: #fff;
     }
-    
+
     // .helmet-home-modal__text
     &__text {
+        flex-grow: 1;
         overflow: auto;
-        padding: 32px 24px;
+        padding: 32px 24px 0;
 
         @include md {
             padding-right: 16px;
@@ -566,9 +601,32 @@
             font-family: inherit;
             font-weight: 600;
         }
-    
+
         & > strong {
             display: block;
+        }
+    }
+
+    &__disclaimer {
+        max-width: 395px;
+        padding: 0 24px 32px;
+        color: #8b8c8e;
+        font-size: 14px;
+        line-height: 1.25;
+
+        @include md {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        &::before {
+            display: block;
+            width: 45px;
+            height: 1px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: currentcolor;
+            content: '';
         }
     }
 }
@@ -680,7 +738,7 @@
             vertical-align: top;
         }
     }
-    
+
     &__content {
         width: 100%;
         max-width: 758px;
@@ -688,6 +746,6 @@
     }
 
     .email-modal-form {
-        
+
     }
 }
