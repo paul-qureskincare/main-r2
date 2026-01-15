@@ -17,6 +17,10 @@
 .e-pill-badge .e-checkmark{
   font-size:20px;
 }
+.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+}
 
 .e-checkmark{
   width:1em;
@@ -126,6 +130,14 @@
 
 .e-icon-trustpilot:before{
   content:"\e922";
+}
+
+.e-icon-pm:before{
+  content:"\e923";
+}
+
+.e-icon-am:before{
+  content:"\e924";
 }
 
 .e-icon-shipping-order:before{

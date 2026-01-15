@@ -9,5 +9,22 @@
         @include sm {
             text-align: left;
         }
+
+        h2 {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    .page\.exclusive-holiday-bundle-deal & {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
     }
 }

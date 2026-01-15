@@ -1,0 +1,25 @@
+@use "@root/mixins" as *;
+
+.e-price {
+    $root: &;
+
+    display: inline-flex;
+
+    /* &__current {
+
+    } */
+
+    &__main {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__old {
+        color: #8b8c8e;
+        text-decoration: line-through;
+    }
+
+    &:has(.e-price__old) {
+        color: var(--discount-color);
+    }
+}

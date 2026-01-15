@@ -2,8 +2,27 @@
 
 .e-rating-stars {
     position: relative;
-    display: inline-flex;
-    gap: 0.125em;
-    align-items: center;
-    color: #91baec;
+    display: inline-block;
+    line-height: 1;
+
+    &::before,
+    &::after {
+        @include icon;
+        letter-spacing: 0.135em;
+        white-space: nowrap;
+        content: "\e921\e921\e921\e921\e921";
+    }
+
+    &::before {
+        color: #dfe0e0;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: calc((var(--rating) / 5) * 100%);
+        color: #91baec;
+    }
 }
