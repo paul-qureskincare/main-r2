@@ -568,10 +568,10 @@
   background:currentcolor;
   content:"";
 }
-.product\.hair-growth-helmet{
+.page\.hair-growth-helmet-red-light,.product\.hair-growth-helmet{
   overflow:unset;
 }
-.product\.hair-growth-helmet .modal-backdrop{
+.page\.hair-growth-helmet-red-light .modal-backdrop,.product\.hair-growth-helmet .modal-backdrop{
   display:none;
 }
 
