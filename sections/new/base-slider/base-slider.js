@@ -1,4 +1,11 @@
-document.querySelectorAll('[data-swiper]').forEach((el) => {
+// Wrap in IIFE to avoid global identifier clashes when script loads multiple times
+(function() {
+// Initialize Swiper on a given element and handle responsive enable/disable
+function setupBaseSlider(el) {
+    if (!(el instanceof HTMLElement)) return;
+    // Prevent double-binding on the same element
+    if (el.hasAttribute('data-swiper-bound')) return;
+
     const config = JSON.parse(el.getAttribute('data-swiper'));
 
     // Responsive enablement: allow enabling only on mobile/desktop
@@ -25,18 +32,18 @@ document.querySelectorAll('[data-swiper]').forEach((el) => {
     // Handle thumbs navigation slider
     const thumbsSelector = el.getAttribute("data-swiper-thumbs");
     let thumbSwiper = null;
-    
+
     if (thumbsSelector) {
         const thumbsEl = document.querySelector("." + thumbsSelector);
         if (thumbsEl) {
             const thumbsConfig = thumbsEl.getAttribute("data-swiper");
             const thumbsOptions = thumbsConfig ? JSON.parse(thumbsConfig) : {};
-            
+
             // Default thumbs configuration
             thumbsOptions.watchSlidesProgress = true;
             thumbsOptions.freeMode = thumbsOptions.freeMode !== false;
             thumbsOptions.slideToClickedSlide = true;
-            
+
             thumbSwiper = new Swiper(thumbsEl, thumbsOptions);
             config.thumbs = { swiper: thumbSwiper };
         }
@@ -64,6 +71,8 @@ document.querySelectorAll('[data-swiper]').forEach((el) => {
         if (!mainSwiper) {
             // When thumbs are configured, ensure config.thumbs is set before init
             mainSwiper = new Swiper(el, config);
+            // Mark element as initialized to avoid duplicate bindings
+            el.setAttribute('data-swiper-bound', 'true');
         }
     };
 
@@ -71,6 +80,7 @@ document.querySelectorAll('[data-swiper]').forEach((el) => {
         if (mainSwiper) {
             mainSwiper.destroy(true, true);
             mainSwiper = null;
+            // Keep bound marker; we only manage lifecycle by viewport, not re-bind listeners
         }
     };
 
@@ -86,4 +96,25 @@ document.querySelectorAll('[data-swiper]').forEach((el) => {
     // Initialize appropriately and listen for resizes
     handleResponsive();
     window.addEventListener("resize", handleResponsive);
+}
+
+// Initialize existing sliders
+document.querySelectorAll('[data-swiper]').forEach(setupBaseSlider);
+
+// Observe DOM for dynamically added sliders
+const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+        for (const node of mutation.addedNodes) {
+            if (!(node instanceof HTMLElement)) continue;
+            if (node.matches && node.matches('[data-swiper]')) {
+                setupBaseSlider(node);
+            }
+            const nested = node.querySelectorAll ? node.querySelectorAll('[data-swiper]') : [];
+            nested.forEach(setupBaseSlider);
+        }
+    }
 });
+
+observer.observe(document.documentElement, { childList: true, subtree: true });
+
+})();

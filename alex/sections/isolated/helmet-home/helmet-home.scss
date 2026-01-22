@@ -635,7 +635,9 @@
 .page\.hair-growth-helmet-red-light,
 /* stylelint-disable-next-line selector-class-pattern */
 .product\.hair-growth-helmet {
-    overflow: unset;
+    @media screen and (min-width: 768px) {
+        overflow: unset;
+    }
 
     .modal-backdrop {
         display: none;

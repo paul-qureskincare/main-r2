@@ -2,7 +2,7 @@
 
 .c-swiper {
     $root: &;
-    
+
     overflow: hidden;
     margin-right: -16px;
     margin-left: -16px;
@@ -18,9 +18,13 @@
         }
 
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             vertical-align: top;
+        }
+
+        &.swiper-slide-thumb-active {
+
         }
     }
 
@@ -44,7 +48,7 @@
         gap: 10px;
         width: auto;
     }
-    
+
     // .c-swiper-button-prev
     // .c-swiper-button-next
     &-button-prev,

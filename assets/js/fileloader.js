@@ -1,7 +1,10 @@
     const sectionsToLoad = [
       { file: './site-header.html', targetId: 'site-header' },
+      { file: './site-header-new.html', targetId: 'site-header-new' },
       { file: './site-footer.html', targetId: 'site-footer' },
+      { file: './site-footer-new.html', targetId: 'site-footer-new' },
       { file: './site-cart-drawer.html', targetId: 'site-cart-drawer' },
+      // { file: './site-cart-drawer-new.html', targetId: 'site-cart-drawer-new' },
    ];
 
    async function loadSectionsSequentially(sections) {
@@ -36,7 +39,7 @@
             if (!checkLoaded()) {
                console.warn(`Content from ${section.file} did not load properly into #${section.targetId}`);
             } else {
-               
+
             }
 
          } catch (err) {
