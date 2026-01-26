@@ -777,11 +777,13 @@ ul.list-dots {
     max-width:var(--btn-mx-w, auto);
     text-align: center;
 }
-.btn-sm{
+.btn-sm,
+.btn--sm {
     font-size:var(--btn-sm-font-size,18px);
     padding: var(--btn-sm-padding, 4px 20px);
 }
-.btn-md{
+.btn-md,
+.btn--md {
     padding: var(--btn-md-padding, 8px 28px);
 
 }

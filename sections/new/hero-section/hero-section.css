@@ -119,6 +119,10 @@
   content:"\e929";
 }
 
+.e-icon-pillow:before{
+  content:"\e92c";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -252,7 +256,7 @@
 }
 .c-marked-list li{
   position:relative;
-  padding-left:32px;
+  padding-left:1.75em;
   line-height:1.25;
 }
 .c-marked-list li:before{
@@ -262,10 +266,10 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  width:20px;
-  height:20px;
+  width:2.25em;
+  height:2.25em;
   color:#91baec;
-  font-size:8px;
+  font-size:.5em;
   font-family:icomoon;
   font-weight:400;
   font-style:normal;

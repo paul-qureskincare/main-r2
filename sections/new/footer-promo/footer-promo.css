@@ -119,6 +119,10 @@
   content:"\e929";
 }
 
+.e-icon-pillow:before{
+  content:"\e92c";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

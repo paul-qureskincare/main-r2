@@ -1,0 +1,197 @@
+@use "@root/mixins" as *;
+@use "@elements/e-rating-stars" as *;
+@use "@components/c-marked-list" as *;
+
+// BASE PAGE CART
+.cart {
+
+}
+
+// FLYOUT CART
+.flyout-cart {
+    // .flyout-cart__wrapper
+    &__wrapper {
+
+    }
+
+    // .flyout-cart__header
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 24px 14px;
+        color: #000;
+
+        .btn-close {
+            margin: -5px;
+            padding: 5px;
+        }
+    }
+
+    // .flyout-cart__gifts
+    &__gifts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        margin: 0 24px 36px;
+        padding-bottom: 48px;
+        text-align: center;
+        border-bottom: 1px solid #dfe0e0;
+
+        p {
+            font-size: 14px;
+        }
+
+        ul {
+            position: relative;
+            height: 14px;
+            border: 1px solid #8b8c8e;
+            border-radius: 20px;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: var(--gifts-progress);
+                border-radius: 20px;
+                background: #d3e3f7;
+                content: '';
+            }
+        }
+
+        li {
+            position: absolute;
+            top: 50%;
+            left: var(--gifts-icon-pos, 15%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            color: #8b8c8e;
+            border: 1px solid #8b8c8e;
+            border-radius: 50%;
+            background: #f6f6f7;
+            transform: translate(calc(-1 * var(--gifts-icon-pos, 15%)), -50%);
+
+            &.active {
+                color: #212428;
+                border-color: #91baec;
+                background: #91baec;
+            }
+
+            .e-icon {
+                font-size: 16px;
+            }
+
+            .e-icon-checkmark {
+                font-size: 8px;
+            }
+
+            span {
+                position: absolute;
+                top: 28px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        overflow: auto;
+        min-height: 1px;
+    }
+
+    &__body {
+        flex-grow: 1;
+        // overflow: auto;
+        // min-height: 1px;
+    }
+
+    &__placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    &__placeholder-header {
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    &__placeholder-wrapper {
+        max-width: 343px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 24px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+    }
+
+    &__placeholder-content {
+        display: grid;
+        grid-template: repeat(3, auto) / 100px 1fr;
+        gap: 16px 18px;
+        align-items: center;
+        margin-bottom: 18px;
+
+        img {
+            @include img-fluid;
+        }
+
+        h6 {
+            margin-bottom: 0;
+        }
+
+        ul, .btn {
+            grid-column: span 2;
+        }
+
+        ul {
+            @include c-marked-list;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: inherit;
+        }
+    }
+
+    &__placeholder-footer {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, auto);
+        gap: 0 8px;
+        place-items: center;
+        padding-top: 18px;
+        font-size: 14px;
+        line-height: 1.2;
+        border-top: 1px solid #dfe0e0;
+
+        .e-rating-stars {
+            margin-left: auto;
+        }
+
+        strong {
+            margin-right: auto;
+        }
+
+        p {
+            grid-column: span 2;
+        }
+    }
+
+    &__footer {
+        flex: none;
+        height: 300px;
+        background: #ccc;
+    }
+}

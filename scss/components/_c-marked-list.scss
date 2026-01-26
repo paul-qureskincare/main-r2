@@ -1,13 +1,13 @@
 @use "@root/mixins" as *;
 
-.c-marked-list {
+@mixin c-marked-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
 
     li {
         position: relative;
-        padding-left: 32px;
+        padding-left: 1.75em;
         line-height: 1.25;
 
         @include sm {
@@ -21,10 +21,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
+            width: 2.25em;
+            height: 2.25em;
             color: #91baec;
-            font-size: 8px;
+            font-size: 0.5em;
             @include icon;
             vertical-align: top;
             border: 1.5px solid;
@@ -32,4 +32,8 @@
             content: "\e901";
         }
     }
+}
+
+.c-marked-list {
+    @include c-marked-list;
 }
