@@ -10,11 +10,17 @@
     <link href="assets/css/theme-fonts.css" rel="stylesheet" />
     <link href="assets/css/black-friday.css" rel="stylesheet" />
     <link href="assets/css/base.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #212428;
+            --discount-color: #ff5429;
+        }
+    </style>
     <!-- Loading HTML Files -->
    <script src="assets/js/fileloader.js"></script>
 </head>
 <body class="product.shower-filter">
-    <!-- PAGE HEADER --> 
+    <!-- PAGE HEADER -->
    <div id="site-header"></div>
    <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -32,7 +38,7 @@
          </div>
       </div>
    </div>
-       
+
 
     <!-- SECTION LIST -->
     <!-- Section Featured Product Bundle -->
@@ -53,7 +59,7 @@
                                     </div>
                                 </div>
                                <div class="swiper-slide">
-                                    <div class="trusted_video_card d-block"> 
+                                    <div class="trusted_video_card d-block">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal"
                                         data-video-id="bwhqvtar9u" class="filter-card-item filter-card-video slide-image">
                                         <img src="sections/isolated/product-shower-filter/images/shower_filter_2.webp"
@@ -183,17 +189,12 @@
                             <p class="black_friday_pricing">BLACK FRIDAY</p>
                             <a href="" class="save_perc">SAVE 26%</a>
                         </div>
-                        <div class="shower__single-shortdes">
+                        <div class="shower__single-shortdes-new">
                             <ul>
-                                <li>Clinically proven to increase skin moisture by 15%, and scalp moisture by 22% after just
-                                    8 weeks.</li>
-                                <li>Removes up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for
-                                    an overall more
-                                    hydrated, clearer
-                                    skin and hair.</li>
-                                <li>Reduces limescale buildup, which can dry out skin and hair, for smoother, softer
-                                    results.</li>
+                                <li>Lifetime Warranty</li>
+                                <li>99% Fit Compatibility</li>
                             </ul>
+                            <p>Remove up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin and hair.</p>
                         </div>
                         <div class="border-top my-25"></div>
                         <div class="product_shower-variants">
@@ -207,7 +208,7 @@
                                             <img class="qv-img"
                                                 src="sections/isolated/product-shower-filter/images/variant-white-1.webp">
                                                 </div>
-                                            
+
                                         </div>
                                         <div class="div">White</div>
                                     </label>
@@ -218,7 +219,7 @@
                                         <div class="qv-frame">
                                             <img class="qv-img"
                                                 src="sections/isolated/product-shower-filter/images/variant-black-1.webp">
-                                            
+
                                         </div>
                                         <div class="div">Black</div>
                                     </label>
@@ -229,92 +230,70 @@
                                         <div class="qv-frame">
                                             <img class="qv-img"
                                                 src="sections/isolated/product-shower-filter/images/variant-silver-1.webp">
-                                            
+
                                         </div>
                                         <div class="div">Silver</div>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="product_shower-subscription">
-                            <div class="qure__variant-label">Select Your Delivery:</div>
-                        </div>
-                        <div class="qure__subscription" id="qure__subscription">
-                            <div class="qure__subscription-item save-subscription subscription-active position-relative">
-                                <div class="best_value">
-                                    <p>Best Value <img src="assets/images/star_white.svg" alt=""></p>
-                                </div>
-                                <button class="qure__subscription-btn" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#subscribe_and_save" aria-expanded="true"
-                                    aria-controls="subscribe_and_save" data-btnlabel="Subscribe Now &amp; Save 30%">
-                                    <div class="qure__sbs-label filter_pages_ext_cls">Subscribe &amp; SAVE<span
-                                            class="product_shower-label d-none">SAVE {dyn}%</span>
-                                        
-                                          <div id="subscribe_and_save" class="qure__subscription-collapse collapse show"
-                                        data-bs-parent="#qure__subscription">
-                                        <div class="qure__subscription-body">
-                                            <div
-                                                class="subscription-item-row">
-                                                <div class="subscription-item-title">
-                                                    <div class="div">One Time: Showerhead + 1 Filter</div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="subscription-item-row">
-                                                <div class="subscription-item-title">
-                                                    <div class="qure__price div">Every 90 days: Filter Refill (<span
-                                                            class="price__sale price_dyn">{$dyn}</span> {$dyn})</div>
-                                                </div>
-                                            </div>
-                                            <div class="skip_pause">Skip, pause or cancel anytime. <a href="#">See more
-                                                    details</a></div>
+
+                        <div class="select-supply">
+                            <div class="select-supply__label">Select Your Filter Supply:</div>
+                            <div class="d-flex col-gap best__value all-in-one-bf" >
+                                <div class="col qure__variant-item">
+                                    <input type="radio" class="variant__input" name="supply-pack-bf" id="three-month-bf">
+                                    <label for="three-month-bf" class="qure__variant-box">
+                                        <div class="bf-buy-Wrapper">
+                                            <div class="div">3 Months Supply<br><span class="fs-14">Showerhead + 1 Filter</span></div>
                                         </div>
-                                    </div>
-                                </div>
                                         <div>
-                                            <div class="qure__price price--on-sale price_wrap dis_red_line">
-                                                <div class="price__sale">$238</div>
-                                                <div class="price__regular ctm_pri_cls">$149</div>
+                                            <div class="vp-price">
+                                                <span>$129</span>
                                             </div>
-                                            <div class="qure_bf_price">
-                                                <div class="price__regular ctm_pri_cls">$133.51</div>
-                                            </div>
+                                            <!-- <div class="text-end fw-600">$133.51</div> -->
                                         </div>
-                                    
-                                </button>
-                              
-                            </div>
-                            <div class="qure__subscription-item one_time_purchase">
-                                <button class="qure__subscription-btn collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#one_time_purchase" aria-expanded="false"
-                                    aria-controls="one_time_purchase" data-btnlabel="Buy Now">
-                                    <div class="qure__sbs-label filter_pages_ext_cls">One-Time Purchase <span
-                                            class="product_shower-label d-none">SAVE 35%</span>
-                                          <div id="one_time_purchase" class="qure__subscription-collapse collapse"
-                                        data-bs-parent="#qure__subscription">
-                                        <div class="qure__subscription-body">
-                                            <div
-                                                class="subscription-item-row">
-                                                <div class="subscription-item-title">
-                                                    <div class="div">One Time: Showerhead + 1 Filter</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </label>
                                 </div>
-                                    <div
-                                        class="qure__price price--on-sale">
-                                        <div class="price__regular ctm_pri_cls dis_red_line">$119</div>
-                                        <div class="price__regular ctm_pri_cls qure_bf_price">$133.51</div> 
-                                    </div>
-                                    
-                                </button>
-                             
+
+                                <div class="col qure__variant-item">
+                                    <div class="vp-best-value">Popular</div>
+                                    <input type="radio" class="variant__input" name="supply-pack-bf" id="two-month-bf" checked="">
+                                    <label for="two-month-bf" class="qure__variant-box">
+                                        <div class="bf-buy-Wrapper">
+                                            <div class="div">6 Months Supply<br><span class="fs-14">Showerhead + 2 Filter</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="vp-price">
+                                                <span class="vp-price-sale">$179</span>
+                                                <span>$139</span>
+                                            </div>
+                                            <div class="text-end off-value">22% off</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="col qure__variant-item">
+                                    <div class="vp-best-value">Best Value</div>
+                                    <input type="radio" class="variant__input" name="supply-pack-bf" id="one-month-bf">
+                                    <label for="one-month-bf" class="qure__variant-box">
+                                        <div class="bf-buy-Wrapper">
+                                            <div class="div">12 Months Supply<br><span class="fs-14">Showerhead + 4 Filter</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="vp-price">
+                                                <span class="vp-price-sale">$279</span>
+                                                <span>$149</span>
+                                            </div>
+                                            <div class="text-end off-value">$47% off</div>
+                                        </div>
+                                    </label>
+                                </div>
+
                             </div>
-                            <div class="product_shower-action-inner"> 
-                                <button type="submit" class="btn btn--primary w-100" id="qr__submit">Subscribe Now &amp;
-                                    Save 50%</button>
-                            </div>
+                        </div>
+                        <div class="product_shower-action-inner">
+                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now &amp; Save {dyn}%</button>
                         </div>
                         <div class="product_klarna-dtls">
                             OR pay 4 monthly payments of {$dyn} with
@@ -322,32 +301,14 @@
                             <img src="assets/images/sezzle.svg">
                             <img src="assets/images/afterpay.svg">
                         </div>
-                        <div class="d-md-flex d-none justify-content-center gap-4 pt-15">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/guarantee_icons.svg" alt="">
-                                <span class="fs-14">Dermatologist Reviewed</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/truck_icon.svg" alt="">
-                                <span class="fs-14">Free Shipping over {$dyn}</span>
-                            </div>
-                        </div>
-                        <div class="patch__product-batch">
-                            <div class="patch-d-header">
-                                <h4 class="next_batch_ships">Next batch ships {date}:</h4>
-                                <p class="due_to_demand">Due to high demand, our {product name} is sold out. Order now and secure
-                                    yours from the next shipment.</p>
-                            </div>
-                            <div class="progress__bar-container">
-                                <div class="patch-bar" role="progressbar">
-                                    <span class="patch__date">{Previous date}</span><span class="patch__status">SOLD
-                                        OUT</span>
-                                </div>
-                                <div class="patch-bar progress_bar_blue" role="progressbar">
-                                    <span class="patch__date">{date}</span><span class="patch__status">48% Reserved</span>
-                                </div>
-                            </div>
-                        </div>
+                        <ul
+                            class="clinically-proven-results"
+                            data-label="Clinically Proven Results"
+                        >
+                            <li data-value="90%">agree skin feels hydrated</li>
+                            <li data-value="83%">agree skin feels softer</li>
+                            <li data-value="70%">agree hair feels less frizzy</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6 custom__block">
@@ -363,7 +324,7 @@
                                     </div>
                                 </div>
                                    <div class="swiper-slide">
-                                    <div class="trusted_video_card d-block"> 
+                                    <div class="trusted_video_card d-block">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal"
                                         data-video-id="bwhqvtar9u" class="filter-card-item filter-card-video slide-image">
                                         <img src="sections/isolated/product-shower-filter/images/shower_filter_2.webp"
@@ -515,7 +476,7 @@
                             <span>Backed by Science </span>
                         </div>
                     </div>
-                    
+
                     <div class="accordion accordion-flush tp-product-accordion" id="tp-product-qure">
                         <div class="accordion-item qure__accordion-item">
                             <button class="accordion-button collapsed qure__accordion-header" type="button" data-bs-toggle="collapse"
@@ -597,7 +558,7 @@
                 </div>
             </div>
         </div>
-       
+
         <!-- Reusable Wistia Modal (outside slider) end -->
     </div>
     <script>
@@ -728,7 +689,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="row custom__grid inner_gap">
                             <div class="col-12 custom__block">
                                 <div class="align-items-center d-flex gap-2 text-center text-with-progress">
@@ -829,7 +790,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -1021,7 +982,7 @@
                         <img src="sections/isolated/experts/images/doctor_shah_desk.webp" class="img-fluid d-md-block d-none"
                             alt="">
                         <img src="sections/isolated/experts/images/doctor_shah_mob.webp" class="img-fluid d-md-none" alt="">
-                        
+
                     </div>
                 </div>
             </div>
@@ -1108,7 +1069,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>               
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-0 order-first custom__block">
@@ -1245,7 +1206,7 @@
 		loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
 	 });
     </script>
-	  
+
     <!-- Review Videos section Start -->
     <!-- Section icon image box -->
     <div class="qure__shipping  qure__section color-background overflow-hidden">
@@ -1418,7 +1379,7 @@
 	 document.addEventListener("DOMContentLoaded", function () {
 		loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
 	 });
-    </script>  
+    </script>
     <!-- Section quick and easy end -->
     <!-- Section column with filter -->
     <div class="qure__section qure__col-with-filter color-background">
@@ -1455,7 +1416,7 @@
                                     type="button" role="tab" aria-controls="shower_massage" aria-selected="false">Massage</button>
                             </div>
                         </div>
-                        
+
                         <div class="tab-content mt-20" id="myTabContent">
                             <div class="qure-tab-pane tab-pane fade show active" id="shower_rainfall" role="tabpanel"
                                 aria-labelledby="rainfall" tabindex="0">
@@ -1602,7 +1563,7 @@
                             <div class="accordion-body">
                                 <p>The Qure Shower Filter removes harmful impurities like heavy metals, chlorine, and unwanted minerals from your water,
                                 helping to protect your skin and hair from damage caused by hard water.</p>
-                                
+
                                 <p>By filtering out water impurities, the Qure Shower Filter helps reduce dryness, irritation, and brittleness, leaving
                                 your skin hydrated and your hair smoother and more manageable.</p>
                             </div>
