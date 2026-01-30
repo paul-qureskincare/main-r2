@@ -1050,7 +1050,7 @@
   display:flex;
   flex-direction:column;
 }
-.select-supply .vp-best-value{
+.select-supply .all-in-one-bf .vp-best-value{
   position:relative;
   z-index:2;
   width:auto;
@@ -1061,7 +1061,7 @@
   border-radius:0 0 5px 5px;
   background:#ff5429;
 }
-.select-supply .vp-best-value:after,.select-supply .vp-best-value:before{
+.select-supply .all-in-one-bf .vp-best-value:after,.select-supply .all-in-one-bf .vp-best-value:before{
   position:absolute;
   top:0;
   width:0;
@@ -1069,12 +1069,12 @@
   border-style:solid;
   content:"";
 }
-.select-supply .vp-best-value:before{
+.select-supply .all-in-one-bf .vp-best-value:before{
   left:-10px;
   border-width:0 0 12px 10px;
   border-color:transparent transparent #ce3812;
 }
-.select-supply .vp-best-value:after{
+.select-supply .all-in-one-bf .vp-best-value:after{
   right:-10px;
   border-width:12px 0 0 10px;
   border-color:transparent transparent transparent #ce3812;
