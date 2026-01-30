@@ -636,7 +636,7 @@
 /* stylelint-disable-next-line selector-class-pattern */
 .product\.hair-growth-helmet {
     @media screen and (min-width: 768px) {
-        overflow: unset;
+        overflow: unset !important;
     }
 
     .modal-backdrop {

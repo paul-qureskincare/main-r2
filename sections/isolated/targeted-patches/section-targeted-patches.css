@@ -123,6 +123,22 @@
   content:"\e92c";
 }
 
+.e-icon-patches:before{
+  content:"\e92d";
+}
+
+.e-icon-mist:before{
+  content:"\e92e";
+}
+
+.e-icon-lock:before{
+  content:"\e92f";
+}
+
+.e-icon-guarantee:before{
+  content:"\e930";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -647,33 +663,32 @@ body.product\.dermal-mist .patch__product-variants{
 .tp-product-gallery{
   position:relative;
 }
-
-.gallery-sticky-video{
+.tp-product-gallery .gallery-sticky-video{
   position:absolute;
   top:16px;
   right:16px;
   z-index:2;
+  overflow:hidden;
   width:100px;
   height:180px;
-  transition:width .3s ease,height .3s ease;
-  overflow:hidden;
   cursor:pointer;
+  transition:width .3s ease,height .3s ease;
 }
-.gallery-sticky-video.expanded{
+.tp-product-gallery .gallery-sticky-video.expanded{
   width:166.6666666667px;
   height:300px;
 }
-.gallery-sticky-video video{
-  width:100%;
-  height:100%;
-  border-radius:10px;
-  -o-object-fit:cover;
-     object-fit:cover;
+.tp-product-gallery .gallery-sticky-video video{
   position:absolute;
   top:0;
   left:0;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:100%;
+  border-radius:10px;
 }
-.gallery-sticky-video__close{
+.tp-product-gallery .gallery-sticky-video__close{
   position:absolute;
   top:6px;
   right:6px;
@@ -681,15 +696,15 @@ body.product\.dermal-mist .patch__product-variants{
   height:20px;
   color:#fff;
   font-size:8px;
-  text-align:center;
   line-height:20px;
-  background:#000;
+  text-align:center;
   border-radius:50%;
+  background:#000;
   cursor:pointer;
   opacity:.35;
   transition:all .2s linear;
 }
-.gallery-sticky-video__close:hover{
+.tp-product-gallery .gallery-sticky-video__close:hover{
   opacity:1;
 }
 @media (max-width:991px){
@@ -727,13 +742,13 @@ body.product\.dermal-mist .patch__product-variants{
   }
 }
 @media screen and (max-width:480px){
-  .gallery-sticky-video{
+  .tp-product-gallery .gallery-sticky-video{
     top:8px;
     right:8px;
     width:80.5555555556px;
     height:145px;
   }
-  .gallery-sticky-video.expanded{
+  .tp-product-gallery .gallery-sticky-video.expanded{
     width:155.5555555556px;
     height:280px;
   }

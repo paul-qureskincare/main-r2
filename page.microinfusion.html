@@ -12,8 +12,14 @@
    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
    <link href="assets/css/black-friday.css" rel="stylesheet" />
    <link href="assets/css/base.css" rel="stylesheet" />
+   <style>
+      :root {
+         --primary-color: #212428;
+         --discount-color: #ff5429;
+      }
+   </style>
    <!-- Loading HTML Files -->
-   <script src="assets/js/fileloader.js"></script> 
+   <script src="assets/js/fileloader.js"></script>
 
 </head>
 
@@ -174,6 +180,14 @@
                         <div class="qure-swiper-arrow swiper-next"><i class="fa-regular fa-angle-right"></i></div>
                      </div>
                      <!-- Thumbnails End-->
+                     <div class="gallery-sticky-video">
+                        <video loop preload="metadata" playsinline="true">
+                           <source src="https://embed-ssl.wistia.com/deliveries/a19c02d56780261a836b229148cef1bb2fa64c90.bin?disposition=attachment&filename=MICRO+INFUSION+2025_final_txt+%282%29.mp4" type="video/mp4" />
+                        </video>
+                        <div class="gallery-sticky-video__close">
+                           <i class="e-icon e-icon-cross"></i>
+                        </div>
+                     </div>
                   </slide-with-thumbs>
 
                   <div class="qure__product-rating">
@@ -556,6 +570,14 @@
                      <div class="qure-swiper-arrow swiper-next"><i class="fa-regular fa-angle-right"></i></div>
                   </div>
                   <!-- Thumbnails End-->
+                  <div class="gallery-sticky-video">
+                     <video loop preload="metadata" playsinline="true">
+                        <source src="https://embed-ssl.wistia.com/deliveries/a19c02d56780261a836b229148cef1bb2fa64c90.bin?disposition=attachment&filename=MICRO+INFUSION+2025_final_txt+%282%29.mp4" type="video/mp4" />
+                     </video>
+                     <div class="gallery-sticky-video__close">
+                        <i class="e-icon e-icon-cross"></i>
+                     </div>
+                  </div>
                </slide-with-thumbs>
 
 
@@ -721,6 +743,7 @@
          loadScriptOnce('main-slider', 'assets/js/main-slider.js');
          loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
          loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
+         loadScriptOnce('gallery-sticky-video', 'assets/js-new/gallery-sticky-video.js');
          loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
       });
    </script>
@@ -1804,7 +1827,7 @@
                <div class="align-items-end d-flex justify-content-center qure__serum-or">
                   <h2>or</h2>
                </div>
-            </div> 
+            </div>
             <div class="col custom__block">
                <div class="qure__serum">
                   <div class="qure__serum-hdr qure__eqBox-child">
@@ -2718,7 +2741,7 @@
                         pay 4 monthly payments of {$dyn} with <img
                            src="sections/isolated/treatment/images/klarna.svg" alt=""> <img
                            src="sections/isolated/treatment/images/sezzle.svg" alt=""><img
-                           src="sections/isolated/treatment/images/afterpay.svg" alt=""></div> 
+                           src="sections/isolated/treatment/images/afterpay.svg" alt=""></div>
                   </div>
 
                   <div class="patch__product-batch">

@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 
 /* stylelint-disable */
 .shower__single-shortdes li {
@@ -939,4 +940,9 @@
             content: attr(data-value);
         }
     }
+}
+
+// Gallery Sticky video
+.tp-product-gallery {
+    @include gallery-sticky-video;
 }

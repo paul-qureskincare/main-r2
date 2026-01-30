@@ -5,21 +5,26 @@
 
     display: inline-flex;
 
-    /* &__current {
+    // .e-price__current
+    &__current {
+        &.highlight-price {
+            color: var(--discount-color);
+        }
 
-    } */
+        &.savings-price {
+            color: #0fa847;
+        }
+    }
 
+    // .e-price__main
     &__main {
         display: flex;
         gap: 8px;
     }
 
+    // .e-price__old
     &__old {
         color: #8b8c8e;
         text-decoration: line-through;
-    }
-
-    &:has(.e-price__old) {
-        color: var(--discount-color);
     }
 }

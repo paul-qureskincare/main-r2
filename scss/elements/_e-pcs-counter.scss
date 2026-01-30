@@ -1,0 +1,49 @@
+@use "@root/mixins" as *;
+
+.e-pcs-counter {
+    $root: &;
+
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #8b8c8e;
+    border-radius: 3px;
+
+    button {
+        padding: 6px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        @include transition;
+
+        &:hover {
+            background: #ddd;
+        }
+
+        .e-icon {
+            vertical-align: top;
+        }
+    }
+
+    input {
+        width: 24px;
+        height: 16px;
+        padding: 0;
+        color: #212428;
+        font-size: 14px;
+        text-align: center;
+        border: solid #8b8c8e;
+        border-width: 0 1px;
+        border-radius: 0;
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            margin: 0;
+            appearance: none;
+        }
+    }
+}
