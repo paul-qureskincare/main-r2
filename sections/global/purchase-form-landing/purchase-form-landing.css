@@ -1079,6 +1079,15 @@
   border-width:12px 0 0 10px;
   border-color:transparent transparent transparent #ce3812;
 }
+.select-supply .all-in-one-bf .vp-best-value.vp-best-value-black{
+  background:#212428;
+}
+.select-supply .all-in-one-bf .vp-best-value.vp-best-value-black:before{
+  border-color:transparent transparent #000;
+}
+.select-supply .all-in-one-bf .vp-best-value.vp-best-value-black:after{
+  border-color:transparent transparent transparent #000;
+}
 .select-supply .bf-buy-Wrapper{
   align-items:center;
 }
@@ -1087,7 +1096,7 @@
 }
 .select-supply .off-value{
   font-size:14px;
-  color:var(--discount-color);
+  color:var(--color-orange);
 }
 
 .clinically-proven-results{

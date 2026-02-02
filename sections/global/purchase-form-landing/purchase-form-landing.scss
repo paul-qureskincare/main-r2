@@ -881,6 +881,18 @@
                 border-width: 12px 0 0 10px;
                 border-color: transparent transparent transparent #ce3812;
             }
+
+            &.vp-best-value-black {
+                background: #212428;
+
+                &::before {
+                    border-color: transparent transparent #000;
+                }
+
+                &::after {
+                    border-color: transparent transparent transparent #000;
+                }
+            }
         }
     }
 
@@ -894,7 +906,7 @@
 
     .off-value {
         font-size: 14px;
-        color: var(--discount-color);
+        color: var(--color-orange);
     }
 }
 
