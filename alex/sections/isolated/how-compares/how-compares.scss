@@ -5,7 +5,7 @@
     --section-padding-bottom-mob: 30px;
 
     background: #f6f6f7;
-    
+
     // .how-compares__header
     &__header {
         display: flex;
@@ -78,11 +78,16 @@
     &__parameters {
         display: flex;
         flex-direction: column;
-        gap: 30px;
 
         @include sm {
             padding-bottom: 18px;
             border-bottom: 1px solid #dfe0e0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         li {
@@ -111,6 +116,17 @@
 
         p {
             font-size: 20px;
+        }
+
+        small {
+            margin-top: 30px;
+            color: #8b8c8e;
+            font-size: 14px;
+            line-height: 1.25;
+
+            @include sm {
+                display: none;
+            }
         }
     }
 
@@ -210,6 +226,18 @@
                     font-size: 18px;
                 }
             }
+        }
+    }
+
+    &__declaimer {
+        display: none;
+        margin-top: 20px;
+        color: #8b8c8e;
+        font-size: 14px;
+        line-height: 1.25;
+
+        @include sm {
+            display: block;
         }
     }
 }

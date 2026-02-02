@@ -1,6 +1,8 @@
 @use "@root/mixins" as *;
 
 .c-visual-compare-card {
+    --c-visual-compare-card-pill-color: #c8e6dc;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -36,7 +38,7 @@
         span {
             padding: 6px 20px;
             border-radius: 30px;
-            background: #c8e6dc;
+            background: var(--c-visual-compare-card-pill-color);
         }
     }
 }

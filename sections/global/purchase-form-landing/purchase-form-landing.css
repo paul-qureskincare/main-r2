@@ -139,6 +139,10 @@
   content:"\e930";
 }
 
+.e-icon-top:before{
+  content:"\e931";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

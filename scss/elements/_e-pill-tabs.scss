@@ -1,0 +1,36 @@
+@use "@root/mixins" as *;
+
+.e-pill-tabs {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 11px;
+    border: 1px solid #8b8c8e;
+    border-radius: 100px;
+
+    li {
+
+    }
+
+    button {
+        padding: 7px 16px;
+        color: #b5b6b7;
+        font-size: 18px;
+        border: 0;
+        border-radius: 100px;
+        background: none;
+        @include transition;
+
+        &:hover {
+            color: #212428;
+            background-color: #eee;
+        }
+
+        &.active {
+            color: #212428;
+            background-color: #c7e5db;
+            pointer-events: none;
+        }
+    }
+}
