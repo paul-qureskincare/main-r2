@@ -1819,3 +1819,6 @@ body.page\.hairgrowth-helmet-guide .tab-content a{
 .bg-light-aqua{
     background: rgb(199 229 219 / 30%);
 }
+.gallery-sticky-video {
+    display: none;
+}
