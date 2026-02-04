@@ -24,7 +24,7 @@
     align-items: center;
 }
 .cp__heading-box .cp__heading-item + .cp__heading-item {
-    
+
     border-top: 1px solid #DFE0E0;
 }
 .cp__compare-box {
@@ -148,7 +148,7 @@
     }
     .cp__heading-box .cp__heading-item {
         font-size: 14px;
-        line-height: 18px; 
+        line-height: 18px;
         /* padding: var(--cp-padding-mob, 24px) 0; */
     }
     .cp__compare-item{
@@ -156,4 +156,20 @@
         line-height: 18px;
         padding: 8px 12px 10px 40px;
     }
+}
+
+
+/* CHANGES ONLY FOR product.face-serum PAGE */
+.product\.face-serum .cp__compare-header {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+}
+
+.product\.face-serum .cp__compare-title {
+    margin-bottom: 0;
+}
+
+.product\.face-serum .cp__compare-inner::before {
+    top: 0 !important;
 }
