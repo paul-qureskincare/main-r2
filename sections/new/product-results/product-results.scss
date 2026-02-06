@@ -51,7 +51,7 @@
 
         &:not(.show) {
             position: absolute;
-            left: -100vw;
+            left: -300vw;
             z-index: -10;
             visibility: hidden;
             opacity: 0;
