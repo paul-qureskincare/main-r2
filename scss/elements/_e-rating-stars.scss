@@ -4,12 +4,13 @@
     position: relative;
     display: inline-block;
     line-height: 1;
+    letter-spacing: 0.135em;
 
     &::before,
     &::after {
         @include icon;
-        letter-spacing: 0.135em;
         white-space: nowrap;
+        vertical-align: top;
         content: "\e921\e921\e921\e921\e921";
     }
 

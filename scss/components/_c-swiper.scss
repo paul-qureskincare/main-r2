@@ -49,6 +49,27 @@
         width: auto;
     }
 
+    // .c-swiper-thumbs-nav
+    &-thumbs-nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+
+        .swiper-slide {
+            overflow: hidden;
+            border-radius: 5px;
+            opacity: 0.5;
+            @include transition(opacity);
+
+            &.swiper-slide-thumb-active {
+                border: 1px solid #212428;
+                opacity: 1;
+            }
+        }
+    }
+
     // .c-swiper-button-prev
     // .c-swiper-button-next
     &-button-prev,

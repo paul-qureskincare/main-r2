@@ -1,0 +1,43 @@
+@use "@root/mixins" as *;
+
+.logos-marquee {
+    background: #f6f6f7;
+
+    .container {
+        overflow: auto hidden;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        @include sm {
+            overflow: unset;
+            animation: "logos-marquee" 20s linear infinite;
+        }
+    }
+
+    &__list {
+        display: inline-flex;
+        justify-content: center;
+
+        li {
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        img {
+            width: auto;
+            height: 28px;
+            vertical-align: top;
+            opacity: 0.6;
+        }
+    }
+}
+
+@keyframes logos-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

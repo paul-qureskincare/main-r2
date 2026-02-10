@@ -1,6 +1,8 @@
 @use "@root/mixins" as *;
 
 .c-faq-accordion {
+    $root: &;
+
     // .c-faq-accordion__list
     &__list {
         display: flex;
@@ -124,6 +126,7 @@
         }
     }
 
+    // .c-faq-accordion___ask-us
     &__ask-us {
         display: flex;
         gap: 10px;
@@ -148,6 +151,35 @@
                 vertical-align: top;
                 -webkit-text-stroke: 0.4px;
             }
+        }
+    }
+
+    // .c-faq-accordion--lines
+    &--lines {
+        // .c-faq-accordion--lines .c-faq-accordion__list
+        #{$root}__list {
+            gap: 0;
+        }
+
+        // .c-faq-accordion--lines .c-faq-accordion__item
+        #{$root}__item {
+            border-bottom: 1px solid #8b8c8e;
+            border-radius: 0;
+            background: none;
+        }
+
+        // .c-faq-accordion--lines .c-faq-accordion__header
+        #{$root}__header {
+            button {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        // .c-faq-accordion--lines .c-faq-accordion__content
+        #{$root}__content {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 }

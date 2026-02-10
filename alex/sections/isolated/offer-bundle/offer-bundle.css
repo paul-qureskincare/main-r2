@@ -143,6 +143,18 @@
   content:"\e931";
 }
 
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -243,6 +255,7 @@
   position:relative;
   display:inline-block;
   line-height:1;
+  letter-spacing:.135em;
 }
 .e-rating-stars:after,.e-rating-stars:before{
   font-family:icomoon;
@@ -251,12 +264,11 @@
   font-variant:normal;
   line-height:1;
   text-transform:none;
-  vertical-align:top;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
   speak:never;
-  letter-spacing:.135em;
   white-space:nowrap;
+  vertical-align:top;
   content:"\e921\e921\e921\e921\e921";
 }
 .e-rating-stars:before{

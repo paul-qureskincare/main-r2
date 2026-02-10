@@ -1,0 +1,17 @@
+<!-- BASE SECTION -->
+<link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+<section class="base-section {{ classes }}">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            <picture>
+                <img src="{{ picture }}" alt="{{ title }}" />
+            </picture>
+            <div>
+                {{> @partial-block }}
+            </div>
+            <a href="#" class="btn btn--primary">{{ button }}</a>
+        </article>
+    </div>
+</section>
+<!-- BASE SECTION END -->

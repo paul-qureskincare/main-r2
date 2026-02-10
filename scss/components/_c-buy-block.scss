@@ -1,0 +1,16 @@
+@use "@root/mixins" as *;
+@use "@elements/e-features-list" as *;
+@use "@components/c-order-button" as *;
+@use "@components/c-certified-box" as *;
+
+.c-buy-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+
+    .c-certified-box {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

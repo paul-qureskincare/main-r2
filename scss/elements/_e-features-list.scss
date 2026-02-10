@@ -1,0 +1,23 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.e-features-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    font-size: 14px;
+
+    li {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .e-icon-guarantee {
+        font-size: 30px;
+    }
+
+    .e-icon-shipping-order {
+        font-size: 22px;
+    }
+}

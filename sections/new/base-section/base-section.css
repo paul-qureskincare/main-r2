@@ -192,6 +192,18 @@
   content:"\e931";
 }
 
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

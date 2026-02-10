@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qure</title>
+    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/spacings.css">
+    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/general.css" rel="stylesheet" />
+    <!-- Loading HTML Files -->
+   <script src="assets/js/fileloader.js"></script>
+</head>
+
+<body class="{{ body-class }}">
+    <!-- PAGE HEADER -->
+    <div id="site-header-new"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadScriptOnce('carousel', 'sections/global/header/js/carousel.js');
+            loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
+       });
+    </script>
+    <!-- PAGE HEADER end-->
+    <!-- Announcement Bar -->
+    <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
+    <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
+        <div class="container">
+            <div class="announcement-bar-content text-center">
+                FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    {{> @partial-block}}
+
+    <!-- CART AND FOOTER -->
+    <div id="site-footer-new"></div>
+    <div id="site-cart-drawer-new"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
+      });
+   </script>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/vendor.js" defer="defer"></script>
+    <script src="sections/new/header/header.js" defer="defer"></script>
+    <script src="sections/new/footer/footer.js" defer="defer"></script>
+</body>
+
+</html>

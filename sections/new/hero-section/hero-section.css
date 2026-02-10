@@ -143,6 +143,18 @@
   content:"\e931";
 }
 
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -272,7 +284,7 @@
 .c-marked-list{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:10px;
 }
 .c-marked-list li{
   position:relative;

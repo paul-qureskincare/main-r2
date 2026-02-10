@@ -2,6 +2,7 @@
   position:relative;
   display:inline-block;
   line-height:1;
+  letter-spacing:.135em;
 }
 .e-rating-stars:after,.e-rating-stars:before{
   font-family:icomoon;
@@ -10,12 +11,11 @@
   font-variant:normal;
   line-height:1;
   text-transform:none;
-  vertical-align:top;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
   speak:never;
-  letter-spacing:.135em;
   white-space:nowrap;
+  vertical-align:top;
   content:"\e921\e921\e921\e921\e921";
 }
 .e-rating-stars:before{
@@ -71,7 +71,7 @@
 .c-marked-list{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:10px;
 }
 .c-marked-list li{
   position:relative;
@@ -291,6 +291,23 @@
   gap:10px;
   width:auto;
 }
+.c-swiper-thumbs-nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+}
+.c-swiper-thumbs-nav .swiper-slide{
+  overflow:hidden;
+  border-radius:5px;
+  opacity:.5;
+  transition:opacity .2s linear;
+}
+.c-swiper-thumbs-nav .swiper-slide.swiper-slide-thumb-active{
+  border:1px solid #212428;
+  opacity:1;
+}
 .c-swiper-button-next,.c-swiper-button-prev{
   display:flex;
   flex:0 0 40px;
@@ -493,7 +510,6 @@
 .flyout-cart__placeholder-content ul{
   display:flex;
   flex-direction:column;
-  gap:8px;
 }
 .flyout-cart__placeholder-content ul li{
   position:relative;

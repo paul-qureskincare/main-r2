@@ -1,3 +1,3 @@
-@mixin transition {
-    transition: all 200ms linear;
+@mixin transition($property: all) {
+    transition: #{$property} 200ms linear;
 }

@@ -1,0 +1,35 @@
+<!-- COMPARISON -->
+<link rel="stylesheet" href="sections/new/have-questions/have-questions.css" />
+<div class="have-questions">
+    <div class="container">
+        <h2>Have questions?</h2>
+        <div class="c-faq-accordion c-faq-accordion--lines">
+            <div class="c-faq-accordion__list">
+                {{#parseJson list }}
+                    <div class="c-faq-accordion__item">
+                        <div class="c-faq-accordion__header">
+                            <button
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#c-faq-accordion-{{ counter }}"
+                                aria-expanded="false"
+                            >
+                                {{ question }}
+                            </button>
+                        </div>
+                        <div
+                            id="c-faq-accordion-{{ counter }}"
+                            class="c-faq-accordion__body collapse"
+                        >
+                            <div class="c-faq-accordion__content">
+                                {{{ answer }}}
+                            </div>
+                        </div>
+                    </div>
+                {{/parseJson}}
+            </div>
+            <div class="c-faq-accordion__ask-us">Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a></div>
+        </div>
+    </div>
+</div>
+<!-- COMPARISON END -->

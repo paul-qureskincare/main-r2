@@ -38,13 +38,51 @@
     }
 
     // Hover to show (desktop only)
+    const HOVER_DELAY_MS = 400;
+    const MENU_ITEM_SELECTOR = '#header [data-target]';
+    let hoverTimer = null;
+    let hoverEl = null;
+
     document.addEventListener('pointerover', (e) => {
         if (!isDesktop()) return;
-        const el = e.target.closest('#header .header__menu [data-target]');
-        if (!el) return;
-        const header = el.closest('#header');
+
+        const el = e.target.closest(MENU_ITEM_SELECTOR);
+        if (el === hoverEl) return;
+
+        if (hoverTimer) {
+            clearTimeout(hoverTimer);
+            hoverTimer = null;
+        }
+
+        hoverEl = el || null;
+        if (!hoverEl) return;
+
+        const header = hoverEl.closest('#header');
         if (!header) return;
-        showPane(header, el.getAttribute('data-target') || '');
+
+        hoverTimer = setTimeout(() => {
+            if (hoverEl !== el) return;
+            showPane(header, hoverEl.dataset.target || '');
+            hoverTimer = null;
+        }, HOVER_DELAY_MS);
+    });
+
+    // Hide when leaving header (desktop only) and cancel pending hover
+    document.addEventListener('pointerout', (e) => {
+        if (!isDesktop()) return;
+
+        const header = e.target.closest('#header');
+        if (!header) return;
+
+        const to = e.relatedTarget;
+        if (to && header.contains(to)) return;
+
+        if (hoverTimer) {
+            clearTimeout(hoverTimer);
+            hoverTimer = null;
+        }
+        hoverEl = null;
+        hideAll();
     });
 
     // Click to show (desktop), allow navigation on mobile
@@ -56,15 +94,6 @@
         if (!isDesktop()) return; // let links work on mobile
         e.preventDefault();
         showPane(header, el.getAttribute('data-target') || '');
-    });
-
-    // Hide when leaving header (desktop only)
-    document.addEventListener('pointerout', (e) => {
-        if (!isDesktop()) return;
-        const header = e.target.closest('#header');
-        if (!header) return;
-        const to = e.relatedTarget;
-        if (!to || !header.contains(to)) hideAll();
     });
     // HEADER DROPDOWNS END
 

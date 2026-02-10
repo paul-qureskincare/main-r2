@@ -34,7 +34,7 @@ function setupBaseSlider(el) {
     let thumbSwiper = null;
 
     if (thumbsSelector) {
-        const thumbsEl = document.querySelector("." + thumbsSelector);
+        const thumbsEl = document.querySelector(thumbsSelector);
         if (thumbsEl) {
             const thumbsConfig = thumbsEl.getAttribute("data-swiper");
             const thumbsOptions = thumbsConfig ? JSON.parse(thumbsConfig) : {};
