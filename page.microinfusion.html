@@ -373,8 +373,38 @@
                      </div>
                   </div>
                   <div class="product_shower-action-inner">
-                     <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy
+                     <button type="button" class="add-cart-button product-form__submit btn btn--primary w-100" onclick="upsellPopup.showModal()">Buy
                         Now & Save {dyn}%</button>
+                     <dialog class="c-dialog c-dialog--column" id="upsellPopup">
+                        <div class="c-dialog__message">
+                           <p><strong>Micro-Infusion 3 Month Bundle (For Wrinkles)</strong> added to cart.</p>
+                        </div>
+                        <div class="c-dialog__content">
+                           <div class="upsell-popup">
+                              <div class="upsell-popup__header">
+                                 <h5>Prep Your Skin for Micro-Infusion</h5>
+                                 <p><em>save 20%</em> when added to your treatment</p>
+                              </div>
+                              <div class="upsell-popup__content">
+                                 <img src="sections/isolated/micro-infusion-pdp/images/upsell-popup-image.webp" alt="Prep Your Skin for Micro-Infusion" />
+                                 <p>Micro-Infusion works best on skin that’s clean. Hypochlorous Acid Dermal Mist helps prep your skin by:</p>
+                                 <ul>
+                                    <li>Reducing bacteria before treatment</li>
+                                    <li>Calming visible redness</li>
+                                    <li>Supporting your skin barrier after infusion</li>
+                                 </ul>
+                                 <p>Includes full-size (100ml) + travel (15ml).</p>
+                              </div>
+                              <div class="upsell-popup__footer">
+                                 <button class="btn btn--primary" type="button">Add to Cart &ndash; <span>$29</span> $24.20</button>
+                                 <a href="#">Continue to Cart</a>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="c-dialog__close" type="button" onclick="upsellPopup.close()">
+                           <i class="e-icon e-icon-cross"></i>
+                        </button>
+                     </dialog>
                   </div>
                   <div
                      class="product_klarna-dtls">
