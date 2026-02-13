@@ -954,6 +954,7 @@
 }
 .guide-content article .c-app-stores{
   float:right;
+  width:100%;
   max-width:200px;
   margin-left:40px;
 }
