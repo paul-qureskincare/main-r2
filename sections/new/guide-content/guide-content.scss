@@ -5,6 +5,7 @@
 @use "@components/c-note" as *;
 @use "@components/c-step-by-step" as *;
 @use "@components/c-faq-accordion" as *;
+@use "@components/c-app-stores" as *;
 
 @mixin content-width {
     max-width: 100%;
@@ -295,6 +296,21 @@
             opacity: 1;
         }
 
+        .c-app-stores {
+            float: right;
+            max-width: 200px;
+            margin-left: 40px;
+
+            @include sm {
+                float: none;
+                flex-direction: row;
+                order: 10;
+                max-width: 400px;
+                margin-top: 20px;
+                margin-left: 0;
+            }
+        }
+
         .c-note {
             overflow: hidden;
         }
@@ -312,6 +328,14 @@
                     margin-top: 25px;
                     margin-bottom: 0;
                 }
+            }
+        }
+
+        // Order c-app-stores to bottom
+        &:has(.c-app-stores) {
+            @include sm {
+                display: flex;
+                flex-direction: column;
             }
         }
     }

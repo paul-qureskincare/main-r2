@@ -354,7 +354,7 @@
 .c-modal--light .modal-dialog{
   display:flex;
   align-items:center;
-  height:calc(100% - var(--bs-modal-margin)*2);
+  height:calc(100% - var(--bs-modal-margin) * 2);
 }
 .c-modal--light .modal-header{
   height:30px;
@@ -724,6 +724,23 @@
   padding-left:0;
 }
 
+.c-app-stores{
+  display:inline-flex;
+  flex-direction:column;
+  gap:12px;
+}
+.c-app-stores a{
+  width:100%;
+}
+.c-app-stores img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-app-stores--row{
+  flex-direction:row;
+}
+
 .guide-content{
   display:none;
 }
@@ -934,6 +951,11 @@
   margin:15px 0;
   border-color:#dfe0e0;
   opacity:1;
+}
+.guide-content article .c-app-stores{
+  float:right;
+  max-width:200px;
+  margin-left:40px;
 }
 .guide-content article .c-note{
   overflow:hidden;
@@ -1205,7 +1227,7 @@
 }
 @media screen and (min-width:1200px){
   .shopify-section--guide-content{
-    max-width:calc(50% + 176px);
+    max-width:calc(100% - ((100% - 1172px) / 2 + 350px + 60px));
   }
   .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .included-box-list,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content .water-modes-list,.guide-content article,.guide-content article hr{
     max-width:746px;
@@ -1213,7 +1235,7 @@
 }
 @media screen and (min-width:1400px){
   .shopify-section--guide-content{
-    max-width:calc(50% + 206px);
+    max-width:calc(100% - ((100% - 1232px) / 2 + 350px + 60px));
   }
   .guide-content .c-faq-accordion,.guide-content .c-step-by-step,.guide-content .c-step-by-step+.c-note,.guide-content .included-box-list,.guide-content .serum-ingredients-list,.guide-content .treatment-modes-list,.guide-content .water-modes-list,.guide-content article,.guide-content article hr{
     max-width:806px;
@@ -1296,6 +1318,14 @@
   .guide-content article picture[data-url],.guide-content article picture[data-video-id]{
     width:100%;
   }
+  .guide-content article .c-app-stores{
+    float:none;
+    flex-direction:row;
+    order:10;
+    max-width:400px;
+    margin-top:20px;
+    margin-left:0;
+  }
   .guide-content article:has(picture:not(.d-none.d-lg-block)){
     display:flex;
     flex-direction:column;
@@ -1304,6 +1334,10 @@
     order:10;
     margin-top:25px;
     margin-bottom:0;
+  }
+  .guide-content article:has(.c-app-stores){
+    display:flex;
+    flex-direction:column;
   }
   .guide-content .serum-ingredients-list ul{
     flex-direction:column;
