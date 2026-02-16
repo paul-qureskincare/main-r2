@@ -724,11 +724,18 @@ body.product\.dermal-mist .patch__product-variants{
 .tp-product-gallery .gallery-sticky-video__close:hover{
   opacity:1;
 }
+
+.product\.silk-pillowcase .qure__trageted-patches{
+  --section-padding-top:0;
+  --section-padding-bottom:0;
+}
+
 @media (max-width:991px){
   .vp-grid{
     gap:6px;
   }
 }
+
 @media (max-width:767px){
   .qure__product-title{
     font-size:32px;
@@ -758,6 +765,7 @@ body.product\.dermal-mist .patch__product-variants{
     margin-top:-10px !important;
   }
 }
+
 @media screen and (max-width:480px){
   .tp-product-gallery .gallery-sticky-video{
     top:8px;

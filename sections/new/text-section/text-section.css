@@ -11,6 +11,9 @@
   padding-top:60px;
   padding-bottom:60px;
 }
+.page\.exclusive-holiday-bundle-deal .text-section article{
+  text-align:left;
+}
 @media screen and (max-width:767px){
   .text-section article{
     text-align:left;

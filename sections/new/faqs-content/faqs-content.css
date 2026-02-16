@@ -9,7 +9,13 @@
   border-radius:10px;
   background:#f6f6f7;
 }
-.c-faq-accordion__header button{
+.c-faq-accordion__item[open] .c-faq-accordion__summary{
+  font-weight:600;
+}
+.c-faq-accordion__item[open] .c-faq-accordion__summary:after{
+  content:"\e902";
+}
+.c-faq-accordion__header button,.c-faq-accordion__summary{
   display:flex;
   gap:10px;
   align-items:center;
@@ -21,7 +27,7 @@
   border:0;
   background:none;
 }
-.c-faq-accordion__header button:after{
+.c-faq-accordion__header button:after,.c-faq-accordion__summary:after{
   margin-left:auto;
   font-family:icomoon;
   font-weight:400;
@@ -138,7 +144,7 @@
   border-radius:0;
   background:none;
 }
-.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button{
+.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button,.c-faq-accordion--lines .c-faq-accordion__summary{
   padding-right:0;
   padding-left:0;
 }
@@ -211,7 +217,7 @@
 }
 @media screen and (min-width:1200px){
   .shopify-section--faqs-content{
-    max-width:calc(50% + 176px);
+    max-width:calc(100% - ((100% - 1172px) / 2 + 350px + 60px));
   }
   .faqs-content .c-faq-accordion{
     max-width:746px;
@@ -219,7 +225,7 @@
 }
 @media screen and (min-width:1400px){
   .shopify-section--faqs-content{
-    max-width:calc(50% + 206px);
+    max-width:calc(100% - ((100% - 1232px) / 2 + 350px + 60px));
   }
   .faqs-content .c-faq-accordion{
     max-width:806px;
@@ -231,7 +237,7 @@
   }
 }
 @media screen and (max-width:767px){
-  .c-faq-accordion__content,.c-faq-accordion__header button{
+  .c-faq-accordion__content,.c-faq-accordion__header button,.c-faq-accordion__summary{
     padding-right:16px;
     padding-left:16px;
   }

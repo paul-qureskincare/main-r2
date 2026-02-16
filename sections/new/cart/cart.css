@@ -26,7 +26,7 @@
   top:0;
   left:0;
   overflow:hidden;
-  width:calc(var(--rating)/5*100%);
+  width:calc(var(--rating) / 5 * 100%);
   color:#91baec;
 }
 
@@ -426,7 +426,7 @@
   border:1px solid #8b8c8e;
   border-radius:50%;
   background:#f6f6f7;
-  transform:translate(calc(var(--gifts-icon-pos, 15%)*-1), -50%);
+  transform:translate(calc(-1 * var(--gifts-icon-pos, 15%)), -50%);
 }
 .flyout-cart__gifts li.active{
   color:#212428;

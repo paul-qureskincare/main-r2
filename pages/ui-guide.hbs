@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Qure - UI Guide</title>
+    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/spacings.css">
+    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/ui-guide.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #212428;
+            --discount-color: #ff5429;
+        }
+    </style>
+</head>
+
+<body class="ui-guide">
+   <div class="container">
+        <h1>QURE UI Guide</h1>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#typography" data-bs-toggle="tab">Typography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#icons" data-bs-toggle="tab">Icons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#elements" data-bs-toggle="tab">Elements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#buttons" data-bs-toggle="tab">Buttons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#components" data-bs-toggle="tab">Components</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="typography">
+                <h1>H1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <h2>H2Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3>H3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <h4>H4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <h5>H5 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                <h6>H6 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos accusantium earum asperiores suscipit facilis quas aliquam, iusto, laudantium repudiandae, quam nostrum repellendus eligendi in cumque dignissimos commodi tempore quo culpa rem voluptate? Soluta nam repellendus alias? Dolore placeat, tempora amet fugiat iste dolores quasi maiores repudiandae suscipit incidunt, cupiditate, nulla a enim! Eveniet odit atque quibusdam incidunt placeat eum impedit aliquid voluptatem sequi eligendi doloribus qui quam veniam minima, quae expedita! Ipsum laboriosam accusamus ex mollitia repellendus facilis omnis quam porro! Itaque ex quidem blanditiis aperiam perferendis cupiditate nesciunt assumenda temporibus veritatis. Architecto necessitatibus ab deserunt vel reprehenderit perferendis.</p>
+            </div>
+            <div class="tab-pane" id="icons">
+                <p><strong>Base icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["chevron", "checkmark", "plus", "minus", "cross", "arrow", "qure", "q", "youtube", "instagram", "facebook", "tiktok", "i", "play", "stars", "rating-fill", "trustpilot", "pm", "am", "watch", "cart", "user", "gift", "shipping", "faq", "letter", "pillow", "patches", "mist", "lock", "guarantee", "top", "proven", "pay-later", "reviewed"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>FAQs icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["shipping-order", "shipping-order-hvr", "rejuvalight-pro-facewear", "rejuvalight-pro-facewear-hvr", "micro-infusion-system", "micro-infusion-system-hvr", "renew-lllt-helmet", "renew-lllt-helmet-hvr", "returns-exchanges", "returns-exchanges-hvr", "billing-payment", "billing-payment-hvr", "warranty", "warranty-hvr", "qure-app", "qure-app-hvr", "troubleshooting", "troubleshooting-hvr"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+            </div>
+            <div class="tab-pane" id="elements">
+                <div class="e-checkmark"></div>
+                <div class="e-pill-save">Save 52%</div>
+                <div class="e-pill-badge">
+                    <span class="e-checkmark"></span>
+                    Dermatologist Reviewed
+                </div>
+                <div class="e-pill-badge e-pill-badge--sm">
+                    <i class="e-icon e-icon-pm"></i>
+                    PM Routine
+                </div>
+                <div class="e-pill-badge e-pill-badge--xs" style="color: #227d5f;">
+                    <i class="e-icon e-icon-checkmark"></i>
+                    Complete routine
+                </div>
+                Price: {{> e-price current="{$dyn}" }}
+
+            </div>
+            <div class="tab-pane" id="buttons">
+                Buttons
+            </div>
+            <div class="tab-pane" id="components">
+                <div class="c-faq-accordion _c-faq-accordion--lines">
+                    <div class="c-faq-accordion__list">
+                        {{#parseJson '[
+                                {
+                                    "question": "Question title 1",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                },
+                                {
+                                    "question": "Question title 2",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                },
+                                {
+                                    "question": "Question title 3",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                }
+                            ]'
+                         }}
+                            <details class="c-faq-accordion__item">
+                                <summary class="c-faq-accordion__summary">{{ question }}</summary>
+                                <article class="c-faq-accordion__content">
+                                    {{{ answer }}}
+                                </article>
+                            </details>
+                        {{/parseJson}}
+                    </div>
+                </div>
+                <br />
+                <div class="c-faq-accordion c-faq-accordion--lines">
+                    <div class="c-faq-accordion__list">
+                        {{#parseJson '[
+                                {
+                                    "question": "Question title 1",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                },
+                                {
+                                    "question": "Question title 2",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                },
+                                {
+                                    "question": "Question title 3",
+                                    "answer": "<p>Answer text to question 1</p>"
+                                }
+                            ]'
+                         }}
+                            <details class="c-faq-accordion__item">
+                                <summary class="c-faq-accordion__summary">{{ question }}</summary>
+                                <article class="c-faq-accordion__content">
+                                    {{{ answer }}}
+                                </article>
+                            </details>
+                        {{/parseJson}}
+                    </div>
+                </div>
+                <br />
+                {{> c-rating value="4.7" }}
+                <br />
+                {{> c-order-button }}
+                <br />
+                {{> c-certified-box }}
+                <br />
+                {{> c-next-batch }}
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/vendor.js" defer="defer"></script>
+</body>
+</html>

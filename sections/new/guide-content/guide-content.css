@@ -590,7 +590,13 @@
   border-radius:10px;
   background:#f6f6f7;
 }
-.c-faq-accordion__header button{
+.c-faq-accordion__item[open] .c-faq-accordion__summary{
+  font-weight:600;
+}
+.c-faq-accordion__item[open] .c-faq-accordion__summary:after{
+  content:"\e902";
+}
+.c-faq-accordion__header button,.c-faq-accordion__summary{
   display:flex;
   gap:10px;
   align-items:center;
@@ -602,7 +608,7 @@
   border:0;
   background:none;
 }
-.c-faq-accordion__header button:after{
+.c-faq-accordion__header button:after,.c-faq-accordion__summary:after{
   margin-left:auto;
   font-family:icomoon;
   font-weight:400;
@@ -719,7 +725,7 @@
   border-radius:0;
   background:none;
 }
-.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button{
+.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button,.c-faq-accordion--lines .c-faq-accordion__summary{
   padding-right:0;
   padding-left:0;
 }
@@ -1292,7 +1298,7 @@
   .c-step-by-step .c-swiper-nav{
     display:flex;
   }
-  .c-faq-accordion__content,.c-faq-accordion__header button{
+  .c-faq-accordion__content,.c-faq-accordion__header button,.c-faq-accordion__summary{
     padding-right:16px;
     padding-left:16px;
   }

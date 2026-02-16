@@ -262,7 +262,7 @@
 .c-modal--light .modal-dialog{
   display:flex;
   align-items:center;
-  height:calc(100% - var(--bs-modal-margin)*2);
+  height:calc(100% - var(--bs-modal-margin) * 2);
 }
 .c-modal--light .modal-header{
   height:30px;

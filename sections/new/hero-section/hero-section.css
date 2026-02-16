@@ -508,12 +508,12 @@
 }
 @media screen and (min-width:1200px){
   .hero-section .container{
-    max-width:calc(100% - 50vw + 593.5px);
+    max-width:calc(100% - (100vw - 1172px) / 2 + 7.5px);
   }
 }
 @media screen and (min-width:1400px){
   .hero-section .container{
-    max-width:calc(100% - 50vw + 623.5px);
+    max-width:calc(100% - (100vw - 1232px) / 2 + 7.5px);
   }
 }
 @media screen and (max-width:991px){

@@ -25,16 +25,15 @@
         text-align: center;
     }
 
-    .c-faq-accordion__header {
-        button {
-            padding-top: 32px;
-            padding-bottom: 32px;
-            font-size: 18px;
+    .c-faq-accordion__summary,
+    .c-faq-accordion__header button { // Old version
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 18px;
 
-            @include sm {
-                padding-top: 24px;
-                padding-bottom: 24px;
-            }
+        @include sm {
+            padding-top: 24px;
+            padding-bottom: 24px;
         }
     }
 

@@ -238,7 +238,13 @@
   border-radius:10px;
   background:#f6f6f7;
 }
-.c-faq-accordion__header button{
+.c-faq-accordion__item[open] .c-faq-accordion__summary{
+  font-weight:600;
+}
+.c-faq-accordion__item[open] .c-faq-accordion__summary:after{
+  content:"\e902";
+}
+.c-faq-accordion__header button,.c-faq-accordion__summary{
   display:flex;
   gap:10px;
   align-items:center;
@@ -250,7 +256,7 @@
   border:0;
   background:none;
 }
-.c-faq-accordion__header button:after{
+.c-faq-accordion__header button:after,.c-faq-accordion__summary:after{
   margin-left:auto;
   font-family:icomoon;
   font-weight:400;
@@ -367,7 +373,7 @@
   border-radius:0;
   background:none;
 }
-.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button{
+.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button,.c-faq-accordion--lines .c-faq-accordion__summary{
   padding-right:0;
   padding-left:0;
 }
@@ -386,7 +392,7 @@
   margin-bottom:24px;
   text-align:center;
 }
-.have-questions .c-faq-accordion__header button{
+.have-questions .c-faq-accordion__header button,.have-questions .c-faq-accordion__summary{
   padding-top:32px;
   padding-bottom:32px;
   font-size:18px;
@@ -399,7 +405,7 @@
   margin-top:60px;
 }
 @media screen and (max-width:767px){
-  .c-faq-accordion__content,.c-faq-accordion__header button{
+  .c-faq-accordion__content,.c-faq-accordion__header button,.c-faq-accordion__summary{
     padding-right:16px;
     padding-left:16px;
   }
@@ -417,7 +423,7 @@
     padding-top:40px;
     padding-bottom:40px;
   }
-  .have-questions .c-faq-accordion__header button{
+  .have-questions .c-faq-accordion__header button,.have-questions .c-faq-accordion__summary{
     padding-top:24px;
     padding-bottom:24px;
   }

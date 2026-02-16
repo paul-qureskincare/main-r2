@@ -90,6 +90,17 @@
         }
     }
 
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 6px;
+        align-items: center;
+
+        .e-pill-badge {
+            color: #227d5f;
+        }
+    }
+
     // .c-bundle-card__button
     &__button {
         display: flex;

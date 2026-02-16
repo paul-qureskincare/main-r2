@@ -16,42 +16,50 @@
         font-size: 16px;
         border-radius: 10px;
         background: #f6f6f7;
-    }
 
-    // .c-faq-accordion__header
-    &__header {
-        button {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            width: 100%;
-            min-height: 63px;
-            padding: 12px 24px;
-            color: #212428;
-            text-align: left;
-            border: 0;
-            background: none;
-
-            @include sm {
-                padding-right: 16px;
-                padding-left: 16px;
-            }
-
-            &::after {
-                margin-left: auto;
-                @include icon;
-                font-size: 14px;
-                content: "\e903";
-            }
-
-            &[aria-expanded="true"] {
+        &[open] {
+            #{$root}__summary {
                 font-weight: 600;
 
                 &::after {
                     content: "\e902";
                 }
             }
+        }
+    }
 
+    // .c-faq-accordion__header
+    &__header button, // Old version
+    &__summary {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        min-height: 63px;
+        padding: 12px 24px;
+        color: #212428;
+        text-align: left;
+        border: 0;
+        background: none;
+
+        @include sm {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        &::after {
+            margin-left: auto;
+            @include icon;
+            font-size: 14px;
+            content: "\e903";
+        }
+    }
+
+     &__header button[aria-expanded="true"] { // Old version
+        font-weight: 600;
+
+        &::after {
+            content: "\e902";
         }
     }
 
@@ -169,12 +177,12 @@
         }
 
         // .c-faq-accordion--lines .c-faq-accordion__header
-        #{$root}__header {
-            button {
-                padding-right: 0;
-                padding-left: 0;
-            }
+        #{$root}__header button, // Old version
+        #{$root}__summary {
+            padding-right: 0;
+            padding-left: 0;
         }
+
 
         // .c-faq-accordion--lines .c-faq-accordion__content
         #{$root}__content {

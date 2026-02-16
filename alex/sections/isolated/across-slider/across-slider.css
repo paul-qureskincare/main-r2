@@ -104,7 +104,7 @@
 }
 @media screen and (min-width:1200px){
   .steps-to-use .across-slider__carousel{
-    max-width:calc(100% - 50vw + 593.5px);
+    max-width:calc(100% - (100vw - 1172px) / 2 + 7.5px);
   }
   .steps-to-use .across-slider__carousel .swiper-arrows-with-pagination{
     max-width:1172px;
@@ -112,7 +112,7 @@
 }
 @media screen and (min-width:1400px){
   .steps-to-use .across-slider__carousel{
-    max-width:calc(100% - 50vw + 623.5px);
+    max-width:calc(100% - (100vw - 1232px) / 2 + 7.5px);
   }
   .steps-to-use .across-slider__carousel .swiper-arrows-with-pagination{
     max-width:1232px;

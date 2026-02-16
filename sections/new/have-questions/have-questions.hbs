@@ -6,26 +6,12 @@
         <div class="c-faq-accordion c-faq-accordion--lines">
             <div class="c-faq-accordion__list">
                 {{#parseJson list }}
-                    <div class="c-faq-accordion__item">
-                        <div class="c-faq-accordion__header">
-                            <button
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#c-faq-accordion-{{ counter }}"
-                                aria-expanded="false"
-                            >
-                                {{ question }}
-                            </button>
-                        </div>
-                        <div
-                            id="c-faq-accordion-{{ counter }}"
-                            class="c-faq-accordion__body collapse"
-                        >
-                            <div class="c-faq-accordion__content">
-                                {{{ answer }}}
-                            </div>
-                        </div>
-                    </div>
+                    <details class="c-faq-accordion__item">
+                        <summary class="c-faq-accordion__summary">{{ question }}</summary>
+                        <article class="c-faq-accordion__content">
+                            {{{ answer }}}
+                        </article>
+                    </details>
                 {{/parseJson}}
             </div>
             <div class="c-faq-accordion__ask-us">Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a></div>

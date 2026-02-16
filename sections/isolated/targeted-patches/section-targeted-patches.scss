@@ -409,3 +409,9 @@ body.product\.dermal-mist .patch__product-variants { margin-top: 30px; }
 .tp-product-gallery {
     @include gallery-sticky-video;
 }
+
+// For old hero section on section-stack
+.product\.silk-pillowcase .qure__trageted-patches {
+    --section-padding-top: 0;
+    --section-padding-bottom: 0;
+}
