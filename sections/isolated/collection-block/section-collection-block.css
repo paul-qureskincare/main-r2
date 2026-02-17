@@ -76,6 +76,7 @@ border-radius: 10px;
 .qure__product-item.silver-badge {
     position: relative;
 }
+/*
 .qure__product-item.silver-badge:after {
     position: absolute;
     top: 8px;
@@ -87,6 +88,7 @@ border-radius: 10px;
     background-size: 60px 60px;
     content: '';
 }
+*/
 @media(max-width:413px){
     .qure__product-item.silver-badge .badge-bestseller {
         display: none;
