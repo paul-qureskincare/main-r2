@@ -22,7 +22,7 @@
 .qure__product-item.silver-badge {
     position: relative;
 }
-.qure__product-item.silver-badge:after {
+/* .qure__product-item.silver-badge:after {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -32,7 +32,7 @@
     background: url(images/silver-badge.webp) 0 0 no-repeat;
     background-size: 60px 60px;
     content: '';
-}
+} */
 .qure__product-img {
     max-height: 300px;
 } 
