@@ -415,31 +415,40 @@
   max-width:480px;
 }
 
+.across-image-banner--holidays{
+  background:#ececec;
+}
 .across-image-banner--holidays .container{
-  height:38.1944444444vw;
-  max-height:550px;
+  height:34.7222222222vw;
+  max-height:500px;
 }
 .across-image-banner--holidays article{
   display:flex;
-  align-items:center;
-  max-width:500px;
-  text-align:center;
+  width:min(500px, 50%);
+  margin-left:auto;
+  padding-top:0;
+  padding-bottom:0;
 }
-.across-image-banner--holidays h1{
-  white-space:nowrap;
+.across-image-banner--holidays article h1{
+  font-size:38px;
+  line-height:1.1;
 }
-.across-image-banner--holidays p{
-  max-width:330px;
+.across-image-banner--holidays article p{
+  margin-bottom:14px;
 }
-.across-image-banner--holidays .btn{
+.across-image-banner--holidays article .btn{
   width:100%;
-  max-width:400px;
+  max-width:450px;
+  margin:0;
 }
-.across-image-banner--holidays .e-discount-badge{
-  position:absolute;
-  top:65px;
-  right:38px;
-  font-size:140px;
+.across-image-banner--holidays article small{
+  width:100%;
+  max-width:450px;
+  margin-top:-2px;
+  color:#707172;
+  font-size:12px;
+  line-height:1;
+  text-align:center;
 }
 @media screen and (max-width:1199px){
   .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
@@ -452,11 +461,6 @@
 @media screen and (max-width:1120px){
   .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
     bottom:-40px;
-  }
-  .across-image-banner--holidays .e-discount-badge{
-    top:40px;
-    right:16px;
-    font-size:90px;
   }
 }
 @media screen and (max-width:991px){
@@ -473,7 +477,14 @@
     max-width:440px;
   }
   .across-image-banner--holidays article{
-    max-width:410px;
+    gap:10px;
+  }
+  .across-image-banner--holidays article h1{
+    font-size:28px;
+  }
+  .across-image-banner--holidays article p{
+    margin-bottom:0;
+    font-size:16px;
   }
 }
 @media screen and (max-width:767px){
@@ -524,16 +535,27 @@
     max-width:none;
   }
   .across-image-banner--holidays .container{
-    justify-content:flex-end;
+    height:auto;
+  }
+  .across-image-banner--holidays picture{
+    position:static;
   }
   .across-image-banner--holidays img{
     -o-object-position:top center;
        object-position:top center;
   }
   .across-image-banner--holidays article{
-    padding-bottom:32px;
+    width:100%;
+    padding-top:16px;
+    padding-bottom:16px;
   }
-  .across-image-banner--holidays .e-discount-badge,.across-image-banner--holidays h1,.across-image-banner--holidays p{
+  .across-image-banner--holidays article p{
+    order:2;
+  }
+  .across-image-banner--holidays article .btn{
+    max-width:none;
+  }
+  .across-image-banner--holidays article small{
     display:none;
   }
 }

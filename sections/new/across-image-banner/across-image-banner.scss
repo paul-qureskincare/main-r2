@@ -270,11 +270,19 @@
 
     // .across-image-banner--holidays
     &--holidays {
+        background: #ececec;
+
         .container {
-            @include banner-height(550, 1440);
+            @include banner-height(500, 1440);
 
             @include sm {
-                justify-content: flex-end;
+                height: auto;
+            }
+        }
+
+        picture {
+            @include sm {
+                position: static;
             }
         }
 
@@ -286,41 +294,69 @@
 
         article {
             display: flex;
-            align-items: center;
-            max-width: 500px;
-            text-align: center;
+            width: min(500px, 50%);
+            margin-left: auto;
+            padding-top: 0;
+            padding-bottom: 0;
 
             @include md {
-                max-width: 410px;
+                gap: 10px;
             }
 
             @include sm {
-                padding-bottom: 32px;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            h1 {
+                font-size: 38px;
+                line-height: 1.1;
+
+                @include md {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                margin-bottom: 14px;
+
+                @include md {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                }
+
+                @include sm {
+                    order: 2;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 450px;
+                margin: 0;
+
+                @include sm {
+                    max-width: none;
+                }
+            }
+
+            small {
+                width: 100%;
+                max-width: 450px;
+                margin-top: -2px;
+                color: #707172;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+
+                @include sm {
+                    display: none;
+                }
             }
         }
 
-        h1 {
-            white-space: nowrap;
-
-            @include sm {
-                display: none;
-            }
-        }
-
-        p {
-            max-width: 330px;
-
-            @include sm {
-                display: none;
-            }
-        }
-
-        .btn {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .e-discount-badge {
+        /* .e-discount-badge {
             position: absolute;
             top: 65px;
             right: 38px;
@@ -335,6 +371,6 @@
             @include sm {
                 display: none;
             }
-        }
+        } */
     }
 }
