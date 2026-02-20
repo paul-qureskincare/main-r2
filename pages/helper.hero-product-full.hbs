@@ -1,0 +1,314 @@
+{{#> base
+    title="Hero Product Full"
+}}
+
+{{#> section-stack }}
+    <!-- BUY SECTION -->
+    <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
+    <section class="hero-product" id="hero-product">
+        <div class="hero-product__container container">
+            <div class="hero-product__gallery">
+                <div
+                    class="c-swiper"
+                    data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 16,
+                        "navigation": {
+                            "prevEl": "#hero-product .c-swiper-button-prev",
+                            "nextEl": "#hero-product .c-swiper-button-next"
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/shower_filter_3.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-4.webp" alt="Qure faucet filter"
+                                data-url="https://www.youtube.com/watch?v=Jqw2lZirHz4"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-1.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-2.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-3.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/shower_plus_faucet_img_4.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-5.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-6.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-7.webp" alt="Qure faucet filter" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-shower-filter/images/faucet_pd-8.webp" alt="Qure faucet filter" />
+                        </div>
+                    </div>
+                </div>
+                <div class="c-swiper-thumbs-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div
+                        class="c-swiper c-swiper-thumbs"
+                        data-swiper='{
+                            "slidesPerView": "auto",
+                            "spaceBetween": 12
+                        }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/shower_filter_3.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-4.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-1.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-2.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-3.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/shower_plus_faucet_img_4.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-5.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-6.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-7.webp" alt="Qure faucet filter" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/faucet_pd-8.webp" alt="Qure faucet filter" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+            <div class="hero-product__main">
+                {{> c-rating value="4.8" }}
+                <p>Qure faucet filter</p>
+                <h1>Get clearer skin, on tap, with Qure Faucet Filter</h1>
+                {{> e-price current="{$dyn}" }}
+                {{> c-special-offer }}
+                <article>
+                    <ul>
+                        <li>Advanced water filter reduces up to 99% of irritants for clearer, hydrated skin.</li>
+                        <li>Helps reduce pore-clogging contaminants and supports the reduction of premature aging, without any extra steps in your routine.</li>
+                        <li>Optimizes skincare effectiveness, and provides the most purified cleanse your skin will drink up.</li>
+                    </ul>
+                </article>
+                <hr />
+                {{> c-options-selector
+                    title="Select Your Color"
+                    list='[
+                        {
+                            "img": "sections/isolated/product-shower-filter/images/faucet_white.webp",
+                            "name": "White",
+                            "option": "color",
+                            "checked": true
+                        },
+                        {
+                            "img": "sections/isolated/product-shower-filter/images/faucet_black.webp",
+                            "name": "Black",
+                            "option": "color"
+                        },
+                        {
+                            "img": "sections/isolated/product-shower-filter/images/faucet_silver.webp",
+                            "name": "Silver",
+                            "option": "color"
+                        }
+                    ]'
+                }}
+                {{> c-subscribe-selector
+                    title="Select Your Delivery"
+                    list='[
+                        {
+                            "name": "Subscribe &",
+                            "save": "20%",
+                            "old-price": true,
+                            "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                            "option": "subscribe",
+                            "checked": true,
+                            "text": "
+                                <p> One Time: Faucet + 1 Filter<br />
+                                Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
+                                <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
+                            "
+                        },
+                        {
+                            "name": "One-Time Purchase",
+                            "option": "subscribe",
+                            "text": "
+                                <p> One Time: Faucet + 1 Filter</p>
+                            "
+                        }
+                    ]'
+                }}
+                <div class="c-buy-block">
+                    {{> c-order-button }}
+                    {{> c-certified-box }}
+                    <ul class="e-features-list">
+                        <li>
+                            {{> e-icon icon="guarantee" }}
+                            30-Day Money-Back Guarantee
+                        </li>
+                        <li>
+                            {{> e-icon icon="shipping-order" }}
+                            Free Shipping over {$dyn}
+                        </li>
+                    </ul>
+                </div>
+                {{> c-next-batch }}
+                {{> c-limited-offer }}
+                {{> c-save-up }}
+                {{> c-exclusive-offer }}
+                <picture
+                    data-label-text="Watch: How To Use"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reusableWistiaModal"
+                    data-video-id="8ymvdqzx92"
+                >
+                    <img src="sections/isolated/micro-infusion-pdp/images/how_to_use_men.webp" alt="Watch: How To Use" />
+                </picture>
+                {{> c-clinic-metrics
+                    title="Clinically Proven Results"
+                    list='[
+                        {
+                            "value": "90%",
+                            "text": "agree skin feels hydrated"
+                        },
+                        {
+                            "value": "83%",
+                            "text": "agree skin feels softer"
+                        },
+                        {
+                            "value": "70%",
+                            "text": "agree hair feels less frizzy"
+                        }
+                    ]'
+                }}
+                {{> c-moneyback }}
+
+            </div>
+            <div class="hero-product__extra">
+                <div class="hero-product__best-with">
+                    <h6>Get The Best Results With</h6>
+                    <div
+                        class="c-swiper"
+                        data-swiper='{
+                            "slidesPerView": "1.25",
+                            "spaceBetween": 12,
+                            "breakpoints": {
+                                "992": {
+                                    "slidesPerView": 2
+                                }
+                            }
+                        }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/result-2.webp" alt="Dermal Mist (Duo - 100ml + 15ml)" />
+                                <a href="#">Dermal Mist (Duo - 100ml + 15ml)</a>
+                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/shower_filter.webp" alt="Shower Filter" />
+                                <a href="#">Shower Filter</a>
+                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{> c-accordion
+                    type="lines"
+                    list='[
+                        {
+                            "summary": "Key Benefits",
+                            "text": "
+                                <p>Healthy skin starts with your water. The Qure Faucet Filter helps reduce harmful impurities that can cause dryness, irritation, and discomfort. By filtering your tap water, you\'re creating the perfect canvas for the rest of your skincare products and helping your skin stay hydrated and happy.</p>
+                                <p>The Qure Faucet Filter is third-party tested to meet NSF standards for water filtration performance.</p>
+                            "
+                        },
+                        {
+                            "summary": "How It Works",
+                            "text": "
+                                <p>Our Triple-Filtration System helps reduce up to 99% of chlorine, heavy metals, and other contaminants in your water.</p>
+                                <p>Here\'s what happens:</p>
+                                <ol>
+                                    <li>Water passes through our triple-filtration system</li>
+                                    <li>Impurities get trapped in the specialized filtration media</li>
+                                    <li>Clean, filtered water flows through your faucet</li>
+                                </ol>
+                                <p>The result? Water that\'s gentler on your skin, without the stuff that can strip away natural moisture.</p>
+                            "
+                        },
+                        {
+                            "summary": "What’s Included In The Box",
+                            "text": "
+                                <p>Inside the box, you\'ll find:</p>
+                                <ul>
+                                    <li>The Qure Faucet Filter with initial filter cartridge (lasts up to 3 months)</li>
+                                    <li>Tools for installation, including a bubbler wrench, thread adapters, and silicone rings</li>
+                                    <li>Clear setup instructions and user manual</li>
+                                </ul>
+                            "
+                        }
+                    ]'
+                }}
+                {{> c-jump-to
+                    list='[
+                        {
+                            "id": "improve_skin",
+                            "name": "The Results"
+                        },
+                        {
+                            "id": "crystal_clear",
+                            "name": "Reviews"
+                        },
+                        {
+                            "id": "easy_steps",
+                            "name": "How To Use"
+                        },
+                        {
+                            "id": "why_it_works",
+                            "name": "How It Works"
+                        },
+                        {
+                            "id": "faq",
+                            "name": "FAQs"
+                        }
+                    ]'
+                }}
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadScriptOnce('swiper', 'assets/js-new/swiper.js');
+            loadScriptOnce('countdown', 'assets/js-new/countdown.js');
+            loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
+            loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
+            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+        });
+    </script>
+    <!-- BUY SECTION END -->
+    <br /><br /><br /><br /><br />
+{{/section-stack }}
+
+{{/base }}

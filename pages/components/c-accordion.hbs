@@ -1,0 +1,15 @@
+<div class="c-accordion {{#if type }}c-accordion--{{ type }}{{/if}}">
+    <div class="c-accordion__list">
+        {{#parseJson list }}
+            <details class="c-accordion__item">
+                <summary class="c-accordion__summary">
+                    {{#if icon }}{{> e-icon icon=icon }}{{/if}}{{ summary }}
+                </summary>
+                <article class="c-accordion__content">
+                    {{{ text }}}
+                </article>
+            </details>
+        {{/parseJson}}
+    </div>
+    {{#if button}}<div class="c-accordion__ask-us">Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a></div>{{/if}}
+</div>

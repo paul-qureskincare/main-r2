@@ -1,0 +1,7 @@
+@mixin hide-pane {
+    position: absolute;
+    left: -300vw;
+    z-index: -10;
+    visibility: hidden;
+    opacity: 0;
+}

@@ -43,9 +43,9 @@
 //     } else {
 //       alert("Not a Vimeo!  URL example:\n https://vimeo.com/120206922");
 //     }
-  
+
 //   } else if (url.indexOf("mp4") !== -1 || url.indexOf("m4v") !== -1) {
-    
+
 //     document.getElementById(
 //       "lvideo-wrap"
 //     ).innerHTML = `${startModal}<video controls loop playsinline autoplay><source src='${this.dataset.url}' type="video/mp4"></video>${finishModal}`;
@@ -131,4 +131,4 @@ if (typeof window.VideoModal === "undefined") {
 }
 
 // Then you can use this anywhere on the page, even multiple times:
-new VideoModal(".lvideo, picture[data-url]");
+new VideoModal(".lvideo, [data-url*=\"youtube.com/watch\"]");

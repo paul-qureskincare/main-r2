@@ -226,6 +226,30 @@
 .e-icon-troubleshooting-hvr:before{
   content:"\e91e";
 }
+
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
 .patch__product-rating{
   padding:8px 20px;
   background:#f6f6f7;

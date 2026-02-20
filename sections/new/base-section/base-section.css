@@ -286,6 +286,30 @@
   content:"\e91e";
 }
 
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
 .base-section article{
   display:grid;
   grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
@@ -346,6 +370,24 @@
   width:100%;
   height:auto;
   border-radius:10px;
+}
+.base-section .features-list{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-row:1 /  -1;
+  grid-column:2;
+  gap:20px 10px;
+  width:min(400px, 100%);
+  margin:0 auto;
+}
+.base-section .features-list li{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
+}
+.base-section .features-list li .e-icon{
+  font-size:45px;
 }
 .base-section--small-media article{
   grid-template-columns:1fr 400px;
@@ -438,6 +480,18 @@
     grid-area:auto;
     grid-column:1;
     width:100%;
+  }
+  .base-section .features-list{
+    order:10;
+    grid-area:auto;
+    grid-column:1;
+    width:100%;
+  }
+  .base-section .features-list li{
+    font-size:16px;
+  }
+  .base-section .features-list li .e-icon{
+    font-size:40px;
   }
   .base-section--small-media article,.base-section--small-media.base-section--reverse article{
     grid-template-columns:auto;

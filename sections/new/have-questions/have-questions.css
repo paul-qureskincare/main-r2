@@ -227,24 +227,48 @@
   content:"\e91e";
 }
 
-.c-faq-accordion__list{
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
+.c-accordion__list{
   display:flex;
   flex-direction:column;
   gap:12px;
 }
-.c-faq-accordion__item{
+.c-accordion__item{
   overflow:hidden;
   font-size:16px;
   border-radius:10px;
   background:#f6f6f7;
 }
-.c-faq-accordion__item[open] .c-faq-accordion__summary{
+.c-accordion__item[open] .c-accordion__summary{
   font-weight:600;
 }
-.c-faq-accordion__item[open] .c-faq-accordion__summary:after{
+.c-accordion__item[open] .c-accordion__summary:after{
   content:"\e902";
 }
-.c-faq-accordion__header button,.c-faq-accordion__summary{
+.c-accordion__summary{
   display:flex;
   gap:10px;
   align-items:center;
@@ -256,7 +280,7 @@
   border:0;
   background:none;
 }
-.c-faq-accordion__header button:after,.c-faq-accordion__summary:after{
+.c-accordion__summary:after{
   margin-left:auto;
   font-family:icomoon;
   font-weight:400;
@@ -271,67 +295,61 @@
   font-size:14px;
   content:"\e903";
 }
-.c-faq-accordion__header button[aria-expanded=true]{
-  font-weight:600;
-}
-.c-faq-accordion__header button[aria-expanded=true]:after{
-  content:"\e902";
-}
-.c-faq-accordion__content{
+.c-accordion__content{
   padding:0 24px 24px;
 }
-.c-faq-accordion__content picture{
+.c-accordion__content picture{
   float:right;
   width:min(300px, 40%);
   margin-bottom:25px;
   margin-left:40px;
 }
-.c-faq-accordion__content picture img{
+.c-accordion__content picture img{
   max-width:100%;
   height:auto;
 }
-.c-faq-accordion__content p{
+.c-accordion__content p{
   margin:0;
 }
-.c-faq-accordion__content p:not(:last-child){
+.c-accordion__content p:not(:last-child){
   margin-bottom:15px;
 }
-.c-faq-accordion__content a{
+.c-accordion__content a{
   color:inherit;
   text-decoration:underline;
 }
-.c-faq-accordion__content a:hover{
+.c-accordion__content a:hover{
   text-decoration:none;
 }
-.c-faq-accordion__content a[href^="mailto:"]{
+.c-accordion__content a[href^="mailto:"]{
   color:#91baec;
 }
-.c-faq-accordion__content strong{
+.c-accordion__content strong{
   font-weight:500;
 }
-.c-faq-accordion__content ul{
+.c-accordion__content ul{
   padding-left:24px;
 }
-.c-faq-accordion__content ul:not(:last-child){
+.c-accordion__content ul:not(:last-child){
   margin-bottom:15px;
 }
-.c-faq-accordion__content ul li{
+.c-accordion__content ul li{
   padding-left:4px;
   list-style:disc;
 }
-.c-faq-accordion__content ol{
+.c-accordion__content ol{
   counter-reset:item;
 }
-.c-faq-accordion__content ol:not(:last-child){
+.c-accordion__content ol:not(:last-child){
   margin-bottom:15px;
 }
-.c-faq-accordion__content ol li{
+.c-accordion__content ol li{
   position:relative;
   min-height:24px;
   padding-left:36px;
   counter-increment:item;
 }
-.c-faq-accordion__content ol li:before{
+.c-accordion__content ol li:before{
   position:absolute;
   top:0;
   left:0;
@@ -343,10 +361,10 @@
   border-radius:24px;
   content:counters(item, "");
 }
-.c-faq-accordion__content ol li:not(:last-child){
+.c-accordion__content ol li:not(:last-child){
   margin-bottom:12px;
 }
-.c-faq-accordion__ask-us{
+.c-accordion__ask-us{
   display:flex;
   gap:10px;
   align-items:center;
@@ -354,26 +372,26 @@
   margin-top:40px;
   font-weight:500;
 }
-.c-faq-accordion__ask-us a{
+.c-accordion__ask-us a{
   display:flex;
   gap:6px;
   align-items:center;
   font-weight:inherit;
 }
-.c-faq-accordion__ask-us a .e-icon{
+.c-accordion__ask-us a .e-icon{
   font-size:14px;
   vertical-align:top;
   -webkit-text-stroke:.4px;
 }
-.c-faq-accordion--lines .c-faq-accordion__list{
+.c-accordion--lines .c-accordion__list{
   gap:0;
 }
-.c-faq-accordion--lines .c-faq-accordion__item{
+.c-accordion--lines .c-accordion__item{
   border-bottom:1px solid #8b8c8e;
   border-radius:0;
   background:none;
 }
-.c-faq-accordion--lines .c-faq-accordion__content,.c-faq-accordion--lines .c-faq-accordion__header button,.c-faq-accordion--lines .c-faq-accordion__summary{
+.c-accordion--lines .c-accordion__content,.c-accordion--lines .c-accordion__summary{
   padding-right:0;
   padding-left:0;
 }
@@ -392,30 +410,28 @@
   margin-bottom:24px;
   text-align:center;
 }
-.have-questions .c-faq-accordion__header button,.have-questions .c-faq-accordion__summary{
+.have-questions .c-accordion__summary{
   padding-top:32px;
+}
+.have-questions .c-accordion__content,.have-questions .c-accordion__summary{
   padding-bottom:32px;
   font-size:18px;
 }
-.have-questions .c-faq-accordion__content{
-  padding-bottom:32px;
-  font-size:18px;
-}
-.have-questions .c-faq-accordion__ask-us{
+.have-questions .c-accordion__ask-us{
   margin-top:60px;
 }
 @media screen and (max-width:767px){
-  .c-faq-accordion__content,.c-faq-accordion__header button,.c-faq-accordion__summary{
+  .c-accordion__content,.c-accordion__summary{
     padding-right:16px;
     padding-left:16px;
   }
-  .c-faq-accordion__content picture{
+  .c-accordion__content picture{
     float:none;
     display:block;
     width:100%;
     margin-left:0;
   }
-  .c-faq-accordion__ask-us{
+  .c-accordion__ask-us{
     margin-top:32px;
     margin-bottom:4px;
   }
@@ -423,14 +439,14 @@
     padding-top:40px;
     padding-bottom:40px;
   }
-  .have-questions .c-faq-accordion__header button,.have-questions .c-faq-accordion__summary{
+  .have-questions .c-accordion__summary{
     padding-top:24px;
     padding-bottom:24px;
   }
-  .have-questions .c-faq-accordion__content{
+  .have-questions .c-accordion__content{
     padding-bottom:24px;
   }
-  .have-questions .c-faq-accordion__ask-us{
+  .have-questions .c-accordion__ask-us{
     margin-top:40px;
   }
 }

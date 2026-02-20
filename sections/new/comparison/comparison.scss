@@ -11,6 +11,10 @@
         gap: 40px;
         align-items: center;
         text-align: center;
+
+        @include sm {
+            gap: 24px;
+        }
     }
 
     article {
@@ -19,6 +23,10 @@
 
     h2 {
         margin-bottom: 32px;
+
+        @include sm {
+            margin-bottom: 16px;
+        }
     }
 
     // .comparison__table

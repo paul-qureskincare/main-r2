@@ -1,0 +1,14 @@
+<div class="c-options-selector">
+    <p>{{ title }}:</p>
+    <ul>
+        {{#parseJson list }}
+            <li>
+                <label>
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <img src="{{ img }}" alt="{{ name }}" />
+                    <span>{{ name }}</span>
+                </label>
+            </li>
+        {{/parseJson}}
+    </ul>
+</div>

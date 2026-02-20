@@ -1,0 +1,8 @@
+<ul class="c-percent-list">
+    {{#parseJson list }}
+        <li>
+            {{> e-circle-percent value=value }}
+            <span>{{ text }}</span>
+        </li>
+    {{/parseJson}}
+</ul>

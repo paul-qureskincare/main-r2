@@ -1,0 +1,114 @@
+.e-author{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.e-author img{
+  width:100%;
+  max-width:25px;
+  height:auto;
+  vertical-align:top;
+}
+
+.e-checkmark{
+  width:1em;
+  height:1em;
+  color:#212428;
+  line-height:1em;
+  text-align:center;
+  border-radius:50%;
+  background:#c7e5db;
+}
+.e-checkmark:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:.35em;
+  line-height:inherit;
+  vertical-align:top;
+  content:"\e901";
+}
+
+.e-verified-customer{
+  --e-verified-customer-bg:rgba(199,229,219,.3);
+  display:inline-flex;
+  gap:5px;
+  align-items:center;
+  padding:4px 10px;
+  font-size:14px;
+  border-radius:5px;
+  background:var(--e-verified-customer-bg);
+}
+.e-verified-customer .e-checkmark{
+  vertical-align:top;
+}
+
+.c-trusted-review-card{
+  display:grid;
+  grid-template:repeat(3, auto)/repeat(2, auto);
+  gap:20px;
+  align-content:start;
+  overflow:hidden;
+  border-radius:10px;
+  background:#fff;
+}
+.c-trusted-review-card article,.c-trusted-review-card picture{
+  grid-column:1 /  -1;
+}
+.c-trusted-review-card article{
+  padding:0 20px 20px;
+  line-height:1.25;
+}
+.c-trusted-review-card h6{
+  margin-bottom:12px;
+  font-family:inherit;
+  font-weight:500;
+}
+.c-trusted-review-card .e-author{
+  align-self:center;
+  margin-left:20px;
+}
+.c-trusted-review-card .e-verified-customer{
+  margin-right:20px;
+  margin-left:auto;
+}
+
+.trusted-reviews{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.trusted-reviews h2{
+  margin-bottom:36px;
+  text-align:center;
+}
+@media screen and (max-width:991px){
+  .trusted-reviews h2{
+    margin-bottom:20px;
+  }
+}
+@media screen and (max-width:767px){
+  .c-trusted-review-card{
+    gap:16px;
+  }
+  .c-trusted-review-card article{
+    padding:0 16px 20px;
+    font-size:16px;
+  }
+  .c-trusted-review-card .e-author{
+    margin-left:16px;
+  }
+  .c-trusted-review-card .e-verified-customer{
+    margin-right:16px;
+  }
+  .trusted-reviews{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+}

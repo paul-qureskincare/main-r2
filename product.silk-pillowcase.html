@@ -3,8 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Qure</title>
+        <title>Silk Pillowcase - Qure</title>
         <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
         <link rel="stylesheet" href="assets/css/vendor.css" />
         <link rel="stylesheet" href="assets/css/spacings.css" />
         <link href="assets/css/theme-fonts.css" rel="stylesheet" />
@@ -297,22 +303,22 @@
             </div>
             <!-- COMPARISON END -->
 
-            <!-- COMPARISON -->
+            <!-- HAVE QUESTIONS -->
             <link rel="stylesheet" href="sections/new/have-questions/have-questions.css" />
             <div class="have-questions">
                 <div class="container">
                     <h2>Have questions?</h2>
-                    <div class="c-faq-accordion c-faq-accordion--lines">
-                        <div class="c-faq-accordion__list">
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">What kind of silk material is used?</summary>
-                                <article class="c-faq-accordion__content">
+                    <div class="c-accordion c-accordion--lines">
+                        <div class="c-accordion__list">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">What kind of silk material is used?</summary>
+                                <article class="c-accordion__content">
                                     <p>We use the highest grade (6A) long fiber mulberry silk, with a thickness of 22 momme and enforce the strictest quality guidelines, including non-toxic dyes.</p>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">How do I care for the silk pillowcase?</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">How do I care for the silk pillowcase?</summary>
+                                <article class="c-accordion__content">
                                     <p>The better you can care for your Silk Pillowcase, the better it can care for you. To keep your pillowcase in top condition, wash it in cold water or temperatures no higher than 30°C. Avoid powder detergents or bleach. Always air dry your pillowcase flat or hanging. Never tumble dry or wring it out.</p>
                                     <p>Washing by hand:</p>
                                     <ul>
@@ -334,9 +340,9 @@
                                     </ul>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Who is this pillowcase best for?</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Who is this pillowcase best for?</summary>
+                                <article class="c-accordion__content">
                                     <p>Anyone who wants to wake up with smoother skin and healthier hair.</p>
                                     <p>It’s especially great for:</p>
                                     <ul>
@@ -348,23 +354,37 @@
                                     </ul>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">What’s the difference between satin and silk pillowcases?</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">What’s the difference between satin and silk pillowcases?</summary>
+                                <article class="c-accordion__content">
                                     <p>Satin refers to a finish rather than a fabric, and when people talk about "satin pillowcases," they often mean those made from synthetic materials like polyester. While these synthetic satin options may feel smooth initially, they don't provide the same benefits for your skin and hair as real silk.</p>
                                     <p>Silk, a natural fiber, offers superior softness and breathability compared to synthetic alternatives, which can feel rougher and less comfortable over time. To identify genuine silk, look for a natural, subtle sheen, rather than the overly shiny appearance of synthetic alternatives.</p>
                                 </article>
                             </details>
                         </div>
-                        <div class="c-faq-accordion__ask-us">
+                        <div class="c-accordion__ask-us">
                             Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- COMPARISON END -->
+            <!-- HAVE QUESTIONS END -->
         </main>
         <!-- SECTIONS STACK END -->
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- CART AND FOOTER -->
         <div id="site-footer"></div>

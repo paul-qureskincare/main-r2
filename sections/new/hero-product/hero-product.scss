@@ -1,10 +1,21 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
 @use "@components/c-rating" as *;
+@use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
 @use "@components/c-buy-block" as *;
 @use "@components/c-next-batch" as *;
 @use "@components/c-swiper" as *;
+@use "@components/c-accordion" as *;
+@use "@components/c-jump-to" as *;
+@use "@components/c-options-selector" as *;
+@use "@components/c-subscribe-selector" as *;
+@use "@components/c-limited-offer" as *;
+@use "@components/c-save-up" as *;
+@use "@components/c-exclusive-offer" as *;
+@use "@components/c-modal" as *;
+@use "@components/c-clinic-metrics" as *;
+@use "@components/c-moneyback" as *;
 
 .hero-product {
     $root: &;
@@ -47,12 +58,14 @@
             margin-bottom: -5px;
         }
 
-        .e-price {
+        & > .e-price {
             font-size: 22px;
             font-weight: 500;
         }
 
         article {
+            max-width: 500px;
+
             p {
                 margin-bottom: 1.5rem;
             }
@@ -63,9 +76,61 @@
             }
         }
 
+        hr {
+            max-width: 500px;
+            margin: 0;
+        }
+
         .e-features-list {
             @include sm {
                 display: none;
+            }
+        }
+
+        & > picture {
+            width: 350px;
+
+            @include sm {
+                // width: 100%;
+            }
+
+            &[data-video-id],
+            &[data-url] {
+                @include play;
+                cursor: pointer;
+
+                img {
+                    border-radius: 10px;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+            }
+
+            &[data-label-text] {
+                &::before {
+                    position: absolute;
+                    bottom: 22px;
+                    left: 20px;
+                    color: #fff;
+                    font-weight: 500;
+                    content: attr(data-label-text);
+                }
+
+                &::after {
+                    inset: auto 20px 10px auto;
+                    font-size: 35px;
+                    transform: none;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+                border-radius: 10px;
             }
         }
     }
@@ -84,11 +149,30 @@
         .c-swiper {
             margin: 0;
             padding: 0;
+
+            &:first-child {
+                border-radius: 10px;
+            }
         }
 
         .c-swiper-thumbs-nav {
+            align-self: center;
+            max-width: 518px;
+
+            @include lg {
+                max-width: 354px;
+            }
+
+            @include sm {
+                max-width: 324px;
+            }
+
             .swiper-slide {
                 width: 70px;
+
+                @include sm {
+                    width: 60px;
+                }
 
                 &:last-child {
                     margin-right: 0 !important;
@@ -99,7 +183,18 @@
 
     // .hero-product__extra
     &__extra {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
         min-width: 0;
+
+        @include sm {
+            gap: 24px;
+        }
+
+        .c-accordion__summary {
+            min-height: 56px;
+        }
     }
 
     // .hero-product__best-with

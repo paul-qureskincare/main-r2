@@ -1,0 +1,42 @@
+@use "@root/mixins" as *;
+@use "@elements/e-price" as *;
+
+.c-special-offer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+
+    &::before {
+        color: transparent;
+        font-weight: 600;
+        text-transform: uppercase;
+        background:
+            linear-gradient(90deg,
+                var(--discount-color) 0%,
+                hsl(from var(--discount-color) h s calc(l + 20)) 50%,
+                var(--discount-color) 100%
+        );
+        background-clip: text;
+        content: attr(data-label);
+        -webkit-text-fill-color: transparent;
+    }
+
+    .e-price {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .e-price__main {
+        flex-direction: row-reverse;
+    }
+
+    .e-pill-save {
+        background:
+            linear-gradient(90deg,
+                var(--discount-color) 0%,
+                hsl(from var(--discount-color) h s calc(l + 20)) 50%,
+                var(--discount-color) 100%
+        );
+    }
+}

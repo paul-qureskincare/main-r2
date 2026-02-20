@@ -1,0 +1,58 @@
+@use "@root/mixins" as *;
+@use "@elements/e-author" as *;
+@use "@elements/e-verified-customer" as *;
+
+.c-trusted-review-card {
+    $root: &;
+
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    gap: 20px;
+    align-content: start;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+
+    @include sm {
+        gap: 16px;
+    }
+
+    picture,
+    article {
+        grid-column: 1 / -1;
+    }
+
+    article {
+        padding: 0 20px 20px;
+        line-height: 1.25;
+
+        @include sm {
+            padding: 0 16px 20px;
+            font-size: 16px;
+        }
+    }
+
+    h6 {
+        margin-bottom: 12px;
+        font-family: inherit;
+        font-weight: 500;
+    }
+
+    .e-author {
+        align-self: center;
+        margin-left: 20px;
+
+        @include sm {
+            margin-left: 16px;
+        }
+    }
+
+    .e-verified-customer {
+        margin-right: 20px;
+        margin-left: auto;
+
+        @include sm {
+            margin-right: 16px;
+        }
+    }
+}

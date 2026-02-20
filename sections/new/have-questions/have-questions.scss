@@ -1,6 +1,6 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
-@use "@components/c-faq-accordion" as *;
+@use "@components/c-accordion" as *;
 
 .have-questions {
     $root: &;
@@ -25,8 +25,7 @@
         text-align: center;
     }
 
-    .c-faq-accordion__summary,
-    .c-faq-accordion__header button { // Old version
+    .c-accordion__summary {
         padding-top: 32px;
         padding-bottom: 32px;
         font-size: 18px;
@@ -37,7 +36,7 @@
         }
     }
 
-    .c-faq-accordion__content {
+    .c-accordion__content {
         padding-bottom: 32px;
         font-size: 18px;
 
@@ -46,7 +45,7 @@
         }
     }
 
-    .c-faq-accordion__ask-us {
+    .c-accordion__ask-us {
         margin-top: 60px;
 
         @include sm {

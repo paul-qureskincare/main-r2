@@ -10,10 +10,11 @@
     border-radius: 100px;
 
     li {
-
+        flex-grow: 1;
     }
 
     button {
+        width: 100%;
         padding: 7px 16px;
         color: #b5b6b7;
         font-size: 18px;

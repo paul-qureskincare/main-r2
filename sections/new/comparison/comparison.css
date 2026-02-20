@@ -227,6 +227,30 @@
   content:"\e91e";
 }
 
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
 .comparison .container{
   display:flex;
   flex-direction:column;
@@ -316,6 +340,12 @@
   background:#212428;
 }
 @media screen and (max-width:767px){
+  .comparison .container{
+    gap:24px;
+  }
+  .comparison h2{
+    margin-bottom:16px;
+  }
   .comparison__table{
     gap:30px;
   }

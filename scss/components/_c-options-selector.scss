@@ -1,0 +1,55 @@
+@use "@root/mixins" as *;
+
+.c-options-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        gap: 12px;
+
+        li {
+            width: 100%;
+        }
+
+        label {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            height: 132px;
+            padding: 14px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            outline: 1px solid #dfe0e0;
+            cursor: pointer;
+
+            &:has(input:checked) {
+                border-color: currentcolor;
+                outline: none;
+            }
+        }
+
+        input {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 80px;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+}

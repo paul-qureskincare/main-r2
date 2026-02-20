@@ -73,7 +73,8 @@
 .page\.neck-decolletage-led-customer-reviews,
 .page\.all-in-one-serum-customer-reviews,
 .page\.micro-infusion-targeted-patches-customer-reviews,
-.product\.silk-pillowcase {
+.product\.silk-pillowcase,
+.product\.faucet-filter {
     @include sections-stack;
 }
 
@@ -123,7 +124,8 @@
 .page\.all-in-one-face-serum-creative-content-guide,
 .page\.hairgrowth-helmet-welcome
 .page\.qure-microinfusion-offer-listicle,
-.product\.silk-pillowcase {
+.product\.silk-pillowcase,
+.product\.faucet-filter {
     .sections-stack {
         padding-bottom: 0;
 

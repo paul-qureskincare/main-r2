@@ -4,14 +4,43 @@
     <div class="container">
         <article>
             <h2>{{ title }}</h2>
-            <picture>
-                <img src="{{ picture }}" alt="{{ title }}" />
-            </picture>
+            {{#if picture }}
+                <picture>
+                    <img src="{{ picture }}" alt="{{ title }}" />
+                </picture>
+            {{/if}}
+            {{#if wistia }}
+                <div class="wistia-embed-video">
+                    <div class="wistia_responsive_padding">
+                        <div class="wistia_responsive_wrapper">
+                            <div class="wistia_embed wistia_async_{{ wistia }} seo=false videoFoam=true"></div>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+            {{#if features-list }}
+                {{{ features-list }}}
+            {{/if}}
             <div>
                 {{> @partial-block }}
             </div>
-            <a href="#" class="btn btn--primary">{{ button }}</a>
+            {{#if button }}
+                <a href="#" class="btn btn--primary">{{ button }}</a>
+            {{/if}}
+            {{#if pill-badge }}
+                <div class="e-pill-badge">
+                    <span class="e-checkmark"></span>
+                    Dermatologist Reviewed
+                </div>
+            {{/if}}
         </article>
     </div>
 </section>
+{{#if wistia }}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+        });
+    </script>
+{{/if}}
 <!-- BASE SECTION END -->

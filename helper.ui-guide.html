@@ -3,22 +3,22 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-        <title>Qure - UI Guide</title>
+        <title>UI Guide - Qure</title>
         <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
-        <link rel="stylesheet" href="assets/css/vendor.css" />
-        <link rel="stylesheet" href="assets/css/spacings.css" />
-        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
-        <link href="assets/css/base.css" rel="stylesheet" />
-        <link href="assets/css/ui-guide.css" rel="stylesheet" />
         <style>
             :root {
                 --primary-color: #212428;
                 --discount-color: #ff5429;
             }
         </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/helper.ui-guide.css" rel="stylesheet" />
     </head>
 
-    <body class="ui-guide">
+    <body class="helper.ui-guide">
         <div class="container">
             <h1>QURE UI Guide</h1>
             <ul class="nav nav-tabs" role="tablist">
@@ -284,55 +284,72 @@
                         <i class="e-icon e-icon-checkmark"></i>
                         Complete routine
                     </div>
+                    <ul class="e-pill-tabs" role="tablist">
+                        <li>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#[id]">User Results</button>
+                        </li>
+                        <li>
+                            <button class="active" type="button" data-bs-toggle="tab" data-bs-target="#[id]">Clinical Data</button>
+                        </li>
+                    </ul>
                     Price:
                     <div class="e-price">
                         <div class="e-price__main">
                             <div class="e-price__current">{$dyn}</div>
                         </div>
                     </div>
+
+                    <div class="e-verified-customer">
+                        <div class="e-checkmark"></div>
+                        Verified customer
+                    </div>
+                    <div class="e-author">
+                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Kim L." />
+                        Kim L.
+                    </div>
+                    <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
                 </div>
                 <div class="tab-pane" id="buttons">Buttons</div>
                 <div class="tab-pane" id="components">
-                    <div class="c-faq-accordion _c-faq-accordion--lines">
-                        <div class="c-faq-accordion__list">
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 1</summary>
-                                <article class="c-faq-accordion__content">
+                    <div class="c-accordion">
+                        <div class="c-accordion__list">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 1</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 2</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 2</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 3</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 3</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
                         </div>
                     </div>
-                    <br />
-                    <div class="c-faq-accordion c-faq-accordion--lines">
-                        <div class="c-faq-accordion__list">
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 1</summary>
-                                <article class="c-faq-accordion__content">
+                    <div class="c-accordion c-accordion--lines">
+                        <div class="c-accordion__list">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 1</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 2</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 2</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
-                            <details class="c-faq-accordion__item">
-                                <summary class="c-faq-accordion__summary">Question title 3</summary>
-                                <article class="c-faq-accordion__content">
+                            <details class="c-accordion__item">
+                                <summary class="c-accordion__summary">Question title 3</summary>
+                                <article class="c-accordion__content">
                                     <p>Answer text to question 1</p>
                                 </article>
                             </details>
@@ -381,10 +398,83 @@
                             </li>
                         </ul>
                     </div>
+                    <br />
+                    <ul class="c-percent-list">
+                        <li>
+                            <div class="e-circle-percent" style="--percent-value: 100"><span>100%</span></div>
+                            <span>experienced visibly thicker hair strands after 16 weeks</span>
+                        </li>
+                        <li>
+                            <div class="e-circle-percent" style="--percent-value: 90"><span>90%</span></div>
+                            <span>showed improvements in hair density and thickness</span>
+                        </li>
+                        <li>
+                            <div class="e-circle-percent" style="--percent-value: 90"><span>90%</span></div>
+                            <span>saw a visible increase in active growth-phase hairs</span>
+                        </li>
+                    </ul>
+                    <br />
+                    <div class="c-special-offer" data-label="Special Offer">
+                        <div class="e-price">
+                            <div class="e-price__main">
+                                <div class="e-price__current">{$dyn}</div>
+                                <div class="e-price__old">{$dyn}</div>
+                            </div>
+                        </div>
+                        <div class="e-pill-save">Save 20%</div>
+                    </div>
+                    <br />
+                    <div class="c-limited-offer">
+                        <p>Qure Sale Limited Time Offer</p>
+                        <div class="e-countdown" data-deadline="">
+                            <div data-key="days">00</div>
+                            <div data-key="hours">00</div>
+                            <div data-key="minutes">00</div>
+                            <div data-key="seconds">00</div>
+                        </div>
+                        <p>Get <span class="e-pill-save">$100 OFF</span> with code QURE100</p>
+                    </div>
+                    <br />
+                    <div class="c-save-up">
+                        <i class="e-icon e-icon-gift"></i>
+                        <p>Save up to <strong>XX%</strong> with our curated bundles</p>
+                        <button class="btn btn--primary-white">Shop Now <i class="e-icon e-icon-arrow"></i></button>
+                    </div>
+                    <br />
+                    <div class="c-exclusive-offer">
+                        <div class="c-exclusive-offer__tag">
+                            <div class="e-double-tag"><strong>Bundles</strong> Holiday</div>
+                        </div>
+                        <div class="c-exclusive-offer__list">
+                            <div class="c-exclusive-offer__item">
+                                <img src="sections/isolated/clean-water/images/ledBox.webp" alt="" />
+                                <div>$399</div>
+                            </div>
+                            <i class="e-icon e-icon-plus"></i>
+                            <div class="c-exclusive-offer__item">
+                                <img src="sections/isolated/clean-water/images/ndBox.webp" alt="" />
+                                <div><del>$299</del> <strong>Free</strong></div>
+                            </div>
+                        </div>
+                        <p class="c-exclusive-offer__desc">Buy the Q-Rejuvalight Pro and get the Neck &amp; Décolletage LED Device for FREE (value $299)</p>
+                    </div>
+                    <br />
+                    <ul class="c-clinic-metrics" data-label="Clinically Proven Results">
+                        <li data-value="90%">agree skin feels hydrated</li>
+                        <li data-value="83%">agree skin feels softer</li>
+                        <li data-value="70%">agree hair feels less frizzy</li>
+                    </ul>
+                    <br />
+                    <div class="c-moneyback">
+                        <img src="alex/sections/isolated/helmet-home/images/moneyback_1.webp" alt="Money Back Guarantee" />
+                        <strong>Money Back Guarantee</strong>
+                        <p>Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="assets/js-new/countdown.js" defer="defer"></script>
     </body>
 </html>
