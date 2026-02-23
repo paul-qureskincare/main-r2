@@ -15,6 +15,7 @@
 .intro-section article picture[data-url],.intro-section article picture[data-video-id]{
   position:relative;
   display:block;
+  cursor:pointer;
 }
 .intro-section article picture[data-url]:after,.intro-section article picture[data-video-id]:after{
   position:absolute;

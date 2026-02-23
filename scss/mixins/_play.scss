@@ -4,6 +4,7 @@
 @mixin play {
     position: relative;
     display: block;
+    cursor: pointer;
 
     &::after {
         position: absolute;

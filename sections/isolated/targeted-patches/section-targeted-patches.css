@@ -155,6 +155,10 @@
   content:"\e934";
 }
 
+.e-icon-verified-shield:before{
+  content:"\e93b";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -249,6 +253,22 @@
 
 .e-icon-micro-plastics:before{
   content:"\e93a";
+}
+
+.e-icon-pp-filter:before{
+  content:"\e93f";
+}
+
+.e-icon-nok-filter:before{
+  content:"\e93e";
+}
+
+.e-icon-carbon:before{
+  content:"\e93d";
+}
+
+.e-icon-asp-descaler:before{
+  content:"\e93c";
 }
 .patch__product-rating{
   padding:8px 20px;

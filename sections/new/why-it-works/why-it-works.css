@@ -101,6 +101,12 @@
   gap:60px;
   text-align:left;
 }
+.why-it-works__according .c-accordion__item{
+  font-size:18px;
+}
+.why-it-works__according .c-accordion__item .e-icon{
+  font-size:24px;
+}
 @media screen and (max-width:1120px){
   .c-product-components .e-component-pointer:has([href="#carbon-fiber"]){
     --line-size:290px;

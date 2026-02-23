@@ -1,0 +1,34 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.c-lifetime-warranty {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 16px;
+
+    @include sm {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .e-icon {
+        flex: none;
+        padding: 6px;
+        color: #ff5429;
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+        border: 5px solid transparent;
+        border-radius: 50%;
+        outline: 1px solid #b5b6b7;
+        background: #fff;
+        background-clip: padding-box;
+    }
+
+    p {
+        &::first-line {
+            font-weight: 500;
+        }
+    }
+}

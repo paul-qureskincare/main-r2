@@ -13,6 +13,12 @@
         gap: 20px;
     }
 
+    h6 {
+        margin-bottom: -10px;
+        font-family: inherit;
+        font-weight: 500;
+    }
+
     // .c-pill-tabs__buttons
     &__buttons {
         min-width: 210px;

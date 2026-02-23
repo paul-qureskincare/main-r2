@@ -1,45 +1,80 @@
-(() => {
-    const root = document.querySelector('.e-countdown');
-    if (!root) return;
-
-    const els = {
-        days:    root.querySelector('[data-key="days"]'),
-        hours:   root.querySelector('[data-key="hours"]'),
-        minutes: root.querySelector('[data-key="minutes"]'),
-        seconds: root.querySelector('[data-key="seconds"]'),
-    };
-
-    const pad2 = (n) => String(n).padStart(2, '0');
-
-    // fallback: 4d 9h 59m 36s
-    const fallbackMs = (4 * 24 * 3600 + 9 * 3600 + 59 * 60 + 36) * 1000;
-
-    const deadlineAttr = root.getAttribute('data-deadline')?.trim();
-    const parsedMs = deadlineAttr ? Date.parse(deadlineAttr) : NaN;
-
-    // If parsing fails, use fallback
-    const endTimeMs = Number.isFinite(parsedMs) ? parsedMs : Date.now() + fallbackMs;
-
-    const render = () => {
-        let diffSec = Math.max(0, Math.floor((endTimeMs - Date.now()) / 1000));
-
-        const days = Math.floor(diffSec / 86400);
-        diffSec %= 86400;
-        const hours = Math.floor(diffSec / 3600);
-        diffSec %= 3600;
-        const minutes = Math.floor(diffSec / 60);
-        const seconds = diffSec % 60;
-
-        if (els.days) els.days.textContent = pad2(days);
-        if (els.hours) els.hours.textContent = pad2(hours);
-        if (els.minutes) els.minutes.textContent = pad2(minutes);
-        if (els.seconds) els.seconds.textContent = pad2(seconds);
-    };
-
-    render();
-
-    const timerId = setInterval(() => {
+(function () {
+    function loadScript(src) {
+      return new Promise(function (resolve, reject) {
+        var existing = document.querySelector('script[src="' + src + '"]');
+        if (existing) { resolve(); return; }
+        var s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+  
+    loadScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js")
+      .then(function () {
+        return loadScript("https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data-10-year-range.min.js");
+      })
+      .then(initCountdown);
+  
+    function initCountdown() {
+      if (typeof moment === "undefined" || typeof moment.tz !== "function") {
+        console.error("moment-timezone not loaded");
+        return;
+      }
+  
+      var root = document.querySelector('.e-countdown');
+      if (!root) return;
+  
+      var children = root.querySelectorAll(':scope > div[data-key]');
+      if (children.length < 4) return;
+  
+      var daysEl    = children[0];
+      var hoursEl   = children[1];
+      var minutesEl = children[2];
+      var secondsEl = children[3];
+  
+      var deadlineAttr = root.getAttribute('data-deadline');
+  
+      var days = (typeof customDays !== 'undefined') ? customDays : 0;
+  
+      var defaultEnd = moment().tz("America/Los_Angeles")
+        .add(days, 'days')
+        .add(11, 'hours')
+        .add(59, 'minutes')
+        .add(59, 'seconds');
+  
+      var endTime = (deadlineAttr && deadlineAttr.trim() !== '')
+        ? moment.tz(deadlineAttr, "America/Los_Angeles")
+        : defaultEnd;
+  
+      function pad2(n) {
+        return String(n).padStart(2, '0');
+      }
+  
+      function render() {
+        var now = moment().tz("America/Los_Angeles");
+        var diffSeconds = Math.max(0, endTime.diff(now, 'seconds'));
+  
+        var d = Math.floor(diffSeconds / (24 * 3600));
+        diffSeconds -= d * 24 * 3600;
+        var h = Math.floor(diffSeconds / 3600);
+        diffSeconds -= h * 3600;
+        var m = Math.floor(diffSeconds / 60);
+        var s = diffSeconds - m * 60;
+  
+        daysEl.textContent    = pad2(d);
+        hoursEl.textContent   = pad2(h);
+        minutesEl.textContent = pad2(m);
+        secondsEl.textContent = pad2(s);
+      }
+  
+      render();
+      var timerId = setInterval(function () {
         render();
-        if (Date.now() >= endTimeMs) clearInterval(timerId);
-    }, 1000);
-})();
+        if (endTime.diff(moment().tz("America/Los_Angeles")) <= 0) {
+          clearInterval(timerId);
+        }
+      }, 1000);
+    }
+  })();  

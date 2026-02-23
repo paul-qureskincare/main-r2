@@ -47,7 +47,7 @@
             <div class="tab-pane" id="icons">
                 <p><strong>Base icons</strong></p>
                 <ul class="icons-list">
-                    {{#eachList '["chevron", "checkmark", "plus", "minus", "cross", "arrow", "qure", "q", "youtube", "instagram", "facebook", "tiktok", "i", "play", "stars", "rating-fill", "trustpilot", "pm", "am", "watch", "cart", "user", "gift", "shipping", "faq", "letter", "pillow", "patches", "mist", "lock", "guarantee", "top", "proven", "pay-later", "reviewed"]' }}
+                    {{#eachList '["chevron", "checkmark", "plus", "minus", "cross", "arrow", "qure", "q", "youtube", "instagram", "facebook", "tiktok", "i", "play", "stars", "rating-fill", "trustpilot", "pm", "am", "watch", "cart", "user", "gift", "shipping", "faq", "letter", "pillow", "patches", "mist", "lock", "guarantee", "top", "proven", "pay-later", "reviewed", "verified-shield"]' }}
                         <li>
                             {{> e-icon icon=this }}
                             <span>{{ this }}</span>
@@ -63,6 +63,17 @@
                             <span>{{ this }}</span>
                         </li>
                     {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>Water icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["chlorine", "copper", "metals", "limescale", "micro-organisms", "micro-plastics"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
             </div>
             <div class="tab-pane" id="elements">
                 <div class="e-checkmark"></div>
@@ -202,12 +213,14 @@
                 }}
                 <br />
                 {{> c-moneyback }}
+                <br />
+                {{> c-lifetime-warranty }}
 
 
             </div>
         </div>
     </div>
-
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <script src="assets/js/vendor.js" defer="defer"></script>
     <script src="assets/js-new/countdown.js" defer="defer"></script>
 </body>

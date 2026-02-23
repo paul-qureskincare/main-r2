@@ -37,6 +37,16 @@
         }
     }
 
+    &__according {
+        .c-accordion__item {
+            font-size: 18px;
+
+            .e-icon {
+                font-size: 24px;
+            }
+        }
+    }
+
     &__components {
         @include sm {
             order: -1;

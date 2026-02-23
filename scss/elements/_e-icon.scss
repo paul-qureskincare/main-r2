@@ -149,6 +149,10 @@
     content: "\e934";
 }
 
+.e-icon-verified-shield::before {
+    content: "\e93b";
+}
+
 // FAQs icons
 .e-icon-shipping-order::before {
     content: "\e90e";
@@ -223,7 +227,6 @@
 }
 
 // Water icons
-
 .e-icon-chlorine::before {
     content: "\e935";
 }
@@ -248,3 +251,20 @@
     content: "\e93a";
 }
 
+
+// Faucet Filter icons
+.e-icon-pp-filter::before {
+    content: "\e93f";
+}
+
+.e-icon-nok-filter::before {
+    content: "\e93e";
+}
+
+.e-icon-carbon::before {
+    content: "\e93d";
+}
+
+.e-icon-asp-descaler::before {
+    content: "\e93c";
+}

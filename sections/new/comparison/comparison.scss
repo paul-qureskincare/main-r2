@@ -1,5 +1,6 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
+@use "@elements/e-declaimer" as *;
 
 .comparison {
     $root: &;
@@ -144,5 +145,9 @@
             font-size: 18px;
             transform: translate(-50%);
         }
+    }
+
+    &__declaimer {
+        @include e-declaimer;
     }
 }

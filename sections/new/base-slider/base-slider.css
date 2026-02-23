@@ -332,6 +332,7 @@
 .base-slider .c-swiper picture[data-url],.base-slider .c-swiper picture[data-video-id]{
   position:relative;
   display:block;
+  cursor:pointer;
 }
 .base-slider .c-swiper picture[data-url]:after,.base-slider .c-swiper picture[data-video-id]:after{
   position:absolute;
