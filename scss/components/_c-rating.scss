@@ -16,6 +16,15 @@
         vertical-align: top;
     }
 
+    a {
+        color: inherit;
+        vertical-align: top;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
 
     // .c-rating--bg
     &--bg {

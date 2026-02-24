@@ -148,12 +148,22 @@
             gap: 12px;
         }
 
+
         .c-swiper {
             margin: 0;
             padding: 0;
 
             &:first-child {
                 border-radius: 10px;
+            }
+
+            img {
+                object-fit: cover;
+                aspect-ratio: 1.1 / 1;
+
+                &[data-url] {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -230,6 +240,11 @@
 
                 &:hover {
                     text-decoration: underline;
+                }
+
+                &:has(img) {
+                    grid-row: 1 / -1;
+                    align-self: center;
                 }
             }
 
