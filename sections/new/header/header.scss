@@ -459,6 +459,10 @@
         -webkit-text-fill-color: transparent;
     }
 
+    &.scroll-hiding {
+        transform: translateY(-200px);
+    }
+
     // MOBILE MENU OPEN
     @at-root .menu-show {
         height: 100vh;

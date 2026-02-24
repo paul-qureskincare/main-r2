@@ -23,7 +23,7 @@
                 <li><a href="#"><i class="e-icon e-icon-gift"></i></a></li>
                 <li><a href="#"><i class="e-icon e-icon-user"></i></a></li>
                 <li>
-                    <a href="#">
+                    <a class="show-flyout-cart" href="javascript:;">
                         <i class="e-icon e-icon-cart"></i>
                         <div class="cart-count">0</div>
                     </a>
@@ -60,15 +60,15 @@
                     <div class="header__content-slider">
                         <div
                             class="c-swiper"
+                            data-swiper-thumbs="#header .c-swiper-thumbs"
                             data-swiper='{
                                 "slidesPerView": 1,
                                 "spaceBetween": 16.5,
                                 "navigation": {
-                                    "prevEl": "#products .c-swiper-button-prev",
-                                    "nextEl": "#products .c-swiper-button-next"
+                                    "prevEl": "#header .c-swiper-button-prev",
+                                    "nextEl": "#header .c-swiper-button-next"
                                 }
                             }'
-                            data-swiper-thumbs="c-swiper-thumbs"
                         >
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">

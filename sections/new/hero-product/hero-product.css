@@ -255,6 +255,22 @@
   content:"\e93a";
 }
 
+.e-icon-benefits-headphone:before{
+  content:"\e940";
+}
+
+.e-icon-benefits-gift:before{
+  content:"\e941";
+}
+
+.e-icon-benefits-restart:before{
+  content:"\e942";
+}
+
+.e-icon-benefits-box:before{
+  content:"\e943";
+}
+
 .e-icon-pp-filter:before{
   content:"\e93f";
 }
@@ -269,6 +285,54 @@
 
 .e-icon-asp-descaler:before{
   content:"\e93c";
+}
+
+.e-sticky-thumb-video{
+  position:absolute;
+  top:16px;
+  right:16px;
+  z-index:2;
+  display:block;
+  overflow:hidden;
+  width:100px;
+  height:180px;
+  cursor:pointer;
+  transition:width .3s ease,height .3s ease;
+}
+.e-sticky-thumb-video.expanded{
+  width:166.6666666667px;
+  height:300px;
+}
+.e-sticky-thumb-video video{
+  position:absolute;
+  top:0;
+  left:0;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:100%;
+  border-radius:10px;
+}
+.e-sticky-thumb-video button{
+  position:absolute;
+  top:6px;
+  right:6px;
+  width:20px;
+  height:20px;
+  padding:0;
+  color:#fff;
+  font-size:8px;
+  line-height:20px;
+  text-align:center;
+  border:0;
+  border-radius:50%;
+  background:#000;
+  cursor:pointer;
+  opacity:.35;
+  transition:all .2s linear;
+}
+.e-sticky-thumb-video button:hover{
+  opacity:1;
 }
 
 .e-rating-stars{
@@ -342,7 +406,7 @@
 
 .c-special-offer{
   display:flex;
-  gap:16px;
+  gap:8px 16px;
   align-items:center;
 }
 .c-special-offer:before{
@@ -1402,6 +1466,7 @@
   border-radius:10px;
 }
 .hero-product__gallery{
+  position:relative;
   display:flex;
   flex-direction:column;
   gap:24px;
@@ -1473,6 +1538,12 @@
   }
 }
 @media screen and (max-width:767px){
+  .c-special-offer{
+    flex-wrap:wrap;
+  }
+  .c-special-offer:before{
+    width:100%;
+  }
   .c-marked-list li{
     font-size:16px;
   }
@@ -1541,5 +1612,17 @@
   }
   .hero-product__extra{
     gap:24px;
+  }
+}
+@media screen and (max-width:480px){
+  .e-sticky-thumb-video{
+    top:8px;
+    right:8px;
+    width:80.5555555556px;
+    height:145px;
+  }
+  .e-sticky-thumb-video.expanded{
+    width:155.5555555556px;
+    height:280px;
   }
 }

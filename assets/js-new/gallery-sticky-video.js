@@ -1,7 +1,7 @@
 (function () {
     // Gallery sticky video
-    document.querySelectorAll('.gallery-sticky-video').forEach(container => {
-        const closeBtn = container.querySelector('.gallery-sticky-video__close');
+    document.querySelectorAll('.gallery-sticky-video, .e-sticky-thumb-video').forEach(container => {
+        const closeBtn = container.querySelector('.gallery-sticky-video__close, .e-sticky-thumb-video button');
         const video = container.querySelector('video');
         let isExpanded = false;
         let resizeRaf = null;

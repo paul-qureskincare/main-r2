@@ -117,4 +117,74 @@
         if (btn) btn.setAttribute('aria-expanded', 'false');
     });
     // MOBILE MENU TOGGLE
+
+    // Show FLYOUT CART
+    document.addEventListener('click', e => {
+        const btn = e.target.closest('.show-flyout-cart');
+        if (!btn) return;
+
+        e.preventDefault();
+
+        const el = document.getElementById('cartCanvas');
+        if (!el || !window.bootstrap?.Offcanvas) return;
+
+        bootstrap.Offcanvas.getOrCreateInstance(el).show();
+    });
+    // Show FLYOUT CART
+
+    // SCROLL HIDE HEADER
+    let lastScrollY = window.scrollY || 0;
+    const HIDING_CLASS = 'scroll-hiding';
+    const SCROLL_DELTA_PX = 2;
+
+    // #header can be injected dynamically; keep refs but re-resolve if detached
+    let header = null;
+    let announcementBar = null;
+
+    let isHidden = false;
+    let rafPending = false;
+    let latestScrollY = lastScrollY;
+
+    // Ensure transform transition exists on the base element so show/hide both animate.
+    const ensureTransformTransition = (el) => {
+        if (!el || el.dataset.scrollHideTransition) return;
+        el.dataset.scrollHideTransition = '1';
+        const t = (el.style.transition || '').trim();
+        if (/\btransform\b/i.test(t)) return;
+        el.style.transition = !t || t === 'none' ? 'transform 300ms linear' : `${t}, transform 300ms linear`;
+    };
+
+    const resolveHeaderEls = () => {
+        if (!header || !header.isConnected) header = document.getElementById('header');
+        if (!announcementBar || !announcementBar.isConnected) announcementBar = document.getElementById('announcement-bar');
+        ensureTransformTransition(header);
+        ensureTransformTransition(announcementBar);
+    };
+
+    const applyHidden = (nextHidden) => {
+        if (isHidden === nextHidden) return;
+        isHidden = nextHidden;
+        header?.classList.toggle(HIDING_CLASS, nextHidden);
+        announcementBar?.classList.toggle(HIDING_CLASS, nextHidden);
+    };
+
+    const updateOnScroll = () => {
+        rafPending = false;
+        resolveHeaderEls();
+        const y = latestScrollY;
+        if (!header && !announcementBar) return (lastScrollY = y);
+        if (y <= 0) return applyHidden(false), (lastScrollY = 0);
+        if (Math.abs(y - lastScrollY) < SCROLL_DELTA_PX) return;
+        applyHidden(y > lastScrollY);
+        lastScrollY = y;
+    };
+
+    window.addEventListener('scroll', () => {
+        latestScrollY = window.scrollY || 0;
+        if (rafPending) return;
+        rafPending = true;
+        requestAnimationFrame(updateOnScroll);
+    }, { passive: true });
+    // SCROLL HIDE HEADER
+
 })();

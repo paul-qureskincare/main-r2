@@ -251,6 +251,23 @@
     content: "\e93a";
 }
 
+// Footer benefits icons
+.e-icon-benefits-headphone::before {
+    content: "\e940";
+}
+
+.e-icon-benefits-gift::before {
+    content: "\e941";
+}
+
+.e-icon-benefits-restart::before {
+    content: "\e942";
+}
+
+.e-icon-benefits-box::before {
+    content: "\e943";
+}
+
 
 // Faucet Filter icons
 .e-icon-pp-filter::before {
@@ -268,3 +285,4 @@
 .e-icon-asp-descaler::before {
     content: "\e93c";
 }
+

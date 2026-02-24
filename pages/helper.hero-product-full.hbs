@@ -1,4 +1,4 @@
-{{#> base
+{{#> new
     title="Hero Product Full"
 }}
 
@@ -106,6 +106,7 @@
                     </div>
                     <button class="c-swiper-button-next"></button>
                 </div>
+                {{> e-sticky-thumb-video link="https://embed-ssl.wistia.com/deliveries/a19c02d56780261a836b229148cef1bb2fa64c90.bin?disposition=attachment&filename=MICRO+INFUSION+2025_final_txt+%282%29.mp4" type="video/mp4" }}
             </div>
             <div class="hero-product__main">
                 {{> c-rating value="4.8" }}
@@ -311,10 +312,11 @@
             loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
             loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+            loadScriptOnce('gallery-sticky-video', 'assets/js-new/gallery-sticky-video.js');
         });
     </script>
     <!-- BUY SECTION END -->
     <br /><br /><br /><br /><br />
 {{/section-stack }}
 
-{{/base }}
+{{/new }}

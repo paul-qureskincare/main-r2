@@ -255,6 +255,22 @@
   content:"\e93a";
 }
 
+.e-icon-benefits-headphone:before{
+  content:"\e940";
+}
+
+.e-icon-benefits-gift:before{
+  content:"\e941";
+}
+
+.e-icon-benefits-restart:before{
+  content:"\e942";
+}
+
+.e-icon-benefits-box:before{
+  content:"\e943";
+}
+
 .e-icon-pp-filter:before{
   content:"\e93f";
 }

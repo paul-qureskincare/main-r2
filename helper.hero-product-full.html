@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Hero Product Full - Qure</title>
+        <title>Qure</title>
         <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
         <style>
             :root {
@@ -15,13 +15,14 @@
         <link rel="stylesheet" href="assets/css/spacings.css" />
         <link href="assets/css/theme-fonts.css" rel="stylesheet" />
         <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
         <!-- Loading HTML Files -->
         <script src="assets/js/fileloader.js"></script>
     </head>
 
     <body class="">
         <!-- PAGE HEADER -->
-        <div id="site-header"></div>
+        <div id="site-header-new"></div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce("carousel", "sections/global/header/js/carousel.js");
@@ -131,6 +132,14 @@
                                 </div>
                             </div>
                             <button class="c-swiper-button-next"></button>
+                        </div>
+                        <div class="e-sticky-thumb-video">
+                            <video loop preload="metadata" playsinline="true">
+                                <source src="https://embed-ssl.wistia.com/deliveries/a19c02d56780261a836b229148cef1bb2fa64c90.bin?disposition&#x3D;attachment&amp;filename&#x3D;MICRO+INFUSION+2025_final_txt+%282%29.mp4" type="video/mp4" />
+                            </video>
+                            <button type="button">
+                                <i class="e-icon e-icon-cross"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="hero-product__main">
@@ -420,6 +429,7 @@
                     loadScriptOnce("youtube-popup", "assets/js-new/yt-popup.js");
                     loadScriptOnce("wistia-popup", "assets/js-new/wistia-popup.js");
                     loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
+                    loadScriptOnce("gallery-sticky-video", "assets/js-new/gallery-sticky-video.js");
                 });
             </script>
             <!-- BUY SECTION END -->
@@ -427,23 +437,60 @@
         </main>
         <!-- SECTIONS STACK END -->
 
-        <!-- Reusable modal for all the wistia videos for all the tab contents -->
-        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 20,
+                    "loop": true,
+                    "autoplay": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 3
+                        },
+                        "991": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
         <!-- CART AND FOOTER -->
-        <div id="site-footer"></div>
-        <div id="site-cart-drawer"></div>
+        <div id="site-footer-new"></div>
+        <div id="site-cart-drawer-new"></div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
@@ -452,7 +499,7 @@
 
         <!-- SCRIPTS -->
         <script src="assets/js/vendor.js" defer="defer"></script>
-        <script src="assets/js/header.js" defer="defer"></script>
-        <script src="assets/js/footer.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
+@use "@elements/e-sticky-thumb-video" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
@@ -137,6 +138,7 @@
 
     // .hero-product__gallery
     &__gallery {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 24px;
