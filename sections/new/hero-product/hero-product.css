@@ -1559,7 +1559,7 @@
   .c-special-offer{
     flex-wrap:wrap;
   }
-  .c-special-offer:before{
+  .c-special-offer:has(.e-price):before{
     width:100%;
   }
   .c-marked-list li{

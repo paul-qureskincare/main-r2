@@ -967,7 +967,7 @@ body {
 .quer-menu-inner .sub-column.mob__submenu {grid-template-columns: repeat(2, 1fr);}
 .quer-menu-inner .sub-column.sub-column-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 20px}
 .quer-menu-inner .sub-column .submenu-menu-link{text-decoration:none;color:var(--white-color);font-size:16px;transition:var(--qure-transition);cursor:pointer}
-.quer-menu-inner .sub-column .submenu-menu-link:hover{color:var(--base-color);font-weight:500}
+.quer-menu-inner .sub-column .submenu-menu-link:hover{color:var(--base-color);-webkit-text-stroke-width: 0.5px;}
 .quer-menu-inner .subchildmenu-link{font-family:var(--base-font-family);color:var(--menu-header-color,#8B8C8E);text-decoration:none;margin-bottom:30px;display:block;font-size:var(--base-font-size)}
 .quer-menu-inner .sub-column .submenu-item:last-child a {font-weight: 600;color: #C7E5DB;
 }

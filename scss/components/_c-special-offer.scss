@@ -10,6 +10,14 @@
         flex-wrap: wrap;
     }
 
+    &:has(.e-price) {
+        &::before {
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+
     &::before {
         color: transparent;
         font-weight: 600;
@@ -23,10 +31,6 @@
         background-clip: text;
         content: attr(data-label);
         -webkit-text-fill-color: transparent;
-
-        @include sm {
-            width: 100%;
-        }
     }
 
     .e-price {

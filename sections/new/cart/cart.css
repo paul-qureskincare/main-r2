@@ -147,14 +147,14 @@
   text-decoration:line-through;
 }
 
-.e-pcs-counter{
+.e-quantity{
   display:inline-flex;
   align-items:center;
   overflow:hidden;
   border:1px solid #8b8c8e;
   border-radius:3px;
 }
-.e-pcs-counter button{
+.e-quantity button{
   padding:6px;
   font-size:10px;
   font-weight:500;
@@ -164,13 +164,16 @@
   background:none;
   transition:all .2s linear;
 }
-.e-pcs-counter button:hover{
+.e-quantity button:hover{
   background:#ddd;
 }
-.e-pcs-counter button .e-icon{
+.e-quantity button:disabled{
+  pointer-events:none;
+}
+.e-quantity button .e-icon{
   vertical-align:top;
 }
-.e-pcs-counter input{
+.e-quantity input{
   width:24px;
   height:16px;
   padding:0;
@@ -184,10 +187,33 @@
      -moz-appearance:textfield;
           appearance:textfield;
 }
-.e-pcs-counter input::-webkit-inner-spin-button,.e-pcs-counter input::-webkit-outer-spin-button{
+.e-quantity input::-webkit-inner-spin-button,.e-quantity input::-webkit-outer-spin-button{
   margin:0;
   -webkit-appearance:none;
           appearance:none;
+}
+.e-quantity input:focus{
+  font-size:14px;
+}
+.e-quantity--pill-xl{
+  width:100%;
+  border-width:1.5px;
+  border-radius:60px;
+}
+.e-quantity--pill-xl button{
+  align-self:stretch;
+  width:80px;
+  font-size:14px;
+}
+.e-quantity--pill-xl input{
+  width:100%;
+  height:53px;
+  font-size:20px;
+  font-weight:500;
+  border:0;
+}
+.e-quantity--pill-xl input:focus{
+  font-size:20px;
 }
 
 .c-cart-tile{

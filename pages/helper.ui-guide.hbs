@@ -111,6 +111,7 @@
                         </button>
                     </li>
                 </ul>
+                <br />
                 Price: {{> e-price current="{$dyn}" }}
                 <div class="e-verified-customer">
                     <div class="e-checkmark"></div>
@@ -121,6 +122,11 @@
                     Kim L.
                 </div>
                 <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
+                <div class="e-pcs-counter">
+                    <button type="button"><i class="e-icon e-icon-minus"></i></button>
+                    <input type="number" name="qty" value="1" min="0" />
+                    <button type="button"><i class="e-icon e-icon-plus"></i></button>
+                </div>
 
             </div>
             <div class="tab-pane" id="buttons">
