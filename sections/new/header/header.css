@@ -543,6 +543,10 @@
   -moz-column-span:all;
        column-span:all;
 }
+.header__content-menu li:last-child a{
+  color:#c7e5db;
+  -webkit-text-stroke-width:.5px;
+}
 .header__content-menu a{
   display:block;
   color:inherit;
@@ -573,6 +577,7 @@
   grid-template-rows:auto auto;
   grid-template-columns:30px 1fr 30px;
   gap:16px 8px;
+  padding-bottom:20px;
 }
 #products .header__content-slider .c-swiper:first-child{
   grid-column:1 /  -1;
@@ -759,9 +764,6 @@
     padding-top:0;
     border-top:0;
     border-bottom:1px solid #8b8c8e;
-  }
-  .header__content-slider .c-swiper-thumbs{
-    padding-bottom:20px;
   }
   .header__content-slider .c-swiper-button-next,.header__content-slider .c-swiper-button-prev{
     display:none;
