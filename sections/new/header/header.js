@@ -166,6 +166,9 @@
         isHidden = nextHidden;
         header?.classList.toggle(HIDING_CLASS, nextHidden);
         announcementBar?.classList.toggle(HIDING_CLASS, nextHidden);
+        if(!document.getElementById('announcement-bar')) {
+            document.getElementById('header').style.top = '0px'
+        }
     };
 
     const updateOnScroll = () => {
