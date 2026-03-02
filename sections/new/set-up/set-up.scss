@@ -16,6 +16,10 @@
         @include sm {
             grid-template: auto / auto;
         }
+
+        &:has(.btn) {
+            grid-template-rows: auto minmax(min-content, 0) auto;
+        }
     }
 
     img {
@@ -40,11 +44,9 @@
     h2 {
         align-self: end;
         margin-bottom: 0;
-        // margin-bottom: 32px;
 
         @include sm {
             order: -1;
-            // margin-bottom: 16px;
         }
     }
 
@@ -87,6 +89,20 @@
                 background: #fff;
                 content: counters(item, "");
             }
+
+            p {
+                font-size: 16px;
+                line-height: 1.25;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
 
         h6 {
@@ -104,5 +120,13 @@
         img {
             border-radius: 5px;
         }
+    }
+
+    .btn {
+        align-self: start;
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        text-transform: uppercase;
     }
 }

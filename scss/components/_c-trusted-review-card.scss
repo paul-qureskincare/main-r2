@@ -55,4 +55,23 @@
             margin-right: 16px;
         }
     }
+
+    &--short {
+        background: #f6f6f7;
+
+        @include sm {
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .e-verified-customer {
+            gap: 8px;
+            font-size: 18px;
+            background: none;
+
+            @include sm {
+                font-size: inherit;
+            }
+        }
+    }
 }

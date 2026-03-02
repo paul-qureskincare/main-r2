@@ -3,6 +3,10 @@
   grid-template:repeat(2, auto)/280px 1fr;
   gap:30px 60px;
 }
+.set-up .container:has(.btn){
+  grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
+  grid-template-rows:auto minmax(min-content, 0) auto;
+}
 .set-up img{
   width:100%;
   display:block;
@@ -70,6 +74,17 @@
   background:#fff;
   content:counters(item, "");
 }
+.set-up ol li p{
+  font-size:16px;
+  line-height:1.25;
+}
+.set-up ol li a{
+  color:inherit;
+  text-decoration:underline;
+}
+.set-up ol li a:hover{
+  text-decoration:none;
+}
 .set-up ol h6{
   margin-bottom:0;
   font-family:inherit;
@@ -77,6 +92,13 @@
 }
 .set-up ol img{
   border-radius:5px;
+}
+.set-up .btn{
+  align-self:start;
+  max-width:400px;
+  margin-right:auto;
+  margin-left:auto;
+  text-transform:uppercase;
 }
 @media screen and (max-width:991px){
   .set-up .container,.set-up ol{

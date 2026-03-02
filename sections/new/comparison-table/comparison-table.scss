@@ -1,0 +1,189 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.comparison-table {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    h2 {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 200px;
+            padding: 32px;
+            border-radius: 10px 0 0 10px;
+            background: #fff;
+
+            @include sm {
+                padding: 24px 16px;
+            }
+
+            li {
+                font-size: 16px;
+                font-weight: 600;
+
+                &:not(:first-child) {
+                    padding-top: 24px;
+                    border-top: 1px solid #dfe0e0;
+                }
+
+                &:nth-last-child(2) {
+                    color: #ff5429;
+                }
+            }
+        }
+
+        article {
+            --image-size: 150px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: calc(var(--image-size) / 2);
+            padding: 0 24px 24px;
+            background: #fff;
+
+            @include sm {
+                --image-size: 100px;
+            }
+
+            picture {
+                min-height: var(--image-size);
+                margin-top: calc(-1 * var(--image-size) / 2);
+            }
+
+            img {
+                width: auto;
+                max-height: var(--image-size);
+            }
+
+            h5 {
+                max-width: 220px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                min-width: 0;
+            }
+
+            li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                padding: 11px 12px;
+                border: 1px solid #dfe0e0;
+                border-radius: 5px;
+                background: #fff;
+
+                @include sm {
+                    padding: 9px 10px;
+                    font-size: 16px;
+                }
+
+                span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                }
+            }
+
+            .e-icon {
+                flex: none;
+                color: #8b8c8e;
+                font-size: 20px;
+
+                @include sm {
+                    font-size: inherit;
+                }
+            }
+
+        }
+    }
+
+    .c-swiper {
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-slide {
+        &.swiper-slide-active {
+            article {
+                border-top-left-radius: 10px;
+
+                @include sm {
+                    border-radius: 10px 10px 10px 0;
+                }
+            }
+        }
+
+        &.swiper-slide-next {
+            article {
+                @include xl {
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+        }
+
+        &:first-child {
+            article {
+                background: #c7e5db;
+            }
+
+            picture {
+                transform: scale(1.05);
+            }
+
+            li {
+                border-color: #fff;
+            }
+
+            .e-icon {
+                color: #008763;
+            }
+        }
+
+        &:last-child {
+            article {
+                border-radius: 0 10px 10px 0;
+
+                @include lg {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    .c-swiper-nav {
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+}

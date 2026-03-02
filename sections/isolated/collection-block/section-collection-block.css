@@ -159,6 +159,14 @@
   content:"\e93b";
 }
 
+.e-icon-checkmark-fill:before{
+  content:"\e944";
+}
+
+.e-icon-cross-fill:before{
+  content:"\e945";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -285,6 +293,26 @@
 
 .e-icon-asp-descaler:before{
   content:"\e93c";
+}
+
+.e-icon-mi-painless:before{
+  content:"\e946";
+}
+
+.e-icon-perfect-transforming:before{
+  content:"\e947";
+}
+
+.e-icon-save-money:before{
+  content:"\e948";
+}
+
+.e-icon-mi-seamless:before{
+  content:"\e949";
+}
+
+.e-icon-mi-quick:before{
+  content:"\e94a";
 }
 
 .e-quantity{

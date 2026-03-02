@@ -391,3 +391,10 @@
    padding-top: 0;
    padding-bottom: 0;
 }
+
+@media(max-width: 991px){
+    .page\.qure-microinfusion-pro-offer .user_guideline {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

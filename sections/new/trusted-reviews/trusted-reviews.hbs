@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="sections/new/trusted-reviews/trusted-reviews.css" />
 <section class="trusted-reviews {{ classes }}">
     <div class="container">
-        <h2>The results are crystal clear</h2>
+        <h2>{{ title }}</h2>
         <div
             class="c-swiper"
             data-swiper='{
@@ -37,6 +37,9 @@
                 <button class="c-swiper-button-next"></button>
             </div>
         </div>
+        {{#if button }}
+            <button class="btn btn--primary" type="button">{{ button }}</button>
+        {{/if}}
     </div>
 </section>
 <script>

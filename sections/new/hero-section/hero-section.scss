@@ -8,13 +8,6 @@
 .hero-section {
     $root: &;
 
-    // TODO: Temporary margin styles, need to remove after add section stack
-    margin-bottom: 60px;
-
-    @include sm {
-        margin-bottom: 40px;
-    }
-
     .container {
         display: flex;
         flex-direction: row-reverse;
@@ -179,12 +172,6 @@
     /* stylelint-disable-next-line selector-class-pattern */
     @at-root .page\.qure-microinfusion-offer-listicle  {
         #{$root} {
-            margin-bottom: 0;
-
-            /* @include sm {
-                padding-top: 20px;
-            } */
-
             .container {
                 @include sm {
                     flex-direction: column-reverse;

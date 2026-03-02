@@ -1,0 +1,104 @@
+<!-- BOARD ADVISORS -->
+<link rel="stylesheet" href="sections/new/base-slider/base-slider.css" />
+<section class="base-slider">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        {{#if text }}
+            <p>{{ text }}</p>
+        {{/if}}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 15,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "580": {
+                        "slidesPerView": 2
+                    },
+                    "992": {
+                        "slidesPerView": 3
+                    },
+                    "1200": {
+                        "slidesPerView": 4,
+                        "spaceBetween": 20
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="c-advisory-collapse-card">
+                        <article data-bs-toggle="collapse" data-bs-target="#advisory-1">
+                            <picture>
+                                <img src="sections/isolated/board-advisory/images/shah.webp" alt="Dr. Shah" />
+                            </picture>
+                            <p>Dr. Shah <br /> Board Certified Dermatologist</p>
+                        </article>
+                        <div class="collapse" id="advisory-1">
+                            <p>“{{ advisory-1 }}.”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-advisory-collapse-card">
+                        <article data-bs-toggle="collapse" data-bs-target="#advisory-2">
+                            <picture>
+                                <img src="sections/isolated/board-advisory/images/maxfield.webp" alt="Dr. Maxfield" />
+                            </picture>
+                            <p>Dr. Maxfield <br /> Board Certified Dermatologist</p>
+                        </article>
+                        <div class="collapse" id="advisory-2">
+                            <p>“{{ advisory-2 }}.”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-advisory-collapse-card">
+                        <article data-bs-toggle="collapse" data-bs-target="#advisory-3">
+                            <picture>
+                                <img src="sections/isolated/board-advisory/images/tripathi.webp" alt="Dr. Tripathi" />
+                            </picture>
+                            <p>Dr. Tripathi <br /> Double Board Certified Facial Plastic Surgeon</p>
+                        </article>
+                        <div class="collapse" id="advisory-3">
+                            <p>“{{ advisory-3 }}.”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-advisory-collapse-card">
+                        <article data-bs-toggle="collapse" data-bs-target="#advisory-4">
+                            <picture>
+                                <img src="sections/isolated/board-advisory/images/stephens.webp" alt="Dr. Stephens" />
+                            </picture>
+                            <p>Dr. Stephens <br /> Board Certified Dermatologist</p>
+                        </article>
+                        <div class="collapse" id="advisory-4">
+                            <p>“{{ advisory-4 }}.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('base-slider', 'sections/new/base-slider/base-slider.js');
+    });
+</script>
+<!-- BOARD ADVISORS END -->

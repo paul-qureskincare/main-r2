@@ -300,6 +300,30 @@
                             <span>micro-plastics</span>
                         </li>
                     </ul>
+                    <br /><br />
+                    <p><strong>MI icons</strong></p>
+                    <ul class="icons-list">
+                        <li>
+                            <i class="e-icon e-icon-mi-painless"></i>
+                            <span>mi-painless</span>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-perfect-transforming"></i>
+                            <span>perfect-transforming</span>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-save-money"></i>
+                            <span>save-money</span>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-mi-seamless"></i>
+                            <span>mi-seamless</span>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-mi-quick"></i>
+                            <span>mi-quick</span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="tab-pane" id="elements">
                     <div class="e-checkmark"></div>
@@ -341,10 +365,23 @@
                         Kim L.
                     </div>
                     <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
-                    <div class="e-pcs-counter">
-                        <button type="button"><i class="e-icon e-icon-minus"></i></button>
-                        <input type="number" name="qty" value="1" min="0" />
-                        <button type="button"><i class="e-icon e-icon-plus"></i></button>
+                    <div class="e-quantity" data-e-quantity>
+                        <button type="button" data-e-quantity-action="decrement">
+                            <i class="e-icon e-icon-minus"></i>
+                        </button>
+                        <input type="number" name="qty" value="1" min="1" readonly="readonly" />
+                        <button type="button" data-e-quantity-action="increment">
+                            <i class="e-icon e-icon-plus"></i>
+                        </button>
+                    </div>
+                    <div class="e-quantity e-quantity--pill-xl" data-e-quantity style="width: 200px">
+                        <button type="button" data-e-quantity-action="decrement">
+                            <i class="e-icon e-icon-minus"></i>
+                        </button>
+                        <input type="number" name="qty" value="1" min="1" readonly="readonly" />
+                        <button type="button" data-e-quantity-action="increment">
+                            <i class="e-icon e-icon-plus"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="tab-pane" id="buttons">Buttons</div>
@@ -522,5 +559,6 @@
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <script src="assets/js/vendor.js" defer="defer"></script>
         <script src="assets/js-new/countdown.js" defer="defer"></script>
+        <script src="assets/js-new/quantity.js" defer="defer"></script>
     </body>
 </html>

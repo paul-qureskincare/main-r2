@@ -74,6 +74,16 @@
                         </li>
                     {{/eachList}}
                 </ul>
+                <br /><br />
+                <p><strong>MI icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["mi-painless", "perfect-transforming", "save-money", "mi-seamless", "mi-quick"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
             </div>
             <div class="tab-pane" id="elements">
                 <div class="e-checkmark"></div>
@@ -122,10 +132,23 @@
                     Kim L.
                 </div>
                 <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
-                <div class="e-pcs-counter">
-                    <button type="button"><i class="e-icon e-icon-minus"></i></button>
-                    <input type="number" name="qty" value="1" min="0" />
-                    <button type="button"><i class="e-icon e-icon-plus"></i></button>
+                <div class="e-quantity" data-e-quantity>
+                    <button type="button" data-e-quantity-action="decrement">
+                        <i class="e-icon e-icon-minus"></i>
+                    </button>
+                    <input type="number" name="qty" value="1" min="1" readonly />
+                    <button type="button" data-e-quantity-action="increment">
+                        <i class="e-icon e-icon-plus"></i>
+                    </button>
+                </div>
+                <div class="e-quantity e-quantity--pill-xl" data-e-quantity style="width: 200px">
+                    <button type="button" data-e-quantity-action="decrement">
+                        <i class="e-icon e-icon-minus"></i>
+                    </button>
+                    <input type="number" name="qty" value="1" min="1" readonly />
+                    <button type="button" data-e-quantity-action="increment">
+                        <i class="e-icon e-icon-plus"></i>
+                    </button>
                 </div>
 
             </div>
@@ -229,5 +252,6 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <script src="assets/js/vendor.js" defer="defer"></script>
     <script src="assets/js-new/countdown.js" defer="defer"></script>
+    <script src="assets/js-new/quantity.js" defer="defer"></script>
 </body>
 </html>
