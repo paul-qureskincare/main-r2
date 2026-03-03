@@ -140,6 +140,7 @@
     // #header can be injected dynamically; keep refs but re-resolve if detached
     let header = null;
     let announcementBar = null;
+    let guideMenuSelect = null;
 
     let isHidden = false;
     let rafPending = false;
@@ -157,8 +158,10 @@
     const resolveHeaderEls = () => {
         if (!header || !header.isConnected) header = document.getElementById('header');
         if (!announcementBar || !announcementBar.isConnected) announcementBar = document.getElementById('announcement-bar');
+        if (!guideMenuSelect || !guideMenuSelect.isConnected) guideMenuSelect = document.querySelector('.guide-menu__select');
         ensureTransformTransition(header);
         ensureTransformTransition(announcementBar);
+        ensureTransformTransition(guideMenuSelect);
     };
 
     const applyHidden = (nextHidden) => {
@@ -166,13 +169,14 @@
         isHidden = nextHidden;
         header?.classList.toggle(HIDING_CLASS, nextHidden);
         announcementBar?.classList.toggle(HIDING_CLASS, nextHidden);
+        guideMenuSelect?.classList.toggle(HIDING_CLASS, nextHidden);
     };
 
     const updateOnScroll = () => {
         rafPending = false;
         resolveHeaderEls();
         const y = latestScrollY;
-        if (!header && !announcementBar) return (lastScrollY = y);
+        if (!header && !announcementBar && !guideMenuSelect) return (lastScrollY = y);
         if (y <= 0) return applyHidden(false), (lastScrollY = 0);
         if (Math.abs(y - lastScrollY) < SCROLL_DELTA_PX) return;
         applyHidden(y > lastScrollY);
