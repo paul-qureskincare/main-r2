@@ -10,7 +10,8 @@
         const target = document.getElementById(`${value}-tab`);
         if (!target) return;
 
-        const scrollOffset = 150;
+        const hasAnnouncementBar = !!document.getElementById('announcement-bar');
+        const scrollOffset = 115 + (hasAnnouncementBar ? 35 : 0);
         const top = target.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
         window.scrollTo({ top, behavior: 'smooth' });
 

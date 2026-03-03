@@ -26,18 +26,33 @@
 
     &__select {
         position: fixed;
-        top: calc(var(--height-bar) + var(--height-header));
+        top: var(--height-header);
         left: 0;
         z-index: 10;
         display: none;
         width: 100%;
         background: #fff;
 
+        @at-root .has-guide-select:has(#announcement-bar) & {
+            top: calc(var(--height-bar) + var(--height-header));
+        }
+
         @include md {
             display: block;
         }
 
+
+        &.scroll-hiding {
+            transform: translateY(-200px);
+        }
+
         @at-root .has-guide-select {
+            @include md {
+                padding-top: calc(var(--height-header) + 60px);
+            }
+        }
+
+        @at-root .has-guide-select:has(#announcement-bar) {
             @include md {
                 padding-top: calc(var(--height-bar) + var(--height-header) + 60px);
             }

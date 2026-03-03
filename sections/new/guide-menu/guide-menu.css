@@ -10,12 +10,18 @@
 }
 .guide-menu__select{
   position:fixed;
-  top:calc(var(--height-bar) + var(--height-header));
+  top:var(--height-header);
   left:0;
   z-index:10;
   display:none;
   width:100%;
   background:#fff;
+}
+.has-guide-select:has(#announcement-bar) .guide-menu__select{
+  top:calc(var(--height-bar) + var(--height-header));
+}
+.guide-menu__select.scroll-hiding{
+  transform:translateY(-200px);
 }
 
 .guide-menu__select select{
@@ -99,6 +105,9 @@
     display:block;
   }
   .has-guide-select{
+    padding-top:calc(var(--height-header) + 60px);
+  }
+  .has-guide-select:has(#announcement-bar){
     padding-top:calc(var(--height-bar) + var(--height-header) + 60px);
   }
   .guide-menu__list{
