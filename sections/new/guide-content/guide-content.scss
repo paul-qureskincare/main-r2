@@ -628,6 +628,12 @@
             border-top: 1px solid #dfe0e0;
         }
 
+        .c-swiper {
+            img {
+                height: 100%;
+            }
+        }
+
         & + .c-note {
             @include content-width;
         }
