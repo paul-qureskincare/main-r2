@@ -151,6 +151,123 @@
                         }
                     ]'
                 }}
+                {{> c-supply-selector
+                    title="Select Your Supply"
+                    small="We recommend replacing your filter every 3 months."
+                    list='[
+                        {
+                            "name": "Buy 3 Months, Get 3 Months FREE",
+                            "desc": "12 Micro-Infusion Treatments",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-value": "Save 47%",
+                            "tag-up": true,
+                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                            "option": "supply",
+                            "kits-left-hot": true,
+                            "checked": true
+                        },
+                        {
+                            "name": "3 Month Supply",
+                            "desc": "4 Micro-Infusion Treatments",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-value": "Save 37%",
+                            "option": "supply",
+                            "kits-left-normal": true
+                        },
+                        {
+                            "name": "3 Months Supply",
+                            "desc": "Faucet + 1 Filter",
+                            "price-highlight": false,
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "Save 22%",
+                            "tag-up": false,
+                            "option": "supply"
+                        },
+                        {
+                            "name": "3 Months Supply",
+                            "desc": "Faucet + 1 Filter",
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "tag-up": false,
+                            "option": "supply"
+                        },
+                        {
+                            "name": "6 Months Supply",
+                            "desc": "Faucet + 2 Filters",
+                            "price-old": true,
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "save-value": "22% off",
+                            "tag-up": false,
+                            "tag-name": "Popular",
+                            "option": "supply"
+                        },
+                        {
+                            "name": "12 Months Supply",
+                            "desc": "Faucet + 4 Filters",
+                            "price-old": true,
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "save-value": "47% off",
+                            "tag-up": false,
+                            "tag-name": "Best Value",
+                            "option": "supply"
+                        },
+                        {
+                            "image": "sections/isolated/micro-infusion-pdp/images/3_month_mixed.webp",
+                            "name": "12 Months Supply",
+                            "desc": "Faucet + 4 Filters",
+                            "price-old": true,
+                            "price-final": true,
+                            "price-strikethrough": true,
+                            "price-highlight": false,
+                            "option": "supply"
+                        }
+                    ]'
+                }}
+                {{> c-supply-selector
+                    classes="c-supply-selector--tiles"
+                    title="Select Your Supply"
+                    list='[
+                        {
+                            "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                            "name": "6 Months",
+                            "desc": "(3 bottles)",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-value": "38% OFF",
+                            "tag-up": true,
+                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                            "option": "supply-tile",
+                            "checked": true
+                        },
+                        {
+                            "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                            "name": "4 Months",
+                            "desc": "(2 bottles)",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "25% OFF",
+                            "option": "supply-tile"
+                        },
+                        {
+                            "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                            "name": "2 Months",
+                            "desc": "(1 bottles)",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "option": "supply-tile"
+                        }
+                    ]'
+                }}
                 {{> c-subscribe-selector
                     title="Select Your Delivery"
                     list='[
@@ -173,6 +290,25 @@
                             "text": "
                                 <p> One Time: Faucet + 1 Filter</p>
                             "
+                        }
+                    ]'
+                }}
+                {{> c-payment-selector
+                    title="Select A Payment Option"
+                    list='[
+                        {
+                            "name": "Pay in full",
+                            "old-price": true,
+                            "option": "payment",
+                            "checked": true,
+                            "text": "One-time payment with:",
+                            "image": "assets/images/payment-icons-1.svg"
+                        },
+                        {
+                            "name": "Pay today only",
+                            "option": "payment",
+                            "text": "Monthly interest-free payments with:",
+                            "image": "assets/images/payment-icons-2.svg"
                         }
                     ]'
                 }}

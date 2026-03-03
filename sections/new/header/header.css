@@ -167,6 +167,10 @@
   content:"\e945";
 }
 
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -438,13 +442,16 @@
 
 .header{
   position:fixed;
-  top:var(--height-bar);
+  top:0;
   z-index:10;
   display:flex;
   flex-direction:column;
   width:100%;
   color:#fff;
   background:#212428;
+}
+body:has(#announcement-bar) .header{
+  top:var(--height-bar);
 }
 .header__navigation{
   position:relative;

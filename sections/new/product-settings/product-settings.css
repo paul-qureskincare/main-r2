@@ -229,6 +229,10 @@
   content:"\e945";
 }
 
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

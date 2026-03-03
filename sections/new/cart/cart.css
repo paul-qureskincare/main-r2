@@ -146,6 +146,21 @@
   color:#8b8c8e;
   text-decoration:line-through;
 }
+.e-price--highlight .e-price__current{
+  color:var(--discount-color);
+}
+.e-price--strikethrough{
+  position:relative;
+}
+.e-price--strikethrough:before{
+  position:absolute;
+  top:10px;
+  width:100%;
+  height:2px;
+  background:#ff5429;
+  transform:rotate(5deg);
+  content:"";
+}
 
 .e-quantity{
   display:inline-flex;

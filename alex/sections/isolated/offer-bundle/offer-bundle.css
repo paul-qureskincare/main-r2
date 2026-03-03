@@ -167,6 +167,10 @@
   content:"\e945";
 }
 
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -398,6 +402,21 @@
   color:#8b8c8e;
   text-decoration:line-through;
 }
+.e-price--highlight .e-price__current{
+  color:var(--discount-color);
+}
+.e-price--strikethrough{
+  position:relative;
+}
+.e-price--strikethrough:before{
+  position:absolute;
+  top:10px;
+  width:100%;
+  height:2px;
+  background:#ff5429;
+  transform:rotate(5deg);
+  content:"";
+}
 
 .e-pay-options{
   display:flex;
@@ -421,6 +440,7 @@
 }
 
 .e-pill-save{
+  --e-pill-save-color:#ff5429;
   display:inline-block;
   padding:.15em .6em;
   color:#fff;
@@ -428,7 +448,11 @@
   line-height:1;
   text-transform:uppercase;
   border-radius:100px;
-  background:var(--discount-color, #212428);
+  background:var(--e-pill-save-color);
+}
+.e-pill-save--light{
+  color:var(--e-pill-save-color);
+  background:hsl(from var(--e-pill-save-color) h s calc(l + 37));
 }
 
 .c-bundle-card{

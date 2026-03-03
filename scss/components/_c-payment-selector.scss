@@ -1,13 +1,11 @@
 @use "@root/mixins" as *;
-@use "@elements/e-pill-save" as *;
 @use "@elements/e-price" as *;
 
-.c-subscribe-selector {
+.c-payment-selector {
     $root: &;
 
     display: flex;
     flex-direction: column;
-    gap: 12px;
     max-width: 500px;
 
     // .c-subscribe-selector__title
@@ -50,26 +48,6 @@
             box-shadow: inset 0 0 0 1px currentcolor, 0 0 0 1px currentcolor;
             background: #f6f6f7;
         }
-
-        &:has(input:not(:checked)) {
-            .e-pill-save {
-                color: inherit;
-                font-weight: 500;
-                background: #f6f6f7;
-            }
-
-            #{$root}__text,
-            #{$root}__tag,
-            .e-price__old {
-                display: none;
-            }
-
-            .e-price--highlight {
-                .e-price__current {
-                    color: inherit;
-                }
-            }
-        }
     }
 
     // .c-subscribe-selector__name
@@ -99,49 +77,17 @@
 
     // .c-subscribe-selector__text
     &__text {
+        display: flex;
         grid-column: 1 / -1;
-        font-size: 16px;
+        gap: 8px;
+        align-items: center;
+        font-size: 14px;
         line-height: 1.25;
 
-        del {
-            color: #8b8c8e;
-        }
-
-        small {
-            display: block;
-            margin-top: 4px;
-            font-size: 14px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-
-    // .c-subscribe-selector__tag
-    &__tag {
-        position: absolute;
-        right: 18px;
-        bottom: 100%;
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        padding: 2px 15px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.286;
-        border-radius: 10px 10px 0 0;
-        background: #212428;
-
-        .e-icon {
-            font-size: 10px;
-            vertical-align: top;
+        @include sm {
+            flex-direction: column;
+            gap: 2px;
+            align-items: start;
         }
     }
 }

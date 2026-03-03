@@ -7,13 +7,17 @@
     $root: &;
 
     position: fixed;
-    top: var(--height-bar);
+    top: 0;
     z-index: 10;
     display: flex;
     flex-direction: column;
     width: 100%;
     color: #fff;
     background: #212428;
+
+    body:has(#announcement-bar) & {
+        top: var(--height-bar);
+    }
 
     & > .container {
         @include md {
