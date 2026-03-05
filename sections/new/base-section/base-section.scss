@@ -3,6 +3,7 @@
 @use "@elements/e-checkmark" as *;
 @use "@elements/e-icon" as *;
 @use "@elements/e-steps-list" as *;
+@use "@components/c-dialog" as *;
 
 .base-section {
     $root: &;
@@ -37,10 +38,38 @@
             margin-bottom: 0;
             color: inherit;
 
+            & + figure,
             & + picture[data-url] {
                 @include sm {
                     order: 0;
                 }
+            }
+        }
+
+        figure,
+        & > picture,
+        .wistia-embed-video {
+            grid-row: 1 / -1;
+            grid-column: 2;
+
+            @include sm {
+                order: -1;
+                grid-area: auto;
+                grid-column: 1;
+                width: 100%;
+            }
+        }
+
+        & > picture {
+            &[data-url] {
+                cursor: pointer;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
             }
         }
 
@@ -99,29 +128,41 @@
         }
     }
 
-    picture,
-    .wistia-embed-video {
-        grid-row: 1 / -1;
-        grid-column: 2;
-
-        @include sm {
-            order: -1;
-            grid-area: auto;
-            grid-column: 1;
-            width: 100%;
-        }
-    }
-
-    picture {
-        &[data-url] {
-            cursor: pointer;
-        }
+    figure {
+        position: relative;
+        cursor: pointer;
 
         img {
-            display: block;
+            @include img-fluid;
+        }
+
+        figcaption {
+            @include play-icon;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            text-align: left;
+
+            strong {
+                display: block;
+                font-size: 20px;
+            }
+
+            &::first-line {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            &::after {
+                right: 20px;
+                left: auto;
+                font-size: 40px;
+                transform: translate(0, -50%);
+            }
         }
     }
 
@@ -157,6 +198,27 @@
                 @include sm {
                     font-size: 40px;
                 }
+            }
+        }
+    }
+
+    .c-dialog {
+        max-width: 900px;
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 12px;
+        }
+    }
+
+    .c-dialog__content {
+        padding: 40px;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
@@ -257,9 +319,11 @@
     }
 
     &--reverse {
-        picture,
-        .wistia-embed-video {
-            grid-column: 1;
+        article {
+            & > picture,
+            .wistia-embed-video {
+                grid-column: 1;
+            }
         }
     }
 

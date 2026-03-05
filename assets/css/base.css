@@ -817,6 +817,10 @@ ul.list-dots {
     color:var(--btn-primary-color-hover, #fff);
     border-color:var(--btn-primary-bg-hover, #212428)
 }
+.btn--primary-grey{
+    --btn-primary-bg:#f6f6f6;
+    --btn-primary-color:#212428;
+}
 .btn--secondary{
     background-color:var(--btn-secondary-bg, transparent);
     color:var(--btn-secondary-color, #212428);

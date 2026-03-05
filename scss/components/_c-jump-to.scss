@@ -28,6 +28,11 @@
             &:hover {
                 background: hsl(from #8b8c8e h s l / 20%);
             }
+
+            .e-icon {
+                font-size: 12px;
+                transform: rotate(90deg);
+            }
         }
     }
 }

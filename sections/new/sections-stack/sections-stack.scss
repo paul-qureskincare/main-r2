@@ -75,7 +75,8 @@
 .page\.micro-infusion-targeted-patches-customer-reviews,
 .page\.qure-microinfusion-pro-offer,
 .product\.silk-pillowcase,
-.product\.faucet-filter, {
+.product\.faucet-filter,
+.product\.dermal-mist {
     @include sections-stack;
 }
 
@@ -128,7 +129,8 @@
 .page\.qure-microinfusion-offer-listicle,
 .page\.qure-microinfusion-pro-offer,
 .product\.silk-pillowcase,
-.product\.faucet-filter {
+.product\.faucet-filter,
+.product\.dermal-mist {
     .sections-stack {
         padding-bottom: 0;
 

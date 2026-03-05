@@ -107,7 +107,7 @@
             font-weight: 500;
         }
 
-        ul {
+        ul:not(.c-marked-list) {
             padding-left: 24px;
 
             &:not(:last-child) {

@@ -1,7 +1,7 @@
 const QureMainMenu = {
     init: function () {
         this.initMainMenu();
-        this.setHeaderHeights(); 
+        this.setHeaderHeights();
         window.addEventListener("resize", this.setHeaderHeights.bind(this));
     },
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// js for announcement shift issue  
+// js for announcement shift issue
     document.fonts.load('1em "TT Commons"').then(() => {
     document.querySelector('.announcement-bar').style.visibility = 'visible';
 });

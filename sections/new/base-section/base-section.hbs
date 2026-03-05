@@ -1,14 +1,42 @@
 <!-- BASE SECTION -->
+{{#unless page-css }}
 <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
-<section class="base-section {{ classes }}">
+{{/unless}}
+<section class="base-section {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         <article>
             <h2>{{ title }}</h2>
+            {{!-- Simple image --}}
             {{#if picture }}
                 <picture>
                     <img src="{{ picture }}" alt="{{ title }}" />
                 </picture>
             {{/if}}
+            {{!-- Video with text --}}
+            {{#if video }}
+                {{#parseJson video }}
+                    <figure
+                        {{#if wistia-video }}
+                            class="watch-wistia-video"
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="{{ code }}"
+                        {{ else }}
+                            class="lvideo"
+                            data-url="{{ url }}"
+                        {{/if}}
+                    >
+                        <picture>
+                            <img src="{{ picture }}" alt="{{ title }}" />
+                        </picture>
+                        <figcaption>
+                            <strong>{{ label-main }}</strong>
+                            {{ label-secondary }}
+                        </figcaption>
+                    </figure>
+                {{/parseJson}}
+            {{/if}}
+            {{!-- Live wistia video --}}
             {{#if wistia }}
                 <div class="wistia-embed-video">
                     <div class="wistia_responsive_padding">
@@ -33,14 +61,32 @@
                     Dermatologist Reviewed
                 </div>
             {{/if}}
+            {{#if ingredients }}
+                <button class="btn btn--primary-grey" type="button" onclick="fullIngredient.showModal()">View Full Ingredient List</button>
+                <dialog class="c-dialog" id="fullIngredient">
+                    <div class="c-dialog__content">
+                        <p><strong>Dermal Mist Ingredients</strong></p>
+                        <p>Water (aqua)*, Chrysanthellum indicum flower water, sodium chloride, sodium phosphate, disodium phosphate, hypochlorous acid. *Ultra pure water.</p>
+                        <button type="button" class="btn-close" onclick="fullIngredient.close()">
+                            <img src="assets/images/cross_black.svg" alt="">
+                        </button>
+                    </div>
+                </dialog>
+            {{/if}}
         </article>
     </div>
 </section>
-{{#if wistia }}
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+        {{#if wistia }}
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        });
-    </script>
-{{/if}}
+        {{/if}}
+        {{#if video }}
+            loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
+            loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
+            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+        {{/if}}
+    });
+</script>
 <!-- BASE SECTION END -->

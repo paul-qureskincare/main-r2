@@ -15,13 +15,14 @@
         <link rel="stylesheet" href="assets/css/spacings.css" />
         <link href="assets/css/theme-fonts.css" rel="stylesheet" />
         <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
         <!-- Loading HTML Files -->
         <script src="assets/js/fileloader.js"></script>
     </head>
 
     <body class="product.silk-pillowcase">
         <!-- PAGE HEADER -->
-        <div id="site-header"></div>
+        <div id="site-header-new"></div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce("carousel", "sections/global/header/js/carousel.js");
@@ -229,6 +230,11 @@
                     </article>
                 </div>
             </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                });
+            </script>
             <!-- BASE SECTION END -->
 
             <!-- FEATURES MARQUEE -->
@@ -372,6 +378,61 @@
         </main>
         <!-- SECTIONS STACK END -->
 
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer-new"></div>
+        <div id="site-cart-drawer-new"></div>
+
         <!-- Reusable modal for all the wistia videos for all the tab contents -->
         <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
             <div class="modal-dialog">
@@ -386,9 +447,6 @@
             </div>
         </div>
 
-        <!-- CART AND FOOTER -->
-        <div id="site-footer"></div>
-        <div id="site-cart-drawer"></div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
@@ -397,7 +455,7 @@
 
         <!-- SCRIPTS -->
         <script src="assets/js/vendor.js" defer="defer"></script>
-        <script src="assets/js/header.js" defer="defer"></script>
-        <script src="assets/js/footer.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
     </body>
 </html>

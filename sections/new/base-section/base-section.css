@@ -421,6 +421,59 @@
   content:counter(number) "";
 }
 
+.c-dialog{
+  overflow:auto;
+  max-width:none;
+  padding:0;
+  border:0;
+}
+.c-dialog::backdrop{
+  background:#212428;
+  opacity:.6;
+}
+.c-dialog__message{
+  display:flex;
+  flex:none;
+  align-items:center;
+  height:var(--height-bar);
+  padding:2px 24px;
+  font-size:14px;
+  line-height:1.1;
+  background:#f6f6f7;
+}
+.c-dialog__content{
+  padding:24px;
+}
+.c-dialog__close{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:8px;
+  font-size:18px;
+  line-height:1;
+  border:0;
+  border-radius:30px;
+  background:none;
+  transition:all .2s linear;
+}
+.c-dialog__close:hover{
+  color:#fff;
+  background:#212428;
+}
+.c-dialog__close .e-icon{
+  vertical-align:top;
+}
+.c-dialog--column{
+  width:min(450px, 100%);
+  height:100vh;
+  max-height:none;
+  margin:0 0 0 auto;
+}
+.c-dialog--column .c-dialog__close{
+  top:calc(var(--height-bar) + 22px);
+  right:14px;
+}
+
 .base-section article{
   display:grid;
   grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
@@ -439,6 +492,19 @@
 .base-section article>h1,.base-section article>h2{
   margin-bottom:0;
   color:inherit;
+}
+.base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.base-section article>picture[data-url]{
+  cursor:pointer;
+}
+.base-section article>picture img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
 }
 .base-section article p em{
   font-style:normal;
@@ -469,18 +535,60 @@
   width:max-content;
   margin-top:8px;
 }
-.base-section .wistia-embed-video,.base-section picture{
-  grid-row:1 /  -1;
-  grid-column:2;
-}
-.base-section picture[data-url]{
+.base-section figure{
+  position:relative;
   cursor:pointer;
 }
-.base-section picture img{
+.base-section figure img{
   display:block;
-  width:100%;
+  max-width:100%;
   height:auto;
-  border-radius:10px;
+}
+.base-section figure figcaption:after{
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:.155em;
+  color:#fff;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:52px;
+  border-radius:50%;
+  background:rgba(0,0,0,.35);
+  transform:translate(-50%, -50%);
+  content:"\e90d";
+}
+.base-section figure figcaption{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:20px;
+  color:#fff;
+  text-align:left;
+}
+.base-section figure figcaption strong{
+  display:block;
+  font-size:20px;
+}
+.base-section figure figcaption:first-line{
+  font-size:20px;
+  font-weight:500;
+}
+.base-section figure figcaption:after{
+  right:20px;
+  left:auto;
+  font-size:40px;
+  transform:translate(0, -50%);
 }
 .base-section .features-list{
   display:grid;
@@ -499,6 +607,21 @@
 }
 .base-section .features-list li .e-icon{
   font-size:45px;
+}
+.base-section .c-dialog{
+  max-width:900px;
+}
+.base-section .c-dialog .btn-close{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:12px;
+}
+.base-section .c-dialog__content{
+  padding:40px;
+}
+.base-section .c-dialog__content p:last-child{
+  margin-bottom:0;
 }
 .base-section--small-media article{
   grid-template-columns:1fr 400px;
@@ -528,7 +651,7 @@
 .base-section--half-media.base-section--reverse article{
   grid-template-columns:50vw 1fr;
 }
-.base-section--reverse .wistia-embed-video,.base-section--reverse picture{
+.base-section--reverse article .wistia-embed-video,.base-section--reverse article>picture{
   grid-column:1;
 }
 .base-section--grey{
@@ -567,12 +690,22 @@
   }
 }
 @media screen and (max-width:767px){
+  .c-dialog__content,.c-dialog__message{
+    padding-right:16px;
+    padding-left:16px;
+  }
   .base-section article{
     grid-template-rows:auto;
     grid-template-columns:auto;
   }
-  .base-section article>h1+picture[data-url],.base-section article>h2+picture[data-url]{
+  .base-section article>h1+figure,.base-section article>h1+picture[data-url],.base-section article>h2+figure,.base-section article>h2+picture[data-url]{
     order:0;
+  }
+  .base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
+    order:-1;
+    grid-area:auto;
+    grid-column:1;
+    width:100%;
   }
   .base-section:has(.e-pill-badge) article{
     justify-items:center;
@@ -585,12 +718,6 @@
   .base-section article .btn{
     width:100%;
     margin-top:0;
-  }
-  .base-section .wistia-embed-video,.base-section picture{
-    order:-1;
-    grid-area:auto;
-    grid-column:1;
-    width:100%;
   }
   .base-section .features-list{
     order:10;

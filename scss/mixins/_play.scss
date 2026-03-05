@@ -1,11 +1,7 @@
 @use "media" as *;
 @use "icon" as *;
 
-@mixin play {
-    position: relative;
-    display: block;
-    cursor: pointer;
-
+@mixin play-icon {
     &::after {
         position: absolute;
         top: 50%;
@@ -19,4 +15,11 @@
         transform: translate(-50%, -50%);
         content: "\e90d";
     }
+}
+
+@mixin play {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @include play-icon;
 }

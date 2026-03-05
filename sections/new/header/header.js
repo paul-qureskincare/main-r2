@@ -191,4 +191,12 @@
     }, { passive: true });
     // SCROLL HIDE HEADER
 
+
+    // Padding fot bottom CTA panel. TODO: Move this script to new CTA panel script
+    const el = document.querySelector('.qure__sticky-atc');
+    if (el) {
+        const set = () => document.body.style.setProperty('--sticky-cart', el.offsetHeight + 'px');
+        new ResizeObserver(set).observe(el);
+        set();
+    }
 })();
