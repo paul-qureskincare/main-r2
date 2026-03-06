@@ -175,47 +175,67 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="c-subscribe-selector">
-                            <p class="c-subscribe-selector__title">Select Your Delivery:</p>
-                            <ul class="c-subscribe-selector__list">
-                                <li class="c-subscribe-selector__item">
-                                    <label class="c-subscribe-selector__label">
-                                        <input type="radio" name="subscribe" checked="checked" />
-                                        <div class="c-subscribe-selector__name">
-                                            Subscribe &amp;
-                                            <div class="e-pill-save">Save 20%</div>
-                                        </div>
-                                        <div class="c-subscribe-selector__price">
-                                            <div class="e-price e-price--highlight">
-                                                <div class="e-price__main">
-                                                    <div class="e-price__current">{$dyn}</div>
-                                                    <div class="e-price__old">{$dyn}</div>
+                        <div class="c-supply-selector">
+                            <p class="c-supply-selector__title">
+                                Select Your Supply:
+                                <small>We recommend replacing your filter every 3 months.</small>
+                            </p>
+                            <ul class="c-supply-selector__list">
+                                <li class="c-supply-selector__item">
+                                    <label class="c-supply-selector__label">
+                                        <input type="radio" name="supply" />
+                                        <div class="c-supply-selector__main">
+                                            <div class="c-supply-selector__name">3 Months Supply</div>
+                                            <div class="c-supply-selector__price">
+                                                <div class="e-price">
+                                                    <div class="e-price__main">
+                                                        <div class="e-price__current">{$dyn}</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="c-supply-selector__desc">Faucet + 1 Filter</div>
                                         </div>
-                                        <div class="c-subscribe-selector__text">
-                                            <p>
-                                                One Time: Faucet + 1 Filter<br />
-                                                Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})
-                                            </p>
-                                            <small>Skip, pause or cancel anytime. <a href="#">See more details</a></small>
-                                        </div>
-                                        <div class="c-subscribe-selector__tag">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
                                     </label>
                                 </li>
-                                <li class="c-subscribe-selector__item">
-                                    <label class="c-subscribe-selector__label">
-                                        <input type="radio" name="subscribe" />
-                                        <div class="c-subscribe-selector__name">One-Time Purchase</div>
-                                        <div class="c-subscribe-selector__price">
-                                            <div class="e-price">
-                                                <div class="e-price__main">
-                                                    <div class="e-price__current">{$dyn}</div>
+                                <li class="c-supply-selector__item">
+                                    <label class="c-supply-selector__label">
+                                        <input type="radio" name="supply" checked="checked" />
+                                        <div class="c-supply-selector__main">
+                                            <div class="c-supply-selector__name">6 Months Supply</div>
+                                            <div class="c-supply-selector__price">
+                                                <div class="e-price">
+                                                    <div class="e-price__main">
+                                                        <div class="e-price__current">{$dyn}</div>
+                                                        <div class="e-price__old">{$dyn}</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="c-supply-selector__desc">Faucet + 2 Filters</div>
+                                            <div class="c-supply-selector__save">22% off</div>
                                         </div>
-                                        <div class="c-subscribe-selector__text">
-                                            <p>One Time: Faucet + 1 Filter</p>
+                                        <div class="c-supply-selector__tag">
+                                            <div class="selector-tag-down">Popular</div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="c-supply-selector__item">
+                                    <label class="c-supply-selector__label">
+                                        <input type="radio" name="supply" />
+                                        <div class="c-supply-selector__main">
+                                            <div class="c-supply-selector__name">12 Months Supply</div>
+                                            <div class="c-supply-selector__price">
+                                                <div class="e-price">
+                                                    <div class="e-price__main">
+                                                        <div class="e-price__current">{$dyn}</div>
+                                                        <div class="e-price__old">{$dyn}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-supply-selector__desc">Faucet + 4 Filters</div>
+                                            <div class="c-supply-selector__save">47% off</div>
+                                        </div>
+                                        <div class="c-supply-selector__tag">
+                                            <div class="selector-tag-down">Best Value</div>
                                         </div>
                                     </label>
                                 </li>

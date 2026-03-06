@@ -405,6 +405,9 @@
 .e-price--highlight .e-price__current{
   color:var(--discount-color);
 }
+.e-price--profit .e-price__current{
+  color:#0fa847;
+}
 .e-price--strikethrough{
   position:relative;
 }

@@ -444,6 +444,9 @@
 .e-price--highlight .e-price__current{
   color:var(--discount-color);
 }
+.e-price--profit .e-price__current{
+  color:#0fa847;
+}
 .e-price--strikethrough{
   position:relative;
 }
@@ -535,6 +538,9 @@
 }
 .e-features-list .e-icon-shipping-order{
   font-size:22px;
+}
+.e-features-list .e-icon-proven{
+  font-size:28px;
 }
 
 .e-pay-options{

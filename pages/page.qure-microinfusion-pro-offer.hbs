@@ -601,6 +601,106 @@
         <button class="btn btn--primary" type="button">buy now &amp; SAVE up to 70%</button>
     {{/set-up}}
 
+    {{!-- {{#> treatment
+        id="treatment"
+        title="Choose your treatment"
+        text="
+            <p>All orders are one-time purchases. No extra charges, and no hidden fees.</p>
+        "
+        picture="sections/isolated/archive/images/mi-20-pro.webp"
+     }}
+        <div class="treatment__steps">
+            <div class="treatment__step">
+                {{> c-supply-selector
+                    title="Select Your Supply"
+                    list='[
+                        {
+                            "name": "Buy 3 Months, Get 3 Months FREE",
+                            "desc": "12 Micro-Infusion Treatments",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-value": "Save 47%",
+                            "tag-up": true,
+                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                            "option": "supply-new",
+                            "kits-left-hot": true,
+                            "checked": true
+                        },
+                        {
+                            "name": "3 Month Supply",
+                            "desc": "4 Micro-Infusion Treatments",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-value": "Save 37%",
+                            "option": "supply-new",
+                            "kits-left-normal": true
+                        },
+                        {
+                            "name": "3 Months Supply",
+                            "desc": "Faucet + 1 Filter",
+                            "price-highlight": false,
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "Save 22%",
+                            "tag-up": false,
+                            "option": "supply-new"
+                        }
+                    ]'
+                }}
+                <div class="info-items">
+                    <div class="info-items__item show">
+                        <details>
+                            <summary>What are the 1</summary>
+                            <article>
+                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                            </article>
+                        </details>
+                    </div>
+                    <div class="info-items__item">
+                        <details>
+                            <summary>What are the 2</summary>
+                            <article>
+                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                            </article>
+                        </details>
+                    </div>
+                    <div class="info-items__item">
+                        <details>
+                            <summary>What are the 2</summary>
+                            <article>
+                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                            </article>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="treatment__step">
+                {{> c-payment-selector
+                    title="Select A Payment Option"
+                    list='[
+                        {
+                            "name": "Pay in full",
+                            "old-price": true,
+                            "option": "payment",
+                            "checked": true,
+                            "text": "One-time payment with:",
+                            "image": "assets/images/payment-icons-1.svg",
+                            "checked": true
+                        },
+                        {
+                            "name": "Pay today only",
+                            "option": "payment",
+                            "text": "Monthly interest-free payments with:",
+                            "image": "assets/images/payment-icons-2.svg"
+                        }
+                    ]'
+                }}
+            </div>
+        </div>
+    {{/treatment}} --}}
+
     <!-- Choose treatment -->
     <link rel="stylesheet" href="sections/global/purchase-form/purchase-form.css" />
     <div id="buy_box" class="qure__section user_guideline color-background"

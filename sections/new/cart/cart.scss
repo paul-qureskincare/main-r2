@@ -1,6 +1,7 @@
 @use "@root/mixins" as *;
 @use "@elements/e-rating-stars" as *;
 @use "@elements/e-switcher" as *;
+@use "@elements/e-pill-save" as *;
 @use "@components/c-marked-list" as *;
 @use "@components/c-cart-tile" as *;
 @use "@components/c-swiper" as *;
@@ -353,6 +354,10 @@
             &:has(.savings-price) {
                 color: #0fa847;
             }
+        }
+
+        .e-pill-save {
+            font-size: 14px;
         }
     }
 

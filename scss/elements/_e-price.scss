@@ -34,6 +34,12 @@
         }
     }
 
+    &--profit {
+        #{$root}__current {
+            color: #0fa847;
+        }
+    }
+
     &--strikethrough {
         position: relative;
 

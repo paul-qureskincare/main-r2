@@ -68,6 +68,22 @@
   transition:all .2s linear;
 }
 
+.e-pill-save{
+  --e-pill-save-color:#ff5429;
+  display:inline-block;
+  padding:.15em .6em;
+  color:#fff;
+  font-weight:600;
+  line-height:1;
+  text-transform:uppercase;
+  border-radius:100px;
+  background:var(--e-pill-save-color);
+}
+.e-pill-save--light{
+  color:var(--e-pill-save-color);
+  background:hsl(from var(--e-pill-save-color) h s calc(l + 37));
+}
+
 .c-marked-list{
   display:flex;
   flex-direction:column;
@@ -148,6 +164,9 @@
 }
 .e-price--highlight .e-price__current{
   color:var(--discount-color);
+}
+.e-price--profit .e-price__current{
+  color:#0fa847;
 }
 .e-price--strikethrough{
   position:relative;
@@ -683,6 +702,9 @@
 }
 .flyout-cart__summary li:has(.savings-price){
   color:#0fa847;
+}
+.flyout-cart__summary .e-pill-save{
+  font-size:14px;
 }
 .flyout-cart__checkout{
   display:flex;

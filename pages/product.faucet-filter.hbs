@@ -134,28 +134,40 @@
                         }
                     ]'
                 }}
-                {{> c-subscribe-selector
-                    title="Select Your Delivery"
+                {{> c-supply-selector
+                    title="Select Your Supply"
+                    small="We recommend replacing your filter every 3 months."
                     list='[
                         {
-                            "name": "Subscribe &",
-                            "save": "20%",
-                            "old-price": true,
-                            "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "subscribe",
-                            "checked": true,
-                            "text": "
-                                <p> One Time: Faucet + 1 Filter<br />
-                                Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
-                                <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
-                            "
+                            "name": "3 Months Supply",
+                            "desc": "Faucet + 1 Filter",
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "tag-up": false,
+                            "option": "supply"
                         },
                         {
-                            "name": "One-Time Purchase",
-                            "option": "subscribe",
-                            "text": "
-                                <p> One Time: Faucet + 1 Filter</p>
-                            "
+                            "name": "6 Months Supply",
+                            "desc": "Faucet + 2 Filters",
+                            "price-old": true,
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "save-value": "22% off",
+                            "tag-up": false,
+                            "tag-name": "Popular",
+                            "option": "supply",
+                            "checked": true
+                        },
+                        {
+                            "name": "12 Months Supply",
+                            "desc": "Faucet + 4 Filters",
+                            "price-old": true,
+                            "price-highlight": false,
+                            "save-pill": false,
+                            "save-value": "47% off",
+                            "tag-up": false,
+                            "tag-name": "Best Value",
+                            "option": "supply"
                         }
                     ]'
                 }}
