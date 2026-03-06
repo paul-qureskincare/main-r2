@@ -1,8 +1,13 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
+@use "@components/c-options-selector" as *;
 @use "@components/c-supply-selector" as *;
+@use "@components/c-subscribe-selector" as *;
 @use "@components/c-payment-selector" as *;
+@use "@components/c-accordion" as *;
 @use "@components/c-buy-block" as *;
+@use "@components/c-marked-list" as *;
+@use "@components/c-note" as *;
 
 .treatment {
     $root: &;
@@ -24,14 +29,24 @@
         @include md {
             gap: 20px 40px;
         }
+
+        @include sm {
+            grid-template: none;
+        }
     }
 
+    // .treatment__content
     &__content {
         display: flex;
         flex-direction: column;
         gap: 16px;
         align-items: center;
         text-align: center;
+
+        @include sm {
+            align-items: flex-start;
+            text-align: left;
+        }
 
         h2 {
             margin-bottom: 0;
@@ -42,21 +57,37 @@
             display: block;
             max-width: 460px;
             margin: 16px auto 0;
+
+            @include sm {
+                order: -1;
+                margin-top: 0;
+                margin-bottom: 16px;
+            }
         }
 
         img {
+            border-radius: 10px;
             @include img-fluid;
         }
     }
 
+    // .treatment__form
     &__form {
-        display: flex;
-        flex-direction: column;
-        grid-row: 1 / -1;
-        grid-column: 2;
+        @media screen and (min-width: 768px) {
+            grid-row: 1 / -1;
+            grid-column: 2;
+        }
+
+        @include sm {
+            margin-right: -16px;
+            margin-left: -16px;
+        }
     }
 
+    // .treatment__box
     &__box {
+        display: flex;
+        flex-direction: column;
         gap: 32px;
         padding: 32px;
         border-radius: 10px;
@@ -65,22 +96,30 @@
         @media screen and (min-width: 992px) {
             padding-left: 72px;
         }
+
+        @include sm {
+            gap: 24px;
+            padding: 24px 16px;
+            border-radius: 0;
+        }
     }
 
+    // .treatment__steps
     &__steps {
         position: relative;
         counter-reset: number;
 
         .c-supply-selector__title,
-        .c-option-selector__title,
-        .c-delivery-selector__title,
+        .c-options-selector__title,
+        .c-subscribe-selector__title,
         .c-payment-selector__title {
             position: relative;
             counter-increment: number;
 
             @include md {
                 display: flex;
-                gap: 10px;
+                flex-wrap: wrap;
+                gap: 4px 10px;
                 align-items: center;
             }
 
@@ -112,11 +151,16 @@
         }
     }
 
+    // .treatment__step
     &__step {
         position: relative;
 
         &:not(:last-child) {
             padding-bottom: 32px;
+
+            @include sm {
+                padding-bottom: 24px;
+            }
 
             &::after {
                 @media screen and (min-width: 992px) {
@@ -133,18 +177,60 @@
 
         .info-items {
             margin-top: 16px;
-            font-size: 14px;
-            line-height: 1.25;
 
             // .info-items__item
             &__item {
                 &:not(.show) {
                     display: none;
                 }
+
+                & > details {
+                    max-width: 420px;
+                    font-size: 14px;
+                    line-height: 1.25;
+
+                    &[open] {
+                        .e-icon {
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    & > summary {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        align-items: center;
+
+                        .e-icon {
+                            font-size: 12px;
+                            vertical-align: top;
+                            transform: rotate(90deg);
+                            @include transition;
+                        }
+                    }
+                }
+
+                article {
+                    padding-top: 12px;
+
+                    ul {
+                        @include c-marked-list;
+                    }
+                }
+
+                .c-accordion__summary {
+                    min-height: 53px;
+                    font-size: inherit;
+
+                    &::after {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
 
+    // .treatment__extra
     &__extra {
         display: flex;
         flex-direction: column;
@@ -188,6 +274,7 @@
         }
     }
 
+    // .treatment__questions
     &__questions {
         display: flex;
         gap: 12px;
@@ -201,44 +288,45 @@
         }
 
         .btn {
+            --btn-secondary-bg: #fff;
+
             font-size: inherit;
         }
     }
 
     .c-accordion {
+        overflow: hidden;
         width: 100%;
         padding: 0 16px;
         border: 1px solid #dfe0e0;
         border-radius: 10px;
 
         .c-accordion__item {
+            overflow: visible;
             border-color: #b5b6b7;
 
             &:last-child {
                 border: 0;
             }
+
+            &[open] {
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    position: absolute;
+                    inset: 0 -16px;
+                    z-index: -1;
+                    background: #fff;
+                    content: '';
+                }
+            }
+
+            small {
+                --note-bg: #f6f6f7;
+
+                @include note;
+            }
         }
     }
-
-    /* article {
-        display: grid;
-        grid-template-rows: auto minmax(min-content, 0) auto;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 60px;
-        align-items: center;
-        min-height: 0;
-
-        @include md {
-            column-gap: 40px;
-        }
-
-        @include sm {
-            grid-template-rows: auto;
-            grid-template-columns: auto;
-        }
-
-
-    } */
-
-
 }

@@ -899,267 +899,256 @@
             </script>
             <!-- SET UP END -->
 
-            <!-- Choose treatment -->
-            <link rel="stylesheet" href="sections/global/purchase-form/purchase-form.css" />
-            <div id="buy_box" class="qure__section user_guideline color-background" style="--section-padding-top: 60px; --section-padding-bottom: 60px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 50px">
-                <div class="container" style="--column-gap: 60px; --column-gap-mobile: 30px">
-                    <div class="row custom__grid">
-                        <div class="col-md-6 custom__block">
-                            <div class="qure__section-header text-center d-md-block d-none">
-                                <h2 class="qure__section-heading">Choose your treatment</h2>
-                                <div class="qure__section-desc mt-20">All orders are one-time purchases. No extra charges, and no hidden fees.</div>
-                            </div>
-                            <div class="card qure-card">
-                                <img src="sections/isolated/archive/images/mi-20-pro.webp" class="card-img-top ctm-width mx-auto" style="--ctm-width: 457px" alt="MI 2.0 PRO" />
-                            </div>
-                            <div class="qure__section-header d-md-none mt-20 mb-10">
-                                <h2 class="qure__section-heading">Choose your treatment</h2>
-                                <div class="qure__section-desc mt-20">All orders are one-time purchases. No extra charges, and no hidden fees.</div>
-                            </div>
-                            <div class="d-none d-md-flex flex-nowrap align-items-center justify-content-center col-gap px-30 px-lg-50 mt-30" style="--col-gap-mb: 20px; --col-gap: 42px">
-                                <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-16 fw-400 text-center">
-                                    <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist" />
-                                    <span>30-Day Money-Back Guarantee </span>
-                                </div>
-                                <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-16 fw-400 text-center">
-                                    <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping" />
-                                    <span>Free Shipping over {$dyn}</span>
-                                </div>
-                                <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-16 fw-400 text-center">
-                                    <img src="sections/isolated/protect-your-skin/images/backed_science.svg" alt="dermatologist" />
-                                    <span>Backed by Science </span>
-                                </div>
-                            </div>
+            <!-- TREATMENT -->
+            <link rel="stylesheet" href="sections/new/treatment/treatment.css" />
+            <section class="treatment" id="treatment">
+                <div class="container">
+                    <article class="treatment__content">
+                        <h2>Choose your treatment</h2>
 
-                            <div class="pt-md-50 pt-40 d-md-flex d-none align-items-center justify-content-center gap-3">
-                                <h6 class="fm-body fw-600 mb-0 fs-14">Have questions about Micro-Infusion?</h6>
-                                <a href="" class="btn btn-sm btn--secondary fs-14" style="--btn-secondary-bg: #fff">Chat with us!</a>
+                        <p>All orders are one-time purchases. No extra charges, and no hidden fees.</p>
+
+                        <picture>
+                            <img src="sections/isolated/archive/images/mi-20-pro.webp" alt="Choose your treatment" />
+                        </picture>
+                    </article>
+                    <div class="treatment__form">
+                        <div class="treatment__box">
+                            <div class="treatment__steps">
+                                <div class="treatment__step">
+                                    <div class="c-supply-selector">
+                                        <p class="c-supply-selector__title">Select Your Supply:</p>
+                                        <ul class="c-supply-selector__list">
+                                            <li class="c-supply-selector__item">
+                                                <label class="c-supply-selector__label">
+                                                    <input type="radio" name="supply-new" checked="checked" />
+                                                    <div class="c-supply-selector__main">
+                                                        <div class="c-supply-selector__name">6 Month Supply</div>
+                                                        <div class="c-supply-selector__price">
+                                                            <div class="e-price e-price--highlight">
+                                                                <div class="e-price__main">
+                                                                    <div class="e-price__current">{$dyn}</div>
+                                                                    <div class="e-price__old">{$dyn}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-supply-selector__desc">12 Treatments</div>
+                                                        <div class="c-supply-selector__save">
+                                                            <div class="e-pill-save">Save 70%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__tag">
+                                                        <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
+                                                    </div>
+                                                    <div class="c-supply-selector__kits-left">
+                                                        <div class="kits-left kits-left--hot">
+                                                            <div class="kits-left__name">🔥 Only $14.91 per treatment</div>
+                                                            <div class="kits-left__items">
+                                                                <i class="e-icon e-icon-clock"></i>
+                                                                164 kits left
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </li>
+
+                                            <li class="c-supply-selector__item">
+                                                <label class="c-supply-selector__label">
+                                                    <input type="radio" name="supply-new" />
+                                                    <div class="c-supply-selector__main">
+                                                        <div class="c-supply-selector__name">3 Month Supply</div>
+                                                        <div class="c-supply-selector__price">
+                                                            <div class="e-price e-price--highlight">
+                                                                <div class="e-price__main">
+                                                                    <div class="e-price__current">{$dyn}</div>
+                                                                    <div class="e-price__old">{$dyn}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-supply-selector__desc">6 Treatments</div>
+                                                        <div class="c-supply-selector__save">
+                                                            <div class="e-pill-save e-pill-save--light">Save 53%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__kits-left">
+                                                        <div class="kits-left">
+                                                            <div class="kits-left__name">Only $37.25 per treatment</div>
+                                                            <div class="kits-left__items">
+                                                                <i class="e-icon e-icon-clock"></i>
+                                                                201 kits left
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </li>
+
+                                            <li class="c-supply-selector__item">
+                                                <label class="c-supply-selector__label">
+                                                    <input type="radio" name="supply-new" />
+                                                    <div class="c-supply-selector__main">
+                                                        <div class="c-supply-selector__name">1 Months Supply</div>
+                                                        <div class="c-supply-selector__price">
+                                                            <div class="e-price">
+                                                                <div class="e-price__main">
+                                                                    <div class="e-price__current">{$dyn}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-supply-selector__desc">2 Micro-Infusion Treatments</div>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info-items">
+                                        <div class="info-items__item show">
+                                            <details>
+                                                <summary>What is in the 6 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
+                                                <article>
+                                                    <ul>
+                                                        <li>12 clinically formulated 4ml serums to treat your specific skin concerns (valued at $120)</li>
+                                                        <li>Worldwide shipping (valued at $25)</li>
+                                                        <li>Risk-free 90 day money-back guarantee to trial</li>
+                                                    </ul>
+                                                </article>
+                                            </details>
+                                        </div>
+                                        <div class="info-items__item">
+                                            <details>
+                                                <summary>What is in the 3 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
+                                                <article>
+                                                    <ul>
+                                                        <li>4 clinically formulated 4ml serums to treat your specific skin concerns (valued at $80)</li>
+                                                        <li>Worldwide shipping (valued at $25)</li>
+                                                        <li>Risk-free 90 day money-back guarantee to trial</li>
+                                                    </ul>
+                                                </article>
+                                            </details>
+                                        </div>
+                                        <div class="info-items__item">
+                                            <details>
+                                                <summary>What is in the 1 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
+                                                <article>
+                                                    <ul>
+                                                        <li>2 clinically formulated 4ml serums to treat your specific skin concerns (valued at $40)</li>
+                                                        <li>Worldwide shipping (valued at $25)</li>
+                                                    </ul>
+                                                </article>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="treatment__step">
+                                    <div class="c-payment-selector">
+                                        <p class="c-payment-selector__title">Select A Payment Option:</p>
+                                        <ul class="c-payment-selector__list">
+                                            <li class="c-payment-selector__item">
+                                                <label class="c-payment-selector__label">
+                                                    <input type="radio" name="payment" checked="checked" />
+                                                    <div class="c-payment-selector__name">Pay in full</div>
+                                                    <div class="c-payment-selector__price">
+                                                        <div class="e-price">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-payment-selector__text">
+                                                        One-time payment with:
+                                                        <img src="assets/images/payment-icons-1.svg" alt="Pay in full" />
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="c-payment-selector__item">
+                                                <label class="c-payment-selector__label">
+                                                    <input type="radio" name="payment" />
+                                                    <div class="c-payment-selector__name">Pay today only</div>
+                                                    <div class="c-payment-selector__price">
+                                                        <div class="e-price">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-payment-selector__text">
+                                                        Monthly interest-free payments with:
+                                                        <img src="assets/images/payment-icons-2.svg" alt="Pay today only" />
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="qure-bundle-accordion mt-40 d-none d-md-block">
-                                <div class="accordion accordion-flush" id="qure_mi-main">
-                                    <div class="accordion-item qure__accordion-item">
-                                        <button class="accordion-button collapsed qure__accordion-header px-0" type="button" data-bs-toggle="collapse" data-bs-target="#qure_mi-1" aria-expanded="false" aria-controls="qure_mi-1">What can it do for your skin</button>
-                                        <div id="qure_mi-1" class="accordion-collapse collapse qure__accordion-content" data-bs-parent="#qure_mi-main">
-                                            <div class="accordion-body px-0">
-                                                <p>Designed to support smoother, brighter-looking skin with balanced hydration.</p>
-                                                <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item qure__accordion-item">
-                                        <button class="accordion-button collapsed qure__accordion-header px-0" type="button" data-bs-toggle="collapse" data-bs-target="#qure_mi-2" aria-expanded="false" aria-controls="qure_mi-2">All Ingredients</button>
-                                        <div id="qure_mi-2" class="accordion-collapse collapse qure__accordion-content" data-bs-parent="#qure_mi-main">
-                                            <div class="accordion-body px-0">
-                                                <p><strong>Dark Spots Serum:</strong> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
-                                                <p><strong>Wrinkles Serum:</strong> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
-                                                <div class="bg-light rounded-10 p-18 fs-14">Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 custom__block">
-                            <div class="qure__bundle-container">
-                                <div class="qure__bundle-form">
-                                    <div class="qure__bundle-steps">
-                                        <div class="qure-bundle-stps-title mb-30">Select Your Supply:</div>
-                                        <div class="qure-bundle-container" style="--col-gap: 10px; --col-gap-mb: 10px">
-                                            <div class="align-items-end bundle-supply col-gap d-flex flex-column" id="myTab" role="tablist">
-                                                <div class="qure-supply-item col-12 position-relative" role="presentation">
-                                                    <div class="best_value">
-                                                        <p>Best Value <img src="assets/images/star_white.svg" alt="" /></p>
-                                                    </div>
-                                                    <input type="radio" name="supply" id="three-months" checked="" />
-                                                    <label for="three-months" class="supply-link active py-0 overflow-hidden" id="m-3-tab" data-bs-toggle="tab" data-bs-target="#m-3-tab-pane" type="button" role="tab" aria-controls="m-3-tab-pane" aria-selected="true">
-                                                        <div class="qure__supply-content d-flex text-start justify-content-between p-15">
-                                                            <div>
-                                                                <p class="mb-0">Buy 3 Months, Get 3 Months FREE</p>
-                                                                <p class="fs-14">12 Micro-Infusion Treatments</p>
-                                                            </div>
-                                                            <div>
-                                                                <div class="qure__supply-price">
-                                                                    <span class="qure__supply-price-sale">$714</span>
-                                                                    <span class="qure__supply-price-reg-sale">$179</span>
-                                                                </div>
-                                                                <p class="ctm-background fs-12 text-center text-white rounded-30">SAVE 75%</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="qure-best-value rounded-0 mb-0 justify-content-between px-15 fs-12 pt-5">
-                                                            <div>🔥 Only $14.91 per treatment</div>
-                                                            <div>
-                                                                <span><img src="assets/images/clock-w.svg" alt="" /></span> 164 kits left
-                                                            </div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                                <div class="qure-supply-item col-12" role="presentation">
-                                                    <input type="radio" name="supply" id="two-months" />
-                                                    <label for="two-months" class="supply-link py-0 overflow-hidden" id="m-2-tab" data-bs-toggle="tab" data-bs-target="#m-2-tab-pane" type="button" role="tab" aria-controls="m-2-tab-pane" aria-selected="false" tabindex="-1">
-                                                        <div class="qure__supply-content d-flex text-start justify-content-between p-15">
-                                                            <div>
-                                                                <p class="mb-0">3 Month Supply</p>
-                                                                <p class="fs-14">4 Micro-Infusion Treatments</p>
-                                                            </div>
-                                                            <div>
-                                                                <div class="qure__supply-price">
-                                                                    <span class="qure__supply-price-sale">$238</span>
-                                                                    <span class="qure__supply-price-reg-sale">$149</span>
-                                                                </div>
-                                                                <p class="ctm-background fs-12 text-center color-orange rounded-30" style="--ctm-background: #ff54291a">SAVE 38%</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="qure-best-value rounded-0 mb-0 justify-content-between px-15 fs-12 pt-5" style="--qure-charcoal: #c7e5db; --white-color: #212428">
-                                                            <div>Only $37.25 per treatment</div>
-                                                            <div>
-                                                                <span><img src="assets/images/clock-b.svg" alt="" /></span> 201 kits left
-                                                            </div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                                <div class="qure-supply-item col-12" role="presentation">
-                                                    <input type="radio" name="supply" id="one-months" />
-                                                    <label for="one-months" class="supply-link py-0" id="m-1-tab" data-bs-toggle="tab" data-bs-target="#m-1-tab-pane" type="button" role="tab" aria-controls="m-1-tab-pane" aria-selected="false" tabindex="-1">
-                                                        <div class="qure__supply-content d-flex text-start justify-content-between p-15">
-                                                            <div>
-                                                                <p class="mb-0">1 Month Supply</p>
-                                                                <p class="fs-14">2 Micro-Infusion Treatments</p>
-                                                            </div>
-                                                            <div>
-                                                                <div class="qure__supply-price">
-                                                                    <span>$119</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="tab-content mt-25" id="myTabContent">
-                                                <div class="tab-pane fade show active" id="m-3-tab-pane" role="tabpanel" aria-labelledby="m-3-tab" tabindex="0">
-                                                    <div class="qure_bundle-accorion">
-                                                        <button class="qure_bundle-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3monthCollapse" aria-expanded="false" aria-controls="3monthCollapse">What is in the 6 Month Supply bundle?</button>
-                                                        <div id="3monthCollapse" class="qure_bundle-collapse collapse" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body mt-12">
-                                                                <ul class="qure__list-check">
-                                                                    <li>12 clinically formulated 4ml serums to treat your specific skin concerns (valued at $120)</li>
-                                                                    <li>Worldwide shipping (valued at $25)</li>
-                                                                    <li>Risk-free 90 day money-back guarantee to trial</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane fade" id="m-2-tab-pane" role="tabpanel" aria-labelledby="m-2-tab" tabindex="0">
-                                                    <div class="qure_bundle-accorion">
-                                                        <button class="qure_bundle-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2monthCollapse" aria-expanded="false" aria-controls="2monthCollapse">What is in the 3 Month Supply bundle?</button>
-                                                        <div id="2monthCollapse" class="qure_bundle-collapse collapse" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body mt-12">
-                                                                <ul class="qure__list-check">
-                                                                    <li>4 clinically formulated 4ml serums to treat your specific skin concerns (valued at $80)</li>
-                                                                    <li>Worldwide shipping (valued at $25)</li>
-                                                                    <li>Risk-free 90 day money-back guarantee to trial</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane fade" id="m-1-tab-pane" role="tabpanel" aria-labelledby="m-1-tab" tabindex="0">
-                                                    <div class="qure_bundle-accorion">
-                                                        <button class="qure_bundle-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#1monthCollapse" aria-expanded="false" aria-controls="1monthCollapse">What is in the 1 Month Supply bundle?</button>
-                                                        <div id="1monthCollapse" class="qure_bundle-collapse collapse" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body mt-12">
-                                                                <ul class="qure__list-check">
-                                                                    <li>2 clinically formulated 4ml serums to treat your specific skin concerns (valued at $40)</li>
-                                                                    <li>Worldwide shipping (valued at $25)</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="qure__bundle-steps">
-                                        <div class="qure-bundle-stps-title mb-16">Select A Payment Option</div>
-                                        <div class="qure-bundle-container">
-                                            <div class="pmt-container">
-                                                <div class="pmt-option">
-                                                    <input type="radio" name="payment" id="fullPayment" checked="" />
-                                                    <label for="fullPayment" class="pmt-block">
-                                                        <div class="pmt-header">
-                                                            <p>Pay in full</p>
-                                                            <div class="pmt-price"><span class="pmt-price-sale text-decoration-line-through clr_grey">{$dyn}</span><span class="pmt-price-regular">{$dyn}</span></div>
-                                                        </div>
-                                                        <div class="pmt-footer">
-                                                            <span>One-time payment with:</span>
-                                                            <img src="sections/isolated/treatment/images/pmt-1.webp" alt="pmt" />
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                                <div class="pmt-option">
-                                                    <input type="radio" name="payment" id="payToday" />
-                                                    <label for="payToday" class="pmt-block">
-                                                        <div class="pmt-header">
-                                                            <p>Pay today only</p>
-                                                            <div class="pmt-price"><span class="pmt-price-regular">{$dyn}</span></div>
-                                                        </div>
-                                                        <div class="pmt-footer">
-                                                            <span>Monthly interest-free payments with::</span>
-                                                            <img src="sections/isolated/treatment/images/pmt-2.webp" alt="pmt" />
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qure__bundle-atc mt-40">
-                                    <a href="#" class="btn btn--primary d-block">Buy Now & Save {dyn}% </a>
-                                    <div class="align-items-center d-flex flex-wrap fs-13 gap-2 justify-content-center mt-6">OR pay 4 monthly payments of {$dyn} with <img src="sections/isolated/treatment/images/klarna.png" alt="" /> <img src="sections/isolated/treatment/images/sezzle.png" alt="" /><img src="sections/isolated/treatment/images/after-pay.png" alt="" /></div>
-                                </div>
-                                <div class="d-flex d-md-none flex-nowrap align-items-center justify-content-center col-gap px-30 px-lg-50 mt-30" style="--col-gap-mb: 20px; --col-gap: 42px">
-                                    <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-14 text-center">
-                                        <img src="sections/isolated/protect-your-skin/images/dermatologist.svg" alt="dermatologist" />
-                                        <span>30-Day Money-Back Guarantee </span>
-                                    </div>
-                                    <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-14 text-center">
-                                        <img src="sections/isolated/protect-your-skin/images/shipping.svg" alt="shipping" />
-                                        <span>Free Shipping over {$dyn}</span>
-                                    </div>
-                                    <div class="icon-with-text d-flex flex-wrap flex-column align-items-center fs-14 text-center">
-                                        <img src="sections/isolated/protect-your-skin/images/backed_science.svg" alt="dermatologist" />
-                                        <span>Backed by Science </span>
-                                    </div>
-                                </div>
-                                <div class="qure-bundle-accordion mt-40 d-block d-md-none">
-                                    <div class="accordion accordion-flush" id="qure_mi-mob">
-                                        <div class="accordion-item qure__accordion-item">
-                                            <button class="accordion-button collapsed qure__accordion-header px-0" type="button" data-bs-toggle="collapse" data-bs-target="#qure_mi-1-mob" aria-expanded="false" aria-controls="qure_mi-1-mob">What can it do for your skin</button>
-                                            <div id="qure_mi-1-mob" class="accordion-collapse collapse qure__accordion-content" data-bs-parent="#qure_mi-mob">
-                                                <div class="accordion-body px-0">
-                                                    <p>Designed to support smoother, brighter-looking skin with balanced hydration.</p>
-                                                    <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item qure__accordion-item">
-                                            <button class="accordion-button collapsed qure__accordion-header px-0" type="button" data-bs-toggle="collapse" data-bs-target="#qure_mi-2-mob" aria-expanded="false" aria-controls="qure_mi-2-mob">All Ingredients</button>
-                                            <div id="qure_mi-2-mob" class="accordion-collapse collapse qure__accordion-content" data-bs-parent="#qure_mi-mob">
-                                                <div class="accordion-body px-0">
-                                                    <p><strong>Dark Spots Serum:</strong> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
-                                                    <p><strong>Wrinkles Serum:</strong> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
-                                                    <div class="bg-light rounded-10 p-18 fs-14">Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</div>
-                                                </div>
-                                            </div>
+                            <div class="treatment__buy">
+                                <div class="c-buy-block">
+                                    <div class="c-order-button">
+                                        <button class="btn btn--primary" type="button">Buy Now</button>
+                                        <div class="e-pay-options">
+                                            OR pay 4 monthly payments of {$dyn} with
+                                            <ul>
+                                                <li><img src="assets/images/klarna.svg" alt="Klarna" /></li>
+                                                <li><img src="assets/images/sezzle.svg" alt="Sezzle" /></li>
+                                                <li><img src="assets/images/afterpay.svg" alt="Afterpay" /></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="treatment__extra">
+                        <ul class="e-features-list">
+                            <li>
+                                <i class="e-icon e-icon-guarantee"></i>
+                                30-Day Money-Back Guarantee
+                            </li>
+                            <li>
+                                <i class="e-icon e-icon-shipping-order"></i>
+                                Free Shipping over {$dyn}
+                            </li>
+                            <li>
+                                <i class="e-icon e-icon-proven"></i>
+                                Backed by Science
+                            </li>
+                        </ul>
+                        <div class="treatment__questions">Have questions about Micro-Infusion? <a href="#" class="btn btn--md btn--secondary">Chat with us!</a></div>
+                        <div class="c-accordion c-accordion--lines">
+                            <div class="c-accordion__list">
+                                <details class="c-accordion__item">
+                                    <summary class="c-accordion__summary">What can it do for your skin</summary>
+                                    <article class="c-accordion__content">
+                                        <p>Designed to support smoother, brighter-looking skin with balanced hydration.</p>
+                                        <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
+                                    </article>
+                                </details>
+                                <details class="c-accordion__item">
+                                    <summary class="c-accordion__summary">All Ingredients</summary>
+                                    <article class="c-accordion__content">
+                                        <p>
+                                            <strong>Dark Spots Serum:</strong><br />
+                                            Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.
+                                        </p>
+                                        <p>
+                                            <strong>Wrinkles Serum:</strong><br />
+                                            Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.
+                                        </p>
+                                        <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                                    </article>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Choose treatment -->
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("treatment-new", "sections/new/treatment/treatment.js");
+                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                });
+            </script>
+            <!-- TREATMENT END -->
 
             <!-- MI NEW -->
             <link rel="stylesheet" href="sections/new/mi-new/mi-new.css" />
@@ -1399,6 +1388,19 @@
                 </div>
             </div>
         </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {

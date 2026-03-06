@@ -1,6 +1,6 @@
 <div class="c-options-selector">
-    <p>{{ title }}:</p>
-    <ul>
+    <p class="c-options-selector__title">{{ title }}:</p>
+    <ul class="c-options-selector__list">
         {{#parseJson list }}
             <li>
                 <label>
@@ -11,4 +11,5 @@
             </li>
         {{/parseJson}}
     </ul>
+    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
 </div>

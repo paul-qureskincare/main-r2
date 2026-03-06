@@ -73,7 +73,14 @@
                         </div>
                     {{/if}}
                 </label>
+                {{#if notify-row }}
+                    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+                {{/if}}
+                </li>
             </li>
         {{/parseJson}}
     </ul>
+    {{#if notify-tiles }}
+        <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+    {{/if}}
 </div>

@@ -429,11 +429,13 @@
   right:0;
   visibility:visible;
 }
-.flyout-cart__wrapper{
+.flyout-cart__dynamic,.flyout-cart__wrapper{
   display:flex;
-  flex-grow:1;
   flex-direction:column;
   min-height:1px;
+}
+.flyout-cart__wrapper{
+  flex-grow:1;
 }
 .flyout-cart__header{
   display:flex;
@@ -662,7 +664,7 @@
   font-size:16px;
   line-height:1.25;
 }
-.flyout-cart__upsells .swiper-slide a{
+.flyout-cart__upsells .swiper-slide .btn{
   --btn-primary-bg:#f6f6f7;
   min-width:96px;
   font-size:18px;

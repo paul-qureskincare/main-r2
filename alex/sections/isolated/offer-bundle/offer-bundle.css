@@ -668,6 +668,32 @@
   top:calc(var(--height-bar) + 22px);
   right:14px;
 }
+.c-dialog--notify-available{
+  max-width:400px;
+  border-radius:10px;
+}
+.c-dialog--notify-available form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  text-align:center;
+}
+.c-dialog--notify-available .e-icon{
+  font-size:36px;
+}
+.c-dialog--notify-available h5{
+  margin-bottom:-10px;
+}
+.c-dialog--notify-available img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-dialog--notify-available .btn{
+  width:100%;
+}
 
 .offer-bundle{
   padding-bottom:60px;
@@ -857,6 +883,12 @@
   .c-dialog__content,.c-dialog__message{
     padding-right:16px;
     padding-left:16px;
+  }
+  .c-dialog--notify-available{
+    width:calc(100% - 32px);
+  }
+  .c-dialog--notify-available form{
+    gap:14px;
   }
   .offer-bundle{
     padding-bottom:40px;

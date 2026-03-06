@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 
 .c-dialog {
     $root: &;
@@ -73,6 +74,45 @@
         .c-dialog__close {
             top: calc(var(--height-bar) + 22px);
             right: 14px;
+        }
+    }
+
+    // .c-dialog--notify-available
+    &--notify-available {
+        max-width: 400px;
+        border-radius: 10px;
+
+        @include sm {
+            width: calc(100% - 32px);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+
+            @include sm {
+                gap: 14px;
+            }
+        }
+
+        .e-icon {
+            font-size: 36px;
+        }
+
+        h5 {
+            margin-bottom: -10px;
+        }
+
+        img {
+            @include img-fluid;
+            vertical-align: top;
+        }
+
+        .btn {
+            width: 100%;
         }
     }
 }

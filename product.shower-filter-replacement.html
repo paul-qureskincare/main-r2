@@ -159,8 +159,8 @@
                         </article>
                         <hr />
                         <div class="c-options-selector">
-                            <p>Select Your Color:</p>
-                            <ul>
+                            <p class="c-options-selector__title">Select Your Color:</p>
+                            <ul class="c-options-selector__list">
                                 <li>
                                     <label>
                                         <input type="radio" name="color" checked="checked" />
@@ -176,6 +176,7 @@
                                     </label>
                                 </li>
                             </ul>
+                            <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
                         </div>
                         <div class="c-subscribe-selector">
                             <p class="c-subscribe-selector__title">Select Your Delivery:</p>
@@ -1145,6 +1146,19 @@
                 </div>
             </div>
         </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {

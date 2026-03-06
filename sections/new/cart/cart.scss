@@ -32,6 +32,13 @@
         visibility: visible;
     }
 
+    // .flyout-cart__dynamic
+    &__dynamic {
+        display: flex;
+        flex-direction: column;
+        min-height: 1px;
+    }
+
     // .flyout-cart__wrapper
     &__wrapper {
         display: flex;
@@ -297,7 +304,7 @@
                 line-height: 1.25;
             }
 
-            a {
+            .btn {
                 --btn-primary-bg: #f6f6f7;
 
                 min-width: 96px;

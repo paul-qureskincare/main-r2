@@ -601,7 +601,7 @@
         <button class="btn btn--primary" type="button">buy now &amp; SAVE up to 70%</button>
     {{/set-up}}
 
-    {{!-- {{#> treatment
+    {{#> treatment
         id="treatment"
         title="Choose your treatment"
         text="
@@ -615,12 +615,12 @@
                     title="Select Your Supply"
                     list='[
                         {
-                            "name": "Buy 3 Months, Get 3 Months FREE",
-                            "desc": "12 Micro-Infusion Treatments",
+                            "name": "6 Month Supply",
+                            "desc": "12 Treatments",
                             "price-old": true,
                             "price-highlight": true,
                             "save-pill": true,
-                            "save-value": "Save 47%",
+                            "save-value": "Save 70%",
                             "tag-up": true,
                             "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
                             "option": "supply-new",
@@ -629,22 +629,18 @@
                         },
                         {
                             "name": "3 Month Supply",
-                            "desc": "4 Micro-Infusion Treatments",
+                            "desc": "6 Treatments",
                             "price-old": true,
                             "price-highlight": true,
                             "save-pill": true,
-                            "save-value": "Save 37%",
+                            "save-pill-light": true,
+                            "save-value": "Save 53%",
                             "option": "supply-new",
                             "kits-left-normal": true
                         },
                         {
-                            "name": "3 Months Supply",
-                            "desc": "Faucet + 1 Filter",
-                            "price-highlight": false,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "Save 22%",
-                            "tag-up": false,
+                            "name": "1 Months Supply",
+                            "desc": "2 Micro-Infusion Treatments",
                             "option": "supply-new"
                         }
                     ]'
@@ -652,25 +648,36 @@
                 <div class="info-items">
                     <div class="info-items__item show">
                         <details>
-                            <summary>What are the 1</summary>
+                            <summary>What is in the 6 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
                             <article>
-                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                                <ul>
+                                    <li>12 clinically formulated 4ml serums to treat your specific skin concerns (valued at $120)</li>
+                                    <li>Worldwide shipping (valued at $25)</li>
+                                    <li>Risk-free 90 day money-back guarantee to trial</li>
+                                </ul>
                             </article>
                         </details>
                     </div>
                     <div class="info-items__item">
                         <details>
-                            <summary>What are the 2</summary>
+                            <summary>What is in the 3 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
                             <article>
-                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                                <ul>
+                                    <li>4 clinically formulated 4ml serums to treat your specific skin concerns (valued at $80)</li>
+                                    <li>Worldwide shipping (valued at $25)</li>
+                                    <li>Risk-free 90 day money-back guarantee to trial</li>
+                                </ul>
                             </article>
                         </details>
                     </div>
                     <div class="info-items__item">
                         <details>
-                            <summary>What are the 2</summary>
+                            <summary>What is in the 1 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
                             <article>
-                                <p>The stamping action of the Micro-Infusion device creates tiny micro-channels on the surface of the skin, helping to enhance the absorption of active ingredients and visibly refresh the complexion.</p>
+                                <ul>
+                                    <li>2 clinically formulated 4ml serums to treat your specific skin concerns (valued at $40)</li>
+                                    <li>Worldwide shipping (valued at $25)</li>
+                                </ul>
                             </article>
                         </details>
                     </div>
@@ -699,9 +706,9 @@
                 }}
             </div>
         </div>
-    {{/treatment}} --}}
+    {{/treatment}}
 
-    <!-- Choose treatment -->
+    {{!-- <!-- Choose treatment -->
     <link rel="stylesheet" href="sections/global/purchase-form/purchase-form.css" />
     <div id="buy_box" class="qure__section user_guideline color-background"
         style="--section-padding-top: 60px; --section-padding-bottom: 60px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 50px;">
@@ -1024,7 +1031,7 @@
             </div>
         </div>
     </div>
-    <!-- Choose treatment -->
+    <!-- Choose treatment --> --}}
 
     {{> mi-new title="Built for real results" }}
 

@@ -499,12 +499,12 @@
 
 .c-note{
   display:block;
-  max-width:500px;
   padding:10px 12px;
   font-size:16px;
   line-height:1.25;
   border-radius:10px;
-  background:#eef7f4;
+  background:var(--note-bg, #eef7f4);
+  max-width:500px;
 }
 .c-note p{
   margin:0;
