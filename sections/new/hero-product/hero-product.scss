@@ -69,13 +69,22 @@
         article {
             max-width: 500px;
 
-            p {
+            p:not(:last-child) {
                 margin-bottom: 1.5rem;
             }
 
             ul {
                 @include c-marked-list;
                 gap: 16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+
+                // Some pages, where list in row
+                body[class="product.shower-filter"] & {
+                    flex-flow: row wrap;
+                }
             }
         }
 

@@ -42,6 +42,13 @@
 .e-component-pointer--vertical hr{
   margin-bottom:5px;
 }
+.e-component-pointer--reverse{
+  flex-direction:row-reverse;
+}
+.e-component-pointer--reverse hr{
+  margin-right:0;
+  margin-left:10px;
+}
 .e-component-pointer--vertical-reverse{
   flex-direction:column-reverse;
 }
@@ -64,25 +71,55 @@
   max-width:100%;
   height:auto;
 }
-.c-product-components .e-component-pointer:has([href="#carbon-fiber"]){
+.c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
   --top:20%;
   --left:13%;
   --line-size:310px;
 }
-.c-product-components .e-component-pointer:has([href="#pp-filter"]){
+.c-product-components--faucet-filter .e-component-pointer:has([href="#pp-filter"]){
   --top:3%;
   --left:-1%;
   --line-size:30px;
 }
-.c-product-components .e-component-pointer:has([href="#nok-filter"]){
+.c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
   --top:45%;
   --left:48%;
   --line-size:110px;
 }
-.c-product-components .e-component-pointer:has([href="#asp-descaler"]){
+.c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]){
   --top:75%;
   --left:2.5%;
   --line-size:30px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
+  --top:20%;
+  --left:50%;
+  --line-size:100px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+  --top:34%;
+  --left:5%;
+  --line-size:110px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
+  --top:76%;
+  --left:55%;
+  --line-size:100px;
+}
+.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#carbon-fiber"]){
+  --top:25%;
+  --left:50%;
+  --line-size:100px;
+}
+.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
+  --top:50%;
+  --left:3%;
+  --line-size:60px;
+}
+.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#fof-filter"]){
+  --top:65%;
+  --left:50%;
+  --line-size:100px;
 }
 
 .why-it-works .container{
@@ -108,23 +145,38 @@
   font-size:24px;
 }
 @media screen and (max-width:1120px){
-  .c-product-components .e-component-pointer:has([href="#carbon-fiber"]){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
     --line-size:290px;
   }
-  .c-product-components .e-component-pointer:has([href="#nok-filter"]){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
     --line-size:100px;
   }
 }
 @media screen and (max-width:991px){
-  .c-product-components .e-component-pointer:has([href="#carbon-fiber"]){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
     --line-size:55vw;
   }
-  .c-product-components .e-component-pointer:has([href="#nok-filter"]){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
     --line-size:22vw;
   }
-  .c-product-components .e-component-pointer:has([href="#asp-descaler"]){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]){
     --left:1%;
     --line-size:20px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:30vw;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
+    --line-size:60px;
+  }
+  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:20vw;
+  }
+  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:30vw;
+  }
+  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#fof-filter"]){
+    --line-size:20vw;
   }
   .why-it-works__main{
     grid-template-columns:auto;
@@ -134,6 +186,15 @@
 @media screen and (max-width:767px){
   .e-component-pointer a{
     font-size:14px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:80px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:15vw;
+  }
+  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:15vw;
   }
   .why-it-works .container{
     gap:24px;

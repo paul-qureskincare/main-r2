@@ -77,6 +77,8 @@
 .product\.silk-pillowcase,
 .product\.faucet-filter,
 .product\.faucet-filter-replacement,
+.product\.shower-filter,
+.product\.shower-filter-replacement,
 .product\.dermal-mist {
     @include sections-stack;
 }
@@ -132,6 +134,8 @@
 .product\.silk-pillowcase,
 .product\.faucet-filter,
 .product\.faucet-filter-replacement,
+.product\.shower-filter,
+.product\.shower-filter-replacement,
 .product\.dermal-mist {
     .sections-stack {
         padding-bottom: 0;

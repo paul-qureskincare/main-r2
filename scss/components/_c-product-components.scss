@@ -9,51 +9,127 @@
     }
 
     // POINTERS OPTIONS
+    &--faucet-filter {
+        .e-component-pointer {
+            &:has([href="#carbon-fiber"]) {
+                --top: 20%;
+                --left: 13%;
+                --line-size: 310px;
 
-    // Faucet filter
-    .e-component-pointer {
-        &:has([href="#carbon-fiber"]) {
-            --top: 20%;
-            --left: 13%;
-            --line-size: 310px;
+                @include lg {
+                    --line-size: 290px;
+                }
 
-            @include lg {
-                --line-size: 290px;
+                @include md {
+                    --line-size: 55vw;
+                }
             }
 
-            @include md {
-                --line-size: 55vw;
+            &:has([href="#pp-filter"]) {
+                --top: 3%;
+                --left: -1%;
+                --line-size: 30px;
+            }
+
+            &:has([href="#nok-filter"]) {
+                --top: 45%;
+                --left: 48%;
+                --line-size: 110px;
+
+                @include lg {
+                    --line-size: 100px;
+                }
+
+                @include md {
+                    --line-size: 22vw;
+                }
+            }
+
+            &:has([href="#asp-descaler"]) {
+                --top: 75%;
+                --left: 2.5%;
+                --line-size: 30px;
+
+                @include md {
+                    --left: 1%;
+                    --line-size: 20px;
+                }
             }
         }
+    }
 
-        &:has([href="#pp-filter"]) {
-            --top: 3%;
-            --left: -1%;
-            --line-size: 30px;
-        }
-
-        &:has([href="#nok-filter"]) {
-            --top: 45%;
-            --left: 48%;
-            --line-size: 110px;
-
-            @include lg {
+    &--shower-filter {
+        .e-component-pointer {
+            &:has([href="#carbon-fiber"]) {
+                --top: 20%;
+                --left: 50%;
                 --line-size: 100px;
+
+                @include sm {
+                    --line-size: 80px;
+                }
             }
 
-            @include md {
-                --line-size: 22vw;
+            &:has([href="#kdf-filter"]) {
+                --top: 34%;
+                --left: 5%;
+                --line-size: 110px;
+
+                @include md {
+                    --line-size: 30vw;
+                }
+
+                @include sm {
+                    --line-size: 15vw;
+                }
+            }
+
+            &:has([href="#fof-filter"]) {
+                --top: 76%;
+                --left: 55%;
+                --line-size: 100px;
+
+                @include md {
+                    --line-size: 60px;
+                }
             }
         }
+    }
 
-        &:has([href="#asp-descaler"]) {
-            --top: 75%;
-            --left: 2.5%;
-            --line-size: 30px;
+    &--shower-filter-cartridge {
+        .e-component-pointer {
+            &:has([href="#carbon-fiber"]) {
+                --top: 25%;
+                --left: 50%;
+                --line-size: 100px;
 
-            @include md {
-                --left: 1%;
-                --line-size: 20px;
+                @include md {
+                    --line-size: 20vw;
+                }
+            }
+
+            &:has([href="#kdf-filter"]) {
+                --top: 50%;
+                --left: 3%;
+                --line-size: 60px;
+
+                @include md {
+                    --line-size: 30vw;
+                }
+
+                @include sm {
+                    --line-size: 15vw;
+                }
+            }
+
+            &:has([href="#fof-filter"]) {
+                --top: 65%;
+                --left: 50%;
+                --line-size: 100px;
+
+                @include md {
+                    --line-size: 20vw;
+                }
             }
         }
     }

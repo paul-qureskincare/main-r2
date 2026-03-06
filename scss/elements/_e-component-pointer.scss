@@ -57,6 +57,16 @@
         }
     }
 
+    // .e-component-pointer--reverse
+    &--reverse {
+        flex-direction: row-reverse;
+
+        hr {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+
     // .e-component-pointer--vertical-reverse
     &--vertical-reverse {
         flex-direction: column-reverse;
