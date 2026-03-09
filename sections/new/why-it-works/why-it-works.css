@@ -92,31 +92,16 @@
   --line-size:30px;
 }
 .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
-  --top:20%;
-  --left:50%;
-  --line-size:100px;
-}
-.c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
-  --top:34%;
-  --left:5%;
-  --line-size:110px;
-}
-.c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
-  --top:76%;
-  --left:55%;
-  --line-size:100px;
-}
-.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#carbon-fiber"]){
   --top:25%;
   --left:50%;
   --line-size:100px;
 }
-.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
+.c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
   --top:50%;
   --left:3%;
   --line-size:60px;
 }
-.c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#fof-filter"]){
+.c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
   --top:65%;
   --left:50%;
   --line-size:100px;
@@ -163,19 +148,13 @@
     --left:1%;
     --line-size:20px;
   }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:20vw;
+  }
   .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
     --line-size:30vw;
   }
   .c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
-    --line-size:60px;
-  }
-  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#carbon-fiber"]){
-    --line-size:20vw;
-  }
-  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
-    --line-size:30vw;
-  }
-  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#fof-filter"]){
     --line-size:20vw;
   }
   .why-it-works__main{
@@ -187,13 +166,7 @@
   .e-component-pointer a{
     font-size:14px;
   }
-  .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
-    --line-size:80px;
-  }
   .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
-    --line-size:15vw;
-  }
-  .c-product-components--shower-filter-cartridge .e-component-pointer:has([href="#kdf-filter"]){
     --line-size:15vw;
   }
   .why-it-works .container{
