@@ -270,7 +270,7 @@
 
     // .across-image-banner--holidays
     &--holidays {
-        background: #ececec;
+        background: #f3f4f2;
 
         .container {
             @include banner-height(500, 1440);
@@ -324,10 +324,6 @@
                 @include md {
                     margin-bottom: 0;
                     font-size: 16px;
-                }
-
-                @include sm {
-                    order: 2;
                 }
             }
 

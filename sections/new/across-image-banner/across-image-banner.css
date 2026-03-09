@@ -508,7 +508,7 @@
 }
 
 .across-image-banner--holidays{
-  background:#ececec;
+  background:#f3f4f2;
 }
 .across-image-banner--holidays .container{
   height:34.7222222222vw;
@@ -640,9 +640,6 @@
     width:100%;
     padding-top:16px;
     padding-bottom:16px;
-  }
-  .across-image-banner--holidays article p{
-    order:2;
   }
   .across-image-banner--holidays article .btn{
     max-width:none;
