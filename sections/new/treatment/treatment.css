@@ -436,6 +436,7 @@
 }
 .c-options-selector ul label:has(input:checked),.c-options-selector__list label:has(input:checked){
   box-shadow:inset 0 0 0 1px currentcolor,0 0 0 1px currentcolor;
+  background:#f6f6f7;
 }
 .c-options-selector ul input,.c-options-selector__list input{
   position:absolute;

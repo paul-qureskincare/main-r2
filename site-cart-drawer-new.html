@@ -1,43 +1,15 @@
 <!-- FLYOUT CART -->
 <link rel="stylesheet" href="sections/new/cart/cart.css" />
-
 <div class="flyout-cart offcanvas offcanvas-end" id="cartCanvas">
     <div id="cart-dynamic-content" class="flyout-cart__dynamic">
-        <div class="cart-countdown-time d-none" data-countdown-time="15" data-timeout-message="Time is up!">
-            <span class=""><strong>IN HIGH DEMAND</strong> | Items reserved for:</span>
-            <span class="cart-counter d-flex">
+        <div class="cart-countdown-time" data-countdown-time="15" data-timeout-message="Time is up!">
+            <span><strong>IN HIGH DEMAND</strong> | Items reserved for:</span>
+            <span class="cart-counter">
                 <span class="cart-counter-block countdown-timer-minute">00</span>
                 <span class="cart-counter-block countdown-timer-sec">00</span>
             </span>
             <span class="countdown-message"></span>
         </div>
-
-        <!-- countdown-timer start  -->
-        <link rel="stylesheet" href="sections/isolated/countdown-timer/countdown-timer.css">
-        <div class="color-background" style="--section-background:#F6F6F7;">
-            <div class="container cart_counter_container">
-                <p class="extra_entries extra_entries_cart">Black Friday Ends In:</p>
-                <div class="countdown countdown_cart" data-target="2025-10-30T00:00:00">
-                    <div>
-                        <div class="days">00</div><span>DAYS</span>
-                    </div>
-                    <div><img src="sections/isolated/countdown-timer/images/white_line.svg" alt=""></div>
-                    <div>
-                        <div class="hours">00</div><span>HOURS</span>
-                    </div>
-                    <div><img src="sections/isolated/countdown-timer/images/white_line.svg" alt=""></div>
-                    <div>
-                        <div class="minutes">00</div><span>MINUTES</span>
-                    </div>
-                    <div><img src="sections/isolated/countdown-timer/images/white_line.svg" alt=""></div>
-                    <div>
-                        <div class="seconds">00</div><span>SECONDS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- countdown-timer end  -->
-
         <div class="flyout-cart__wrapper">
             <div class="flyout-cart__header">
                 <div>Your Cart (2)</div>
@@ -119,9 +91,9 @@
                                     </div>
                                     <div class="c-cart-tile__pcs">
                                         <div class="e-quantity">
-                                            <button type="button"><i class="e-icon e-icon-minus"></i></button>
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-minus"></i></button></form>
                                             <input type="number" name="qty" value="1" min="0" />
-                                            <button type="button"><i class="e-icon e-icon-plus"></i></button>
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
                                         </div>
                                     </div>
                                 </div>
@@ -155,9 +127,9 @@
                                     </div>
                                     <div class="c-cart-tile__pcs">
                                         <div class="e-quantity">
-                                            <button type="button"><i class="e-icon e-icon-minus"></i></button>
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-minus"></i></button></form>
                                             <input type="number" name="qty" value="1" min="0" />
-                                            <button type="button"><i class="e-icon e-icon-plus"></i></button>
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
                                         </div>
                                     </div>
                                 </div>
@@ -208,58 +180,60 @@
                 </div>
             </div>
             <div class="flyout-cart__footer">
-                <div class="flyout-cart__secure-ship">
-                    <img src="sections/global/drawer/images/secure-ship.svg" alt="Secure Ship" />
-                    <p>Protect your order from lost, damage and theft + <strong>$4.20</strong></p>
-                    <label class="e-switcher">
-                        <input type="checkbox" name="insurance" />
-                        <span></span>
-                    </label>
-                </div>
-                <ul class="flyout-cart__summary">
-                    <li>
-                        <div><div class="e-pill-save">Exclusive savings</div></div>
-                        <div class="e-price e-price--highlight">
-                            <div class="e-price__main">
-                                <div class="e-price__current">$187</div>
+                <div class="cart-footer">
+                    <div class="cart-footer__secure-ship">
+                        <img src="sections/global/drawer/images/secure-ship.svg" alt="Secure Ship" />
+                        <p>Protect your order from lost, damage and theft + <strong>$4.20</strong></p>
+                        <label class="e-switcher">
+                            <input type="checkbox" name="insurance" />
+                            <span></span>
+                        </label>
+                    </div>
+                    <ul class="cart-footer__summary">
+                        <li>
+                            <div><div class="e-pill-save">Exclusive savings</div></div>
+                            <div class="e-price e-price--highlight">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">$187</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Savings:</div>
-                        <div class="e-price e-price--profit">
-                            <div class="e-price__main">
-                                <div class="e-price__current">$87</div>
+                        </li>
+                        <li>
+                            <div>Savings:</div>
+                            <div class="e-price e-price--profit">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">$87</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Shipping:</div>
-                        <div class="e-price">
-                            <div class="e-price__main">
-                                <div class="e-price__current">Free</div>
+                        </li>
+                        <li>
+                            <div>Shipping:</div>
+                            <div class="e-price">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">Free</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Subtotal:</div>
-                        <div class="e-price">
-                            <div class="e-price__main">
-                                <div class="e-price__old">$375</div>
-                                <div class="e-price__current">$188</div>
+                        </li>
+                        <li>
+                            <div>Subtotal:</div>
+                            <div class="e-price">
+                                <div class="e-price__main">
+                                    <div class="e-price__old">$375</div>
+                                    <div class="e-price__current">$188</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="flyout-cart__checkout">
-                    <button class="btn btn--primary">
-                        Checkout
-                        <i class="e-icon e-icon-lock"></i>
-                    </button>
-                    <p>
-                        <i class="e-icon e-icon-guarantee"></i>
-                        Backed by our 30-Day Money-Back Guarantee
-                    </p>
+                        </li>
+                    </ul>
+                    <div class="cart-footer__checkout">
+                        <button class="btn btn--primary">
+                            Checkout
+                            <i class="e-icon e-icon-lock"></i>
+                        </button>
+                        <p>
+                            <i class="e-icon e-icon-guarantee"></i>
+                            Backed by our 30-Day Money-Back Guarantee
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
