@@ -451,18 +451,8 @@
 .cart__cell a{
   color:inherit;
 }
-.cart__cell a:hover,.cart__cell>button{
+.cart__cell a:hover{
   text-decoration:underline;
-}
-.cart__cell>button{
-  padding:0;
-  font-size:14px;
-  text-transform:uppercase;
-  border:0;
-  background:none;
-}
-.cart__cell>button:hover{
-  text-decoration:none;
 }
 .cart__cell img{
   display:block;
@@ -480,6 +470,17 @@
   display:flex;
   flex-direction:column;
   align-items:center;
+}
+.cart__cell .btn-remove{
+  padding:0;
+  font-size:14px;
+  text-transform:uppercase;
+  text-decoration:underline;
+  border:0;
+  background:none;
+}
+.cart__cell .btn-remove:hover{
+  text-decoration:none;
 }
 .cart__cell .e-price{
   font-size:20px;
