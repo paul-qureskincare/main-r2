@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .c-swiper{
   overflow:hidden;
   margin-right:-16px;

@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .c-accordion__list{
   display:flex;
   flex-direction:column;
@@ -427,6 +431,7 @@
   text-align:center;
   border:1px solid;
   border-radius:24px;
+  background:#fff;
   content:counters(item, "");
 }
 .c-accordion__content ol li:not(:last-child){

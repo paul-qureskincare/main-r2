@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .e-hamburger{
   width:62px;
   padding:16px;

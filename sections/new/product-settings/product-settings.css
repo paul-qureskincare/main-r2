@@ -381,6 +381,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .c-lifetime-warranty{
   display:flex;
   gap:12px;

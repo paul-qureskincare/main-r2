@@ -319,6 +319,15 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
+.why-using--bg{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
 .why-using article{
   display:flex;
   flex-direction:column;
@@ -362,6 +371,10 @@
   }
 }
 @media screen and (max-width:767px){
+  .why-using--bg{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
   .why-using article{
     gap:20px;
   }

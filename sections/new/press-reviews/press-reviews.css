@@ -1,0 +1,60 @@
+.press-reviews{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.press-reviews .container{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  align-self:center;
+  max-width:820px;
+  text-align:center;
+}
+.press-reviews h4,.press-reviews h6{
+  margin-bottom:0;
+}
+.press-reviews h6{
+  color:#8b8c8e;
+  font-family:inherit;
+  font-weight:400;
+  text-align:center;
+  text-transform:uppercase;
+}
+.press-reviews .c-swiper{
+  margin:0;
+  padding:0;
+}
+.press-reviews .c-swiper-thumbs{
+  align-self:center;
+  max-width:500px;
+}
+.press-reviews .c-swiper-thumbs .swiper-slide{
+  cursor:pointer;
+}
+.press-reviews .c-swiper-thumbs .swiper-slide img{
+  width:auto;
+  height:29px;
+  opacity:.5;
+}
+.press-reviews .c-swiper-thumbs .swiper-slide.swiper-slide-thumb-active img{
+  opacity:1;
+}
+@media screen and (max-width:991px){
+  .press-reviews .container{
+    gap:24px;
+  }
+  .press-reviews .c-swiper-thumbs .swiper-slide img{
+    height:20px;
+  }
+}
+@media screen and (max-width:767px){
+  .press-reviews{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+  .press-reviews .c-swiper-thumbs{
+    width:100%;
+    max-width:none;
+  }
+}

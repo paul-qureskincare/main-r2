@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .e-discount-badge{
   display:flex;
   flex-direction:column;

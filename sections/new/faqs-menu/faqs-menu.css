@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .shopify-section--faqs-menu{
   max-width:350px;
 }

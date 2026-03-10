@@ -133,6 +133,12 @@
   line-height:1.25;
   margin-top:20px;
 }
+@media screen and (min-width:768px){
+  .c-percent-list--columns{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
 @media screen and (max-width:991px){
   .progress-metrics .container{
     -moz-column-gap:40px;

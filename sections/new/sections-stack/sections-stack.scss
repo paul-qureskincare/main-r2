@@ -74,13 +74,14 @@
 .page\.all-in-one-serum-customer-reviews,
 .page\.micro-infusion-targeted-patches-customer-reviews,
 .page\.qure-microinfusion-pro-offer,
-.page\.cart,
+.page\.qure-microinfusion-offer-men,
 .product\.silk-pillowcase,
 .product\.faucet-filter,
 .product\.faucet-filter-replacement,
 .product\.shower-filter,
 .product\.shower-filter-replacement,
-.product\.dermal-mist {
+.product\.dermal-mist,
+.cart {
     @include sections-stack;
 }
 
@@ -132,6 +133,7 @@
 .page\.hairgrowth-helmet-welcome
 .page\.qure-microinfusion-offer-listicle,
 .page\.qure-microinfusion-pro-offer,
+.page\.qure-microinfusion-offer-men,
 .product\.silk-pillowcase,
 .product\.faucet-filter,
 .product\.faucet-filter-replacement,

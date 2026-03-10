@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .comparison-table{
   padding-top:60px;
   padding-bottom:60px;

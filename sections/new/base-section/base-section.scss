@@ -3,7 +3,13 @@
 @use "@elements/e-checkmark" as *;
 @use "@elements/e-icon" as *;
 @use "@elements/e-steps-list" as *;
+@use "@elements/e-features-list" as *;
 @use "@components/c-dialog" as *;
+@use "@components/c-marked-list" as *;
+@use "@components/c-buy-block" as *;
+@use "@components/c-order-button" as *;
+@use "@components/c-certified-box" as *;
+@use "@components/c-percent-list" as *;
 
 .base-section {
     $root: &;
@@ -89,6 +95,11 @@
             }
         }
 
+        ol {
+            @include numeric-list;
+            @include numeric-list-big;
+        }
+
         @at-root #{$root}:has(.e-pill-badge) {
             article {
                 @include sm {
@@ -116,7 +127,7 @@
             }
         }
 
-        .btn {
+        & > .btn {
             align-self: start;
             width: max-content;
             margin-top: 8px;
@@ -134,6 +145,7 @@
 
         img {
             @include img-fluid;
+            border-radius: 10px;
         }
 
         figcaption {
@@ -220,6 +232,12 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    &--simple-grid {
+        article {
+            grid-template-rows: repeat(2, auto);
         }
     }
 

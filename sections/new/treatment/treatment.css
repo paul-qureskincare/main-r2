@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -1014,6 +1018,7 @@
   text-align:center;
   border:1px solid;
   border-radius:24px;
+  background:#fff;
   content:counters(item, "");
 }
 .c-accordion__content ol li:not(:last-child){
@@ -1061,6 +1066,7 @@
   display:flex;
   gap:6px;
   align-items:center;
+  line-height:1.1;
 }
 .e-features-list .e-icon-guarantee{
   font-size:30px;

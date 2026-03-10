@@ -1,6 +1,6 @@
 {{#> new
     title="Cart"
-    body-class="page.cart"
+    body-class="cart"
 }}
 
 {{#> section-stack }}
@@ -35,7 +35,7 @@
                                 <input type="number" name="qty" value="1" min="0" />
                                 <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
                             </div>
-                            <a href="#">Remove</a>
+                            <button type="button">Remove</button>
                         </div>
                         <div class="cart__cell">
                             {{> e-price current="{$dyn}" old="{$dyn}" }}
@@ -54,7 +54,7 @@
                                 <input type="number" name="qty" value="1" min="0" />
                                 <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
                             </div>
-                            <a href="#">Remove</a>
+                            <button type="button">Remove</button>
                         </div>
                         <div class="cart__cell">
                             {{> e-price current="{$dyn}" old="{$dyn}" }}

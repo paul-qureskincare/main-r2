@@ -35,6 +35,7 @@
   justify-content:center;
   width:100%;
   line-height:1;
+  text-transform:uppercase;
 }
 .cta-bar__selector{
   position:relative;

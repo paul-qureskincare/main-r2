@@ -73,6 +73,28 @@
                     </div>
                 </dialog>
             {{/if}}
+            {{#if percent-list }}
+                {{> c-percent-list
+                    list=percent-list
+                    columns=true
+                }}
+            {{/if}}
+            {{#if buy-block }}
+                <div class="c-buy-block">
+                    {{> c-order-button button="buy now & SAVE UP TO 43%" }}
+                    {{> c-certified-box }}
+                    <ul class="e-features-list">
+                        <li>
+                            {{> e-icon icon="guarantee" }}
+                            30-Day Money-Back Guarantee
+                        </li>
+                        <li>
+                            {{> e-icon icon="shipping-order" }}
+                            Free Shipping over {$dyn}
+                        </li>
+                    </ul>
+                </div>
+            {{/if}}
         </article>
     </div>
 </section>

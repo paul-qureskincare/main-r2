@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .e-sticky-thumb-video{
   position:absolute;
   top:16px;
@@ -532,6 +536,7 @@
   display:flex;
   gap:6px;
   align-items:center;
+  line-height:1.1;
 }
 .e-features-list .e-icon-guarantee{
   font-size:30px;
@@ -879,6 +884,7 @@
   text-align:center;
   border:1px solid;
   border-radius:24px;
+  background:#fff;
   content:counters(item, "");
 }
 .c-accordion__content ol li:not(:last-child){
@@ -1861,6 +1867,9 @@
 body[class="product.shower-filter"] .hero-product__main article ul{
   flex-flow:row wrap;
 }
+body[class="page.qure-microinfusion-offer-men"] .hero-product__main article{
+  order:1;
+}
 .hero-product__main hr{
   max-width:500px;
   margin:0;
@@ -1919,6 +1928,9 @@ body[class="product.shower-filter"] .hero-product__main article ul{
   vertical-align:top;
   border-radius:10px;
 }
+body[class="page.qure-microinfusion-offer-men"] .hero-product__main>picture{
+  order:2;
+}
 .hero-product__gallery{
   position:relative;
   display:flex;
@@ -1938,7 +1950,7 @@ body[class="product.shower-filter"] .hero-product__main article ul{
      object-fit:cover;
   aspect-ratio:1.1/1;
 }
-.hero-product__gallery .c-swiper img[data-url]{
+.hero-product__gallery .c-swiper img.watch-wistia-video,.hero-product__gallery .c-swiper img[data-url]{
   cursor:pointer;
 }
 .hero-product__gallery .c-swiper-thumbs-nav{

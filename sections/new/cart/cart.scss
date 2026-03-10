@@ -68,6 +68,19 @@
             }
         }
 
+        & > button {
+            padding: 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            border: 0;
+            background: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
         img {
             @include img-fluid;
         }
@@ -92,16 +105,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            a {
-                font-size: 14px;
-                text-transform: uppercase;
-                text-decoration: underline;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
         }
 
         .e-price {

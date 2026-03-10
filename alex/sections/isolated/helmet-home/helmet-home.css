@@ -319,6 +319,10 @@
   content:"\e94a";
 }
 
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
 .helmet-home{
   --section-padding-top:30px;
   --section-padding-top-mob:10px;
