@@ -9,7 +9,7 @@
       link.addEventListener('click', function () {
         const videoId = this.getAttribute('data-video-id');
         if (videoId) {
-          const embed = `<wistia-player media-id="${videoId}" seo="false" aspect="0.5625"></wistia-player>`;
+          const embed = `<wistia-player media-id="${videoId}" seo="false" aspect="0.5625" autoPlay="true"></wistia-player>`;
           videoContainer.innerHTML = embed;
         }
       });

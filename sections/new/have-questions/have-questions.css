@@ -323,6 +323,22 @@
   content:"\e94c";
 }
 
+.e-icon-deeply-hydrates:before{
+  content:"\e94d";
+}
+
+.e-icon-calms-redness:before{
+  content:"\e94e";
+}
+
+.e-icon-even-looking:before{
+  content:"\e94f";
+}
+
+.e-icon-smooths:before{
+  content:"\e950";
+}
+
 .c-accordion__list{
   display:flex;
   flex-direction:column;

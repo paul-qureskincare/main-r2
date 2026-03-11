@@ -2,13 +2,13 @@
 
 .c-advisory-collapse-card {
     overflow: hidden;
-    
+
     picture {
         display: block;
         transition: opacity 300ms;
         opacity: 0.55;
     }
-    
+
     img {
         width: 100%;
         @include img-fluid;
@@ -32,14 +32,14 @@
             background: #fff;
             content: "\e903";
         }
-        
+
         &:hover,
         &[aria-expanded="true"] {
             picture {
                 opacity: 1;
             }
         }
-        
+
         &[aria-expanded="true"] {
             &::after {
                 content: "\e902";
@@ -53,7 +53,7 @@
             left: 20px;
             color: #fff;
             font-size: 16px;
-    
+
             &::first-line {
                 font-size: 20px;
                 font-weight: 500;
@@ -63,10 +63,12 @@
 
 
     .collapse {
+        transition: none;
+
         &:not(.show) {
             display: none;
         }
-        
+
         p {
             width: 100%;
             margin: 0;

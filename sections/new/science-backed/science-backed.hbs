@@ -1,0 +1,16 @@
+<!-- SCIENCE BACKED -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/science-backed/science-backed.css" />
+{{/unless}}
+<section class="science-backed {{ classes }}">
+    <div class="container">
+        <article class="science-backed__text">
+            <h2>{{ title }}</h2>
+            {{{ text }}}
+        </article>
+        <div class="science-backed__content">
+            {{> @partial-block}}
+        </div>
+    </div>
+</section>
+<!-- SCIENCE BACKED END -->

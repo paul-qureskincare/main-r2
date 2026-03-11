@@ -4,8 +4,12 @@
 {{/unless}}
 <section class="highlight {{ classes }}">
     <div class="container">
-        <div class="highlight__desktop">{{ desktop }}</div>
-        <div class="highlight__mobile">{{ mobile }}</div>
+        {{#if mobile }}
+            <div class="highlight__desktop">{{ text }}</div>
+            <div class="highlight__mobile">{{ mobile }}</div>
+        {{ else }}
+            <div class="highlight__text">{{ text }}</div>
+        {{/if }}
     </div>
 </section>
 <!-- HIGHLIGHT END -->

@@ -21,6 +21,33 @@
         padding-bottom: 40px;
     }
 
+    &--announcement {
+        padding-top: 0;
+
+        @include sm {
+            padding-top: 0;
+        }
+
+        &::before {
+            display: block;
+            width: 100%;
+            margin-bottom: 60px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            background: #c7e5db;
+            content: attr(data-announcement);
+
+            @include sm {
+                margin-bottom: 40px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
     .container {
         display: grid;
         grid-template: auto 1fr / repeat(2, 1fr);
@@ -260,7 +287,8 @@
                 font-size: 40px;
             }
 
-            .e-icon-proven {
+            .e-icon-proven,
+            .e-icon-reviewed {
                 font-size: 36px;
             }
 

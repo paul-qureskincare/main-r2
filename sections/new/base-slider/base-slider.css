@@ -216,6 +216,9 @@
   font-size:20px;
   font-weight:500;
 }
+.c-advisory-collapse-card .collapse{
+  transition:none;
+}
 .c-advisory-collapse-card .collapse:not(.show){
   display:none;
 }

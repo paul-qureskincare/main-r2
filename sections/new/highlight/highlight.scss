@@ -30,4 +30,11 @@
             display: block;
         }
     }
+
+    // .highlight--dark
+    &--dark {
+        --highlight-bg: #212428;
+
+        color: #fff;
+    }
 }

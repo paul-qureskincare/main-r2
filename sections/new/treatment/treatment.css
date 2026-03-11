@@ -323,6 +323,22 @@
   content:"\e94c";
 }
 
+.e-icon-deeply-hydrates:before{
+  content:"\e94d";
+}
+
+.e-icon-calms-redness:before{
+  content:"\e94e";
+}
+
+.e-icon-even-looking:before{
+  content:"\e94f";
+}
+
+.e-icon-smooths:before{
+  content:"\e950";
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -1280,6 +1296,21 @@
   padding-bottom:60px;
   background:#f6f6f7;
 }
+.treatment--announcement{
+  padding-top:0;
+}
+.treatment--announcement:before{
+  display:block;
+  width:100%;
+  margin-bottom:60px;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size:20px;
+  font-weight:500;
+  text-align:center;
+  background:#c7e5db;
+  content:attr(data-announcement);
+}
 .treatment .container{
   display:grid;
   grid-template:auto 1fr/repeat(2, 1fr);
@@ -1434,7 +1465,7 @@
 .treatment__extra .e-features-list .e-icon-guarantee{
   font-size:40px;
 }
-.treatment__extra .e-features-list .e-icon-proven{
+.treatment__extra .e-features-list .e-icon-proven,.treatment__extra .e-features-list .e-icon-reviewed{
   font-size:36px;
 }
 .treatment__extra .e-features-list .e-icon-shipping-order{
@@ -1580,6 +1611,14 @@
   .treatment{
     padding-top:40px;
     padding-bottom:40px;
+  }
+  .treatment--announcement{
+    padding-top:0;
+  }
+  .treatment--announcement:before{
+    margin-bottom:40px;
+    font-size:16px;
+    font-weight:600;
   }
   .treatment .container{
     grid-template:none;

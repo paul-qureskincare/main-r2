@@ -10,6 +10,10 @@
 .highlight__mobile{
   display:none;
 }
+.highlight--dark{
+  --highlight-bg:#212428;
+  color:#fff;
+}
 @media screen and (max-width:991px){
   .highlight__desktop{
     display:none;
