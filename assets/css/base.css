@@ -962,6 +962,10 @@ body:has(#announcement-bar) {
     padding-top: calc(var(--height-bar) + var(--height-header));
 }
 
+body.klaviyo-prevent-body-scrolling {
+    height: 100%;
+}
+
  /* .nav-open{overflow:hidden;}  */
 
 .page-header{background-color:var(--header-bg,#212428);color:var(--header-clr,#fff);padding:var(--header-spacing,0px 0);position: fixed;top: var(--height-bar);width: 100%;z-index: 9;}

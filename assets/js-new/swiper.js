@@ -22,6 +22,27 @@ function setupBaseSlider(el) {
         return true; // "all"
     };
 
+    const swiperEvents = {
+        autoplayTimeLeft(swiper, time, progress) {
+            const parentElement = swiper.el.closest('.expert-reviews').querySelector('.swiper-slide-thumb-active');
+            parentElement.style.setProperty("--progress", 1 - progress);
+        }
+    };
+
+    const eventsAttr = el.getAttribute("data-swiper-events");
+
+    if (eventsAttr) {
+        const eventNames = eventsAttr.split(",").map(e => e.trim());
+
+        config.on = config.on || {};
+
+        eventNames.forEach(name => {
+            if (swiperEvents[name]) {
+                config.on[name] = swiperEvents[name];
+            }
+        });
+    }
+
     // Default custom pagination render
     if (config.pagination && config.pagination.type === "custom") {
         config.pagination.renderCustom = function (_, current, total) {
@@ -59,6 +80,7 @@ function setupBaseSlider(el) {
     };
 
     config.on = {
+        ...(config.on || {}),
         init: updateNavClass,
         resize: updateNavClass,
         slidesLengthChange: updateNavClass,
