@@ -214,6 +214,35 @@
         }
     }
 
+    .circle-icons-list {
+        column-count: 3;
+
+        @include md {
+            column-count: 2;
+        }
+
+
+        li {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 0;
+
+            & > div {
+                padding: 6px;
+                font-size: 24px;
+                border: 1px solid #b5b6b7;
+                border-radius: 50%;
+            }
+        }
+
+        .e-icon {
+            padding: 4px;
+            border: 1px solid;
+            border-radius: 50%;
+        }
+    }
+
     .c-dialog {
         max-width: 900px;
 
@@ -366,8 +395,7 @@
     }
 
     // Styles on qure-microinfusion-offer-listicle page
-    /* stylelint-disable-next-line selector-class-pattern */
-    @at-root .page\.qure-microinfusion-offer-listicle  {
+    @at-root body[class="page.qure-microinfusion-offer-listicle"] {
         // .base-section article
         #{$root} article {
             align-items: start;
@@ -376,6 +404,16 @@
             .wistia-embed-video {
                 @include sm {
                     order: unset;
+                }
+            }
+        }
+    }
+
+    @at-root body[class="product.face-serum"] {
+        #{$root} article {
+            &:has(.circle-icons-list) {
+                picture {
+                    order: 10;
                 }
             }
         }

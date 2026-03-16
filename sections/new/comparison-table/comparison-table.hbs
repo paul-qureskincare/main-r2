@@ -5,17 +5,19 @@
         <h2>{{ title }}</h2>
         <div class="comparison-table__content">
             <ul>
-                <li>Results in</li>
+                {{#parseJson labels }}
+                    <li {{#if colorize }}class="colorize"{{/if}}>{{ name }}</li>
+                {{/parseJson}}
+                {{!-- <li>Results in</li>
                 <li>Customized</li>
                 <li>Skin Safe</li>
-                <li>Cost</li>
+                <li>Cost</li> --}}
             </ul>
             <div
                 class="c-swiper"
                 data-swiper='{
                     "slidesPerView": 1,
                     "spaceBetween": 0,
-                    "loop": true,
                     "pagination": {
                         "el": ".comparison-table .c-swiper-pagination",
                         "type": "custom"

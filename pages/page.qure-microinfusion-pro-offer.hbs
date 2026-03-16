@@ -517,7 +517,27 @@
         </div>
     {{/trusted-reviews }}
 
-    {{#> comparison-table title="Give yourself a Clinic Quality glow up without the Clinical Prices" }}
+    {{#> comparison-table
+        title="Give yourself a Clinic Quality glow up without the Clinical Prices"
+        labels='[
+            {
+                "name": "Results in",
+                "colorize": false
+            },
+            {
+                "name": "Customized",
+                "colorize": false
+            },
+            {
+                "name": "Skin Safe",
+                "colorize": true
+            },
+            {
+                "name": "Cost",
+                "colorize": false
+            }
+        ]'
+    }}
         <div class="swiper-slide">
             <article>
                 <picture>

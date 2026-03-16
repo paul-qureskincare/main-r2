@@ -2,7 +2,12 @@
   width:100%;
 }
 .text-section article{
+  max-width:900px;
+  margin:0 auto;
   text-align:center;
+}
+.text-section article h2{
+  margin-bottom:20px;
 }
 .text-section article h2:last-child{
   margin-bottom:0;

@@ -25,9 +25,10 @@
 
         & > ul {
             display: flex;
+            flex: none;
             flex-direction: column;
             gap: 24px;
-            width: 200px;
+            width: min(35%, 210px);
             padding: 32px;
             border-radius: 10px 0 0 10px;
             background: #fff;
@@ -40,12 +41,16 @@
                 font-size: 16px;
                 font-weight: 600;
 
+                @include sm {
+                    font-size: 14px;
+                }
+
                 &:not(:first-child) {
                     padding-top: 24px;
                     border-top: 1px solid #dfe0e0;
                 }
 
-                &:nth-last-child(2) {
+                &.colorize {
                     color: #ff5429;
                 }
             }
@@ -59,12 +64,19 @@
             gap: 24px;
             align-items: center;
             justify-content: flex-start;
-            margin-top: calc(var(--image-size) / 2);
-            padding: 0 24px 24px;
+            height: 100%;
+            padding: 24px;
             background: #fff;
 
             @include sm {
                 --image-size: 100px;
+
+                padding: 16px;
+            }
+
+            &:has(picture) {
+                margin-top: calc(var(--image-size) / 2);
+                padding-top: 0;
             }
 
             picture {
@@ -104,13 +116,6 @@
                     padding: 9px 10px;
                     font-size: 16px;
                 }
-
-                span {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-
-                }
             }
 
             .e-icon {
@@ -122,7 +127,6 @@
                     font-size: inherit;
                 }
             }
-
         }
     }
 
@@ -181,9 +185,8 @@
     }
 
     .c-swiper-nav {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1200px) {
             display: none;
         }
     }
-
 }

@@ -8,6 +8,7 @@
   max-width:25px;
   height:auto;
   vertical-align:top;
+  border-radius:50%;
 }
 
 .e-checkmark{
@@ -65,6 +66,9 @@
   padding:0 20px 20px;
   line-height:1.25;
 }
+.c-trusted-review-card img{
+  width:100%;
+}
 .c-trusted-review-card h6{
   margin-bottom:12px;
   font-family:inherit;
@@ -79,6 +83,7 @@
   margin-left:auto;
 }
 .c-trusted-review-card--short{
+  gap:10px 20px;
   background:#f6f6f7;
 }
 .c-trusted-review-card--short .e-verified-customer{

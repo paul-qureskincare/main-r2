@@ -81,6 +81,7 @@
 .product\.shower-filter,
 .product\.shower-filter-replacement,
 .product\.dermal-mist,
+.product\.face-serum,
 .cart {
     @include sections-stack;
 }
@@ -139,7 +140,8 @@
 .product\.faucet-filter-replacement,
 .product\.shower-filter,
 .product\.shower-filter-replacement,
-.product\.dermal-mist {
+.product\.dermal-mist,
+.product\.face-serum {
     .sections-stack {
         padding-bottom: 0;
 

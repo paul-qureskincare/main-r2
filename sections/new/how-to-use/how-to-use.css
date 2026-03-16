@@ -171,6 +171,26 @@
   content:"\e94b";
 }
 
+.e-icon-blemishes:before{
+  content:"\e951";
+}
+
+.e-icon-dark-spots:before{
+  content:"\e952";
+}
+
+.e-icon-fine-lines:before{
+  content:"\e953";
+}
+
+.e-icon-rough-texture:before{
+  content:"\e954";
+}
+
+.e-icon-wrinkles:before{
+  content:"\e955";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -514,6 +534,9 @@
   .how-to-use__content{
     display:flex;
     flex-direction:column;
+  }
+  .how-to-use h2{
+    align-self:start;
   }
   .how-to-use .swiper-wrapper{
     flex-direction:column;

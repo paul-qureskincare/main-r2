@@ -42,6 +42,10 @@
         align-self: end;
         margin-bottom: 0;
 
+        @include sm {
+            align-self: start;
+        }
+
         & + div {
             align-self: start;
         }
