@@ -236,8 +236,9 @@
         visibility: visible;
     }
 
-    @at-root body:has(.flyout-cart.show) {
-        height: 100vh;
+    // Globally disable body scroll
+    @at-root :root:has(.flyout-cart.show) {
+        overflow: hidden;
     }
 
     .cart-countdown-time {

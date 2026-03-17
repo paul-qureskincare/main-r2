@@ -344,7 +344,7 @@
   gap:20px;
   align-items:center;
   justify-content:center;
-  margin-top:30px;
+  margin-top:32px;
 }
 .c-swiper-nav-disabled .c-swiper-nav{
   display:none;
@@ -577,8 +577,8 @@
   right:0;
   visibility:visible;
 }
-body:has(.flyout-cart.show){
-  height:100vh;
+:root:has(.flyout-cart.show){
+  overflow:hidden;
 }
 
 .flyout-cart .cart-countdown-time{
@@ -858,6 +858,9 @@ body:has(.flyout-cart.show){
 @media screen and (max-width:767px){
   .c-marked-list li{
     font-size:16px;
+  }
+  .c-swiper-nav{
+    margin-top:16px;
   }
   .cart__title{
     margin-bottom:16px;

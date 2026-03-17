@@ -22,7 +22,7 @@
         max-width: 900px;
     }
 
-    h2 {
+    h2:not(:last-child) {
         margin-bottom: 32px;
 
         @include sm {

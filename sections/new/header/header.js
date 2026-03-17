@@ -125,6 +125,9 @@
 
         e.preventDefault();
 
+        const scrollY = window.scrollY;
+        document.body.style.top = `-${scrollY}px`;
+
         const el = document.getElementById('cartCanvas');
         if (!el || !window.bootstrap?.Offcanvas) return;
 

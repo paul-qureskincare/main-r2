@@ -1,6 +1,8 @@
 <!-- TRUSTED REVIEWS -->
+{{#unless page-css }}
 <link rel="stylesheet" href="sections/new/trusted-reviews/trusted-reviews.css" />
-<section class="trusted-reviews {{ classes }}">
+{{/unless}}
+<section class="trusted-reviews {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         <h2>{{ title }}</h2>
         <div

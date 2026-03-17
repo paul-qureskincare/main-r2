@@ -2,6 +2,8 @@
 @use "@elements/e-declaimer" as *;
 @use "@components/c-percent-list" as *;
 @use "@components/c-pill-tabs" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-visual-compare-card" as *;
 
 
 .progress-metrics {
@@ -26,7 +28,8 @@
         margin-bottom: 15px;
     }
 
-    .c-pill-tabs {
+    .c-pill-tabs,
+    .c-swiper {
         grid-row: 1 / -1;
         grid-column: 2;
 
@@ -44,6 +47,16 @@
                 }
             }
         }
+    }
+
+    .c-swiper {
+        align-self: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .c-visual-compare-card {
+        height: auto;
     }
 
     small {

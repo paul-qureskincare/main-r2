@@ -251,6 +251,7 @@
             top: 0;
             right: 0;
             padding: 12px;
+            box-shadow: none;
         }
     }
 
@@ -409,7 +410,9 @@
         }
     }
 
-    @at-root body[class="product.face-serum"] {
+    @at-root
+    body[class="product.face-serum"],
+    body[class="product.micro-infusion-targeted-patches"] {
         #{$root} article {
             &:has(.circle-icons-list) {
                 picture {

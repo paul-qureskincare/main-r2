@@ -1,0 +1,22 @@
+<!-- ACCORDION TILES -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/accordion-tiles/accordion-tiles.css" />
+{{/unless}}
+<section class="accordion-tiles">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            {{#parseJson list }}
+                <details>
+                    <summary>
+                        <img src="sections/new/accordion-tiles/images/{{ image }}.webp" alt="{{ summary }}" />
+                        <span>{{ summary }} {{> e-icon icon="chevron"}}</span>
+                    </summary>
+                    <p>{{ text }}</p>
+                </details>
+            {{/parseJson}}
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- ACCORDION TILES END -->

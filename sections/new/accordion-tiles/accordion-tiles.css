@@ -1,0 +1,533 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-trustpilot:before{
+  content:"\e922";
+}
+
+.e-icon-pm:before{
+  content:"\e923";
+}
+
+.e-icon-am:before{
+  content:"\e924";
+}
+
+.e-icon-watch:before{
+  content:"\e925";
+}
+
+.e-icon-cart:before{
+  content:"\e926";
+}
+
+.e-icon-user:before{
+  content:"\e927";
+}
+
+.e-icon-gift:before{
+  content:"\e928";
+}
+
+.e-icon-shipping:before{
+  content:"\e92b";
+}
+
+.e-icon-faq:before{
+  content:"\e92a";
+}
+
+.e-icon-letter:before{
+  content:"\e929";
+}
+
+.e-icon-pillow:before{
+  content:"\e92c";
+}
+
+.e-icon-patches:before{
+  content:"\e92d";
+}
+
+.e-icon-mist:before{
+  content:"\e92e";
+}
+
+.e-icon-lock:before{
+  content:"\e92f";
+}
+
+.e-icon-guarantee:before{
+  content:"\e930";
+}
+
+.e-icon-top:before{
+  content:"\e931";
+}
+
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
+.e-icon-verified-shield:before{
+  content:"\e93b";
+}
+
+.e-icon-checkmark-fill:before{
+  content:"\e944";
+}
+
+.e-icon-cross-fill:before{
+  content:"\e945";
+}
+
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
+.e-icon-blemishes:before{
+  content:"\e951";
+}
+
+.e-icon-dark-spots:before{
+  content:"\e952";
+}
+
+.e-icon-fine-lines:before{
+  content:"\e953";
+}
+
+.e-icon-rough-texture:before{
+  content:"\e954";
+}
+
+.e-icon-puffiness:before{
+  content:"\e955";
+}
+
+.e-icon-eye-bags:before{
+  content:"\e956";
+}
+
+.e-icon-wrinkles:before{
+  content:"\e957";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
+.e-icon-benefits-headphone:before{
+  content:"\e940";
+}
+
+.e-icon-benefits-gift:before{
+  content:"\e941";
+}
+
+.e-icon-benefits-restart:before{
+  content:"\e942";
+}
+
+.e-icon-benefits-box:before{
+  content:"\e943";
+}
+
+.e-icon-pp-filter:before{
+  content:"\e93f";
+}
+
+.e-icon-nok-filter:before{
+  content:"\e93e";
+}
+
+.e-icon-carbon:before{
+  content:"\e93d";
+}
+
+.e-icon-asp-descaler:before{
+  content:"\e93c";
+}
+
+.e-icon-mi-painless:before{
+  content:"\e946";
+}
+
+.e-icon-perfect-transforming:before{
+  content:"\e947";
+}
+
+.e-icon-save-money:before{
+  content:"\e948";
+}
+
+.e-icon-mi-seamless:before{
+  content:"\e949";
+}
+
+.e-icon-mi-quick:before{
+  content:"\e94a";
+}
+
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
+.e-icon-deeply-hydrates:before{
+  content:"\e94d";
+}
+
+.e-icon-calms-redness:before{
+  content:"\e94e";
+}
+
+.e-icon-even-looking:before{
+  content:"\e94f";
+}
+
+.e-icon-smooths:before{
+  content:"\e950";
+}
+
+.c-dialog{
+  overflow:auto;
+  max-width:none;
+  padding:0;
+  border:0;
+}
+.c-dialog::backdrop{
+  background:#212428;
+  opacity:.6;
+}
+.c-dialog__message{
+  display:flex;
+  flex:none;
+  align-items:center;
+  height:var(--height-bar);
+  padding:2px 24px;
+  font-size:14px;
+  line-height:1.1;
+  background:#f6f6f7;
+}
+.c-dialog__content{
+  padding:24px;
+}
+.c-dialog__close{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:8px;
+  font-size:18px;
+  line-height:1;
+  border:0;
+  border-radius:30px;
+  background:none;
+  transition:all .2s linear;
+}
+.c-dialog__close:hover{
+  color:#fff;
+  background:#212428;
+}
+.c-dialog__close .e-icon{
+  vertical-align:top;
+}
+.c-dialog--column{
+  width:min(450px, 100%);
+  height:100vh;
+  max-height:none;
+  margin:0 0 0 auto;
+}
+.c-dialog--column .c-dialog__close{
+  top:calc(var(--height-bar) + 22px);
+  right:14px;
+}
+.c-dialog--notify-available{
+  max-width:400px;
+  border-radius:10px;
+}
+.c-dialog--notify-available form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  text-align:center;
+}
+.c-dialog--notify-available .e-icon{
+  font-size:36px;
+}
+.c-dialog--notify-available h5{
+  margin-bottom:-10px;
+}
+.c-dialog--notify-available img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-dialog--notify-available .btn{
+  width:100%;
+}
+
+.accordion-tiles article{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:32px;
+}
+.accordion-tiles article img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  display:block;
+  max-width:100%;
+  height:auto;
+  min-height:100px;
+}
+.accordion-tiles article h2{
+  grid-column:1 /  -1;
+  margin-bottom:0;
+  text-align:center;
+}
+.accordion-tiles article>.btn{
+  grid-column:1 /  -1;
+  margin-right:auto;
+  margin-left:auto;
+}
+.accordion-tiles details[open] summary .e-icon{
+  transform:rotate(-90deg);
+}
+.accordion-tiles details p{
+  margin:0;
+  padding:24px 12px 0;
+}
+.accordion-tiles summary{
+  position:relative;
+}
+.accordion-tiles summary img{
+  border-radius:10px;
+}
+.accordion-tiles summary span{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px;
+}
+.accordion-tiles summary .e-icon{
+  transition:all .2s linear;
+  transform:rotate(90deg);
+}
+.accordion-tiles .c-dialog{
+  max-width:900px;
+}
+.accordion-tiles .c-dialog .btn-close{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:12px;
+  box-shadow:none;
+}
+.accordion-tiles .c-dialog__content{
+  padding:40px;
+}
+.accordion-tiles .c-dialog__content p:last-child{
+  margin-bottom:0;
+}
+@media screen and (max-width:767px){
+  .c-dialog__content,.c-dialog__message{
+    padding-right:16px;
+    padding-left:16px;
+  }
+  .c-dialog--notify-available{
+    width:calc(100% - 32px);
+  }
+  .c-dialog--notify-available form{
+    gap:14px;
+  }
+  .accordion-tiles article{
+    grid-template-columns:auto;
+    gap:24px;
+  }
+  .accordion-tiles article h2,.accordion-tiles article>.btn{
+    grid-column:auto;
+  }
+}

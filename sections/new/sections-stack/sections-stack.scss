@@ -82,6 +82,7 @@
 .product\.shower-filter-replacement,
 .product\.dermal-mist,
 .product\.face-serum,
+.product\.micro-infusion-targeted-patches,
 .cart {
     @include sections-stack;
 }
@@ -141,7 +142,8 @@
 .product\.shower-filter,
 .product\.shower-filter-replacement,
 .product\.dermal-mist,
-.product\.face-serum {
+.product\.face-serum,
+.product\.micro-infusion-targeted-patches {
     .sections-stack {
         padding-bottom: 0;
 

@@ -246,8 +246,16 @@
   content:"\e954";
 }
 
-.e-icon-wrinkles:before{
+.e-icon-puffiness:before{
   content:"\e955";
+}
+
+.e-icon-eye-bags:before{
+  content:"\e956";
+}
+
+.e-icon-wrinkles:before{
+  content:"\e957";
 }
 
 .e-icon-shipping-order:before{
@@ -951,6 +959,7 @@
   top:0;
   right:0;
   padding:12px;
+  box-shadow:none;
 }
 .base-section .c-dialog__content{
   padding:40px;
@@ -1008,7 +1017,7 @@ body[class="page.qure-microinfusion-offer-listicle"] .base-section article{
   align-items:start;
 }
 
-body[class="product.face-serum"] .base-section article:has(.circle-icons-list) picture{
+body[class="product.face-serum"] .base-section article:has(.circle-icons-list) picture,body[class="product.micro-infusion-targeted-patches"] .base-section article:has(.circle-icons-list) picture{
   order:10;
 }
 

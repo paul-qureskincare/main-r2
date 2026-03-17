@@ -34,7 +34,11 @@
         gap: 20px;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 32px;
+
+        @include sm {
+            margin-top: 16px;
+        }
 
         // .c-swiper-nav-disabled .c-swiper-nav
         #{$root}-nav-disabled & {

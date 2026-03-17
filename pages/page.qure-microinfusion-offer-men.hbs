@@ -137,7 +137,55 @@
         </div>
     {{/hero-product}}
 
-    {{> press-reviews }}
+    {{#> press-reviews }}
+        <div
+            class="c-swiper"
+            data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "loop": true,
+                "autoplay": {
+                    "delay": 5000
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h4>"Few beauty trends are actually worth adopting, but Qure’s take on at-home Micro-Infusion is a viral skin trend with merit."</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>A true micro-infusion treatment — creating microchannels that help enhance serum absorption and support visibly smoother-looking skin.</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>"This microneedling alternative is my secret to glowing skin."</h4>
+                </div>
+            </div>
+        </div>
+        <div class="c-swiper c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 3,
+                "spaceBetween": 30,
+                "breakpoints": {
+                    "992": {
+                        "spaceBetween": 80
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/forbes.svg" alt="Forbes" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/bazzar.svg" alt="Bazzar" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/ps.svg" alt="PS" />
+                </div>
+            </div>
+        </div>
+    {{/press-reviews}}
 
     {{#> base-section
         classes="base-section--reverse"
@@ -1085,7 +1133,6 @@
         <a href="#" class="btn btn--primary">See Detailed Treatment Guide {{> e-icon icon="arrow" }}</a>
     {{/should-know}}
 
-
     {{> have-questions
         list='[
             {
@@ -1168,9 +1215,10 @@
 
 {{/section-stack }}
 
-{{> cta-bar
+{{#> cta-bar
     name="Micro-Infusion Facial System"
     button="Buy now & SAVE UP TO 43%"
 }}
+{{/cta-bar}}
 
 {{/new }}

@@ -22,6 +22,7 @@
 }
 .cta-bar__content{
   display:flex;
+  flex:none;
   min-width:0;
 }
 .cta-bar__button{
