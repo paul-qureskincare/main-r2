@@ -21,6 +21,57 @@
         }
     }
 
+    // .text-section--guide
+    &--guide {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        article {
+            display: grid;
+            grid-template: repeat(2, auto) / 1fr 350px;
+            gap: 4px 16px;
+            align-items: center;
+            max-width: none;
+            text-align: left;
+
+            @include sm {
+                grid-template: auto /auto;
+            }
+        }
+
+        h5 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: flex;
+            grid-row: 1 / -1;
+            grid-column: 2;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+
+            @include sm {
+                grid-row: auto;
+                grid-column: auto;
+                margin-top: 12px;
+            }
+        }
+
+        .e-icon {
+            font-size: 0.8em;
+            -webkit-text-stroke: 0.85px
+        }
+    }
+
     /* stylelint-disable-next-line selector-class-pattern */
     .page\.exclusive-holiday-bundle-deal & {
         padding-top: 60px;

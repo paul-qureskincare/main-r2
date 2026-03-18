@@ -24,15 +24,19 @@
 }
 
 .announcement-bar{
+  position:fixed;
+  top:0;
+  z-index:9;
   display:flex;
   align-items:center;
-  padding:12px 0;
+  width:100%;
+  padding:14px 0;
   font-family:TT Commons,system-ui,sans-serif;
   font-size:var(--ans-bar-font-size, 16px);
   font-weight:var(--anc-bar-font-weight, 400);
   background:#fff;
 }
-.announcement-bar-content a{
+.announcement-bar-content>a{
   margin:0 10px;
   padding:1px 6px;
   color:var(--white-color);
@@ -46,12 +50,19 @@
   gap:6px;
   align-items:center;
   width:100%;
-  min-height:26px;
+  min-height:22px;
 }
 .announcement-bar-offer-countdown p{
   color:var(--colorize-color, inherit);
   line-height:1;
   text-align:left;
+}
+.announcement-bar-offer-countdown a{
+  color:inherit;
+  font-weight:600;
+}
+.announcement-bar-offer-countdown a:hover{
+  text-decoration:underline;
 }
 .announcement-bar-offer-countdown .e-countdown{
   margin-left:auto;
@@ -60,16 +71,15 @@
 }
 .announcement-bar-offer-countdown .e-countdown>div{
   gap:2px;
-  line-height:12px;
+  line-height:10px;
   letter-spacing:0;
+}
+body:has(.announcement-bar-offer-countdown){
+  --height-bar:50px;
 }
 
 .announcement-bar-rotating.scroll-hiding,.announcement-bar.scroll-hiding{
   transform:translateY(-100px);
-}
-
-body[class="page.build-your-own"]{
-  --height-bar:50px;
 }
 
 @media screen and (max-width:991px){
@@ -104,7 +114,6 @@ body[class="page.build-your-own"]{
     flex-direction:row;
     justify-content:center;
     width:42px;
-    line-height:11px;
     text-align:center;
   }
   .announcement-bar-offer-countdown .e-countdown>div:after{
@@ -122,7 +131,7 @@ body[class="page.build-your-own"]{
   .announcement-bar-offer-countdown .e-countdown>div[data-key=seconds]:after{
     content:"S";
   }
-  body[class="page.build-your-own"]{
+  body:has(.announcement-bar-offer-countdown){
     --height-bar:66px;
   }
 }

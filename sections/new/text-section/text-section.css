@@ -12,6 +12,36 @@
 .text-section article h2:last-child{
   margin-bottom:0;
 }
+.text-section--guide{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.text-section--guide article{
+  display:grid;
+  grid-template:repeat(2, auto)/1fr 350px;
+  gap:4px 16px;
+  align-items:center;
+  max-width:none;
+  text-align:left;
+}
+.text-section--guide h5{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:600;
+}
+.text-section--guide .btn{
+  display:flex;
+  grid-row:1 /  -1;
+  grid-column:2;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+}
+.text-section--guide .e-icon{
+  font-size:.8em;
+  -webkit-text-stroke:.85px;
+}
 .page\.exclusive-holiday-bundle-deal .text-section{
   padding-top:60px;
   padding-bottom:60px;
@@ -22,6 +52,18 @@
 @media screen and (max-width:767px){
   .text-section article{
     text-align:left;
+  }
+  .text-section--guide{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+  .text-section--guide article{
+    grid-template:auto/auto;
+  }
+  .text-section--guide .btn{
+    grid-row:auto;
+    grid-column:auto;
+    margin-top:12px;
   }
   .page\.exclusive-holiday-bundle-deal .text-section{
     padding-top:40px;

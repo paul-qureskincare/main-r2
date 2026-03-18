@@ -2,9 +2,13 @@
 @use "@elements/e-countdown" as *;
 
 .announcement-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9;
     display: flex;
     align-items: center;
-    padding: 12px 0;
+    width: 100%;
+    padding: 14px 0;
     font-family: 'TT Commons', system-ui, sans-serif;
     font-size: var(--ans-bar-font-size, 16px);
     font-weight: var(--anc-bar-font-weight, 400);
@@ -22,7 +26,7 @@
             font-size: 12px;
         }
 
-        a {
+        & > a {
             margin: 0 10px;
             padding: 1px 6px;
             color: var(--white-color);
@@ -39,7 +43,7 @@
         gap: 6px;
         align-items: center;
         width: 100%;
-        min-height: 26px;
+        min-height: 22px;
 
         @include md {
             min-height: 38px;
@@ -62,6 +66,15 @@
             }
         }
 
+        a {
+            color: inherit;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         .e-countdown {
             margin-left: auto;
             color: var(--colorize-color, inherit);
@@ -74,14 +87,13 @@
 
             & > div {
                 gap: 2px;
-                line-height: 12px;
+                line-height: 10px;
                 letter-spacing: 0;
 
                 @include sm {
                     flex-direction: row;
                     justify-content: center;
                     width: 42px;
-                    line-height: 11px;
                     text-align: center;
                 }
 
@@ -125,18 +137,17 @@
             }
         }
     }
+
+    @at-root body:has(.announcement-bar-offer-countdown) {
+        --height-bar: 50px;
+
+        @include sm {
+            --height-bar: 66px;
+        }
+    }
 }
 
 .announcement-bar.scroll-hiding,
 .announcement-bar-rotating.scroll-hiding {
     transform: translateY(-100px);
-}
-
-
-body[class="page.build-your-own"] {
-    --height-bar: 50px;
-
-    @include sm {
-        --height-bar: 66px;
-    }
 }
