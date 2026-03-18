@@ -29,15 +29,11 @@
        });
     </script>
     <!-- PAGE HEADER end-->
-    <!-- Announcement Bar -->
-    <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
-    <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
-        <div class="container">
-            <div class="announcement-bar-content text-center">
-                FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
-            </div>
-        </div>
-    </div>
+    {{#unless hide-def-announcement }}
+        {{#> announcement-bar }}
+            FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
+        {{/announcement-bar}}
+    {{/unless}}
 
     {{> @partial-block}}
 

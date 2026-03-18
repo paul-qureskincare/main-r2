@@ -1,7 +1,17 @@
 {{#> new
     title="Build Your Own"
     body-class="page.build-your-own"
+    hide-def-announcement=true
 }}
+
+{{#> announcement-bar }}
+    <div class="announcement-bar-offer-countdown">
+        <p style="--colorize-color_: #ff5429;"><strong>Limited Time Easter Offer</strong> - Save&nbsp;Up&nbsp;To&nbsp;25%</p>
+        {{> e-countdown
+            color='style="--colorize-color: #ff5429;"'
+        }}
+    </div>
+{{/announcement-bar}}
 
 {{#> section-stack }}
     <!-- HERO BANNER -->

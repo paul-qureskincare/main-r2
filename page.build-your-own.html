@@ -30,13 +30,30 @@
             });
         </script>
         <!-- PAGE HEADER end-->
-        <!-- Announcement Bar -->
-        <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
+
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
         <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
             <div class="container">
-                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
+                <div class="announcement-bar-content text-center">
+                    <div class="announcement-bar-offer-countdown">
+                        <p style="--colorize-color_: #ff5429"><strong>Limited Time Easter Offer</strong> - Save&nbsp;Up&nbsp;To&nbsp;25%</p>
+                        <div class="e-countdown" data-deadline="" style="--colorize-color: #ff5429">
+                            <div data-key="days">00</div>
+                            <div data-key="hours">00</div>
+                            <div data-key="minutes">00</div>
+                            <div data-key="seconds">00</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
 
         <!-- SECTIONS STACK -->
         <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
