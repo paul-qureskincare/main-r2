@@ -84,6 +84,7 @@
 .product\.dermal-mist,
 .product\.face-serum,
 .product\.micro-infusion-targeted-patches,
+.product\.q-rejuvalight-pro-facewear,
 .cart {
     @include sections-stack;
 }
@@ -145,7 +146,8 @@
 .product\.shower-filter-replacement,
 .product\.dermal-mist,
 .product\.face-serum,
-.product\.micro-infusion-targeted-patches {
+.product\.micro-infusion-targeted-patches,
+.product\.q-rejuvalight-pro-facewear {
     .sections-stack {
         padding-bottom: 0;
 

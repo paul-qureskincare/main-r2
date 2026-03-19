@@ -54,7 +54,15 @@ document.addEventListener("scroll", function() {
   const stickyElement = document.querySelector(".qure__sticky-atc");
   if (!stickyElement) return;
 
-  if (window.scrollY > 400) { // ~20cm = 200px approx (adjust if needed)
+  const treatmentElement = document.getElementById("purchase-form");
+  let isTreatmentVisible = false;
+
+  if (treatmentElement) {
+    const rect = treatmentElement.getBoundingClientRect();
+    isTreatmentVisible = rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  if (window.scrollY > 400 && !isTreatmentVisible) { // Show CTA only before #treatment enters viewport
     stickyElement.classList.add("show_cta");
   } else {
     stickyElement.classList.remove("show_cta");

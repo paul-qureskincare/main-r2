@@ -366,6 +366,18 @@
 .e-icon-smooths:before{
   content:"\e950";
 }
+
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
 .patch__product-rating{
   padding:8px 20px;
   background:#f6f6f7;

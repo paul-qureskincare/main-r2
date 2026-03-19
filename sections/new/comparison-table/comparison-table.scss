@@ -1,5 +1,6 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
+@use "@elements/e-declaimer" as *;
 
 .comparison-table {
     $root: &;
@@ -93,6 +94,10 @@
                 max-width: 220px;
                 margin: 0 auto;
                 text-align: center;
+
+                @at-root body[class="product.q-rejuvalight-pro-facewear"] & {
+                    max-width: none;
+                }
             }
 
             ul {
@@ -187,6 +192,15 @@
     .c-swiper-nav {
         @media screen and (min-width: 1200px) {
             display: none;
+        }
+    }
+
+    .e-declaimer {
+        margin-top: 24px;
+        text-align: center;
+
+        @include sm {
+            margin-top: 16px;
         }
     }
 }

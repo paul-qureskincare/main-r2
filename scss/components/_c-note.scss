@@ -38,6 +38,15 @@
         }
     }
 
+    a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     // .c-note--warning
     // .c-note--info
     &--info,

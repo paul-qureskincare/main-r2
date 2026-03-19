@@ -367,6 +367,25 @@
   content:"\e950";
 }
 
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
+
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+
 .comparison-table{
   padding-top:60px;
   padding-bottom:60px;
@@ -430,6 +449,10 @@
   margin:0 auto;
   text-align:center;
 }
+body[class="product.q-rejuvalight-pro-facewear"] .comparison-table__content article h5{
+  max-width:none;
+}
+
 .comparison-table__content article ul{
   display:flex;
   flex-direction:column;
@@ -474,6 +497,10 @@
 .comparison-table .swiper-slide:last-child article{
   border-radius:0 10px 10px 0;
 }
+.comparison-table .e-declaimer{
+  margin-top:24px;
+  text-align:center;
+}
 @media screen and (min-width:1200px){
   .comparison-table .c-swiper-nav{
     display:none;
@@ -490,6 +517,9 @@
   }
 }
 @media screen and (max-width:767px){
+  .e-declaimer{
+    font-size:14px;
+  }
   .comparison-table{
     padding-top:40px;
     padding-bottom:40px;
@@ -513,5 +543,8 @@
   }
   .comparison-table .swiper-slide.swiper-slide-active article{
     border-radius:10px 10px 10px 0;
+  }
+  .comparison-table .e-declaimer{
+    margin-top:16px;
   }
 }

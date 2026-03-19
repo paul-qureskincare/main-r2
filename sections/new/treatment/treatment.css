@@ -367,6 +367,18 @@
   content:"\e950";
 }
 
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -1271,6 +1283,13 @@
 .c-note ul li{
   padding-left:4px;
   list-style:disc;
+}
+.c-note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-note a:hover{
+  text-decoration:none;
 }
 .c-note--info,.c-note--warning{
   position:relative;

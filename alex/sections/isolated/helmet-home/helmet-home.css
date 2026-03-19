@@ -367,6 +367,18 @@
   content:"\e950";
 }
 
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
+
 .helmet-home{
   --section-padding-top:30px;
   --section-padding-top-mob:10px;

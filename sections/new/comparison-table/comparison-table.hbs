@@ -8,10 +8,6 @@
                 {{#parseJson labels }}
                     <li {{#if colorize }}class="colorize"{{/if}}>{{ name }}</li>
                 {{/parseJson}}
-                {{!-- <li>Results in</li>
-                <li>Customized</li>
-                <li>Skin Safe</li>
-                <li>Cost</li> --}}
             </ul>
             <div
                 class="c-swiper"
@@ -46,6 +42,9 @@
             <div class="c-swiper-pagination"></div>
             <button class="c-swiper-button-next"></button>
         </div>
+        {{#if declaimer }}
+            <small class="e-declaimer">{{ declaimer }}</small>
+        {{/if}}
     </div>
 </section>
 <script>

@@ -4,7 +4,15 @@
 
     // Show/Hide CTA BAR
     document.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
+        const treatmentElement = document.getElementById("treatment");
+        let isTreatmentVisible = false;
+
+        if (treatmentElement) {
+            const rect = treatmentElement.getBoundingClientRect();
+            isTreatmentVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        }
+
+        if (window.scrollY > 300 && !isTreatmentVisible) {
             ctaBar.classList.add("show");
         } else {
             ctaBar.classList.remove("show");
