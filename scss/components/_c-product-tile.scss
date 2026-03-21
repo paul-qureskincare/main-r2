@@ -1,0 +1,108 @@
+@use "@root/mixins" as *;
+
+.c-product-tile {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include sm {
+        gap: 8px;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+        }
+    }
+
+    // .c-product-tile__image
+    &__image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            @include img-fluid;
+        }
+
+        &:hover {
+            &::after {
+                visibility: visible;
+                transform: scale(1.02);
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            visibility: hidden;
+            background: var(--image-on-hover);
+            background-size: cover;
+            opacity: 0;
+            content: '';
+            @include transition;
+        }
+    }
+
+    // .c-product-tile__badges
+    &__badges {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        z-index: 2;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        .e-pill-badge {
+            gap: 4px;
+            padding: 0 8px;
+            color: #212428;
+            font-size: 12px;
+            text-transform: uppercase;
+            background: #f6f6f7;
+        }
+    }
+
+    // .c-product-tile__rating
+    &__rating {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .e-rating-stars {
+            font-size: 16px;
+        }
+    }
+
+    // .c-product-tile__text
+    &__text {
+        h6 {
+            margin-bottom: 14px;
+            font-family: inherit;
+            font-weight: 500;
+
+            @include sm {
+                margin-bottom: 8px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.25;
+        }
+    }
+
+    // .c-product-tile__price
+    &__price {
+        margin-top: auto;
+        font-size: 16px;
+    }
+}

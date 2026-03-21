@@ -79,11 +79,41 @@ function setupBaseSlider(el) {
         }
     };
 
+    // Steps
+    const stepsSelector = config["steps-selector"];
+
+    const updateSteps = (swiper) => {
+        if (!stepsSelector) return;
+
+        const stepsContainer = document.querySelector(stepsSelector);
+        if (!stepsContainer) return;
+
+        const steps = stepsContainer.querySelectorAll('li');
+
+        const start = swiper.realIndex ?? swiper.activeIndex;
+
+        const perView = Math.floor(swiper.params.slidesPerView);
+
+        const end = start + perView - 1;
+
+        steps.forEach((step, index) => {
+            if (index <= end) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+    };
+
     config.on = {
         ...(config.on || {}),
-        init: updateNavClass,
+        init(swiper) {
+            updateNavClass(swiper);
+            updateSteps(swiper);
+        },
         resize: updateNavClass,
         slidesLengthChange: updateNavClass,
+        slideChange: updateSteps
     };
 
     // Manage init/destroy based on viewport width
