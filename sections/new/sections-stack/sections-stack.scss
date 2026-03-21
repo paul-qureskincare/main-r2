@@ -85,6 +85,7 @@
 .product\.face-serum,
 .product\.micro-infusion-targeted-patches,
 .product\.q-rejuvalight-pro-facewear,
+.product\.neck-decolletage-led,
 .cart {
     @include sections-stack;
 }
@@ -147,7 +148,8 @@
 .product\.dermal-mist,
 .product\.face-serum,
 .product\.micro-infusion-targeted-patches,
-.product\.q-rejuvalight-pro-facewear {
+.product\.q-rejuvalight-pro-facewear,
+.product\.neck-decolletage-led {
     .sections-stack {
         padding-bottom: 0;
 

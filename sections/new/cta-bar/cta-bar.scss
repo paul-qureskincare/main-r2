@@ -26,22 +26,21 @@
         opacity: 0;
     }
 
+    // .cta-bar__title
     &__title {
-        /* font-size: 16px;
-        font-weight: 600;
-        white-space: nowrap; */
-
         @include sm {
             display: none;
         }
     }
 
+    // .cta-bar__content
     &__content {
         display: flex;
         flex: none;
         min-width: 0;
     }
 
+    // .cta-bar__button
     &__button {
         flex-grow: 1;
         max-width: 400px;
@@ -57,7 +56,6 @@
             justify-content: center;
             width: 100%;
             line-height: 1;
-            text-transform: uppercase;
 
             @include md {
                 min-height: 52px;
@@ -67,6 +65,7 @@
         }
     }
 
+    // .cta-bar__selector
     &__selector {
         position: relative;
         display: flex;
@@ -244,6 +243,7 @@
         }
     }
 
+    // .cta-bar__bottom
     &__bottom {
         display: flex;
         gap: 8px;

@@ -107,16 +107,18 @@
             font-weight: 500;
         }
 
-        ul:not(.c-marked-list) {
-            padding-left: 24px;
+        ul {
+            &:not(.c-marked-list) {
+                padding-left: 24px;
+
+                li {
+                    padding-left: 4px;
+                    list-style: disc;
+                }
+            }
 
             &:not(:last-child) {
                 margin-bottom: 15px;
-            }
-
-            li {
-                padding-left: 4px;
-                list-style: disc;
             }
         }
 

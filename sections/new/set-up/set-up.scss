@@ -4,21 +4,23 @@
 .set-up {
     $root: &;
 
-    .container {
-        display: grid;
-        grid-template: repeat(2, auto) / 280px 1fr;
-        gap: 30px 60px;
+    &:not(.set-up--no-video) {
+        .container {
+            display: grid;
+            grid-template: repeat(2, auto) / 280px 1fr;
+            gap: 30px 60px;
 
-        @include md {
-            gap: 24px;
-        }
+            @include md {
+                gap: 24px;
+            }
 
-        @include sm {
-            grid-template: auto / auto;
-        }
+            @include sm {
+                grid-template: auto / auto;
+            }
 
-        &:has(.btn) {
-            grid-template-rows: auto minmax(min-content, 0) auto;
+            &:has(.btn) {
+                grid-template-rows: auto minmax(min-content, 0) auto;
+            }
         }
     }
 
@@ -128,5 +130,29 @@
         margin-right: auto;
         margin-left: auto;
         text-transform: uppercase;
+    }
+
+    // set-up--no-video
+    &--no-video {
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+
+            @include sm {
+                gap: 24px;
+            }
+        }
+
+        h2 {
+            align-self: unset;
+            margin-bottom: 0;
+        }
+
+        .c-accordion {
+            width: 100%;
+            max-width: 400px;
+        }
     }
 }

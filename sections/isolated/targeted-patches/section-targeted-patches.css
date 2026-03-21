@@ -378,6 +378,22 @@
 .e-icon-tone-balance:before{
   content:"\e95a";
 }
+
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
 .patch__product-rating{
   padding:8px 20px;
   background:#f6f6f7;

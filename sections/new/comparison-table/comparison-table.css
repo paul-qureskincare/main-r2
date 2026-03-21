@@ -379,6 +379,22 @@
   content:"\e95a";
 }
 
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
+
 .e-declaimer{
   display:block;
   color:#8b8c8e;
@@ -433,10 +449,13 @@
   background:#fff;
 }
 .comparison-table__content article:has(picture){
+  height:calc(100% - var(--image-size) / 2);
   margin-top:calc(var(--image-size) / 2);
   padding-top:0;
 }
 .comparison-table__content article picture{
+  display:flex;
+  align-items:flex-end;
   min-height:var(--image-size);
   margin-top:calc(-1 * var(--image-size) / 2);
 }
@@ -445,16 +464,12 @@
   max-height:var(--image-size);
 }
 .comparison-table__content article h5{
-  max-width:220px;
-  margin:0 auto;
+  margin:0;
   text-align:center;
 }
-body[class="product.q-rejuvalight-pro-facewear"] .comparison-table__content article h5{
-  max-width:none;
-}
-
 .comparison-table__content article ul{
   display:flex;
+  flex-grow:1;
   flex-direction:column;
   gap:12px;
   width:100%;
@@ -462,6 +477,7 @@ body[class="product.q-rejuvalight-pro-facewear"] .comparison-table__content arti
 }
 .comparison-table__content article li{
   display:flex;
+  flex:1;
   gap:10px;
   align-items:center;
   padding:11px 12px;

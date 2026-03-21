@@ -379,6 +379,22 @@
   content:"\e95a";
 }
 
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
+
 .c-accordion__list{
   display:flex;
   flex-direction:column;
@@ -458,12 +474,12 @@
 .c-accordion__content ul:not(.c-marked-list){
   padding-left:24px;
 }
-.c-accordion__content ul:not(.c-marked-list):not(:last-child){
-  margin-bottom:15px;
-}
 .c-accordion__content ul:not(.c-marked-list) li{
   padding-left:4px;
   list-style:disc;
+}
+.c-accordion__content ul:not(:last-child){
+  margin-bottom:15px;
 }
 .c-accordion__content ol{
   counter-reset:item;

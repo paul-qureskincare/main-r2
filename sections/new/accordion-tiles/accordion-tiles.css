@@ -379,6 +379,22 @@
   content:"\e95a";
 }
 
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
