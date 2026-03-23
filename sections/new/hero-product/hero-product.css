@@ -1939,7 +1939,7 @@
 body[class="product.shower-filter"] .hero-product__main article ul{
   flex-flow:row wrap;
 }
-body[class="page.qure-microinfusion-offer-men"] .hero-product__main article{
+body[class="page.qure-microinfusion-offer"] .hero-product__main article,body[class="page.qure-microinfusion-offer-men"] .hero-product__main article{
   order:1;
 }
 .hero-product__main hr{
@@ -2000,7 +2000,7 @@ body[class="page.qure-microinfusion-offer-men"] .hero-product__main article{
   vertical-align:top;
   border-radius:10px;
 }
-body[class="page.qure-microinfusion-offer-men"] .hero-product__main>picture{
+body[class="page.qure-microinfusion-offer"] .hero-product__main>picture,body[class="page.qure-microinfusion-offer-men"] .hero-product__main>picture{
   order:2;
 }
 .hero-product__gallery{

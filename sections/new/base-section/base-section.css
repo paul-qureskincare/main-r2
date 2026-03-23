@@ -866,6 +866,9 @@
   background:#212428;
   content:"";
 }
+.base-section article .c-note{
+  margin-bottom:20px;
+}
 .base-section:has(.e-pill-badge) article h2{
   align-self:center;
 }
