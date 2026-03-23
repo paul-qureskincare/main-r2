@@ -807,6 +807,9 @@
 .base-section article p a:hover{
   text-decoration:none;
 }
+.base-section article p+.c-percent-list{
+  margin-top:24px;
+}
 .base-section article ol{
   counter-reset:item;
 }

@@ -168,4 +168,59 @@
         }
     }
 
+    &--single {
+        #{$root}__content {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: none;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+
+            picture {
+                img {
+                    @include img-fluid;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        #{$root}__text {
+            display: none;
+
+            @include sm {
+                display: block;
+            }
+        }
+
+        #{$root}__data {
+            & > article {
+                display: grid;
+                grid-template: repeat(2, auto) / auto 1fr;
+                gap: 0 24px;
+                align-items: center;
+                margin-bottom: 12px;
+
+                img {
+                    grid-row: 1 / -1;
+                    object-fit: contain;
+                    width: auto;
+                    height: 120px;
+
+                    @include sm {
+                        height: 100px;
+                    }
+                }
+
+                h3 {
+                    align-self: end;
+                }
+
+                p {
+                    align-self: start;
+                }
+            }
+        }
+    }
+
 }

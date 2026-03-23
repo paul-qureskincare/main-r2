@@ -4,11 +4,25 @@
 {{/unless}}
 <section class="science-backed {{ classes }}">
     <div class="container">
-        <article class="science-backed__text">
-            <h2>{{ title }}</h2>
-            {{{ text }}}
-        </article>
+        {{#unless single }}
+            <article class="science-backed__text">
+                <h2>{{ title }}</h2>
+                {{{ text }}}
+            </article>
+        {{/unless}}
         <div class="science-backed__content">
+            {{#if picture }}
+                <picture>
+                    <img src="{{ picture}}" alt="Micro-Infusion" />
+                </picture>
+            {{/if}}
+            {{#if single }}
+                <article class="science-backed__text">
+                    <h2>{{ title }}</h2>
+                    {{{ text }}}
+                </article>
+            {{/if}}
+
             {{> @partial-block}}
         </div>
     </div>

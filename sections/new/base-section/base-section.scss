@@ -93,6 +93,10 @@
                     text-decoration: none;
                 }
             }
+
+            & + .c-percent-list {
+                margin-top: 24px;
+            }
         }
 
         ol {

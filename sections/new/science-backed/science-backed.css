@@ -226,6 +226,39 @@
   font-weight:300;
   text-align:center;
 }
+.science-backed--single .science-backed__content{
+  grid-template-columns:repeat(2, 1fr);
+  max-width:none;
+}
+.science-backed--single .science-backed__content picture img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+.science-backed--single .science-backed__text{
+  display:none;
+}
+.science-backed--single .science-backed__data>article{
+  display:grid;
+  grid-template:repeat(2, auto)/auto 1fr;
+  gap:0 24px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.science-backed--single .science-backed__data>article img{
+  grid-row:1 /  -1;
+  -o-object-fit:contain;
+     object-fit:contain;
+  width:auto;
+  height:120px;
+}
+.science-backed--single .science-backed__data>article h3{
+  align-self:end;
+}
+.science-backed--single .science-backed__data>article p{
+  align-self:start;
+}
 @media screen and (max-width:767px){
   .page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
@@ -255,5 +288,14 @@
   }
   .science-backed__or{
     font-size:28px;
+  }
+  .science-backed--single .science-backed__content{
+    grid-template-columns:auto;
+  }
+  .science-backed--single .science-backed__text{
+    display:block;
+  }
+  .science-backed--single .science-backed__data>article img{
+    height:100px;
   }
 }
