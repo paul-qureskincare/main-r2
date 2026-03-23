@@ -1,0 +1,12 @@
+<!-- ARTICLE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/article/article.css" />
+{{/unless}}
+<section class="article {{ classes }}">
+    <div class="container">
+        <article>
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- ARTICLE END -->
