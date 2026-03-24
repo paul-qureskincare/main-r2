@@ -80,6 +80,11 @@
     margin: 0 auto;
     font-weight: 600;
 }
+@media (max-width: 767px) {
+    .patch__value-pack .vp-pack .vp-content {
+        font-size: 15px;
+    }
+}
 .patch__value-pack > input:checked + .vp-pack {
     border-color: var(--qure-charcoal);
     border-width: 2px;

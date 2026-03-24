@@ -485,7 +485,6 @@
   margin:0 auto;
   font-weight:600;
 }
-
 .patch__value-pack>input:checked+.vp-pack{
   border-color:var(--qure-charcoal);
   border-width:2px;
@@ -905,6 +904,9 @@ body.product\.dermal-mist .patch__product-variants{
 }
 
 @media (max-width:767px){
+  .patch__value-pack .vp-pack .vp-content{
+    font-size:15px;
+  }
   .qure__product-title{
     font-size:32px;
   }
