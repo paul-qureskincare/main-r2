@@ -37,7 +37,7 @@
   padding-bottom:23px;
 }
 .article article .cancel_section:not(:first-child,.pt-30){
-  margin-bottom:30px;
+  margin-top:30px;
 }
 .article article .cancel_section h2,.article article .cancel_section h3,.article article .cancel_section h4,.article article .cancel_section h5,.article article .cancel_section h6{
   margin-bottom:25px;
