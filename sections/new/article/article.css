@@ -65,6 +65,9 @@
 .article article ol,.article article ul{
   padding-left:20px;
 }
+.article article ol:not(:last-child),.article article ul:not(:last-child){
+  margin-bottom:25px;
+}
 .article article ol li,.article article ul li{
   position:relative;
   margin-bottom:10px;

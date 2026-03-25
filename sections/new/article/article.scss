@@ -146,6 +146,10 @@
         ul,
         ol {
             padding-left: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
         }
 
         ul li, ol li {
