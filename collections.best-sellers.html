@@ -1,718 +1,588 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Best Sellers - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Best Sellers</title>
-    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
-    <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/spacings.css">
-    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
-    <link href="assets/css/base.css" rel="stylesheet" />
-    <style>
-        :root {
-            --primary-color: #212428;
-            --discount-color: #91baec;
-        }
-    </style>
-    <!-- Loading HTML Files -->
-    <script src="assets/js/fileloader.js"></script>
-</head>
-
-<body class="collection">
-
-    <!-- PAGE HEADER -->
-    <div id="site-header"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('carousel', 'sections/global/header/js/carousel.js');
-            loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
-        });
-    </script>
-    <!-- PAGE HEADER end-->
-    <!-- Announcement Bar -->
-    <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
-    <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
-        <div class="container">
-            <div class="announcement-bar-content text-center">
-                FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
+    <body class="collections.best-sellers">
+        <!-- PAGE HEADER -->
+        <div id="site-header-new"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("carousel", "sections/global/header/js/carousel.js");
+                loadScriptOnce("slider-script", "assets/js/slider-with-thumb.js");
+            });
+        </script>
+        <!-- PAGE HEADER end-->
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+        <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
+            <div class="container">
+                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
             </div>
         </div>
-    </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
 
-    <!-- HERO BANNER -->
-    <link href="sections/new/hero-banner/hero-banner.css" rel="stylesheet" type="text/css">
-    <section class="hero-banner hero-banner--holidays">
-        <picture>
-            <source media="(min-width:768px)" srcset="sections/new/hero-banner/images/iwd.webp">
-            <img src="sections/new/hero-banner/images/iwd-mob.webp" alt="">
-        </picture>
-        <div class="container">
-            <article>
-                <h2>Together, We Rise</h2>
-                <p>This International Women’s Day $2 from every order will be donated to <strong>Impact for Women</strong> to help women rebuild their lives and regain confidence.</p>
-            </article>
-        </div>
-    </section>
-    <!-- HERO BANNER END -->
-
-    <!--Breadcrumbs-->
-     <div class="qure_breadcrumbs qure__section" style="--section-padding-top:60px;--section-padding-bottom:10px; --section-padding-bottom-mob:10px;">
-          <div class="container">
-                <nav aria-label="breadcrumb">
-                     <ul class="breadcrumb fs-16 mb-0" style="--base-color:#212428;">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" style="--bs-breadcrumb-item-active-color:#212428;" aria-current="page">Best Sellers</li>
-                     </ul>
-                </nav>
-          </div>
-     </div>
-     <!--Breadcrumbs end-->
-     <!--Collection Block-->
-     <link rel="stylesheet" href="sections/isolated/collection-block/section-collection-block.css">
-     <div class="collection_block qure__section" style="--section-padding-top:10px; --section-padding-top-mob:10px;">
-          <div class="container">
-                <div class="collection_content">
-                     <div class="d-flex flex-wrap flex-md-nowrap justify-content-between gap-10 align-items-center mb-md-50 mb-40 fs-16">
-                          <p class="ctm-width mb-15" style="--ctm-width: 80px; --ctm-width-mob: 60px;">Shop by</p>
-                          <p class="d-md-none ctm-width mb-15" style="--ctm-width-mob: 125px;">Swipe for more <span><img src="assets/images/arrow_right.svg" alt=""></span></p>
-                          <ul class="filters qure_tabs">
-                                <li><button class="filter active" data-filter="all" onclick="handleTabClick(this)">Shop All</button></li>
-                                <li><button class="filter" data-filter="fine_lines" onclick="handleTabClick(this)">Fine Lines & Wrinkles</button></li>
-                                <li><button class="filter" data-filter="dark_spots" onclick="handleTabClick(this)">Dark Spots & Hyperpigmentation</button></li>
-                                <li><button class="filter" data-filter="breakouts" onclick="handleTabClick(this)">Breakouts & Acne</button></li>
-                          </ul>
-                     </div>
-                     <div class="row projects custom__grid" style="--column-gap:32px; --column-gap-mobile:16px;">
-                          <div class="col-6 col-md-3 custom__block project" data-filter="all">
-                                <a href="">
-                                     <div class="pd_review-card">
-                                          <img src="sections/isolated/top-products/images/pd-review.webp" class="img-fluid w-100" alt="">
-                                          <div class="pd_review-inner">
-                                                <p class="d-md-block d-none">“I’m shocked at the results after just one treatment! My skin looks so clear, glowy, and healthy.”</p>
-                                                <p class="d-md-none">“I’m shocked at the results after just one treatment!”</p>
-                                                <div class="pd_inner-img">
-                                                     <img src="sections/isolated/top-products/images/mi_system.png" class="ctm-width" style="--ctm-width:50px;" alt="">
-                                                     <div class="fs-14">Ela uses...</div>
-                                                     <p class="text-decoration-underline">Micro-Infusion System</p>
-                                                </div>
-                                          </div>
-                                     </div>
-                                </a>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots breakouts">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/q-rejuvalight-pro-facewear.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/q-rejuvalight-pro-facewear-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller">Bestseller</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>1,375 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Q-Rejuvalight Pro Facewear </a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots breakouts">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/all-in-one-face-serum.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/all-in-one-face-serum-hover.webp" alt="" /></div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>380 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">All-In-One Face Serum</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/micro-infusion-facial-system.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/micro-infusion-facial-system-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller">Bestseller</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>1,312 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Micro-Infusion Facial System</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines all">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/micro-infusion-targeted-patches.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/micro-infusion-targeted-patches-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller" style="--text-clr:#FF5429; --badge-bg:#FFEEEA">
-                                                Trending</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>157 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Micro-Infusion Targeted Patches</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/neck-and-deck.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/neck-and-deck-hover.webp" alt="" />
-                                          </div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>104 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Neck & Décolletage LED Device</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="all">
-                                <div class="qure__product-item">
-                                     <img src="sections/isolated/top-products/images/mask_card.webp" class="img-fluid" alt="">
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="breakouts">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/dermal-mist.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/dermal-mist-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller" style="--text-clr:#fff; --badge-bg:#91BAEC">
-                                                New</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>26 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Dermal Mist</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="all">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/shower-filter.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/shower-filter-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller" style="--text-clr:#fff; --badge-bg:#91BAEC">
-                                                New</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>48 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Shower Filter</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-6 col-md-3 custom__block project" data-filter="breakouts">
-                                <div class="qure__product-item silver-badge">
-                                     <a href="#" class="qure__product-img overflow-hidden position-relative d-block">
-                                          <div class="qure__product-main-img"><img
-                                                src="sections/isolated/top-products/images/faucet-filter.webp" alt="" />
-                                          </div>
-                                          <div class="qure__product-hover-img position-absolute inset-0"><img
-                                                src="sections/isolated/top-products/images/faucet-filter-hover.webp" alt="" />
-                                          </div>
-                                          <div class="badge rounded-pill badge-bestseller" style="--text-clr:#fff; --badge-bg:#91BAEC">
-                                                New</div>
-                                     </a>
-                                     <div class="qure__product-details">
-                                          <div class="qure__product-reviews fs-14 d-flex gap-3 align-items-center">
-                                                <img src="sections/isolated/top-products/images/stars.svg" alt="" /><span>48 Reviews</span>
-                                          </div>
-                                          <h3 class="fm-body mb-0 qure__product-name">
-                                                <a class="limited-line capitalize d-block" href="#">Faucet Filter</a>
-                                          </h3>
-                                          <div class="qure__product-price">
-                                            <div class="dis_red_line">
-                                                <span class="bef_price text-decoration-line-through">$238</span>
-                                                <span class="aft_price">$149</span>
-                                            </div>
-                                            <div class="black_friday_price">$133.51</div>
-                                        </div>
-                                     </div>
-                                     <div class="qure__product-action-inner">
-                                        <form method="post" action="/cart/add" enctype="multipart/form-data">
-                                            <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
-                                            <input type="hidden" name="quantity" id="quantity" value="1">
-                                            <input type="hidden" name="selling_plan" id="selling_plan" value="">
-                                            <input type="hidden" name="id" value="37390541553813">
-                                        </form>
-                                    </div>
-                                </div>
-                          </div>
-                     </div>
+        <!-- SECTIONS STACK -->
+        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+        <main class="sections-stack">
+            <!-- HERO BANNER -->
+            <link href="sections/new/hero-banner/hero-banner.css" rel="stylesheet" type="text/css" />
+            <section class="hero-banner hero-banner--holidays">
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/new/hero-banner/images/iwd.webp" />
+                    <img src="sections/new/hero-banner/images/iwd-mob.webp" alt="" />
+                </picture>
+                <div class="container">
+                    <article>
+                        <h2>Together, We Rise</h2>
+                        <p>This International Women’s Day $2 from every order will be donated to <strong>Impact for Women</strong> to help women rebuild their lives and regain confidence.</p>
+                    </article>
                 </div>
-          </div>
-     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('section-collection-block', 'sections/isolated/collection-block/section-collection-block.js');
-        });
-    </script>
-     <!--Collection Block-->
+            </section>
+            <!-- HERO BANNER END -->
 
-     <!-- Bundle banners -->
-    <link rel="stylesheet" href="alex/sections/isolated/bundle-banner/bundle-banner.css" />
-    <div
-        class="swiper qure__swiper bundle-banners-slider"
-        id="qure__swiper-banners-slider"
-        data-section-id="banners-slider"
-        data-autoplay="false"
-        data-loop="false"
-        data-mobile="1"
-        data-tablet="1"
-        data-desktop="1"
-        data-spacing="0"
-        data-pagination-fraction="false"
-    >
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="bundle-banner">
-                    <picture class="bundle-banner__image">
-                        <source media="(min-width:767px)" srcset="alex/sections/isolated/bundle-banner/images/bundle-1.webp">
-                        <img src="alex/sections/isolated/bundle-banner/images/bundle-1-mob.webp" alt="">
-                    </picture>
-                    <div class="bundle-banner__content">
-                        <div class="bf-discont-badge" data-text-bottom="Off">68%</div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>Your Holiday Glow Starts Here</h3>
-                                <p>Our signature treatment in one carry-on approved set.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="#" class="btn btn--primary">Get Yours Now</a>
-                                <div class="under-button-text"><strong>Limited availability:</strong> Under 100 cases remaining</div>
-                            </div>
-                        </div>
+            <!-- BREADCRUMB -->
+            <link rel="stylesheet" href="sections/new/breadcrumb/breadcrumb.css" />
+            <section class="breadcrumb">
+                <div class="container">
+                    <a href="#">Home</a>
+                    <i class="e-icon e-icon-chevron"></i>
+                    <strong>Best Sellers</strong>
+                </div>
+            </section>
+            <!-- BREADCRUMB END -->
+
+            <!-- PILLS NAVIGATION -->
+            <link rel="stylesheet" href="sections/new/pills-nav/pills-nav.css" />
+            <section class="pills-nav pills-nav--left">
+                <div class="container">
+                    <div class="pills-nav__header">
+                        <span>Shop by</span>
+                        <div>Swipe for more <i class="e-icon e-icon-arrow"></i></div>
                     </div>
+                    <ul class="c-pills-nav">
+                        <li><button data-url="" class="active">Shop All</button></li>
+                        <li><button data-url="">Fine Lines &amp; Wrinkles</button></li>
+                        <li><button data-url="">Dark Spots &amp; Hyperpigmentation</button></li>
+                        <li><button data-url="">Breakouts &amp; Acne</button></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="bundle-banner">
-                    <picture class="bundle-banner__image">
-                        <source media="(min-width:767px)" srcset="alex/sections/isolated/bundle-banner/images/bundle-2.webp">
-                        <img src="alex/sections/isolated/bundle-banner/images/bundle-2-mob.webp" alt="">
-                    </picture>
-                    <div class="bundle-banner__content">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>
-                                    Celebrating the
-                                    <img src="assets/images/logo.svg" alt="Qure" />
-                                    Community
-                                </h3>
-                                <p>Every purchase* enters you to <strong>a 2025 Range Rover Evoque</strong></p>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="#" class="btn btn--primary">Shop To Enter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-arrows-with-pagination">
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('slider-script', 'assets/js/main-slider.js');
-        });
-    </script>
-    <!-- Bundle banner -->
+            </section>
+            <!-- PILLS NAVIGATION END -->
 
-    <!-- Bundle banners -->
-     <link rel="stylesheet" href="alex/sections/isolated/bundle-banner/bundle-banner.css" />
-     <div class="bundle-banner bundle-banner-mini">
-          <div class="bundle-banner__content">
-                <div class="row">
-                     <div class="col-md-6">
-                          <div class="mini-bundles">
-                                <div class="mini-bundles__item" data-desc="Exclusive Bundles">
-                                     <img src="alex/sections/isolated/bundle-banner/images/bundle-mini-1.webp" alt="" />
-                                     <div class="bf-discont-badge" data-text-top="Up to" data-text-bottom="Off">57%</div>
-                                </div>
-                                <div class="mini-bundles__item">
-                                     <img src="alex/sections/isolated/bundle-banner/images/bundle-mini-2.webp" alt="" />
-                                </div>
-                                <div class="mini-bundles__item">
-                                     <img src="alex/sections/isolated/bundle-banner/images/bundle-mini-3.webp" alt="" />
-                                </div>
-                          </div>
-                     </div>
-                     <div class="col-md-3">
-                          <h3>Save Up to 57%</h3>
-                          <p>Your Favorite Products, Perfectly Bundled</p>
-                     </div>
-                     <div class="col-md-3">
-                          <a href="#" class="btn btn--primary">Shop Bundles Now</a>
-                     </div>
-                </div>
-          </div>
-     </div>
-     <!-- Bundle banner -->
-
-    <!-- Trusted reviews -->
-    <link rel="stylesheet" href="sections/isolated/review-slider/card-slide.css" />
-    <div class="qure__trusted-reviews qure__section"
-        style="--section-padding-top: 80px;--section-padding-bottom: 40px;--section-padding-top-mob: 50px;--section-padding-bottom-mob: 30px;">
-        <div class="container">
-            <div class="qure__section-header text-center mb-30 mb-md-60">
-                <h2 class="qure__section-heading">Results you’ll see with your own eyes</h2>
-            </div>
-        </div>
-        <div class="container offset-container-mobile">
-            <div class="swiper qure__swiper" id="qure__swiper-trusted-slider" data-section-id="trusted-slider"
-                data-autoplay="false" data-loop="false" data-mobile="1.1" data-tablet="2" data-desktop="3" data-spacing="30"
-                data-pagination-fraction="true" data-arrowleft="trusted-slider-arrow-left" data-arrowright="trusted-slider-arrow-right">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card skin-card">
-                            <img src="sections/isolated/review-slider/images/ellie-v.webp" class="card-img-top" alt="">
-                            <div class="card-body skin-card-body d-flex flex-column justify-content-between border ">
-                                <div class="tr__reviews">
-                                    <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                        style="--bg-light: rgb(199 229 219 / 30%);">
-                                        <div class="card-user">
-                                            <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
-                                            <span class="username">Ellie V.</span>
-                                        </div>
-                                        <div
-                                            class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
-                                            <img src="assets/images/reviewCheck.svg" alt="review" />
-                                            <span>Verified customer</span>
-                                        </div>
-                                    </div>
-                                    <h5 class="card-title fm-body mb-15">My skin returned to life!</h5>
-                                    <p class="card-text">“I just turned 57 years. My skin was extremely dry and while
-                                        using this product my skin RETURNED to LIFE! I am so impressed with it! You will
-                                        not regret in purchasing it. I really see the change in my skin. Outstanding job
-                                        QURE!”
+            <!-- BEST SELLERS -->
+            <link rel="stylesheet" href="sections/new/best-sellers/best-sellers.css" />
+            <section class="best-sellers">
+                <div class="container">
+                    <div class="best-sellers__list">
+                        <div class="best-sellers__item">
+                            <a class="best-sellers__review" href="#">
+                                <img src="sections/isolated/top-products/images/pd-review.webp" alt="Proven to visually improve" />
+                                <div>
+                                    <p>“I’m shocked at the results after just one treatment! <span>My skin looks so clear, glowy, and healthy.</span>”</p>
+                                    <p>
+                                        <img src="sections/isolated/top-products/images/mi_system.png" alt="Micro-Infusion System" />
+                                        <small>Ela uses...</small>
+                                        <span>Micro-Infusion System</span>
                                     </p>
                                 </div>
-                                <a href="#" class="d-flex bg-light p-12 rounded-10 rev_slide-prd gap-3">
-                                    <div class="rev-prd-img">
-                                        <img src="sections/isolated/review-slider/images/micro-infusion-facial-system.webp"
-                                            alt="micro-infusion-facial-system" />
-                                    </div>
-                                    <div class="rev-prd-content">
-                                        <div class="rp-dev fs-14">Ellie uses...</div>
-                                        <div class="rp-link text-decoration-underline fs-16">Micro-Infusion Facial
-                                            System
-                                        </div>
-                                    </div>
+                            </a>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/q-rejuvalight-pro-facewear-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/q-rejuvalight-pro-facewear.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">Bestseller</div>
                                 </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.6"></div>
+                                    <a href="#">1,375 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Q-Rejuvalight Pro Facewear</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card skin-card">
-                            <img src="sections/isolated/review-slider/images/anton-m.webp" class="card-img-top" alt="">
-                            <div class="card-body skin-card-body d-flex flex-column justify-content-between border ">
-                                <div class="tr__reviews">
-                                    <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                        style="--bg-light: rgb(199 229 219 / 30%);">
-                                        <div class="card-user">
-                                            <img src="sections/isolated/review-slider/images/australia_f.webp" alt="user" />
-                                            <span class="username">Anton M.</span>
-                                        </div>
-                                        <div
-                                            class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
-                                            <img src="assets/images/reviewCheck.svg" alt="review" />
-                                            <span>Verified customer</span>
-                                        </div>
-                                    </div>
-                                    <h5 class="card-title fm-body mb-15">Can’t go a day without it</h5>
-                                    <p class="card-text">“Straight away I noticed results with Qure, after the first
-                                        week I had no active breakouts anymore. People ask me now how have I got my skin
-                                        to be hydrated, acne-free, looking bright with no redness. I'm so reliant on the
-                                        Qure mask now. I don't think I can go a day without using it.”
-                                    </p>
-                                </div>
-                                <a href="#" class="d-flex bg-light p-12 rounded-10 rev_slide-prd gap-3">
-                                    <div class="rev-prd-img">
-                                        <img src="sections/isolated/review-slider/images/q-rejuvalight-pro-led-mask.webp"
-                                            alt="q-rejuvalight-pro-led-mask" />
-                                    </div>
-                                    <div class="rev-prd-content">
-                                        <div class="rp-dev fs-14">Anton uses...</div>
-                                        <div class="rp-link text-decoration-underline fs-16">Q-Rejuvalight Pro LED Mask
-                                        </div>
-                                    </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/all-in-one-face-serum-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/all-in-one-face-serum.webp" alt="Best Sellers" />
                                 </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.3"></div>
+                                    <a href="#">380 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">All-In-One Face Serum</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card skin-card">
-                            <img src="sections/isolated/review-slider/images/jennifer-n.webp" class="card-img-top" alt="">
-                            <div class="card-body skin-card-body d-flex flex-column justify-content-between border ">
-                                <div class="tr__reviews">
-                                    <div class="reviews-header d-flex align-items-center justify-content-between mb-10"
-                                        style="--bg-light: rgb(199 229 219 / 30%);">
-                                        <div class="card-user">
-                                            <img src="sections/isolated/review-slider/images/america_f.webp" alt="user" />
-                                            <span class="username">Jennifer N,</span>
-                                        </div>
-                                        <div
-                                            class="icon-with-text d-flex align-items-center gap-2 px-10 py-5 bg-light rounded-3 fs-14">
-                                            <img src="assets/images/reviewCheck.svg" alt="review" />
-                                            <span>Verified customer</span>
-                                        </div>
-                                    </div>
-                                    <h5 class="card-title fm-body mb-15">Works better than I imagined!</h5>
-                                    <p class="card-text">“I am really stunned by how well this product works. I have had
-                                        professional micro-needling and I wanted the benefits without the downtime. I
-                                        did my treatment, went to bed and woke up the next morning and was ready to go.
-                                        My skin looks better than it has in years.”
-                                    </p>
-                                </div>
-                                <a href="#" class="d-flex bg-light p-12 rounded-10 rev_slide-prd gap-3">
-                                    <div class="rev-prd-img">
-                                        <img src="sections/isolated/review-slider/images/micro-infusion-facial-system.webp"
-                                            alt="q-rejuvalight-pro-led-mask" />
-                                    </div>
-                                    <div class="rev-prd-content">
-                                        <div class="rp-dev fs-14">Jennifer uses...</div>
-                                        <div class="rp-link text-decoration-underline fs-16">Micro-Infusion Facial
-                                            System
-                                        </div>
-                                    </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/micro-infusion-facial-system-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/micro-infusion-facial-system.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">Bestseller</div>
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                    <div class="qure-swiper-button-prev qure-swiper-arrow trusted-slider-arrow-left"><i class="fa-regular fa-angle-left"></i>
-                    </div>
-                    <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                    <div class="qure-swiper-button-next qure-swiper-arrow trusted-slider-arrow-right"><i class="fa-regular fa-angle-right"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('main-slider', 'assets/js/main-slider.js');
-        });
-    </script>
-    <!-- Trusted reviews end-->
-     <!-- quiz section -->
-    <link rel="stylesheet" href="sections/isolated/quiz/quiz-box.css" />
-    <div class="qure__section color-background"
-        style="--section-padding-top: 80px;--section-padding-bottom: 80px;--section-padding-top-mob: 50px;--section-padding-bottom-mob: 50px;">
-        <div class="container" style="--column-gap:100px; --column-gap-mobile:32px;">
-            <div class="row custom__grid align-items-center">
-                <div class="custom__block col-lg-6">
-                    <h2 class="mb-20">Unlock Your Personalized Skincare Routine</h2>
-                    <p>You don’t have time for products that don’t work. We’ll prescribe you a personalized routine with
-                        clinically proven products and tips - just for your skin.</p>
-                </div>
-                <div class="custom__block col-lg-6">
-                    <div class="quiz__container">
-                        <div class="quiz-stepper">
-                            <div class="quiz-stepper__line"></div>
-                            <div
-                                class="quiz-stepper__step quiz-stepper__step--active position-relative d-flex align-items-start mb-40">
-                                <div class="quiz-stepper__circle">1</div>
-                                <div class="quiz-stepper__content">
-                                    <p class="quiz-stepper__title mb-10 fw-600">Take The Quiz</p>
-                                    <span class="quiz-stepper__desc">Then get a custom skincare plan, backed by science.</span>
-                                    <div class="ctm-width" style="--ctm-width: 350px;">
-                                        <button class="quiz-stepper__button btn btn--primary w-100 mt-20">Take The Quiz</button>
-                                        <div
-                                            class="align-items-center d-flex fs-16 gap-2 justify-content-center mt-6 quiz-stepper__time">
-                                            <span class="quiz-stepper__clock"><i class="fa-light fa-clock-three"></i></span>
-                                            Only takes 60 seconds
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.9"></div>
+                                    <a href="#">1,312 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Micro-Infusion Facial System</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
                                         </div>
                                     </div>
                                 </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
                             </div>
-                            <div
-                                class="quiz-stepper__step quiz-stepper__step--inactive position-relative d-flex align-items-center">
-                                <div class="quiz-stepper__circle">2</div>
-                                <div class="quiz-stepper__content m-0">
-                                    <span class="quiz-stepper__desc quiz-stepper__desc--inactive">
-                                        Here’s your personalized skincare routine…
-                                    </span>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/micro-infusion-targeted-patches-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/micro-infusion-targeted-patches.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs" style="--badge-base-color: #ff5429">Trending</div>
+                                </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.5"></div>
+                                    <a href="#">157 Reviews</a>
                                 </div>
+                                <a class="c-product-tile__name" href="#">Micro-Infusion Targeted Patches</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/neck-and-deck-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/neck-and-deck.webp" alt="Best Sellers" />
+                                </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.5"></div>
+                                    <a href="#">106 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Neck &amp; Décolletage LED Device</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="best-sellers__item">
+                            <a class="best-sellers__card" href="#"><img src="sections/isolated/top-products/images/mask_card.webp" alt="Q-Rejuvalight Pro LED Mask" /></a>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/dermal-mist-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/dermal-mist.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">New</div>
+                                </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.5"></div>
+                                    <a href="#">26 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Dermal Mist</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/shower-filter-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/shower-filter.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">New</div>
+                                </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.5"></div>
+                                    <a href="#">48 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Shower Filter</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="best-sellers__item">
+                            <div class="c-product-tile">
+                                <a class="c-product-tile__image" style="--image-on-hover: url(/sections/isolated/top-products/images/faucet-filter-hover.webp)" href="#">
+                                    <img src="sections/isolated/top-products/images/faucet-filter.webp" alt="Best Sellers" />
+                                    <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">New</div>
+                                </a>
+                                <div class="c-product-tile__rating">
+                                    <div class="e-rating-stars" style="--rating: 4.5"></div>
+                                    <a href="#">71 Reviews</a>
+                                </div>
+                                <a class="c-product-tile__name" href="#">Faucet Filter</a>
+                                <div class="c-product-tile__price">
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="c-product-tile__button" action="#">
+                                    <button class="btn btn--primary">Buy Now</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- quiz section end-->
-     <!-- CART AND FOOTER -->
-     <div id="site-footer"></div>
-     <div id="site-cart-drawer"></div>
-     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
-        });
-    </script>
-     <script src="assets/js/vendor.js" defer="defer"></script>
-     <script src="assets/js/header.js" defer="defer"></script>
-     <script src="assets/js/footer.js" defer="defer"></script>
-</body>
+            </section>
+            <!-- BEST SELLERS END -->
 
+            <!-- TRUSTED REVIEWS -->
+            <link rel="stylesheet" href="sections/new/trusted-reviews/trusted-reviews.css" />
+            <section class="trusted-reviews trusted-reviews--light">
+                <div class="container">
+                    <h2>Results you’ll see with your own eyes</h2>
+                    <div
+                        class="c-swiper"
+                        data-swiper='{
+                        "slidesPerView": 1.1,
+                        "spaceBetween": 16,
+                        "loop": false,
+                        "pagination": {
+                            "el": ".c-swiper-pagination",
+                            "type": "custom"
+                        },
+                        "navigation": {
+                            "prevEl": ".c-swiper-button-prev",
+                            "nextEl": ".c-swiper-button-next"
+                        },
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 2,
+                                "spaceBetween": 24
+                            },
+                            "992": {
+                                "slidesPerView": 3
+                            }
+                        }
+                    }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="sections/isolated/review-slider/images/ellie_6_treatments.webp" alt="My skin returned to life!" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Kim L." />
+                                        Kim L.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>My skin returned to life!</h6>
+                                        <p>“I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. I really see the change in my skin. Outstanding job QURE!”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="sections/isolated/review-slider/images/micro-infusion-facial-system.webp" alt="Micro-Infusion Facial System" />
+                                        <small>Ellie uses...</small>
+                                        <span>Micro-Infusion Facial System</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="sections/isolated/review-slider/images/mona-p.webp" alt="Fade after just two treatments" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Mona P." />
+                                        Mona P.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Fade after just two treatments</h6>
+                                        <p>“I personally think my products absorbed better, my skin looks a bit brighter and that larger acne scar on my right cheek has started to fade after just TWO treatments!”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="sections/isolated/review-slider/images/q-rejuvalight-pro-led-mask.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                                        <small>Mona uses...</small>
+                                        <span>Q-Rejuvalight Pro LED Mask</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="sections/isolated/review-slider/images/andrea.webp" alt="Definitely be re-ordering" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Andrea G." />
+                                        Andrea G.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Definitely be re-ordering</h6>
+                                        <p>“Still a newbie but so far so great! I have dermarolled for more than a decade -still do with .25 at least one a week. I’ve avoided getting a pen because there’s so much involved- but the Qure system is just awesome. So easy and user friendly and my skin loves the serum! Doing my third treatment Saturday and will definitely be re-ordering 🤗</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="sections/isolated/review-slider/images/micro-infusion-facial-system.webp" alt="Micro-Infusion Facial System" />
+                                        <small>Andrea uses...</small>
+                                        <span>Micro-Infusion Facial System</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="sections/isolated/review-slider/images/jessica-k.webp" alt="Thrilled with the results!" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Jessica K." />
+                                        Jessica K.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Thrilled with the results!</h6>
+                                        <p>"I have been using the mask &amp; microneedling for 6 weeks &amp; am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles."</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="sections/isolated/review-slider/images/micro-infusion-targeted-patches.webp" alt="Micro-Infusion Targeted Patches" />
+                                        <small>Jessica uses...</small>
+                                        <span>Micro-Infusion Targeted Patches</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="sections/isolated/review-slider/images/ela-o.webp" alt="Shocked at the results" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="sections/isolated/review-slider/images/america_f.webp" alt="Ela O." />
+                                        Ela O.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Shocked at the results</h6>
+                                        <p>“Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment! Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="sections/isolated/review-slider/images/neck-decolletage-led-device.webp" alt="Neck & Décolletage LED Device" />
+                                        <small>Ela uses...</small>
+                                        <span>Neck &amp; Décolletage LED Device</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-swiper-nav">
+                            <button class="c-swiper-button-prev"></button>
+                            <div class="c-swiper-pagination"></div>
+                            <button class="c-swiper-button-next"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("swiper", "assets/js-new/swiper.js");
+                });
+            </script>
+            <!-- TRUSTED REVIEWS END -->
+
+            <!-- TAKE QUIZ -->
+            <link rel="stylesheet" href="sections/new/take-quiz/take-quiz.css" />
+            <section class="take-quiz">
+                <div class="container">
+                    <article>
+                        <h2>Unlock Your Personalized Skincare Routine</h2>
+                        <p>You don’t have time for products that don’t work. We’ll prescribe you a personalized routine with clinically proven products and tips - just for your skin.</p>
+                        <ol>
+                            <li>
+                                <h5>Take The Quiz</h5>
+                                <p>Then get a custom skincare plan, backed by science.</p>
+                                <a class="btn btn--primary" href="#">Take The Quiz</a>
+                                <small>
+                                    <i class="e-icon e-icon-clock"></i>
+                                    Only takes 60 seconds
+                                </small>
+                            </li>
+                            <li>Here’s your personalized skincare routine...</li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+            <!-- TAKE QUIZ END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer-new"></div>
+        <div id="site-cart-drawer-new"></div>
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
+
+        <!-- SCRIPTS -->
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
+    </body>
 </html>

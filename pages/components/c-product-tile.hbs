@@ -27,9 +27,12 @@
         {{#if badge }}
             <div class="e-pill-badge e-pill-badge--xs" style="--badge-base-color: #ff5429">{{ badge }}</div>
         {{/if}}
+        {{#if badge-blue }}
+            <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">{{ badge-blue }}</div>
+        {{/if}}
     </a>
     <div class="c-product-tile__rating">
-        <div class="e-rating-stars" style="--rating: {{ value }};"></div>
+        <div class="e-rating-stars" style="--rating: {{ rating-value }};"></div>
         <a href="#">{{ reviews }} Reviews</a>
     </div>
     <a class="c-product-tile__name" href="#">{{ name }}</a>
@@ -39,4 +42,9 @@
     <div class="c-product-tile__price">
         {{> e-price current="{$dyn}" }}
     </div>
+    {{#if button }}
+        <form class="c-product-tile__button" action="#">
+            <button class="btn btn--primary">{{ button }}</button>
+        </form>
+    {{/if}}
 </div>

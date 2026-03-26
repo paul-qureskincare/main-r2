@@ -2,24 +2,63 @@
 @use "@components/c-pills-nav" as *;
 
 .pills-nav {
-    &__header {
-        display: none;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        font-size: 16px;
+    $root: &;
+
+    .container {
+        display: flex;
+        gap: 32px;
+        align-items: center;
 
         @include md {
-            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: stretch;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+
+        span {
+            white-space: nowrap;
         }
 
         div {
-            display: flex;
+            display: none;
             gap: 6px;
             align-items: center;
+
+            @include md {
+                display: flex;
+            }
         }
 
         .e-icon {
             font-size: 12px;
+        }
+    }
+
+    .c-pills-nav {
+        @include md {
+            margin: 0;
+        }
+    }
+
+    &:not(.pills-nav--left) {
+        #{$root}__header {
+            display: none;
+
+            @include md {
+                display: flex;
+            }
+        }
+    }
+
+    &--left {
+        .c-pills-nav {
+            margin: 0;
         }
     }
 }

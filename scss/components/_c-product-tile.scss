@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-rating-stars" as *;
 @use "@elements/e-pill-badge" as *;
 
 .c-product-tile {
@@ -28,6 +29,8 @@
         border-radius: 10px;
 
         img {
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
             @include img-fluid;
         }
 
@@ -115,5 +118,16 @@
     &__price {
         margin-top: auto;
         font-size: 16px;
+    }
+
+    // .c-product-tile__button
+    &__button {
+        .btn {
+            width: 100%;
+
+            @include sm {
+                display: none;
+            }
+        }
     }
 }

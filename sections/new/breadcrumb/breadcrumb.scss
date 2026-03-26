@@ -1,0 +1,33 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.breadcrumb {
+    $root: &;
+
+    margin-top: -30px;
+    margin-bottom: -30px;
+
+    @include md {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+
+    .container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .e-icon {
+        font-size: 14px;
+    }
+}

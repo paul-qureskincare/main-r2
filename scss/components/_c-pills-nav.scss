@@ -14,12 +14,12 @@
     @include md {
         gap: 8px;
     }
-    
+
     &::-webkit-scrollbar {
         display: none;
     }
 
-    a {
+    a, button {
         @include pill-button;
         white-space: nowrap;
     }
