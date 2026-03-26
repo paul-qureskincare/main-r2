@@ -52,6 +52,12 @@
             <div>
                 {{> @partial-block }}
             </div>
+            {{#if percent-list }}
+                {{> c-percent-list
+                    list=percent-list
+                    columns=true
+                }}
+            {{/if}}
             {{#if button }}
                 <a href="#" class="btn btn--primary">{{ button }}</a>
             {{/if}}
@@ -72,12 +78,6 @@
                         </button>
                     </div>
                 </dialog>
-            {{/if}}
-            {{#if percent-list }}
-                {{> c-percent-list
-                    list=percent-list
-                    columns=true
-                }}
             {{/if}}
             {{#if buy-block }}
                 <div class="c-buy-block">
