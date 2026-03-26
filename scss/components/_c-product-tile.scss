@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
 
 .c-product-tile {
     $root: &;
@@ -49,10 +50,27 @@
             content: '';
             @include transition;
         }
+
+        & > .e-pill-badge {
+            position: absolute;
+            top: 18px;
+            left: 22px;
+            z-index: 2;
+            text-decoration: none;
+
+            @include sm {
+                top: 12px;
+                left: 12px;
+            }
+
+            &:not(.e-pill-badge--fill) {
+                background: hsl(from currentcolor h s calc(l + 35));
+            }
+        }
     }
 
-    // .c-product-tile__badges
-    &__badges {
+    // .c-product-tile__time
+    &__time {
         position: absolute;
         bottom: 8px;
         left: 8px;
@@ -82,22 +100,15 @@
         }
     }
 
-    // .c-product-tile__text
-    &__text {
-        h6 {
-            margin-bottom: 14px;
-            font-family: inherit;
-            font-weight: 500;
+    &__name {
+        font-family: inherit;
+        font-weight: 600;
+    }
 
-            @include sm {
-                margin-bottom: 8px;
-            }
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.25;
-        }
+    // .c-product-tile__desc
+    &__desc {
+        font-size: 16px;
+        line-height: 1.25;
     }
 
     // .c-product-tile__price

@@ -172,11 +172,11 @@
   height:auto;
   border-radius:10px;
 }
-.c-advisory-collapse-card article{
+.c-advisory-collapse-card article,.c-advisory-collapse-card summary{
   position:relative;
   cursor:pointer;
 }
-.c-advisory-collapse-card article:after{
+.c-advisory-collapse-card article:after,.c-advisory-collapse-card summary:after{
   position:absolute;
   right:20px;
   bottom:20px;
@@ -198,13 +198,13 @@
   background:#fff;
   content:"\e903";
 }
-.c-advisory-collapse-card article:hover picture,.c-advisory-collapse-card article[aria-expanded=true] picture{
+.c-advisory-collapse-card article:hover picture,.c-advisory-collapse-card article[aria-expanded=true] picture,.c-advisory-collapse-card summary:hover picture,.c-advisory-collapse-card summary[aria-expanded=true] picture{
   opacity:1;
 }
-.c-advisory-collapse-card article[aria-expanded=true]:after{
+.c-advisory-collapse-card article[aria-expanded=true]:after,.c-advisory-collapse-card summary[aria-expanded=true]:after{
   content:"\e902";
 }
-.c-advisory-collapse-card article p{
+.c-advisory-collapse-card article p,.c-advisory-collapse-card summary p{
   position:absolute;
   right:65px;
   bottom:20px;
@@ -212,9 +212,15 @@
   color:#fff;
   font-size:16px;
 }
-.c-advisory-collapse-card article p:first-line{
+.c-advisory-collapse-card article p:first-line,.c-advisory-collapse-card summary p:first-line{
   font-size:20px;
   font-weight:500;
+}
+.c-advisory-collapse-card[open] summary:after{
+  content:"\e902";
+}
+.c-advisory-collapse-card[open] summary+p{
+  padding:20px 10px 10px;
 }
 .c-advisory-collapse-card .collapse{
   transition:none;

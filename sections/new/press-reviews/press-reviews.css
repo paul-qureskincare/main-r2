@@ -30,11 +30,16 @@
   max-width:100%;
 }
 .press-reviews .c-swiper-thumbs .swiper-slide{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   cursor:pointer;
 }
 .press-reviews .c-swiper-thumbs .swiper-slide img{
-  width:auto;
-  height:29px;
+  display:block;
+  max-width:100%;
+  height:auto;
+  max-height:25px;
   opacity:.5;
 }
 .press-reviews .c-swiper-thumbs .swiper-slide.swiper-slide-thumb-active img{

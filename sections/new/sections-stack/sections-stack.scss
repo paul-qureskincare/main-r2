@@ -95,6 +95,7 @@
 .product\.micro-infusion-targeted-patches,
 .product\.q-rejuvalight-pro-facewear,
 .product\.neck-decolletage-led,
+.index,
 .cart {
     @include sections-stack;
 }
@@ -126,7 +127,8 @@
 .page\.neck-decolletage-led-customer-reviews,
 .page\.all-in-one-serum-customer-reviews,
 .page\.micro-infusion-targeted-patches-customer-reviews,
-.page\.qure-microinfusion-pro-offer {
+.page\.qure-microinfusion-pro-offer,
+.index {
     .sections-stack {
         padding-top: 0;
 

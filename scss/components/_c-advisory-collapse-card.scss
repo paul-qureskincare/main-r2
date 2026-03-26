@@ -15,7 +15,8 @@
         border-radius: 10px;
     }
 
-    article {
+    article, // TODO: article is old code, need to remove in future
+    summary {
         position: relative;
         cursor: pointer;
 
@@ -61,7 +62,20 @@
         }
     }
 
+    &[open] {
+        summary {
+            &::after {
+                content: "\e902";
+            }
 
+            & + p {
+                padding: 20px 10px 10px;
+            }
+        }
+    }
+
+
+    // TODO: Old code, need to remove in future
     .collapse {
         transition: none;
 
@@ -75,4 +89,6 @@
             padding: 20px 10px 10px;
         }
     }
+
+
 }

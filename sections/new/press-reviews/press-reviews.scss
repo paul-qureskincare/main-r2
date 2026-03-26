@@ -53,11 +53,14 @@
         }
 
         .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             cursor: pointer;
 
             img {
-                width: auto;
-                height: 29px;
+                @include img-fluid;
+                max-height: 25px;
                 opacity: 0.5;
 
                 @include md {
