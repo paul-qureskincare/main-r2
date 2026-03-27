@@ -72,8 +72,7 @@
         }
     }
 
-    /* stylelint-disable-next-line selector-class-pattern */
-    .page\.exclusive-holiday-bundle-deal & {
+    body[class="exclusive-holiday-bundle-deal"] & {
         padding-top: 60px;
         padding-bottom: 60px;
 
@@ -84,6 +83,48 @@
 
         article {
             text-align: left;
+        }
+    }
+
+    body[class="page.contact-us"] & {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: #f6f6f7;
+
+        article {
+            display: flex;
+            gap: 24px;
+            max-width: 670px;
+            font-size: 16px;
+
+            @include sm {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+
+            strong {
+                margin-right: auto;
+
+                @include sm {
+                    margin-right: 0;
+                }
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                @include sm {
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -9,7 +9,13 @@
                         {{ name }} {{#if save }}<div class="e-pill-save">Save {{ save }}</div>{{/if}}
                     </div>
                     <div class="c-subscribe-selector__price">
-                        {{> e-price current="{$dyn}" old=old-price highlight=old-price }}
+                        {{> e-price
+                            current="{$dyn}"
+                            old=price-old
+                            highlight=price-old
+                            strikethrough=price-strikethrough
+                            final=price-final
+                        }}
                     </div>
                     <div class="c-subscribe-selector__text">
                         {{{ text }}}

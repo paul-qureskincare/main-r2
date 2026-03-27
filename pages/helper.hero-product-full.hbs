@@ -131,203 +131,219 @@
                     </ul>
                 </article>
                 <hr />
-                {{> c-options-selector
-                    title="Select Your Color"
-                    list='[
-                        {
-                            "img": "sections/isolated/product-shower-filter/images/faucet_white.webp",
-                            "name": "White",
-                            "option": "color",
-                            "checked": true
-                        },
-                        {
-                            "img": "sections/isolated/product-shower-filter/images/faucet_black.webp",
-                            "name": "Black",
-                            "option": "color"
-                        },
-                        {
-                            "img": "sections/isolated/product-shower-filter/images/faucet_silver.webp",
-                            "name": "Silver",
-                            "option": "color"
-                        }
-                    ]'
-                }}
-                {{> c-supply-selector
-                    title="Select Your Supply"
-                    small="We recommend replacing your filter every 3 months."
-                    list='[
-                        {
-                            "name": "Buy 3 Months, Get 3 Months FREE",
-                            "desc": "12 Micro-Infusion Treatments",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-value": "Save 47%",
-                            "tag-up": true,
-                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "supply",
-                            "kits-left-hot": true,
-                            "checked": true
-                        },
-                        {
-                            "name": "3 Month Supply",
-                            "desc": "4 Micro-Infusion Treatments",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-value": "Save 37%",
-                            "option": "supply",
-                            "kits-left-normal": true
-                        },
-                        {
-                            "name": "3 Months Supply",
-                            "desc": "Faucet + 1 Filter",
-                            "price-highlight": false,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "Save 22%",
-                            "tag-up": false,
-                            "notify-row": true,
-                            "option": "supply"
-                        },
-                        {
-                            "name": "3 Months Supply",
-                            "desc": "Faucet + 1 Filter",
-                            "price-highlight": false,
-                            "save-pill": false,
-                            "tag-up": false,
-                            "option": "supply"
-                        },
-                        {
-                            "name": "6 Months Supply",
-                            "desc": "Faucet + 2 Filters",
-                            "price-old": true,
-                            "price-highlight": false,
-                            "save-pill": false,
-                            "save-value": "22% off",
-                            "tag-up": false,
-                            "tag-name": "Popular",
-                            "option": "supply"
-                        },
-                        {
-                            "name": "12 Months Supply",
-                            "desc": "Faucet + 4 Filters",
-                            "price-old": true,
-                            "price-highlight": false,
-                            "save-pill": false,
-                            "save-value": "47% off",
-                            "tag-up": false,
-                            "tag-name": "Best Value",
-                            "option": "supply"
-                        },
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/3_month_mixed.webp",
-                            "name": "12 Months Supply",
-                            "desc": "Faucet + 4 Filters",
-                            "price-old": true,
-                            "price-final": true,
-                            "price-strikethrough": true,
-                            "price-highlight": false,
-                            "option": "supply"
-                        }
-                    ]'
-                }}
-                {{> c-supply-selector
-                    classes="c-supply-selector--tiles"
-                    title="Select Your Supply"
-                    notify-tiles=true
-                    list='[
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
-                            "name": "6 Months",
-                            "desc": "(3 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-value": "38% OFF",
-                            "tag-up": true,
-                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "supply-tile",
-                            "checked": true
-                        },
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
-                            "name": "4 Months",
-                            "desc": "(2 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "25% OFF",
-                            "option": "supply-tile"
-                        },
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
-                            "name": "2 Months",
-                            "desc": "(1 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "option": "supply-tile"
-                        }
-                    ]'
-                }}
-                {{> c-subscribe-selector
-                    title="Select Your Delivery"
-                    list='[
-                        {
-                            "name": "Subscribe &",
-                            "save": "20%",
-                            "old-price": true,
-                            "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "subscribe",
-                            "checked": true,
-                            "text": "
-                                <p> One Time: Faucet + 1 Filter<br />
-                                Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
-                                <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
-                            "
-                        },
-                        {
-                            "name": "One-Time Purchase",
-                            "option": "subscribe",
-                            "text": "
-                                <p> One Time: Faucet + 1 Filter</p>
-                            "
-                        }
-                    ]'
-                }}
-                {{> c-payment-selector
-                    title="Select A Payment Option"
-                    list='[
-                        {
-                            "name": "Pay in full",
-                            "old-price": true,
-                            "option": "payment",
-                            "checked": true,
-                            "text": "One-time payment with:",
-                            "image": "assets/images/payment-icons-1.svg"
-                        },
-                        {
-                            "name": "Pay today only",
-                            "option": "payment",
-                            "text": "Monthly interest-free payments with:",
-                            "image": "assets/images/payment-icons-2.svg"
-                        }
-                    ]'
-                }}
-                <div class="c-buy-block">
-                    {{> c-order-button }}
-                    {{> c-certified-box }}
-                    <ul class="e-features-list">
-                        <li>
-                            {{> e-icon icon="guarantee" }}
-                            30-Day Money-Back Guarantee
-                        </li>
-                        <li>
-                            {{> e-icon icon="shipping-order" }}
-                            Free Shipping over {$dyn}
-                        </li>
-                    </ul>
+                <div class="purchase-form-wrapper">
+                    {{> c-options-selector
+                        title="Select Your Color"
+                        list='[
+                            {
+                                "img": "sections/isolated/product-shower-filter/images/faucet_white.webp",
+                                "name": "White",
+                                "option": "color",
+                                "checked": true
+                            },
+                            {
+                                "img": "sections/isolated/product-shower-filter/images/faucet_black.webp",
+                                "name": "Black",
+                                "option": "color"
+                            },
+                            {
+                                "img": "sections/isolated/product-shower-filter/images/faucet_silver.webp",
+                                "name": "Silver",
+                                "option": "color"
+                            }
+                        ]'
+                    }}
+                    {{> c-supply-selector
+                        title="Select Your Supply"
+                        small="We recommend replacing your filter every 3 months."
+                        list='[
+                            {
+                                "name": "Buy 3 Months, Get 3 Months FREE",
+                                "desc": "12 Micro-Infusion Treatments",
+                                "price-old": true,
+                                "price-highlight": true,
+                                "save-pill": true,
+                                "save-value": "Save 47%",
+                                "tag-up": true,
+                                "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                "option": "supply",
+                                "kits-left-hot": true,
+                                "checked": true
+                            },
+                            {
+                                "name": "3 Month Supply",
+                                "desc": "4 Micro-Infusion Treatments",
+                                "price-old": true,
+                                "price-highlight": true,
+                                "save-pill": true,
+                                "save-value": "Save 37%",
+                                "option": "supply",
+                                "kits-left-normal": true
+                            },
+                            {
+                                "name": "3 Months Supply",
+                                "desc": "Faucet + 1 Filter",
+                                "price-highlight": false,
+                                "save-pill": true,
+                                "save-pill-light": true,
+                                "save-value": "Save 22%",
+                                "tag-up": false,
+                                "notify-row": true,
+                                "option": "supply"
+                            },
+                            {
+                                "name": "3 Months Supply",
+                                "desc": "Faucet + 1 Filter",
+                                "price-highlight": false,
+                                "save-pill": false,
+                                "tag-up": false,
+                                "option": "supply"
+                            },
+                            {
+                                "name": "6 Months Supply",
+                                "desc": "Faucet + 2 Filters",
+                                "price-old": true,
+                                "price-highlight": false,
+                                "save-pill": false,
+                                "save-value": "22% off",
+                                "tag-up": false,
+                                "tag-name": "Popular",
+                                "option": "supply"
+                            },
+                            {
+                                "name": "12 Months Supply",
+                                "desc": "Faucet + 4 Filters",
+                                "price-old": true,
+                                "price-highlight": false,
+                                "save-pill": false,
+                                "save-value": "47% off",
+                                "tag-up": false,
+                                "tag-name": "Best Value",
+                                "option": "supply"
+                            },
+                            {
+                                "image": "sections/isolated/micro-infusion-pdp/images/3_month_mixed.webp",
+                                "name": "12 Months Supply",
+                                "desc": "Faucet + 4 Filters",
+                                "price-old": true,
+                                "price-final": true,
+                                "price-strikethrough": true,
+                                "price-highlight": false,
+                                "option": "supply"
+                            }
+                        ]'
+                    }}
+                    {{> c-supply-selector
+                        classes="c-supply-selector--tiles"
+                        title="Select Your Supply"
+                        notify-tiles=true
+                        list='[
+                            {
+                                "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                                "name": "6 Month Supply",
+                                "desc": "(12 Treatments)",
+                                "price-old": true,
+                                "price-highlight": true,
+                                "save-pill": true,
+                                "save-value": "38% OFF",
+                                "tag-up": true,
+                                "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                "option": "supply-tile",
+                                "checked": true
+                            },
+                            {
+                                "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                                "name": "4 Months Supply",
+                                "desc": "(6 Treatments)",
+                                "price-old": true,
+                                "price-highlight": true,
+                                "save-pill": true,
+                                "save-pill-light": true,
+                                "save-value": "25% OFF",
+                                "option": "supply-tile"
+                            },
+                            {
+                                "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                                "name": "2 Months Supply",
+                                "desc": "(3 Treatments)",
+                                "price-old": true,
+                                "price-highlight": true,
+                                "option": "supply-tile"
+                            }
+                        ]'
+                    }}
+                    {{> c-subscribe-selector
+                        title="Select Your Delivery"
+                        list='[
+                            {
+                                "name": "Subscribe &",
+                                "save": "20%",
+                                "price-old": true,
+                                "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                "option": "subscribe",
+                                "checked": true,
+                                "text": "
+                                    <p> One Time: Faucet + 1 Filter<br />
+                                    Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
+                                    <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
+                                "
+                            },
+                            {
+                                "name": "Subscribe &",
+                                "save": "20%",
+                                "price-old": true,
+                                "price-final": true,
+                                "price-strikethrough": true,
+                                "price-highlight": false,
+                                "option": "subscribe",
+                                "text": "
+                                    <p> One Time: Faucet + 1 Filter<br />
+                                    Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
+                                    <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
+                                "
+                            },
+                            {
+                                "name": "One-Time Purchase",
+                                "option": "subscribe",
+                                "text": "
+                                    <p> One Time: Faucet + 1 Filter</p>
+                                "
+                            }
+                        ]'
+                    }}
+                    {{> c-payment-selector
+                        title="Select A Payment Option"
+                        list='[
+                            {
+                                "name": "Pay in full",
+                                "old-price": true,
+                                "option": "payment",
+                                "checked": true,
+                                "text": "One-time payment with:",
+                                "image": "assets/images/payment-icons-1.svg"
+                            },
+                            {
+                                "name": "Pay today only",
+                                "option": "payment",
+                                "text": "Monthly interest-free payments with:",
+                                "image": "assets/images/payment-icons-2.svg"
+                            }
+                        ]'
+                    }}
+                    <div class="c-buy-block">
+                        {{> c-order-button }}
+                        {{> c-certified-box }}
+                        <ul class="e-features-list">
+                            <li>
+                                {{> e-icon icon="guarantee" }}
+                                30-Day Money-Back Guarantee
+                            </li>
+                            <li>
+                                {{> e-icon icon="shipping-order" }}
+                                Free Shipping over {$dyn}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 {{> c-next-batch }}
                 {{> c-limited-offer }}

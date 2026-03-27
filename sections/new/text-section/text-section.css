@@ -42,12 +42,33 @@
   font-size:.8em;
   -webkit-text-stroke:.85px;
 }
-.page\.exclusive-holiday-bundle-deal .text-section{
+body[class=exclusive-holiday-bundle-deal] .text-section{
   padding-top:60px;
   padding-bottom:60px;
 }
-.page\.exclusive-holiday-bundle-deal .text-section article{
+body[class=exclusive-holiday-bundle-deal] .text-section article{
   text-align:left;
+}
+body[class="page.contact-us"] .text-section{
+  padding-top:40px;
+  padding-bottom:40px;
+  background:#f6f6f7;
+}
+body[class="page.contact-us"] .text-section article{
+  display:flex;
+  gap:24px;
+  max-width:670px;
+  font-size:16px;
+}
+body[class="page.contact-us"] .text-section article strong{
+  margin-right:auto;
+}
+body[class="page.contact-us"] .text-section article a{
+  color:inherit;
+  text-decoration:underline;
+}
+body[class="page.contact-us"] .text-section article a:hover{
+  text-decoration:none;
 }
 @media screen and (max-width:767px){
   .text-section article{
@@ -65,8 +86,19 @@
     grid-column:auto;
     margin-top:12px;
   }
-  .page\.exclusive-holiday-bundle-deal .text-section{
+  body[class=exclusive-holiday-bundle-deal] .text-section{
     padding-top:40px;
     padding-bottom:40px;
+  }
+  body[class="page.contact-us"] .text-section article{
+    flex-direction:column;
+    gap:16px;
+    align-items:center;
+  }
+  body[class="page.contact-us"] .text-section article strong{
+    margin-right:0;
+  }
+  body[class="page.contact-us"] .text-section article span{
+    display:none;
   }
 }

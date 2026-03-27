@@ -28,7 +28,10 @@
 
         li {
             width: 100%;
-            max-width: calc(100% / 3);
+
+            &:first-child:last-child {
+                max-width: calc(100% / 3);
+            }
         }
 
         label {

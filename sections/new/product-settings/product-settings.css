@@ -261,6 +261,18 @@
   content:"\e957";
 }
 
+.e-icon-call-us:before{
+  content:"\e95f";
+}
+
+.e-icon-chat:before{
+  content:"\e960";
+}
+
+.e-icon-email:before{
+  content:"\e961";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

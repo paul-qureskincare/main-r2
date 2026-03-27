@@ -1,0 +1,119 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.contact-us {
+    $root: &;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include sm {
+            gap: 28px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include sm {
+            text-align: left;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+
+            @include sm {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: center;
+        text-align: left;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+        li {
+            display: grid;
+            grid-template: repeat(2, auto) / 68px auto;
+            gap: 10px 16px;
+            align-items: center;
+
+            &:not(:first-child) {
+                @include sm {
+                    padding-top: 20px;
+                    border-top: 1px solid #dfe0e0;
+                }
+            }
+        }
+
+        strong {
+            text-transform: uppercase;
+        }
+
+        .e-icon {
+            grid-row: 1 / -1;
+            font-size: 50px;
+            vertical-align: top;
+        }
+    }
+
+    &__feedback {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 24px;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+    }
+
+    &__feedback-field {
+        &:nth-child(n + 5) {
+            grid-column: 1 / -1;
+        }
+
+        &:has(input[type="checkbox"]) {
+            padding: 12px 0;
+
+            label {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                @include sm {
+                    align-items: flex-start;
+                    font-size: 16px;
+                    line-height: 1.25;
+                }
+            }
+        }
+
+        select {
+            background: #fff url("/assets/images/arrow_down.svg") calc(100% - 16px) 50% no-repeat;
+            background-size: 14px;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 150px;
+
+            @include sm {
+                max-width: none;
+            }
+        }
+    }
+
+
+
+}

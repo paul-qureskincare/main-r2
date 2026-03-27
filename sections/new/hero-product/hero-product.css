@@ -199,6 +199,18 @@
   content:"\e957";
 }
 
+.e-icon-call-us:before{
+  content:"\e95f";
+}
+
+.e-icon-chat:before{
+  content:"\e960";
+}
+
+.e-icon-email:before{
+  content:"\e961";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -502,6 +514,9 @@
 
 .e-price{
   display:inline-flex;
+  flex-wrap:wrap;
+  gap:0 8px;
+  line-height:1.25;
 }
 .e-price__current.highlight-price{
   color:var(--discount-color);
@@ -511,7 +526,9 @@
 }
 .e-price__main{
   display:flex;
-  gap:8px;
+  flex-wrap:wrap;
+  gap:0 8px;
+  align-items:center;
 }
 .e-price__old{
   color:#8b8c8e;
@@ -526,7 +543,11 @@
 .e-price--strikethrough{
   position:relative;
 }
-.e-price--strikethrough:before{
+.e-price--strikethrough .e-price__main{
+  position:relative;
+  flex-wrap:nowrap;
+}
+.e-price--strikethrough .e-price__main:before{
   position:absolute;
   top:10px;
   width:100%;
@@ -1124,6 +1145,8 @@
 }
 .c-options-selector ul li,.c-options-selector__list li{
   width:100%;
+}
+.c-options-selector ul li:first-child:last-child,.c-options-selector__list li:first-child:last-child{
   max-width:33.3333333333%;
 }
 .c-options-selector ul label,.c-options-selector__list label{
@@ -1361,12 +1384,15 @@
   margin-top:0;
 }
 .c-supply-selector--tiles .c-supply-selector__list{
-  flex-direction:row;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
   padding-top:24px;
 }
 .c-supply-selector--tiles .c-supply-selector__item{
-  width:100%;
   margin-top:0;
+}
+.c-supply-selector--tiles .c-supply-selector__label{
+  height:100%;
 }
 .c-supply-selector--tiles .c-supply-selector__label:has(.selector-tag-up){
   border-top-left-radius:0;
@@ -1384,12 +1410,17 @@
   display:flex;
   flex-direction:column;
   align-items:center;
+  height:100%;
   text-align:center;
 }
 .c-supply-selector--tiles .c-supply-selector__price{
   order:1;
+  margin-top:auto;
   margin-left:0;
   padding:4px 0;
+}
+.c-supply-selector--tiles .c-supply-selector__price .e-price__main{
+  justify-content:center;
 }
 .c-supply-selector--tiles .c-supply-selector__save{
   position:absolute;
@@ -1465,6 +1496,7 @@
   margin-left:auto;
 }
 .c-subscribe-selector__price .e-price{
+  justify-content:flex-end;
   font-size:18px;
   font-weight:400;
 }
@@ -1946,6 +1978,14 @@ body[class="page.qure-microinfusion-offer"] .hero-product__main article,body[cla
 .hero-product__main hr{
   max-width:500px;
   margin:0;
+}
+.hero-product__main .purchase-form-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.hero-product__main .purchase-form-wrapper .show-klaviyo-popup-landing{
+  margin-top:-20px;
 }
 .hero-product__main>picture{
   width:350px;

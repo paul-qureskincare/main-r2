@@ -147,6 +147,9 @@
 
 .e-price{
   display:inline-flex;
+  flex-wrap:wrap;
+  gap:0 8px;
+  line-height:1.25;
 }
 .e-price__current.highlight-price{
   color:var(--discount-color);
@@ -156,7 +159,9 @@
 }
 .e-price__main{
   display:flex;
-  gap:8px;
+  flex-wrap:wrap;
+  gap:0 8px;
+  align-items:center;
 }
 .e-price__old{
   color:#8b8c8e;
@@ -171,7 +176,11 @@
 .e-price--strikethrough{
   position:relative;
 }
-.e-price--strikethrough:before{
+.e-price--strikethrough .e-price__main{
+  position:relative;
+  flex-wrap:nowrap;
+}
+.e-price--strikethrough .e-price__main:before{
   position:absolute;
   top:10px;
   width:100%;
