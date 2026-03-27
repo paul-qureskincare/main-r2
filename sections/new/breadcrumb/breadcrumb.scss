@@ -4,13 +4,7 @@
 .breadcrumb {
     $root: &;
 
-    margin-top: -30px;
-    margin-bottom: -30px;
-
-    @include md {
-        margin-top: -20px;
-        margin-bottom: -20px;
-    }
+    margin-bottom: 0;  // TODO: Can be remove when vendor css will be removed
 
     .container {
         display: flex;
@@ -29,5 +23,13 @@
 
     .e-icon {
         font-size: 14px;
+    }
+
+    body[class="collections.best-sellers"] & {
+        margin-bottom: -40px;
+
+        @include md {
+            margin-bottom: -30px;
+        }
     }
 }

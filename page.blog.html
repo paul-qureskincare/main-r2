@@ -1,444 +1,424 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Blog - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Qure - Faucet Creative Brief</title>
-    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
-    <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/spacings.css">
-    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
-    <link href="assets/css/base.css" rel="stylesheet" />
-    <!-- Loading HTML Files -->
-    <script src="assets/js/fileloader.js"></script>
-</head>
-
-<body class="page.blog">
-
-    <!-- PAGE HEADER -->
-    <div id="site-header"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
-            loadScriptOnce('carousel', 'sections/global/header/js/carousel.js');
-        });
-    </script>
-    <!-- PAGE HEADER end-->
-    <!-- Announcement Bar -->
-    <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
-    <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
-        <div class="container">
-            <div class="announcement-bar-content text-center">
-                FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
+    <body class="page.blog">
+        <!-- PAGE HEADER -->
+        <div id="site-header-new"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("carousel", "sections/global/header/js/carousel.js");
+                loadScriptOnce("slider-script", "assets/js/slider-with-thumb.js");
+            });
+        </script>
+        <!-- PAGE HEADER end-->
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+        <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
+            <div class="container">
+                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
             </div>
         </div>
-    </div>
-    <link rel="stylesheet" href="sections/isolated/blogs/blog.css">
-    <div class="qure__section qure_blog_wrapper"
-        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;">
-        <div class="container">
-            <p>Blog > <strong>All Posts</strong></p>
-        </div>
-        <div class="qure_blogs mt-30 mt-md-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h2 class="banner-text--heading mb-30">Choose your topic</h2>
-                        <div class="d-flex flex-column flex-md-row gap-4 gap-md-5 mw" style="--mw:648px;">
-                            <a href="#" class="choose_blog_topic position-relative">
-                                <img src="sections/isolated/blogs/images/choose_blog_1.webp" alt=""
-                                    class="img-fluid d-none d-md-block">
-                                <img src="sections/isolated/blogs/images/choose_blog_1_mob.webp" alt=""
-                                    class="img-fluid d-md-none">
-                                <h6>LED Light Therapy</h6>
-                            </a>
-                            <a href="#" class="choose_blog_topic position-relative">
-                                <img src="sections/isolated/blogs/images/choose_blog_2.webp" alt=""
-                                    class="img-fluid d-none d-md-block">
-                                <img src="sections/isolated/blogs/images/choose_blog_2_mob.webp" alt=""
-                                    class="img-fluid d-md-none">
-                                <h6>Skin</h6>
-                            </a>
-                            <a href="#" class="choose_blog_topic position-relative">
-                                <img src="sections/isolated/blogs/images/choose_blog_3.webp" alt=""
-                                    class="img-fluid d-none d-md-block">
-                                <img src="sections/isolated/blogs/images/choose_blog_3_mob.webp" alt=""
-                                    class="img-fluid d-md-none">
-                                <h6>Skincare</h6>
-                            </a>
-                        </div>
-                        <div class="articles mt-40">
-                            <h2 class="banner-text--heading mb-30">Articles</h2>
-                            <div class="row g-5">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_1.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>July 04, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">The Skin Microbiome. Everything You Need to
-                                                    Know!</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
+
+        <!-- SECTIONS STACK -->
+        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+        <main class="sections-stack">
+            <!-- BREADCRUMB -->
+            <link rel="stylesheet" href="sections/new/breadcrumb/breadcrumb.css" />
+            <section class="breadcrumb">
+                <div class="container">
+                    <a href="#">Home</a>
+                    <i class="e-icon e-icon-chevron"></i>
+                    <strong>All Posts</strong>
+                </div>
+            </section>
+            <!-- BREADCRUMB END -->
+            <!-- BLOG -->
+            <link rel="stylesheet" href="sections/new/blog/blog.css" />
+            <section class="blog">
+                <div class="container">
+                    <div class="blog__sections">
+                        <h2>Choose your topic</h2>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <source media="(min-width:768px)" srcset="sections/isolated/blogs/images/choose_blog_1.webp" />
+                                        <img src="sections/isolated/blogs/images/choose_blog_1_mob.webp" alt="LED Light Therapy" />
+                                    </picture>
+                                    <h6>LED Light Therapy</h6>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <source media="(min-width:768px)" srcset="sections/isolated/blogs/images/choose_blog_2.webp" />
+                                        <img src="sections/isolated/blogs/images/choose_blog_2_mob.webp" alt="Skin" />
+                                    </picture>
+                                    <h6>Skin</h6>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <source media="(min-width:768px)" srcset="sections/isolated/blogs/images/choose_blog_3.webp" />
+                                        <img src="sections/isolated/blogs/images/choose_blog_3_mob.webp" alt="Skincare" />
+                                    </picture>
+                                    <h6>Skincare</h6>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="blog__posts">
+                        <h2>Articles</h2>
+                        <ul>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_1.webp" alt="The Skin Microbiome. Everything You Need to Know!" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 04, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">The Skin Microbiome. Everything You Need to Know!</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_2.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 12, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">What to Do After Microneedling Your Scalp</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_2.webp" alt="What to Do After Microneedling Your Scalp" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 12, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">What to Do After Microneedling Your Scalp</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_3.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 12, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">How to Clean a Derma Roller</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_3.webp" alt="How to Clean a Derma Roller" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 12, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">How to Clean a Derma Roller</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_4.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 06 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Microchanneling vs Microneedling</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_4.webp" alt="Microchanneling vs Microneedling" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 06, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Microchanneling vs Microneedling</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_5.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 06, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Microneedling vs Chemical Peel</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_5.webp" alt="Microneedling vs Chemical Peel" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 06, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Microneedling vs Chemical Peel</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_6.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 06, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Does a Derma Roller Hurt?</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_6.webp" alt="Does a Derma Roller Hurt?" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>July 06, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Does a Derma Roller Hurt?</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_7.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 05, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Microneedling vs PRP</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_7.webp" alt="Microneedling vs PRP" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>November 05, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Microneedling vs PRP</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_8.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 05, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Are Derma Rollers Safe?</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_8.webp" alt="Are Derma Rollers Safe?" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>November 05, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Are Derma Rollers Safe?</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="article">
-                                        <div class="article_img position-relative">
-                                            <img src="sections/isolated/blogs/images/article_9.webp" alt=""
-                                                class="img-fluid w-100">
-                                            <p class="tag_name">#all</p>
-                                        </div>
-                                        <div class="article_content border border-top-0 p-24">
-                                            <div class="d-flex justify-content-between mb-15">
-                                                <div class="article_date">
-                                                    <p>June 04, 2025</p>
-                                                </div>
-                                                <div class="read_time">
-                                                    <p>6 min read</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-between gap-5 title_bt_wrap">
-                                                <p class="article_title">Microneedling vs Botox</p>
-                                                <a href="" class="btn">Read More</a>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="c-post-tile">
+                                    <a href="#" class="c-post-tile__image">
+                                        <img src="sections/isolated/blogs/images/article_9.webp" alt="Microneedling vs Botox" />
+                                        <div class="e-pill-badge e-pill-badge--sm">#all</div>
+                                    </a>
+                                    <div class="c-post-tile__content">
+                                        <ul class="c-post-tile__time">
+                                            <li>November 12, 2025</li>
+                                            <li>6 min read</li>
+                                        </ul>
+                                        <h6 class="c-post-tile__title" href="#">Microneedling vs Botox</h6>
+                                        <a class="btn btn--primary" href="#">Read More</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="blog_pagination">
-                            <button class="prev" disabled>
-                                <i class="fa-regular fa-angle-left"></i>
-                            </button>
-                            <span class="page-info">1 / 12</span>
-                            <button class="next">
-                                <i class="fa-regular fa-angle-right"></i>
-                            </button>
+                            </li>
+                        </ul>
+                        <div>
+                            <button type="button" disabled="disabled"><i class="e-icon e-icon-chevron"></i></button>
+                            <div><strong>1</strong> / 12</div>
+                            <button type="button"><i class="e-icon e-icon-chevron"></i></button>
                         </div>
                     </div>
-                    <!-- most popular posts  -->
-                    <div class="col-md-4 d-none d-md-block">
-                        <div class="most_popular_posts pl-md-55">
-                            <p class="mb-4">Most Popular Posts</p>
-                            <div class="row gy-4">
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_1.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skin</p>
-                                            <p class="pop_post_title">Does Drinking Water Help Clear Your Skin?</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_2.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skincare</p>
-                                            <p class="pop_post_title">Benefits of Peptides for the Skin</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_3.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#LEDlighttherapy</p>
-                                            <p class="pop_post_title">How LED Therapy Can Transform Your Skin</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_4.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skin</p>
-                                            <p class="pop_post_title">21 Best Skin-Care Tips, According to Der...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_5.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skincare</p>
-                                            <p class="pop_post_title">Retinol/Retinoids - What are they and...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_6.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skincare</p>
-                                            <p class="pop_post_title">Can Vitamin C Help With Anti-Skin Aging?</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_7.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#LEDlighttherapy</p>
-                                            <p class="pop_post_title">How to Treat Acne Using Light Therapy...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_8.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#LEDlighttherapy</p>
-                                            <p class="pop_post_title">Skincare Questions You’re Too Afraid To...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_9.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skin</p>
-                                            <p class="pop_post_title">How Cortisol Affects the Skin: The St...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="#" class="popular_post d-flex gap-3">
-                                        <div class="popular_post_img">
-                                            <img src="sections/isolated/blogs/images/pop_post_10.webp" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="popular_post_content">
-                                            <p class="pop_post_tag">#skin</p>
-                                            <p class="pop_post_title">Beta-Glucan: The Saint Grail of Skin Hy...</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="blog__top-list">
+                        <h6>Most Popular Posts</h6>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_1.webp" alt="Does Drinking Water Help Clear Your Skin?" />
+                                    <span>#skin</span>
+                                    <p>Does Drinking Water Help Clear Your Skin?</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_2.webp" alt="Benefits of Peptides for the Skin" />
+                                    <span>#skincare</span>
+                                    <p>Benefits of Peptides for the Skin</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_3.webp" alt="How LED Therapy Can Transform Your Skin" />
+                                    <span>#LEDlighttherapy</span>
+                                    <p>How LED Therapy Can Transform Your Skin</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_4.webp" alt="21 Best Skin-Care Tips, According to Der..." />
+                                    <span>#skin</span>
+                                    <p>21 Best Skin-Care Tips, According to Der...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_5.webp" alt="Retinol/Retinoids - What are they and..." />
+                                    <span>#skincare</span>
+                                    <p>Retinol/Retinoids - What are they and...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_6.webp" alt="Can Vitamin C Help With Anti-Skin Aging?" />
+                                    <span>#skincare</span>
+                                    <p>Can Vitamin C Help With Anti-Skin Aging?</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_7.webp" alt="How to Treat Acne Using Light Therapy..." />
+                                    <span>#LEDlighttherapy</span>
+                                    <p>How to Treat Acne Using Light Therapy...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_8.webp" alt="Skincare Questions You’re Too Afraid To..." />
+                                    <span>#LEDlighttherapy</span>
+                                    <p>Skincare Questions You’re Too Afraid To...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_9.webp" alt="How Cortisol Affects the Skin: The St..." />
+                                    <span>#skin</span>
+                                    <p>How Cortisol Affects the Skin: The St...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/isolated/blogs/images/pop_post_10.webp" alt="Beta-Glucan: The Saint Grail of Skin Hy..." />
+                                    <span>#skin</span>
+                                    <p>Beta-Glucan: The Saint Grail of Skin Hy...</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- BLOG END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer-new"></div>
+        <div id="site-cart-drawer-new"></div>
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- CART AND FOOTER -->
-    <div id="site-footer"></div>
-    <div id="site-cart-drawer"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
-        });
-    </script>
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
 
-
-    <script src="assets/js/vendor.js" defer="defer"></script>
-    <script src="assets/js/header.js" defer="defer"></script>
-    <script src="assets/js/footer.js" defer="defer"></script>
-
-</body>
-
+        <!-- SCRIPTS -->
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
+    </body>
 </html>

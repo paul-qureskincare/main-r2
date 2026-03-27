@@ -444,6 +444,14 @@
   grid-template-columns:repeat(2, 1fr);
   gap:12px 24px;
 }
+.contact-us__feedback-success{
+  grid-column:1 /  -1;
+  margin-bottom:16px;
+  color:#0a0;
+  font-size:20px;
+  font-weight:500;
+  text-align:center;
+}
 .contact-us__feedback-field:nth-child(n+5){
   grid-column:1 /  -1;
 }
@@ -462,6 +470,9 @@
 .contact-us__feedback-field .btn{
   width:100%;
   max-width:150px;
+}
+.contact-us:has(.contact-us__feedback-success) .contact-us__feedback-field:nth-child(5){
+  grid-column:auto;
 }
 @media screen and (max-width:767px){
   .contact-us .container{

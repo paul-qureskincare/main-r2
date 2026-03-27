@@ -461,6 +461,7 @@
 }
 .c-dialog--notify-available{
   max-width:400px;
+  padding:0;
   border-radius:10px;
 }
 .c-dialog--notify-available form{
@@ -794,6 +795,8 @@
 .c-supply-selector--tiles .c-supply-selector__list{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
+}
+.c-supply-selector--tiles .c-supply-selector__list:has(.c-supply-selector__tag){
   padding-top:24px;
 }
 .c-supply-selector--tiles .c-supply-selector__item{
@@ -841,6 +844,12 @@
 }
 .c-supply-selector--tiles .c-supply-selector__tag .selector-tag-up{
   justify-content:center;
+}
+.c-supply-selector--tiles+button{
+  margin-top:-20px;
+}
+.c-supply-selector div:has(.c-next-batch){
+  margin-top:32px;
 }
 
 .c-subscribe-selector{
