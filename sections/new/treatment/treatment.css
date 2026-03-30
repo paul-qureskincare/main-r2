@@ -211,6 +211,18 @@
   content:"\e961";
 }
 
+.e-icon-email-fill:before{
+  content:"\e962";
+}
+
+.e-icon-pinterest:before{
+  content:"\e963";
+}
+
+.e-icon-whatsapp:before{
+  content:"\e964";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -848,7 +860,7 @@
 .c-supply-selector--tiles+button{
   margin-top:-20px;
 }
-.c-supply-selector div:has(.c-next-batch){
+.c-supply-selector .c-next-batch{
   margin-top:32px;
 }
 
@@ -1276,6 +1288,58 @@
 .c-buy-block .c-certified-box{
   margin-right:auto;
   margin-left:auto;
+}
+
+.c-next-batch{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:500px;
+  padding:14px 10px 20px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.c-next-batch p{
+  font-size:14px;
+  line-height:1.25;
+}
+.c-next-batch p:first-line{
+  font-size:16px;
+  font-weight:600;
+}
+.c-next-batch ul{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:12px;
+}
+.c-next-batch li{
+  display:flex;
+  justify-content:space-between;
+  padding:0 10px;
+  border:1px solid;
+  border-radius:20px;
+}
+.c-next-batch li:first-child{
+  border-color:#8b8c8e;
+  background:#dfe0e0;
+  opacity:.6;
+}
+.c-next-batch li:last-child{
+  position:relative;
+  z-index:1;
+  border-color:#91baec;
+}
+.c-next-batch li:last-child:before{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  z-index:-1;
+  width:var(--data-reserved);
+  border-radius:20px;
+  background:#91baec;
+  content:"";
 }
 
 .c-marked-list{

@@ -1,6 +1,6 @@
 {{#> new
     title="Blog"
-    body-class="page.blog"
+    body-class="blog"
 }}
 
 {{#> section-stack }}
@@ -9,8 +9,9 @@
         {{> e-icon icon="chevron" }}
         <strong>All Posts</strong>
     {{/breadcrumb}}
-    {{#> blog }}
-        <div class="blog__sections">
+
+    {{#> blog-section }}
+        <div class="blog-section__sections">
             <h2>Choose your topic</h2>
             <ul>
                 {{#parseJson
@@ -41,7 +42,7 @@
                 {{/parseJson}}
             </ul>
         </div>
-        <div class="blog__posts">
+        <div class="blog-section__posts">
             <h2>Articles</h2>
             <ul>
                 {{#parseJson
@@ -128,9 +129,9 @@
                 <button type="button">{{> e-icon icon="chevron"}}</button>
             </div>
         </div>
-        <div class="blog__top-list">
+        <div class="blog-section__top-list">
             <h6>Most Popular Posts</h6>
-            <ul>
+            <ul class="e-top-posts">
                 {{#parseJson
                     '[
                         {
@@ -195,7 +196,7 @@
                 {{/parseJson}}
             </ul>
         </div>
-    {{/blog }}
+    {{/blog-section }}
 {{/section-stack }}
 
 {{/new }}

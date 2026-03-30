@@ -56,15 +56,10 @@
 
         & > .e-pill-badge {
             position: absolute;
-            top: 18px;
-            left: 22px;
+            top: 10px;
+            left: 10px;
             z-index: 2;
             text-decoration: none;
-
-            @include sm {
-                top: 12px;
-                left: 12px;
-            }
 
             &:not(.e-pill-badge--fill) {
                 background: hsl(from currentcolor h s calc(l + 35));

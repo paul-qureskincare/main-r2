@@ -112,8 +112,8 @@
 }
 .c-product-tile__image>.e-pill-badge{
   position:absolute;
-  top:18px;
-  left:22px;
+  top:10px;
+  left:10px;
   z-index:2;
   text-decoration:none;
 }
@@ -221,10 +221,6 @@
 @media screen and (max-width:767px){
   .c-product-tile{
     gap:8px;
-  }
-  .c-product-tile__image>.e-pill-badge{
-    top:12px;
-    left:12px;
   }
   .c-product-tile__button .btn{
     display:none;

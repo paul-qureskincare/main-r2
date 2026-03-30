@@ -330,7 +330,7 @@
     }
 
     // Fixes for some bug in forms
-    div:has(.c-next-batch) {
+    .c-next-batch {
         margin-top: 32px;
     }
 }

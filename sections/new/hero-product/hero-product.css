@@ -211,6 +211,18 @@
   content:"\e961";
 }
 
+.e-icon-email-fill:before{
+  content:"\e962";
+}
+
+.e-icon-pinterest:before{
+  content:"\e963";
+}
+
+.e-icon-whatsapp:before{
+  content:"\e964";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -1440,7 +1452,7 @@
 .c-supply-selector--tiles+button{
   margin-top:-20px;
 }
-.c-supply-selector div:has(.c-next-batch){
+.c-supply-selector .c-next-batch{
   margin-top:32px;
 }
 

@@ -43,7 +43,10 @@
 }
 
 /* stylelint-disable selector-class-pattern */
-.collections\.best-sellers,
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
 .page\.derm-reviews,
 .page\.q-rejuvalight-pro-reviews,
 .page\.neck-decolletage-led-reviews,
@@ -87,7 +90,6 @@
 .page\.privacy-page,
 .page\.terms-and-conditions,
 .page\.contact-us,
-.page\.blog,
 .product\.silk-pillowcase,
 .product\.faucet-filter,
 .product\.faucet-filter-replacement,
@@ -98,12 +100,17 @@
 .product\.micro-infusion-targeted-patches,
 .product\.q-rejuvalight-pro-facewear,
 .product\.neck-decolletage-led,
+.article,
+.blog,
 .index,
 .cart {
     @include sections-stack;
 }
 
-.collections\.best-sellers,
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
 .page\.derm-reviews,
 .page\.q-rejuvalight-pro-reviews,
 .page\.neck-decolletage-led-reviews,
@@ -142,7 +149,10 @@
     }
 }
 
-.collections\.best-sellers,
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
 .page\.neck-decolletage-led-pro-content-guide,
 .page\.micro-infusion-brief,
 .page\.q-rejuvalight-pro-content-guide,
