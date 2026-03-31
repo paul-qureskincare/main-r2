@@ -858,11 +858,8 @@ body.article .post-article__text a.btn,body.article .post-article__text ul li a{
 body.article .post-article__text h2,body.article .post-article__text h3,body.article .post-article__text h4,body.article .post-article__text h5,body.article .post-article__text h6{
   font-family:TT Commons;
   font-weight:600;
-  margin-bottom:10px;
+  margin:40px 0 10px;
   font-size:24px;
-}
-body.article .post-article__text h2:not(:first-child),body.article .post-article__text h3:not(:first-child),body.article .post-article__text h4:not(:first-child),body.article .post-article__text h5:not(:first-child),body.article .post-article__text h6:not(:first-child){
-  margin-top:40px;
 }
 body.article .post-article__text .article_content>div{
   flex-direction:column;

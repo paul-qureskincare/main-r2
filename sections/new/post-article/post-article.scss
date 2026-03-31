@@ -291,12 +291,8 @@ body.article {
         h2, h3, h4, h5, h6 {
             font-family: 'TT Commons';
             font-weight: 600;
-            margin-bottom: 10px;
+            margin: 40px 0 10px;
             font-size: 24px;
-
-            &:not(:first-child) {
-                margin-top: 40px;
-            }
         }
         .article_content>div {
             flex-direction: column;
