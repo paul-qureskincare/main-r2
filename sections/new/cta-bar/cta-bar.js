@@ -4,7 +4,7 @@
 
     // Show/Hide CTA BAR
     document.addEventListener("scroll", function () {
-        const treatmentElement = document.getElementById("treatment");
+        const treatmentElement = document.getElementById("purchase-form");
         let isTreatmentVisible = false;
 
         if (treatmentElement) {
