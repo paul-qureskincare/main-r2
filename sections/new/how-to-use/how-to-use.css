@@ -223,6 +223,30 @@
   content:"\e964";
 }
 
+.e-icon-access-creatives:before{
+  content:"\e965";
+}
+
+.e-icon-ambassador-manager:before{
+  content:"\e966";
+}
+
+.e-icon-earn-money:before{
+  content:"\e967";
+}
+
+.e-icon-exclusive-perks:before{
+  content:"\e968";
+}
+
+.e-icon-social-collabs:before{
+  content:"\e969";
+}
+
+.e-icon-special-discounts:before{
+  content:"\e96a";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -509,35 +533,11 @@
   transform:rotate(-180deg);
 }
 
-.how-to-use .container{
-  margin-right:0;
-  padding-right:0;
-}
-.how-to-use__content{
-  display:grid;
-  grid-template:repeat(2, auto)/1fr 45vw;
-  gap:20px 60px;
-  align-items:center;
-}
-.how-to-use h2{
-  align-self:end;
-  margin-bottom:0;
-}
-.how-to-use h2+div{
-  align-self:start;
-}
-.how-to-use .c-swiper{
-  grid-row:1 /  -1;
-  grid-column:2;
-}
 .how-to-use .swiper-slide{
   position:relative;
   overflow:hidden;
   border:1px solid #dfe0e0;
   border-radius:10px;
-}
-.how-to-use .swiper-slide:last-child{
-  margin-right:16px;
 }
 .how-to-use .swiper-slide picture{
   position:relative;
@@ -568,21 +568,59 @@
   padding:28px 32px;
 }
 .how-to-use .swiper-slide h6{
+  margin-bottom:8px;
   font-family:inherit;
   font-weight:500;
 }
+.how-to-use:not(.how-to-use--center) .container{
+  margin-right:0;
+  padding-right:0;
+}
+.how-to-use:not(.how-to-use--center) .how-to-use__content{
+  display:grid;
+  grid-template:repeat(2, auto)/1fr 45vw;
+  gap:20px 60px;
+  align-items:center;
+}
+.how-to-use:not(.how-to-use--center) h2{
+  align-self:end;
+  margin-bottom:0;
+}
+.how-to-use:not(.how-to-use--center) h2+div{
+  align-self:start;
+}
+.how-to-use:not(.how-to-use--center) .c-swiper{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.how-to-use:not(.how-to-use--center) .swiper-slide:last-child{
+  margin-right:16px;
+}
+.how-to-use--center .how-to-use__content{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.how-to-use--center h2{
+  margin-bottom:0;
+  text-align:center;
+}
+.how-to-use--center .swiper-slide picture[data-index]:before{
+  color:#212428;
+  background:#c7e5db;
+}
 @media screen and (min-width:1200px){
-  .how-to-use .container{
+  .how-to-use:not(.how-to-use--center) .container{
     max-width:calc(100% - (100vw - 1172px) / 2 + 7.5px);
   }
 }
 @media screen and (min-width:1400px){
-  .how-to-use .container{
+  .how-to-use:not(.how-to-use--center) .container{
     max-width:calc(100% - (100vw - 1232px) / 2 + 7.5px);
   }
 }
 @media screen and (max-width:991px){
-  .how-to-use__content{
+  .how-to-use:not(.how-to-use--center) .how-to-use__content{
     -moz-column-gap:40px;
          column-gap:40px;
   }
@@ -590,27 +628,6 @@
 @media screen and (max-width:767px){
   .c-swiper-nav{
     margin-top:16px;
-  }
-  .how-to-use .container{
-    padding-right:15px;
-  }
-  .how-to-use__content{
-    display:flex;
-    flex-direction:column;
-  }
-  .how-to-use h2{
-    align-self:start;
-  }
-  .how-to-use .swiper-wrapper{
-    flex-direction:column;
-    gap:22px;
-  }
-  .how-to-use .swiper-slide{
-    display:flex;
-    gap:16px;
-    align-items:center;
-    border:0;
-    border-radius:0;
   }
   .how-to-use .swiper-slide picture{
     flex:none;
@@ -625,10 +642,37 @@
     width:100%;
     border-radius:5px;
   }
-  .how-to-use .swiper-slide article{
+  .how-to-use:not(.how-to-use--center) .container{
+    padding-right:15px;
+  }
+  .how-to-use:not(.how-to-use--center) .how-to-use__content{
+    display:flex;
+    flex-direction:column;
+  }
+  .how-to-use:not(.how-to-use--center) h2{
+    align-self:start;
+  }
+  .how-to-use:not(.how-to-use--center) .swiper-wrapper{
+    flex-direction:column;
+    gap:22px;
+  }
+  .how-to-use:not(.how-to-use--center) .swiper-slide{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    border:0;
+    border-radius:0;
+  }
+  .how-to-use:not(.how-to-use--center) .swiper-slide article{
     padding:0;
   }
-  .how-to-use .c-swiper-nav{
+  .how-to-use:not(.how-to-use--center) .c-swiper-nav{
     display:none;
+  }
+  .how-to-use--center .how-to-use__content{
+    gap:20px;
+  }
+  .how-to-use--center .swiper-slide article{
+    padding:16px 24px;
   }
 }

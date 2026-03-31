@@ -84,6 +84,7 @@
 .page\.micro-infusion-dark-spots,
 .page\.microinfusion,
 .page\.return-policy,
+.page\.affiliate,
 .page\.affiliate-terms-and-conditions,
 .page\.products-guide-page,
 .page\.subscriptions,
@@ -139,6 +140,7 @@
 .page\.all-in-one-serum-customer-reviews,
 .page\.micro-infusion-targeted-patches-customer-reviews,
 .page\.qure-microinfusion-pro-offer,
+.page\.affiliate,
 .index {
     .sections-stack {
         padding-top: 0;
@@ -186,5 +188,13 @@
         @include sm {
             padding-bottom: 0;
         }
+    }
+}
+
+// Fix bug with CTA section
+.shopify-section {
+    &:has(.qure__sticky-atc),
+    &:has(.cta-bar) {
+        position: absolute;
     }
 }

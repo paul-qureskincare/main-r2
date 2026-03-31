@@ -6,35 +6,7 @@
     <div class="container">
         <article class="how-to-use__content">
             <h2>{{ title }}</h2>
-            <div>
-                {{{ text }}}
-            </div>
-            <div
-                class="c-swiper"
-                data-swiper='{
-                    "slidesPerView": 1.75,
-                    "spaceBetween": 24,
-                    "loop": false,
-                    "enableOn": "desktop",
-                    "pagination": {
-                        "el": ".c-swiper-pagination",
-                        "type": "custom"
-                    },
-                    "navigation": {
-                        "prevEl": ".c-swiper-button-prev",
-                        "nextEl": ".c-swiper-button-next"
-                    }
-                }'
-            >
-                <div class="swiper-wrapper">
-                    {{> @partial-block}}
-                </div>
-                <div class="c-swiper-nav">
-                    <button class="c-swiper-button-prev"></button>
-                    <div class="c-swiper-pagination"></div>
-                    <button class="c-swiper-button-next"></button>
-                </div>
-            </div>
+            {{> @partial-block}}
         </article>
     </div>
 </section>

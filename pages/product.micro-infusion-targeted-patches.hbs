@@ -481,39 +481,64 @@
 
     {{#> how-to-use
         title="Targeted ingredients, thoughtfully applied"
-        text= "
-            <p>Ultra-fine, serum-infused micro-darts help apply ingredients in a precise, targeted way. The lightweight design allows the patch to sit comfortably on the skin while the formula is released over time for optimal contact.</p>
-        "
     }}
-        <div class="swiper-slide">
-            <picture data-index="1">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-1.webp" />
-                <img src="sections/new/how-to-use/images/patches-1-mob.webp" alt="Target" />
-            </picture>
-            <article>
-                <h6>Target</h6>
-                <p>80 micro-darts painlessly reach below the surface to target the look of fine lines and dullness. </p>
-            </article>
+        <div>
+            <p>Ultra-fine, serum-infused micro-darts help apply ingredients in a precise, targeted way. The lightweight design allows the patch to sit comfortably on the skin while the formula is released over time for optimal contact.</p>
         </div>
-        <div class="swiper-slide">
-            <picture data-index="2">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-2.webp" />
-                <img src="sections/new/how-to-use/images/patches-2-mob.webp" alt="Absorb" />
-            </picture>
-            <article>
-                <h6>Absorb</h6>
-                <p>The micro-darts gradually dissolve upon contact, allowing the serum to be absorbed for plumper-looking skin.</p>
-            </article>
-        </div>
-        <div class="swiper-slide">
-            <picture data-index="3">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-3.webp" />
-                <img src="sections/new/how-to-use/images/patches-3-mob.webp" alt="Finish" />
-            </picture>
-            <article>
-                <h6>Finish</h6>
-                <p>After 2 hours, the skin is left looking smoother and more radiant.</p>
-            </article>
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.75,
+                "spaceBetween": 24,
+                "loop": false,
+                "enableOn": "desktop",
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture data-index="1">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-1.webp" />
+                        <img src="sections/new/how-to-use/images/patches-1-mob.webp" alt="Target" />
+                    </picture>
+                    <article>
+                        <h6>Target</h6>
+                        <p>80 micro-darts painlessly reach below the surface to target the look of fine lines and dullness. </p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="2">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-2.webp" />
+                        <img src="sections/new/how-to-use/images/patches-2-mob.webp" alt="Absorb" />
+                    </picture>
+                    <article>
+                        <h6>Absorb</h6>
+                        <p>The micro-darts gradually dissolve upon contact, allowing the serum to be absorbed for plumper-looking skin.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="3">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/patches-3.webp" />
+                        <img src="sections/new/how-to-use/images/patches-3-mob.webp" alt="Finish" />
+                    </picture>
+                    <article>
+                        <h6>Finish</h6>
+                        <p>After 2 hours, the skin is left looking smoother and more radiant.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
         </div>
     {{/how-to-use }}
 

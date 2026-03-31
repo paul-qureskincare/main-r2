@@ -247,50 +247,75 @@
 
     {{#> how-to-use
         title="Bacteria defense that fits your day"
-        text= "
+    }}
+        <div>
             <p>Fresh, comfortable skin wherever you are. Dermal Mist comes in two sizes: a 100 ml bottle for consistent at-home use, and a 15 ml travel size for easy, on-the-go refreshment.</p>
             <p><strong>Use it in 4 ways.</strong></p>
-        "
-    }}
-        <div class="swiper-slide">
-            <picture data-index="1">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-1.webp" />
-                <img src="sections/new/how-to-use/images/dermal-mist-1-mob.webp" alt="Post-Workout Refresh" />
-            </picture>
-            <article>
-                <h6>Post-Workout Refresh</h6>
-                <p>Mist onto skin after workouts or throughout the day to help calm the look of flushed, stressed skin.</p>
-            </article>
         </div>
-        <div class="swiper-slide">
-            <picture data-index="2">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-2.webp" />
-                <img src="sections/new/how-to-use/images/dermal-mist-2-mob.webp" alt="Pillow Protector" />
-            </picture>
-            <article>
-                <h6>Pillow Protector</h6>
-                <p>Spritz on your pillowcase at night to keep your pillow fresh and cool.</p>
-            </article>
-        </div>
-        <div class="swiper-slide">
-            <picture data-index="3">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-3.webp" />
-                <img src="sections/new/how-to-use/images/dermal-mist-3-mob.webp" alt="Pre-Treatment Purifier" />
-            </picture>
-            <article>
-                <h6>Pre-Treatment Purifier</h6>
-                <p>Use after cleansing to hydrate and balance the skin.</p>
-            </article>
-        </div>
-        <div class="swiper-slide">
-            <picture data-index="4">
-                <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-4.webp" />
-                <img src="sections/new/how-to-use/images/dermal-mist-4-mob.webp" alt="Device Care" />
-            </picture>
-            <article>
-                <h6>Device Care</h6>
-                <p>After using your Q-Rejuvalight Pro, a light spray and wipe inside your device keeps it refreshed.</p>
-            </article>
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.75,
+                "spaceBetween": 24,
+                "loop": false,
+                "enableOn": "desktop",
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture data-index="1">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-1.webp" />
+                        <img src="sections/new/how-to-use/images/dermal-mist-1-mob.webp" alt="Post-Workout Refresh" />
+                    </picture>
+                    <article>
+                        <h6>Post-Workout Refresh</h6>
+                        <p>Mist onto skin after workouts or throughout the day to help calm the look of flushed, stressed skin.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="2">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-2.webp" />
+                        <img src="sections/new/how-to-use/images/dermal-mist-2-mob.webp" alt="Pillow Protector" />
+                    </picture>
+                    <article>
+                        <h6>Pillow Protector</h6>
+                        <p>Spritz on your pillowcase at night to keep your pillow fresh and cool.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="3">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-3.webp" />
+                        <img src="sections/new/how-to-use/images/dermal-mist-3-mob.webp" alt="Pre-Treatment Purifier" />
+                    </picture>
+                    <article>
+                        <h6>Pre-Treatment Purifier</h6>
+                        <p>Use after cleansing to hydrate and balance the skin.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="4">
+                        <source media="(min-width:768px)" srcset="sections/new/how-to-use/images/dermal-mist-4.webp" />
+                        <img src="sections/new/how-to-use/images/dermal-mist-4-mob.webp" alt="Device Care" />
+                    </picture>
+                    <article>
+                        <h6>Device Care</h6>
+                        <p>After using your Q-Rejuvalight Pro, a light spray and wipe inside your device keeps it refreshed.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
         </div>
     {{/how-to-use }}
 

@@ -179,7 +179,7 @@ border-radius: 10px;
 
 // Styles for page.build-your-own
 
-body[class="page.build-your-own"] {
+body.page\.build-your-own {
     overflow: visible;
 
     &:has(#announcement-bar) {

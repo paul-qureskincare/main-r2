@@ -5,82 +5,11 @@
 .how-to-use {
     $root: &;
 
-    .container {
-        margin-right: 0;
-        padding-right: 0;
-
-        @media screen and (min-width: 1200px) {
-            @include max-width(1172px);
-        }
-
-        @media screen and (min-width: 1400px) {
-            @include max-width(1232px);
-        }
-
-        @include sm {
-            padding-right: 15px;
-        }
-    }
-
-    &__content {
-        display: grid;
-        grid-template: repeat(2, auto) / 1fr 45vw;
-        gap: 20px 60px;
-        align-items: center;
-
-        @include md {
-            column-gap: 40px;
-        }
-
-        @include sm {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    h2 {
-        align-self: end;
-        margin-bottom: 0;
-
-        @include sm {
-            align-self: start;
-        }
-
-        & + div {
-            align-self: start;
-        }
-    }
-
-    .c-swiper {
-        grid-row: 1 / -1;
-        grid-column: 2;
-    }
-
-    .swiper-wrapper {
-        @include sm {
-            flex-direction: column;
-            gap: 22px;
-        }
-    }
-
     .swiper-slide {
         position: relative;
         overflow: hidden;
         border: 1px solid #dfe0e0;
         border-radius: 10px;
-
-        @include sm {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            border: 0;
-            border-radius: 0;
-        }
-
-        &:last-child {
-            margin-right: 16px;
-        }
-
 
         picture {
             position: relative;
@@ -119,21 +48,130 @@
 
         article {
             padding: 28px 32px;
-
-            @include sm {
-                padding: 0;
-            }
         }
 
         h6 {
+            margin-bottom: 8px;
             font-family: inherit;
             font-weight: 500;
         }
     }
 
-    .c-swiper-nav {
-        @include sm {
-            display: none;
+    &:not(.how-to-use--center) {
+        .container {
+            margin-right: 0;
+            padding-right: 0;
+
+            @media screen and (min-width: 1200px) {
+                @include max-width(1172px);
+            }
+
+            @media screen and (min-width: 1400px) {
+                @include max-width(1232px);
+            }
+
+            @include sm {
+                padding-right: 15px;
+            }
+        }
+
+        #{$root}__content {
+            display: grid;
+            grid-template: repeat(2, auto) / 1fr 45vw;
+            gap: 20px 60px;
+            align-items: center;
+
+            @include md {
+                column-gap: 40px;
+            }
+
+            @include sm {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        h2 {
+            align-self: end;
+            margin-bottom: 0;
+
+            @include sm {
+                align-self: start;
+            }
+
+            & + div {
+                align-self: start;
+            }
+        }
+
+        .c-swiper {
+            grid-row: 1 / -1;
+            grid-column: 2;
+        }
+
+        .swiper-wrapper {
+            @include sm {
+                flex-direction: column;
+                gap: 22px;
+            }
+        }
+
+        .swiper-slide {
+            @include sm {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                border: 0;
+                border-radius: 0;
+            }
+
+            &:last-child {
+                margin-right: 16px;
+            }
+
+            article {
+                @include sm {
+                    padding: 0;
+                }
+            }
+        }
+
+        .c-swiper-nav {
+            @include sm {
+                display: none;
+            }
+        }
+    }
+
+    &--center {
+        #{$root}__content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            @include sm {
+                gap: 20px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .swiper-slide {
+            picture {
+                &[data-index]::before {
+                    color: #212428;
+                    background: #c7e5db;
+                }
+            }
+
+            article {
+                @include sm {
+                    padding: 16px 24px;
+                }
+            }
         }
     }
 }

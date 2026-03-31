@@ -223,6 +223,30 @@
   content:"\e964";
 }
 
+.e-icon-access-creatives:before{
+  content:"\e965";
+}
+
+.e-icon-ambassador-manager:before{
+  content:"\e966";
+}
+
+.e-icon-earn-money:before{
+  content:"\e967";
+}
+
+.e-icon-exclusive-perks:before{
+  content:"\e968";
+}
+
+.e-icon-social-collabs:before{
+  content:"\e969";
+}
+
+.e-icon-special-discounts:before{
+  content:"\e96a";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -480,8 +504,8 @@
 }
 .c-dialog__close{
   position:absolute;
-  top:0;
-  right:0;
+  top:6px;
+  right:6px;
   padding:8px;
   font-size:18px;
   line-height:1;

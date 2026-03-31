@@ -223,6 +223,30 @@
   content:"\e964";
 }
 
+.e-icon-access-creatives:before{
+  content:"\e965";
+}
+
+.e-icon-ambassador-manager:before{
+  content:"\e966";
+}
+
+.e-icon-earn-money:before{
+  content:"\e967";
+}
+
+.e-icon-exclusive-perks:before{
+  content:"\e968";
+}
+
+.e-icon-social-collabs:before{
+  content:"\e969";
+}
+
+.e-icon-special-discounts:before{
+  content:"\e96a";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -635,16 +659,16 @@
   font-weight:600;
 }
 
-body[class="page.build-your-own"]{
+body.page\.build-your-own{
   overflow:visible;
 }
-body[class="page.build-your-own"]:has(#announcement-bar) .collection_block .qure_tabs_wrap{
+body.page\.build-your-own:has(#announcement-bar) .collection_block .qure_tabs_wrap{
   top:calc(var(--height-bar) + var(--height-header));
 }
-body[class="page.build-your-own"]:has(#header.scroll-hiding) .collection_block .qure_tabs_wrap{
+body.page\.build-your-own:has(#header.scroll-hiding) .collection_block .qure_tabs_wrap{
   top:0;
 }
-body[class="page.build-your-own"] .collection_block .qure_tabs_wrap{
+body.page\.build-your-own .collection_block .qure_tabs_wrap{
   position:sticky;
   top:var(--height-header);
   right:0;
@@ -654,11 +678,11 @@ body[class="page.build-your-own"] .collection_block .qure_tabs_wrap{
   margin-bottom:50px;
   transition:top .5s linear;
 }
-body[class="page.build-your-own"] .collection_block .filters{
+body.page\.build-your-own .collection_block .filters{
   gap:0;
   padding-bottom:0;
 }
-body[class="page.build-your-own"] .collection_block .filters li a{
+body.page\.build-your-own .collection_block .filters li a{
   display:block;
   padding:16px;
   border:0;
@@ -669,39 +693,39 @@ body[class="page.build-your-own"] .collection_block .filters li a{
   border-radius:0;
   background:none;
 }
-body[class="page.build-your-own"] .collection_block .filters li a.active{
+body.page\.build-your-own .collection_block .filters li a.active{
   color:inherit;
   border-bottom-color:inherit;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-action-inner{
+body.page\.build-your-own .collection_block .qure__product-action-inner{
   position:relative;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-action-inner input[name=added_in_cart]{
+body.page\.build-your-own .collection_block .qure__product-action-inner input[name=added_in_cart]{
   position:absolute;
   z-index:-1;
   opacity:0;
   visibility:hidden;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-action-inner .e-quantity{
+body.page\.build-your-own .collection_block .qure__product-action-inner .e-quantity{
   display:none;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-action-inner:has(input[name=added_in_cart]:checked) .add-cart-button{
+body.page\.build-your-own .collection_block .qure__product-action-inner:has(input[name=added_in_cart]:checked) .add-cart-button{
   display:none;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-action-inner:has(input[name=added_in_cart]:checked) .e-quantity{
+body.page\.build-your-own .collection_block .qure__product-action-inner:has(input[name=added_in_cart]:checked) .e-quantity{
   display:flex;
 }
-body[class="page.build-your-own"] .collection_block .qure__product-details{
+body.page\.build-your-own .collection_block .qure__product-details{
   padding:15px 0;
 }
-body[class="page.build-your-own"] .collection_block .projects{
+body.page\.build-your-own .collection_block .projects{
   position:relative;
   padding-top:30px;
 }
-body[class="page.build-your-own"] .collection_block .projects:not(:last-child){
+body.page\.build-your-own .collection_block .projects:not(:last-child){
   margin-bottom:40px;
 }
-body[class="page.build-your-own"] .collection_block .projects:before{
+body.page\.build-your-own .collection_block .projects:before{
   position:absolute;
   top:-12px;
   left:0;
@@ -710,7 +734,7 @@ body[class="page.build-your-own"] .collection_block .projects:before{
   background:#fff;
   content:attr(data-label);
 }
-body[class="page.build-your-own"] .collection_block .projects:after{
+body.page\.build-your-own .collection_block .projects:after{
   position:absolute;
   top:0;
   right:16px;
@@ -720,7 +744,7 @@ body[class="page.build-your-own"] .collection_block .projects:after{
   z-index:1;
   content:"";
 }
-body[class="page.build-your-own"] .collection_block .projects .add-cart-button{
+body.page\.build-your-own .collection_block .projects .add-cart-button{
   --btn-primary-bg:#f6f6f7;
   display:flex;
   align-items:center;
@@ -729,7 +753,7 @@ body[class="page.build-your-own"] .collection_block .projects .add-cart-button{
   border:0;
   color:inherit;
 }
-body[class="page.build-your-own"] .collection_block .projects .add-cart-button .e-icon{
+body.page\.build-your-own .collection_block .projects .add-cart-button .e-icon{
   padding:2px;
   font-size:8px;
   border:2px solid #000;
@@ -737,18 +761,18 @@ body[class="page.build-your-own"] .collection_block .projects .add-cart-button .
   -webkit-text-stroke:1px;
   vertical-align:top;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color{
+body.page\.build-your-own .collection_block .projects .select-color{
   display:flex;
   align-items:center;
   gap:3px;
   margin-bottom:20px;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color:before{
+body.page\.build-your-own .collection_block .projects .select-color:before{
   margin-right:3px;
   font-size:16px;
   content:attr(data-text);
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label{
+body.page\.build-your-own .collection_block .projects .select-color label{
   position:relative;
   width:30px;
   height:30px;
@@ -756,22 +780,22 @@ body[class="page.build-your-own"] .collection_block .projects .select-color labe
   border-radius:50%;
   cursor:pointer;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label input{
+body.page\.build-your-own .collection_block .projects .select-color label input{
   position:absolute;
   z-index:-1;
   opacity:0;
   visibility:hidden;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label:has(input[value=light]){
+body.page\.build-your-own .collection_block .projects .select-color label:has(input[value=light]){
   background:#fff;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label:has(input[value=silver]){
+body.page\.build-your-own .collection_block .projects .select-color label:has(input[value=silver]){
   background:linear-gradient(120deg, #e2e2e2 16%, #999a9a 50%, #e2e2e2 80%);
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label:has(input[value=dark]){
+body.page\.build-your-own .collection_block .projects .select-color label:has(input[value=dark]){
   background:#212428;
 }
-body[class="page.build-your-own"] .collection_block .projects .select-color label:has(input:checked){
+body.page\.build-your-own .collection_block .projects .select-color label:has(input:checked){
   border-color:#8b8c8e;
 }
 @media (min-width:768px){
@@ -785,10 +809,10 @@ body[class="page.build-your-own"] .collection_block .projects .select-color labe
   }
 }
 @media screen and (max-width:1120px){
-  body[class="page.build-your-own"] .collection_block .projects:before{
+  body.page\.build-your-own .collection_block .projects:before{
     padding:0 10px;
   }
-  body[class="page.build-your-own"] .collection_block .projects:after{
+  body.page\.build-your-own .collection_block .projects:after{
     right:10px;
   }
 }
@@ -810,14 +834,14 @@ body[class="page.build-your-own"] .collection_block .projects .select-color labe
   }
 }
 @media screen and (max-width:767px){
-  body[class="page.build-your-own"] .collection_block .qure_tabs_wrap{
+  body.page\.build-your-own .collection_block .qure_tabs_wrap{
     border-bottom:1px solid #dfe0e0;
   }
-  body[class="page.build-your-own"] .collection_block .filters li a{
+  body.page\.build-your-own .collection_block .filters li a{
     padding:12px;
     font-size:16px;
   }
-  body[class="page.build-your-own"] .collection_block .qure__product-action-inner{
+  body.page\.build-your-own .collection_block .qure__product-action-inner{
     display:block;
   }
 }
