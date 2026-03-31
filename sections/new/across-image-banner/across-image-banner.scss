@@ -78,6 +78,16 @@
             }
         }
 
+        article {
+            .btn {
+                max-width: 450px;
+
+                @include sm {
+                    margin: 0 auto;
+                }
+            }
+        }
+
         .c-certified-box {
             background: #fff;
 

@@ -12,6 +12,10 @@
 .text-section article h2:last-child{
   margin-bottom:0;
 }
+.text-section article em{
+  font-style:normal;
+  background:#c7e5db;
+}
 .text-section--guide{
   padding-top:60px;
   padding-bottom:60px;
@@ -42,32 +46,72 @@
   font-size:.8em;
   -webkit-text-stroke:.85px;
 }
-body[class=exclusive-holiday-bundle-deal] .text-section{
-  padding-top:60px;
-  padding-bottom:60px;
-}
-body[class=exclusive-holiday-bundle-deal] .text-section article{
-  text-align:left;
-}
-body[class="page.contact-us"] .text-section{
+.text-section--stats{
   padding-top:40px;
   padding-bottom:40px;
   background:#f6f6f7;
 }
-body[class="page.contact-us"] .text-section article{
+.text-section--stats article{
+  max-width:none;
+}
+.text-section--stats ul{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:40px;
+  justify-content:center;
+}
+.text-section--stats ul li{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:210px;
+  text-align:center;
+}
+.text-section--stats ul span{
+  font-family:var(--heading-font-family);
+  font-size:46px;
+  line-height:1.2;
+}
+.text-section--stats hr{
+  margin:32px 0 24px;
+  opacity:.1;
+}
+.text-section--stats .footnote{
+  display:flex;
+  gap:32px;
+  justify-content:center;
+  font-size:14px;
+  text-align:center;
+}
+.text-section--stats .footnote p{
+  margin:0;
+}
+body.page\.exclusive-holiday-bundle-deal .text-section{
+  padding-top:60px;
+  padding-bottom:60px;
+}
+body.page\.exclusive-holiday-bundle-deal .text-section article{
+  text-align:left;
+}
+body.page\.contact-us .text-section{
+  padding-top:40px;
+  padding-bottom:40px;
+  background:#f6f6f7;
+}
+body.page\.contact-us .text-section article{
   display:flex;
   gap:24px;
   max-width:670px;
   font-size:16px;
 }
-body[class="page.contact-us"] .text-section article strong{
+body.page\.contact-us .text-section article strong{
   margin-right:auto;
 }
-body[class="page.contact-us"] .text-section article a{
+body.page\.contact-us .text-section article a{
   color:inherit;
   text-decoration:underline;
 }
-body[class="page.contact-us"] .text-section article a:hover{
+body.page\.contact-us .text-section article a:hover{
   text-decoration:none;
 }
 @media screen and (max-width:767px){
@@ -86,19 +130,31 @@ body[class="page.contact-us"] .text-section article a:hover{
     grid-column:auto;
     margin-top:12px;
   }
-  body[class=exclusive-holiday-bundle-deal] .text-section{
+  .text-section--stats ul{
+    grid-template-columns:repeat(2, 1fr);
+    -moz-column-gap:24px;
+         column-gap:24px;
+  }
+  .text-section--stats ul span{
+    font-size:32px;
+  }
+  .text-section--stats .footnote{
+    flex-direction:column;
+    gap:8px;
+  }
+  body.page\.exclusive-holiday-bundle-deal .text-section{
     padding-top:40px;
     padding-bottom:40px;
   }
-  body[class="page.contact-us"] .text-section article{
+  body.page\.contact-us .text-section article{
     flex-direction:column;
     gap:16px;
     align-items:center;
   }
-  body[class="page.contact-us"] .text-section article strong{
+  body.page\.contact-us .text-section article strong{
     margin-right:0;
   }
-  body[class="page.contact-us"] .text-section article span{
+  body.page\.contact-us .text-section article span{
     display:none;
   }
 }

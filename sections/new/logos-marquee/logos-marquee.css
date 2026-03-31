@@ -20,6 +20,9 @@
   vertical-align:top;
   opacity:.6;
 }
+body.page\.become-stockist .logos-marquee{
+  margin-top:-60px;
+}
 
 @keyframes logos-marquee{
   0%{
@@ -34,5 +37,8 @@
   .logos-marquee .container{
     overflow:unset;
     animation:"logos-marquee" 20s linear infinite;
+  }
+  body.page\.become-stockist .logos-marquee{
+    margin-top:-40px;
   }
 }

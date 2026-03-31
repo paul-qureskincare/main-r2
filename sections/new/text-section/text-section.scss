@@ -19,6 +19,11 @@
                 margin-bottom: 0;
             }
         }
+
+        em {
+            font-style: normal;
+            background: #c7e5db;
+        }
     }
 
     // .text-section--guide
@@ -72,7 +77,71 @@
         }
     }
 
-    body[class="exclusive-holiday-bundle-deal"] & {
+    // .text-section--stats
+    &--stats {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: #f6f6f7;
+
+        article {
+            max-width: none;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            justify-content: center;
+
+            @include sm {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 24px;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                max-width: 210px;
+                text-align: center;
+            }
+
+            span {
+                font-family: var(--heading-font-family);
+                font-size: 46px;
+                line-height: 1.2;
+
+                @include sm {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        hr {
+            margin: 32px 0 24px;
+            opacity: 0.1;
+        }
+
+        .footnote {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+
+            @include sm {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.exclusive-holiday-bundle-deal & {
         padding-top: 60px;
         padding-bottom: 60px;
 
@@ -86,7 +155,8 @@
         }
     }
 
-    body[class="page.contact-us"] & {
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.contact-us & {
         padding-top: 40px;
         padding-bottom: 40px;
         background: #f6f6f7;

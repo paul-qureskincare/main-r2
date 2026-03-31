@@ -553,6 +553,9 @@
 .across-image-banner article .btn{
   margin-top:5px;
 }
+.across-image-banner--hero article .btn{
+  max-width:450px;
+}
 .across-image-banner--hero .c-certified-box{
   background:#fff;
 }
@@ -719,6 +722,9 @@
   }
   .across-image-banner--hero .container{
     justify-content:flex-start;
+  }
+  .across-image-banner--hero article .btn{
+    margin:0 auto;
   }
   .across-image-banner--hero .c-certified-box{
     margin-right:auto;
