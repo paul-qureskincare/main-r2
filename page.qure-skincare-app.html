@@ -1,323 +1,363 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Qure Skincare App - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
 
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Qure - Micro-Infusion Patches</title>
-   <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
-   <link rel="stylesheet" href="assets/css/vendor.css">
-   <link rel="stylesheet" href="assets/css/spacings.css">
-   <link href="assets/css/theme-fonts.css" rel="stylesheet" />
-   <link href="assets/css/base.css" rel="stylesheet" />
-   <!-- Loading HTML Files -->
-   <script src="assets/js/fileloader.js"></script>
-
-</head>
-
-<body class="page.qure-skincare-app">
-
-   <!-- PAGE HEADER -->
-   <div id="site-header"></div>
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         loadScriptOnce('carousel', 'sections/global/header/js/carousel.js');
-         loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
-      });
-   </script>
-   <!-- PAGE HEADER end-->
-   <!-- Announcement Bar -->
-   <link rel="stylesheet" href="sections/isolated/announcement/announcement-bar.css" />
-   <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
-      <div class="container">
-         <div class="announcement-bar-content text-center">
-            FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
-         </div>
-      </div>
-   </div>
-   <!-- Page banner -->
-   <link rel="stylesheet" href="sections/isolated/page-banner/page-banner.css" />
-   <div class="page__banner position-relative">
-      <picture>
-         <source media="(min-width:1920px)" srcset="sections/isolated/page-banner/images/hero-app.webp"
-            class="img-fluid" width="1440" height="557">
-         <source media="(min-width:1600px)" srcset="sections/isolated/page-banner/images/hero-app.webp"
-            class="img-fluid" width="1440" height="557">
-         <source media="(min-width:1100px)" srcset="sections/isolated/page-banner/images/hero-app.webp"
-            class="img-fluid" width="1440" height="557">
-         <source media="(min-width:767px)" srcset="sections/isolated/page-banner/images/hero-app.webp" class="img-fluid"
-            width="1440" height="557">
-         <source media="(min-width:540px)" srcset="sections/isolated/page-banner/images/hero-app-mob.webp"
-            class="img-fluid" width="1440" height="557">
-         <img src="sections/isolated/page-banner/images/hero-app-mob.webp" width="225" height="281" alt=""
-            class="img-fluid w-100">
-      </picture>
-      <div
-         class="page__banner-wrapper position-absolute d-flex align-items-start align-items-md-center justify-content-end top-0 bottom-0 start-0 end-0 pb-20 py-40">
-         <div class="container">
-            <div class="d-flex">
-               <div class="ctm-width ctm-color text-center text-md-start mx-auto mx-md-0"
-                  style="--ctm-width:450px; --txt-color-mob:#fff;--pg-title-mob: #212428;">
-                  <h1 class="page-banner-title">The only FDA-cleared LED light therapy mask with an app.
-                  </h1>
-                  <div class="ctm-width mt-20 d-flex justify-content-center justify-content-md-start gap-3">
-                     <a href="#"><img src="sections/isolated/page-banner/images/google-play.svg" alt="" /></a>
-                     <a href="#"><img src="sections/isolated/page-banner/images/app-store.svg" alt="" /></a>
-                  </div>
-               </div>
+    <body class="page.qure-skincare-app">
+        <!-- PAGE HEADER -->
+        <div id="site-header-new"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("carousel", "sections/global/header/js/carousel.js");
+                loadScriptOnce("slider-script", "assets/js/slider-with-thumb.js");
+            });
+        </script>
+        <!-- PAGE HEADER end-->
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+        <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
+            <div class="container">
+                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
             </div>
-         </div>
-      </div>
-   </div>
-   <!-- Page banner end -->
-   <link rel="stylesheet" href="sections/isolated/app/app.css" />
-   <div class="section-app qure__section">
-      <div class="container">
-         <div class="qure__section-header text-md-center mb-30 mb-md-60">
-            <h2 class="qure__section-heading mb-20">An app for out-of-this world skincare</h2>
-            <div class="qure__section-desc">Your skin's unique. So your treatment should be. Step into the world of
-               personalized skincare with the Qure Skincare App. It gives you full control of your clinical-grade LED
-               light therapy treatments. No more visits to beauty clinics, no more waiting rooms at the dermatologist.
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
+
+        <!-- SECTIONS STACK -->
+        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+        <main class="sections-stack">
+            <!-- ACROSS IMAGE BANNER -->
+            <link rel="stylesheet" href="sections/new/across-image-banner/across-image-banner.css" />
+            <section class="across-image-banner across-image-banner--hero">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="sections/isolated/page-banner/images/hero-app.webp" />
+                    <img src="sections/isolated/page-banner/images/hero-app-mob.webp" />
+                </picture>
+                <div class="container">
+                    <article>
+                        <h1>The only FDA-cleared LED&nbsp;light therapy mask with&nbsp;an&nbsp;app.</h1>
+                        <div class="c-app-stores c-app-stores--row">
+                            <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1" target="_blank" rel="nofollow">
+                                <img src="./assets/images/app_store_200x.svg" alt="App Store" />
+                            </a>
+                            <a href="https://apps.apple.com/us/app/qure-skincare/id1670113821" target="_blank" rel="nofollow">
+                                <img src="./assets/images/google_play_200x.svg" alt="Google Play" />
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- ACROSS IMAGE BANNER END -->
+
+            <!-- TEXT SECTION -->
+            <link rel="stylesheet" href="sections/new/text-section/text-section.css" />
+            <section class="text-section">
+                <div class="container">
+                    <article>
+                        <h2>An app for out-of-this world skincare</h2>
+                        <p>Your skin is unique, and your treatment should reflect that. The Qure Skincare App gives you full control of your clinical-grade LED sessions, all from home.</p>
+                        <p>No clinics, no waiting rooms, just personalized treatment when you need it.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- TEXT SECTION END -->
+
+            <!-- APP FEATURES -->
+            <link rel="stylesheet" href="sections/new/app-features/app-features.css" />
+            <section class="app-features">
+                <div class="container">
+                    <div
+                        class="c-swiper"
+                        data-swiper-thumbs=".c-swiper-texts"
+                        data-swiper='{
+                            "slidesPerView": 3,
+                            "spaceBetween": 0,
+                            "centeredSlides": true,
+                            "pagination": {
+                                "el": ".app-features .c-swiper-pagination",
+                                "type": "custom"
+                            },
+                            "navigation": {
+                                "prevEl": ".app-features .c-swiper-button-prev",
+                                "nextEl": ".app-features .c-swiper-button-next"
+                            }
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-1.webp" alt="Customize Your Treatments" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-2.webp" alt="Plan and Schedule Your Routine" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-3.webp" alt="Get Reminders" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-4.webp" alt="Track Your Progress" />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="c-swiper c-swiper-texts"
+                        data-swiper='{
+                            "slidesPerView": 1,
+                            "spaceBetween": 16,
+                            "allowTouchMove": false
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h6>Customize Your Treatments</h6>
+                                <p>Customize your LED treatments for a personalized program that’s unique to your skin’s profile.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Plan and Schedule Your Routine</h6>
+                                <p>The Qure planner shows your treatment history and scheduled treatments in a monthly calendar.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Get Reminders</h6>
+                                <p>Schedule in your treatments on your own time. Get reminders straight to your phone so you never miss a treatment.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Track Your Progress</h6>
+                                <p>See your skin change over time with progress photos, notes, and treatment history in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-swiper-nav">
+                        <button class="c-swiper-button-prev"></button>
+                        <div class="c-swiper-pagination"></div>
+                        <button class="c-swiper-button-next"></button>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("swiper", "assets/js-new/swiper.js");
+                });
+            </script>
+            <!-- APP FEATURES END -->
+
+            <!-- PRESS REVIEWS -->
+            <link rel="stylesheet" href="sections/new/press-reviews/press-reviews.css" />
+            <section class="press-reviews">
+                <div class="container">
+                    <h6>FEATURED IN</h6>
+                    <div
+                        class="c-swiper"
+                        data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
+                        data-swiper='{
+                                "slidesPerView": 1,
+                                "spaceBetween": 16,
+                                "loop": true,
+                                "autoplay": {
+                                    "delay": 5000
+                                }
+                            }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h4>“The professional grade is the perfect addition to any at-home skincare routine.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“My skin actually seems considerable brighter and smoother! It’s simple, fast, and effective enough to become a daily habit.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“The results are blatant — my glow after using the treatment speaks for itself. You'll notice hydrated, radiant, and healthy-looking skin.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="c-swiper c-swiper-thumbs"
+                        data-swiper='{
+                                "slidesPerView": 3,
+                                "spaceBetween": 30,
+                                "breakpoints": {
+                                    "992": {
+                                        "slidesPerView": 5,
+                                        "spaceBetween": 50
+                                    }
+                                }
+                            }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/vogue-black.svg" alt="Vogue" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/women-health.svg" alt="Women Health" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/popsugar.svg" alt="Popsugar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/cosmopolitan.svg" alt="Cosmopolitan" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/gq.svg" alt="QG" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("swiper", "assets/js-new/swiper.js");
+                });
+            </script>
+            <!-- PRESS REVIEWS END -->
+
+            <!-- BASE SECTION -->
+            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+            <section class="base-section base-section--simple-grid base-section--reverse">
+                <div class="container">
+                    <article>
+                        <h2>Personalized skincare awaits</h2>
+                        <div class="wistia-embed-video">
+                            <div class="wistia_responsive_padding">
+                                <div class="wistia_responsive_wrapper">
+                                    <div class="wistia_embed wistia_async_xdk9firq7i seo=false videoFoam=true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="c-app-stores c-app-stores--row">
+                                <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1" target="_blank" rel="nofollow">
+                                    <img src="./assets/images/app_store_200x.svg" alt="App Store" />
+                                </a>
+                                <a href="https://apps.apple.com/us/app/qure-skincare/id1670113821" target="_blank" rel="nofollow">
+                                    <img src="./assets/images/google_play_200x.svg" alt="Google Play" />
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
+                });
+            </script>
+            <!-- BASE SECTION END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="ctm-width mx-auto app-thumbs-container" style="--ctm-width:665px;">
-            <center-slide-thumbs class="qure__center-wrapper">
-               <div class="mt-3 mw-mob-100">
-                  <!-- Thumbnails start-->
-                  <div class="swiper qure_app-imgs"
-                     data-loop="false"
-                     data-looped-slides="3"
-                     data-centered="true"
-                     data-slides="3"
-                     data-spacing="10"
-                     data-pagination=".app-pagination"
-                     data-pagination-fraction="true"
-                     data-navigation-next=".swiper-next"
-                     data-navigation-prev=".swiper-prev"
-                     data-thumbs=".qure_thumb-slider"
-                     data-desktop="3"
-                     data-tablet="3"
-                     data-mobile="2">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <div class="app__thumb">
-                           <img src="sections/isolated/app/images/1.webp" class="img-fluid" alt="">
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="app__thumb">
-                           <img src="sections/isolated/app/images/2.webp" class="img-fluid" alt="">
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="app__thumb">
-                           <img src="sections/isolated/app/images/3.webp" class="img-fluid" alt="">
-                        </div>
-                     </div>
-                  </div>
-                  </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer-new"></div>
+        <div id="site-cart-drawer-new"></div>
 
-               </div>
-               <!-- Galler start-->
-               <div class="swiper qure_thumb-slider qure__center-gallery" 
-                  data-slides="1"
-                  data-spacing="10"
-                  data-freemode="true"
-                  data-watch-progress="true"
-                  data-desktop="1"
-                  data-tablet="1"
-                  data-mobile="1">
-                  <div class="swiper-wrapper" style="--perload-gap: 10px" data-nav-thumb>
-                     <div class="swiper-slide">
-                        <div class="app__content text-center my-20">
-                           <h6 class="fs-20 fs-md-24 fm-body fw-500">Customize Your Treatments</h6>
-                           <p>Customize your LED treatments for a personalized program that’s unique to your skin’s
-                              profile. Choose between the Pro-Aging or Anti-Breakout treatment on 5 facial areas to
-                              treat your specific skin concerns.</p>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="app__content text-center my-20">
-                           <h6 class="fs-20 fs-md-24 fm-body fw-500">Plan and Schedule Your Routine</h6>
-                           <p>The Qure planner shows your treatment history and scheduled treatments in a monthly
-                              calendar. View your total summary of completed challenges, monthly and yearly treatments.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="app__content text-center my-20">
-                           <h6 class="fs-20 fs-md-24 fm-body fw-500">Get Reminders</h6>
-                           <p>Schedule in your LED treatments on your own time. Get reminders straight to your phone so
-                              you never miss a treatment, consistency is key to seeing the best results!</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4">
-                     <div class="swiper-prev  qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i></div>
-                     <div class="app-pagination position-relative bottom-0 w-auto"></div>
-                     <div class="swiper-next  qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i></div>
-                  </div>
-               </div>
-               <!-- Galler End-->
-            </center-slide-thumbs>
-         </div>
-      </div>
-   </div>
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         loadScriptOnce('center-thumbs', 'assets/js/slider-thumb-centerslide.js');
-      });
-   </script>
-
-   <!-- -- press slider app out start -- -->
-   <link rel="stylesheet" href="sections/isolated/press_slider/press-slider.css">
-   <div class="press_slider bg-light qure__section">
-      <div class="container">
-         <div class="press_bl py-2 mw-mob-100">
-            <div class="p_bl_header text-center mb-30 mb-md-50">
-               <p class="fs-18 fw-500 fm-body">FEATURED IN</p>
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
             </div>
-            <slide-with-thumbs class="qure__swiper-wrapper">
-               <!-- Galler start-->
-               <div class="swiper qure__product-gallery qure__swiper-gallery ctm_cls_press_slider"
-                  data-section-id="tp-gallery-desktop" data-mobile="3" data-tablet="3" data-desktop="4"
-                  data-autoplay="true" data-loop="true" data-spacing="0">
-                  <div class="swiper-wrapper" style="--perload-gap: 10px" data-nav-thumb>
-                     <div class="swiper-slide">
-                        “The professional grade is the perfect addition to any at-home skincare routine.”
-                     </div>
-                     <div class="swiper-slide">
-                        "Treatment time is only three minutes—among the fastest of all devices."
-                     </div>
-                     <div class="swiper-slide">
-                        “A multi-use LED mask with five different light setting options to plump, smooth, and rejuvenate
-                        all skin types.”
-                     </div>
-                     <div class="swiper-slide">
-                        “The combination of colors allows you to customize which lights are used, maximizing its
-                        benefits to help your skin... ”
-                     </div>
-                     <div class="swiper-slide">
-                         “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every
-                        skincare concern you could imagine.”
-                     </div>
-                  </div>
-               </div>
-               <!-- Galler End-->
-               <div class="swiper-thumbnail-press-slider mt-3">
-                  <!-- Thumbnails start-->
-                  <div
-                     class="swiper qure__product-gallery tp-thumbnails-desktop qure__swiper-gallery-thumbnails qure__logo-slider"
-                     data-section-id="tp-thumbnails-desktop" data-mobile="3" data-tablet="5" data-desktop="5"
-                     data-autoplay="true" data-loop="false" data-spacing="40">
-                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                           <div class="app_press_info">
-                              <img src="sections/isolated/press_slider/images/vogue-black.svg" alt="">
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="app_press_info">
-                              <img src="sections/isolated/press_slider/images/women-health.svg" alt="">
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="app_press_info">
-                              <img src="sections/isolated/press_slider/images/elle.svg" alt="">
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="app_press_info">
-                              <img src="sections/isolated/press_slider/images/cosmopolitan.svg" alt="">
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="app_press_info">
-                              <img src="sections/isolated/press_slider/images/gq.svg" alt="">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </slide-with-thumbs>
-         </div>
-      </div>
-   </div>
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
-      });
-   </script>
-   <!-- press slider app out end -->
+        </div>
 
-   <!-- Banner with text -->
-   <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-   <div id="how_it_works" class="qure__section banner-with-text"
-      style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 50px;">
-      <div class="container">
-         <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:32px;">
-            <div class="col-md-6 custom__block">
-               <div class="treat_breakouts">
-                  <!-- <img src="sections/global/banner-with-text/images/mob-app.webp" alt="" class="img-fluid rounded-10" /> -->
-                  <!-- <video class="img-fluid" autoplay="" loop="" muted="" playsinline="">
-                     <source src="sections/global/banner-with-text/images/app_qure.webm" type="video/webm"> 
-                  </video> -->
-                       <div class="wistia_responsive_padding" style="position:relative;">
-                           <div class="wistia_responsive_wrapper"
-                              style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                              <div class="wistia_embed wistia_async_xdk9firq7i seo=false videoFoam=true"
-                                    style="height:100%;position:relative;width:100%">
-                                    <div class="wistia_swatch"
-                                       style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                                       <img src="https://fast.wistia.com/embed/medias/xdk9firq7i/swatch"
-                                          style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
-                                          alt="" aria-hidden="true"
-                                          onload="this.parentNode.style.opacity=1;"/> 
-                                    </div>
-                              </div>
-                           </div>
-                        </div> 
-
-
-               </div>
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
             </div>
-            <div class="col-md-6 custom__block">
-               <div class="banner-with-text-content d-inline-flex flex-column text-center">
-                  <h2 class="banner-text--heading">Personalized skincare awaits</h2>
-                  <div
-                     class="ctm-width mt-20 d-flex justify-content-center justify-content-md-center gap-3 row-cols-md-2 px-10">
-                     <a
-                        href="https://apps.apple.com/us/app/qure-skincare/id1537832613?ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340"><img
-                           src="sections/global/banner-with-text/images/apple.webp" alt="" class="w-100"></a>
-                     <a
-                        href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1"><img
-                           src="sections/global/banner-with-text/images/google.webp" alt="" class="w-100"></a>
+        </dialog>
 
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <script>
-         document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-         });
-      </script>
-   <!-- Banner with text end-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
 
-   <!-- CART AND FOOTER -->
-   <div id="site-footer"></div>
-   <div id="site-cart-drawer"></div>
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
-      });
-   </script>
-   <script src="assets/js/vendor.js" defer="defer"></script>
-   <script src="assets/js/header.js" defer="defer"></script>
-   <script src="assets/js/footer.js" defer="defer"></script>
-</body>
-
+        <!-- SCRIPTS -->
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
+    </body>
 </html>

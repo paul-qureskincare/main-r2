@@ -817,6 +817,23 @@
   font-size:16px;
 }
 
+.c-app-stores{
+  display:inline-flex;
+  flex-direction:column;
+  gap:12px;
+}
+.c-app-stores a{
+  width:100%;
+}
+.c-app-stores img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-app-stores--row{
+  flex-direction:row;
+}
+
 .base-section article{
   display:grid;
   grid-template-rows:auto minmax(-webkit-min-content, 0) auto;
@@ -1037,6 +1054,10 @@
   padding:4px;
   border:1px solid;
   border-radius:50%;
+}
+.base-section .c-app-stores{
+  width:100%;
+  max-width:410px;
 }
 .base-section .c-dialog{
   max-width:900px;

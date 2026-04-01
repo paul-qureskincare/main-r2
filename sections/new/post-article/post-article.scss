@@ -7,6 +7,7 @@
 .post-article {
     $root: &;
 
+    // .post-article__article
     &__article {
         display: grid;
         grid-template: repeat(2, auto) / 1fr min(342px, 34%);
@@ -22,6 +23,7 @@
         }
     }
 
+    // .post-article__header
     &__header {
         display: grid;
         grid-template: repeat(5, auto) / repeat(2, 1fr);
@@ -43,6 +45,7 @@
         }
     }
 
+    // .post-article__breadcrumb
     &__breadcrumb {
         display: flex;
         gap: 10px;
@@ -62,10 +65,12 @@
         }
     }
 
+    // .post-article__title
     &__title {
         margin-bottom: 0;
     }
 
+    // .post-article__image
     &__image {
         grid-row: 1 / -1;
         grid-column: 2;
@@ -76,11 +81,13 @@
         }
 
         img {
+            width: 100%;
             @include img-fluid;
             border-radius: 10px;
         }
     }
 
+    // .post-article__share
     &__share {
         display: flex;
         justify-content: space-between;
@@ -98,7 +105,7 @@
 
 
 
-    // post__top-list
+    // .post-article__top-list
     &__top-list {
         grid-row: 2 / -1;
         grid-column: 2;
@@ -113,6 +120,7 @@
         }
     }
 
+    // .post-article__related
     &__related {
         margin-top: 60px;
 
@@ -121,6 +129,7 @@
         }
     }
 
+    // .post-article__text
     &__text {
         .inline-promo-card {
             position: relative;

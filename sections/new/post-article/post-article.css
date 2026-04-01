@@ -675,6 +675,7 @@
   grid-column:2;
 }
 .post-article__image img{
+  width:100%;
   display:block;
   max-width:100%;
   height:auto;

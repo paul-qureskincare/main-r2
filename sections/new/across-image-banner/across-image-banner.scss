@@ -2,6 +2,7 @@
 @use "@elements/e-icon" as *;
 @use "@elements/e-discount-badge" as *;
 @use "@components/c-certified-box" as *;
+@use "@components/c-app-stores" as *;
 
 @mixin banner-height($height, $width) {
     height: calc(100vw * $height / $width);
@@ -94,6 +95,14 @@
             @include sm {
                 margin-right: auto;
                 margin-left: auto;
+            }
+        }
+
+        .c-app-stores {
+            max-width: 300px;
+
+            @include sm {
+                align-self: center;
             }
         }
 

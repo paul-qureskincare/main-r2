@@ -514,6 +514,23 @@
   background:#fff;
 }
 
+.c-app-stores{
+  display:inline-flex;
+  flex-direction:column;
+  gap:12px;
+}
+.c-app-stores a{
+  width:100%;
+}
+.c-app-stores img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-app-stores--row{
+  flex-direction:row;
+}
+
 .across-image-banner{
   position:relative;
   z-index:1;
@@ -558,6 +575,9 @@
 }
 .across-image-banner--hero .c-certified-box{
   background:#fff;
+}
+.across-image-banner--hero .c-app-stores{
+  max-width:300px;
 }
 .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
   height:38.1944444444vw;
@@ -733,6 +753,9 @@
   .across-image-banner--hero .c-certified-box{
     margin-right:auto;
     margin-left:auto;
+  }
+  .across-image-banner--hero .c-app-stores{
+    align-self:center;
   }
   .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
     height:106.6666666667vw;
