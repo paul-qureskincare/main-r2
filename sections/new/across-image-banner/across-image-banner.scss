@@ -379,4 +379,15 @@
             }
         } */
     }
+
+    &--sm {
+        .container {
+            @include banner-height(270, 1440);
+
+            @include sm {
+                justify-content: flex-start;
+                @include banner-height(375, 563);
+            }
+        }
+    }
 }

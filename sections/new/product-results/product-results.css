@@ -170,10 +170,44 @@
   align-items:center;
   justify-content:center;
 }
-.c-visual-compare-card article span{
+.c-visual-compare-card article>span{
   padding:6px 20px;
   border-radius:30px;
   background:var(--c-visual-compare-card-pill-color);
+}
+.c-visual-compare-card article:has(a){
+  display:grid;
+  grid-template:repeat(2, auto)/auto 1fr;
+  gap:24px 12px;
+}
+.c-visual-compare-card article:has(a) p{
+  display:flex;
+}
+.c-visual-compare-card article:has(a) a{
+  display:flex;
+  grid-column:1 /  -1;
+  gap:12px;
+  align-items:center;
+  padding:12px 16px;
+  color:inherit;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.c-visual-compare-card article:has(a) a:hover{
+  background:#c8e6dc;
+}
+.c-visual-compare-card article:has(a) a span{
+  text-decoration:underline;
+}
+.c-visual-compare-card article:has(a) img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  max-width:55px;
+}
+.c-visual-compare-card article:has(a) .e-icon{
+  margin-left:auto;
+  font-size:14px;
 }
 
 .product-results__header{

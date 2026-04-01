@@ -669,6 +669,10 @@
   line-height:1;
   text-align:center;
 }
+.across-image-banner--sm .container{
+  height:18.75vw;
+  max-height:270px;
+}
 @media screen and (max-width:1199px){
   .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
     max-width:540px;
@@ -776,5 +780,10 @@
   }
   .across-image-banner--holidays article small{
     display:none;
+  }
+  .across-image-banner--sm .container{
+    justify-content:flex-start;
+    height:66.6074600355vw;
+    max-height:375px;
   }
 }

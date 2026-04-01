@@ -795,16 +795,19 @@ ul.list-dots {
     border-color:var(--btn-primary-bg)
 }
 
-.btn--primary:hover,.btn:hover,
-.btn--primary:active,.btn:active,
-.qure-filter-link.active,.qure-filter-link:hover,
-.lvideo-wrap .lvideo-close:hover{
-    background-color:var(--btn-primary-bg-hover);
-    color:var(--btn-primary-color-hover);
-    border-color:var(--btn-primary-bg-hover);
-    text-decoration: none;
-    box-shadow: none  !important;
+@media (hover: hover) {
+    .btn--primary:hover,.btn:hover,
+    .btn--primary:active,.btn:active,
+    .qure-filter-link.active,.qure-filter-link:hover,
+    .lvideo-wrap .lvideo-close:hover{
+        background-color:var(--btn-primary-bg-hover);
+        color:var(--btn-primary-color-hover);
+        border-color:var(--btn-primary-bg-hover);
+        text-decoration: none;
+        box-shadow: none  !important;
+    }
 }
+
 .btn--primary-white{
     --btn-primary-bg:#fff;
     --btn-primary-color:#212428;

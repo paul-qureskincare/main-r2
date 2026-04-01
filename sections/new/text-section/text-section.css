@@ -72,6 +72,10 @@
   font-size:46px;
   line-height:1.2;
 }
+body.page\.our-story .text-section--stats ul span{
+  font-size:26px;
+}
+
 .text-section--stats hr{
   margin:32px 0 24px;
   opacity:.1;

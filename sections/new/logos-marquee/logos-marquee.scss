@@ -33,7 +33,9 @@
     }
 
     /* stylelint-disable-next-line selector-class-pattern */
-    body.page\.become-stockist & {
+    body.page\.become-stockist &,
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.our-story & {
         margin-top: -60px;
 
         @include sm {

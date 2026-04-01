@@ -114,6 +114,10 @@
                 @include sm {
                     font-size: 32px;
                 }
+
+                @at-root body.page\.our-story & {
+                    font-size: 26px;
+                }
             }
         }
 

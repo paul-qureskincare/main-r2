@@ -20,7 +20,7 @@
   vertical-align:top;
   opacity:.6;
 }
-body.page\.become-stockist .logos-marquee{
+body.page\.become-stockist .logos-marquee,body.page\.our-story .logos-marquee{
   margin-top:-60px;
 }
 
@@ -38,7 +38,7 @@ body.page\.become-stockist .logos-marquee{
     overflow:unset;
     animation:"logos-marquee" 20s linear infinite;
   }
-  body.page\.become-stockist .logos-marquee{
+  body.page\.become-stockist .logos-marquee,body.page\.our-story .logos-marquee{
     margin-top:-40px;
   }
 }
