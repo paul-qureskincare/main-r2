@@ -139,6 +139,7 @@
 }
 .trusted-reviews .btn{
   display:block;
+  max-width:350px;
   margin:40px auto 0;
   text-transform:uppercase;
 }
