@@ -89,10 +89,7 @@
 .article article .header_content{
   font-weight:700;
 }
-.article article p:not(:only-of-type){
-  margin-bottom:1.5;
-}
-.article article body.page .cancel_section{
+.article article body.page .cancel_section,.article article p:not(:only-of-type){
   margin-bottom:1.5rem;
 }
 @media screen and (max-width:768px){
