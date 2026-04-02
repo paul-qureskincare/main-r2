@@ -94,11 +94,6 @@
   max-width:100%;
   height:auto;
 }
-.c-product-tile__image:hover:after{
-  visibility:visible;
-  transform:scale(1.02);
-  opacity:1;
-}
 .c-product-tile__image:after{
   position:absolute;
   inset:0;
@@ -191,5 +186,12 @@
   }
   .top-rated .e-rating-stars{
     font-size:12px;
+  }
+}
+@media (hover:hover){
+  .c-product-tile__image:hover:after{
+    visibility:visible;
+    transform:scale(1.02);
+    opacity:1;
   }
 }
