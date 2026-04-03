@@ -1,7 +1,7 @@
 <div class="c-wistia-embed-video {{ classes }}">
     <div class="wistia_responsive_padding">
         <div class="wistia_responsive_wrapper">
-            <div class="wistia_embed wistia_async_{{ id }} popover=true seo=false videoFoam=true">
+            <div class="wistia_embed wistia_async_{{ id }} {{#unless inline }}popover=true{{/unless}} seo=false videoFoam=true">
                 <div class="wistia_swatch">
                     <img src="https://fast.wistia.com/embed/medias/{{ id }}/swatch" alt="{{ alt }}" />
                 </div>

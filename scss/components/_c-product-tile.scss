@@ -35,12 +35,10 @@
         }
 
         @include hover {
-            &:hover {
-                &::after {
-                    visibility: visible;
-                    transform: scale(1.02);
-                    opacity: 1;
-                }
+            &::after {
+                visibility: visible;
+                transform: scale(1.02);
+                opacity: 1;
             }
         }
 

@@ -866,6 +866,11 @@
   height:auto;
   border-radius:10px;
 }
+.base-section article h6{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:600;
+}
 .base-section article p em{
   font-style:normal;
   background:#c7e5db;
