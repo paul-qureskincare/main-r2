@@ -82,6 +82,13 @@
   margin-top:8px;
   border-radius:5px;
 }
+.skincare-lifestyle ul a{
+  color:inherit;
+  text-decoration:underline;
+}
+.skincare-lifestyle ul a:hover{
+  text-decoration:none;
+}
 @media screen and (max-width:991px){
   .skincare-lifestyle{
     padding-top:40px;
@@ -116,5 +123,10 @@
   }
   .skincare-lifestyle ul img{
     display:block;
+  }
+}
+@media (hover:hover){
+  .skincare-lifestyle ul button:hover{
+    background:#fff;
   }
 }

@@ -102,6 +102,19 @@
             opacity: 0.1;
         }
 
+        ul {
+            padding-left: 24px;
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
+
+                &::marker {
+                    color: #91baec;
+                }
+            }
+        }
+
         .badges {
             display: flex;
             gap: 12px;

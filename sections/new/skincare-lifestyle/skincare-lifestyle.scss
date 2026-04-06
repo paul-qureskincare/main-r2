@@ -116,6 +116,10 @@
             border: 1px solid;
             border-radius: 50%;
 
+            @include hover {
+                background: #fff;
+            }
+
             &.active {
                 background: #c7e5db;
             }
@@ -135,6 +139,15 @@
 
             @include sm {
                 display: block;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }

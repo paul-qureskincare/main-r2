@@ -67,8 +67,12 @@
         justify-content: center;
         overflow: hidden;
         width: 100%;
+        min-height: 352px;
         border-radius: 10px;
 
+        @include md {
+            min-height: 0;
+        }
 
         &.show {
             display: flex;
@@ -173,9 +177,8 @@
         }
 
         .btn--added {
-            color: #fff;
-            border-color: #008763;
-            background: #008763;
+            --btn-primary-color: #fff;
+            --btn-primary-bg: #008763;
         }
     }
 
@@ -216,6 +219,36 @@
 
             @include sm {
                 grid-column: auto;
+            }
+        }
+
+        &:has(img) {
+            display: grid;
+            grid-template: repeat(3, auto) / auto min(50px, 20%);
+            padding-right: 25px;
+            padding-left: 25px;
+
+            @include sm {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            strong {
+                margin-right: unset;
+            }
+
+            small {
+                grid-column: auto;
+            }
+
+            span {
+                font-size: 12px;
+            }
+
+            img {
+                grid-row: 1 / -1;
+                grid-column: 2;
+                @include img-fluid;
             }
         }
     }

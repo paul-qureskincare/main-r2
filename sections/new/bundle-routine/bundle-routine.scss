@@ -82,13 +82,14 @@
         padding-left: 16px;
 
         @include sm {
+            padding-top: 8px;
+            padding-bottom: 8px;
             font-size: inherit;
         }
     }
 
     .btn--added {
-        color: #fff;
-        border-color: #008763;
-        background: #008763;
+        --btn-primary-color: #fff;
+        --btn-primary-bg: #008763;
     }
 }

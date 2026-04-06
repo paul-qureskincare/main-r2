@@ -120,6 +120,16 @@
   margin:0;
   opacity:.1;
 }
+.skincare-routine__info-item ul{
+  padding-left:24px;
+}
+.skincare-routine__info-item ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.skincare-routine__info-item ul li::marker{
+  color:#91baec;
+}
 .skincare-routine__info-item .badges{
   display:flex;
   gap:12px;
