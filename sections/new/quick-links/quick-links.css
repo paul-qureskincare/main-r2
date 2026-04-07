@@ -30,5 +30,6 @@
 @media screen and (max-width:767px){
   .quick-links{
     display:block;
+    margin-bottom:-40px;
   }
 }

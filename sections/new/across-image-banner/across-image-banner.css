@@ -757,6 +757,13 @@
   .across-image-banner--hero .c-app-stores{
     align-self:center;
   }
+  body[class*=index] .across-image-banner--hero{
+    color:#fff;
+  }
+  body[class*=index] .across-image-banner--hero .btn{
+    --btn-primary-bg:#fff;
+    --btn-primary-color:#212428;
+  }
   .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
     height:106.6666666667vw;
     max-height:400px;

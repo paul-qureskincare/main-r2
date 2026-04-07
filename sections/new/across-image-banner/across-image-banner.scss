@@ -106,6 +106,17 @@
             }
         }
 
+        body[class*="index"] & {
+            @include sm {
+                color: #fff;
+
+                .btn {
+                    --btn-primary-bg: #fff;
+                    --btn-primary-color: #212428;
+                }
+            }
+        }
+
         /* stylelint-disable-next-line selector-class-pattern */
         .page\.reviews &,
         /* stylelint-disable-next-line selector-class-pattern */
