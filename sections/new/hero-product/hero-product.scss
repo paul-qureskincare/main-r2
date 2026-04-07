@@ -19,6 +19,7 @@
 @use "@components/c-modal" as *;
 @use "@components/c-clinic-metrics" as *;
 @use "@components/c-moneyback" as *;
+@use "@components/c-pill-tabs" as *;
 
 .hero-product {
     $root: &;
@@ -107,6 +108,19 @@
 
             .show-klaviyo-popup-landing {
                 margin-top: -20px;
+            }
+        }
+
+        .c-pill-tabs {
+            gap: 16px;
+            align-items: stretch;
+            width: 100%;
+            max-width: 500px;
+
+            &__pane {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
             }
         }
 

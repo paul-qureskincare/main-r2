@@ -110,6 +110,20 @@
   max-width:100%;
   height:auto;
 }
+.c-pill-tabs:has(.c-supply-selector) .e-pill-tabs button.active{
+  background:#91baec;
+}
+.c-pill-tabs__note{
+  font-size:14px;
+  text-align:center;
+}
+.c-pill-tabs__note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-pill-tabs__note a:hover{
+  text-decoration:none;
+}
 
 .c-swiper{
   overflow:hidden;
@@ -413,6 +427,9 @@
   .c-percent-list+p{
     margin-top:12px;
     text-align:center;
+  }
+  .e-pill-tabs button{
+    font-size:16px;
   }
   .c-pill-tabs{
     gap:20px;

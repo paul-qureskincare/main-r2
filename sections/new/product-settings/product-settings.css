@@ -59,6 +59,20 @@
   max-width:100%;
   height:auto;
 }
+.c-pill-tabs:has(.c-supply-selector) .e-pill-tabs button.active{
+  background:#91baec;
+}
+.c-pill-tabs__note{
+  font-size:14px;
+  text-align:center;
+}
+.c-pill-tabs__note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-pill-tabs__note a:hover{
+  text-decoration:none;
+}
 
 .e-icon{
   display:inline-block;
@@ -569,6 +583,9 @@
   }
 }
 @media screen and (max-width:767px){
+  .e-pill-tabs button{
+    font-size:16px;
+  }
   .c-pill-tabs{
     gap:20px;
   }

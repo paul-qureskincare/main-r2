@@ -272,45 +272,120 @@
                             }
                         ]'
                     }}
-                    {{> c-subscribe-selector
-                        title="Select Your Delivery"
-                        list='[
-                            {
-                                "name": "Subscribe &",
-                                "save": "20%",
-                                "price-old": true,
-                                "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                                "option": "subscribe",
-                                "checked": true,
-                                "text": "
-                                    <p> One Time: Faucet + 1 Filter<br />
-                                    Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
-                                    <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
-                                "
-                            },
-                            {
-                                "name": "Subscribe &",
-                                "save": "20%",
-                                "price-old": true,
-                                "price-final": true,
-                                "price-strikethrough": true,
-                                "price-highlight": false,
-                                "option": "subscribe",
-                                "text": "
-                                    <p> One Time: Faucet + 1 Filter<br />
-                                    Every 90 days: Filter Refill <del>({$dyn}</del> {$dyn})</p>
-                                    <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
-                                "
-                            },
-                            {
-                                "name": "One-Time Purchase",
-                                "option": "subscribe",
-                                "text": "
-                                    <p> One Time: Faucet + 1 Filter</p>
-                                "
-                            }
-                        ]'
-                    }}
+                    <div class="c-pill-tabs">
+                        <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
+                            <li>
+                                <button
+                                    type="button"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#one-time-purchase"
+                                >
+                                    One time purchase
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="active"
+                                    type="button"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#subscribe-and-save"
+                                >
+                                    Subscribe &amp; Save
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="c-pill-tabs__pane" id="one-time-purchase">
+                            {{> c-supply-selector
+                                classes="c-supply-selector--delivery"
+                                title="Select Your Delivery"
+                                list='[
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                                        "name": "6 Months",
+                                        "desc": "(3 bottles)",
+                                        "price-old": true,
+                                        "price-in-save": "{$dyn}",
+                                        "price-highlight": true,
+                                        "save-pill": true,
+                                        "save-value": "{dyn}% OFF",
+                                        "tag-up": true,
+                                        "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                        "option": "one-time",
+                                        "checked": true
+                                    },
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                                        "name": "4 Months",
+                                        "desc": "(2 bottles)",
+                                        "price-old": true,
+                                        "price-in-save": "{$dyn}",
+                                        "price-highlight": true,
+                                        "save-pill": true,
+                                        "save-pill-light": true,
+                                        "save-value": "{dyn}% OFF",
+                                        "option": "one-time"
+                                    },
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                                        "name": "2 Months",
+                                        "desc": "(1 bottles)",
+                                        "price-old": true,
+                                        "price-highlight": true,
+                                        "option": "one-time"
+                                    }
+                                ]'
+                            }}
+                        </div>
+                        <div class="c-pill-tabs__pane show" id="subscribe-and-save">
+                            {{> c-supply-selector
+                                classes="c-supply-selector--delivery"
+                                title="Select Your Delivery"
+                                list='[
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                                        "name": "6 Months",
+                                        "desc": "(3 bottles) <small>Ships every 6 months</small>",
+                                        "price-old": true,
+                                        "price-in-save": "{$dyn}",
+                                        "price-highlight": true,
+                                        "price-special": "{$dyn}",
+                                        "save-pill": true,
+                                        "save-value": "{dyn}% OFF",
+                                        "tag-up": true,
+                                        "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                        "option": "subscribe",
+                                        "checked": true
+                                    },
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                                        "name": "4 Months",
+                                        "desc": "(2 bottles) <small>Ships every 4 months</small>",
+                                        "price-old": true,
+                                        "price-in-save": "{$dyn}",
+                                        "price-highlight": true,
+                                        "price-special": "{$dyn}",
+                                        "save-pill": true,
+                                        "save-pill-light": true,
+                                        "save-value": "{dyn}% OFF",
+                                        "option": "subscribe"
+                                    },
+                                    {
+                                        "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                                        "name": "2 Months",
+                                        "desc": "(1 bottles) <small>Ships every 2 months</small>",
+                                        "price-old": true,
+                                        "price-in-save": "{$dyn}",
+                                        "price-highlight": true,
+                                        "save-pill": true,
+                                        "save-pill-light": true,
+                                        "save-value": "{dyn}% OFF",
+                                        "option": "subscribe"
+                                    }
+                                ]'
+                            }}
+                        </div>
+                        <p class="c-pill-tabs__note">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
+                    </div>
                     {{> c-payment-selector
                         title="Select A Payment Option"
                         list='[

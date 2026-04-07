@@ -830,7 +830,7 @@
   }
 }
 @media screen and (max-width:767px){
-  .c-pills-nav a,.c-pills-nav button{
+  .c-pills-nav a,.c-pills-nav button,.e-pill-tabs button{
     font-size:16px;
   }
   .c-dialog__content,.c-dialog__message{

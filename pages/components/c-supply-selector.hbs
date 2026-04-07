@@ -25,9 +25,12 @@
                                 strikethrough=price-strikethrough
                             }}
                         </div>
-                        <div class="c-supply-selector__desc">{{ desc }}</div>
+                        <div class="c-supply-selector__desc">{{{ desc }}}</div>
                         {{#if save-value }}
                             <div class="c-supply-selector__save">
+                                {{#if price-in-save }}
+                                    <del>{{ price-in-save }}</del>
+                                {{/if}}
                                 {{#if save-pill }}
                                     <div class="e-pill-save {{#if save-pill-light }}e-pill-save--light{{/if}}">{{ save-value }}</div>
                                 {{ else }}

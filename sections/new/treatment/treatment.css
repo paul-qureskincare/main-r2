@@ -642,7 +642,6 @@
   transform:rotate(5deg);
   content:"";
 }
-
 .e-declaimer{
   display:block;
   color:#8b8c8e;
@@ -702,9 +701,6 @@
   box-shadow:inset 0 0 0 1px currentcolor,0 0 0 1px currentcolor;
   background:#f6f6f7;
 }
-.c-supply-selector__label:has(input:checked) .c-supply-selector__desc{
-  color:inherit;
-}
 .c-supply-selector__label:has(input:checked) .c-supply-selector__final-price{
   font-weight:600;
 }
@@ -751,14 +747,29 @@
   text-align:right;
 }
 .c-supply-selector__desc{
-  color:#8b8c8e;
-  font-size:16px;
+  font-size:14px;
   line-height:1.25;
 }
+.c-supply-selector__desc small{
+  color:#8b8c8e;
+}
+.c-supply-selector__desc:has(small){
+  display:flex;
+  flex-wrap:wrap;
+  gap:0 8px;
+}
 .c-supply-selector__save{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  align-items:end;
   color:#ff5429;
   font-size:14px;
   text-align:right;
+}
+.c-supply-selector__save del{
+  color:#8b8c8e;
+  font-size:16px;
 }
 .c-supply-selector__tag{
   position:absolute;
@@ -883,6 +894,24 @@
 }
 .c-supply-selector--tiles+button{
   margin-top:-20px;
+}
+.c-supply-selector--delivery .c-supply-selector__label:has(picture) .c-supply-selector__main{
+  grid-template-columns:65px 1fr auto;
+}
+.c-supply-selector--delivery .c-supply-selector__label:not(:has(.c-supply-selector__save del)) .e-price .e-price__old{
+  color:#8b8c8e;
+  text-decoration:none;
+}
+.c-supply-selector--delivery .e-price{
+  flex-direction:row-reverse;
+  line-height:1.2;
+}
+.c-supply-selector--delivery .e-price .e-price__old{
+  color:var(--discount-color);
+  font-size:inherit;
+}
+.c-supply-selector--delivery .e-price .e-price__main{
+  flex-direction:row;
 }
 .c-supply-selector .c-next-batch{
   margin-top:32px;
@@ -1484,6 +1513,82 @@
   background:#e5fff7;
 }
 
+.e-pill-tabs{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  padding:7px 11px;
+  border:1px solid #8b8c8e;
+  border-radius:100px;
+}
+.e-pill-tabs li{
+  flex-grow:1;
+}
+.e-pill-tabs button{
+  width:100%;
+  padding:7px 16px;
+  color:#b5b6b7;
+  font-size:18px;
+  border:0;
+  border-radius:100px;
+  background:none;
+  transition:all .2s linear;
+}
+.e-pill-tabs button:hover{
+  color:#212428;
+  background-color:#eee;
+}
+.e-pill-tabs button.active{
+  color:#212428;
+  background-color:#c7e5db;
+  pointer-events:none;
+}
+
+.c-pill-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  align-items:center;
+}
+.c-pill-tabs h6{
+  margin-bottom:-10px;
+  font-family:inherit;
+  font-weight:500;
+}
+.c-pill-tabs__buttons{
+  min-width:210px;
+}
+.c-pill-tabs__pane{
+  transition:opacity .6s linear;
+}
+.c-pill-tabs__pane:not(.show){
+  position:absolute;
+  left:-300vw;
+  z-index:-10;
+  visibility:hidden;
+  opacity:0;
+}
+.c-pill-tabs__pane img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.c-pill-tabs:has(.c-supply-selector) .e-pill-tabs button.active{
+  background:#91baec;
+}
+.c-pill-tabs__note{
+  font-size:14px;
+  text-align:center;
+}
+.c-pill-tabs__note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-pill-tabs__note a:hover{
+  text-decoration:none;
+}
+
 .treatment{
   padding-top:60px;
   padding-bottom:60px;
@@ -1543,11 +1648,11 @@
   position:relative;
   counter-reset:number;
 }
-.treatment__steps .c-options-selector__title,.treatment__steps .c-payment-selector__title,.treatment__steps .c-subscribe-selector__title,.treatment__steps .c-supply-selector__title{
+.treatment__steps .c-options-selector__title,.treatment__steps .c-payment-selector__title,.treatment__steps .c-subscribe-selector__title,.treatment__steps .c-supply-selector__title,.treatment__steps .treatment__tabs-title{
   position:relative;
   counter-increment:number;
 }
-.treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before{
+.treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before,.treatment__steps .treatment__tabs-title:before{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -1636,6 +1741,17 @@
 .treatment__step .info-items__item .c-accordion__summary:after{
   font-size:12px;
 }
+.treatment__step .treatment__tabs-title{
+  margin-bottom:16px;
+}
+.treatment__step .c-pill-tabs{
+  gap:16px;
+  align-items:stretch;
+  width:100%;
+}
+.treatment__step .c-pill-tabs .c-supply-selector__title{
+  display:none;
+}
 .treatment__extra{
   display:flex;
   flex-direction:column;
@@ -1723,7 +1839,7 @@
   .treatment__box{
     padding-left:72px;
   }
-  .treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before{
+  .treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before,.treatment__steps .treatment__tabs-title:before{
     position:absolute;
     top:-8px;
     left:-48px;
@@ -1743,13 +1859,13 @@
   .treatment .container{
     gap:20px 40px;
   }
-  .treatment__steps .c-options-selector__title,.treatment__steps .c-payment-selector__title,.treatment__steps .c-subscribe-selector__title,.treatment__steps .c-supply-selector__title{
+  .treatment__steps .c-options-selector__title,.treatment__steps .c-payment-selector__title,.treatment__steps .c-subscribe-selector__title,.treatment__steps .c-supply-selector__title,.treatment__steps .treatment__tabs-title{
     display:flex;
     flex-wrap:wrap;
     gap:4px 10px;
     align-items:center;
   }
-  .treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before{
+  .treatment__steps .c-options-selector__title:before,.treatment__steps .c-payment-selector__title:before,.treatment__steps .c-subscribe-selector__title:before,.treatment__steps .c-supply-selector__title:before,.treatment__steps .treatment__tabs-title:before{
     width:24px;
     height:24px;
     font-size:16px;
@@ -1798,8 +1914,14 @@
   .e-pay-options{
     font-size:12px;
   }
-  .c-marked-list li,.page\.qure-microinfusion-offer-listicle .c-note{
+  .c-marked-list li,.e-pill-tabs button,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
+  }
+  .c-pill-tabs{
+    gap:20px;
+  }
+  .c-pill-tabs__buttons{
+    min-width:0;
   }
   .treatment{
     padding-top:40px;

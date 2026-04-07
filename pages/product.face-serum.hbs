@@ -106,58 +106,149 @@
                         <li>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vitamin C, Vitamin E, Ferulic Acid.</li>
                     </ul>
                 </article>
-                <hr />
-                {{> c-supply-selector
-                    classes="c-supply-selector--tiles"
-                    title="Select Your Supply"
-                    list='[
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
-                            "name": "6 Months",
-                            "desc": "(3 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-value": "38% OFF",
-                            "tag-up": true,
-                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "supply-tile",
-                            "checked": true
-                        },
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
-                            "name": "4 Months",
-                            "desc": "(2 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "25% OFF",
-                            "option": "supply-tile"
-                        },
-                        {
-                            "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
-                            "name": "2 Months",
-                            "desc": "(1 bottles)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "option": "supply-tile"
-                        }
-                    ]'
-                }}
-                <div class="c-buy-block">
-                    {{> c-order-button }}
-                    {{> c-certified-box }}
-                    <ul class="e-features-list">
+                <div class="c-pill-tabs">
+                    <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
                         <li>
-                            {{> e-icon icon="guarantee" }}
-                            30-Day Money-Back Guarantee
+                            <button
+                                type="button"
+                                data-bs-toggle="tab"
+                                data-bs-target="#one-time-purchase"
+                            >
+                                One time purchase
+                            </button>
                         </li>
                         <li>
-                            {{> e-icon icon="shipping-order" }}
-                            Free Shipping over {$dyn}
+                            <button
+                                class="active"
+                                type="button"
+                                data-bs-toggle="tab"
+                                data-bs-target="#subscribe-and-save"
+                            >
+                                Subscribe &amp; Save
+                            </button>
                         </li>
                     </ul>
+                    <div class="c-pill-tabs__pane" id="one-time-purchase">
+                        {{> c-supply-selector
+                            classes="c-supply-selector--delivery"
+                            title="Select Your Delivery"
+                            list='[
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                                    "name": "6 Months",
+                                    "desc": "(3 bottles)",
+                                    "price-old": true,
+                                    "price-in-save": "{$dyn}",
+                                    "price-highlight": true,
+                                    "save-pill": true,
+                                    "save-value": "{dyn}% OFF",
+                                    "tag-up": true,
+                                    "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                    "option": "one-time",
+                                    "checked": true
+                                },
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                                    "name": "4 Months",
+                                    "desc": "(2 bottles)",
+                                    "price-old": true,
+                                    "price-in-save": "{$dyn}",
+                                    "price-highlight": true,
+                                    "save-pill": true,
+                                    "save-pill-light": true,
+                                    "save-value": "{dyn}% OFF",
+                                    "option": "one-time"
+                                },
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                                    "name": "2 Months",
+                                    "desc": "(1 bottles)",
+                                    "price-old": true,
+                                    "price-highlight": true,
+                                    "option": "one-time"
+                                }
+                            ]'
+                        }}
+                        <div class="c-buy-block">
+                            {{> c-order-button }}
+                            {{> c-certified-box }}
+                            <ul class="e-features-list">
+                                <li>
+                                    {{> e-icon icon="guarantee" }}
+                                    30-Day Money-Back Guarantee
+                                </li>
+                                <li>
+                                    {{> e-icon icon="shipping-order" }}
+                                    Free Shipping over {$dyn}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="c-pill-tabs__pane show" id="subscribe-and-save">
+                        {{> c-supply-selector
+                            classes="c-supply-selector--delivery"
+                            title="Select Your Delivery"
+                            list='[
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/3-bottles.webp",
+                                    "name": "6 Months",
+                                    "desc": "(3 bottles) <small>Ships every 6 months</small>",
+                                    "price-old": true,
+                                    "price-in-save": "{$dyn}",
+                                    "price-highlight": true,
+                                    "price-special": "{$dyn}",
+                                    "save-pill": true,
+                                    "save-value": "{dyn}% OFF",
+                                    "tag-up": true,
+                                    "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                                    "option": "subscribe",
+                                    "checked": true
+                                },
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/2-bottles.webp",
+                                    "name": "4 Months",
+                                    "desc": "(2 bottles) <small>Ships every 4 months</small>",
+                                    "price-old": true,
+                                    "price-in-save": "{$dyn}",
+                                    "price-highlight": true,
+                                    "price-special": "{$dyn}",
+                                    "save-pill": true,
+                                    "save-pill-light": true,
+                                    "save-value": "{dyn}% OFF",
+                                    "option": "subscribe"
+                                },
+                                {
+                                    "image": "sections/isolated/micro-infusion-pdp/images/1-bottle.webp",
+                                    "name": "2 Months",
+                                    "desc": "(1 bottles) <small>Ships every 2 months</small>",
+                                    "price-old": true,
+                                    "price-in-save": "{$dyn}",
+                                    "price-highlight": true,
+                                    "save-pill": true,
+                                    "save-pill-light": true,
+                                    "save-value": "{dyn}% OFF",
+                                    "option": "subscribe"
+                                }
+                            ]'
+                        }}
+                        <p class="c-pill-tabs__note">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
+                        <div class="c-buy-block">
+                            {{> c-order-button
+                                button="Subscribe Now & Save {dyn}%"
+                            }}
+                            {{> c-certified-box }}
+                            <ul class="e-features-list">
+                                <li>
+                                    {{> e-icon icon="guarantee" }}
+                                    30-Day Money-Back Guarantee
+                                </li>
+                                <li>
+                                    {{> e-icon icon="shipping-order" }}
+                                    Free Shipping over {$dyn}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 {{> c-next-batch }}
             </div>

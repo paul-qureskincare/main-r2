@@ -148,111 +148,238 @@
                                 <li>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vitamin C, Vitamin E, Ferulic Acid.</li>
                             </ul>
                         </article>
-                        <hr />
-                        <div class="c-supply-selector c-supply-selector--tiles">
-                            <p class="c-supply-selector__title">Select Your Supply:</p>
-                            <ul class="c-supply-selector__list">
-                                <li class="c-supply-selector__item">
-                                    <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" checked="checked" />
-                                        <div class="c-supply-selector__main">
-                                            <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
-                                            </picture>
-                                            <div class="c-supply-selector__name">6 Months</div>
-                                            <div class="c-supply-selector__price">
-                                                <div class="e-price e-price--highlight">
-                                                    <div class="e-price__main">
-                                                        <div class="e-price__current">{$dyn}</div>
-                                                        <div class="e-price__old">{$dyn}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-supply-selector__desc">(3 bottles)</div>
-                                            <div class="c-supply-selector__save">
-                                                <div class="e-pill-save">38% OFF</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-supply-selector__tag">
-                                            <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
-                                        </div>
-                                    </label>
+                        <div class="c-pill-tabs">
+                            <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
+                                <li>
+                                    <button type="button" data-bs-toggle="tab" data-bs-target="#one-time-purchase">One time purchase</button>
                                 </li>
-                                <li class="c-supply-selector__item">
-                                    <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" />
-                                        <div class="c-supply-selector__main">
-                                            <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
-                                            </picture>
-                                            <div class="c-supply-selector__name">4 Months</div>
-                                            <div class="c-supply-selector__price">
-                                                <div class="e-price e-price--highlight">
-                                                    <div class="e-price__main">
-                                                        <div class="e-price__current">{$dyn}</div>
-                                                        <div class="e-price__old">{$dyn}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-supply-selector__desc">(2 bottles)</div>
-                                            <div class="c-supply-selector__save">
-                                                <div class="e-pill-save e-pill-save--light">25% OFF</div>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </li>
-                                <li class="c-supply-selector__item">
-                                    <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" />
-                                        <div class="c-supply-selector__main">
-                                            <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
-                                            </picture>
-                                            <div class="c-supply-selector__name">2 Months</div>
-                                            <div class="c-supply-selector__price">
-                                                <div class="e-price e-price--highlight">
-                                                    <div class="e-price__main">
-                                                        <div class="e-price__current">{$dyn}</div>
-                                                        <div class="e-price__old">{$dyn}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-supply-selector__desc">(1 bottles)</div>
-                                        </div>
-                                    </label>
+                                <li>
+                                    <button class="active" type="button" data-bs-toggle="tab" data-bs-target="#subscribe-and-save">Subscribe &amp; Save</button>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="c-buy-block">
-                            <div class="c-order-button">
-                                <button class="btn btn--primary" type="button">Buy Now</button>
-                                <div class="e-pay-options">
-                                    OR pay 4 monthly payments of {$dyn} with
-                                    <ul>
-                                        <li><img src="assets/images/klarna.svg" alt="Klarna" /></li>
-                                        <li><img src="assets/images/sezzle.svg" alt="Sezzle" /></li>
-                                        <li><img src="assets/images/afterpay.svg" alt="Afterpay" /></li>
+                            <div class="c-pill-tabs__pane" id="one-time-purchase">
+                                <div class="c-supply-selector c-supply-selector--delivery">
+                                    <p class="c-supply-selector__title">Select Your Delivery:</p>
+                                    <ul class="c-supply-selector__list">
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="one-time" checked="checked" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">6 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(3 bottles)</div>
+                                                    <div class="c-supply-selector__save">
+                                                        <del>{$dyn}</del>
+                                                        <div class="e-pill-save">{dyn}% OFF</div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__tag">
+                                                    <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="one-time" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">4 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(2 bottles)</div>
+                                                    <div class="c-supply-selector__save">
+                                                        <del>{$dyn}</del>
+                                                        <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="one-time" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">2 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(1 bottles)</div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-buy-block">
+                                    <div class="c-order-button">
+                                        <button class="btn btn--primary" type="button">Buy Now</button>
+                                        <div class="e-pay-options">
+                                            OR pay 4 monthly payments of {$dyn} with
+                                            <ul>
+                                                <li><img src="assets/images/klarna.svg" alt="Klarna" /></li>
+                                                <li><img src="assets/images/sezzle.svg" alt="Sezzle" /></li>
+                                                <li><img src="assets/images/afterpay.svg" alt="Afterpay" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="c-certified-box">
+                                        <ul>
+                                            <li><img src="../sections/isolated/targeted-patches/images/crt-1.webp" alt="Certified Dermatologists" /></li>
+                                            <li><img src="../sections/isolated/targeted-patches/images/crt-2.webp" alt="Certified Dermatologists" /></li>
+                                            <li>+50</li>
+                                        </ul>
+                                        <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients.</p>
+                                    </div>
+                                    <ul class="e-features-list">
+                                        <li>
+                                            <i class="e-icon e-icon-guarantee"></i>
+                                            30-Day Money-Back Guarantee
+                                        </li>
+                                        <li>
+                                            <i class="e-icon e-icon-shipping-order"></i>
+                                            Free Shipping over {$dyn}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="c-certified-box">
-                                <ul>
-                                    <li><img src="../sections/isolated/targeted-patches/images/crt-1.webp" alt="Certified Dermatologists" /></li>
-                                    <li><img src="../sections/isolated/targeted-patches/images/crt-2.webp" alt="Certified Dermatologists" /></li>
-                                    <li>+50</li>
-                                </ul>
-                                <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients.</p>
+                            <div class="c-pill-tabs__pane show" id="subscribe-and-save">
+                                <div class="c-supply-selector c-supply-selector--delivery">
+                                    <p class="c-supply-selector__title">Select Your Delivery:</p>
+                                    <ul class="c-supply-selector__list">
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="subscribe" checked="checked" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">6 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(3 bottles) <small>Ships every 6 months</small></div>
+                                                    <div class="c-supply-selector__save">
+                                                        <del>{$dyn}</del>
+                                                        <div class="e-pill-save">{dyn}% OFF</div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__tag">
+                                                    <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="subscribe" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">4 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(2 bottles) <small>Ships every 4 months</small></div>
+                                                    <div class="c-supply-selector__save">
+                                                        <del>{$dyn}</del>
+                                                        <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="c-supply-selector__item">
+                                            <label class="c-supply-selector__label">
+                                                <input type="radio" name="subscribe" />
+                                                <div class="c-supply-selector__main">
+                                                    <picture class="c-supply-selector__image">
+                                                        <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
+                                                    </picture>
+                                                    <div class="c-supply-selector__name">2 Months</div>
+                                                    <div class="c-supply-selector__price">
+                                                        <div class="e-price e-price--highlight">
+                                                            <div class="e-price__main">
+                                                                <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-supply-selector__desc">(1 bottles) <small>Ships every 2 months</small></div>
+                                                    <div class="c-supply-selector__save">
+                                                        <del>{$dyn}</del>
+                                                        <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-pill-tabs__note">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
+                                <div class="c-buy-block">
+                                    <div class="c-order-button">
+                                        <button class="btn btn--primary" type="button">Subscribe Now &amp; Save {dyn}%</button>
+                                        <div class="e-pay-options">
+                                            OR pay 4 monthly payments of {$dyn} with
+                                            <ul>
+                                                <li><img src="assets/images/klarna.svg" alt="Klarna" /></li>
+                                                <li><img src="assets/images/sezzle.svg" alt="Sezzle" /></li>
+                                                <li><img src="assets/images/afterpay.svg" alt="Afterpay" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="c-certified-box">
+                                        <ul>
+                                            <li><img src="../sections/isolated/targeted-patches/images/crt-1.webp" alt="Certified Dermatologists" /></li>
+                                            <li><img src="../sections/isolated/targeted-patches/images/crt-2.webp" alt="Certified Dermatologists" /></li>
+                                            <li>+50</li>
+                                        </ul>
+                                        <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients.</p>
+                                    </div>
+                                    <ul class="e-features-list">
+                                        <li>
+                                            <i class="e-icon e-icon-guarantee"></i>
+                                            30-Day Money-Back Guarantee
+                                        </li>
+                                        <li>
+                                            <i class="e-icon e-icon-shipping-order"></i>
+                                            Free Shipping over {$dyn}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="e-features-list">
-                                <li>
-                                    <i class="e-icon e-icon-guarantee"></i>
-                                    30-Day Money-Back Guarantee
-                                </li>
-                                <li>
-                                    <i class="e-icon e-icon-shipping-order"></i>
-                                    Free Shipping over {$dyn}
-                                </li>
-                            </ul>
                         </div>
                         <div class="c-next-batch">
                             <p>
