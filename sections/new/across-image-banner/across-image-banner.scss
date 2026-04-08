@@ -1,8 +1,10 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
 @use "@elements/e-discount-badge" as *;
+@use "@elements/e-features-list" as *;
 @use "@components/c-certified-box" as *;
 @use "@components/c-app-stores" as *;
+@use "@components/c-buy-block" as *;
 
 @mixin banner-height($height, $width) {
     height: calc(100vw * $height / $width);
@@ -14,6 +16,14 @@
 
     position: relative;
     z-index: 1;
+
+    body[class*="page.exclusive-holiday-bundle-deal"] & {
+        margin-bottom: -60px;
+
+        @include sm {
+            margin-bottom: -40px;
+        }
+    }
 
     .container {
         display: flex;
@@ -79,6 +89,14 @@
             }
         }
 
+        &:has(.c-buy-block) {
+            article {
+                @include sm {
+                    text-align: left;
+                }
+            }
+        }
+
         article {
             .btn {
                 max-width: 450px;
@@ -103,6 +121,21 @@
 
             @include sm {
                 align-self: center;
+            }
+        }
+
+        .c-buy-block {
+            gap: 12px;
+            width: 100%;
+            max-width: 450px;
+            margin-top: 12px;
+
+            @include sm {
+                margin: 6px auto 0;
+            }
+
+            .btn {
+                margin-top: 0;
             }
         }
 

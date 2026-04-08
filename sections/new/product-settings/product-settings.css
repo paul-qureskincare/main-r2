@@ -323,6 +323,18 @@
   content:"\e96a";
 }
 
+.e-icon-clinic-results:before{
+  content:"\e96b";
+}
+
+.e-icon-incredibly-convenient:before{
+  content:"\e96c";
+}
+
+.e-icon-one-time-money:before{
+  content:"\e96d";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

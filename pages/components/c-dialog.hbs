@@ -1,0 +1,8 @@
+<dialog class="c-dialog" id="{{ id }}">
+    <div class="c-dialog__content">
+        {{> @partial-block }}
+    </div>
+    <button class="c-dialog__close" type="button" onclick="{{ id }}.close()">
+        {{> e-icon icon="cross"}}
+    </button>
+</dialog>

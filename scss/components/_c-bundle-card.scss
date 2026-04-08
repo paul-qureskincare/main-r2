@@ -1,127 +1,294 @@
 @use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
 @use "@elements/e-rating-stars" as *;
 @use "@elements/e-price" as *;
 @use "@elements/e-pay-options" as *;
 @use "@elements/e-pill-save" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-dialog" as *;
 
 .c-bundle-card {
     position: relative;
+    overflow: hidden;
     border: 1px solid #dfe0e0;
     border-radius: 10px;
 
-    // .c-bundle-card__discount
-    &__discount {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
+    // .c-bundle-card__image
+    &__image {
+        position: relative;
+        cursor: pointer;
 
-        @include sm {
-            top: 4px;
-            right: 6px;
-            font-size: 12px;
+        img {
+            @include img-fluid;
+            vertical-align: top;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .e-pill-save {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+
+            @include sm {
+                top: 4px;
+                right: 6px;
+                font-size: 12px;
+            }
         }
     }
 
-    // .c-bundle-card__picture
-    &__picture {
-        width: 100%;
-        height: auto;
-        vertical-align: top;
-    }
-
-    // .c-bundle-card__content
-    &__content {
-        padding: 16px;
-
-        @include sm {
-            padding: 12px;
-        }
-    }
-
-    // .c-bundle-card__details
-    &__details {
+    // .c-bundle-card__main
+    &__main {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        margin-bottom: 24px;
+        padding: 16px;
 
         @include sm {
             gap: 4px;
-            margin-bottom: 16px;
-        }
-    }
-
-    // .c-bundle-card__rating
-    &__rating {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        font-size: 16px;
-        line-height: 1;
-
-        @include sm {
-            gap: 6px;
-            font-size: 12px;
+            padding: 12px;
         }
 
-        small {
-            font-size: max(0.875em, 12px);
+        .c-dialog & {
+            padding: 0;
         }
-    }
 
-    // .c-bundle-card__name
-    &__name {
-        font-size: 20px;
-        line-height: 1.2;
-
-        @include sm {
-            font-size: 16px;
-        }
-    }
-
-    // .c-bundle-card__price
-    &__price {
-        font-size: 20px;
-        line-height: 1;
-
-        @include sm {
-            font-size: 14px;
-        }
-    }
-
-    &__features {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px 6px;
-        align-items: center;
-
-        .e-pill-badge {
-            color: #227d5f;
-        }
-    }
-
-    // .c-bundle-card__button
-    &__button {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        .btn {
-            width: 100%;
-            padding-right: 20px;
-            padding-left: 20px;
-
+        .c-rating {
             @include sm {
-                padding-top: 7px;
-                padding-bottom: 7px;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
 
-        .e-pay-options {
+        .e-rating-stars {
+            font-size: 16px;
+
+            @include sm {
+                font-size: inherit;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: normal;
+
+            @include sm {
+                font-size: 16px;
+            }
+        }
+
+        .e-price {
+            @include sm {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .c-order-button {
+        padding: 8px 16px 16px;
+
+        @include sm {
+            padding: 8px 12px 12px;
+        }
+
+        .btn {
+            @include sm {
+                padding: 7px 16px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .c-dialog {
+        max-width: 328px;
+        border-radius: 5px;
+
+        @at-root :root:has(.c-dialog[open]) {
+            overflow: hidden;
+        }
+
+        &::backdrop {
+            background: #000;
+            opacity: 0.5;
+        }
+
+        // .c-dialog__content
+        &__content {
+            display: flex;
             flex-direction: column;
+            gap: 24px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+
+    .c-swiper {
+        margin: 0;
+        padding: 0;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    .c-swiper-thumbs-nav {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    // .c-bundle-card__switcher-buttons
+    &__switcher-buttons {
+        display: flex;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #dfe0e0;
+
+        li {
+            width: 100%;
+            margin-bottom: -1px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 32px;
+            padding: 0;
+            font-size: 16px;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            background: none;
+
+            &.active {
+                font-weight: 600;
+                border-color: currentColor;
+            }
+        }
+    }
+
+    // .c-bundle-card__switcher-content
+    &__switcher-content {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    // .c-bundle-card__kit-content
+    &__kit-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 16px;
+        line-height: 1.2;
+
+        li {
+            display: grid;
+            grid-template: repeat(2, auto) / 50px 1fr;
+            gap: 0 12px;
             align-items: center;
+
+            &:has(form) {
+                grid-template-columns: 50px 1fr 77px;
+            }
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a:first-child,
+        img {
+            grid-row: 1 / -1;
+        }
+
+        img {
+            @include img-fluid;
+        }
+
+        p {
+            align-self: end;
+        }
+
+        small {
+            align-self: start;
+            color: #8b8c8e;
+            font-size: 14px;
+        }
+
+        form {
+            grid-row: 1 / -1;
+            grid-column: 3;
+        }
+
+        select {
+            padding: 12px 26px 12px 12px;
+            color: #212428;
+            border-color: #8b8c8e;
+            border-radius: 5px;
+            background: #fff url("/assets/images/arrow_down.svg") calc(100% - 8px) 50% no-repeat;
+            background-size: 14px;
+            appearance: none;
+
+            @include sm {
+                width: 100%;
+            }
+
+            &:focus {
+                border-color: #dfe0e0;
+            }
+        }
+    }
+
+    // .c-bundle-card__how-use
+    &__how-use {
+        font-size: 16px;
+
+        p, ul {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        ul {
+            padding-left: 24px;
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
+            }
+        }
+
+        .e-pill-badge {
+            margin-bottom: 15px;
+            color: inherit;
+        }
+    }
+
+    // .c-bundle-card__amount
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .c-bundle-card__amount-total
+    &__amount-total {
+        color: #8b8c8e;
+    }
+
+    // .c-bundle-card__amount-current
+    &__amount-current {
+        color: #ff5429;
+    }
+
+    // .c-bundle-card__submit
+    &__submit {
+        .btn {
             width: 100%;
         }
     }

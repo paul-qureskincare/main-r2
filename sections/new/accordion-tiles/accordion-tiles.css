@@ -247,6 +247,18 @@
   content:"\e96a";
 }
 
+.e-icon-clinic-results:before{
+  content:"\e96b";
+}
+
+.e-icon-incredibly-convenient:before{
+  content:"\e96c";
+}
+
+.e-icon-one-time-money:before{
+  content:"\e96d";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -470,12 +482,14 @@
   position:absolute;
   top:6px;
   right:6px;
+  z-index:10;
   padding:8px;
   font-size:18px;
   line-height:1;
   border:0;
   border-radius:30px;
   background:none;
+  background:#fff;
   transition:all .2s linear;
 }
 .c-dialog__close:hover{

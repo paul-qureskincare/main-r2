@@ -149,13 +149,16 @@
     }
 
     &__save {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        align-items: end;
         color: #ff5429;
         font-size: 14px;
         text-align: right;
+
+        &:has(del) {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: end;
+        }
 
         del {
             color: #8b8c8e;

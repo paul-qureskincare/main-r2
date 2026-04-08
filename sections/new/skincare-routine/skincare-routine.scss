@@ -5,8 +5,7 @@
 .skincare-routine {
     $root: &;
 
-    // .skincare-routine__title
-    &__title {
+    h2 {
         margin-bottom: 32px;
         text-align: center;
 

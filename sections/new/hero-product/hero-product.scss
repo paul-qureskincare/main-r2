@@ -34,6 +34,10 @@
             grid-template: auto / auto;
             gap: 24px;
         }
+
+        body[class*="page.exclusive-holiday-bundle-deal"] & {
+            align-items: center;
+        }
     }
 
     // .hero-product__main
@@ -49,6 +53,10 @@
 
         .c-rating {
             align-self: flex-start;
+        }
+
+        .e-double-tag {
+            margin-right: auto;
         }
 
         & > p {
@@ -83,14 +91,14 @@
                 }
 
                 // Some pages, where list in row
-                body[class="product.shower-filter"] & {
+                body[class*="product.shower-filter"] & {
                     flex-flow: row wrap;
                 }
             }
 
             // Some other order on this page
-            body[class="page.qure-microinfusion-offer"] &,
-            body[class="page.qure-microinfusion-offer-men"] & {
+            body[class*="page.qure-microinfusion-offer"] &,
+            body[class*="page.qure-microinfusion-offer-men"] & {
                 order: 1;
             }
         }
@@ -145,7 +153,6 @@
                 @include sm {
                     width: 100%;
                 }
-
             }
 
             &[data-label-text] {
@@ -172,8 +179,8 @@
                 border-radius: 10px;
             }
 
-            body[class="page.qure-microinfusion-offer"] &,
-            body[class="page.qure-microinfusion-offer-men"] & {
+            body[class*="page.qure-microinfusion-offer"] &,
+            body[class*="page.qure-microinfusion-offer-men"] & {
                 order: 2;
             }
         }

@@ -247,6 +247,18 @@
   content:"\e96a";
 }
 
+.e-icon-clinic-results:before{
+  content:"\e96b";
+}
+
+.e-icon-incredibly-convenient:before{
+  content:"\e96c";
+}
+
+.e-icon-one-time-money:before{
+  content:"\e96d";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -472,6 +484,31 @@
   content:attr(data-text-bottom);
 }
 
+.e-features-list{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  font-size:14px;
+}
+.e-features-list li{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  line-height:1.1;
+}
+.e-features-list .e-icon-guarantee{
+  font-size:30px;
+}
+.e-features-list .e-icon-shipping-order{
+  font-size:22px;
+}
+.e-features-list .e-icon-proven{
+  font-size:28px;
+}
+.e-features-list .e-icon-checkmark{
+  font-size:10px;
+}
+
 .c-certified-box{
   display:grid;
   grid-template-columns:-webkit-max-content 1fr;
@@ -531,9 +568,56 @@
   flex-direction:row;
 }
 
+.e-pay-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  color:#757677;
+  font-size:14px;
+  line-height:1;
+}
+.e-pay-options ul{
+  display:flex;
+  gap:6px;
+  align-self:center;
+  justify-content:center;
+  line-height:1;
+}
+.e-pay-options img{
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+}
+
+.c-order-button{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.c-order-button .btn{
+  width:100%;
+}
+.c-order-button .e-pay-options{
+  justify-content:center;
+}
+
+.c-buy-block{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:500px;
+}
+.c-buy-block .c-certified-box{
+  margin-right:auto;
+  margin-left:auto;
+}
+
 .across-image-banner{
   position:relative;
   z-index:1;
+}
+body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
+  margin-bottom:-60px;
 }
 .across-image-banner .container{
   display:flex;
@@ -578,6 +662,15 @@
 }
 .across-image-banner--hero .c-app-stores{
   max-width:300px;
+}
+.across-image-banner--hero .c-buy-block{
+  gap:12px;
+  width:100%;
+  max-width:450px;
+  margin-top:12px;
+}
+.across-image-banner--hero .c-buy-block .btn{
+  margin-top:0;
 }
 .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
   height:38.1944444444vw;
@@ -731,6 +824,24 @@
   }
 }
 @media screen and (max-width:767px){
+  .e-features-list{
+    gap:8px;
+  }
+  .e-features-list li{
+    gap:4px;
+  }
+  .e-features-list .e-icon-guarantee{
+    font-size:24px;
+  }
+  .e-features-list .e-icon-shipping-order{
+    font-size:16px;
+  }
+  .e-pay-options{
+    font-size:12px;
+  }
+  body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
+    margin-bottom:-40px;
+  }
   .across-image-banner .container{
     height:133.3333333333vw;
     max-height:500px;
@@ -747,6 +858,9 @@
   .across-image-banner--hero .container{
     justify-content:flex-start;
   }
+  .across-image-banner--hero:has(.c-buy-block) article{
+    text-align:left;
+  }
   .across-image-banner--hero article .btn{
     margin:0 auto;
   }
@@ -756,6 +870,9 @@
   }
   .across-image-banner--hero .c-app-stores{
     align-self:center;
+  }
+  .across-image-banner--hero .c-buy-block{
+    margin:6px auto 0;
   }
   body[class*=index] .across-image-banner--hero{
     color:#fff;

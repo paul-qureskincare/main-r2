@@ -57,7 +57,7 @@
   box-shadow:none !important;
 }
 
-.skincare-routine__title{
+.skincare-routine h2{
   margin-bottom:32px;
   text-align:center;
 }
@@ -146,7 +146,7 @@
   -webkit-text-stroke:.5px;
 }
 @media screen and (max-width:767px){
-  .skincare-routine__title{
+  .skincare-routine h2{
     margin-bottom:24px;
   }
   .skincare-routine__content{

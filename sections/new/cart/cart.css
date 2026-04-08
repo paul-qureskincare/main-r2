@@ -698,6 +698,9 @@
 .flyout-cart__gifts li .e-icon-checkmark{
   font-size:8px;
 }
+.flyout-cart__gifts li .e-icon-gift,.flyout-cart__gifts li .e-icon-micro-infusion-system{
+  font-size:20px;
+}
 .flyout-cart__gifts li span{
   position:absolute;
   top:28px;
