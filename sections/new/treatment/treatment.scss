@@ -263,13 +263,22 @@
             margin-bottom: 16px;
         }
 
-        .c-pill-tabs {
-            gap: 16px;
-            align-items: stretch;
-            width: 100%;
+        .e-pill-tabs {
+            margin-bottom: 16px;
+        }
 
-            .c-supply-selector__title {
-                display: none;
+        .subscription-details {
+            margin: 16px 0 0;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }

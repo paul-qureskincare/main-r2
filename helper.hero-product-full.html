@@ -461,177 +461,121 @@
                                 </ul>
                                 <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
                             </div>
-                            <div class="c-pill-tabs">
-                                <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
-                                    <li>
-                                        <button type="button" data-bs-toggle="tab" data-bs-target="#one-time-purchase">One time purchase</button>
+                            <ul class="e-pill-tabs e-pill-tabs--selector">
+                                <li>
+                                    <label>
+                                        <input name="delivery-type" type="radio" />
+                                        One time purchase
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input name="delivery-type" type="radio" checked="checked" />
+                                        Subscribe &amp; Save
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="c-supply-selector c-supply-selector--delivery">
+                                <p class="c-supply-selector__title">Select Your Delivery:</p>
+                                <ul class="c-supply-selector__list">
+                                    <li class="c-supply-selector__item">
+                                        <label class="c-supply-selector__label">
+                                            <input type="radio" name="subscribe" checked="checked" />
+                                            <div class="c-supply-selector__main">
+                                                <picture class="c-supply-selector__image">
+                                                    <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
+                                                </picture>
+                                                <div class="c-supply-selector__name">6 Months</div>
+                                                <div class="c-supply-selector__price">
+                                                    <div class="e-price e-price--highlight">
+                                                        <div class="e-price__main">
+                                                            <div class="e-price__current">{$dyn}</div>
+                                                            <div class="e-price__old">{$dyn}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__desc">(3 bottles) <small>Ships every 6 months</small></div>
+                                                <div class="c-supply-selector__save">
+                                                    <del>{$dyn}</del>
+                                                    <div class="e-pill-save">{dyn}% OFF</div>
+                                                </div>
+                                            </div>
+                                            <div class="c-supply-selector__tag">
+                                                <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li>
-                                        <button class="active" type="button" data-bs-toggle="tab" data-bs-target="#subscribe-and-save">Subscribe &amp; Save</button>
+                                    <li class="c-supply-selector__item">
+                                        <label class="c-supply-selector__label">
+                                            <input type="radio" name="subscribe" />
+                                            <div class="c-supply-selector__main">
+                                                <picture class="c-supply-selector__image">
+                                                    <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
+                                                </picture>
+                                                <div class="c-supply-selector__name">4 Months</div>
+                                                <div class="c-supply-selector__price">
+                                                    <div class="e-price e-price--highlight">
+                                                        <div class="e-price__main">
+                                                            <div class="e-price__current">{$dyn}</div>
+                                                            <div class="e-price__old">{$dyn}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__desc">(2 bottles) <small>Ships every 4 months</small></div>
+                                                <div class="c-supply-selector__save">
+                                                    <del>{$dyn}</del>
+                                                    <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="c-supply-selector__item">
+                                        <label class="c-supply-selector__label">
+                                            <input type="radio" name="subscribe" />
+                                            <div class="c-supply-selector__main">
+                                                <picture class="c-supply-selector__image">
+                                                    <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
+                                                </picture>
+                                                <div class="c-supply-selector__name">2 Months</div>
+                                                <div class="c-supply-selector__price">
+                                                    <div class="e-price e-price--highlight">
+                                                        <div class="e-price__main">
+                                                            <div class="e-price__current">{$dyn}</div>
+                                                            <div class="e-price__old">{$dyn}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__desc">(1 bottles) <small>Ships every 2 months</small></div>
+                                                <div class="c-supply-selector__save">
+                                                    <del>{$dyn}</del>
+                                                    <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="c-supply-selector__item">
+                                        <label class="c-supply-selector__label">
+                                            <input type="radio" name="one-time" />
+                                            <div class="c-supply-selector__main">
+                                                <picture class="c-supply-selector__image">
+                                                    <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
+                                                </picture>
+                                                <div class="c-supply-selector__name">2 Months</div>
+                                                <div class="c-supply-selector__price">
+                                                    <div class="e-price e-price--highlight">
+                                                        <div class="e-price__main">
+                                                            <div class="e-price__current">{$dyn}</div>
+                                                            <div class="e-price__old">{$dyn}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="c-supply-selector__desc">(1 bottles)</div>
+                                            </div>
+                                        </label>
                                     </li>
                                 </ul>
-                                <div class="c-pill-tabs__pane" id="one-time-purchase">
-                                    <div class="c-supply-selector c-supply-selector--delivery">
-                                        <p class="c-supply-selector__title">Select Your Delivery:</p>
-                                        <ul class="c-supply-selector__list">
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="one-time" checked="checked" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">6 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(3 bottles)</div>
-                                                        <div class="c-supply-selector__save">
-                                                            <del>{$dyn}</del>
-                                                            <div class="e-pill-save">{dyn}% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="c-supply-selector__tag">
-                                                        <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="one-time" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">4 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(2 bottles)</div>
-                                                        <div class="c-supply-selector__save">
-                                                            <del>{$dyn}</del>
-                                                            <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="one-time" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">2 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(1 bottles)</div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="c-pill-tabs__pane show" id="subscribe-and-save">
-                                    <div class="c-supply-selector c-supply-selector--delivery">
-                                        <p class="c-supply-selector__title">Select Your Delivery:</p>
-                                        <ul class="c-supply-selector__list">
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="subscribe" checked="checked" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/3-bottles.webp" alt="6 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">6 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(3 bottles) <small>Ships every 6 months</small></div>
-                                                        <div class="c-supply-selector__save">
-                                                            <del>{$dyn}</del>
-                                                            <div class="e-pill-save">{dyn}% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="c-supply-selector__tag">
-                                                        <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="subscribe" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/2-bottles.webp" alt="4 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">4 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(2 bottles) <small>Ships every 4 months</small></div>
-                                                        <div class="c-supply-selector__save">
-                                                            <del>{$dyn}</del>
-                                                            <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="subscribe" />
-                                                    <div class="c-supply-selector__main">
-                                                        <picture class="c-supply-selector__image">
-                                                            <img src="sections/isolated/micro-infusion-pdp/images/1-bottle.webp" alt="2 Months" />
-                                                        </picture>
-                                                        <div class="c-supply-selector__name">2 Months</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">(1 bottles) <small>Ships every 2 months</small></div>
-                                                        <div class="c-supply-selector__save">
-                                                            <del>{$dyn}</del>
-                                                            <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="c-pill-tabs__note">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
                             </div>
+                            <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
                             <div class="c-payment-selector">
                                 <p class="c-payment-selector__title">Select A Payment Option:</p>
                                 <ul class="c-payment-selector__list">
@@ -764,6 +708,28 @@
                             <img src="alex/sections/isolated/helmet-home/images/moneyback_1.webp" alt="Money Back Guarantee" />
                             <strong>Money Back Guarantee</strong>
                             <p>Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.</p>
+                        </div>
+                        <div class="c-complete-bundle">
+                            <p>
+                                <strong>THE COMPLETE FILTER BUNDLE</strong>
+                                Order today &amp; Receive a FREE Faucet Filter with your Shower Filter (value $129)
+                            </p>
+                            <figure>
+                                <img src="sections/isolated/clean-water/images/qure_water_img1.webp" alt="" />
+                                <figcaption class="e-pill-badge e-pill-badge--sm">$149</figcaption>
+                            </figure>
+                            <i class="e-icon e-icon-plus"></i>
+                            <figure>
+                                <img src="sections/isolated/clean-water/images/qure_water_img2.webp" alt="" />
+                                <figcaption class="e-pill-badge e-pill-badge--sm">
+                                    <del>$129</del>
+                                    <strong>Free</strong>
+                                </figcaption>
+                            </figure>
+                            <div class="e-progress e-progress--nearly-full">
+                                <p>Limited Time Offer, While Supplies Last</p>
+                                <div style="--progress: 60%">60% Sold</div>
+                            </div>
                         </div>
                     </div>
                     <div class="hero-product__extra">

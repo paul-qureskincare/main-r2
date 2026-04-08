@@ -839,6 +839,9 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .e-pay-options{
     font-size:12px;
   }
+  .c-buy-block{
+    max-width:none;
+  }
   body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
     margin-bottom:-40px;
   }

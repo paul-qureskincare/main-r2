@@ -1218,6 +1218,9 @@ body[class="product.face-serum"] .base-section article:has(.circle-icons-list) p
   .e-pay-options{
     font-size:12px;
   }
+  .c-buy-block{
+    max-width:none;
+  }
   .c-percent-list+p{
     margin-top:12px;
     text-align:center;

@@ -40,26 +40,4 @@
             @include img-fluid;
         }
     }
-
-    &:has(.c-supply-selector) {
-        .e-pill-tabs {
-            button.active {
-                background: #91baec;
-            }
-        }
-    }
-
-    &__note {
-        font-size: 14px;
-        text-align: center;
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
 }

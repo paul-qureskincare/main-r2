@@ -61,7 +61,7 @@
 .e-pill-tabs li{
   flex-grow:1;
 }
-.e-pill-tabs button{
+.e-pill-tabs button,.e-pill-tabs label{
   width:100%;
   padding:7px 16px;
   color:#b5b6b7;
@@ -69,16 +69,30 @@
   border:0;
   border-radius:100px;
   background:none;
+  cursor:pointer;
   transition:all .2s linear;
 }
-.e-pill-tabs button:hover{
+.e-pill-tabs button:hover,.e-pill-tabs label:hover{
   color:#212428;
   background-color:#eee;
 }
-.e-pill-tabs button.active{
+.e-pill-tabs button.active,.e-pill-tabs label.active{
   color:#212428;
   background-color:#c7e5db;
   pointer-events:none;
+}
+.e-pill-tabs--selector label{
+  position:relative;
+  text-align:center;
+}
+.e-pill-tabs--selector label input{
+  position:absolute;
+  z-index:-1;
+  opacity:0;
+}
+.e-pill-tabs--selector label:has(input:checked){
+  color:#212428;
+  background:#91baec;
 }
 
 .c-pill-tabs{
@@ -109,20 +123,6 @@
   display:block;
   max-width:100%;
   height:auto;
-}
-.c-pill-tabs:has(.c-supply-selector) .e-pill-tabs button.active{
-  background:#91baec;
-}
-.c-pill-tabs__note{
-  font-size:14px;
-  text-align:center;
-}
-.c-pill-tabs__note a{
-  color:inherit;
-  text-decoration:underline;
-}
-.c-pill-tabs__note a:hover{
-  text-decoration:none;
 }
 
 .c-swiper{
@@ -428,7 +428,7 @@
     margin-top:12px;
     text-align:center;
   }
-  .e-pill-tabs button{
+  .e-pill-tabs button,.e-pill-tabs label{
     font-size:16px;
   }
   .c-pill-tabs{

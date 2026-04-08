@@ -2,7 +2,7 @@
 {{#unless page-css }}
 <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
 {{/unless}}
-<section class="hero-product {{ classes }}" id="hero-product">
+<section class="hero-product {{ classes }}" {{#if id }}id="{{ id }}"{{ else }}id="hero-product"{{/if }}>
     <div class="hero-product__container container">
         {{> @partial-block}}
     </div>

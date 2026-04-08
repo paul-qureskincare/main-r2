@@ -1544,7 +1544,7 @@
 .e-pill-tabs li{
   flex-grow:1;
 }
-.e-pill-tabs button{
+.e-pill-tabs button,.e-pill-tabs label{
   width:100%;
   padding:7px 16px;
   color:#b5b6b7;
@@ -1552,16 +1552,30 @@
   border:0;
   border-radius:100px;
   background:none;
+  cursor:pointer;
   transition:all .2s linear;
 }
-.e-pill-tabs button:hover{
+.e-pill-tabs button:hover,.e-pill-tabs label:hover{
   color:#212428;
   background-color:#eee;
 }
-.e-pill-tabs button.active{
+.e-pill-tabs button.active,.e-pill-tabs label.active{
   color:#212428;
   background-color:#c7e5db;
   pointer-events:none;
+}
+.e-pill-tabs--selector label{
+  position:relative;
+  text-align:center;
+}
+.e-pill-tabs--selector label input{
+  position:absolute;
+  z-index:-1;
+  opacity:0;
+}
+.e-pill-tabs--selector label:has(input:checked){
+  color:#212428;
+  background:#91baec;
 }
 
 .c-pill-tabs{
@@ -1592,20 +1606,6 @@
   display:block;
   max-width:100%;
   height:auto;
-}
-.c-pill-tabs:has(.c-supply-selector) .e-pill-tabs button.active{
-  background:#91baec;
-}
-.c-pill-tabs__note{
-  font-size:14px;
-  text-align:center;
-}
-.c-pill-tabs__note a{
-  color:inherit;
-  text-decoration:underline;
-}
-.c-pill-tabs__note a:hover{
-  text-decoration:none;
 }
 
 .treatment{
@@ -1760,16 +1760,20 @@
 .treatment__step .info-items__item .c-accordion__summary:after{
   font-size:12px;
 }
-.treatment__step .treatment__tabs-title{
+.treatment__step .e-pill-tabs,.treatment__step .treatment__tabs-title{
   margin-bottom:16px;
 }
-.treatment__step .c-pill-tabs{
-  gap:16px;
-  align-items:stretch;
-  width:100%;
+.treatment__step .subscription-details{
+  margin:16px 0 0;
+  font-size:14px;
+  text-align:center;
 }
-.treatment__step .c-pill-tabs .c-supply-selector__title{
-  display:none;
+.treatment__step .subscription-details a{
+  color:inherit;
+  text-decoration:underline;
+}
+.treatment__step .subscription-details a:hover{
+  text-decoration:none;
 }
 .treatment__extra{
   display:flex;
@@ -1945,7 +1949,10 @@
   .e-pay-options{
     font-size:12px;
   }
-  .c-marked-list li,.e-pill-tabs button,.page\.qure-microinfusion-offer-listicle .c-note{
+  .c-buy-block{
+    max-width:none;
+  }
+  .c-marked-list li,.e-pill-tabs button,.e-pill-tabs label,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
   }
   .c-pill-tabs{

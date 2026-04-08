@@ -1,6 +1,7 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
 @use "@elements/e-sticky-thumb-video" as *;
+@use "@elements/e-pill-tabs" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
@@ -16,10 +17,10 @@
 @use "@components/c-limited-offer" as *;
 @use "@components/c-save-up" as *;
 @use "@components/c-exclusive-offer" as *;
+@use "@components/c-complete-bundle" as *;
 @use "@components/c-modal" as *;
 @use "@components/c-clinic-metrics" as *;
 @use "@components/c-moneyback" as *;
-@use "@components/c-pill-tabs" as *;
 
 .hero-product {
     $root: &;
@@ -78,6 +79,10 @@
         article {
             max-width: 500px;
 
+            @include sm {
+                max-width: none;
+            }
+
             p:not(:last-child) {
                 margin-bottom: 1.5rem;
             }
@@ -106,6 +111,10 @@
         hr {
             max-width: 500px;
             margin: 0;
+
+            @include sm {
+                max-width: none;
+            }
         }
 
         .purchase-form-wrapper {
@@ -114,21 +123,12 @@
             gap: 32px;
             max-width: 500px;
 
+            @include sm {
+                max-width: none;
+            }
+
             .show-klaviyo-popup-landing {
                 margin-top: -20px;
-            }
-        }
-
-        .c-pill-tabs {
-            gap: 16px;
-            align-items: stretch;
-            width: 100%;
-            max-width: 500px;
-
-            &__pane {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
             }
         }
 
@@ -182,6 +182,29 @@
             body[class*="page.qure-microinfusion-offer"] &,
             body[class*="page.qure-microinfusion-offer-men"] & {
                 order: 2;
+            }
+        }
+
+        &:has(.c-complete-bundle) {
+            .c-buy-block {
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .subscription-details {
+            margin: -16px 0 0;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }

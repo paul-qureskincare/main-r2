@@ -9,6 +9,10 @@
     gap: 16px;
     max-width: 500px;
 
+    @include sm {
+        max-width: none;
+    }
+
     .c-certified-box {
         margin-right: auto;
         margin-left: auto;
