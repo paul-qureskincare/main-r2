@@ -259,6 +259,42 @@
   content:"\e96d";
 }
 
+.e-icon-balances:before{
+  content:"\e96e";
+}
+
+.e-icon-hydration:before{
+  content:"\e96f";
+}
+
+.e-icon-no-chlorine:before{
+  content:"\e970";
+}
+
+.e-icon-shine:before{
+  content:"\e971";
+}
+
+.e-icon-unclogs-pores:before{
+  content:"\e972";
+}
+
+.e-icon-watering-can:before{
+  content:"\e973";
+}
+
+.e-icon-easy-washing:before{
+  content:"\e974";
+}
+
+.e-icon-faucet:before{
+  content:"\e975";
+}
+
+.e-icon-rotation:before{
+  content:"\e976";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -469,7 +505,7 @@
   letter-spacing:.32px;
   text-transform:capitalize;
   border-radius:30px;
-  background:hsl(from currentcolor h s l/8%);
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
 }
 .e-pill-badge .e-checkmark{
   font-size:20px;
@@ -485,8 +521,14 @@
 .e-pill-badge--xs{
   gap:6px;
   padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
   font-size:16px;
   letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
 }
 .e-pill-badge--fill{
   color:var(--badge-base-color, #fff);
@@ -679,10 +721,14 @@
 
 .c-swiper{
   overflow:hidden;
+  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
+}
+.c-swiper.swiper-initialized{
+  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;

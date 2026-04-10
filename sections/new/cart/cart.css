@@ -347,10 +347,14 @@
 
 .c-swiper{
   overflow:hidden;
+  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
+}
+.c-swiper.swiper-initialized{
+  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;

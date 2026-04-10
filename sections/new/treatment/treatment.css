@@ -259,6 +259,42 @@
   content:"\e96d";
 }
 
+.e-icon-balances:before{
+  content:"\e96e";
+}
+
+.e-icon-hydration:before{
+  content:"\e96f";
+}
+
+.e-icon-no-chlorine:before{
+  content:"\e970";
+}
+
+.e-icon-shine:before{
+  content:"\e971";
+}
+
+.e-icon-unclogs-pores:before{
+  content:"\e972";
+}
+
+.e-icon-watering-can:before{
+  content:"\e973";
+}
+
+.e-icon-easy-washing:before{
+  content:"\e974";
+}
+
+.e-icon-faucet:before{
+  content:"\e975";
+}
+
+.e-icon-rotation:before{
+  content:"\e976";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -455,6 +491,50 @@
   content:"\e95e";
 }
 
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:var(--badge-base-color, #8b8c8e);
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+.e-pill-badge .e-icon-checkmark{
+  font-size:.6em;
+}
+.e-pill-badge--sm,.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xs{
+  gap:6px;
+  padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
+}
+.e-pill-badge--fill{
+  color:var(--badge-base-color, #fff);
+  background:var(--badge-fill-color, #ff5429);
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -594,6 +674,22 @@
   height:auto;
   aspect-ratio:30/23;
   vertical-align:top;
+}
+.c-options-selector ul .bundle,.c-options-selector__list .bundle{
+  display:flex;
+  align-items:center;
+}
+.c-options-selector ul .bundle figure,.c-options-selector__list .bundle figure{
+  position:relative;
+  padding:0 8px 8px;
+}
+.c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
+  position:absolute;
+  right:0;
+  bottom:0;
+  color:#ff5429;
+  text-transform:uppercase;
+  border-radius:5px;
 }
 
 .e-pill-save{
@@ -989,6 +1085,7 @@
 }
 .c-subscribe-selector__name .e-pill-save{
   font-size:14px;
+  white-space:nowrap;
 }
 .c-subscribe-selector__price{
   margin-left:auto;
@@ -1020,6 +1117,27 @@
 }
 .c-subscribe-selector__text a:hover{
   text-decoration:none;
+}
+.c-subscribe-selector__text table{
+  width:100%;
+}
+.c-subscribe-selector__text table td,.c-subscribe-selector__text table th{
+  padding-top:6px;
+  padding-bottom:6px;
+}
+.c-subscribe-selector__text table td{
+  text-align:right;
+}
+.c-subscribe-selector__text table td span{
+  color:#ff5429;
+  font-weight:500;
+}
+.c-subscribe-selector__text hr{
+  margin:6px 0;
+  opacity:.1;
+}
+.c-subscribe-selector__text hr:not(:first-child){
+  margin-bottom:12px;
 }
 .c-subscribe-selector__tag{
   position:absolute;
@@ -1347,6 +1465,13 @@
   width:inherit;
   max-height:inherit;
 }
+.c-certified-box a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-certified-box a:hover{
+  text-decoration:none;
+}
 .c-certified-box--light{
   background:#fff;
 }
@@ -1360,6 +1485,21 @@
 .c-buy-block .c-certified-box{
   margin-right:auto;
   margin-left:auto;
+}
+.c-buy-block>p:has(a){
+  font-size:16px;
+  line-height:1.2;
+  text-align:center;
+}
+.c-buy-block>p:has(a) strong{
+  display:block;
+}
+.c-buy-block>p:has(a) a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-buy-block>p:has(a) a:hover{
+  text-decoration:none;
 }
 
 .c-next-batch{
@@ -1905,7 +2045,22 @@
   .c-dialog--notify-available form{
     gap:14px;
   }
-  .c-supply-selector__title small,.e-declaimer{
+  .c-options-selector{
+    max-width:none;
+  }
+  .c-options-selector ul .bundle figure,.c-options-selector__list .bundle figure{
+    padding:0 4px 12px;
+  }
+  .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
+    font-size:12px;
+  }
+  .e-declaimer{
+    font-size:14px;
+  }
+  .c-supply-selector{
+    max-width:none;
+  }
+  .c-supply-selector__title small{
     font-size:14px;
   }
   .c-supply-selector--tiles .c-supply-selector__list{
@@ -1914,6 +2069,9 @@
   .c-supply-selector--tiles .c-supply-selector__main{
     padding-right:2px;
     padding-left:2px;
+  }
+  .c-subscribe-selector{
+    max-width:none;
   }
   .c-payment-selector__text{
     flex-direction:column;

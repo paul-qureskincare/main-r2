@@ -7,6 +7,17 @@
         <article>
             {{> @partial-block }}
         </article>
+        {{#if problems }}
+            <ul class="real-problems">
+                {{#parseJson problems }}
+                    <li>
+                        <img src="{{ img }}" alt="{{ name }}" />
+                        <h6>{{ name }}</h6>
+                        <p>{{ desc }}</p>
+                    </li>
+                {{/parseJson}}
+            </ul>
+        {{/if }}
     </div>
 </section>
 <!-- TEXT SECTION END -->

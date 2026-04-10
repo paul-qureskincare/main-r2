@@ -40,6 +40,15 @@
         }
     }
 
+    a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     // MODIFICATORS
     // .c-certified-box--light
     &--light {

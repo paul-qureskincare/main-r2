@@ -36,6 +36,10 @@
     .e-price {
         font-size: 22px;
         font-weight: 500;
+
+        @include sm {
+            font-size: 18px;
+        }
     }
 
     .e-price__main {

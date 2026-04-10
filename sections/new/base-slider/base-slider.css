@@ -1,9 +1,13 @@
 .c-swiper{
   overflow:hidden;
+  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
+}
+.c-swiper.swiper-initialized{
+  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -401,11 +405,19 @@
   content:"\e90d";
   font-size:46px;
 }
+.base-slider .swiper-slide>picture,.base-slider .swiper-slide>picture img{
+  height:100%;
+}
 .base-slider--two-cards .container{
   max-width:1022px;
 }
 .base-slider--tree-cards .container{
   max-width:1082px;
+}
+.base-slider--bg{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
 }
 .base-slider .wistia-embed-video .wistia_responsive_padding{
   position:relative;
@@ -451,5 +463,9 @@
 @media screen and (max-width:767px){
   .c-swiper-nav{
     margin-top:16px;
+  }
+  .base-slider--bg{
+    padding-top:40px;
+    padding-bottom:40px;
   }
 }

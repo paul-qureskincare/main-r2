@@ -1,9 +1,13 @@
 .c-swiper{
   overflow:hidden;
+  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
+}
+.c-swiper.swiper-initialized{
+  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -134,7 +138,7 @@
   letter-spacing:.32px;
   text-transform:capitalize;
   border-radius:30px;
-  background:hsl(from currentcolor h s l/8%);
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
 }
 .e-pill-badge .e-checkmark{
   font-size:20px;
@@ -150,8 +154,14 @@
 .e-pill-badge--xs{
   gap:6px;
   padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
   font-size:16px;
   letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
 }
 .e-pill-badge--fill{
   color:var(--badge-base-color, #fff);

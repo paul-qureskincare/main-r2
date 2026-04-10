@@ -1,4 +1,5 @@
 @use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
 @use "@components/c-dialog" as *;
 
 .c-options-selector {
@@ -6,6 +7,10 @@
     flex-direction: column;
     gap: 12px;
     max-width: 500px;
+
+    @include sm {
+        max-width: none;
+    }
 
     .btn--secondary {
         --btn-secondary-bg: #f5f5f6;
@@ -67,6 +72,33 @@
             height: auto;
             aspect-ratio: 30/23;
             vertical-align: top;
+        }
+
+        .bundle {
+            display: flex;
+            align-items: center;
+
+            figure {
+                position: relative;
+                padding: 0 8px 8px;
+
+                @include sm {
+                    padding: 0 4px 12px;
+                }
+            }
+
+            .e-pill-badge {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: #ff5429;
+                text-transform: uppercase;
+                border-radius: 5px;
+
+                @include sm {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

@@ -21,6 +21,7 @@
 @use "@components/c-modal" as *;
 @use "@components/c-clinic-metrics" as *;
 @use "@components/c-moneyback" as *;
+@use "@components/c-lifetime-warranty" as *;
 
 .hero-product {
     $root: &;
@@ -74,6 +75,10 @@
         & > .e-price {
             font-size: 22px;
             font-weight: 500;
+
+            @include sm {
+                font-size: 18px;
+            }
         }
 
         article {
@@ -108,7 +113,7 @@
             }
         }
 
-        hr {
+        & > hr {
             max-width: 500px;
             margin: 0;
 
@@ -221,6 +226,9 @@
             gap: 12px;
         }
 
+        img {
+            border-radius: 10px;
+        }
 
         .c-swiper {
             margin: 0;
@@ -331,6 +339,62 @@
                 --btn-sm-padding: 7px 20px;
             }
         }
+    }
 
+    // .hero-product--secondary
+    &--secondary #{$root} {
+        &__main {
+            .e-pill-badge:first-child {
+                color: #ff5429;
+                border-radius: 5px;
+            }
+
+            h2 {
+                margin-bottom: 0;
+
+                & + h4 {
+                    margin-top: -30px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .c-special-offer {
+                &::before {
+                    display: none;
+                }
+
+                .e-price__main {
+                    flex-direction: row-reverse;
+                }
+
+                .e-pill-save {
+                    font-size: 16px;
+                    background: #ff5429;
+                }
+            }
+
+            article {
+                ul {
+                    flex-direction: row;
+                }
+            }
+
+            &:has(.c-complete-bundle) {
+                .c-buy-block {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    // .hero-product--reverse
+    &--reverse #{$root} {
+        &__main {
+            grid-column: 2;
+
+            @include sm {
+                grid-column: auto;
+            }
+        }
     }
 }

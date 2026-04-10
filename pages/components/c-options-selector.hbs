@@ -5,7 +5,20 @@
             <li>
                 <label>
                     <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
-                    <img src="{{ img }}" alt="{{ name }}" />
+                    {{#if img2 }}
+                        <div class="bundle">
+                            <figure>
+                                <img src="{{ img }}" alt="{{ name }}" />
+                            </figure>
+                            {{> e-icon icon="plus" }}
+                            <figure>
+                                <img src="{{ img2 }}" alt="{{ name }}" />
+                                <figcaption class="e-pill-badge e-pill-badge--xxs">Free</figcaption>
+                            </figure>
+                        </div>
+                    {{ else }}
+                        <img src="{{ img }}" alt="{{ name }}" />
+                    {{/if }}
                     <span>{{ name }}</span>
                 </label>
             </li>

@@ -426,6 +426,17 @@
         }
     }
 
+    // When section has button and percent list
+    &:has(.btn):has(.features-list) {
+        article {
+            .btn {
+                width: 100%;
+                max-width: 400px;
+                margin-top: 10px;
+            }
+        }
+    }
+
     // Styles on qure-microinfusion-offer-listicle page
     @at-root body[class="page.qure-microinfusion-offer-listicle"] {
         // .base-section article

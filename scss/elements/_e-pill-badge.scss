@@ -12,8 +12,7 @@
     letter-spacing: 0.32px;
     text-transform: capitalize;
     border-radius: 30px;
-    background: hsl(from currentcolor h s l / 8%);
-
+    background: hsl( from currentcolor h calc(s * 3) calc(l + (100 - l) * 0.95));
 
     .e-checkmark {
         font-size: 20px;
@@ -36,6 +35,14 @@
     &--xs {
         gap: 6px;
         padding: 2px 12px;
+        font-size: 16px;
+        letter-spacing: normal;
+    }
+
+    // .e-pill-badge--xxs
+    &--xxs {
+        gap: 4px;
+        padding: 0 10px;
         font-size: 16px;
         letter-spacing: normal;
     }

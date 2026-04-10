@@ -10,6 +10,10 @@
     gap: 12px;
     max-width: 500px;
 
+    @include sm {
+        max-width: none;
+    }
+
     // .c-subscribe-selector__title
     &__title {
         margin-bottom: 16px;
@@ -80,6 +84,7 @@
 
         .e-pill-save {
             font-size: 14px;
+            white-space: nowrap;
         }
     }
 
@@ -120,6 +125,33 @@
 
             &:hover {
                 text-decoration: none;
+            }
+        }
+
+        table {
+            width: 100%;
+
+            th, td {
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+
+            td {
+                text-align: right;
+
+                span {
+                    color: #ff5429;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        hr {
+            margin: 6px 0;
+            opacity: 0.1;
+
+            &:not(:first-child) {
+                margin-bottom: 12px;
             }
         }
     }

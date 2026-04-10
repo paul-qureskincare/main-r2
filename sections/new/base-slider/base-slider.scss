@@ -46,6 +46,16 @@
         }
     }
 
+    .swiper-slide {
+        & > picture {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
     // .base-slider--two-cards
     &--two-cards {
         .container {
@@ -57,6 +67,18 @@
     &--tree-cards {
         .container {
             max-width: 1082px;
+        }
+    }
+
+    // .base-slider--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
     }
 

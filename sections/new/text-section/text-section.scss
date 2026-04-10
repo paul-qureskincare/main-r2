@@ -24,6 +24,76 @@
             font-style: normal;
             background: #c7e5db;
         }
+
+        img {
+            &[alt*="Newsweek"] {
+                width: 150px;
+                height: auto;
+                // margin-top: 16px;
+            }
+        }
+    }
+
+    // .text-section--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        article {
+            @include sm {
+                text-align: center;
+            }
+        }
+    }
+
+    .real-problems {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        margin-top: 32px;
+        text-align: center;
+
+        @include sm {
+            flex-direction: column;
+        }
+
+        li {
+            display: grid;
+            gap: 16px;
+            justify-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            @include sm {
+                grid-template: repeat(2, auto) / 72px 1fr;
+                gap: 10px 16px;
+                place-items: center start;
+                text-align: left;
+            }
+        }
+
+        img {
+            max-width: 72px;
+            height: auto;
+            margin-bottom: 8px;
+
+            @include sm {
+                grid-row: 1 / -1;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 500;
+        }
     }
 
     // .text-section--guide

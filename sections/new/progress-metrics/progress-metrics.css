@@ -127,10 +127,14 @@
 
 .c-swiper{
   overflow:hidden;
+  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
+}
+.c-swiper.swiper-initialized{
+  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -400,6 +404,15 @@
   font-size:16px;
   line-height:1.25;
 }
+body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list{
+  flex-direction:row;
+  max-width:460px;
+}
+body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list li{
+  flex-direction:column;
+  width:100%;
+  text-align:center;
+}
 @media screen and (min-width:768px){
   .c-percent-list--columns{
     display:grid;
@@ -453,5 +466,8 @@
   }
   .progress-metrics small{
     font-size:14px;
+  }
+  body[class*="page.qure-filters-offer"] .progress-metrics .container div:has(.c-percent-list){
+    display:none;
   }
 }

@@ -79,4 +79,25 @@
     small {
         @include e-declaimer;
     }
+
+    body[class*="page.qure-filters-offer"] & {
+        .container {
+            div:has(.c-percent-list) {
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+
+        .c-percent-list {
+            flex-direction: row;
+            max-width: 460px;
+
+            li {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
 }

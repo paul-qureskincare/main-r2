@@ -17,4 +17,25 @@
         margin-right: auto;
         margin-left: auto;
     }
+
+    & > p {
+        &:has(a) {
+            font-size: 16px;
+            line-height: 1.2;
+            text-align: center;
+
+            strong {
+                display: block;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
