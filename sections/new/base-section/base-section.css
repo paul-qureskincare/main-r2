@@ -952,6 +952,9 @@
   font-family:inherit;
   font-weight:600;
 }
+.base-section article p:not(:last-child){
+  margin-bottom:15px;
+}
 .base-section article p em{
   font-style:normal;
   background:#c7e5db;
@@ -965,6 +968,19 @@
 }
 .base-section article p+.c-percent-list{
   margin-top:24px;
+}
+.base-section article p+h2{
+  margin:40px 0 20px;
+}
+.base-section article ul:not(.c-marked-list,.e-steps-list){
+  padding-left:24px;
+}
+.base-section article ul:not(.c-marked-list,.e-steps-list):not(:last-child){
+  margin-bottom:15px;
+}
+.base-section article ul:not(.c-marked-list,.e-steps-list) li{
+  padding-left:4px;
+  list-style:disc;
 }
 .base-section article ol{
   counter-reset:item;
@@ -1306,6 +1322,9 @@ body[class="product.face-serum"] .base-section article:has(.circle-icons-list) p
     grid-area:auto;
     grid-column:1;
     width:100%;
+  }
+  .base-section article p+h2{
+    margin-top:32px;
   }
   .base-section:has(.e-pill-badge) article{
     justify-items:center;

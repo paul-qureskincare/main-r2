@@ -1459,6 +1459,9 @@
 .c-supply-selector__item:has(.selector-tag-up){
   margin-top:16px;
 }
+.c-supply-selector__item:has(.selector-tag-down) .c-supply-selector__main{
+  padding-top:18px;
+}
 .c-supply-selector__label{
   position:relative;
   width:100%;

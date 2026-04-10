@@ -648,6 +648,11 @@
 .how-to-use:not(.how-to-use--center) .swiper-slide:last-child{
   margin-right:16px;
 }
+.how-to-use--bg{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
 .how-to-use--center .how-to-use__content{
   display:flex;
   flex-direction:column;
@@ -660,6 +665,32 @@
 .how-to-use--center .swiper-slide picture[data-index]:before{
   color:#212428;
   background:#c7e5db;
+}
+.how-to-use--center .btn{
+  width:100%;
+  max-width:220px;
+  margin-right:auto;
+  margin-left:auto;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide{
+  border:0;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
+  padding:24px 0 0;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide h6{
+  margin-bottom:16px;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide p{
+  font-size:16px;
+  line-height:1.2;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide a{
+  color:inherit;
+  text-decoration:underline;
+}
+body[class*="page.returns-exchanges"] .how-to-use .swiper-slide a:hover{
+  text-decoration:none;
 }
 @media screen and (min-width:1200px){
   .how-to-use:not(.how-to-use--center) .container{
@@ -721,10 +752,23 @@
   .how-to-use:not(.how-to-use--center) .c-swiper-nav{
     display:none;
   }
+  .how-to-use--bg{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
   .how-to-use--center .how-to-use__content{
     gap:20px;
   }
   .how-to-use--center .swiper-slide article{
     padding:16px 24px;
+  }
+  .how-to-use--center .btn{
+    max-width:none;
+  }
+  body[class*="page.returns-exchanges"] .how-to-use .swiper-slide{
+    background:#fff;
+  }
+  body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
+    padding:24px 16px 16px;
   }
 }

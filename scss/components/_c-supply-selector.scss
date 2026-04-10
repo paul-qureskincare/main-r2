@@ -48,6 +48,12 @@
         &:has(.selector-tag-up) {
             margin-top: 16px;
         }
+
+        &:has(.selector-tag-down) {
+            .c-supply-selector__main {
+                padding-top: 18px;
+            }
+        }
     }
 
     // .c-supply-selector__label

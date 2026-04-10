@@ -1,5 +1,5 @@
 @use "@root/mixins" as *;
-// @use "@components/c-product-components" as *;
+@use "@components/c-accordion" as *;
 
 .set-up {
     $root: &;

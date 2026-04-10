@@ -87,6 +87,10 @@
         }
 
         p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
             em {
                 font-style: normal;
                 background: #c7e5db;
@@ -103,6 +107,27 @@
 
             & + .c-percent-list {
                 margin-top: 24px;
+            }
+
+            & + h2 {
+                margin: 40px 0 20px;
+
+                @include sm {
+                    margin-top: 32px;
+                }
+            }
+        }
+
+        ul:not(.c-marked-list, .e-steps-list) {
+            padding-left: 24px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
             }
         }
 
