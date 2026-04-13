@@ -4,15 +4,10 @@
     $root: &;
 
     overflow: hidden;
-    max-height: 150px;
     margin-right: -16px;
     margin-left: -16px;
     padding-right: 16px;
     padding-left: 16px;
-
-    &.swiper-initialized {
-        max-height: none;
-    }
 
     .swiper-slide {
         picture {

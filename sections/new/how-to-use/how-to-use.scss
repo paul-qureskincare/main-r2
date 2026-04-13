@@ -199,13 +199,10 @@
         }
     }
 
-    body[class*="page.returns-exchanges"] & {
+    body[class*="page.returns-exchanges"] &,
+    body[class*="page.led-mask-offer"] & {
         .swiper-slide {
             border: 0;
-
-            @include sm {
-                background: #fff;
-            }
 
             article {
                 padding: 24px 0 0;
@@ -223,6 +220,14 @@
                 font-size: 16px;
                 line-height: 1.2;
             }
+        }
+    }
+
+    body[class*="page.returns-exchanges"] & {
+        .swiper-slide {
+            @include sm {
+                background: #fff;
+            }
 
             a {
                 color: inherit;
@@ -231,6 +236,19 @@
                 &:hover {
                     text-decoration: none;
                 }
+            }
+        }
+    }
+
+    body[class*="page.led-mask-offer"] & {
+        .swiper-slide {
+            picture[data-index]::before {
+                color: #212428;
+                background: #fff;
+            }
+
+            img {
+                border-radius: 10px;
             }
         }
     }

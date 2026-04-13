@@ -5,6 +5,7 @@
         {{ else }}
             Buy Now
         {{/if}}
+        {{#if arrow }} {{> e-icon icon="arrow" }} {{/if }}
     </button>
     {{#unless hide-pay }}
         {{> e-pay-options

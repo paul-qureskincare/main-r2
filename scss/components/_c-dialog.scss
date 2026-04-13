@@ -66,6 +66,47 @@
         }
     }
 
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    &__tabs-buttons {
+        display: flex;
+        margin-right: auto;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #dfe0e0;
+
+        li {
+            margin-bottom: -1px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 0 20px 8px;
+            font-size: 16px;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            background: none;
+
+            &.active {
+                font-weight: 600;
+                border-color: #212428;
+            }
+        }
+    }
+
+    &__tabs-pane {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
     // .c-dialog--column
     &--column {
         width: min(450px, 100%);

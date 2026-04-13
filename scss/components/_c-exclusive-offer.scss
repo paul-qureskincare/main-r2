@@ -13,6 +13,7 @@
     border: 1px solid #dfe0e0;
     border-radius: 10px;
 
+    // .c-exclusive-offer__tag
     &__tag {
         position: absolute;
         right: 0;
@@ -28,15 +29,23 @@
         }
     }
 
+    // .c-exclusive-offer__list
     &__list {
         display: flex;
         gap: 24px;
         align-items: center;
     }
 
+    // .c-exclusive-offer__item
     &__item {
         position: relative;
         max-width: 100px;
+
+        &:has(del) {
+            img {
+                border: 1px solid #ff5429;
+            }
+        }
 
         img {
             vertical-align: top;
@@ -48,6 +57,7 @@
             right: -8px;
             bottom: -8px;
             padding: 2px 10px;
+            color: #ff5429;
             font-size: 14px;
             line-height: 1;
             text-transform: uppercase;
@@ -58,6 +68,10 @@
             &:has(del) {
                 color: #fff;
                 background: #ff5429;
+
+                img {
+                    border: 1px solid #ff5429;
+                }
             }
         }
     }

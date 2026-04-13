@@ -100,4 +100,82 @@
             }
         }
     }
+
+    body[class*="page.led-mask-offer"] & {
+        .container {
+            grid-template-rows: repeat(2, auto);
+            gap: 40px;
+            align-items: center;
+
+            @include sm {
+                gap: 20px;
+            }
+        }
+
+        article {
+            align-self: end;
+        }
+
+        div:has(.c-percent-list) {
+            grid-row: 1 / -1;
+            grid-column: 2;
+
+            @include sm {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+
+        .c-note {
+            align-self: start;
+            margin-top: 0;
+            margin-right: auto;
+        }
+    }
+
+    .c-dialog {
+        width: min(calc(100% - 48px), 1040px);
+
+        // .c-dialog__content
+        &__content {
+            padding: 60px;
+
+            @include sm {
+                padding: 40px 24px;
+            }
+        }
+
+        // .c-dialog__tabs-buttons
+        &__tabs-buttons {
+            button {
+                min-width: 120px;
+
+                @include sm {
+                    min-width: 0;
+                }
+            }
+        }
+
+        // .c-dialog__tabs-pane
+        &__tabs-pane {
+            font-size: 16px;
+            line-height: 1.2;
+
+            hr {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .e-pill-badge--fill {
+                --badge-base-color: #212428;
+                --badge-fill-color: #c7e5db;
+
+                margin-bottom: 24px;
+            }
+
+            span:last-child {
+                font-size: 14px;
+            }
+        }
+    }
 }

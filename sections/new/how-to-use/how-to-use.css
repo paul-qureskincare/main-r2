@@ -493,14 +493,10 @@
 
 .c-swiper{
   overflow:hidden;
-  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
-}
-.c-swiper.swiper-initialized{
-  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -672,16 +668,16 @@
   margin-right:auto;
   margin-left:auto;
 }
-body[class*="page.returns-exchanges"] .how-to-use .swiper-slide{
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide,body[class*="page.returns-exchanges"] .how-to-use .swiper-slide{
   border:0;
 }
-body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide article,body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
   padding:24px 0 0;
 }
-body[class*="page.returns-exchanges"] .how-to-use .swiper-slide h6{
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide h6,body[class*="page.returns-exchanges"] .how-to-use .swiper-slide h6{
   margin-bottom:16px;
 }
-body[class*="page.returns-exchanges"] .how-to-use .swiper-slide p{
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide p,body[class*="page.returns-exchanges"] .how-to-use .swiper-slide p{
   font-size:16px;
   line-height:1.2;
 }
@@ -691,6 +687,13 @@ body[class*="page.returns-exchanges"] .how-to-use .swiper-slide a{
 }
 body[class*="page.returns-exchanges"] .how-to-use .swiper-slide a:hover{
   text-decoration:none;
+}
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide picture[data-index]:before{
+  color:#212428;
+  background:#fff;
+}
+body[class*="page.led-mask-offer"] .how-to-use .swiper-slide img{
+  border-radius:10px;
 }
 @media screen and (min-width:1200px){
   .how-to-use:not(.how-to-use--center) .container{
@@ -765,10 +768,10 @@ body[class*="page.returns-exchanges"] .how-to-use .swiper-slide a:hover{
   .how-to-use--center .btn{
     max-width:none;
   }
+  body[class*="page.led-mask-offer"] .how-to-use .swiper-slide article,body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
+    padding:24px 16px 16px;
+  }
   body[class*="page.returns-exchanges"] .how-to-use .swiper-slide{
     background:#fff;
-  }
-  body[class*="page.returns-exchanges"] .how-to-use .swiper-slide article{
-    padding:24px 16px 16px;
   }
 }

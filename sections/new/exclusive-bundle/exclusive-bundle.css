@@ -1,0 +1,109 @@
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:var(--badge-base-color, #8b8c8e);
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+.e-pill-badge .e-icon-checkmark{
+  font-size:.6em;
+}
+.e-pill-badge--sm,.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xs{
+  gap:6px;
+  padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
+}
+.e-pill-badge--fill{
+  color:var(--badge-base-color, #fff);
+  background:var(--badge-fill-color, #ff5429);
+}
+
+.exclusive-bundle article{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  align-items:center;
+  text-align:center;
+}
+.exclusive-bundle__tabs-pane{
+  transition:opacity .6s linear;
+}
+.exclusive-bundle__tabs-pane:not(.show){
+  position:absolute;
+  left:-300vw;
+  z-index:-10;
+  visibility:hidden;
+  opacity:0;
+}
+.exclusive-bundle__tabs-pane ul{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  padding:0 10px;
+  text-align:left;
+}
+.exclusive-bundle__tabs-pane li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  min-height:44px;
+  padding-bottom:20px;
+  line-height:1.15;
+}
+.exclusive-bundle__tabs-pane li:not(:last-child){
+  border-bottom:1px solid #dfe0e0;
+}
+.exclusive-bundle__tabs-pane .e-icon{
+  display:flex;
+  flex:none;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  text-align:center;
+  border-radius:20px;
+}
+.exclusive-bundle__tabs-pane .e-icon-checkmark{
+  color:#91baec;
+  font-size:8px;
+  border:1px solid;
+}
+@media screen and (max-width:767px){
+  .exclusive-bundle__tabs-pane ul{
+    gap:18px;
+    padding:0;
+  }
+  .exclusive-bundle__tabs-pane li{
+    min-height:70px;
+    padding-bottom:12px;
+    font-size:16px;
+  }
+  .exclusive-bundle__tabs-pane .e-icon{
+    width:16px;
+    height:16px;
+  }
+}

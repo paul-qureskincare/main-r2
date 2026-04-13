@@ -640,6 +640,11 @@
 .c-order-button .btn{
   width:100%;
 }
+.c-order-button .btn .e-icon-arrow{
+  margin-left:4px;
+  font-size:16px;
+  -webkit-text-stroke:.7px;
+}
 .c-order-button .e-pay-options{
   justify-content:center;
 }

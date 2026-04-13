@@ -127,14 +127,10 @@
 
 .c-swiper{
   overflow:hidden;
-  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
-}
-.c-swiper.swiper-initialized{
-  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -413,6 +409,48 @@ body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list li{
   width:100%;
   text-align:center;
 }
+body[class*="page.led-mask-offer"] .progress-metrics .container{
+  grid-template-rows:repeat(2, auto);
+  gap:40px;
+  align-items:center;
+}
+body[class*="page.led-mask-offer"] .progress-metrics article{
+  align-self:end;
+}
+body[class*="page.led-mask-offer"] .progress-metrics div:has(.c-percent-list){
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+body[class*="page.led-mask-offer"] .progress-metrics .c-note{
+  align-self:start;
+  margin-top:0;
+  margin-right:auto;
+}
+.progress-metrics .c-dialog{
+  width:min(100% - 48px, 1040px);
+}
+.progress-metrics .c-dialog__content{
+  padding:60px;
+}
+.progress-metrics .c-dialog__tabs-buttons button{
+  min-width:120px;
+}
+.progress-metrics .c-dialog__tabs-pane{
+  font-size:16px;
+  line-height:1.2;
+}
+.progress-metrics .c-dialog__tabs-pane hr{
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.progress-metrics .c-dialog__tabs-pane .e-pill-badge--fill{
+  --badge-base-color:#212428;
+  --badge-fill-color:#c7e5db;
+  margin-bottom:24px;
+}
+.progress-metrics .c-dialog__tabs-pane span:last-child{
+  font-size:14px;
+}
 @media screen and (min-width:768px){
   .c-percent-list--columns{
     display:grid;
@@ -469,5 +507,18 @@ body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list li{
   }
   body[class*="page.qure-filters-offer"] .progress-metrics .container div:has(.c-percent-list){
     display:none;
+  }
+  body[class*="page.led-mask-offer"] .progress-metrics .container{
+    gap:20px;
+  }
+  body[class*="page.led-mask-offer"] .progress-metrics div:has(.c-percent-list){
+    grid-row:auto;
+    grid-column:auto;
+  }
+  .progress-metrics .c-dialog__content{
+    padding:40px 24px;
+  }
+  .progress-metrics .c-dialog__tabs-buttons button{
+    min-width:0;
   }
 }

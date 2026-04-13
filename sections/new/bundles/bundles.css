@@ -606,14 +606,10 @@
 
 .c-swiper{
   overflow:hidden;
-  max-height:150px;
   margin-right:-16px;
   margin-left:-16px;
   padding-right:16px;
   padding-left:16px;
-}
-.c-swiper.swiper-initialized{
-  max-height:none;
 }
 .c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
   cursor:pointer;
@@ -741,6 +737,40 @@
 }
 .c-dialog__close .e-icon{
   vertical-align:top;
+}
+.c-dialog__tabs{
+  display:flex;
+  flex-direction:column;
+  justify-content:start;
+}
+.c-dialog__tabs-buttons{
+  display:flex;
+  margin-right:auto;
+  margin-bottom:24px;
+  border-bottom:1px solid #dfe0e0;
+}
+.c-dialog__tabs-buttons li{
+  margin-bottom:-1px;
+}
+.c-dialog__tabs-buttons button{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  padding:0 20px 8px;
+  font-size:16px;
+  border:0;
+  border-bottom:2px solid transparent;
+  background:none;
+}
+.c-dialog__tabs-buttons button.active{
+  font-weight:600;
+  border-color:#212428;
+}
+.c-dialog__tabs-pane{
+  display:none;
+}
+.c-dialog__tabs-pane.show{
+  display:block;
 }
 .c-dialog--column{
   width:min(450px, 100%);
