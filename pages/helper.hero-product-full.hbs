@@ -361,6 +361,15 @@
                         ]'
                     }}
                     <div class="c-buy-block">
+                        {{> e-progress
+                            label="Low Stock"
+                            small="Due to high demand, this offer is only available while stock lasts."
+                            progress="82"
+                            low-stock=true
+                        }}
+                        {{> e-get-free-shipping
+                            text="Order today to lock in your deal and get FREE Shipping"
+                        }}
                         {{> c-order-button }}
                         {{> c-certified-box }}
                         <ul class="e-features-list">
@@ -406,6 +415,36 @@
                 }}
                 {{> c-moneyback }}
                 {{> c-complete-bundle }}
+                <div class="c-bundle-included">
+                    <p class="c-bundle-included__tile">What’s Included</p>
+                    <ul class="c-bundle-included__list">
+                        <li>
+                            <a href="#">
+                                <img src="sections/isolated/led-mask-offer/images/q-rejuvalight.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                            </a>
+                            <div>
+                                <a href="#">Q-Rejuvalight Pro LED Mask</a>
+                                <small>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</small>
+                                {{> e-price current="{$dyn}" }}
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="sections/isolated/led-mask-offer/images/led-device.webp" alt="Neck & Décolletage LED Device" />
+                            </a>
+                            <div>
+                                <a href="#">Neck &amp; Décolletage LED Device</a>
+                                <small>Clinically proven to smooth and firm where aging shows first.</small>
+                                {{> e-price current="FREE" old="{$dyn}" highlight=true }}
+                            </div>
+                        </li>
+                    </ul>
+                    <hr />
+                    <div class="c-bundle-included__amount">
+                        <p>INSTANT SAVINGS: $299</p>
+                        {{> e-price current="{$dyn}" old="{$dyn}" }}
+                    </div>
+                </div>
             </div>
             <div class="hero-product__extra">
                 <div class="hero-product__best-with">

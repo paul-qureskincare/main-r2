@@ -155,6 +155,88 @@
         }
     }
 
+    .devices-technical {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        ul:not(.c-marked-list) {
+            margin-bottom: 0;
+            padding-left: 0;
+
+            li {
+                padding-left: 0;
+                list-style: none;
+            }
+        }
+
+        // .devices-technical__buttons
+        &__buttons {
+            display: flex;
+            gap: 30px;
+
+            button {
+                padding: 0;
+                color: #b5b6b7;
+                text-align: left;
+                border: 0;
+                background: none;
+
+                &.active {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // .devices-technical__pane
+        &__pane {
+            transition: opacity 600ms linear;
+
+            &:not(.show) {
+                @include hide-pane;
+            }
+
+            hr {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__section {
+            display: grid;
+            grid-template-columns: 125px 1fr;
+            gap: 32px;
+
+            @include sm {
+                grid-template-columns: auto;
+                gap: 24px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                font-size: 16px;
+                line-height: 1.2;
+            }
+
+            li {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+            }
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+
     // .c-accordion--lines
     &--lines {
         // .c-accordion--lines .c-accordion__list

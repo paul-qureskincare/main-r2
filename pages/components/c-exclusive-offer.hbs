@@ -1,6 +1,10 @@
 <div class="c-exclusive-offer">
     <div class="c-exclusive-offer__tag">
-        <div class="e-double-tag"><strong>Bundles</strong> Holiday</div>
+        {{#if exclusive-tag }}
+            <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
+        {{ else }}
+            <div class="e-double-tag"><strong>Bundles</strong> Holiday</div>
+        {{/if }}
     </div>
     <div class="c-exclusive-offer__list">
         <div class="c-exclusive-offer__item">

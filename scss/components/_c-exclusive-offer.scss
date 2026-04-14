@@ -13,6 +13,10 @@
     border: 1px solid #dfe0e0;
     border-radius: 10px;
 
+    @include sm {
+        max-width: none;
+    }
+
     // .c-exclusive-offer__tag
     &__tag {
         position: absolute;
@@ -74,5 +78,13 @@
                 }
             }
         }
+    }
+
+    .e-icon-plus {
+        padding: 9px;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 50%;
+        background: #212422;
     }
 }

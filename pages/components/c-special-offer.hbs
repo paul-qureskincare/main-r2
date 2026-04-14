@@ -1,6 +1,6 @@
-<div class="c-special-offer" data-label="Special Offer">
+<div class="c-special-offer"{{#unless hide-label }} data-label="Special Offer"{{/unless}}>
     {{#unless hide-price }}
     {{> e-price current="{$dyn}" old="{$dyn}" }}
     {{/unless}}
-    <div class="e-pill-save">Save 20%</div>
+    <div class="e-pill-save">{{#if pill-text}}{{ pill-text }}{{ else }}Save 20%{{/if }}</div>
 </div>

@@ -295,6 +295,42 @@
   content:"\e976";
 }
 
+.e-icon-one-year:before{
+  content:"\e977";
+}
+
+.e-icon-hand:before{
+  content:"\e978";
+}
+
+.e-icon-calendar:before{
+  content:"\e979";
+}
+
+.e-icon-certificate:before{
+  content:"\e97a";
+}
+
+.e-icon-charge:before{
+  content:"\e97b";
+}
+
+.e-icon-leds:before{
+  content:"\e97c";
+}
+
+.e-icon-switcher:before{
+  content:"\e97d";
+}
+
+.e-icon-wave:before{
+  content:"\e97e";
+}
+
+.e-icon-treatment-time:before{
+  content:"\e97f";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }

@@ -100,8 +100,9 @@
                     </li>
                 </ul>
             </div>
-            {{> c-exclusive-offer }}
-
+            {{> c-exclusive-offer
+                exclusive-tag=true
+            }}
         </div>
     {{/hero-product}}
 
@@ -268,7 +269,6 @@
     {{/progress-metrics }}
 
     {{#> trusted-reviews
-        classes="trusted-reviews--light"
         title="Thousands are out-glowing their insecurities"
     }}
         <div class="swiper-slide">
@@ -373,6 +373,7 @@
         title="Experience face and neck rejuvenation in one bundle"
     }}
         <div class="exclusive-bundle__tabs">
+            <p>Includes 2 LED Devices:</p>
             <div class="exclusive-bundle__tabs-buttons" role="tablist">
                 <button
                     class="active"
@@ -389,6 +390,7 @@
                     data-bs-toggle="tab"
                     data-bs-target="#second-pane"
                 >
+                    <div class="e-pill-badge e-pill-badge--fill e-pill-badge--sm">FREE</div>
                     <img src="sections/isolated/exclusive-offer/images/neck-decolletage-led-device.webp" alt="Neck & Décolletage LED Device" />
                     Neck &amp; Décolletage LED Device
                 </button>
@@ -401,8 +403,7 @@
                     {{#eachList '[
                         "Designed for the face",
                         "5 clinically studied wavelengths",
-                        "2 treatment modes ",
-                        "(Skin Rejuvenating and Skin Clearing)",
+                        "2 treatment modes (Skin Rejuvenating and Skin Clearing)",
                         "Treats wrinkles and mild-to-moderate inflammatory acne.",
                         "Helps visibly smooth the look of fine lines & wrinkles",
                         "Improves the appearance of skin texture & tone",
@@ -413,7 +414,8 @@
                 </ul>
             </div>
             {{> e-icon icon="plus" }}
-            <div class="exclusive-bundle__tabs-pane show" id="second-pane">
+            <div class="exclusive-bundle__tabs-pane" id="second-pane">
+                <div class="e-pill-badge e-pill-badge--fill">INCLUDED FREE</div>
                 <img src="sections/isolated/exclusive-offer/images/neck-decolletage-led-device.webp" alt="Neck &amp; Décolletage LED Device" />
                 <h6>Neck &amp; Décolletage LED Device</h6>
                 {{> e-price current="FREE" old="{$dyn}" highlight=true }}
@@ -432,25 +434,7 @@
                 </ul>
             </div>
         </div>
-
-        {{!-- <div class="exclusive-bundle__column">
-            111
-        </div>
-        {{> e-icon icon="plus" }}
-        <div class="exclusive-bundle__column">
-            222
-        </div> --}}
     {{/exclusive-bundle }}
-
-    {{#> base-section
-        classes="base-section--small-media"
-        title="Trusted and Recommended by Experts"
-        picture="sections/isolated/experts/images/doctor_shah_desk.webp"
-        pill-badge=true
-    }}
-        <p>“How do you <em>reduce the things in your water that may be causing issues</em> with your skin?</p>
-        <p>This Qure filter is incredible – <em>it’s the only filter I personally use</em> to [reduce] chlorine and anything else that’s going to make your water harsh for your skin.”</p>
-    {{/base-section }}
 
     {{#> hero-product
         id="limited-offer"
@@ -471,22 +455,19 @@
             >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_1.webp" alt="Water Filters Offer" />
+                        <img src="sections/isolated/led-mask-offer/images/1.webp" alt="Skin Bundle Offer" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_2.webp" alt="Water Filters Offer" />
+                        <img src="sections/isolated/led-mask-offer/images/2.webp" alt="Skin Bundle Offer" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_3.webp" alt="Water Filters Offer" />
+                        <img src="sections/isolated/led-mask-offer/images/3.webp" alt="Skin Bundle Offer" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_4.webp" alt="Water Filters Offer" />
+                        <img src="sections/isolated/led-mask-offer/images/4.webp" alt="Skin Bundle Offer" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_5.webp" alt="Water Filters Offer" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_6.webp" alt="Water Filters Offer" />
+                        <img src="sections/isolated/led-mask-offer/images/5.webp" alt="Skin Bundle Offer" />
                     </div>
                 </div>
             </div>
@@ -501,22 +482,19 @@
                 >
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_1.webp" alt="Water Filters Offer" />
+                            <img src="sections/isolated/led-mask-offer/images/1.webp" alt="Skin Bundle Offer" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_2.webp" alt="Water Filters Offer" />
+                            <img src="sections/isolated/led-mask-offer/images/2.webp" alt="Skin Bundle Offer" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_3.webp" alt="Water Filters Offer" />
+                            <img src="sections/isolated/led-mask-offer/images/3.webp" alt="Skin Bundle Offer" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_4.webp" alt="Water Filters Offer" />
+                            <img src="sections/isolated/led-mask-offer/images/4.webp" alt="Skin Bundle Offer" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_5.webp" alt="Water Filters Offer" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="sections/isolated/clean-water/images/shower_plus_faucet_img_6.webp" alt="Water Filters Offer" />
+                            <img src="sections/isolated/led-mask-offer/images/5.webp" alt="Skin Bundle Offer" />
                         </div>
                     </div>
                 </div>
@@ -525,107 +503,72 @@
         </div>
         <div class="hero-product__main">
             <div class="e-pill-badge e-pill-badge--md">Limited Time Offer</div>
-            <h2>Qure Shower Filter</h2>
-            <h4>+ FREE Faucet Filter</h4>
+            <h2>Q-Rejuvalight Pro LED Mask</h2>
+            <h4>+ FREE Neck &amp; Décolletage LED System</h4>
             {{> c-special-offer }}
             <article>
                 <ul>
                     <li>Lifetime Warranty</li>
-                    <li>99% Fit Compatibility</li>
+                    <li>FDA Cleared</li>
                 </ul>
-                <p>Repair skin and hair with dual filters that remove up to 99% of chlorine, heavy metals and contaminants.</p>
+                <p>Elevate your LED routine with full face and neck coverage for consistent all-over results.</p>
             </article>
             <hr />
-            <div class="purchase-form-wrapper">
-                {{> c-options-selector
-                    title="Select Your Color"
-                    list='[
-                        {
-                            "img": "sections/isolated/qure-shower-filter/images/shower_filter_white.webp",
-                            "img2": "sections/isolated/qure-shower-filter/images/faucet_filter_white.webp",
-                            "name": "White",
-                            "option": "color",
-                            "checked": true
-                        },
-                        {
-                            "img": "sections/isolated/qure-shower-filter/images/shower_filter_black.webp",
-                            "img2": "sections/isolated/qure-shower-filter/images/faucet_filter_black.webp",
-                            "name": "Black",
-                            "option": "color"
-                        }
-                    ]'
-                }}
-                {{> c-subscribe-selector
-                    title="Select Your Delivery"
-                    list='[
-                        {
-                            "name": "Subscribe &",
-                            "save": "50%",
-                            "price-old": true,
-                            "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "subscribe",
-                            "checked": true,
-                            "text": "
-                                <hr />
-                                <table>
-                                    <tr>
-                                        <th>Qure Shower Filter</th>
-                                        <td>{$dyn}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Qure Faucet Filter</th>
-                                        <td><span>FREE</span> <del>{$dyn}</del></td>
-                                    </tr>
-                                </table>
-                                <hr />
-                                <p>Receive a new Filter Refill every 90 days</p>
-                            "
-                        },
-                        {
-                            "name": "One-Time Purchase",
-                            "save": "20%",
-                            "price-old": true,
-                            "option": "subscribe",
-                            "text": "
-                                <hr />
-                                <table>
-                                    <tr>
-                                        <th>Qure Shower Filter</th>
-                                        <td>{$dyn}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Qure Faucet Filter</th>
-                                        <td><span>FREE</span> <del>{$dyn}</del></td>
-                                    </tr>
-                                </table>
-                            "
-                        }
-                    ]'
-                }}
+            <div class="c-bundle-included">
+                <p class="c-bundle-included__tile">What’s Included</p>
+                <ul class="c-bundle-included__list">
+                    <li>
+                        <a href="#">
+                            <img src="sections/isolated/led-mask-offer/images/q-rejuvalight.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                        </a>
+                        <div>
+                            <a href="#">Q-Rejuvalight Pro LED Mask</a>
+                            <small>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</small>
+                            {{> e-price current="{$dyn}" }}
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="sections/isolated/led-mask-offer/images/led-device.webp" alt="Neck & Décolletage LED Device" />
+                        </a>
+                        <div>
+                            <a href="#">Neck &amp; Décolletage LED Device</a>
+                            <small>Clinically proven to smooth and firm where aging shows first.</small>
+                            {{> e-price current="FREE" old="{$dyn}" highlight=true }}
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+                <div class="c-bundle-included__amount">
+                    <p>INSTANT SAVINGS: $299</p>
+                    {{> e-price current="{$dyn}" old="{$dyn}" }}
+                </div>
             </div>
             <div class="c-buy-block">
-                {{> c-order-button
-                    button="Subscribe Now & Save 50%"
-                    hide-pay=true
+                {{> e-progress
+                    label="Low Stock"
+                    small="Due to high demand, this offer is only available while stock lasts."
+                    progress="82"
+                    low-stock=true
                 }}
-                <p><strong>Skip, pause/modify or cancel anytime. </strong> <a href="#">See more details.</a></p>
+                {{> e-get-free-shipping
+                    text="Order today to lock in your deal and get FREE Shipping"
+                }}
+                {{> c-order-button
+                    button="Shop Now & Save {$dyn}"
+                    hide-pay=true
+                    arrow=true
+                }}
                 <ul class="e-features-list">
                     <li>
-                        {{> e-icon icon="guarantee" }}
-                        30-Day Money-Back Guarantee
+                        {{> e-icon icon="one-year" }}
+                        1-Year Guarantee
                     </li>
                     <li>
                         {{> e-icon icon="shipping-order" }}
                         Free Shipping over {$dyn}
                     </li>
                 </ul>
-                <div class="c-lifetime-warranty c-lifetime-warranty--vertical">
-                    {{> e-icon icon="verified-shield" }}
-                    <p>
-                        <strong>Covered by our Lifetime Warranty.</strong>
-                        Backed by our 30-Day Money-Back Guarantee.
-                    </p>
-                </div>
             </div>
         </div>
         <div class="hero-product__extra">
@@ -635,29 +578,38 @@
                     {
                         "summary": "Key Benefits",
                         "text": "
-                            <p>Get clearer, hydrated skin on tap with the Qure Filter Bundle.</p>
-                            <p>Research shows tap water is often contaminated with over 320 chemicals, which can harm skin health. This bundle utilizes advanced filtering technology to reduce contaminants, including chlorine and other heavy metals, which are known to impact skin negatively.</p>
-                            <p>The Qure Shower Filter and Qure Faucet Filter work together to filter  water, providing clean purified water that helps to improve skin hydration, reduce premature aging, and decrease redness and irritation.</p>
+                            <p>The Q-Rejuvalight Pro is designed to deliver powerful, science-backed LED light technology from the comfort of home. It combines 5 clinically studied wavelengths to address multiple skin concerns with just one device. No downtime, no irritation, and no ongoing cost.</p>
+                            <p>By using it just 3 minutes a day, you’re targeting the root causes of skin concerns like breakouts, pigmentation, fine lines, and redness.</p>
+                            <p>Visible benefits include*:</p>
+                            <ul>
+                                <li>Visibly reduced look of breakouts and redness</li>
+                                <li>Visibly improved look of uneven tone and signs of environmental exposure</li>
+                                <li>Smoother fine lines and wrinkles</li>
+                                <li>Faded dark spots and sun damage</li>
+                                <li>Firmer, plumper-looking skin</li>
+                                <li>Calmer, less reactive skin</li>
+                            </ul>
+                            <p>With consistent use, Qure supports long-term skin health and helps you maintain a radiant, balanced complexion, all without needing to layer on multiple products or book clinic appointments.</p>
+                            <p>*As reported by customers in self-perception surveys and before-and-after images. Individual results may vary</p>
                         "
                     },
                     {
                         "summary": "How It Works",
                         "text": "
-                            <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
-                            <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
-                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
+                            <p>It’s simple and only takes 3 minutes a day:</p>
+                            <ol>
+                                <li>Start with clean, dry skin</li>
+                                <li>Put on the mask and adjust the strap</li>
+                                <li>Press and hold the power button for 3 seconds to turn on</li>
+                                <li>Press the power button once to activate Pro-Aging mode, or press it twice for Anti-Breakout mode. You can also customize your treatment completely and target specific facial zones via the Qure app.</li>
+                            </ol>
+                            <p>The mask will automatically shut off after the session. Follow with your regular skincare routine for best results.</p>
                         "
                     },
                     {
-                        "summary": "What\'s Included In The Box",
+                        "summary": "What\'s Included",
                         "text": "
-                            <p>This bundle includes:</p>
-                            <ul>
-                                <li>1 Qure Showerhead + 1 Filter</li>
-                                <li>1 Qure Faucet + 1 Filter</li>
-                            </ul>
-                            <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. </p>
-                            <p>When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of {$dyn} per month. </p>
+                            <p>This limited time bundle includes one Q-Rejuvalight Pro LED Face Mask and one Neck & Décolletage LED Device for free (worth $299).</p>
                         "
                     }
                 ]'
@@ -665,15 +617,188 @@
         </div>
     {{/hero-product}}
 
+    {{> features-marquee }}
+
+    {{#> set-up }}
+        <picture
+            data-bs-toggle="modal"
+            data-bs-target="#reusableWistiaModal"
+            data-video-id="jlz3itwzrb"
+        >
+            <source media="(min-width:768px)" srcset="sections/new/set-up/images/mask-use-video.webp" />
+            <img src="sections/new/set-up/images/mask-use-video-mob.webp" alt="See how quick and easy it is to use" />
+        </picture>
+        <h2>See how quick and easy it is to use</h2>
+        <ol>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/new/set-up/images/mask-use-step-1.webp" />
+                    <img src="sections/new/set-up/images/mask-use-step-1-mob.webp" alt="Prepare" />
+                </picture>
+                <h6>Prepare</h6>
+                <p>Start with clean, dry skin—no serums or moisturizers before treatment.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:767px)" srcset="sections/new/set-up/images/mask-use-step-2.webp" />
+                    <img src="sections/new/set-up/images/mask-use-step-2-mob.webp" alt="Treatment" />
+                </picture>
+                <h6>Treatment</h6>
+                <p>Open the Qure app to customize your or use the pre-set routines on the device.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:767px)" srcset="sections/new/set-up/images/mask-use-step-3.webp">
+                    <img src="sections/new/set-up/images/mask-use-step-3-mob.webp" alt="Aftercare" />
+                </picture>
+                <h6>Aftercare</h6>
+                <p>Relax while the mask runs its 3-minute session. Afterward, follow with your usual skincare routine.</p>
+            </li>
+        </ol>
+    {{/set-up}}
+
+    {{#> why-it-work id="how_it_works" }}
+        <div class="why-it-work__header">
+            <h2>How It Works</h2>
+            <ul class="e-pill-tabs" role="tablist">
+                <li>
+                    <button
+                        class="active"
+                        type="button"
+                        data-bs-toggle="tab"
+                        data-bs-target="#why-it-work-rejuvenating"
+                    >
+                        Skin Rejuvenating
+                    </button>
+                </li>
+                <li>
+                    <button
+                        type="button"
+                        data-bs-toggle="tab"
+                        data-bs-target="#why-it-work-clearing"
+                    >
+                        Skin Clearing
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="why-it-work__content show" id="why-it-work-rejuvenating">
+            <figure>
+                <figcaption>The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs.</figcaption>
+                <img src="sections/isolated/how-it-works/images/mask_aging.webp" alt="Q-Rejuvalight Pro LED mask" />
+            </figure>
+            <article>
+                <h6>Skin Rejuvenating Mode</h6>
+                <div>
+                    <p>On Skin Rejuvenating Mode, red and infrared wavelengths work together to help improve the appearance of skin texture and firmness. </p>
+                    <p>Red light helps improve the look of skin smoothness and radiance. Deep red and infrared light work at different depths of the skin’s surface to help improve the look of wrinkles over time.</p>
+                </div>
+                <ul class="e-scale">
+                    <li style="--graduation-color: #840d43">Infrared <span>(880 nm)</span></li>
+                    <li style="--graduation-color: #b80e0d">Deep Red <span>(660 nm)</span></li>
+                    <li style="--graduation-color: #f5181e">Red <span>(630 nm)</span></li>
+                    <li style="--graduation-color: #fd8e15">Amber <span>(605 nm)</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="why-it-work__content" id="why-it-work-clearing">
+            <figure>
+                <figcaption>The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs.</figcaption>
+                <img src="sections/isolated/how-it-works/images/mask_breakout.webp" alt="Q-Rejuvalight Pro LED mask" />
+            </figure>
+            <article>
+                <h6>Skin Clearing Mode</h6>
+                <div>
+                    <p>Our Skin Clearing Mode combines blue and red light wavelengths. Blue (415 nm) helps with mild-to-moderate acne, while red (630 nm) helps calm and soothe the appearance of irritated skin.</p>
+                    <p>Together, these wavelengths help improve the appearance of breakouts, support clearer-looking skin, and promote a balanced, healthier-looking complexion.</p>
+                </div>
+                <ul class="e-scale">
+                    <li style="--graduation-color: #2b5aa2">Blue <span>(415 nm)</span></li>
+                    <li style="--graduation-color: #f5181e">Red <span>(630 nm)</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="why-it-work__accordion">
+            <hr />
+            {{> c-accordion
+                list='[
+                    {
+                        "summary": "Technical specifications",
+                        "text": "
+                            <p>
+                                <strong>TREATMENT TIME: </strong> 3 minutes<br />
+                                <strong>CERTIFICATES: </strong> FDA, TGA, CE, UKCA<br />
+                                <strong>OPERATION: </strong>Wireless, hands-free<br />
+                                <strong>WAVELENGTH: </strong>415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<br />
+                                <strong>TREATMENT TIME: </strong> 2 hours<br />
+                                <strong>CHARGING TIME: </strong> 3 minutes<br />
+                                <strong>LEDs: </strong> 160 dual core
+                            </p>
+                        "
+                    },
+                    {
+                        "summary": "Treatment details",
+                        "text": "
+                            <p>
+                                <strong>USE: </strong> Use daily after cleansing, before topical skincare<br />
+                                <strong>PRO-AGING TREATMENT: </strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<br />
+                                <strong>ANTI-BREAKOUT TREATMENT: </strong> 415nm (Blue), 630nm (Red)<br />
+                                <strong>CUSTOMIZED TREATMENT: </strong> Choose treatment modes for each facial area via app<br />
+                                <strong>Skin Type: </strong>Most suitable for Fitzpatrick Skin Types I-IV
+                            </p>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+    {{/why-it-work }}
+
+    {{#> base-section
+        classes="base-section--simple-grid"
+        title="Clinical-grade LED, personalized to your skin"
+        picture="sections/global/banner-with-text/images/clinical-grade.webp"
+    }}
+        <p><strong>See transformative results in less than 12 weeks.</strong></p>
+        <p>Safe, clinically proven wavelengths of light penetrate the layers of the skin at various depths to trigger natural cellular reactions that treats skin concerns from the inside out, for immediate and long lasting results.</p>
+    {{/base-section }}
+
+    {{#> base-section
+        classes="base-section--simple-grid base-section--reverse"
+        title="Qure mobile app"
+        picture="assets/images/qure_mobile_app.webp"
+    }}
+        <p><strong>The only FDA-cleared LED light therapy mask with an app.</strong></p>
+        <p>Your skin is unique, so your treatment should be too.</p>
+        <p>Choose between <em>three treatment modes</em> - “Skin Rejuvenating”, “Skin Clearing” or custom treatment zones. Select a treatment mode on five different facial areas to <em>treat and target what your skin needs</em> today.</p>
+        <p>Never miss a treatment with Qure mobile app planner and phone reminders.</p>
+    {{/base-section }}
+
+    {{#> base-section
+        classes="base-section--small-media"
+        title="Trusted and Recommended by Experts"
+        video='[
+            {
+                "url": "https://www.youtube.com/watch?v=jwKN4SH4yz8",
+                "picture": "sections/isolated/experts/images/doctor_img_clean.webp",
+                "label-main": "Dr. Shah & Dr. Maxfield",
+                "label-secondary": "Board Certified Dermatologists"
+            }
+        ]'
+        pill-badge=true
+    }}
+        <p>“Of all the LED masks we’ve tried, this is <em>the best on the market right now...</em> It didn’t lose in any category...</p>
+        <p>There’s real science behind LED therapy, and <em>Qure makes it easy</em> to be consistent—which is what really drives results.”</p>
+    {{/base-section }}
+
     {{#> base-slider
-        classes="base-slider--bg"
-        title="See why everyone’s switching to filtered water"
+        classes="base-slider--tree-cards"
+        title=""
     }}
         <div
             class="c-swiper"
             data-swiper='{
-                "slidesPerView": 1.2,
-                "spaceBetween": 16,
+                "slidesPerView": 1.1,
+                "spaceBetween": 13,
                 "loop": false,
                 "pagination": {
                     "el": ".c-swiper-pagination",
@@ -684,51 +809,105 @@
                     "nextEl": ".c-swiper-button-next"
                 },
                 "breakpoints": {
-                    "480": {
-                        "slidesPerView": 2.2
-                    },
                     "768": {
-                        "slidesPerView": 4
+                        "slidesPerView": 2
+                    },
+                    "1200": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 16
                     }
                 }
             }'
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="swiper-slide">
-                    <picture data-url="https://www.youtube.com/watch?v=JELsZmxlAM">
-                        <img src="assets/images/shwr_fau_img1.webp" alt="Youtube video" />
-                    </picture>
-                </div>
-                </div>
-                <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
-                        id="yvm1h7gbig"
-                        alt="Wistia video"
-                    }}
-                    {{/c-wistia-embed-video}}
-                </div>
-                <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
-                        id="altvn4hlw5"
-                        alt="Wistia video"
-                    }}
-                    {{/c-wistia-embed-video}}
+                    <div class="c-trusted-video-card">
+                        <picture
+                            class="filter-card-video"
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="qnxqysx3sg"
+                        >
+                            <img src="sections/isolated/trusted-video/images/lmv-1.webp" alt="Dr. Prem Tripathi" />
+                        </picture>
+                        <article>
+                            <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
+                            <div>
+                                <p>Dr. Prem Tripathi</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
-                        id="lxde2943wj"
-                        alt="Wistia video"
-                    }}
-                    {{/c-wistia-embed-video}}
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=1iXBgh7WPOY">
+                            <img src="sections/isolated/trusted-video/images/lmv-2.webp" alt="Dr. Dylan Greeney" />
+                        </picture>
+                        <article>
+                            <p>"Qure's anti-aging treatment gets down deep into your skin to stimulate collagen & makes a big difference..."</p>
+                            <div>
+                                <p>Dr. Dylan Greeney</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <picture data-url="https://www.youtube.com/watch?v=YulGNwbRp7w">
-                        <img src="assets/images/shwr_fau_img6.webp" alt="Youtube video" />
-                    </picture>
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=AeksxRPZyrA">
+                            <img src="sections/isolated/trusted-video/images/lmv-3.webp" alt="Dr. Luke Maxfield" />
+                        </picture>
+                        <article>
+                            <p>"This is one of my faves from @qureskincare. It's a high quality mask and personalizable."</p>
+                            <div>
+                                <p>Dr. Luke Maxfield</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=XtgmSadah48">
+                            <img src="sections/isolated/trusted-video/images/lmv-4.webp" alt="Dr. Anthony Youn" />
+                        </picture>
+                        <article>
+                            <p>"This mask actively treats the entire face for clearer and more beautiful skin."</p>
+                            <div>
+                                <p>Dr. Anthony Youn</p>
+                                <p><span class="e-checkmark"></span> Plastic Surgeon</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=lLkM7Q7It2A&t=154s">
+                            <img src="sections/isolated/trusted-video/images/lmv-5.webp" alt="Dr. Yaseen Arsalan" />
+                        </picture>
+                        <article>
+                            <p>"These wavelengths trigger cells to create even more collagen... helping reduce common signs of aging."</p>
+                            <div>
+                                <p>Dr. Yaseen Arsalan</p>
+                                <p><span class="e-checkmark"></span> Doctor of Pharmacy</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=7nQcleLpPnk">
+                            <img src="sections/isolated/trusted-video/images/lmv-6.webp" alt="Dr. Davin Lim" />
+                        </picture>
+                        <article>
+                            <p>"Not your average LED mask... this is a deeper, more effective way to achieve healthy, radiant skin."</p>
+                            <div>
+                                <p>Dr. Davin Lim</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
             <div class="c-swiper-nav">
@@ -739,170 +918,114 @@
         </div>
     {{/base-slider }}
 
-    {{#> skin-deserves
-        title="Your skin deserves Qure"
-        text="When your water is working against you, no product can keep up. Here’s how Qure filters changes that."
+    {{#> comparison
+        title="The beauty of clinical results from home - without the ‘clinical’ costs"
+        picture-first="sections/isolated/eye-patches/images/clinical-1.webp"
+        picture-second="sections/isolated/eye-patches/images/rejuv_vs_2.webp"
+        name-first="Qure"
+        name-second="Derm/Clinic Treatments"
+        list-first='[
+            "<div><strong>One-time</strong> investment</div>",
+            "No appointments - use anytime at home",
+            "Saves time with only 3 minutes a day",
+            "Better results with more frequent treatments",
+            "Customized approach with clinical backing"
+        ]'
+        list-second='[
+            "<div><strong>Ongoing cost</strong> per session</div> ",
+            "Completed according to clinic\'s availability",
+            "Requires 20-30 mins per session, plus travel time",
+            "Less treatments = less consistent results",
+            "Customized approach with clinical backing"
+        ]'
+        declaimer="*Based on laboratory testing under controlled conditions. Performance may vary depending on water quality and usage."
     }}
-        <table>
-            <tr>
-                <th>{{> e-icon icon="qure"}}</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
-                <th>Other Products</th>
-            </tr>
-            <tr>
-                <td>Made for skin and hair care</td>
-                <td>{{> e-icon icon="checkmark-fill"}}</td>
-                <td>{{> e-icon icon="cross-fill"}}</td>
-                <td>Made for maximum profit</td>
-            </tr>
-            <tr>
-                <td>Protects you at the sink and the shower</td>
-                <td>{{> e-icon icon="checkmark-fill"}}</td>
-                <td>{{> e-icon icon="cross-fill"}}</td>
-                <td>Doesn’t protect your skin everywhere</td>
-            </tr>
-            <tr>
-                <td>Removes chemicals and heavy metals</td>
-                <td>{{> e-icon icon="checkmark-fill"}}</td>
-                <td>{{> e-icon icon="cross-fill"}}</td>
-                <td>Leaves the worst chemicals behind</td>
-            </tr>
-            <tr>
-                <td>Proven to calm breakouts and dryness</td>
-                <td>{{> e-icon icon="checkmark-fill"}}</td>
-                <td>{{> e-icon icon="cross-fill"}}</td>
-                <td>Feel like they should help, but don’t</td>
-            </tr>
-            <tr>
-                <td>Makes your products work even better</td>
-                <td>{{> e-icon icon="checkmark-fill"}}</td>
-                <td>{{> e-icon icon="cross-fill"}}</td>
-                <td>Block absorption and waste your routine</td>
-            </tr>
-        </table>
-    {{/skin-deserves }}
+        <p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, the upselling and the hassle.</p>
+    {{/comparison }}
 
-    {{#> base-section
-        classes="base-section--reverse base-section--grey"
-        title="Do you know what’s in your water?"
-        features-list='
-            <ul class="features-list">
-                <li>
-                    <i class="e-icon e-icon-limescale"></i>
-                    Limescale
-                </li>
-                <li>
-                    <i class="e-icon e-icon-heavy-metals"></i>
-                    Heavy Metals
-                </li>
-                <li>
-                    <i class="e-icon e-icon-chlorine"></i>
-                    Chlorine
-                </li>
-                <li>
-                    <i class="e-icon e-icon-micro-plastics"></i>
-                    Micro-plastics
-                </li>
-                <li>
-                    <i class="e-icon e-icon-copper"></i>
-                    Copper
-                </li>
-                <li>
-                    <i class="e-icon e-icon-micro-organisms"></i>
-                    Micro-organisms
-                </li>
-            </ul>
-        '
+    {{#> across-image-banner
+        classes="across-image-banner--hero"
     }}
-        <p>Most tap water is filled with invisible contaminants that quietly damage your skin, hair, and health – without you even realizing.</p>
-        <p>Take the quiz to find out what’s lurking in your water.</p>
-        <a class="btn btn--primary" href="#">Get a Free Water Report</a>
-    {{/base-section }}
-
-    {{#> hero-product
-        id="protect-skin"
-        classes="hero-product--reverse hero-product--secondary"
-    }}
-        <div class="hero-product__gallery">
-            <img src="sections/isolated/protect-your-skin/images/protect_skin.webp" alt="Water Filters Offer" />
-        </div>
-        <div class="hero-product__main">
-            {{> c-rating value="4.8" }}
-            <h1>Protect your skin &amp; save $129</h1>
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/isolated/page-banner/images/hero.webp" />
+            <img src="sections/isolated/page-banner/images/hero-mob-1.webp" />
+        </picture>
+        <div class="container">
             <article>
-                <p>Your water is filled with hidden irritants and chemicals that damage your skin and hair daily.</p>
-                <p>The Qure Filter Bundle removes these at the source without adding any steps to your routine.</p>
+                <div class="c-inline-product-box">
+                    {{> c-rating value="4.8" light=true }}
+                    <h2>Maximize Benefits with a FREE Neck &amp; Décolletage LED System</h2>
+                    {{> c-special-offer
+                        hide-label=true
+                        pill-text="SAVE {$dyn}"
+                    }}
+                    <ul>
+                        <li>Extend your treatment beyond the face for an all-over rejuvenated&nbsp;look</li>
+                        <li>Visibly smooth fine lines, improve skin texture, and support firmness</li>
+                        <li>Helps reduce the look of dark spots and improve uneven tone for a&nbsp;more radiant complexion</li>
+                    </ul>
+                    <form class="c-buy-block" action="#">
+                        {{> c-order-button
+                            button="SHOP NOW & SAVE {$DYN}"
+                            hide-pay=true
+                            arrow=true
+                        }}
+                    </form>
+                </div>
             </article>
-            <div class="c-buy-block">
-                {{> c-order-button
-                    button="Claim Offer Now"
-                    hide-pay=true
-                }}
-                <ul class="e-features-list">
-                    <li>
-                        {{> e-icon icon="guarantee" }}
-                        30-Day Money-Back Guarantee
-                    </li>
-                    <li>
-                        {{> e-icon icon="shipping-order" }}
-                        Free Shipping over {$dyn}
-                    </li>
-                </ul>
-            </div>
-            {{> c-complete-bundle }}
         </div>
-    {{/hero-product}}
+    {{/across-image-banner }}
 
     {{> have-questions
+        devices-technical=true
         list='[
             {
-                "summary": "What’s included in this bundle?",
+                "summary": "How quickly will I see results?",
                 "text": "
-                    <p>This bundle includes:</p>
-                    <ul>
-                        <li>1 Qure Showerhead + 1 Filter</li>
-                        <li>1 Qure Faucet + 1 Filter</li>
-                    </ul>
-                    <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of {$dyn} per month.</p>
+                    <p>Every individual may respond differently to specific wavelengths of light, and results will depend on the goal you want to address.</p>
+                    <p>Most users report visible improvements in the look of breakouts and redness sooner than expected. Smoother-looking lines, improved tone, and a firmer appearance may take longer.</p>
+                    <p>Changes are often gradual, so we recommend taking “before and after” photos to track your results. Consistency is key for maintaining improvements over time.</p>
                 "
             },
             {
-                "summary": "How does tap water harm my skin?",
+                "summary": "How often can I use these treatments?",
                 "text": "
-                    <p>Facial skin is more sensitive than your skin anywhere else. Your skin barrier is like a protective shield against outside threats. But the stuff in tap water can harm it, leading to:</p>
-                    <ul>
-                        <li>Dry and Damaged Skin: Tap water can strip away your skin\'s natural oils, leaving it dry and damaged.</li>
-                        <li>Skin Irritation: It might also cause skin irritation, making it sensitive and red.</li>
-                        <li>Premature Aging: Chemicals in tap water may contribute to early signs of aging, like fine lines and dullness.</li>
-                    </ul>
+                    <p>You can use both the Q-Rejuvalight Pro Mask and the Neck & Décolletage LED Device daily. In fact, consistent daily use is recommended for best results.</p>
                 "
             },
             {
-                "summary": "What chemicals do they filter?",
+                "summary": "Do I need to wear eye protection when I use the Q-Rejuvalight Pro?",
                 "text": "
-                    <p>The Qure Filter Bundle improves your tap water by reducing skin irritants that make your water “hard,” like chlorine, heavy metals, microorganisms, and more.</p>
-                    <p>The filters reduce chlorine, heavy metals, microorganisms, and other common water contaminants.</p>
+                    <p>The Q-Rejuvalight Pro has been tested and cleared for eye safety. It has successfully passed the IEC62471 evaluation for eye safety test, which is used to determine whether a device\'s light output is safe for the eyes or not.</p>
+                    <p>Regardless, we recommend closing your eyes and wearing protective eyewear during treatment. The light can be bright when powered on and some users may experience sensitivity, even when closing their eyes.</p>
+                    <p>As part of our unwavering commitment to your safety, we decided to take the initiative to include FREE light blocking protective eyewear with our Q-Rejuvalight Pro LED mask that works seamlessly during your treatment.</p>
                 "
             },
             {
-                "summary": "Are they compatible with all showerhead and faucets?",
+                "summary": "Is LED light therapy safe for all skin types?",
                 "text": "
-                    <p>The Qure Shower Filter fits most standard screw-on showerheads, but we recommend checking your showerheads specs to confirm. It won’t work with built-in or custom fittings without standard threads.</p>
-                    <p>The Qure Faucet Filter fits 99% of standard faucets with a circular removable aerator and includes adaptors for different sizes. We recommend checking your faucet type before purchase. It won’t fit square or oval faucets, showerhead faucets, induction styles, pull-outs without detachable aerators, or non-threaded pipes under 15mm.</p>
-                    <img src=\"sections/isolated/faqs/images/taps.webp\" alt=\"Faucets\">
+                    <p>Yes — the Q-Rejuvalight Pro is designed for use across all skin types when used as directed.</p>
+                    <p>That said, skin types V and VI (on the Fitzpatrick scale) may be more sensitive to visible light due to higher melanin levels, leading to increased photo-absorption and a small risk of pigmentation changes.</p>
+                    <p>Because of this, we advise that those with darker skin tones or pigment-prone skin consult with their dermatologist before use to determine proper settings and usage frequency.</p>
+                    <p>Many users with deeper skin tones have used the device safely and shared positive outcomes when protocols were followed carefully.</p>
                 "
             },
             {
-                "summary": "Do I need to change/replace the filters?",
+                "summary": "Does the Q-Rejuvalight Pro come with warranty?",
                 "text": "
-                    <p>With daily use, your Qure Filters will need to be replaced at least once every three months for your skin to look and feel its best. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of {$dyn} per month.</p>
+                    <p>Q-Rejuvalight Pro Facewear comes with one (1) year warranty covering any manufacturer related problems resulting from everyday use of the product. However, this device is designed to last years! Proudly designed in Australia.</p>
                 "
             },
             {
-                "summary": "Will it affect water pressure?",
+                "summary": "At what age and when is the best time to start using LED light therapy?",
                 "text": "
-                    <p>Our filters are designed to maintain water pressure while effectively filtering impurities.</p>
+                    <p>Most people can benefit from LED light therapty. Whether the goal is to treat acne, help reduce the visible signs of aging, or both, prevention is better than correction. The sooner the Q-Rejuvalight Pro becomes part of your routine, the better!</p>
+                "
+            },
+            {
+                "summary": "Is Q-Rejuvalight Pro FDA-cleared?",
+                "text": "
+                    <p>Yes! The Q-Rejuvalight Pro LED Mask is the world’s first customizable, FDA-cleared at-home LED device designed for the treatment of wrinkles and mild-to-moderate inflammatory acne. You can find more details about the clearance on the FDA website (K230042).</p>
                 "
             }
         ]'

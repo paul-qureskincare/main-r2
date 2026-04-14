@@ -295,6 +295,42 @@
   content:"\e976";
 }
 
+.e-icon-one-year:before{
+  content:"\e977";
+}
+
+.e-icon-hand:before{
+  content:"\e978";
+}
+
+.e-icon-calendar:before{
+  content:"\e979";
+}
+
+.e-icon-certificate:before{
+  content:"\e97a";
+}
+
+.e-icon-charge:before{
+  content:"\e97b";
+}
+
+.e-icon-leds:before{
+  content:"\e97c";
+}
+
+.e-icon-switcher:before{
+  content:"\e97d";
+}
+
+.e-icon-wave:before{
+  content:"\e97e";
+}
+
+.e-icon-treatment-time:before{
+  content:"\e97f";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -585,6 +621,36 @@
   background:#91baec;
 }
 
+.e-get-free-shipping{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  padding:14px 24px;
+  border-radius:10px;
+  background:#eef7f4;
+}
+.e-get-free-shipping:before{
+  flex:none;
+  width:8px;
+  height:8px;
+  border-radius:10px;
+  background:#008763;
+  animation:pulse-green 2s infinite;
+}
+@keyframes pulse-green{
+  0%{
+    box-shadow:0 0 0 0 rgba(0,135,99,.7);
+    transform:scale(1);
+  }
+  to{
+    box-shadow:0 0 0 8px rgba(0,135,99,0);
+    transform:scale(1.1);
+  }
+}
+.e-get-free-shipping:before{
+  content:"";
+}
+
 .e-rating-stars{
   position:relative;
   display:inline-block;
@@ -691,7 +757,7 @@
   gap:8px 16px;
   align-items:center;
 }
-.c-special-offer:before{
+.c-special-offer[data-label]:before{
   color:transparent;
   font-weight:600;
   text-transform:uppercase;
@@ -771,6 +837,9 @@
 }
 .e-features-list .e-icon-checkmark{
   font-size:10px;
+}
+.e-features-list .e-icon-one-year{
+  font-size:22px;
 }
 
 .e-pay-options{
@@ -884,6 +953,9 @@
 }
 .c-buy-block>p:has(a) a:hover{
   text-decoration:none;
+}
+.c-buy-block .e-get-free-shipping{
+  margin-bottom:8px;
 }
 
 .c-next-batch{
@@ -1160,6 +1232,71 @@
   font-size:14px;
   vertical-align:top;
   -webkit-text-stroke:.4px;
+}
+.c-accordion .devices-technical{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.c-accordion .devices-technical ul:not(.c-marked-list){
+  margin-bottom:0;
+  padding-left:0;
+}
+.c-accordion .devices-technical ul:not(.c-marked-list) li{
+  padding-left:0;
+  list-style:none;
+}
+.c-accordion .devices-technical__buttons{
+  display:flex;
+  gap:30px;
+}
+.c-accordion .devices-technical__buttons button{
+  padding:0;
+  color:#b5b6b7;
+  text-align:left;
+  border:0;
+  background:none;
+}
+.c-accordion .devices-technical__buttons button.active{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-accordion .devices-technical__pane{
+  transition:opacity .6s linear;
+}
+.c-accordion .devices-technical__pane:not(.show){
+  position:absolute;
+  left:-300vw;
+  z-index:-10;
+  visibility:hidden;
+  opacity:0;
+}
+.c-accordion .devices-technical__pane hr{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+.c-accordion .devices-technical__section{
+  display:grid;
+  grid-template-columns:125px 1fr;
+  gap:32px;
+}
+.c-accordion .devices-technical__section p{
+  margin-bottom:0;
+}
+.c-accordion .devices-technical__section ul{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  font-size:16px;
+  line-height:1.2;
+}
+.c-accordion .devices-technical__section li{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.c-accordion .devices-technical__section strong{
+  font-weight:600;
 }
 .c-accordion--lines .c-accordion__list{
   gap:0;
@@ -2081,6 +2218,13 @@
 .c-exclusive-offer__item div:has(del) img{
   border:1px solid #ff5429;
 }
+.c-exclusive-offer .e-icon-plus{
+  padding:9px;
+  color:#fff;
+  font-size:12px;
+  border-radius:50%;
+  background:#212422;
+}
 
 .e-progress{
   display:flex;
@@ -2115,11 +2259,21 @@
   background:currentColor;
   content:"";
 }
+.e-progress small{
+  margin-top:-8px;
+  font-size:.85em;
+}
 .e-progress--nearly-full div{
   color:#212428;
 }
 .e-progress--nearly-full div:after{
   background:#ff5429;
+}
+.e-progress--low-stock{
+  padding-right:20px;
+  padding-left:20px;
+  border-radius:10px;
+  background:rgba(255,84,41,.1);
 }
 
 .c-complete-bundle{
@@ -2357,6 +2511,66 @@
 }
 .c-lifetime-warranty--vertical p:first-line{
   font-weight:unset;
+}
+
+.c-bundle-included{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  max-width:500px;
+}
+.c-bundle-included hr{
+  margin:0;
+}
+.c-bundle-included__list{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.c-bundle-included__list li{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+.c-bundle-included__list li a{
+  color:inherit;
+}
+.c-bundle-included__list li a:hover{
+  text-decoration:underline;
+}
+.c-bundle-included__list li img{
+  width:100px;
+  height:auto;
+  vertical-align:top;
+  border-radius:5px;
+}
+.c-bundle-included__list li>div{
+  display:grid;
+  grid-template:repeat(2, auto)/1fr auto;
+  gap:10px 16px;
+  align-items:start;
+}
+.c-bundle-included__list li .e-price{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.c-bundle-included__list li .e-price__main{
+  flex-direction:row-reverse;
+}
+.c-bundle-included__list li small{
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.2;
+}
+.c-bundle-included__amount{
+  display:flex;
+  justify-content:space-between;
+}
+.c-bundle-included__amount p{
+  color:#008763;
+}
+.c-bundle-included__amount .e-price__main{
+  flex-direction:row-reverse;
 }
 
 .hero-product__container{
@@ -2633,6 +2847,10 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product--secondary .hero-product__main:has(.c-complete-bundle) .c-buy-block{
   order:2;
 }
+.hero-product--reverse .hero-product__container{
+  -moz-column-gap:100px;
+       column-gap:100px;
+}
 .hero-product--reverse .hero-product__main{
   grid-column:2;
 }
@@ -2647,9 +2865,18 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
     max-width:354px;
   }
 }
+@media screen and (max-width:991px){
+  .hero-product--reverse .hero-product__container{
+    -moz-column-gap:60px;
+         column-gap:60px;
+  }
+}
 @media screen and (max-width:767px){
   .e-pill-tabs button,.e-pill-tabs label{
     font-size:16px;
+  }
+  .e-get-free-shipping{
+    padding:14px 16px;
   }
   .c-special-offer{
     flex-wrap:wrap;
@@ -2698,6 +2925,10 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
     margin-top:32px;
     margin-bottom:4px;
   }
+  .c-accordion .devices-technical__section{
+    grid-template-columns:auto;
+    gap:24px;
+  }
   .c-dialog__content,.c-dialog__message{
     padding-right:16px;
     padding-left:16px;
@@ -2743,6 +2974,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-payment-selector__text,.c-save-up{
     flex-direction:column;
   }
+  .c-exclusive-offer{
+    max-width:none;
+  }
   .c-complete-bundle{
     row-gap:4px;
   }
@@ -2774,6 +3008,21 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-lifetime-warranty{
     flex-direction:column;
     text-align:center;
+  }
+  .c-bundle-included{
+    max-width:none;
+  }
+  .c-bundle-included__list li{
+    font-size:16px;
+  }
+  .c-bundle-included__list li img{
+    width:80px;
+  }
+  .c-bundle-included__list li .e-price__main{
+    flex-direction:column-reverse;
+  }
+  .c-bundle-included__list li small{
+    font-size:14px;
   }
   .hero-product__container{
     grid-template:auto/auto;

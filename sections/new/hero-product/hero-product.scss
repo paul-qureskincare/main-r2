@@ -2,6 +2,7 @@
 @use "@elements/e-icon" as *;
 @use "@elements/e-sticky-thumb-video" as *;
 @use "@elements/e-pill-tabs" as *;
+@use "@elements/e-get-free-shipping" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
@@ -22,6 +23,7 @@
 @use "@components/c-clinic-metrics" as *;
 @use "@components/c-moneyback" as *;
 @use "@components/c-lifetime-warranty" as *;
+@use "@components/c-bundle-included" as *;
 
 .hero-product {
     $root: &;
@@ -389,6 +391,14 @@
 
     // .hero-product--reverse
     &--reverse #{$root} {
+        &__container {
+            column-gap: 100px;
+
+            @include md {
+                column-gap: 60px;
+            }
+        }
+
         &__main {
             grid-column: 2;
 

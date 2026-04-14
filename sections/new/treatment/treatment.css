@@ -295,6 +295,42 @@
   content:"\e976";
 }
 
+.e-icon-one-year:before{
+  content:"\e977";
+}
+
+.e-icon-hand:before{
+  content:"\e978";
+}
+
+.e-icon-calendar:before{
+  content:"\e979";
+}
+
+.e-icon-certificate:before{
+  content:"\e97a";
+}
+
+.e-icon-charge:before{
+  content:"\e97b";
+}
+
+.e-icon-leds:before{
+  content:"\e97c";
+}
+
+.e-icon-switcher:before{
+  content:"\e97d";
+}
+
+.e-icon-wave:before{
+  content:"\e97e";
+}
+
+.e-icon-treatment-time:before{
+  content:"\e97f";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -1393,6 +1429,71 @@
   vertical-align:top;
   -webkit-text-stroke:.4px;
 }
+.c-accordion .devices-technical{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.c-accordion .devices-technical ul:not(.c-marked-list){
+  margin-bottom:0;
+  padding-left:0;
+}
+.c-accordion .devices-technical ul:not(.c-marked-list) li{
+  padding-left:0;
+  list-style:none;
+}
+.c-accordion .devices-technical__buttons{
+  display:flex;
+  gap:30px;
+}
+.c-accordion .devices-technical__buttons button{
+  padding:0;
+  color:#b5b6b7;
+  text-align:left;
+  border:0;
+  background:none;
+}
+.c-accordion .devices-technical__buttons button.active{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-accordion .devices-technical__pane{
+  transition:opacity .6s linear;
+}
+.c-accordion .devices-technical__pane:not(.show){
+  position:absolute;
+  left:-300vw;
+  z-index:-10;
+  visibility:hidden;
+  opacity:0;
+}
+.c-accordion .devices-technical__pane hr{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+.c-accordion .devices-technical__section{
+  display:grid;
+  grid-template-columns:125px 1fr;
+  gap:32px;
+}
+.c-accordion .devices-technical__section p{
+  margin-bottom:0;
+}
+.c-accordion .devices-technical__section ul{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  font-size:16px;
+  line-height:1.2;
+}
+.c-accordion .devices-technical__section li{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.c-accordion .devices-technical__section strong{
+  font-weight:600;
+}
 .c-accordion--lines .c-accordion__list{
   gap:0;
 }
@@ -1429,6 +1530,9 @@
 }
 .e-features-list .e-icon-checkmark{
   font-size:10px;
+}
+.e-features-list .e-icon-one-year{
+  font-size:22px;
 }
 
 .e-pay-options{
@@ -1542,6 +1646,9 @@
 }
 .c-buy-block>p:has(a) a:hover{
   text-decoration:none;
+}
+.c-buy-block .e-get-free-shipping{
+  margin-bottom:8px;
 }
 
 .c-next-batch{
@@ -2133,6 +2240,10 @@
   .c-accordion__ask-us{
     margin-top:32px;
     margin-bottom:4px;
+  }
+  .c-accordion .devices-technical__section{
+    grid-template-columns:auto;
+    gap:24px;
   }
   .e-features-list{
     gap:8px;

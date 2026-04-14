@@ -35,6 +35,11 @@
         }
     }
 
+    small {
+        margin-top: -8px;
+        font-size: 0.85em;
+    }
+
     // .e-progress--nearly-full
     &--nearly-full {
         div {
@@ -44,6 +49,14 @@
                 background: #ff5429;
             }
         }
+    }
+
+    // .e-progress--low-stock
+    &--low-stock {
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 10px;
+        background: rgb(255 84 41 / 10%);
     }
 }
 
