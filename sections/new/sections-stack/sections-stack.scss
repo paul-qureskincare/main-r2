@@ -114,7 +114,8 @@
 .blog,
 .index,
 .cart,
-.page {
+.page,
+body[class*="404"] {
     @include sections-stack;
 }
 

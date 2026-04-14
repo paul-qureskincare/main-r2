@@ -1312,6 +1312,13 @@
   color:#fff;
   background:#212428;
 }
+.base-section--404 .container{
+  max-width:760px;
+}
+.base-section--404 img{
+  max-width:235px;
+  margin:0 auto;
+}
 .base-section:has(.btn):has(.c-percent-list) article{
   grid-template-rows:auto repeat(2, minmax(-webkit-min-content, 0)) auto;
   grid-template-rows:auto repeat(2, minmax(min-content, 0)) auto;
@@ -1466,6 +1473,9 @@ body[class="product.face-serum"] .base-section article:has(.circle-icons-list) p
     width:100vw;
     margin-right:-15px;
     margin-left:-15px;
+  }
+  .base-section--404 h2{
+    text-align:center;
   }
   .base-section:has(.btn):has(.c-percent-list) article{
     grid-template-rows:auto;

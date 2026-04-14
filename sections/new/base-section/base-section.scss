@@ -440,6 +440,23 @@
         background: #212428;
     }
 
+    &--404 {
+        .container {
+            max-width: 760px;
+        }
+
+        h2 {
+            @include sm {
+                text-align: center;
+            }
+        }
+
+        img {
+            max-width: 235px;
+            margin: 0 auto;
+        }
+    }
+
     // When section has button and percent list
     &:has(.btn):has(.c-percent-list) {
         article {
