@@ -91,13 +91,18 @@
 
         .c-percent-list {
             flex-direction: row;
-            max-width: 460px;
+            max-width: 500px;
 
             li {
                 flex-direction: column;
                 width: 100%;
                 text-align: center;
             }
+        }
+
+        small {
+            max-width: 500px;
+            text-align: center;
         }
     }
 

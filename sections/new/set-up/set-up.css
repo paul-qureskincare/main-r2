@@ -325,6 +325,46 @@
   width:100%;
   max-width:400px;
 }
+.set-up--qa:not(.set-up--no-video) h2{
+  font-family:inherit;
+  font-weight:600;
+}
+@media screen and (min-width:768px){
+  .set-up--qa:not(.set-up--no-video) .container{
+    grid-template-rows:repeat(3, auto);
+    gap:24px 40px;
+    align-items:center;
+    max-width:1072px;
+  }
+  .set-up--qa:not(.set-up--no-video) h2{
+    grid-row:1;
+    grid-column:1 /  -1;
+  }
+  .set-up--qa:not(.set-up--no-video) picture[data-video-id]{
+    grid-row:2 /  4;
+    grid-column:1;
+  }
+  .set-up--qa:not(.set-up--no-video) ol{
+    flex-direction:column;
+    grid-column:2;
+    gap:24px;
+  }
+  .set-up--qa:not(.set-up--no-video) ol li{
+    display:grid;
+    grid-template:repeat(2, auto)/200px 1fr;
+    row-gap:6px;
+    align-items:center;
+  }
+  .set-up--qa:not(.set-up--no-video) ol picture{
+    grid-row:1 /  -1;
+  }
+  .set-up--qa:not(.set-up--no-video) ol h6{
+    align-self:end;
+  }
+  .set-up--qa:not(.set-up--no-video) ol p{
+    align-self:start;
+  }
+}
 @media screen and (max-width:991px){
   .set-up ol,.set-up:not(.set-up--no-video) .container{
     gap:24px;
@@ -371,5 +411,8 @@
   }
   .set-up--no-video .container{
     gap:24px;
+  }
+  .set-up--qa:not(.set-up--no-video) h2+p{
+    order:-1;
   }
 }

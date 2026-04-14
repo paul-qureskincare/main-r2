@@ -42,6 +42,18 @@
         {{#if button }}
             <a class="btn btn--primary" href="#">{{ button }}</a>
         {{/if}}
+        {{#if features-list }}
+            <ul class="e-features-list">
+                <li>
+                    {{> e-icon icon="guarantee" }}
+                    90-Day Money-Back Guarantee
+                </li>
+                <li>
+                    {{> e-icon icon="shipping-order" }}
+                    Free Shipping over {$dyn}
+                </li>
+            </ul>
+        {{/if}}
     </div>
 </section>
 <script>

@@ -143,6 +143,12 @@
   margin:40px auto 0;
   text-transform:uppercase;
 }
+.trusted-reviews:has(.e-features-list) .btn{
+  max-width:500px;
+}
+.trusted-reviews .e-features-list{
+  margin-top:12px;
+}
 @media screen and (max-width:991px){
   .trusted-reviews h2{
     margin-bottom:20px;
@@ -179,5 +185,8 @@
   }
   .trusted-reviews .btn{
     margin-top:24px;
+  }
+  .trusted-reviews .e-features-list li:first-child{
+    display:none;
   }
 }

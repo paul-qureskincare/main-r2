@@ -331,6 +331,14 @@
   content:"\e97f";
 }
 
+.e-icon-eye:before{
+  content:"\e980";
+}
+
+.e-icon-share:before{
+  content:"\e981";
+}
+
 .e-icon-shipping-order:before{
   content:"\e90e";
 }
@@ -1916,6 +1924,10 @@
   text-align:center;
   background:#c7e5db;
   content:attr(data-announcement);
+}
+body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
+  color:#fff;
+  background:#212428;
 }
 .treatment .container{
   display:grid;

@@ -402,11 +402,15 @@
 }
 body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list{
   flex-direction:row;
-  max-width:460px;
+  max-width:500px;
 }
 body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list li{
   flex-direction:column;
   width:100%;
+  text-align:center;
+}
+body[class*="page.qure-filters-offer"] .progress-metrics small{
+  max-width:500px;
   text-align:center;
 }
 body[class*="page.led-mask-offer"] .progress-metrics .container{
