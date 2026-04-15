@@ -4,6 +4,7 @@
 @use "@components/c-visual-compare-card" as *;
 @use "@components/c-advisory-collapse-card" as *;
 @use "@components/c-modal" as *;
+@use "@components/c-product-tile" as *;
 
 .base-slider {
     $root: &;
@@ -52,6 +53,20 @@
 
             img {
                 height: 100%;
+            }
+        }
+
+        .c-product-tile {
+            .btn {
+                @include sm {
+                    display: block;
+                }
+            }
+
+            // .c-product-tile__price
+            &__price {
+                display: flex;
+                justify-content: center;
             }
         }
     }

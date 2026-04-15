@@ -112,45 +112,67 @@
                         <li>Science backed, age-defying ingredients such as retinol, caffeine, niacinamide, and peptides.</li>
                     </ul>
                 </article>
-                <hr />
+                <ul class="e-pill-tabs e-pill-tabs--selector">
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" />
+                            One time purchase
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" checked />
+                            Subscribe &amp; Save
+                        </label>
+                    </li>
+                </ul>
                 {{> c-supply-selector
-                    classes="c-supply-selector--tiles"
-                    title="Select Your Supply"
+                    classes="c-supply-selector--delivery"
+                    title="Select Your Delivery"
                     list='[
                         {
-                            "image": "sections/isolated/targeted-patches/images/24-pairs.webp",
-                            "name": "3 Months",
-                            "desc": "(3 boxes, 24 pairs)",
+                            "image": "sections/isolated/targeted-patches/images/24-pairs-new.webp",
+                            "name": "3 Month Supply",
+                            "desc": "3 boxes, 24 pairs <small>Ships every 3 months</small>",
                             "price-old": true,
+                            "price-in-save": "{$dyn}",
                             "price-highlight": true,
+                            "price-special": "{$dyn}",
                             "save-pill": true,
-                            "save-value": "38% OFF",
+                            "save-value": "{dyn}% OFF",
                             "tag-up": true,
                             "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "supply-tile",
+                            "option": "subscribe",
                             "checked": true
                         },
                         {
-                            "image": "sections/isolated/targeted-patches/images/16-pairs.webp",
-                            "name": "2 Months",
-                            "desc": "(2 boxes, 12 pairs)",
+                            "image": "sections/isolated/targeted-patches/images/12-pairs-new.webp",
+                            "name": "2 Month Supply",
+                            "desc": "2 boxes, 16 pairs <small>Ships every 2 months</small>",
                             "price-old": true,
+                            "price-in-save": "{$dyn}",
+                            "price-highlight": true,
+                            "price-special": "{$dyn}",
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "{dyn}% OFF",
+                            "option": "subscribe"
+                        },
+                        {
+                            "image": "sections/isolated/targeted-patches/images/8-pairs-new.webp",
+                            "name": "1 Month Supply",
+                            "desc": "1 box, 8 pairs <small>Ships every month</small>",
+                            "price-old": true,
+                            "price-in-save": "{$dyn}",
                             "price-highlight": true,
                             "save-pill": true,
                             "save-pill-light": true,
-                            "save-value": "25% OFF",
-                            "option": "supply-tile"
-                        },
-                        {
-                            "image": "sections/isolated/targeted-patches/images/8-pairs.webp",
-                            "name": "1 Months",
-                            "desc": "(1 boxes, 8 pairs)",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "option": "supply-tile"
+                            "save-value": "{dyn}% OFF",
+                            "option": "subscribe"
                         }
                     ]'
                 }}
+                <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
                 <div class="c-buy-block">
                     {{> c-order-button }}
                     {{> c-certified-box }}
@@ -850,27 +872,27 @@
 }}
     <div class="cta-bar__selector" data-label="Select Quantity">
         <button type="button">
-            <img src="sections/isolated/targeted-patches/images/24-pairs.webp" alt="6 Months" />
-            6 Months
+            <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
+            3 Months
         </button>
         <ul>
             <li>
                 <label>
-                    <img src="sections/isolated/targeted-patches/images/24-pairs.webp" alt="3 Months" />
+                    <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
                     <input type="radio" name="cta-qty" value="white" checked />
                     <span>3 Months</span>
                 </label>
             </li>
             <li>
                 <label>
-                    <img src="sections/isolated/targeted-patches/images/16-pairs.webp" alt="2 Months" />
+                    <img src="sections/isolated/targeted-patches/images/12-pairs-new.webp" alt="2 Months" />
                     <input type="radio" name="cta-qty" value="white" />
                     <span>2 Months</span>
                 </label>
             </li>
             <li>
                 <label>
-                    <img src="sections/isolated/targeted-patches/images/8-pairs.webp" alt="1 Months" />
+                    <img src="sections/isolated/targeted-patches/images/8-pairs-new.webp" alt="1 Months" />
                     <input type="radio" name="cta-qty" value="white" />
                     <span>1 Months</span>
                 </label>

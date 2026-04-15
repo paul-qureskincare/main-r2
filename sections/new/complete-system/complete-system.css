@@ -142,8 +142,6 @@
   display:flex;
   gap:10px;
   align-items:center;
-}
-.c-product-tile__rating .e-rating-stars{
   font-size:16px;
 }
 .c-product-tile__name{
@@ -156,7 +154,6 @@
 }
 .c-product-tile__price{
   margin-top:auto;
-  font-size:16px;
 }
 .c-product-tile__button .btn{
   width:100%;
@@ -249,6 +246,9 @@
 @media screen and (max-width:767px){
   .c-product-tile{
     gap:8px;
+  }
+  .c-product-tile__price{
+    font-size:16px;
   }
   .c-product-tile__button .btn{
     display:none;

@@ -2735,6 +2735,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main article,body[cl
 body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[class*="page.qure-microinfusion-offer-men"] .hero-product__main>picture{
   order:2;
 }
+.hero-product__main .e-pill-tabs{
+  max-width:500px;
+}
 .hero-product__main:has(.c-complete-bundle) .c-buy-block{
   width:100%;
   margin-right:auto;
@@ -3055,6 +3058,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .hero-product__main>picture[data-url],.hero-product__main>picture[data-video-id]{
     width:100%;
+  }
+  .hero-product__main .e-pill-tabs{
+    max-width:100%;
   }
   .hero-product__gallery{
     gap:12px;

@@ -92,10 +92,7 @@
         display: flex;
         gap: 10px;
         align-items: center;
-
-        .e-rating-stars {
-            font-size: 16px;
-        }
+        font-size: 16px;
     }
 
     &__name {
@@ -112,7 +109,10 @@
     // .c-product-tile__price
     &__price {
         margin-top: auto;
-        font-size: 16px;
+
+        @include sm {
+            font-size: 16px;
+        }
     }
 
     // .c-product-tile__button

@@ -154,18 +154,31 @@
                                 <li>Science backed, age-defying ingredients such as retinol, caffeine, niacinamide, and peptides.</li>
                             </ul>
                         </article>
-                        <hr />
-                        <div class="c-supply-selector c-supply-selector--tiles">
-                            <p class="c-supply-selector__title">Select Your Supply:</p>
+                        <ul class="e-pill-tabs e-pill-tabs--selector">
+                            <li>
+                                <label>
+                                    <input name="delivery-type" type="radio" />
+                                    One time purchase
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="delivery-type" type="radio" checked="checked" />
+                                    Subscribe &amp; Save
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="c-supply-selector c-supply-selector--delivery">
+                            <p class="c-supply-selector__title">Select Your Delivery:</p>
                             <ul class="c-supply-selector__list">
                                 <li class="c-supply-selector__item">
                                     <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" checked="checked" />
+                                        <input type="radio" name="subscribe" checked="checked" />
                                         <div class="c-supply-selector__main">
                                             <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/targeted-patches/images/24-pairs.webp" alt="3 Months" />
+                                                <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Month Supply" />
                                             </picture>
-                                            <div class="c-supply-selector__name">3 Months</div>
+                                            <div class="c-supply-selector__name">3 Month Supply</div>
                                             <div class="c-supply-selector__price">
                                                 <div class="e-price e-price--highlight">
                                                     <div class="e-price__main">
@@ -174,9 +187,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="c-supply-selector__desc">(3 boxes, 24 pairs)</div>
+                                            <div class="c-supply-selector__desc">3 boxes, 24 pairs <small>Ships every 3 months</small></div>
                                             <div class="c-supply-selector__save">
-                                                <div class="e-pill-save">38% OFF</div>
+                                                <del>{$dyn}</del>
+                                                <div class="e-pill-save">{dyn}% OFF</div>
                                             </div>
                                         </div>
                                         <div class="c-supply-selector__tag">
@@ -186,12 +200,12 @@
                                 </li>
                                 <li class="c-supply-selector__item">
                                     <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" />
+                                        <input type="radio" name="subscribe" />
                                         <div class="c-supply-selector__main">
                                             <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/targeted-patches/images/16-pairs.webp" alt="2 Months" />
+                                                <img src="sections/isolated/targeted-patches/images/12-pairs-new.webp" alt="2 Month Supply" />
                                             </picture>
-                                            <div class="c-supply-selector__name">2 Months</div>
+                                            <div class="c-supply-selector__name">2 Month Supply</div>
                                             <div class="c-supply-selector__price">
                                                 <div class="e-price e-price--highlight">
                                                     <div class="e-price__main">
@@ -200,21 +214,22 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="c-supply-selector__desc">(2 boxes, 12 pairs)</div>
+                                            <div class="c-supply-selector__desc">2 boxes, 16 pairs <small>Ships every 2 months</small></div>
                                             <div class="c-supply-selector__save">
-                                                <div class="e-pill-save e-pill-save--light">25% OFF</div>
+                                                <del>{$dyn}</del>
+                                                <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
                                             </div>
                                         </div>
                                     </label>
                                 </li>
                                 <li class="c-supply-selector__item">
                                     <label class="c-supply-selector__label">
-                                        <input type="radio" name="supply-tile" />
+                                        <input type="radio" name="subscribe" />
                                         <div class="c-supply-selector__main">
                                             <picture class="c-supply-selector__image">
-                                                <img src="sections/isolated/targeted-patches/images/8-pairs.webp" alt="1 Months" />
+                                                <img src="sections/isolated/targeted-patches/images/8-pairs-new.webp" alt="1 Month Supply" />
                                             </picture>
-                                            <div class="c-supply-selector__name">1 Months</div>
+                                            <div class="c-supply-selector__name">1 Month Supply</div>
                                             <div class="c-supply-selector__price">
                                                 <div class="e-price e-price--highlight">
                                                     <div class="e-price__main">
@@ -223,12 +238,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="c-supply-selector__desc">(1 boxes, 8 pairs)</div>
+                                            <div class="c-supply-selector__desc">1 box, 8 pairs <small>Ships every month</small></div>
+                                            <div class="c-supply-selector__save">
+                                                <del>{$dyn}</del>
+                                                <div class="e-pill-save e-pill-save--light">{dyn}% OFF</div>
+                                            </div>
                                         </div>
                                     </label>
                                 </li>
                             </ul>
                         </div>
+                        <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
                         <div class="c-buy-block">
                             <div class="c-order-button">
                                 <button class="btn btn--primary" type="button">Buy Now</button>
@@ -1125,27 +1145,27 @@
                 <div class="cta-bar__content">
                     <div class="cta-bar__selector" data-label="Select Quantity">
                         <button type="button">
-                            <img src="sections/isolated/targeted-patches/images/24-pairs.webp" alt="6 Months" />
-                            6 Months
+                            <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
+                            3 Months
                         </button>
                         <ul>
                             <li>
                                 <label>
-                                    <img src="sections/isolated/targeted-patches/images/24-pairs.webp" alt="3 Months" />
+                                    <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
                                     <input type="radio" name="cta-qty" value="white" checked="checked" />
                                     <span>3 Months</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <img src="sections/isolated/targeted-patches/images/16-pairs.webp" alt="2 Months" />
+                                    <img src="sections/isolated/targeted-patches/images/12-pairs-new.webp" alt="2 Months" />
                                     <input type="radio" name="cta-qty" value="white" />
                                     <span>2 Months</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <img src="sections/isolated/targeted-patches/images/8-pairs.webp" alt="1 Months" />
+                                    <img src="sections/isolated/targeted-patches/images/8-pairs-new.webp" alt="1 Months" />
                                     <input type="radio" name="cta-qty" value="white" />
                                     <span>1 Months</span>
                                 </label>

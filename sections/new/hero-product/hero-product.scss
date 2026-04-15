@@ -192,6 +192,14 @@
             }
         }
 
+        .e-pill-tabs {
+            max-width: 500px;
+
+            @include sm {
+                max-width: 100%;
+            }
+        }
+
         &:has(.c-complete-bundle) {
             .c-buy-block {
                 width: 100%;
