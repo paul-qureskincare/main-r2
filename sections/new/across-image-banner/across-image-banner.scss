@@ -2,6 +2,7 @@
 @use "@elements/e-icon" as *;
 @use "@elements/e-discount-badge" as *;
 @use "@elements/e-features-list" as *;
+@use "@elements/e-pill-badge" as *;
 @use "@components/c-certified-box" as *;
 @use "@components/c-app-stores" as *;
 @use "@components/c-buy-block" as *;
@@ -429,6 +430,16 @@
                 width: 100%;
                 padding-top: 16px;
                 padding-bottom: 16px;
+            }
+
+            .e-pill-badge {
+                padding: 4px 20px 2px;
+                color: #ff5429;
+                text-transform: uppercase;
+
+                @include sm {
+                    margin: -55px auto 20px;
+                }
             }
 
             h1 {

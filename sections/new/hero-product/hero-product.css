@@ -2812,7 +2812,6 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   background:#f6f6f7;
 }
 .hero-product__best-with .swiper-slide a{
-  align-self:start;
   color:inherit;
 }
 .hero-product__best-with .swiper-slide a:hover{
