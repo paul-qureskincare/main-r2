@@ -30,7 +30,7 @@
   display:flex;
   align-items:center;
   width:100%;
-  padding:14px 0;
+  padding:15px 0;
   font-family:TT Commons,system-ui,sans-serif;
   font-size:var(--ans-bar-font-size, 16px);
   font-weight:var(--anc-bar-font-weight, 400);

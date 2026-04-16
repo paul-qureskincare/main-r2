@@ -1,6 +1,16 @@
 @use "@root/mixins" as *;
 
 .footer {
+    padding: 60px 0;
+    color: #fff;
+    background: #212428;
+
+    a {
+        &:hover {
+            color: #c8e6dc;
+        }
+    }
+
     hr {
         margin: 0;
         color: #8b8c8e;
@@ -50,7 +60,7 @@
             width: calc((100% - 48px) / 3);
             max-width: none;
         }
-        
+
         @include sm {
             width: 100%;
             padding-right: 6px;
@@ -65,7 +75,7 @@
             font-weight: 500;
             text-transform: uppercase;
             pointer-events: none;
-            
+
             @include sm {
                 display: flex;
                 align-items: center;
@@ -135,7 +145,7 @@
             align-items: center;
             width: 100%;
         }
-        
+
         @include sm {
             grid-template-columns: 1fr 120px;
             padding-top: 6px;

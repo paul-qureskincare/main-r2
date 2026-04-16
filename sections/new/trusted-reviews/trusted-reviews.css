@@ -137,6 +137,9 @@
 .trusted-reviews--light .c-trusted-review-card{
   border:1px solid #dfe0e0;
 }
+.trusted-reviews .c-trusted-review-card{
+  height:100%;
+}
 .trusted-reviews .btn{
   display:block;
   max-width:350px;

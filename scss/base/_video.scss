@@ -1,0 +1,79 @@
+@use "@root/mixins" as *;
+
+/* stylelint-disable */
+.lvideo-wrap {
+    position: fixed;
+    height: 100dvh;
+    z-index: 9991;
+    opacity: 0;
+    visibility: hidden;
+    background: rgb(0 0 0 / 15%);
+}
+.lvideo-wrap, .lvideo-wrap:after,
+.lvideo-wrap .lvideo-overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+.lvideo-wrap:after,
+.lvideo-wrap .lvideo-overlay {
+    height: 100%;
+    position: absolute;
+}
+.lvideo-wrap:after {
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    opacity: 0;
+    z-index: -1;
+}
+.lvideo-wrap .lvideo-container {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lvideo-wrap video,
+.lvideo-wrap iframe {
+    border-radius: 12px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #000;
+    z-index: 10;
+    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);
+    display: block;
+    max-width: 1280px;
+    height: auto;
+    width: 90%;
+    aspect-ratio: 16/9;
+}
+.lvideo-wrap video {
+    object-fit: cover;
+}
+.lvideo-wrap .lvideo-close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 150;
+}
+
+.lvideo-wrap .lvideo-close:focus {
+    outline: none;
+}
+.lvideo-active  .lvideo-wrap {
+    opacity: 1;
+    visibility: visible;
+}
+.lvideo-active .lvideo-wrap:after {
+    opacity: 0.5;
+}

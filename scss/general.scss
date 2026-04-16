@@ -1,10 +1,26 @@
+// Vars
+@use "@root/base/vars" as *;
+
+// Utilities
+@use "@root/base/reset" as *;
+@use "@root/base/display" as *;
+
+// Base
+@use "@root/base/typography" as *;
+@use "@root/base/base" as *;
+@use "@root/base/buttons" as *;
+@use "@root/base/swiper" as *;
+@use "@root/base/video" as *;
+
 // Elements
 @use "@elements/e-icon" as *;
+@use "@elements/e-pill-badge" as *;
 
 // Components
 @use "@components/c-swiper" as *;
 @use "@components/c-subscribe-form" as *;
 @use "@components/c-follow-us" as *;
+@use "@components/c-dialog" as *;
 
 // Sections
 @use "@sections/header/header" as *;
@@ -13,3 +29,4 @@
 @use "@sections/footer-promo/footer-promo" as *;
 @use "@sections/footer/footer" as *;
 @use "@sections/sections-stack/sections-stack" as *;
+

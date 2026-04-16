@@ -10,6 +10,8 @@
     padding-left: 16px;
 
     .swiper-slide {
+        height: auto;
+
         picture {
             &[data-video-id],
             &[data-url] {
