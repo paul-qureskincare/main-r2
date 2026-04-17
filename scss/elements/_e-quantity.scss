@@ -15,6 +15,7 @@
 
     button {
         padding: 6px;
+        color: #212428;
         font-size: 10px;
         font-weight: 500;
         line-height: 1;
@@ -23,7 +24,7 @@
         background: none;
         @include transition;
 
-        &:hover {
+        @include hover {
             background: #ddd;
         }
 

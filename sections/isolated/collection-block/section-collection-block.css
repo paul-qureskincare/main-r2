@@ -547,6 +547,7 @@
 }
 .e-quantity button{
   padding:6px;
+  color:#212428;
   font-size:10px;
   font-weight:500;
   line-height:1;
@@ -554,9 +555,6 @@
   border-radius:0;
   background:none;
   transition:all .2s linear;
-}
-.e-quantity button:hover{
-  background:#ddd;
 }
 .e-quantity button:disabled{
   pointer-events:none;
@@ -935,6 +933,9 @@ body.page\.build-your-own .collection_block .projects .select-color label:has(in
   }
 }
 @media (hover:hover){
+  .e-quantity button:hover{
+    background:#ddd;
+  }
   .qure__product-item:hover .qure__product-hover-img{
     opacity:1;
     transform:scale(1.01);

@@ -201,6 +201,7 @@
 }
 .e-quantity button{
   padding:6px;
+  color:#212428;
   font-size:10px;
   font-weight:500;
   line-height:1;
@@ -208,9 +209,6 @@
   border-radius:0;
   background:none;
   transition:all .2s linear;
-}
-.e-quantity button:hover{
-  background:#ddd;
 }
 .e-quantity button:disabled{
   pointer-events:none;
@@ -929,5 +927,10 @@
   .flyout-cart__footer{
     padding-right:16px;
     padding-left:16px;
+  }
+}
+@media (hover:hover){
+  .e-quantity button:hover{
+    background:#ddd;
   }
 }
