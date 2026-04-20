@@ -8,6 +8,9 @@
             <h2>{{ title }}</h2>
         {{/if}}
         {{> @partial-block }}
+        {{#if button }}
+            <a class="btn btn--primary" href="#">{{ button }}</a>
+        {{/if}}
     </div>
 </section>
 <script>

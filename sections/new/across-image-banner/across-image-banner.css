@@ -805,6 +805,122 @@
   content:"\e901";
 }
 
+.c-dialog{
+  overflow:auto;
+  max-width:none;
+  padding:0;
+  border:0;
+}
+.c-dialog::backdrop{
+  background:#212428;
+  opacity:.6;
+}
+.c-dialog__message{
+  display:flex;
+  flex:none;
+  align-items:center;
+  height:var(--height-bar);
+  padding:2px 24px;
+  font-size:14px;
+  line-height:1.1;
+  background:#f6f6f7;
+}
+.c-dialog__content{
+  padding:24px;
+}
+.c-dialog__close{
+  position:absolute;
+  top:6px;
+  right:6px;
+  z-index:10;
+  padding:8px;
+  font-size:18px;
+  line-height:1;
+  border:0;
+  border-radius:30px;
+  background:none;
+  background:#fff;
+  transition:all .2s linear;
+}
+.c-dialog__close:hover{
+  color:#fff;
+  background:#212428;
+}
+.c-dialog__close .e-icon{
+  vertical-align:top;
+}
+.c-dialog__tabs{
+  display:flex;
+  flex-direction:column;
+  justify-content:start;
+}
+.c-dialog__tabs-buttons{
+  display:flex;
+  margin-right:auto;
+  margin-bottom:24px;
+  border-bottom:1px solid #dfe0e0;
+}
+.c-dialog__tabs-buttons li{
+  margin-bottom:-1px;
+}
+.c-dialog__tabs-buttons button{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  padding:0 20px 8px;
+  font-size:16px;
+  border:0;
+  border-bottom:2px solid transparent;
+  background:none;
+}
+.c-dialog__tabs-buttons button.active{
+  font-weight:600;
+  border-color:#212428;
+}
+.c-dialog__tabs-pane{
+  display:none;
+}
+.c-dialog__tabs-pane.show{
+  display:block;
+}
+.c-dialog--column{
+  width:min(450px, 100%);
+  height:100vh;
+  max-height:none;
+  margin:0 0 0 auto;
+}
+.c-dialog--column .c-dialog__close{
+  top:calc(var(--height-bar) + 22px);
+  right:14px;
+}
+.c-dialog--notify-available{
+  max-width:400px;
+  padding:0;
+  border-radius:10px;
+}
+.c-dialog--notify-available form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  text-align:center;
+}
+.c-dialog--notify-available .e-icon{
+  font-size:36px;
+}
+.c-dialog--notify-available h5{
+  margin-bottom:-10px;
+}
+.c-dialog--notify-available img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-dialog--notify-available .btn{
+  width:100%;
+}
+
 .across-image-banner{
   position:relative;
   z-index:1;
@@ -1011,6 +1127,10 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   max-width:480px;
 }
 
+.across-image-banner--sm .container{
+  height:18.75vw;
+  max-height:270px;
+}
 .across-image-banner--holidays{
   background:#f3f4f2;
 }
@@ -1051,9 +1171,115 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   line-height:1;
   text-align:center;
 }
-.across-image-banner--sm .container{
-  height:18.75vw;
-  max-height:270px;
+.across-image-banner--light-tech{
+  color:#fff;
+}
+.across-image-banner--light-tech .btn{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  max-width:300px;
+}
+.across-image-banner--light-tech .btn .e-icon{
+  width:18px;
+  height:18px;
+  padding:3px;
+  font-size:8px;
+  border:2px solid;
+  border-radius:50%;
+  -webkit-text-stroke:1px;
+}
+.across-image-banner--light-tech picture img{
+  filter:brightness(.5);
+}
+.across-image-banner--light-tech .c-dialog{
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:auto;
+  z-index:100;
+  flex-direction:column;
+  overflow:visible;
+  width:450px;
+  height:100vh;
+  max-height:none;
+}
+.across-image-banner--light-tech .c-dialog[open]{
+  display:flex;
+}
+.across-image-banner--light-tech .c-dialog::backdrop{
+  background:rgba(0,0,0,.5);
+  opacity:1;
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
+}
+.across-image-banner--light-tech .c-dialog__close{
+  top:24px;
+  left:-66px;
+  z-index:100;
+  width:50px;
+  height:50px;
+  padding:0;
+  color:#212428;
+  border-radius:100px;
+  background:hsla(0,0%,100%,.8);
+}
+.across-image-banner--light-tech .c-dialog__close:hover{
+  color:#212428;
+  opacity:.75;
+}
+.across-image-banner--light-tech .c-dialog__close img{
+  vertical-align:top;
+}
+.across-image-banner--light-tech .c-dialog__content{
+  flex-grow:1;
+  overflow:auto;
+  height:100%;
+  min-height:1px;
+}
+.across-image-banner--light-tech .c-dialog .c-swiper{
+  margin-bottom:24px;
+}
+.across-image-banner--light-tech .c-dialog .swiper-slide img{
+  display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:250px;
+  border-radius:10px;
+}
+.across-image-banner--light-tech .c-dialog .tiles{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+}
+.across-image-banner--light-tech .c-dialog .tiles li{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  width:100%;
+  padding:12px;
+  font-size:14px;
+  line-height:1;
+  text-align:center;
+  border-radius:5px;
+  background:#f6f6f7;
+}
+.across-image-banner--light-tech .c-dialog .tiles span{
+  max-width:90px;
+}
+.across-image-banner--light-tech .c-dialog .features h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
+.across-image-banner--light-tech .c-dialog .features ul{
+  padding-left:2rem;
+}
+.across-image-banner--light-tech .c-dialog .features li{
+  list-style:initial;
 }
 @media screen and (max-width:1199px){
   .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
@@ -1091,6 +1317,11 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
     margin-bottom:0;
     font-size:16px;
   }
+  .across-image-banner--light-tech .c-dialog__close{
+    top:-25px;
+    right:16px;
+    left:auto;
+  }
 }
 @media screen and (max-width:767px){
   .e-features-list{
@@ -1113,6 +1344,16 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   }
   .c-marked-list li{
     font-size:16px;
+  }
+  .c-dialog__content,.c-dialog__message{
+    padding-right:16px;
+    padding-left:16px;
+  }
+  .c-dialog--notify-available{
+    width:calc(100% - 32px);
+  }
+  .c-dialog--notify-available form{
+    gap:14px;
   }
   body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
     margin-bottom:-40px;
@@ -1195,6 +1436,11 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
     max-width:none;
   }
+  .across-image-banner--sm .container{
+    justify-content:flex-start;
+    height:66.6074600355vw;
+    max-height:375px;
+  }
   .across-image-banner--holidays .container{
     height:auto;
   }
@@ -1219,9 +1465,12 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner--holidays article small{
     display:none;
   }
-  .across-image-banner--sm .container{
-    justify-content:flex-start;
-    height:66.6074600355vw;
-    max-height:375px;
+  .across-image-banner--light-tech .btn{
+    max-width:none;
+  }
+  .across-image-banner--light-tech .c-dialog{
+    top:auto;
+    width:100vw;
+    height:calc(100vh - 100px);
   }
 }

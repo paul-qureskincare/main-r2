@@ -23,6 +23,7 @@
         }
     }
 
+    // .peek-cards-slider__content
     &__content {
         display: grid;
         grid-template: repeat(2, auto) / 1fr 50vw;
@@ -107,44 +108,69 @@
         }
     }
 
-    /* &:not(.how-to-use--center) {
+    // .peek-cards-slider--changes
+    &--changes {
+        #{$root}__content {
+            grid-template: auto auto 1fr / 1fr 65vw;
 
-
-
-
-
-
-        .swiper-wrapper {
             @include sm {
-                flex-direction: column;
-                gap: 22px;
+                grid-template-columns: auto;
+            }
+        }
+
+        .btn {
+            align-self: start;
+
+            @include sm {
+                order: 10;
             }
         }
 
         .swiper-slide {
+            border: 0;
+        }
+
+        .changes-tile {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            padding: 24px;
+            border-radius: 10px;
+            background: #f6f6f7;
+
             @include sm {
-                display: flex;
                 gap: 16px;
+                padding: 16px;
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                max-height: none;
+                border-radius: 5px;
+            }
+
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
                 align-items: center;
-                border: 0;
-                border-radius: 0;
-            }
+                font-size: 16px;
 
-            &:last-child {
-                margin-right: 16px;
-            }
+                span {
+                    padding: 4px 18px;
+                    border: 1px solid #8b8c8e;
+                    border-radius: 50px;
+                    background: #fff;
 
-            article {
-                @include sm {
-                    padding: 0;
+                    @include sm {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
-
-        .c-swiper-nav {
-            @include sm {
-                display: none;
-            }
-        }
-    } */
+    }
 }

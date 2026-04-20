@@ -1473,6 +1473,7 @@
   left:-300vw;
   z-index:-10;
   visibility:hidden;
+  max-width:100vw;
   opacity:0;
 }
 .c-accordion .devices-technical__pane hr{
@@ -1897,6 +1898,7 @@
   left:-300vw;
   z-index:-10;
   visibility:hidden;
+  max-width:100vw;
   opacity:0;
 }
 .c-pill-tabs__pane img{

@@ -744,12 +744,12 @@ body[class*="page.led-mask-offer"] .how-to-use .swiper-slide img{
 }
 @media screen and (min-width:1200px){
   .how-to-use:not(.how-to-use--center) .container{
-    max-width:calc(100% - (100vw - 1172px) / 2 + 7.5px);
+    max-width:calc(100% - (100vw - 1172px) / 2);
   }
 }
 @media screen and (min-width:1400px){
   .how-to-use:not(.how-to-use--center) .container{
-    max-width:calc(100% - (100vw - 1232px) / 2 + 7.5px);
+    max-width:calc(100% - (100vw - 1232px) / 2);
   }
 }
 @media screen and (max-width:991px){
@@ -776,7 +776,7 @@ body[class*="page.led-mask-offer"] .how-to-use .swiper-slide img{
     border-radius:5px;
   }
   .how-to-use:not(.how-to-use--center) .container{
-    padding-right:15px;
+    padding-right:16px;
   }
   .how-to-use:not(.how-to-use--center) .how-to-use__content{
     display:flex;

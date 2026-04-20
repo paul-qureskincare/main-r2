@@ -1,13 +1,17 @@
 // Vars
 @use "@root/base/vars" as *;
 
+// Fonts
+@use "@root/base/fonts" as *;
+
 // Utilities
 @use "@root/base/reset" as *;
 @use "@root/base/display" as *;
+@use "@root/base/spaces" as *;
 
 // Base
 @use "@root/base/typography" as *;
-@use "@root/base/base" as *;
+@use "@root/base/common" as *;
 @use "@root/base/buttons" as *;
 @use "@root/base/swiper" as *;
 @use "@root/base/video" as *;

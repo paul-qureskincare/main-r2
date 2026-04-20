@@ -53,6 +53,7 @@
 
         @include sm {
             grid-row: auto;
+            gap: 24px;
         }
 
         .c-rating {
@@ -131,11 +132,16 @@
             max-width: 500px;
 
             @include sm {
+                gap: 24px;
                 max-width: none;
             }
 
             .show-klaviyo-popup-landing {
                 margin-top: -20px;
+
+                @include sm {
+                    margin-top: -16px;
+                }
             }
         }
 

@@ -221,6 +221,7 @@
     left:-300vw;
     z-index:-10;
     visibility:hidden;
+    max-width:100vw;
     opacity:0;
   }
   .exclusive-bundle__tabs-pane img{

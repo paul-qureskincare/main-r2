@@ -712,12 +712,12 @@
 }
 @media screen and (min-width:1200px){
   .content-creator .container{
-    max-width:calc(100% - (100vw - 1172px) / 2 + 7.5px);
+    max-width:calc(100% - (100vw - 1172px) / 2);
   }
 }
 @media screen and (min-width:1400px){
   .content-creator .container{
-    max-width:calc(100% - (100vw - 1232px) / 2 + 7.5px);
+    max-width:calc(100% - (100vw - 1232px) / 2);
   }
 }
 @media screen and (max-width:991px){

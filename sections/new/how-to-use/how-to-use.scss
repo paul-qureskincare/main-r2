@@ -71,7 +71,7 @@
             }
 
             @include sm {
-                padding-right: 15px;
+                padding-right: 16px;
             }
         }
 
@@ -198,6 +198,100 @@
             }
         }
     }
+
+    /* &--large:not(.how-to-use--center) {
+        .how-to-use__content {
+            grid-template-columns: 1fr auto;
+
+            @include sm {
+                display: grid;
+                grid-template-columns: auto;
+            }
+        }
+
+        .watch-wistia-video {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-right: 16px;
+            color: #ff5429;
+            font-size: 20px;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: none;
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                @include side-space("margin-right", 1172px);
+            }
+
+            @media screen and (min-width: 1400px) {
+                @include side-space("margin-right", 1232px);
+            }
+
+            .e-icon {
+                -webkit-text-stroke: 0.5px;
+            }
+        }
+
+        .c-swiper {
+            grid-row: 2;
+            grid-column: 1 / -1;
+
+            @include sm {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+
+        .swiper-wrapper {
+             @include sm {
+                flex-direction: row;
+                gap: unset;
+             }
+        }
+
+        .swiper-slide {
+            @include sm {
+                flex-direction: column;
+            }
+
+            picture {
+                @include sm {
+                    width: auto;
+                }
+            }
+
+            img {
+                width: 100%;
+
+                @include sm {
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+
+        .c-swiper-nav {
+            padding-right: 16px;
+
+            @media screen and (min-width: 1200px) {
+                @include side-space("padding-right", 1172px);
+            }
+
+            @media screen and (min-width: 1400px) {
+                @include side-space("padding-right", 1232px);
+            }
+        }
+
+        img {
+            max-height: none;
+        }
+    } */
 
     body[class*="page.returns-exchanges"] &,
     body[class*="page.led-mask-offer"] & {

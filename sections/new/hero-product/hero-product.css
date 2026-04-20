@@ -1280,6 +1280,7 @@
   left:-300vw;
   z-index:-10;
   visibility:hidden;
+  max-width:100vw;
   opacity:0;
 }
 .c-accordion .devices-technical__pane hr{
@@ -1344,6 +1345,7 @@
   border-radius:50px;
 }
 .c-jump-to__buttons a:hover{
+  text-decoration:none;
   background:hsl(from #8b8c8e h s l/20%);
 }
 .c-jump-to__buttons a .e-icon{
@@ -3043,6 +3045,7 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .hero-product__main{
     grid-row:auto;
+    gap:24px;
   }
   .hero-product__main>.e-price{
     font-size:18px;
@@ -3053,8 +3056,15 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .hero-product__main article ul li{
     font-size:16px;
   }
-  .hero-product__main .purchase-form-wrapper,.hero-product__main>hr{
+  .hero-product__main>hr{
     max-width:none;
+  }
+  .hero-product__main .purchase-form-wrapper{
+    gap:24px;
+    max-width:none;
+  }
+  .hero-product__main .purchase-form-wrapper .show-klaviyo-popup-landing{
+    margin-top:-16px;
   }
   .hero-product__main .e-features-list{
     display:none;

@@ -711,6 +711,7 @@ body:has(#announcement-bar) .header{
   cursor:pointer;
 }
 .header__menu a.active,.header__menu a:hover{
+  text-decoration:none;
   -webkit-text-stroke-width:.5px;
 }
 .header__icons{
@@ -807,6 +808,7 @@ body:has(#announcement-bar) .header{
 }
 .header__content-menu a.active,.header__content-menu a:hover{
   color:#c7e5db;
+  text-decoration:none;
   -webkit-text-stroke-width:.5px;
 }
 #products .header__content-menu{

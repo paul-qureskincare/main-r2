@@ -50,11 +50,7 @@
         }
 
         &:not(.show) {
-            position: absolute;
-            left: -300vw;
-            z-index: -10;
-            visibility: hidden;
-            opacity: 0;
+            @include hide-pane;
         }
 
         & > article {
@@ -129,7 +125,7 @@
 
     // TODO: Remove after run section stack
     /* stylelint-disable-next-line selector-class-pattern */
-    @at-root .product\.hair-growth-helmet & {
+    @at-root .product\.hair-growth-helmet &:not(.product-results--new-page) {
         padding-top: 30px;
         padding-bottom: 60px;
 
