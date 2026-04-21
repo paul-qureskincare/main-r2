@@ -224,6 +224,10 @@
   padding:24px 56px 32px 16px;
   background:#fff;
 }
+.cookies__content a{
+  color:inherit;
+  text-decoration:underline;
+}
 .cookies__close{
   position:absolute;
   top:12px;
@@ -396,6 +400,9 @@
   }
 }
 @media (hover:hover){
+  .cookies__content a:hover{
+    text-decoration:none;
+  }
   .cookies__close .btn-close:hover{
     color:#fff;
     background:#212428;

@@ -1154,7 +1154,7 @@
   background:currentcolor;
   content:"";
 }
-.page\.hair-growth-helmet-red-light .modal-backdrop,.product\.hair-growth-helmet .modal-backdrop{
+.page\.hair-growth-helmet-alopecia .modal-backdrop,.page\.hair-growth-helmet-menopause .modal-backdrop,.page\.hair-growth-helmet-red-light .modal-backdrop,.product\.hair-growth-helmet .modal-backdrop{
   display:none;
 }
 
@@ -1253,7 +1253,7 @@
   .helmet-home__gallery-main .swiper-wrapper .swiper-slide:first-child{
     grid-column:1 /  -1;
   }
-  .page\.hair-growth-helmet-red-light,.product\.hair-growth-helmet{
+  .page\.hair-growth-helmet-alopecia,.page\.hair-growth-helmet-menopause,.page\.hair-growth-helmet-red-light,.product\.hair-growth-helmet{
     overflow:unset !important;
   }
 }

@@ -28,6 +28,13 @@
             background: #ddd;
         }
 
+        &:active {
+            @include sm {
+                color: #fff;
+                background: #212428;
+            }
+        }
+
         &:disabled {
             pointer-events: none;
         }

@@ -7,15 +7,16 @@
         <article>
             <h2>{{ title }}</h2>
             {{#if video }}
-                <a
-                    class="watch-wistia-video"
-                    data-bs-toggle="modal"
-                    data-bs-target="#reusableWistiaModal"
-                    data-video-id="{{ video }}"
-                >
-                    <span>Watch the video</span>
-                    {{> e-icon icon="watch" }}
-                </a>
+                {{#> c-wistia-embed-video
+                    classes=""
+                    id=video
+                    custom=true
+                }}
+                    <div class="c-wistia-embed-video__link">
+                        <span>Watch the video</span>
+                        {{> e-icon icon="watch" }}
+                    </div>
+                {{/c-wistia-embed-video}}
             {{/if }}
         </article>
     </div>
@@ -26,7 +27,6 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
     });
 </script>
 <!-- HOW TO HELMET END -->

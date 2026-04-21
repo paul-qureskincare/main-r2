@@ -847,7 +847,7 @@
   font-size:10px;
 }
 .e-features-list .e-icon-one-year{
-  font-size:22px;
+  font-size:24px;
 }
 
 .e-pay-options{
@@ -964,6 +964,14 @@
 }
 .c-buy-block .e-get-free-shipping{
   margin-bottom:8px;
+}
+.c-buy-block__payment-logos{
+  text-align:center;
+}
+.c-buy-block__payment-logos img{
+  width:100%;
+  max-width:256px;
+  vertical-align:top;
 }
 
 .c-next-batch{
@@ -1511,6 +1519,94 @@
 }
 .c-dialog--notify-available .btn{
   width:100%;
+}
+.c-dialog--right-side{
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:auto;
+  z-index:100;
+  flex-direction:column;
+  overflow:visible;
+  width:450px;
+  height:100vh;
+  max-height:none;
+}
+.c-dialog--right-side[open]{
+  display:flex;
+}
+.c-dialog--right-side::backdrop{
+  background:rgba(0,0,0,.5);
+  opacity:1;
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
+}
+.c-dialog--right-side .c-dialog__close{
+  top:24px;
+  left:-66px;
+  z-index:100;
+  width:50px;
+  height:50px;
+  padding:0;
+  color:#212428;
+  border-radius:100px;
+  background:hsla(0,0%,100%,.8);
+}
+.c-dialog--right-side .c-dialog__close:hover{
+  color:#212428;
+  opacity:.75;
+}
+.c-dialog--right-side .c-dialog__close img{
+  vertical-align:top;
+}
+.c-dialog--right-side__content{
+  flex-grow:1;
+  overflow:auto;
+  height:100%;
+  min-height:1px;
+}
+.c-dialog--right-side .c-swiper{
+  margin-bottom:24px;
+}
+.c-dialog--right-side .swiper-slide img{
+  display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:250px;
+  border-radius:10px;
+}
+.c-dialog--right-side .tiles{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+}
+.c-dialog--right-side .tiles li{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  width:100%;
+  padding:12px;
+  font-size:14px;
+  line-height:1;
+  text-align:center;
+  border-radius:5px;
+  background:#f6f6f7;
+}
+.c-dialog--right-side .tiles span{
+  max-width:90px;
+}
+.c-dialog--right-side .features h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
+.c-dialog--right-side .features ul{
+  padding-left:2rem;
+}
+.c-dialog--right-side .features li{
+  list-style:initial;
 }
 
 .c-options-selector{
@@ -2586,6 +2682,49 @@
   flex-direction:row-reverse;
 }
 
+.c-approved-by{
+  gap:8px;
+  align-items:center;
+  font-size:16px;
+  line-height:1.2;
+}
+.c-approved-by,.c-approved-by ul{
+  display:flex;
+}
+.c-approved-by li{
+  position:relative;
+}
+.c-approved-by li+li{
+  margin-left:-8px;
+}
+.c-approved-by li:first-child{
+  z-index:6;
+}
+.c-approved-by li:nth-child(2){
+  z-index:5;
+}
+.c-approved-by li:nth-child(3){
+  z-index:4;
+}
+.c-approved-by li:nth-child(4){
+  z-index:3;
+}
+.c-approved-by li:nth-child(5){
+  z-index:2;
+}
+.c-approved-by li:nth-child(6){
+  z-index:1;
+}
+.c-approved-by img{
+  display:block;
+  width:46px;
+  height:46px;
+  vertical-align:top;
+  border:3px solid #fff;
+  border-radius:50%;
+  box-shadow:0 5px 5px 0 rgba(0,0,0,.25);
+}
+
 .hero-product__container{
   display:grid;
   grid-template:auto 1fr/repeat(2, 1fr);
@@ -2881,6 +3020,11 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
 }
 @media screen and (max-width:991px){
+  .c-dialog--right-side .c-dialog__close{
+    top:-25px;
+    right:16px;
+    left:auto;
+  }
   .hero-product--reverse .hero-product__container{
     -moz-column-gap:60px;
          column-gap:60px;
@@ -2916,6 +3060,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .e-features-list .e-icon-shipping-order{
     font-size:16px;
+  }
+  .e-features-list .e-icon-one-year{
+    font-size:18px;
   }
   .e-pay-options{
     font-size:12px;
@@ -2953,6 +3100,11 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-dialog--notify-available form{
     gap:14px;
+  }
+  .c-dialog--right-side{
+    top:auto;
+    width:100vw;
+    height:calc(100vh - 100px);
   }
   .c-options-selector{
     max-width:none;
@@ -3036,8 +3188,13 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-bundle-included__list li .e-price__main{
     flex-direction:column-reverse;
   }
-  .c-bundle-included__list li small{
+  .c-approved-by,.c-bundle-included__list li small{
     font-size:14px;
+  }
+  .c-approved-by img{
+    width:26px;
+    height:26px;
+    border-width:2px;
   }
   .hero-product__container{
     grid-template:auto/auto;

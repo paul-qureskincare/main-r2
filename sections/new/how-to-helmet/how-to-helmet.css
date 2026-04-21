@@ -636,28 +636,15 @@
 .how-to-helmet .container>article{
   display:flex;
   gap:16px;
+  align-items:center;
   justify-content:space-between;
 }
 .how-to-helmet .container>article h2{
   margin-bottom:0;
 }
-.how-to-helmet .container>article a{
-  display:flex;
-  gap:8px;
-  align-items:center;
+.how-to-helmet .container>article .c-wistia-embed-video__link{
   margin-right:16px;
   color:#ff5429;
-  font-size:20px;
-  font-weight:600;
-}
-.how-to-helmet .container>article a:hover{
-  text-decoration:none;
-}
-.how-to-helmet .container>article a:hover span{
-  text-decoration:underline;
-}
-.how-to-helmet .container>article a .e-icon{
-  -webkit-text-stroke:.5px;
 }
 .how-to-helmet .container:has(.c-swiper){
   margin-right:0;

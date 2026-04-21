@@ -42,4 +42,15 @@
     .e-get-free-shipping {
         margin-bottom: 8px;
     }
+
+    // .c-buy-block__payment-logos
+    &__payment-logos {
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 256px;
+            vertical-align: top;
+        }
+    }
 }

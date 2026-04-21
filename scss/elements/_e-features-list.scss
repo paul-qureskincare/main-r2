@@ -47,6 +47,10 @@
     }
 
     .e-icon-one-year {
-        font-size: 22px;
+        font-size: 24px;
+
+        @include sm {
+            font-size: 18px;
+        }
     }
 }

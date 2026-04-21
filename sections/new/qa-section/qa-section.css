@@ -604,7 +604,7 @@
   font-size:10px;
 }
 .e-features-list .e-icon-one-year{
-  font-size:22px;
+  font-size:24px;
 }
 
 .qa-section .container{
@@ -726,6 +726,9 @@
   }
   .e-features-list .e-icon-shipping-order{
     font-size:16px;
+  }
+  .e-features-list .e-icon-one-year{
+    font-size:18px;
   }
   .qa-section .container{
     padding-right:24px;

@@ -528,7 +528,7 @@
                         </button>
                     </article>
                 </div>
-                <dialog class="c-dialog" id="techModal">
+                <dialog class="c-dialog c-dialog--right-side" id="techModal">
                     <div class="c-dialog__content">
                         <div
                             class="c-swiper"
@@ -898,10 +898,13 @@
                 <div class="container">
                     <article>
                         <h2>Restore your hair health in just 12 minutes a day</h2>
-                        <a class="watch-wistia-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="wvoucso35j">
-                            <span>Watch the video</span>
-                            <i class="e-icon e-icon-watch"></i>
-                        </a>
+                        <div class="c-wistia-embed-video c-wistia-embed-video--custom">
+                            <div class="wistia_embed wistia_async_wvoucso35j popover=true seo=false videoFoam=true"></div>
+                            <div class="c-wistia-embed-video__link">
+                                <span>Watch the video</span>
+                                <i class="e-icon e-icon-watch"></i>
+                            </div>
+                        </div>
                     </article>
                 </div>
                 <div class="container">
@@ -969,7 +972,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                    loadScriptOnce("wistia-popup", "assets/js-new/wistia-popup.js");
                 });
             </script>
             <!-- HOW TO HELMET END -->

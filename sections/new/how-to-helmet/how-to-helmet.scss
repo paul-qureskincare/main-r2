@@ -16,6 +16,7 @@
         & > article {
             display: flex;
             gap: 16px;
+            align-items: center;
             justify-content: space-between;
 
             @include sm {
@@ -27,26 +28,9 @@
                 margin-bottom: 0;
             }
 
-            a {
-                display: flex;
-                gap: 8px;
-                align-items: center;
+            .c-wistia-embed-video__link {
                 margin-right: 16px;
                 color: #ff5429;
-                font-size: 20px;
-                font-weight: 600;
-
-                &:hover {
-                    text-decoration: none;
-
-                    span {
-                        text-decoration: underline;
-                    }
-                }
-
-                .e-icon {
-                    -webkit-text-stroke: 0.5px;
-                }
             }
         }
     }
@@ -118,7 +102,6 @@
 
         article {
             padding-top: 24px;
-            // padding: 28px 32px;
         }
 
         h6 {

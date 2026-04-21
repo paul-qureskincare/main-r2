@@ -911,6 +911,10 @@ body.page\.build-your-own .collection_block .projects .select-color label:has(in
   }
 }
 @media screen and (max-width:767px){
+  .e-quantity button:active{
+    color:#fff;
+    background:#212428;
+  }
   body.page\.build-your-own .collection_block .qure_tabs_wrap{
     border-bottom:1px solid #dfe0e0;
   }
