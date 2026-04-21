@@ -551,6 +551,7 @@
   background:#f6f6f7;
 }
 .e-top-posts a:hover{
+  text-decoration:none;
   background:#c8e6dc;
 }
 .e-top-posts img{

@@ -96,6 +96,7 @@
   background:#f6f6f7;
 }
 .c-trusted-review-card a:hover{
+  text-decoration:none;
   background:#c8e6dc;
 }
 .c-trusted-review-card a img{

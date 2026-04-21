@@ -564,6 +564,7 @@
   background:#f6f6f7;
 }
 .our-community ul a:hover{
+  text-decoration:none;
   background:#c8e6dc;
 }
 .our-community ul img{
