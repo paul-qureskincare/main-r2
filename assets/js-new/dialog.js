@@ -1,17 +1,17 @@
 (function () {
-    document.querySelectorAll("dialog").forEach((dialog) => {
-        dialog.addEventListener("click", (event) => {
-            const rect = dialog.getBoundingClientRect();
+    document.addEventListener("click", (event) => {
+        const dialog = event.target.closest("dialog");
 
-            const clickedOutside =
-                event.clientX < rect.left ||
-                event.clientX > rect.right ||
-                event.clientY < rect.top ||
-                event.clientY > rect.bottom;
+        if (!dialog) return;
 
-            if (clickedOutside) {
-                dialog.close();
-            }
-        });
+        const rect = dialog.getBoundingClientRect();
+
+        const clickedOutside =
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom;
+
+        if (clickedOutside) dialog.close();
     });
 })();

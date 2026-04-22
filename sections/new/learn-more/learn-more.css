@@ -273,6 +273,7 @@
   transition:all .2s linear;
 }
 .learn-more__content-list a:hover{
+  text-decoration:none;
   border-color:currentColor;
 }
 .learn-more__content-list a:hover small,.learn-more__content-list a:hover strong{

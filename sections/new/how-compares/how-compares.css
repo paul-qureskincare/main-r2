@@ -1,8 +1,6 @@
 .how-compares{
-  --section-padding-top:60px;
-  --section-padding-top-mob:30px;
-  --section-padding-bottom:60px;
-  --section-padding-bottom-mob:30px;
+  padding-top:60px;
+  padding-bottom:60px;
   background:#f6f6f7;
 }
 .how-compares__header{
@@ -177,6 +175,10 @@
   }
 }
 @media screen and (max-width:767px){
+  .how-compares{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
   .how-compares__header{
     flex-direction:column;
     gap:12px;

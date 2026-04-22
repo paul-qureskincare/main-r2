@@ -128,10 +128,12 @@
         const scrollY = window.scrollY;
         document.body.style.top = `-${scrollY}px`;
 
-        const el = document.getElementById('cartCanvas');
-        if (!el || !window.bootstrap?.Offcanvas) return;
+        const cartPopup = document.getElementById('cartCanvas');
+        if (!cartPopup || !window.bootstrap?.Offcanvas) return;
 
-        bootstrap.Offcanvas.getOrCreateInstance(el).show();
+        // cartPopup.showModal();
+
+        bootstrap.Offcanvas.getOrCreateInstance(cartPopup).show();
     });
     // Show FLYOUT CART
 
@@ -195,11 +197,11 @@
     // SCROLL HIDE HEADER
 
 
-    // Padding fot bottom CTA panel. TODO: Move this script to new CTA panel script
+    /* // Padding fot bottom CTA panel. TODO: Move this script to new CTA panel script
     const el = document.querySelector('.qure__sticky-atc');
     if (el) {
         const set = () => document.body.style.setProperty('--sticky-cart', el.offsetHeight + 'px');
         new ResizeObserver(set).observe(el);
         set();
-    }
+    } */
 })();

@@ -14,8 +14,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 button, input, optgroup, select, textarea {
     font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 button, summary {
     cursor: pointer;
+}
+
+label {
+    display: inline-block;
 }

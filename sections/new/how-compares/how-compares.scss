@@ -1,10 +1,12 @@
 .how-compares {
-    --section-padding-top: 60px;
-    --section-padding-top-mob: 30px;
-    --section-padding-bottom: 60px;
-    --section-padding-bottom-mob: 30px;
-
+    padding-top: 60px;
+    padding-bottom: 60px;
     background: #f6f6f7;
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 
     // .how-compares__header
     &__header {
@@ -239,6 +241,7 @@
         }
     }
 
+    // .how-compares__declaimer
     &__declaimer {
         display: none;
         margin-top: 20px;

@@ -37,10 +37,10 @@ body {
     }
 }
 
-
 .container {
     --bs-gutter-x: 32px;
     --bs-gutter-y: 0;
+
     width: 100%;
     max-width: 1232px;
     margin-right: auto;
@@ -56,3 +56,4 @@ body {
         max-width: none;
     }
 }
+

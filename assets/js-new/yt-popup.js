@@ -90,7 +90,7 @@ if (typeof window.VideoModal === "undefined") {
       this.body.appendChild(modalWrapper);
 
       const startModal = `<span class="lvideo-overlay"></span><div class="lvideo-container">`;
-      const finishModal = `</div><button class="lvideo-close"><i class="fa-solid fa-xmark"></i></button>`;
+      const finishModal = `</div><button class="lvideo-close"><i class="e-icon e-icon-cross"></i></button>`;
 
       let videoContent = "";
 
