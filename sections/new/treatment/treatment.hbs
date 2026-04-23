@@ -9,7 +9,7 @@
 >
     <div class="container">
         <article class="treatment__content">
-            <h2>{{ title }}</h2>
+            {{#if title }}<h2>{{ title }}</h2>{{/if}}
             {{{ text }}}
             <picture>
                 <img src="{{ picture }}" alt="{{ title }}" />

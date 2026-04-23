@@ -22,5 +22,9 @@
     a, button {
         @include pill-button;
         white-space: nowrap;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

@@ -34,6 +34,9 @@
 .c-pills-nav a,.c-pills-nav button{
   white-space:nowrap;
 }
+.c-pills-nav a:hover,.c-pills-nav button:hover{
+  text-decoration:none;
+}
 
 .pills-nav .container{
   display:flex;

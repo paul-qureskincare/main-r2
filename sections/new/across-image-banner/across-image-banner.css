@@ -1062,6 +1062,14 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .across-image-banner article .btn{
   margin-top:5px;
 }
+.across-image-banner article small{
+  width:100%;
+  max-width:450px;
+  margin-top:-2px;
+  font-size:16px;
+  line-height:1;
+  text-align:center;
+}
 .across-image-banner--hero:has(.c-inline-product-box){
   margin-bottom:-60px;
 }
@@ -1171,6 +1179,7 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 }
 .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.reviews .across-image-banner--hero .trustpilot-rating ul li{
   color:#dcdce6;
+  line-height:1;
   background:#fff;
 }
 .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child){
@@ -1259,13 +1268,8 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   margin:0;
 }
 .across-image-banner--holidays article small{
-  width:100%;
-  max-width:450px;
-  margin-top:-2px;
   color:#707172;
   font-size:12px;
-  line-height:1;
-  text-align:center;
 }
 .across-image-banner--light-tech{
   color:#fff;
@@ -1387,17 +1391,26 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner article .btn{
     width:100%;
   }
+  .across-image-banner article small{
+    display:none;
+  }
   .across-image-banner--hero:has(.c-inline-product-box){
     margin-bottom:-40px;
   }
   .across-image-banner--hero .container{
     justify-content:flex-start;
   }
+  body[class*=index] .across-image-banner--hero .container{
+    justify-content:center;
+  }
   .across-image-banner--hero:has(.c-buy-block) article{
     text-align:left;
   }
   .across-image-banner--hero article .btn{
     margin:0 auto;
+  }
+  body[class*=index] .across-image-banner--hero article .btn{
+    max-width:265px;
   }
   .across-image-banner--hero .c-certified-box{
     margin-right:auto;
@@ -1475,13 +1488,7 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner--holidays article .e-pill-badge{
     margin:-55px auto 20px;
   }
-  .across-image-banner--holidays article .btn{
-    max-width:none;
-  }
-  .across-image-banner--holidays article small{
-    display:none;
-  }
-  .across-image-banner--light-tech .btn{
+  .across-image-banner--holidays article .btn,.across-image-banner--light-tech .btn{
     max-width:none;
   }
 }

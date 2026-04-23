@@ -193,7 +193,7 @@ body[class*="404"] {
 .page\.faucet-creative-brief,
 .page\.dermal-mist-brief,
 .page\.all-in-one-face-serum-creative-content-guide,
-.page\.hairgrowth-helmet-welcome
+.page\.hairgrowth-helmet-welcome,
 .page\.qure-microinfusion-offer-listicle,
 .page\.qure-microinfusion-pro-offer,
 .page\.qure-microinfusion-offer-men,
@@ -238,7 +238,8 @@ body[class*="404"] {
 // Fix bug with CTA section
 .shopify-section {
     &:has(.qure__sticky-atc),
-    &:has(.cta-bar) {
+    &:has(.cta-bar),
+    &:has(.bundle-cta-bar) {
         position: absolute;
     }
 }

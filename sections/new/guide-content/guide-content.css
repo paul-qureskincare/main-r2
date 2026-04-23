@@ -1391,7 +1391,7 @@
 .guide-content .serum-ingredients-list a span{
   text-decoration:underline;
 }
-.guide-content .serum-ingredients-list a:hover span{
+.guide-content .serum-ingredients-list a:hover,.guide-content .serum-ingredients-list a:hover span{
   text-decoration:none;
 }
 .guide-content .serum-ingredients-list .e-icon{

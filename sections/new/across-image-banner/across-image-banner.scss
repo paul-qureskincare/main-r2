@@ -85,6 +85,19 @@
                 width: 100%;
             }
         }
+
+        small {
+            width: 100%;
+            max-width: 450px;
+            margin-top: -2px;
+            font-size: 16px;
+            line-height: 1;
+            text-align: center;
+
+            @include sm {
+                display: none;
+            }
+        }
     }
 
     // .across-image-banner--hero
@@ -100,6 +113,12 @@
         .container {
             @include sm {
                 justify-content: flex-start;
+            }
+
+            body[class*="index"] & {
+                @include sm {
+                    justify-content: center;
+                }
             }
         }
 
@@ -117,6 +136,12 @@
 
                 @include sm {
                     margin: 0 auto;
+                }
+
+                body[class*="index"] & {
+                    @include sm {
+                        max-width: 265px;
+                    }
                 }
             }
 
@@ -255,6 +280,7 @@
 
                     li {
                         color: #dcdce6;
+                        line-height: 1;
                         background: #fff;
 
                         &:not(:last-child) {
@@ -483,17 +509,8 @@
             }
 
             small {
-                width: 100%;
-                max-width: 450px;
-                margin-top: -2px;
                 color: #707172;
                 font-size: 12px;
-                line-height: 1;
-                text-align: center;
-
-                @include sm {
-                    display: none;
-                }
             }
         }
 

@@ -15,7 +15,7 @@
     background: #fff;
 
     @include md {
-        padding: 6px 0;
+        padding: 9px 0;
         font-size: var(--ans-bar-font-size-mob, 14px);
         font-weight: var(--anc-bar-font-weight-mob, 400)
     }
