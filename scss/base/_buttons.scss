@@ -27,27 +27,35 @@
 .btn-md,
 .btn--md {
     padding: var(--btn-md-padding, 8px 28px);
-
 }
 
 /* button, */
 .btn--primary,.btn, .qure-filter-link,.lvideo-wrap .lvideo-close{
     background-color:var(--btn-primary-bg);
     color:var(--btn-primary-color);
-    border-color:var(--btn-primary-bg)
+    border-color:var(--btn-primary-bg);
 }
 
 @media (hover: hover) {
     .btn--primary:hover,.btn:hover,
-    .btn--primary:active,.btn:active,
-    .qure-filter-link.active,.qure-filter-link:hover,
+    .qure-filter-link:hover,
     .lvideo-wrap .lvideo-close:hover{
         background-color:var(--btn-primary-bg-hover);
         color:var(--btn-primary-color-hover);
         border-color:var(--btn-primary-bg-hover);
         text-decoration: none;
-        box-shadow: none  !important;
+        box-shadow: none !important;
     }
+}
+
+.btn--primary:active,.btn:active,
+.qure-filter-link.active,
+.lvideo-wrap .lvideo-close:active {
+    background-color:var(--btn-primary-bg-hover);
+    color:var(--btn-primary-color-hover);
+    border-color:var(--btn-primary-bg-hover);
+    text-decoration: none;
+    box-shadow: none !important;
 }
 
 .btn--primary-white{
