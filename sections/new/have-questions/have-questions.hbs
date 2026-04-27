@@ -3,6 +3,11 @@
 <div class="have-questions" id="faq">
     <div class="container">
         <h2>Have questions?</h2>
+        {{#if text }}
+            <article>
+                {{{ text }}}
+            </article>
+        {{/if }}
         {{> c-accordion
             list=list
             type="lines"
