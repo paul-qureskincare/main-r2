@@ -1,5 +1,7 @@
 @use "@root/mixins" as *;
 @use "@elements/e-icon" as *;
+@use "@elements/e-declaimer" as *;
+@use "@components/c-marked-list" as *;
 
 .c-dialog {
     $root: &;
@@ -33,11 +35,30 @@
 
     // .c-dialog__content
     &__content {
+        flex-grow: 1;
+        overflow: auto;
+        min-height: 1px;
         padding: 24px;
 
         @include sm {
             padding-right: 16px;
             padding-left: 16px;
+        }
+
+        hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    }
+    // .c-dialog__disclaimer
+    &__disclaimer {
+        padding: 16px 24px 24px;
+        @include e-declaimer;
+        font-size: 14px;
+        border-top: 1px solid #dfe0e0;
+
+        @include sm {
+            padding: 16px;
         }
     }
 

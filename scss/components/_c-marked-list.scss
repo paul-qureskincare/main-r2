@@ -36,4 +36,13 @@
 
 .c-marked-list {
     @include c-marked-list;
+
+    &--fill {
+        li {
+            &::before {
+                color: #fff;
+                background: #91baec;
+            }
+        }
+    }
 }

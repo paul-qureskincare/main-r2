@@ -1,4 +1,9 @@
-<div class="c-accordion {{#if type }}c-accordion--{{ type }}{{/if}}">
+<div
+    class="
+        c-accordion
+        {{#if type }}c-accordion--{{ type }}{{/if}}
+        {{#if arrow-icon }}c-accordion--arrow-icon{{/if}}
+    ">
     <div class="c-accordion__list">
         {{#if devices-technical }}
             <details class="c-accordion__item">

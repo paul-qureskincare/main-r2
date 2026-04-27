@@ -579,6 +579,53 @@
   background:var(--badge-fill-color, #ff5429);
 }
 
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+
+.c-marked-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.c-marked-list li{
+  position:relative;
+  padding-left:1.75em;
+  line-height:1.25;
+}
+.c-marked-list li:before{
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:2.25em;
+  height:2.25em;
+  color:#91baec;
+  font-size:.5em;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  vertical-align:top;
+  border:1.5px solid;
+  border-radius:50%;
+  content:"\e901";
+}
+.c-marked-list--fill li:before{
+  color:#fff;
+  background:#91baec;
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -600,7 +647,23 @@
   background:#f6f6f7;
 }
 .c-dialog__content{
+  flex-grow:1;
+  overflow:auto;
+  min-height:1px;
   padding:24px;
+}
+.c-dialog__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+}
+.c-dialog__disclaimer{
+  padding:16px 24px 24px;
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+  font-size:14px;
+  border-top:1px solid #dfe0e0;
 }
 .c-dialog__close{
   position:absolute;
@@ -918,13 +981,6 @@
   transform:rotate(5deg);
   content:"";
 }
-.e-declaimer{
-  display:block;
-  color:#8b8c8e;
-  font-size:16px;
-  line-height:1.25;
-}
-
 .c-supply-selector{
   display:flex;
   flex-direction:column;
@@ -1452,8 +1508,8 @@
 .c-accordion__content p{
   margin:0;
 }
-.c-accordion__content p:not(:last-child){
-  margin-bottom:15px;
+.c-accordion__content p:not(:last-child),.c-accordion__content ul:not(:last-child){
+  margin-bottom:16px;
 }
 .c-accordion__content a{
   color:inherit;
@@ -1468,10 +1524,10 @@
 .c-accordion__content strong{
   font-weight:500;
 }
-.c-accordion__content ul:not(.c-marked-list){
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list){
   padding-left:24px;
 }
-.c-accordion__content ul:not(.c-marked-list) li{
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list) li{
   padding-left:4px;
   list-style:disc;
 }
@@ -1505,6 +1561,11 @@
 }
 .c-accordion__content ol li:not(:last-child){
   margin-bottom:12px;
+}
+.c-accordion__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+  opacity:.1;
 }
 .c-accordion__ask-us{
   display:flex;
@@ -1602,6 +1663,13 @@
 .c-accordion--lines .c-accordion__content,.c-accordion--lines .c-accordion__summary{
   padding-right:0;
   padding-left:0;
+}
+.c-accordion--arrow-icon .c-accordion__item[open] .c-accordion__summary:after{
+  content:"\e905";
+}
+.c-accordion--arrow-icon .c-accordion__summary:after{
+  transform:rotate(90deg);
+  content:"\e905";
 }
 
 .e-features-list{
@@ -1806,42 +1874,6 @@
   border-radius:20px;
   background:#91baec;
   content:"";
-}
-
-.c-marked-list{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.c-marked-list li{
-  position:relative;
-  padding-left:1.75em;
-  line-height:1.25;
-}
-.c-marked-list li:before{
-  position:absolute;
-  top:0;
-  left:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:2.25em;
-  height:2.25em;
-  color:#91baec;
-  font-size:.5em;
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  vertical-align:top;
-  border:1.5px solid;
-  border-radius:50%;
-  content:"\e901";
 }
 
 .c-note{
@@ -2308,9 +2340,19 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
 }
 @media screen and (max-width:767px){
+  .e-declaimer{
+    font-size:14px;
+  }
+  .c-marked-list li{
+    font-size:16px;
+  }
   .c-dialog__content,.c-dialog__message{
     padding-right:16px;
     padding-left:16px;
+  }
+  .c-dialog__disclaimer{
+    font-size:14px;
+    padding:16px;
   }
   .c-dialog--notify-available{
     width:calc(100% - 32px);
@@ -2331,9 +2373,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
   .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
     font-size:12px;
-  }
-  .e-declaimer{
-    font-size:14px;
   }
   .c-supply-selector{
     max-width:none;
@@ -2395,7 +2434,7 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   .c-buy-block{
     max-width:none;
   }
-  .c-marked-list li,.e-pill-tabs button,.e-pill-tabs label,.page\.qure-microinfusion-offer-listicle .c-note{
+  .e-pill-tabs button,.e-pill-tabs label,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
   }
   .c-pill-tabs{

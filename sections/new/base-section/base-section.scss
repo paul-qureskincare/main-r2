@@ -11,6 +11,7 @@
 @use "@components/c-certified-box" as *;
 @use "@components/c-percent-list" as *;
 @use "@components/c-app-stores" as *;
+@use "@components/c-accordion" as *;
 
 .base-section {
     $root: &;
@@ -86,6 +87,14 @@
             font-weight: 600;
         }
 
+        a:not(.btn) {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
         p {
             &:not(:last-child) {
                 margin-bottom: 15px;
@@ -118,7 +127,7 @@
             }
         }
 
-        ul:not(.c-marked-list, .e-steps-list) {
+        ul:not(.c-marked-list, .e-steps-list, .c-percent-list) {
             padding-left: 24px;
 
             &:not(:last-child) {
@@ -288,8 +297,49 @@
         max-width: 410px;
     }
 
+    .c-accordion--arrow-icon {
+        margin-top: -16px;
+
+        .c-accordion__item {
+            color: #8b8c8e;
+            border-bottom-color: #dfe0e0;
+
+            &[open] {
+                color: currentColor;
+            }
+        }
+
+        .c-accordion__summary {
+            color: inherit;
+        }
+
+        .c-accordion__content {
+            display: block;
+        }
+    }
+
     .c-dialog {
         max-width: 900px;
+
+        h6 {
+            margin-bottom: 16px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            @include img-fluid;
+        }
 
         .btn-close {
             position: absolute;
@@ -298,14 +348,16 @@
             padding: 12px;
             box-shadow: none;
         }
-    }
 
-    .c-dialog__content {
-        padding: 40px;
+        &:not(.c-dialog--right-side) {
+            .c-dialog__content {
+                padding: 40px;
 
-        p {
-            &:last-child {
-                margin-bottom: 0;
+                p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }

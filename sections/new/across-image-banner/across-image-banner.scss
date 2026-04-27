@@ -38,8 +38,6 @@
         @include sm {
             @include banner-height(500, 375);
         }
-
-
     }
 
     // .across-image-banner__image
@@ -418,6 +416,35 @@
         }
     }
 
+    &--text {
+        .container {
+            @include sm {
+                height: auto;
+                max-height: none;
+            }
+        }
+
+        picture {
+            @include sm {
+                position: static;
+            }
+        }
+
+        article {
+            display: block;
+
+            @include sm {
+                padding-top: 24px;
+                padding-bottom: 0;
+                text-align: left;
+            }
+
+            h2 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
     &--sm {
         .container {
             @include banner-height(270, 1440);
@@ -563,4 +590,6 @@
             }
         }
     }
+
+
 }

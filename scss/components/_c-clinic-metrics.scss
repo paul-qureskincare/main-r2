@@ -32,6 +32,7 @@
         flex-direction: column;
         width: 100%;
         max-width: 145px;
+        font-size: 16px;
 
         @include sm {
             flex-direction: row;

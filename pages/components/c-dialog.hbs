@@ -2,6 +2,11 @@
     <div class="c-dialog__content">
         {{> @partial-block }}
     </div>
+    {{#if disclaimer }}
+        <div class="c-dialog__disclaimer">
+            {{ disclaimer }}
+        </div>
+    {{/if }}
     <button class="c-dialog__close" type="button" onclick="{{ id }}.close()">
         {{> e-icon icon="cross"}}
     </button>

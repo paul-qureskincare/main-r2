@@ -595,8 +595,8 @@
 .c-accordion__content p{
   margin:0;
 }
-.c-accordion__content p:not(:last-child){
-  margin-bottom:15px;
+.c-accordion__content p:not(:last-child),.c-accordion__content ul:not(:last-child){
+  margin-bottom:16px;
 }
 .c-accordion__content a{
   color:inherit;
@@ -611,10 +611,10 @@
 .c-accordion__content strong{
   font-weight:500;
 }
-.c-accordion__content ul:not(.c-marked-list){
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list){
   padding-left:24px;
 }
-.c-accordion__content ul:not(.c-marked-list) li{
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list) li{
   padding-left:4px;
   list-style:disc;
 }
@@ -648,6 +648,11 @@
 }
 .c-accordion__content ol li:not(:last-child){
   margin-bottom:12px;
+}
+.c-accordion__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+  opacity:.1;
 }
 .c-accordion__ask-us{
   display:flex;
@@ -745,6 +750,13 @@
 .c-accordion--lines .c-accordion__content,.c-accordion--lines .c-accordion__summary{
   padding-right:0;
   padding-left:0;
+}
+.c-accordion--arrow-icon .c-accordion__item[open] .c-accordion__summary:after{
+  content:"\e905";
+}
+.c-accordion--arrow-icon .c-accordion__summary:after{
+  transform:rotate(90deg);
+  content:"\e905";
 }
 
 .have-questions{

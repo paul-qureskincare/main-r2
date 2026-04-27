@@ -99,6 +99,17 @@
                 {{{ custom-block }}}
             {{/if}}
         </article>
+        {{#if readStudyDetails }}
+            {{#> c-dialog
+                classes="c-dialog--right-side"
+                id="readStudyDetails"
+                disclaimer="*Testing conducted by an independent laboratory. Results based on user perception and instrumental measurements of daily use over 6 weeks."
+            }}
+                <h6>Clinically Proven Benefits</h6>
+                <p>An independent user study with 30 participants, supported by third-party TEWL measurements, showed improvements in measured skin barrier after 6 weeks of daily use of the Qure Daily Cleansing Gel.</p>
+                <img src="assets/images/cleanser/cleanser-metrics-image-1.webp" alt="Clinically Proven Benefits" />
+            {{/c-dialog }}
+        {{/if}}
     </div>
 </section>
 <script>

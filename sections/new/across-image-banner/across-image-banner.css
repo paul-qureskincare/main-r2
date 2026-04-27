@@ -812,6 +812,17 @@
   border-radius:50%;
   content:"\e901";
 }
+.c-marked-list--fill li:before{
+  color:#fff;
+  background:#91baec;
+}
+
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
 
 .c-dialog{
   overflow:auto;
@@ -834,7 +845,23 @@
   background:#f6f6f7;
 }
 .c-dialog__content{
+  flex-grow:1;
+  overflow:auto;
+  min-height:1px;
   padding:24px;
+}
+.c-dialog__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+}
+.c-dialog__disclaimer{
+  padding:16px 24px 24px;
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+  font-size:14px;
+  border-top:1px solid #dfe0e0;
 }
 .c-dialog__close{
   position:absolute;
@@ -1231,7 +1258,12 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
   max-width:480px;
 }
-
+.across-image-banner--text article{
+  display:block;
+}
+.across-image-banner--text article h2{
+  margin-bottom:16px;
+}
 .across-image-banner--sm .container{
   height:18.75vw;
   max-height:270px;
@@ -1360,9 +1392,16 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .c-marked-list li{
     font-size:16px;
   }
+  .e-declaimer{
+    font-size:14px;
+  }
   .c-dialog__content,.c-dialog__message{
     padding-right:16px;
     padding-left:16px;
+  }
+  .c-dialog__disclaimer{
+    font-size:14px;
+    padding:16px;
   }
   .c-dialog--notify-available{
     width:calc(100% - 32px);
@@ -1464,6 +1503,18 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   }
   .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
     max-width:none;
+  }
+  .across-image-banner--text .container{
+    height:auto;
+    max-height:none;
+  }
+  .across-image-banner--text picture{
+    position:static;
+  }
+  .across-image-banner--text article{
+    padding-top:24px;
+    padding-bottom:0;
+    text-align:left;
   }
   .across-image-banner--sm .container{
     justify-content:flex-start;

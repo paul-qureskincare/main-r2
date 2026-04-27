@@ -821,6 +821,10 @@
   border-radius:50%;
   content:"\e901";
 }
+.c-marked-list--fill li:before{
+  color:#fff;
+  background:#91baec;
+}
 
 .e-features-list{
   display:flex;
@@ -1179,8 +1183,8 @@
 .c-accordion__content p{
   margin:0;
 }
-.c-accordion__content p:not(:last-child){
-  margin-bottom:15px;
+.c-accordion__content p:not(:last-child),.c-accordion__content ul:not(:last-child){
+  margin-bottom:16px;
 }
 .c-accordion__content a{
   color:inherit;
@@ -1195,10 +1199,10 @@
 .c-accordion__content strong{
   font-weight:500;
 }
-.c-accordion__content ul:not(.c-marked-list){
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list){
   padding-left:24px;
 }
-.c-accordion__content ul:not(.c-marked-list) li{
+.c-accordion__content ul:not(.c-marked-list,.c-percent-list) li{
   padding-left:4px;
   list-style:disc;
 }
@@ -1232,6 +1236,11 @@
 }
 .c-accordion__content ol li:not(:last-child){
   margin-bottom:12px;
+}
+.c-accordion__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+  opacity:.1;
 }
 .c-accordion__ask-us{
   display:flex;
@@ -1330,6 +1339,13 @@
   padding-right:0;
   padding-left:0;
 }
+.c-accordion--arrow-icon .c-accordion__item[open] .c-accordion__summary:after{
+  content:"\e905";
+}
+.c-accordion--arrow-icon .c-accordion__summary:after{
+  transform:rotate(90deg);
+  content:"\e905";
+}
 
 .c-jump-to__title{
   margin-bottom:8px;
@@ -1405,6 +1421,13 @@
   background:var(--badge-fill-color, #ff5429);
 }
 
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+
 .c-dialog{
   overflow:auto;
   max-width:none;
@@ -1426,7 +1449,23 @@
   background:#f6f6f7;
 }
 .c-dialog__content{
+  flex-grow:1;
+  overflow:auto;
+  min-height:1px;
   padding:24px;
+}
+.c-dialog__content hr{
+  margin-top:16px;
+  margin-bottom:16px;
+}
+.c-dialog__disclaimer{
+  padding:16px 24px 24px;
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+  font-size:14px;
+  border-top:1px solid #dfe0e0;
 }
 .c-dialog__close{
   position:absolute;
@@ -1698,13 +1737,6 @@
 .e-pill-save--light{
   color:var(--e-pill-save-color);
   background:hsl(from var(--e-pill-save-color) h s calc(l + 37));
-}
-
-.e-declaimer{
-  display:block;
-  color:#8b8c8e;
-  font-size:16px;
-  line-height:1.25;
 }
 
 .c-supply-selector{
@@ -2604,6 +2636,7 @@
   flex-direction:column;
   width:100%;
   max-width:145px;
+  font-size:16px;
 }
 .c-clinic-metrics li:before{
   color:#91baec;
@@ -2984,6 +3017,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product__gallery .c-swiper-thumbs-nav .swiper-slide:last-child{
   margin-right:0 !important;
 }
+.hero-product__gallery .c-swiper-thumbs-nav .swiper-slide img{
+  border-radius:5px;
+}
 .hero-product__extra{
   display:flex;
   flex-direction:column;
@@ -3141,9 +3177,16 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
     grid-template-columns:auto;
     gap:24px;
   }
+  .e-declaimer{
+    font-size:14px;
+  }
   .c-dialog__content,.c-dialog__message{
     padding-right:16px;
     padding-left:16px;
+  }
+  .c-dialog__disclaimer{
+    font-size:14px;
+    padding:16px;
   }
   .c-dialog--notify-available{
     width:calc(100% - 32px);
@@ -3164,9 +3207,6 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
     font-size:12px;
-  }
-  .e-declaimer{
-    font-size:14px;
   }
   .c-supply-selector{
     max-width:none;

@@ -86,7 +86,13 @@
             margin: 0;
 
             &:not(:last-child) {
-                margin-bottom: 15px;
+                margin-bottom: 16px;
+            }
+        }
+
+        ul {
+            &:not(:last-child) {
+                margin-bottom: 16px;
             }
         }
 
@@ -108,7 +114,7 @@
         }
 
         ul {
-            &:not(.c-marked-list) {
+            &:not(.c-marked-list, .c-percent-list) {
                 padding-left: 24px;
 
                 li {
@@ -124,6 +130,12 @@
 
         ol {
             @include numeric-list;
+        }
+
+        hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            opacity: 0.1;
         }
     }
 
@@ -261,6 +273,23 @@
         #{$root}__content {
             padding-right: 0;
             padding-left: 0;
+        }
+    }
+
+    &--arrow-icon {
+        #{$root}__item[open] {
+            #{$root}__summary {
+                &::after {
+                    content: "\e905";
+                }
+            }
+        }
+
+        #{$root}__summary {
+            &::after {
+                transform: rotate(90deg);
+                content: "\e905";
+            }
         }
     }
 }
