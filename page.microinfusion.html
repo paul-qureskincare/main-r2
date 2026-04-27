@@ -285,7 +285,7 @@
                         </div>
                         <div class="c-buy-block">
                             <div class="c-order-button">
-                                <button class="btn btn--primary" type="button">Buy Now</button>
+                                <button class="btn btn--primary" type="button" onclick="upsellPopup.showModal()">Buy Now</button>
                                 <div class="e-pay-options">
                                     OR pay 4 monthly payments of {$dyn} with
                                     <ul>
@@ -295,6 +295,36 @@
                                     </ul>
                                 </div>
                             </div>
+                            <dialog class="c-dialog c-dialog--column" id="upsellPopup">
+                                <div class="c-dialog__message">
+                                    <p><strong>Micro-Infusion 3 Month Bundle (For Wrinkles)</strong> added to cart.</p>
+                                </div>
+                                <div class="c-dialog__content">
+                                    <div class="upsell-popup">
+                                        <div class="upsell-popup__header">
+                                            <h5>Prep Your Skin for Micro-Infusion</h5>
+                                            <p><em>save 20%</em> when added to your treatment</p>
+                                        </div>
+                                        <div class="upsell-popup__content">
+                                            <img src="sections/isolated/micro-infusion-pdp/images/upsell-popup-image.webp" alt="Hypochlorous Acid Dermal Mist" />
+                                            <p>Micro-Infusion works best on skin that’s clean. Hypochlorous Acid Dermal Mist helps prep your skin by:</p>
+                                            <ul>
+                                                <li>Reducing bacteria before treatment</li>
+                                                <li>Calming visible redness</li>
+                                                <li>Supporting your skin barrier after infusion</li>
+                                            </ul>
+                                            <p>Includes full-size (100ml) + travel (15ml).</p>
+                                        </div>
+                                        <form class="upsell-popup__footer" action="#">
+                                            <button class="btn btn--primary" type="button">Add to Cart &ndash; <span>{$dyn}</span> {$dyn}</button>
+                                            <a href="#">Continue to Cart</a>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button class="c-dialog__close" type="button" onclick="upsellPopup.close()">
+                                    <i class="e-icon e-icon-cross"></i>
+                                </button>
+                            </dialog>
                             <div class="c-certified-box">
                                 <ul>
                                     <li><img src="../sections/isolated/targeted-patches/images/crt-1.webp" alt="Certified Dermatologists" /></li>

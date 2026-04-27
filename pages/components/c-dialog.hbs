@@ -1,4 +1,7 @@
 <dialog class="c-dialog {{ classes }}" id="{{ id }}">
+    {{#if message}}
+        <div class="c-dialog__message">{{{ message }}}</div>
+    {{/if }}
     <div class="c-dialog__content">
         {{> @partial-block }}
     </div>
