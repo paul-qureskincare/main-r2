@@ -88,6 +88,7 @@
         }
 
         a:not(.btn) {
+            color: inherit;
             text-decoration: underline;
 
             &:hover {
@@ -103,15 +104,6 @@
             em {
                 font-style: normal;
                 background: #c7e5db;
-            }
-
-            a {
-                color: inherit;
-                text-decoration: underline;
-
-                &:hover {
-                    text-decoration: none;
-                }
             }
 
             & + .c-percent-list {

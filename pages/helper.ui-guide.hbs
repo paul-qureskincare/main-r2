@@ -19,7 +19,7 @@
         <h1>QURE UI Guide</h1>
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" href="#typography" data-bs-toggle="tab">Typography</a>
+                <a class="nav-link" href="#typography" data-bs-toggle="tab">Typography</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#icons" data-bs-toggle="tab">Icons</a>
@@ -31,11 +31,11 @@
                 <a class="nav-link" href="#buttons" data-bs-toggle="tab">Buttons</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#components" data-bs-toggle="tab">Components</a>
+                <a class="nav-link active" href="#components" data-bs-toggle="tab">Components</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="typography">
+            <div class="tab-pane" id="typography">
                 <h1>H1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
                 <h2>H2Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                 <h3>H3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
@@ -175,7 +175,7 @@
             <div class="tab-pane" id="buttons">
                 Buttons
             </div>
-            <div class="tab-pane" id="components">
+            <div class="tab-pane fade show active" id="components">
                 {{> c-accordion
                     list='[
                         {
@@ -264,8 +264,61 @@
                 {{> c-moneyback }}
                 <br />
                 {{> c-lifetime-warranty }}
-
-
+                <br />
+                <h4>Videos wistia</h4>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                        inline=true
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                        inline=true
+                        autoplay=true
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                    }}
+                </div>
+                <br />
+                <div style="display: inline-block; width: 604px;">
+                    {{> c-wistia
+                        id="8kldazu7xg"
+                        play-content='
+                            <div class="e-pill-badge e-pill-badge--sm">
+                                <i class="e-icon e-icon-watch"></i>
+                                <div><strong>Watch:</strong> Doctorly</div>
+                            </div>
+                        '
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="rehxqby0fq"
+                        custom='
+                            <picture>
+                                <img src="sections/isolated/trusted-video/images/home-trusted_img_1.webp" alt="Video thumbnaul text" />
+                            </picture>
+                        '
+                        _poster="sections/isolated/trusted-video/images/home-trusted_img_1.webp"
+                        _aspect="1.6"
+                    }}
+                </div>
+                <div style="display: inline-block; width: 604px;">
+                    {{> c-wistia
+                        id="wvoucso35j"
+                        custom='
+                            <a class="c-wistia__link" href="javascript:;">
+                                <span>Watch the video</span>
+                                <i class="e-icon e-icon-watch"></i>
+                            </a>
+                        '
+                    }}
+                </div>
             </div>
         </div>
     </div>
@@ -275,5 +328,7 @@
     <script src="assets/js/vendor.js" defer="defer"></script>
     <script src="assets/js-new/countdown.js" defer="defer"></script>
     <script src="assets/js-new/quantity.js" defer="defer"></script>
+    <script src="https://fast.wistia.com/player.js" defer="defer"></script>
+    <script src="assets/js-new/wistia.js" defer="defer"></script>
 </body>
 </html>
