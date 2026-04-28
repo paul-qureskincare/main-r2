@@ -1479,6 +1479,7 @@
   font-weight:600;
 }
 .base-section article a:not(.btn){
+  color:inherit;
   text-decoration:underline;
 }
 .base-section article a:not(.btn):hover{
@@ -1490,13 +1491,6 @@
 .base-section article p em{
   font-style:normal;
   background:#c7e5db;
-}
-.base-section article p a{
-  color:inherit;
-  text-decoration:underline;
-}
-.base-section article p a:hover{
-  text-decoration:none;
 }
 .base-section article p+.c-percent-list{
   margin-top:24px;
