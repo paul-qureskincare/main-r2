@@ -973,6 +973,7 @@
 .accordion-tiles--square article a{
   grid-column:2;
   margin-left:auto;
+  color:inherit;
   text-decoration:underline;
 }
 .accordion-tiles--square .c-swiper{

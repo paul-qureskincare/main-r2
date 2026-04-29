@@ -40,24 +40,7 @@
                             <p>Targeted LED light therapy and medical-grade lasers to support scalp health. Encourages the appearance of thicker-looking hair with <strong>just 12 minutes per session</strong>.</p>
                         </div>
                         <div class="helmet-home__ordering">
-                            <button type="button" class="btn btn--primary">Pre-Order Now with 26% Off</button>
-                            <div class="pre-order-info">
-                                <div class="pre-order-info__status">Available for Pre-Order</div>
-                                <div class="pre-order-info__expected" data-bs-toggle="modal" data-bs-target="#shipment-modal">
-                                    Expected Jan. 2026
-                                    <img src="sections/new/helmet-home/images/expected-arrow.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="helmet-home__ordering">
-                            <button type="button" class="btn btn--primary" data-bs-toggle="modal" data-bs-target="#email-modal">
-                                Join the Waitlist
-                                <img src="sections/new/helmet-home/images/email-icon.svg" alt="" />
-                            </button>
-                            <div class="pre-order-info">
-                                <div class="pre-order-info__status">Unavailable</div>
-                                <div class="pre-order-info__expected">Expected Jan. 2026</div>
-                            </div>
+                            <button type="button" class="btn btn--primary">Buy Now &amp; Save 44%</button>
                         </div>
                         <div class="helmet-home__users-experienced" data-bs-toggle="modal" data-bs-target="#info-modal">
                             <img src="sections/new/helmet-home/images/qure-headgear-1589-2.webp" alt="">
@@ -170,12 +153,19 @@
                         </div>
                     </div>
                     <div class="helmet-home__gallery">
-                        <div class="swiper helmet-home__gallery-main" id="helmet-gallery">
+                        <div
+                            class="c-swiper"
+                            data-swiper-thumbs="#helmet-home .c-swiper-thumbs"
+                            data-swiper='{
+                                "slidesPerView": 1.01,
+                                "spaceBetween": 16,
+                                "enableOn": "mobile"
+                            }'
+                        >
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="slide-image">
                                         <img src="sections/new/helmet-home/images/helmet-home-1.webp" alt="Q-Renew LLLT Helmet" />
-                                        <div class="coming-soon">Coming soon</div>
                                         <div
                                             class="watch-how-it-works watch-wistia-video"
                                             data-bs-toggle="modal"
@@ -219,70 +209,55 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper helmet-home__gallery-thumbs d-md-none" id="helmet-gallery-thumbs">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-1.webp" alt="Q-Renew LLLT Helmet" />
+                        <div class="c-swiper-thumbs-nav">
+                            <div
+                                class="c-swiper c-swiper-thumbs"
+                                data-swiper='{
+                                    "slidesPerView": "auto",
+                                    "spaceBetween": 12
+                                }'
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-1.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-2.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-2.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-3.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-3.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-4.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-4.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-5.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-5.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-6.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-6.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide-thumbnail">
-                                        <img src="sections/new/helmet-home/images/helmet-home-7.webp" alt="Q-Renew LLLT Helmet" />
+                                    <div class="swiper-slide">
+                                        <div class="slide-thumbnail">
+                                            <img src="sections/new/helmet-home/images/helmet-home-7.webp" alt="Q-Renew LLLT Helmet" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal helmet-home-modal fade" id="shipment-modal">
-        <div class="modal-dialog">
-            <div class="modal-content helmet-home-modal__content">
-                <div class="helmet-home-modal__text shipment-popup">
-                    <span>JOIN OUR EARLY ACCESS</span>
-                    <h6>Secure your Q-Renew LLLT Helmet before anyone else.</h6>
-                    <p>We know how hard it is to wait when you're ready for change. Pre-ordering ensures you're <strong>first in line</strong> once shipments begin.</p>
-                    <p>Your order will ship in January 2026, and you'll get <strong>early access</strong> to updates, usage tips, and progress guides before anyone else.</p>
-                    <hr />
-                    <span>Your pre-order includes</span>
-                    <strong>1-Year Money-Back Guarantee</strong>
-                    <p>Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.</p>
-                    <strong>Free Worldwide Shipping</strong>
-                    <p>Your pre-order comes with free worldwide shipping.</p>
-                    <p>Orders shipped outside the U.S. may be subject to import duties, customs fees, or local taxes upon arrival. These are determined by your country’s customs authority and are the responsibility of the customer.</p>
-                    <button type="button" class="btn btn--primary">Pre-Order Now</button>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal">
-                    <img src="assets/images/cross_black.svg" alt="" />
-                </button>
             </div>
         </div>
     </div>
@@ -374,10 +349,10 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('helmet-home-swiper', 'sections/new/helmet-home/helmet-home.js');
             loadScriptOnce('klaviyo-early-access', 'https://static.klaviyo.com/onsite/js/VtM5fu/klaviyo.js');
             loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+            loadScriptOnce('swiper', 'assets/js-new/swiper.js');
         });
     </script>
     <!-- HELMET HOME END -->
