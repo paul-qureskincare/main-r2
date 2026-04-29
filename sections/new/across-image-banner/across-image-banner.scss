@@ -498,8 +498,9 @@
             }
 
             .e-pill-badge {
+                --badge-base-color: #ff5429;
+
                 padding: 4px 20px 2px;
-                color: #ff5429;
                 text-transform: uppercase;
 
                 @include sm {
@@ -557,6 +558,48 @@
                 display: none;
             }
         } */
+    }
+
+    // .across-image-banner--holidays-secondary
+    &--holidays-secondary {
+        article {
+            margin-left: 0;
+
+            @include sm {
+                text-align: left;
+            }
+
+            .e-pill-badge {
+                --badge-base-color: #212428;
+
+                padding: 4px 20px 2px;
+                text-transform: uppercase;
+                background: #c7e5db;
+
+                @include sm {
+                    margin: -55px 0 20px;
+                }
+            }
+
+            small {
+                color: #707172;
+                font-size: 16px;
+
+                @include sm {
+                    font-size: 14px;
+                }
+
+                em {
+                    color: #ff5429;
+                }
+
+                @include sm {
+                    display: block;
+                }
+            }
+        }
+
+
     }
 
     &--light-tech {
