@@ -1373,8 +1373,8 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   padding-bottom:0;
 }
 .across-image-banner--holidays article .e-pill-badge{
+  --badge-base-color:#ff5429;
   padding:4px 20px 2px;
-  color:#ff5429;
   text-transform:uppercase;
 }
 .across-image-banner--holidays article h1{
@@ -1392,6 +1392,22 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .across-image-banner--holidays article small{
   color:#707172;
   font-size:12px;
+}
+.across-image-banner--holidays-secondary article{
+  margin-left:0;
+}
+.across-image-banner--holidays-secondary article .e-pill-badge{
+  --badge-base-color:#212428;
+  padding:4px 20px 2px;
+  text-transform:uppercase;
+  background:#c7e5db;
+}
+.across-image-banner--holidays-secondary article small{
+  color:#707172;
+  font-size:16px;
+}
+.across-image-banner--holidays-secondary article small em{
+  color:#ff5429;
 }
 .across-image-banner--light-tech{
   color:#fff;
@@ -1638,7 +1654,20 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner--holidays article .e-pill-badge{
     margin:-55px auto 20px;
   }
-  .across-image-banner--holidays article .btn,.across-image-banner--light-tech .btn{
+  .across-image-banner--holidays article .btn{
+    max-width:none;
+  }
+  .across-image-banner--holidays-secondary article{
+    text-align:left;
+  }
+  .across-image-banner--holidays-secondary article .e-pill-badge{
+    margin:-55px 0 20px;
+  }
+  .across-image-banner--holidays-secondary article small{
+    font-size:14px;
+    display:block;
+  }
+  .across-image-banner--light-tech .btn{
     max-width:none;
   }
 }
