@@ -129,6 +129,7 @@
             a {
                 grid-column: 2;
                 margin-left: auto;
+                color: inherit;
                 text-decoration: underline;
 
                 @include hover {
